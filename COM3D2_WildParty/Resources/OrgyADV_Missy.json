@@ -1,0 +1,365 @@
+{
+  "orgy_intro_0033_M_Missy": {
+    "ID": "orgy_intro_0033_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0033_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        },
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "orgy_intro_0033_T_Missy": {
+    "ID": "orgy_intro_0033_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0034",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "ほ、本当ですの……ふふ……それは、楽しみですわ……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63022.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_wg_0030_M_Missy": {
+    "ID": "orgy_wg_0030_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0030_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_wg_0030_T_Missy": {
+    "ID": "orgy_wg_0030_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0031",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "今日はよろしくお願いしますね。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_61163.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_wg_0033Pre_Missy": {
+    "ID": "orgy_wg_0033Pre_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0033_M_Missy",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "おお！本当ですか？これはさすがに予想外。ここに来て良かった。なぁなぁ[=Maid0Name]ちゃん、[=Maid0Name]ちゃんに会うためにここに来た、一緒に大いに楽しもうね。"
+    }
+  },
+
+  "orgy_wg_0033_M_Missy": {
+    "ID": "orgy_wg_0033_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0033_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        },
+        "FaceAnime": "誘惑",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "orgy_wg_0033_T_Missy": {
+    "ID": "orgy_wg_0033_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0034",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "そのように思ってもらえるのなら、心から嬉しいですわ！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_04164.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1
+        }
+      }
+    }
+  },
+
+  "orgy_wg_0034_Missy": {
+    "ID": "orgy_wg_0034_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0035_M_Missy",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "ふふっ、楽しみだな。なぁさっそく移動しようか。案内してくれ。"
+    }
+  },
+
+  "orgy_wg_0035_M_Missy": {
+    "ID": "orgy_wg_0035_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0035_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちご案内"
+        },
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "orgy_wg_0035_T_Missy": {
+    "ID": "orgy_wg_0035_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0100",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "それでは、ご案内させていただきますわ。どうぞ今日はお楽しみくださいませ。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_04159.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+
+
+
+
+
+
+
+  "orgy_postyotogi_0040_M_Missy": {
+    "ID": "orgy_postyotogi_0040_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0040_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿待機"
+        },
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0040_T_Missy": {
+    "ID": "orgy_postyotogi_0040_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0041_Missy",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "はぁ♪　気持ちよかったですわね♪",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62226.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "orgy_postyotogi_0041_Missy": {
+    "ID": "orgy_postyotogi_0041_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0042_M_Missy",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "そうか…今回はこの辺にしておくか…まぁ、パーティーもそろそろ終わりね…"
+    }
+  },
+
+  "orgy_postyotogi_0042_M_Missy": {
+    "ID": "orgy_postyotogi_0042_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0042_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0042_T_Missy": {
+    "ID": "orgy_postyotogi_0042_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0043_Missy",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "ご満足いただけましたか……？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_60985.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+  "orgy_postyotogi_0043_Missy": {
+    "ID": "orgy_postyotogi_0043_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0044_M_Missy",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "ああ、もちろん！すごく気持ちよかったぁ。素晴らしい時間でしたね。"
+    }
+  },
+
+  "orgy_postyotogi_0044_M_Missy": {
+    "ID": "orgy_postyotogi_0044_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0044_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        },
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0044_T_Missy": {
+    "ID": "orgy_postyotogi_0044_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0050",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "喜んでもらえてわたくしも嬉しいですわ。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_tsou_60427.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_postyotogi_0060_M_Missy": {
+    "ID": "orgy_postyotogi_0060_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0060_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0060_T_Missy": {
+    "ID": "orgy_postyotogi_0060_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0061",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "は、はい……わたくしも、お待ちしておりますわ。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_04245.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_postyotogi_0080_Missy": {
+    "ID": "orgy_postyotogi_0080_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "……大好き、ですわ♪",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02-M_60046.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5.5
+        }
+      }
+    }
+  }
+}

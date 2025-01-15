@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6720AC39-21D8-44EB-B613-2F70985501CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COM3D2.WildParty.Plugin</RootNamespace>
+    <AssemblyName>COM3D2.WildParty</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>ref\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>ref\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>ref\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>ref\BepInEx.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ref\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>ref\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>ref\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config.cs" />
+    <Compile Include="DataClass\CameraView.cs" />
+    <Compile Include="DataClass\ExtraYotogiCommand.cs" />
+    <Compile Include="DataClass\MotionInfo.cs" />
+    <Compile Include="DataClass\SemenPattern.cs" />
+    <Compile Include="DataClass\MasturbationMotion.cs" />
+    <Compile Include="DataClass\Scenario.cs" />
+    <Compile Include="DataClass\MotionSpecialLabel.cs" />
+    <Compile Include="DataClass\Fetish.cs" />
+    <Compile Include="DataClass\SexState.cs" />
+    <Compile Include="DataClass\ScenarioCategory.cs" />
+    <Compile Include="DataClass\MapCoorindates.cs" />
+    <Compile Include="DataClass\ADVStep.cs" />
+    <Compile Include="DataClass\VoiceFace.cs" />
+    <Compile Include="DataClass\PersonalityVoice.cs" />
+    <Compile Include="DataClass\PlayableSkill.cs" />
+    <Compile Include="DataClass\BackgroundGroupMotion.cs" />
+    <Compile Include="DataClass\PartyGroup.cs" />
+    <Compile Include="DataClass\YotogiProgressInfo.cs" />
+    <Compile Include="ConfigurableValue.cs" />
+    <Compile Include="Core\BackgroundGroupMotionManager.cs" />
+    <Compile Include="Core\CustomADVProcessManager.cs" />
+    <Compile Include="Core\CustomADVProcessManagerSpecialHandling.cs" />
+    <Compile Include="Core\ModEventCleanUp.cs" />
+    <Compile Include="Core\YotogiExtraCommandCallbacks.cs" />
+    <Compile Include="Core\YotogiExtraCommandHandling.cs" />
+    <Compile Include="Core\CameraHandling.cs" />
+    <Compile Include="Core\CharacterHandling.cs" />
+    <Compile Include="Core\YotogiHandling.cs" />
+    <Compile Include="DebugHelper\CaptureMotionData.cs" />
+    <Compile Include="DebugHelper\CaptureDialogueAndText.cs" />
+    <Compile Include="DebugHelper\DebugState.cs" />
+    <Compile Include="DebugHelper\DebugViewData.cs" />
+    <Compile Include="GameObject\InjectYotogiCommand.cs" />
+    <Compile Include="Helper\AudioChoppingManager.cs" />
+    <Compile Include="HooksAndPatches\ADVScreen\ADVScreen.Hooks.cs" />
+    <Compile Include="HooksAndPatches\ADVScreen\ADVScreen.Patches.cs" />
+    <Compile Include="HooksAndPatches\CharacterManager\CharacterManager.Hooks.cs" />
+    <Compile Include="HooksAndPatches\CharacterManager\CharacterManager.Patches.cs" />
+    <Compile Include="HooksAndPatches\DailyScreen\DailyScreen.Hooks.cs" />
+    <Compile Include="HooksAndPatches\DailyScreen\DailyScreen.Patches.cs" />
+    <Compile Include="HooksAndPatches\Init\Init.Hooks.cs" />
+    <Compile Include="HooksAndPatches\Init\Init.Patches.cs" />
+    <Compile Include="HooksAndPatches\YotogiScreen\YotogiScreen.Hooks.cs" />
+    <Compile Include="HooksAndPatches\YotogiScreen\YotogiScreen.Patches.cs" />
+    <Compile Include="HooksAndPatches\_DebugUse\DebugUse.Hooks.cs" />
+    <Compile Include="HooksAndPatches\_DebugUse\DebugUse.Patches.cs" />
+    <Compile Include="LoadScenarioManager.cs" />
+    <Compile Include="Resx\ImageResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImageResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resx\ScenarioDetailResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScenarioDetailResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resx\TextResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TextResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resx\Voice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Voice.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RNG.cs" />
+    <Compile Include="TagSupportData.cs" />
+    <Compile Include="Special\ScenarioIDList.cs" />
+    <Compile Include="Constant.cs" />
+    <Compile Include="DataClass\PosRot.cs" />
+    <Compile Include="GameObject\YotogiExtraCommandWindow.cs" />
+    <Compile Include="ModUseData.cs" />
+    <Compile Include="WildParty.cs" />
+    <Compile Include="DebugHelper\Debug.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateManager.cs" />
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resx\ImageResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ImageResources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ModResources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resx\ScenarioDetailResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ScenarioDetailResource.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ModResources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resx\TextResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>TextResource.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ModResources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resx\Voice.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Voice.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ModResources</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExtraYotogiComands.json" />
+    <None Include="Resources\ManBodyOptions.csv" />
+    <None Include="Resources\MasturbationMotion.csv" />
+    <None Include="Resources\ModFetish.json" />
+    <None Include="Resources\ModPropensity.json" />
+    <None Include="Resources\ModScenario.json" />
+    <None Include="Resources\ModScenarioCategory.json" />
+    <None Include="Resources\OrgyADVIntro.json" />
+    <None Include="Resources\OrgyADVPostYotogi.json" />
+    <None Include="Resources\OrgyADVSetup.json" />
+    <None Include="Resources\OrgyADVWelcomeGuest.json" />
+    <None Include="Resources\OrgyADV_Anesan.json" />
+    <None Include="Resources\OrgyADV_Childhood.json" />
+    <None Include="Resources\OrgyADV_Cool.json" />
+    <None Include="Resources\OrgyADV_Cunning.json" />
+    <None Include="Resources\OrgyADV_Curtness.json" />
+    <None Include="Resources\OrgyADV_Dame.json" />
+    <None Include="Resources\OrgyADV_Devilish.json" />
+    <None Include="Resources\OrgyADV_Friendly.json" />
+    <None Include="Resources\OrgyADV_Genki.json" />
+    <None Include="Resources\OrgyADV_Gyaru.json" />
+    <None Include="Resources\OrgyADV_Ladylike.json" />
+    <None Include="Resources\OrgyADV_Majime.json" />
+    <None Include="Resources\OrgyADV_Masochist.json" />
+    <None Include="Resources\OrgyADV_Missy.json" />
+    <None Include="Resources\OrgyADV_Muku.json" />
+    <None Include="Resources\OrgyADV_Pride.json" />
+    <None Include="Resources\OrgyADV_Pure.json" />
+    <None Include="Resources\OrgyADV_Rindere.json" />
+    <None Include="Resources\OrgyADV_Sadist.json" />
+    <None Include="Resources\OrgyADV_Secretary.json" />
+    <None Include="Resources\OrgyADV_Silent.json" />
+    <None Include="Resources\OrgyADV_Sister.json" />
+    <None Include="Resources\OrgyADV_Yandere.json" />
+    <None Include="Resources\OrgyYotogiMapCoordinates.json" />
+    <None Include="Resources\SexPosFace.csv" />
+    <None Include="Resources\SexPosList.csv" />
+    <None Include="Resources\SexPosSE.csv" />
+    <None Include="Resources\SexPosSpecialLabels.csv" />
+    <None Include="Resources\SexPosValidLabels.csv" />
+    <None Include="Resources\SexStateDescription.json" />
+    <None Include="Resources\SemenPattern.json" />
+    <None Include="Resources\test.png" />
+    <None Include="Resources\Voice_All_Insert.csv" />
+    <None Include="Resources\Voice_All_OrgasmScream.csv" />
+    <None Include="Resources\Voice_All_OrgasmWait.csv" />
+    <None Include="Resources\Voice_Anesan.csv" />
+    <None Include="Resources\Voice_Childhood.csv" />
+    <None Include="Resources\Voice_Cool.csv" />
+    <None Include="Resources\Voice_Cunning.csv" />
+    <None Include="Resources\Voice_Curtness.csv" />
+    <None Include="Resources\Voice_Dame.csv" />
+    <None Include="Resources\Voice_Devilish.csv" />
+    <None Include="Resources\Voice_Friendly.csv" />
+    <None Include="Resources\Voice_Genki.csv" />
+    <None Include="Resources\Voice_Gyaru.csv" />
+    <None Include="Resources\Voice_Ladylike.csv" />
+    <None Include="Resources\Voice_Majime.csv" />
+    <None Include="Resources\Voice_Masochist.csv" />
+    <None Include="Resources\Voice_Missy.csv" />
+    <None Include="Resources\Voice_Muku.csv" />
+    <None Include="Resources\Voice_Pride.csv" />
+    <None Include="Resources\Voice_Pure.csv" />
+    <None Include="Resources\Voice_Rindere.csv" />
+    <None Include="Resources\Voice_Sadist.csv" />
+    <None Include="Resources\Voice_Secretary.csv" />
+    <None Include="Resources\Voice_Silent.csv" />
+    <None Include="Resources\Voice_Sister.csv" />
+    <None Include="Resources\Voice_Yandere.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_orgy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Doc\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions />
+</Project>

@@ -1,0 +1,369 @@
+{
+  "orgy_intro_0033_M_Anesan": {
+    "ID": "orgy_intro_0033_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0033_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        },
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "orgy_intro_0033_T_Anesan": {
+    "ID": "orgy_intro_0033_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0034",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "えへへ……いいよ？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_X1P_53641.ogg",
+          "IsChoppingAudio": true,
+          "Endtime": 2
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_wg_0030_M_Anesan": {
+    "ID": "orgy_wg_0030_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0030_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        },
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_wg_0030_T_Anesan": {
+    "ID": "orgy_wg_0030_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0031",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "ふふ、よろしくね。",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_tsou2_59394.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_wg_0033Pre_Anesan": {
+    "ID": "orgy_wg_0033Pre_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0033_M_Anesan",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "おお！本当ですか？これはさすがに予想外。ここに来て良かった。なぁなぁ[=Maid0Name]ちゃん、一緒に大いに楽しもうね。"
+    }
+  },
+
+  "orgy_wg_0033_M_Anesan": {
+    "ID": "orgy_wg_0033_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0033_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        },
+        "FaceAnime": "誘惑",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "orgy_wg_0033_T_Anesan": {
+    "ID": "orgy_wg_0033_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0034",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "うん、もちろんだよ。皆の希望を叶えるのがお姉ちゃんの仕事だからね。",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_tsou2_59365.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "orgy_wg_0034_Anesan": {
+    "ID": "orgy_wg_0034_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0035_M_Anesan",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "ええ、楽しみだな。なぁさっそく移動しようか。案内してくれ。"
+    }
+  },
+
+  "orgy_wg_0035_M_Anesan": {
+    "ID": "orgy_wg_0035_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0035_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちご案内"
+        },
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "orgy_wg_0035_T_Anesan": {
+    "ID": "orgy_wg_0035_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0100",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "うん。じゃあ行こっか。",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_X1P_54159.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2
+        }
+      }
+    }
+  },
+
+
+
+
+
+
+
+
+  "orgy_postyotogi_0040_M_Anesan": {
+    "ID": "orgy_postyotogi_0040_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0040_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿待機"
+        },
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0040_T_Anesan": {
+    "ID": "orgy_postyotogi_0040_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0041_Anesan",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "すっごく気持ち良かったね♪",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_X1P_53700.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.5
+        }
+      }
+    }
+  },
+
+  "orgy_postyotogi_0041_Anesan": {
+    "ID": "orgy_postyotogi_0041_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0042_M_Anesan",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "そうか…今回はこの辺にしておくか…まぁ、パーティーもそろそろ終わりね…"
+    }
+  },
+
+  "orgy_postyotogi_0042_M_Anesan": {
+    "ID": "orgy_postyotogi_0042_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0042_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0042_T_Anesan": {
+    "ID": "orgy_postyotogi_0042_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0043_Anesan",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "気持ち良かった？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_tsou2_59340.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+  "orgy_postyotogi_0043_Anesan": {
+    "ID": "orgy_postyotogi_0043_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0044_M_Anesan",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "ああ、もちろん！すごく気持ちよかったぁ。素晴らしい時間でしたね。やっぱり[=Maid0Name]ちゃんは最高だ！"
+    }
+  },
+
+  "orgy_postyotogi_0044_M_Anesan": {
+    "ID": "orgy_postyotogi_0044_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0044_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        },
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0044_T_Anesan": {
+    "ID": "orgy_postyotogi_0044_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0050",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "あらぁ、そうなのぉ？　お姉ちゃんのこと、そんな風にみてくれてたなんて……うふ、お世辞でも嬉しい。",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP01_A_104514.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_postyotogi_0060_M_Anesan": {
+    "ID": "orgy_postyotogi_0060_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0060_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0060_T_Anesan": {
+    "ID": "orgy_postyotogi_0060_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0061",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "また疲れた時は、いつでも来てねぇ…",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP01_A_104759.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.3,
+          "EndTime": 5.8
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_postyotogi_0080_Anesan": {
+    "ID": "orgy_postyotogi_0080_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "お姉ちゃんは、ご主人様の事が大好き…",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_13217.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.8
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "orgy_intro_0033_M_Cunning": {
+    "ID": "orgy_intro_0033_M_Cunning",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0033_T_Cunning",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "orgy_intro_0033_T_Cunning": {
+    "ID": "orgy_intro_0033_T_Cunning",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0034",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "ふふ、大丈夫ですよ。",
+      "VoiceData": {
+        "Cunning": {
+          "VoiceFile": "H12_05790.ogg",
+          "IsChoppingAudio": true,
+          "Endtime": 2.5
+        }
+      }
+    }
+  },
+
+
+  "orgy_wg_0030_M_Cunning": {
+    "ID": "orgy_wg_0030_M_Cunning",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0030_T_Cunning",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_wg_0030_T_Cunning": {
+    "ID": "orgy_wg_0030_T_Cunning",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0031",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "よろしくお願いしますね？",
+      "VoiceData": {
+        "Cunning": {
+          "VoiceFile": "H12_05828.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5,
+          "EndTime": 4.5
+        }
+      }
+    }
+  },
+
+
+
+
+  "orgy_wg_0033Pre_Cunning": {
+    "ID": "orgy_wg_0033Pre_Cunning",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0033_M_Cunning",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "おお！本当ですか？これはさすがに予想外。ここに来て良かった。なぁなぁ[=Maid0Name]ちゃん、今日何プレーする？"
+    }
+  },
+
+  "orgy_wg_0033_M_Cunning": {
+    "ID": "orgy_wg_0033_Cunning",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0033_T_Cunning",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        },
+        "FaceAnime": "誘惑",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "orgy_wg_0033_T_Cunning": {
+    "ID": "orgy_wg_0033_T_Cunning",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0034",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "楽しみにしてくださいね。",
+      "VoiceData": {
+        "Cunning": {
+          "VoiceFile": "H12_03250.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 8
+        }
+      }
+    }
+  },
+
+  "orgy_wg_0034_Cunning": {
+    "ID": "orgy_wg_0034_Cunning",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0035_M_Cunning",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "ええ、楽しみだな。なぁさっそく移動しようか。案内してくれ。"
+    }
+  },
+
+  "orgy_wg_0035_M_Cunning": {
+    "ID": "orgy_wg_0035_M_Cunning",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0035_T_Cunning",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちご案内"
+        },
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "orgy_wg_0035_T_Cunning": {
+    "ID": "orgy_wg_0035_T_Cunning",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0100",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "ふふ……どうぞこちらに……",
+      "VoiceData": {
+        "Cunning": {
+          "VoiceFile": "H12_05898.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+
+
+  "orgy_postyotogi_0040_M_Cunning": {
+    "ID": "orgy_postyotogi_0040_M_Cunning",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0040_T_Cunning",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿待機"
+        },
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0040_T_Cunning": {
+    "ID": "orgy_postyotogi_0040_T_Cunning",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0041_Cunning",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "とても気持ち良かったですよ。",
+      "VoiceData": {
+        "Cunning": {
+          "VoiceFile": "H12_03254.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 7
+        }
+      }
+    }
+  },
+
+  "orgy_postyotogi_0041_Cunning": {
+    "ID": "orgy_postyotogi_0041_Cunning",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0042_M_Cunning",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "そうか…今回はこの辺にしておくか…まぁ、パーティーもそろそろ終わりね…"
+    }
+  },
+
+  "orgy_postyotogi_0042_M_Cunning": {
+    "ID": "orgy_postyotogi_0042_M_Cunning",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0042_T_Cunning",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0042_T_Cunning": {
+    "ID": "orgy_postyotogi_0042_T_Cunning",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0043_Cunning",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "ふふ、気持ちよかったですか？",
+      "VoiceData": {
+        "Cunning": {
+          "VoiceFile": "H12_06067.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+  "orgy_postyotogi_0043_Cunning": {
+    "ID": "orgy_postyotogi_0043_Cunning",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0044_M_Cunning",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "ああ、もちろん！すごく気持ちよかったぁ。素晴らしい時間でしたね。"
+    }
+  },
+
+  "orgy_postyotogi_0044_M_Cunning": {
+    "ID": "orgy_postyotogi_0044_M_Cunning",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0044_T_Cunning",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        },
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0044_T_Cunning": {
+    "ID": "orgy_postyotogi_0044_T_Cunning",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0050",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "ふふ……そう言って頂けると私も嬉しいです。",
+      "VoiceData": {
+        "Cunning": {
+          "VoiceFile": "H12_05913.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_postyotogi_0060_M_Cunning": {
+    "ID": "orgy_postyotogi_0060_M_Cunning",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0060_T_Cunning",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0060_T_Cunning": {
+    "ID": "orgy_postyotogi_0060_T_Cunning",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0061",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "是非次も、ご指名くださいね？",
+      "VoiceData": {
+        "Cunning": {
+          "VoiceFile": "H12_05913.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_postyotogi_0080_Cunning": {
+    "ID": "orgy_postyotogi_0080_Cunning",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "大好きですご主人様…",
+      "VoiceData": {
+        "Cunning": {
+          "VoiceFile": "H12_04571.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3,
+          "EndTime": 6
+        }
+      }
+    }
+  }
+}

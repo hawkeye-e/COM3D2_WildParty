@@ -1,0 +1,371 @@
+{
+  "orgy_intro_0033_M_Masochist": {
+    "ID": "orgy_intro_0033_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0033_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        },
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "orgy_intro_0033_T_Masochist": {
+    "ID": "orgy_intro_0033_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0034",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "ぐふふ……それは楽しみです。",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04413.ogg",
+          "IsChoppingAudio": true,
+          "Endtime": 3.3
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_wg_0030_M_Masochist": {
+    "ID": "orgy_wg_0030_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0030_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        },
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_wg_0030_T_Masochist": {
+    "ID": "orgy_wg_0030_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0031",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "よろしくお願いしますね……",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04524.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_wg_0033Pre_Masochist": {
+    "ID": "orgy_wg_0033Pre_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0033_M_Masochist",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "おお！本当ですか？これはさすがに予想外。ここに来て良かった。"
+    }
+  },
+
+  "orgy_wg_0033_M_Masochist": {
+    "ID": "orgy_wg_0033_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0033_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        },
+        "FaceAnime": "誘惑",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "orgy_wg_0033_T_Masochist": {
+    "ID": "orgy_wg_0033_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0034",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "ぐふふっ……私といっぱい気持ちよくなってくださいね…",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04528.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5.6
+        }
+      }
+    }
+  },
+
+  "orgy_wg_0034_Masochist": {
+    "ID": "orgy_wg_0034_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0035_M_Masochist",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "ええ、楽しみだな。なぁさっそく移動しようか。案内してくれ。"
+    }
+  },
+
+  "orgy_wg_0035_M_Masochist": {
+    "ID": "orgy_wg_0035_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0035_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちご案内"
+        },
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "orgy_wg_0035_T_Masochist": {
+    "ID": "orgy_wg_0035_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0100",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "は、はい！",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04742.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        }
+      }
+    }
+  },
+
+
+
+
+
+
+
+
+
+  "orgy_postyotogi_0040_M_Masochist": {
+    "ID": "orgy_postyotogi_0040_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0040_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿待機"
+        },
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0040_T_Masochist": {
+    "ID": "orgy_postyotogi_0040_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0041_Masochist",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "凄く気持ちよかったです……",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04774.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5.8
+        }
+      }
+    }
+  },
+
+  "orgy_postyotogi_0041_Masochist": {
+    "ID": "orgy_postyotogi_0041_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0042_M_Masochist",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "そうか…今回はこの辺にしておくか…まぁ、パーティーもそろそろ終わりね…"
+    }
+  },
+
+  "orgy_postyotogi_0042_M_Masochist": {
+    "ID": "orgy_postyotogi_0042_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0042_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0042_T_Masochist": {
+    "ID": "orgy_postyotogi_0042_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0043_Masochist",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "満足していただけましたか？",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_01437.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 14
+        }
+      }
+    }
+  },
+
+  "orgy_postyotogi_0043_Masochist": {
+    "ID": "orgy_postyotogi_0043_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0044_M_Masochist",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "ああ、もちろん！すごく気持ちよかったぁ。素晴らしい時間でしたね。"
+    }
+  },
+
+  "orgy_postyotogi_0044_M_Masochist": {
+    "ID": "orgy_postyotogi_0044_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0044_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        },
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0044_T_Masochist": {
+    "ID": "orgy_postyotogi_0044_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0050",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "お客様にも楽しんでもらえているみたいで、嬉しいです。",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_03798.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 0.7
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_postyotogi_0060_M_Masochist": {
+    "ID": "orgy_postyotogi_0060_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0060_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0060_T_Masochist": {
+    "ID": "orgy_postyotogi_0060_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0061",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "またいらしてくださいね……",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04574.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_postyotogi_0080_Masochist": {
+    "ID": "orgy_postyotogi_0080_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "大好きです……ご主人様♪",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04647.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.6
+        }
+      }
+    }
+  }
+}

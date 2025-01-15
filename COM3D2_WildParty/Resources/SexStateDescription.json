@@ -1,0 +1,23 @@
+{
+  "NormalPlay": {
+    "NextStates": [ "Orgasm" ]
+  },
+  "Orgasm": {
+    "NextStates": [ "OrgasmEnd" ]
+  },
+  "OrgasmEnd": {
+    "NextStates": [ "OrgasmWait" ]
+  },
+  "OrgasmWait": {
+    "NextStates": [ "ChangePosition", "ChangePosition", "ChangePosition", "ChangePosition", "Insert" ]
+  },
+  "ChangePosition": {
+    "NextStates": [ "Insert" ]
+  },
+  "Insert": {
+    "NextStates": [ "InsertEnd" ]
+  },
+  "InsertEnd": {
+    "NextStates": [ "NormalPlay" ]
+  }
+}

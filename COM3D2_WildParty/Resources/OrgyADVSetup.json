@@ -1,0 +1,170 @@
+{
+  "org0001": {
+    "ID": "org0001",
+    "Type": "BG",
+    "Tag": "ShinShitsumu_ChairRot",
+    "WaitingType": "Auto",
+    "NextStepID": "org0002"
+  },
+
+  "org0002": {
+    "ID": "org0002",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "org0003",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 0,
+        "PosY": 0,
+        "PosZ": 0,
+        "TargetPosX": 0,
+        "TargetPosY": 1.4,
+        "TargetPosZ": -3.1,
+        "Distance": -0.1,
+        "AngleFrom": 1.1,
+        "AngleTo": -4
+      }
+    }
+  },
+
+  "org0003": {
+    "ID": "org0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "org0004",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "SpeakerName": "",
+      "Text": "ç°âÒÇÃëÂä¥é”ç’ÇÃèµë“ÉQÉXÉgÇÃêlêîÇåàÇﬂÇƒÇ≠ÇæÇ≥Ç¢ÅB",
+      "VoiceFile": "",
+      "IsChoppingAudio": false
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "org0004": {
+    "ID": "org0004",
+    "Type": "Special",
+    "WaitingType": "InputChoice",
+    "NextStepID": "org0010",
+    "ChoiceData": [
+      {
+        "Key": "1",
+        "Value": "ÇPêl"
+      },
+      {
+        "Key": "2",
+        "Value": "ÇQêl"
+      },
+      {
+        "Key": "3",
+        "Value": "ÇRêl"
+      },
+      {
+        "Key": "4",
+        "Value": "ÇSêl"
+      },
+      {
+        "Key": "5",
+        "Value": "ÇTêl"
+      },
+      {
+        "Key": "6",
+        "Value": "ÇUêl"
+      },
+      {
+        "Key": "7",
+        "Value": "ÇVêl"
+      },
+      {
+        "Key": "8",
+        "Value": "ÇWêl"
+      },
+      {
+        "Key": "9",
+        "Value": "ÇXêl"
+      },
+      {
+        "Key": "10",
+        "Value": "ÇPÇOêl"
+      },
+      {
+        "Key": "11",
+        "Value": "ÇPÇPêl"
+      },
+      {
+        "Key": "12",
+        "Value": "ÇPÇQêl"
+      },
+      {
+        "Key": "13",
+        "Value": "ÇPÇRêl"
+      },
+      {
+        "Key": "14",
+        "Value": "ÇPÇSêl"
+      },
+      {
+        "Key": "15",
+        "Value": "ÇPÇTêl"
+      },
+      {
+        "Key": "16",
+        "Value": "ÇPÇUêl"
+      },
+      {
+        "Key": "17",
+        "Value": "ÇPÇVêl"
+      },
+      {
+        "Key": "18",
+        "Value": "ÇPÇWêl"
+      },
+      {
+        "Key": "19",
+        "Value": "ÇPÇXêl"
+      },
+      {
+        "Key": "20",
+        "Value": "ÇQÇOêl"
+      }
+    ]
+  },
+
+  "org0010": {
+    "ID": "org0010",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "org0011"
+  },
+
+  "org0011": {
+    "ID": "org0011",
+    "Type": "LoadScene",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "NextStepID": "org0020"
+  },
+
+
+  "org0020": {
+    "ID": "org0020",
+    "Type": "LoadScene",
+    "Tag": "SceneADV",
+    "WaitingType": "Auto",
+    "NextStepID": "org0021"
+  },
+
+
+
+  "org0021": {
+    "ID": "org0021",
+    "Type": "CharaInit",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0001"
+  }
+
+}

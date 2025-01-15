@@ -1,0 +1,35 @@
+{
+  "ChangePosition": {
+    "Name": "体位変更",
+    "Type": "Common"
+  },
+  "ChangePositionAll": {
+    "Name": "一緒に体位変更",
+    "Type": "Common"
+  },
+  "ChangeFormation": {
+    "Name": "一緒に位置変更",
+    "Type": "Common"
+  },
+  "ChangePartner": {
+    "Name": "パートナー交換",
+    "Type": "Common"
+  },
+  "FetishOrgy": {
+    "Name": "性癖「乱交大好き」",
+    "Type": "Fetish",
+    "FetishID": 99001,
+    "ConditionCheckTexts": [
+      {
+        "Field": "ManCount",
+        "DisplayText": "[=ManCount]人以上とセックスする"
+      },
+      {
+        "Field": "OrgasmCount",
+        "DisplayText": "[=OrgasmCount]回以上で絶頂する"
+      }
+    ]
+
+
+  }
+}

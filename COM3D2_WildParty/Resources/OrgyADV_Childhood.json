@@ -1,0 +1,363 @@
+{
+  "orgy_intro_0033_M_Childhood": {
+    "ID": "orgy_intro_0033_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0033_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち腕を組む"
+        },
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "orgy_intro_0033_T_Childhood": {
+    "ID": "orgy_intro_0033_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0034",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "えへへ、いいですねそれ♪",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP02ADD_62379.ogg",
+          "IsChoppingAudio": true,
+          "Endtime": 3
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_wg_0030_M_Childhood": {
+    "ID": "orgy_wg_0030_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0030_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        },
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_wg_0030_T_Childhood": {
+    "ID": "orgy_wg_0030_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0031",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "ふふ、よろしくお願いしますね。",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_tsou2_61289.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+
+
+  "orgy_wg_0033Pre_Childhood": {
+    "ID": "orgy_wg_0033Pre_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0033_M_Childhood",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "おお！本当ですか？これはさすがに予想外。ここに来て良かった。なぁなぁ[=Maid0Name]ちゃん、一緒に大いに楽しもうね。"
+    }
+  },
+
+  "orgy_wg_0033_M_Childhood": {
+    "ID": "orgy_wg_0033_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0033_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        },
+        "FaceAnime": "誘惑",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "orgy_wg_0033_T_Childhood": {
+    "ID": "orgy_wg_0033_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0034",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "うふふ。期待していますからね？",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP02-M_62136.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "orgy_wg_0034_Childhood": {
+    "ID": "orgy_wg_0034_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0035_M_Childhood",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "ええ、楽しみだな。なぁ移動しようか。"
+    }
+  },
+
+  "orgy_wg_0035_M_Childhood": {
+    "ID": "orgy_wg_0035_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0035_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちご案内"
+        },
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "orgy_wg_0035_T_Childhood": {
+    "ID": "orgy_wg_0035_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0100",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "それでは、早速ご案内いたしますね？　ついてきてください。",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_KPV1_50962.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4
+        }
+      }
+    }
+  },
+
+
+
+
+
+  "orgy_postyotogi_0040_M_Childhood": {
+    "ID": "orgy_postyotogi_0040_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0040_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿待機"
+        },
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0040_T_Childhood": {
+    "ID": "orgy_postyotogi_0040_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0041_Childhood",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "すごく気持ちよかったです……♪",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_KPV1_51104.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 16.5
+        }
+      }
+    }
+  },
+
+  "orgy_postyotogi_0041_Childhood": {
+    "ID": "orgy_postyotogi_0041_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0042_M_Childhood",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "そうか…今回はこの辺にしておくか…まぁ、パーティーもそろそろ終わりね…"
+    }
+  },
+
+  "orgy_postyotogi_0042_M_Childhood": {
+    "ID": "orgy_postyotogi_0042_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0042_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0042_T_Childhood": {
+    "ID": "orgy_postyotogi_0042_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0043_Childhood",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "あの、お客様……本日はご満足いただけましたか……？",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_08830.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "orgy_postyotogi_0043_Childhood": {
+    "ID": "orgy_postyotogi_0043_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0044_M_Childhood",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "ああ、もちろん！すごく気持ちよかったぁ。素晴らしい時間でしたね。"
+    }
+  },
+
+  "orgy_postyotogi_0044_M_Childhood": {
+    "ID": "orgy_postyotogi_0044_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0044_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        },
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0044_T_Childhood": {
+    "ID": "orgy_postyotogi_0044_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0050",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "本当ですか？　お客様にそう仰っていただけると、とても嬉しいです。",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_08746.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_postyotogi_0060_M_Childhood": {
+    "ID": "orgy_postyotogi_0060_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0060_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0060_T_Childhood": {
+    "ID": "orgy_postyotogi_0060_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0061",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "あのっ……お客様。もしわたしに会いたくなったら……その時は、いつでも必ずここでお待ちしています。",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_09498.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_postyotogi_0080_Childhood": {
+    "ID": "orgy_postyotogi_0080_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "えへへ……お兄様、大好きですっ……♪",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_X1P_54798.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

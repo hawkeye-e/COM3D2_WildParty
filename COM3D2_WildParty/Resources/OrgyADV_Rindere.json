@@ -1,0 +1,367 @@
+{
+  "orgy_intro_0033_M_Rindere": {
+    "ID": "orgy_intro_0033_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0033_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち腕を組む"
+        },
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "orgy_intro_0033_T_Rindere": {
+    "ID": "orgy_intro_0033_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0034",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "ああ……それはきっと楽しいだろうな。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_X01_61382.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5,
+          "EndTime": 3.7
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_wg_0030_M_Rindere": {
+    "ID": "orgy_wg_0030_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0030_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_wg_0030_T_Rindere": {
+    "ID": "orgy_wg_0030_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0031",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "今日はよろしく頼むよ。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP01_19574.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+
+
+
+
+  "orgy_wg_0033Pre_Rindere": {
+    "ID": "orgy_wg_0033Pre_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0033_M_Rindere",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "おお！本当ですか？これはさすがに予想外。ここに来て良かった。なぁなぁ[=Maid0Name]ちゃん、一緒に大いに楽しもうね。"
+    }
+  },
+
+  "orgy_wg_0033_M_Rindere": {
+    "ID": "orgy_wg_0033_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0033_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち考える"
+        },
+        "FaceAnime": "誘惑",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "orgy_wg_0033_T_Rindere": {
+    "ID": "orgy_wg_0033_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0034",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "ああ、精一杯ご奉仕しよう。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_10222.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "orgy_wg_0034_Rindere": {
+    "ID": "orgy_wg_0034_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0035_M_Rindere",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "ええ、楽しみだな。なぁ移動しようか。"
+    }
+  },
+
+  "orgy_wg_0035_M_Rindere": {
+    "ID": "orgy_wg_0035_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0035_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちご案内"
+        },
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "orgy_wg_0035_T_Rindere": {
+    "ID": "orgy_wg_0035_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0100",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "じゃあ早速だが、部屋を案内するよ。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_tsou_69088.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.8
+        }
+      }
+    }
+  },
+
+
+
+
+
+
+
+
+
+  "orgy_postyotogi_0040_M_Rindere": {
+    "ID": "orgy_postyotogi_0040_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0040_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿待機"
+        },
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0040_T_Rindere": {
+    "ID": "orgy_postyotogi_0040_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0041_Rindere",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "私には十分すぎる刺激だ……いい経験だったよ……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP01_20331.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "orgy_postyotogi_0041_Rindere": {
+    "ID": "orgy_postyotogi_0041_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0042_M_Rindere",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "そうか…今回はこの辺にしておくか…まぁ、パーティーもそろそろ終わりね…"
+    }
+  },
+
+  "orgy_postyotogi_0042_M_Rindere": {
+    "ID": "orgy_postyotogi_0042_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0042_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0042_T_Rindere": {
+    "ID": "orgy_postyotogi_0042_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0043_Rindere",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "満足できたか……？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_10735.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1
+        }
+      }
+    }
+  },
+
+  "orgy_postyotogi_0043_Rindere": {
+    "ID": "orgy_postyotogi_0043_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0044_M_Rindere",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "SpeakerName": "お客様",
+      "Text": "ああ、もちろん！すごく気持ちよかったぁ。素晴らしい時間でしたね。"
+    }
+  },
+
+  "orgy_postyotogi_0044_M_Rindere": {
+    "ID": "orgy_postyotogi_0044_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0044_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        },
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0044_T_Rindere": {
+    "ID": "orgy_postyotogi_0044_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0050",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "喜んでもらえて私も嬉しいよ。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_tsou_69099.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3.8
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_postyotogi_0060_M_Rindere": {
+    "ID": "orgy_postyotogi_0060_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0060_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "orgy_postyotogi_0060_T_Rindere": {
+    "ID": "orgy_postyotogi_0060_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0061",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "……また、来てくれるんだよな？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_10751.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+
+  "orgy_postyotogi_0080_Rindere": {
+    "ID": "orgy_postyotogi_0080_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "SelectedMaid",
+      "Text": "ふふ……大好きだぞ……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP02D_26742.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

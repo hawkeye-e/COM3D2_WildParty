@@ -1,0 +1,704 @@
+{
+  "orgy_intro_0001": {
+    "ID": "orgy_intro_0001",
+    "Type": "BG",
+    "Tag": "ShinShitsumu",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0001a"
+  },
+
+  "orgy_intro_0001a": {
+    "ID": "orgy_intro_0001a",
+    "Type": "BGM",
+    "Tag": "BGM015.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0002"
+  },
+
+  "orgy_intro_0002": {
+    "ID": "orgy_intro_0002",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "orgy_intro_0003",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "ShowPenis": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組",
+        },
+        "PosRot": {
+          "PosString": "0.0, 0.5, -3.4",
+          "RotString": "0.0, 0.0, 0.0, 1.0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": false,
+        "PosRot": {
+          "PosString": "0, 0, 0",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+
+    ]
+  },
+
+  "orgy_intro_0003": {
+    "ID": "orgy_intro_0003",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0004",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 0,
+        "PosY": 1.6,
+        "PosZ": 0.9,
+        "TargetPosX": -0.1,
+        "TargetPosY": 1.5,
+        "TargetPosZ": -0.1,
+        "Distance": 1,
+        "AngleFrom": -179.6,
+        "AngleTo": 5.3
+      }
+    }
+  },
+
+  "orgy_intro_0004": {
+    "ID": "orgy_intro_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0005",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（エンパイアクラブの経営状況が順調、俺も数人の恋人ができてる。今が多分俺の一番幸せな時だ。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "orgy_intro_0005": {
+    "ID": "orgy_intro_0005",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0006",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（決して今の生活に不満はないけど、心の中に何かが足りないと感じる。）"
+    }
+  },
+
+  "orgy_intro_0006": {
+    "ID": "orgy_intro_0006",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0007",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そうだ、俺はその「何か」が知っている…幾つのスワップング夜伽の後、彼女たちはいつもより美しくて魅力的に見えた。あんな表情、俺との夜伽でさせたことない…）"
+    }
+  },
+
+  "orgy_intro_0007": {
+    "ID": "orgy_intro_0007",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0008",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（分かってる…俺は分かってる…彼女たちは俺の大切な宝物だ、他人に抱かせてはいけない。だけと…このことを考えずにはいられない。）"
+    }
+  },
+
+  "orgy_intro_0008": {
+    "ID": "orgy_intro_0008",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0009",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（やっちゃいけない事なのにやってみたい、見ちゃいけないものなのにもっと見たい。）"
+    }
+  },
+
+  "orgy_intro_0009": {
+    "ID": "orgy_intro_0009",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0010",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（…見たい、もっと見たい。愛する人のふしだらで淫らな痴態がもっと見たい。彼女たちがどれほど欲情しているかもっともっと見たい！）"
+    }
+  },
+
+  "orgy_intro_0010": {
+    "ID": "orgy_intro_0010",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（…どうすればいいだろうか…）"
+    }
+  },
+
+  "orgy_intro_0011": {
+    "ID": "orgy_intro_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0012",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "…"
+    }
+  },
+
+  "orgy_intro_0012": {
+    "ID": "orgy_intro_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0013",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "……"
+    }
+  },
+
+  "orgy_intro_0013": {
+    "ID": "orgy_intro_0013",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0014",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "………"
+    }
+  },
+
+  "orgy_intro_0014": {
+    "ID": "orgy_intro_0014",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0015",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（あ、ひらめいた。……そうしようか…）"
+    }
+  },
+
+  "orgy_intro_0015": {
+    "ID": "orgy_intro_0015",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "orgy_intro_0015a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "orgy_intro_0015a": {
+    "ID": "orgy_intro_0015a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "orgy_intro_0016",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": false,
+        "WaitLoad": true,
+        "ShowPenis": false,
+        "PosRot": {
+          "PosString": "0.0, 0.5, -3.4",
+          "RotString": "0.0, 0.0, 0.0, 1.0",
+        }
+      }
+
+    ]
+  },
+
+  "orgy_intro_0016": {
+    "ID": "orgy_intro_0016",
+    "Type": "BG",
+    "Tag": "",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0017",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "orgy_intro_0017": {
+    "ID": "orgy_intro_0017",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0018",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そして、俺は「エンパイアクラブ大感謝祭」というキャンペーンが計画された。それからメイドたちを呼んで、自分のやりたいことを伝えて行く。）"
+    }
+  },
+
+  "orgy_intro_0018": {
+    "ID": "orgy_intro_0018",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0018a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（たぶん彼女たちはこんなイベントが嫌い、ダメ言ってそうだな…）"
+    }
+  },
+
+  "orgy_intro_0018a": {
+    "ID": "orgy_intro_0018a",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "orgy_intro_0019",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "orgy_intro_0019": {
+    "ID": "orgy_intro_0019",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "orgy_intro_0020",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": false,
+        "WaitLoad": true,
+        "ShowPenis": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿考える"
+        },
+        "PosRot": {
+          "PosString": "0.0, 0.5, -3.4",
+          "RotString": "0.0, 0.0, 0.0, 1.0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "FaceAnime": "RandomSmile",
+        "PosRot": {
+          "PosString": "0.0, 0.0, -1.0",
+          "RotString": "0.0, 1.0, 0.0, 0.0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "FaceAnime": "RandomSmile",
+        "PosRot": {
+          "PosString": "-0.6, 0.0, -1.0",
+          "RotString": "0.0, 1.0, 0.0, 0.0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "FaceAnime": "RandomSmile",
+        "PosRot": {
+          "PosString": "0.6, 0.0, -1.0",
+          "RotString": "0.0, 1.0, 0.0, 0.0"
+        }
+      }
+    ]
+  },
+
+  "orgy_intro_0020": {
+    "ID": "orgy_intro_0020",
+    "Type": "BG",
+    "Tag": "ShinShitsumu",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0021"
+  },
+
+  "orgy_intro_0021": {
+    "ID": "orgy_intro_0021",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0022",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 0,
+        "PosY": 1.5,
+        "PosZ": -4.3,
+        "TargetPosX": 0,
+        "TargetPosY": 0.9,
+        "TargetPosZ": -0.9,
+        "Distance": 3.4,
+        "AngleFrom": -360.7,
+        "AngleTo": 10.3
+      }
+    }
+  },
+
+  "orgy_intro_0022": {
+    "ID": "orgy_intro_0022",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0023",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "次の日、俺はこの企画についてメイドたちと話し合う。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "orgy_intro_0023": {
+    "ID": "orgy_intro_0023",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0024",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Maid0Name]、[=Maid1Name]、[=Maid2Name]。今、こうゆうイベントを計画中だ…"
+    }
+  },
+
+  "orgy_intro_0024": {
+    "ID": "orgy_intro_0024",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0025",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は、このイベントの内容を彼女たちに伝えている）"
+    }
+  },
+
+
+  "orgy_intro_0025": {
+    "ID": "orgy_intro_0025",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0026",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（…みんなに嫌な顔をされそう…）"
+    }
+  },
+
+  "orgy_intro_0026": {
+    "ID": "orgy_intro_0026",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0027",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomOh",
+        "FaceBlend": "頬１涙０"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomOh",
+        "FaceBlend": "頬１涙０"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomOh",
+        "FaceBlend": "頬１涙０"
+      }
+    ]
+  },
+
+  "orgy_intro_0027": {
+    "ID": "orgy_intro_0027",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0028",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（…ん？）"
+    }
+  },
+
+
+  "orgy_intro_0028": {
+    "ID": "orgy_intro_0028",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0029",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺の予想に反して、彼女たちはそれほど嫌がっていないようだ。むしろ、興味津々…？）"
+    }
+  },
+
+  "orgy_intro_0029": {
+    "ID": "orgy_intro_0029",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0030",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "orgy_intro_0030": {
+    "ID": "orgy_intro_0030",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "…以上だ。無茶なことを言ったわかっている、だからこれは強制ではない。拒否しても構わない。"
+    }
+  },
+
+  "orgy_intro_0031": {
+    "ID": "orgy_intro_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0032_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（見て、その表情…イベントの内容を聞いてだけだが、もうこんな蕩けそうな顔してる。俺は彼女たちの恋人なのに... ）"
+    }
+  },
+
+
+  "orgy_intro_0032_Branch": {
+    "ID": "orgy_intro_0032_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "orgy_intro_0033_M_[=PType]"
+  },
+
+
+
+
+
+  "orgy_intro_0034": {
+    "ID": "orgy_intro_0034",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0035",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（…なんで全然反対しない？昔はそうしていたのに…あんなに嬉しそうに返事すると、なんかモヤモヤする。）"
+    }
+  },
+
+  "orgy_intro_0035": {
+    "ID": "orgy_intro_0035",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0036a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（……でもまぁ…俺が提案したことし、彼女らにも参加してもらいたいだし。今さらヤキモチしても何一つ一切意味ない。）"
+    }
+  },
+
+  "orgy_intro_0036a": {
+    "ID": "orgy_intro_0036a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0036",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "orgy_intro_0036": {
+    "ID": "orgy_intro_0036",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0037",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ありがとう、みんな。じゃあ、企画を進めるね。"
+    }
+  },
+
+
+  "orgy_intro_0037": {
+    "ID": "orgy_intro_0037",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "orgy_intro_0038",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+
+  "orgy_intro_0038": {
+    "ID": "orgy_intro_0038",
+    "Type": "BG",
+    "Tag": "",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0038a",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "orgy_intro_0038a": {
+    "ID": "orgy_intro_0038a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0039",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": false,
+        "FaceBlend": "頬０涙０",
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "FaceBlend": "頬０涙０",
+        "Visible": false,
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "FaceBlend": "頬０涙０",
+        "Visible": false,
+      }
+    ]
+  },
+
+  "orgy_intro_0039": {
+    "ID": "orgy_intro_0039",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0040",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そして、俺は数名の常連客と連絡を取り、パーティーに招待するようにしている。）"
+    }
+  },
+
+  "orgy_intro_0040": {
+    "ID": "orgy_intro_0040",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ああ…メイドたちの淫らな姿を見るのが待ち遠しいな…）"
+    }
+  },
+
+  "orgy_intro_0041": {
+    "ID": "orgy_intro_0041",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "orgy_wg_0001",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  }
+}
