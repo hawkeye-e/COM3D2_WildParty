@@ -3,6 +3,8 @@
 Wild Party is a mod trying to add new custom scenario to COM3D2.<br>
 Everything is possible!<br>
 
+For details or screenshots please refer to (https://hawkeye0.blogspot.com/)
+
 ## Features
 
 - Add a new scenario for throwing an orgy party with your maids!
