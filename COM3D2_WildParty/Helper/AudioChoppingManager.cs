@@ -40,10 +40,14 @@ namespace COM3D2.WildParty.Plugin.Helper
                 //make a sub clip with the time we want, and play it instead
                 if (start <= 0)
                     start = 0;
+                
+                //In case the system could not find the audio file due to lack of dlc etc, stop this process and let it be voiceless to avoid crash
+                if (maid.AudioMan.audiosource.clip == null)
+                    return;
+
                 if (end > maid.AudioMan.audiosource.clip.length || end <= 0)
                     end = maid.AudioMan.audiosource.clip.length;
                 subClip = MakeSubclip(maid.AudioMan.audiosource.clip, start, end);
-
                 //Put it in dictionary if the step id is provided
                 if (!string.IsNullOrEmpty(advStepID) && !forceNoLibrary)
                 {
