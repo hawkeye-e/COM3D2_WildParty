@@ -285,7 +285,7 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
 
             var c5 = t.GetComponent<Transform>(); if (c5 != null) Log.LogInfo("has Transform");
             var c28 = t.GetComponent<RectTransform>(); if (c28 != null) Log.LogInfo("has RectTransform");
-            var c6 = t.GetComponent<CanvasRenderer>(); if (c6 != null) Log.LogInfo("has CanvasRenderer");
+            //var c6 = t.GetComponent<CanvasRenderer>(); if (c6 != null) Log.LogInfo("has CanvasRenderer");
             var c7 = t.GetComponent<Component>(); if (c7 != null) Log.LogInfo("has Component");
             var c8 = t.GetComponent<RectTransform>(); if (c8 != null) Log.LogInfo("has RectTransform");
 
@@ -302,7 +302,7 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
             var c19 = t.GetComponent<LayoutGroup>(); if (c19 != null) Log.LogInfo("has LayoutGroup");
             var c20 = t.GetComponent<GridLayoutGroup>(); if (c20 != null) Log.LogInfo("has GridLayoutGroup");
             var c21 = t.GetComponent<ContentSizeFitter>(); if (c21 != null) Log.LogInfo("has ContentSizeFitter");
-            var c22 = t.GetComponent<Canvas>(); if (c22 != null) Log.LogInfo("has Canvas");
+            //var c22 = t.GetComponent<Canvas>(); if (c22 != null) Log.LogInfo("has Canvas");
             var c23 = t.GetComponent<ContentSizeFitter>(); if (c23 != null) Log.LogInfo("has ContentSizeFitter");
             
             var c24 = t.GetComponent<Toggle>(); if (c24 != null) Log.LogInfo("has Toggle");
@@ -316,7 +316,7 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
 
             var c33 = t.GetComponent<UIButton>(); if (c33 != null) Log.LogInfo("has UIButton");
             var c34 = t.GetComponent<UILabel>(); if (c34 != null) Log.LogInfo("has UILabel");
-            var c35 = t.GetComponent<BoxCollider>(); if (c35 != null) Log.LogInfo("has BoxCollider");
+            //var c35 = t.GetComponent<BoxCollider>(); if (c35 != null) Log.LogInfo("has BoxCollider");
             var c36 = t.GetComponent<UIPanel>(); if (c36 != null) Log.LogInfo("has UIPanel");
             var c37 = t.GetComponent<UIScrollView>(); if (c37 != null) Log.LogInfo("has UIScrollView");
             var c38 = t.GetComponent<UIScrollBar>(); if (c38 != null) Log.LogInfo("has UIScrollBar");

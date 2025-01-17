@@ -93,8 +93,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                 System.IO.MemoryStream mStream = new System.IO.MemoryStream();
                 ModResources.ImageResources.icon_orgy.Save(mStream, ModResources.ImageResources.icon_orgy.RawFormat);
                 Texture2D tex = new Texture2D(64, 64);
-                tex.LoadImage(mStream.ToArray());
-
+                ImageConversion.LoadImage(tex, mStream.ToArray());
+                
                 return tex;
             }
 
