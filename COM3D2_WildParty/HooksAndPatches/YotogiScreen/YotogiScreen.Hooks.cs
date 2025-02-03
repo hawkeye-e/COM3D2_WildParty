@@ -352,5 +352,13 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             Patches.CheckMaidAnimationTrigger(__instance);
         }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(YotogiPlayManager), "OnClickViweReset")]
+        private static bool YotogiPlayManagerOnClickViewResetPost()
+        {
+            //Try to fix the camera to zoom to the main maid instead of some weird locations.
+            return Patches.HandleCameraReset();
+        }
     }
 }

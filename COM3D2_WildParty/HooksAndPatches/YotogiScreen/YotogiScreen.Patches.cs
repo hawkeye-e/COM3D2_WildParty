@@ -782,5 +782,15 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 }
             }
         }
+
+        internal static bool HandleCameraReset()
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                Core.CameraHandling.SetCameraLookAt(GameMain.Instance.CharacterMgr.GetMaid(0));
+                return false;
+            }
+            return true;
+        }
     }
 }
