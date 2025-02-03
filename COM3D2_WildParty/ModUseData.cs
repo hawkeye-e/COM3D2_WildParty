@@ -95,7 +95,7 @@ namespace COM3D2.WildParty.Plugin
         {
             ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.OrgyPartyScenarioID);
 
-            InitBackgroundMotionDictionary(ModResources.TextResource.SexPosList_OrgyParty, ModResources.TextResource.SexPosValidLabels);
+            InitBackgroundMotionDictionary(ModResources.TextResource.SexPosList_OrgyParty, ModResources.TextResource.SexPosValidLabels_OrgyParty);
             ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.TextResource.SexPosList_OrgyParty);
 
             InitAllVoiceDataFromCSV();
