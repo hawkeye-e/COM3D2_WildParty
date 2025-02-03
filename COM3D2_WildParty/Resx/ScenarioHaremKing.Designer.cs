@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ModResources {
+namespace ScenarioResources {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ModResources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ImageResources {
+    internal class ScenarioHaremKing {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ImageResources() {
+        internal ScenarioHaremKing() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ModResources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("COM3D2.WildParty.Plugin.Resx.ImageResources", typeof(ImageResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("COM3D2.WildParty.Plugin.Resx.ScenarioHaremKing", typeof(ScenarioHaremKing).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,40 +61,32 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   查詢類似 mod_icon_harem_king.tex 的當地語系化字串。
+        ///   查詢類似 {
+        ///  &quot;haremking0001&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;ShinShitsumu_ChairRot&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking0001_init_chara&quot;
+        ///  },
+        ///
+        ///  &quot;haremking0001_init_chara&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking0001_init_chara&quot;,
+        ///    &quot;Type&quot;: &quot;CharaInit&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_intro_0001&quot;,
+        ///    &quot;CharaInit&quot;: {
+        ///      &quot;IsClubOwnerMainCharacter&quot;: true
+        ///    }
+        ///  },
+        ///
+        ///  &quot;haremking_intro_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_intro_0001&quot;,
+        ///    &quot;Type&quot;: &quot; [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
         /// </summary>
-        internal static string HaremKingIconFileName {
+        internal static string HaremKingADVIntro {
             get {
-                return ResourceManager.GetString("HaremKingIconFileName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
-        /// </summary>
-        internal static System.Drawing.Bitmap icon_harem_king {
-            get {
-                object obj = ResourceManager.GetObject("icon_harem_king", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
-        /// </summary>
-        internal static System.Drawing.Bitmap icon_orgy {
-            get {
-                object obj = ResourceManager.GetObject("icon_orgy", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查詢類似 mod_icon_orgy_party.tex 的當地語系化字串。
-        /// </summary>
-        internal static string OrgyPartyIconFileName {
-            get {
-                return ResourceManager.GetString("OrgyPartyIconFileName", resourceCulture);
+                return ResourceManager.GetString("HaremKingADVIntro", resourceCulture);
             }
         }
     }

@@ -278,6 +278,15 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             Patches.StoreAnimationClipNameForGroup(__instance, tag);
         }
 
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(TBody), nameof(TBody.LoadAnime), new Type[] { typeof(string), typeof(AFileSystemBase), typeof(string), typeof(bool), typeof(bool) })]
+        private static void LoadAnime1Post(TBody __instance, string tag, AFileSystemBase fileSystem, string filename, bool additive, bool loop)
+        {
+            Patches.ApplyForceSetting(__instance.maid);
+        }
+
+        
+
         //This is the function called whenever the player click the orgasm command. Record the men info and update the count.
         //In order not to make things overcomplicated, when this function is called we simply count all the man in the whole group orgasm once even the motion may not be the case.
         [HarmonyPostfix]
@@ -303,5 +312,45 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             Core.BackgroundGroupMotionManager.CheckReviewForEachGroup(__instance, StateManager.Instance.PartyGroupList);
         }
 
+        
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(YotogiPlayManager), nameof(YotogiPlayManager.NextSkill))]
+        private static void NextSkillPost(YotogiPlayManager __instance)
+        {
+            //In the NextSkill method, the maid in index 1 could be set to not visible if the main group changes from FFM to MF etc. Need to set it back
+            Patches.ResetMaidVisibility();
+        }
+
+        //Prevent the Yotogi scene change its background if the spoof flag is on
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(YotogiStageSelectManager.StageExpansionPack), nameof(YotogiStageSelectManager.StageExpansionPack.ChangeBG))]
+        private static bool ChangeBG(Maid maid)
+        {
+            return !StateManager.Instance.SpoofChangeBackgroundFlag;
+        }
+
+        
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(YotogiPlayManager), "OnClickCommand")]
+        private static void OnClickCommandPre(Yotogis.Skill.Data.Command.Data command_data)
+        {
+            //Record down the type of command clicked
+            Patches.RecordCommandTypeClicked(command_data);
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(YotogiPlayManager), "OnClickCommand")]
+        private static void OnClickCommandPost(Yotogis.Skill.Data.Command.Data command_data)
+        {
+            //Apply linked group motion if any when player click a command button
+            Patches.ApplyLinkedGroupMotionUponCommandClicked(command_data);
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(Maid), "Update")]
+        private static void MaidUpdatePost(Maid __instance)
+        {
+            Patches.CheckMaidAnimationTrigger(__instance);
+        }
     }
 }

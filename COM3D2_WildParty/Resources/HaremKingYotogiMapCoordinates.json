@@ -1,0 +1,1855 @@
+{
+  "Houshi": {
+    "DisplayName": "一緒に奉仕する",
+    "IsRandom": false,
+    "CoordinateList": [
+      {
+        "MaxGroup": 4,
+        "GroupCoordinates": [
+          {
+            "ArrayPosition": 0,
+            "PosString": "8.45, 0.5, -1.5",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "IKAttach": [
+              {
+                "PosString": "0.02, -0.04, -0.1",
+                "AttachType": "NewPoint",
+                "Source": {
+                  "ArrayIndex": 0,
+                  "ListType": "Group",
+                  "MemberType": "Man1",
+                  "Bone": "左手"
+                },
+                "Target": {
+                  "ArrayIndex": 3,
+                  "ListType": "Group",
+                  "MemberType": "Maid1",
+                  "Bone": "_IK_handR"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 1,
+            "PosString": "8.45, 0.5, -1.9",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 100,
+              "NormalPlay": 100,
+              "Orgasm": 100
+            },
+            "IsManVisible": false,
+            "IsIndependentExcitement": false,
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "Maid",
+                  "ArrayPosition": 0
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 2,
+            "PosString": "8.95, 0.5, -1.8",
+            "RotString": "0.0, 0.707, 0.0, 0.707",
+            "ForceSexPos": {
+              "Waiting": 101,
+              "NormalPlay": 102,
+              "Orgasm": 101
+            },
+            "IsManVisible": false,
+            "IsIndependentExcitement": false
+          },
+          {
+            "ArrayPosition": 3,
+            "PosString": "7.45, 0.5, -1.7",
+            "RotString": "0.0, 0.707, 0.0, 0.707",
+            "ForceSexPos": {
+              "Waiting": 103,
+              "NormalPlay": 104,
+              "Orgasm": 103
+            },
+            "IsManVisible": false,
+            "IsIndependentExcitement": false
+          }
+        ],
+        "IndividualCoordinates": [
+          {
+            "Type": "F",
+            "ArrayPosition": 5,
+            "PosString": "6.95, 0.5, -0.2",
+            "RotString": "0.0, 0.707, 0.0, -0.707",
+            "Motion": {
+              "ScriptFile": "h_kaiwaR_001.ks",
+              "ScriptLabel": "*ソファーで恥じらう"
+            },
+            "FaceAnime": "RandomHorny",
+            "EyeSight": [
+              {
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "Type": "F",
+            "ArrayPosition": 6,
+            "PosString": "9.90, 0.50, -0.40",
+            "RotString": "0.0, 0.707, 0.0, 0.707",
+            "Motion": {
+              "ScriptFile": "h_kaiwaL_001.ks",
+              "ScriptLabel": "*ソファーで会話L"
+            },
+            "FaceAnime": "RandomHorny",
+            "EyeSight": [
+              {
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "Type": "F",
+            "ArrayPosition": 7,
+            "PosString": "5.925, 0.52, -1.85",
+            "RotString": "0.0, 0.707, 0.0, 0.707",
+            "Motion": {
+              "ScriptFile": "h_kaiwaC_001.ks",
+              "ScriptLabel": "*会話座り待機"
+            },
+            "FaceAnime": "RandomHorny",
+            "EyeSight": [
+              {
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "Type": "F",
+            "ArrayPosition": 8,
+            "PosString": "11.00, 0.00, -1.50",
+            "RotString": "0.0, -0.806, 0.0, 0.592",
+            "Motion": {
+              "ScriptFile": "event_006.ks",
+              "ScriptLabel": "*床座り＿照れる"
+            },
+            "FaceAnime": "RandomHorny",
+            "EyeSight": [
+              {
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "Type": "F",
+            "ArrayPosition": 9,
+            "PosString": "9.63, 0.00, 0.69",
+            "RotString": "0.0, 0.997, 0.0, -0.0794",
+            "Motion": {
+              "ScriptFile": "h_kaiwa_tati_001.ks",
+              "ScriptLabel": "*会話立ち俯き思案"
+            },
+            "FaceAnime": "RandomHorny",
+            "EyeSight": [
+              {
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+
+  },
+
+  "Houshi_Standing": {
+    "DisplayName": "一緒に奉仕する（立位）",
+    "IsRandom": false,
+    "CoordinateList": [
+      {
+        "MaxGroup": 4,
+        "GroupCoordinates": [
+          {
+            "ArrayPosition": 0,
+            "PosString": "6.65, 0.0, -0.9",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "IKAttach": [
+              {
+                "PosString": "0.17, 0.05, 0.1",
+                "AttachType": "Point",
+                "PullOff": true,
+                "Source": {
+                  "ArrayIndex": 0,
+                  "ListType": "Group",
+                  "MemberType": "Man1",
+                  "Bone": "右手"
+                },
+                "Target": {
+                  "ArrayIndex": 2,
+                  "ListType": "Group",
+                  "MemberType": "Maid1",
+                  "Bone": "Bip01 Neck"
+                }
+              },
+              {
+                "PosString": "0.15, -0.13, -0.03",
+                "AttachType": "Point",
+                "PullOff": true,
+                "Source": {
+                  "ArrayIndex": 0,
+                  "ListType": "Group",
+                  "MemberType": "Man1",
+                  "Bone": "左手"
+                },
+                "Target": {
+                  "ArrayIndex": 3,
+                  "ListType": "Group",
+                  "MemberType": "Maid1",
+                  "Bone": "Hip_L"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 1,
+            "PosString": "6.65, 0.0, -1.2",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 105,
+              "NormalPlay": 106,
+              "Orgasm": 105
+            },
+            "IsManVisible": false,
+            "IsIndependentExcitement": false
+          },
+          {
+            "ArrayPosition": 2,
+            "PosString": "6.49, 0.5, -0.6",
+            "RotString": "0.0, 0.707, 0.0, 0.707",
+            "ForceSexPos": {
+              "Waiting": 107,
+              "NormalPlay": 108,
+              "Orgasm": 107
+            },
+            "IsManVisible": false,
+            "IsIndependentExcitement": false,
+            "IKAttach": [
+              {
+                "PosString": "-1.26, -2.02, 0.06",
+                "AttachType": "NewPoint",
+                "PullOff": true,
+                "Source": {
+                  "ArrayIndex": 2,
+                  "ListType": "Group",
+                  "MemberType": "Maid1",
+                  "Bone": "左手"
+                },
+                "Target": {
+                  "ArrayIndex": 2,
+                  "ListType": "Group",
+                  "MemberType": "Maid1",
+                  "Bone": "Bip01 L Thigh"
+                }
+              },
+
+              {
+                "PosString": "-0.29, -0.39, 0.16",
+                "AttachType": "NewPoint",
+                "PullOff": true,
+                "Source": {
+                  "ArrayIndex": 2,
+                  "ListType": "Group",
+                  "MemberType": "Maid1",
+                  "Bone": "右手"
+                },
+                "Target": {
+                  "ArrayIndex": 2,
+                  "ListType": "Group",
+                  "MemberType": "Maid1",
+                  "Bone": "Bip01 R Thigh"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 3,
+            "PosString": "6.25, 0.0, -1.0",
+            "RotString": "0.0, 0.0, 0.0, -1.0",
+            "ForceSexPos": {
+              "Waiting": 109,
+              "NormalPlay": 109,
+              "Orgasm": 109
+            },
+            "IsManVisible": false,
+            "IsIndependentExcitement": false
+          }
+        ],
+        "IndividualCoordinates": [
+          {
+            "Type": "F",
+            "ArrayPosition": 4,
+            "PosString": "6.95, 0.5, -2.0",
+            "RotString": "0.0, 0.707, 0.0, -0.707",
+            "Motion": {
+              "ScriptFile": "h_kaiwaL_001.ks",
+              "ScriptLabel": "*ソファーで会話L"
+            },
+            "FaceAnime": "RandomHorny",
+            "EyeSight": [
+              {
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+
+          {
+            "Type": "F",
+            "ArrayPosition": 5,
+            "PosString": "8.65, 0.50, -1.35",
+            "RotString": "0.0, 0.707, 0.0, -0.707",
+            "Motion": {
+              "ScriptFile": "h_edit_pose_001.ks",
+              "ScriptLabel": "*ポーズ004"
+            },
+            "FaceAnime": "RandomHorny",
+            "EyeSight": [
+              {
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "Maid",
+                  "ArrayPosition": 0
+                }
+              }
+            ]
+          },
+
+          {
+            "Type": "F",
+            "ArrayPosition": 6,
+            "PosString": "7.50, 0.00, 1.40",
+            "RotString": "0.0, 0.924, 0.0, -0.382",
+            "Motion": {
+              "ScriptFile": "event_006.ks",
+              "ScriptLabel": "*床座り＿照れる"
+            },
+            "FaceAnime": "RandomHorny",
+            "EyeSight": [
+              {
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+
+
+          {
+            "Type": "F",
+            "ArrayPosition": 7,
+            "PosString": "5.925, 0.52, -1.85",
+            "RotString": "0.0, 0.707, 0.0, 0.707",
+            "Motion": {
+              "ScriptFile": "h_kaiwaC_001.ks",
+              "ScriptLabel": "*会話座り待機"
+            },
+            "FaceAnime": "RandomHorny",
+            "EyeSight": [
+              {
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+
+          {
+            "Type": "F",
+            "ArrayPosition": 8,
+            "PosString": "6.98, 0.50, 0.0",
+            "RotString": "0.0, 0.707, 0.0, -0.707",
+            "Motion": {
+              "ScriptFile": "h_kaiwaR_001.ks",
+              "ScriptLabel": "*ソファーで恥じらう"
+            },
+            "FaceAnime": "RandomHorny",
+            "EyeSight": [
+              {
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+
+          {
+            "Type": "F",
+            "ArrayPosition": 9,
+            "PosString": "4.80, 0.00, 0.80",
+            "RotString": "0.0, 0.967, 0.0, 0.259",
+            "Motion": {
+              "ScriptFile": "h_edit_pose_001.ks",
+              "ScriptLabel": "*ポーズ003"
+            },
+            "FaceAnime": "RandomHorny",
+            "EyeSight": [
+              {
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+
+  },
+
+
+  "Missionary_All": {
+    "DisplayName": "並べ正常位",
+    "IsRandom": false,
+
+    "CoordinateList": [
+      {
+        "MaxGroup": 10,
+
+        "GroupCoordinates": [
+          {
+            "ArrayPosition": 0,
+            "PosString": "5.8, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0"
+          },
+          {
+            "ArrayPosition": 1,
+            "PosString": "6.4, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 2,
+            "PosString": "7.0, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 3,
+            "PosString": "7.6, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 4,
+            "PosString": "8.2, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 5,
+            "PosString": "8.8, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 6,
+            "PosString": "9.4, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 7,
+            "PosString": "10.0, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 8,
+            "PosString": "10.6, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 9,
+            "PosString": "11.2, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          }
+
+        ]
+
+      }
+    ],
+
+    "SpecialSetting": {
+      "MainGroupMotionOffset": {
+        "PosString": "0.0, 0.0, -0.2",
+        "RotString": "0.0, 1.0, 0.0, 0.0"
+      },
+      "MoveLeftSetting": {
+        "PreMoveMotion": {
+          "WaitingMotionBeforeMovement": {
+            "Motion": {
+              "ScriptFile": "sex_OM_seijyoui.ks",
+              "ScriptLabel": "*待機"
+            }
+          },
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "harem_seijyouiC_taiki_ikou_m_ONCE_.anm",
+              "MotionTag": "harem_seijyouic_taiki_ikou_m_once_.anm",
+              "IsLoopMotion": false,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "-0.5, 0, 0",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            },
+            "TweenOffset": {
+              "PosString": "-0.15, 0, 0",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          },
+
+          "MainGroupMaid": {
+            "Motion": {
+              "MotionFile": "harem_seijyouiC_taiki_ikou_f2_ONCE_.anm",
+              "MotionTag": "harem_seijyouic_taiki_ikou_f2_once_.anm",
+              "IsLoopMotion": false,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "-0.5, 0, 0",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          },
+
+          "targetGroupMaid": {
+            "Motion": {
+              "MotionFile": "OM_seijyoui_taiki_f.anm",
+              "MotionTag": "om_seijyoui_taiki_f.anm",
+              "IsLoopMotion": false,
+              "IsBlend": true
+            }
+          }
+        },
+        "PostMoveMotion": {
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "OM_seijyoui_taiki_m.anm",
+              "MotionTag": "om_seijyoui_taiki_m.anm",
+              "IsLoopMotion": true,
+              "IsBlend": false
+            }
+          },
+          "OriginalGroupMaid": {
+            "Motion": {
+              "MotionFile": "harem_seijyoui_taiki_f.anm",
+              "MotionTag": "harem_seijyoui_taiki_f.anm",
+              "IsLoopMotion": true,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "0.5, 0, 0.2",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          }
+        }
+      },
+
+      "MoveRightSetting": {
+        "PreMoveMotion": {
+          "WaitingMotionBeforeMovement": {
+            "Motion": {
+              "ScriptFile": "sex_OM_seijyoui.ks",
+              "ScriptLabel": "*待機"
+            }
+          },
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "harem_seijyoui_taiki_ikou_m_ONCE_.anm",
+              "MotionTag": "harem_seijyoui_taiki_ikou_m_once_.anm",
+              "IsLoopMotion": false,
+              "IsBlend": false
+            },
+            "TweenOffset": {
+              "PosString": "0.15, 0, 0",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          },
+
+          "MainGroupMaid": {
+            "Motion": {
+              "MotionFile": "harem_seijyoui_taiki_ikou_f_ONCE_.anm",
+              "MotionTag": "harem_seijyoui_taiki_ikou_f_once_.anm",
+              "IsLoopMotion": false,
+              "IsBlend": false
+            }
+          },
+
+          "targetGroupMaid": {
+            "Motion": {
+              "MotionFile": "OM_seijyoui_taiki_f.anm",
+              "MotionTag": "om_seijyoui_taiki_f.anm",
+              "IsLoopMotion": false,
+              "IsBlend": true
+            }
+          }
+        },
+        "PostMoveMotion": {
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "OM_seijyoui_taiki_m.anm",
+              "MotionTag": "om_seijyoui_taiki_m.anm",
+              "IsLoopMotion": true,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "0.45, 0, 0",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          },
+          "OriginalGroupMaid": {
+            "Offset": {
+              "PosString": "0.0, 0, 0.2",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          }
+        }
+      }
+    }
+  },
+
+
+
+  "Missionary_Anus_All": {
+    "DisplayName": "並べ正常位（アナル）",
+    "IsRandom": false,
+
+    "CoordinateList": [
+      {
+        "MaxGroup": 10,
+
+        "GroupCoordinates": [
+          {
+            "ArrayPosition": 0,
+            "PosString": "5.8, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0"
+          },
+          {
+            "ArrayPosition": 1,
+            "PosString": "6.4, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 2,
+            "PosString": "7.0, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 3,
+            "PosString": "7.6, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 4,
+            "PosString": "8.2, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 5,
+            "PosString": "8.8, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 6,
+            "PosString": "9.4, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 7,
+            "PosString": "10.0, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 8,
+            "PosString": "10.6, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 9,
+            "PosString": "11.2, 0.0, 1.5",
+            "RotString": "0.0, 1.0, 0.0, 0.0",
+            "ForceSexPos": {
+              "Waiting": 110,
+              "NormalPlay": 110,
+              "Orgasm": 110
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          }
+
+        ]
+
+      }
+    ],
+
+    "SpecialSetting": {
+      "MainGroupMotionOffset": {
+        "PosString": "0.0, 0.0, -0.2",
+        "RotString": "0.0, 1.0, 0.0, 0.0"
+      },
+      "MoveLeftSetting": {
+        "PreMoveMotion": {
+          "WaitingMotionBeforeMovement": {
+            "Motion": {
+              "ScriptFile": "sex_OM_seijyouiA.ks",
+              "ScriptLabel": "*待機"
+            }
+          },
+
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "harem_seijyouiC_taiki_ikou_m_ONCE_.anm",
+              "MotionTag": "harem_seijyouic_taiki_ikou_m_once_.anm",
+              "IsLoopMotion": false,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "-0.5, 0, 0",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            },
+            "TweenOffset": {
+              "PosString": "-0.15, 0, 0",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          },
+
+          "MainGroupMaid": {
+            "Motion": {
+              "MotionFile": "harem_seijyouiC_taiki_ikou_f2_ONCE_.anm",
+              "MotionTag": "harem_seijyouic_taiki_ikou_f2_once_.anm",
+              "IsLoopMotion": false,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "-0.5, 0, 0",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          },
+
+          "targetGroupMaid": {
+            "Motion": {
+              "MotionFile": "OM_seijyoui_taiki_f.anm",
+              "MotionTag": "om_seijyoui_taiki_f.anm",
+              "IsLoopMotion": false,
+              "IsBlend": true
+            }
+          }
+        },
+        "PostMoveMotion": {
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "OM_seijyoui_taiki_m.anm",
+              "MotionTag": "om_seijyoui_taiki_m.anm",
+              "IsLoopMotion": true,
+              "IsBlend": false
+            }
+          },
+          "OriginalGroupMaid": {
+            "Motion": {
+              "MotionFile": "harem_seijyoui_taiki_f.anm",
+              "MotionTag": "harem_seijyoui_taiki_f.anm",
+              "IsLoopMotion": true,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "0.5, 0, 0.2",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          }
+        }
+      },
+
+      "MoveRightSetting": {
+        "PreMoveMotion": {
+          "WaitingMotionBeforeMovement": {
+            "Motion": {
+              "ScriptFile": "sex_OM_seijyouiA.ks",
+              "ScriptLabel": "*待機"
+            }
+          },
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "harem_seijyoui_taiki_ikou_m_ONCE_.anm",
+              "MotionTag": "harem_seijyoui_taiki_ikou_m_once_.anm",
+              "IsLoopMotion": false,
+              "IsBlend": false
+            },
+            "TweenOffset": {
+              "PosString": "0.15, 0, 0",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          },
+
+          "MainGroupMaid": {
+            "Motion": {
+              "MotionFile": "harem_seijyoui_taiki_ikou_f_ONCE_.anm",
+              "MotionTag": "harem_seijyoui_taiki_ikou_f_once_.anm",
+              "IsLoopMotion": false,
+              "IsBlend": false
+            }
+          },
+
+          "targetGroupMaid": {
+            "Motion": {
+              "MotionFile": "OM_seijyoui_taiki_f.anm",
+              "MotionTag": "om_seijyoui_taiki_f.anm",
+              "IsLoopMotion": false,
+              "IsBlend": true
+            }
+          }
+        },
+        "PostMoveMotion": {
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "OM_seijyoui_taiki_m.anm",
+              "MotionTag": "om_seijyoui_taiki_m.anm",
+              "IsLoopMotion": true,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "0.45, 0, 0",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          },
+          "OriginalGroupMaid": {
+            "Offset": {
+              "PosString": "0.0, 0, 0.2",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          }
+        }
+      }
+    }
+  },
+
+
+
+  "Doggy_All": {
+    "DisplayName": "尻並べ",
+    "IsRandom": false,
+
+    "CoordinateList": [
+      {
+        "MaxGroup": 10,
+
+        "GroupCoordinates": [
+          {
+            "ArrayPosition": 0,
+            "PosString": "5.0, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0"
+          },
+          {
+            "ArrayPosition": 1,
+            "PosString": "5.75, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 2,
+            "PosString": "6.5, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 3,
+            "PosString": "7.25, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 4,
+            "PosString": "8.0, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 5,
+            "PosString": "8.75, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 6,
+            "PosString": "9.5, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 7,
+            "PosString": "10.25, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 8,
+            "PosString": "11.0, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 9,
+            "PosString": "11.75, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          }
+
+        ]
+
+      }
+    ],
+
+    "SpecialSetting": {
+      "MainGroupMotionOffset": {
+        "PosString": "0.0, 0.0, -0.4",
+        "RotString": "0.0, 0.0, 0.0, 1.0"
+      },
+      "MoveLeftSetting": {
+        "PreMoveMotion": {
+          "WaitingMotionBeforeMovement": {
+            "Motion": {
+              "ScriptFile": "sex_OM_kouhaii.ks",
+              "ScriptLabel": "*待機"
+            }
+          },
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "harem_seijyouiC_taiki_ikou_m_ONCE_.anm",
+              "MotionTag": "harem_seijyouic_taiki_ikou_m_once_.anm",
+              "IsLoopMotion": false,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "-0.5, 0, -0.2",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            },
+            "TweenOffset": {
+              "PosString": "-0.3, 0, 0",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          },
+
+          "MainGroupMaid": {
+            "Motion": {
+              "MotionFile": "inu_omocya_taiki_f.anm",
+              "MotionTag": "inu_omocya_taiki_f.anm",
+              "IsLoopMotion": true,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "0, 0, 0.4",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            }
+          },
+
+          "targetGroupMaid": {
+            "Motion": {
+              "MotionFile": "OM_kouhaii_taiki_f.anm",
+              "MotionTag": "om_kouhaii_taiki_f.anm",
+              "IsLoopMotion": false,
+              "IsBlend": true
+            },
+            "Offset": {
+              "PosString": "0, 0, 0.4",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            },
+            "TweenOffset": {
+              "PosString": "0, 0, -0.4",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            }
+          }
+        },
+        "PostMoveMotion": {
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "OM_kouhaii_taiki_m.anm",
+              "MotionTag": "om_kouhaii_taiki_m.anm",
+              "IsLoopMotion": true,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "-0.5, 0, 0.2",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            }
+          }
+        }
+      },
+
+      "MoveRightSetting": {
+        "PreMoveMotion": {
+          "WaitingMotionBeforeMovement": {
+            "Motion": {
+              "ScriptFile": "sex_OM_kouhaii.ks",
+              "ScriptLabel": "*待機"
+            }
+          },
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "harem_seijyoui_taiki_ikou_m_ONCE_.anm",
+              "MotionTag": "harem_seijyoui_taiki_ikou_m_once_.anm",
+              "IsLoopMotion": false,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "0.0, 0, -0.2",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            },
+            "TweenOffset": {
+              "PosString": "0.3, 0, 0",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          },
+
+          "MainGroupMaid": {
+            "Motion": {
+              "MotionFile": "inu_omocya_taiki_f.anm",
+              "MotionTag": "inu_omocya_taiki_f.anm",
+              "IsLoopMotion": true,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "0, 0, 0.4",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            }
+          },
+
+          "targetGroupMaid": {
+            "Motion": {
+              "MotionFile": "OM_kouhaii_taiki_f.anm",
+              "MotionTag": "om_kouhaii_taiki_f.anm",
+              "IsLoopMotion": false,
+              "IsBlend": true
+            },
+            "Offset": {
+              "PosString": "0, 0, 0.4",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            },
+            "TweenOffset": {
+              "PosString": "0, 0, -0.4",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            }
+          }
+        },
+        "PostMoveMotion": {
+
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "OM_kouhaii_taiki_m.anm",
+              "MotionTag": "om_kouhaii_taiki_m.anm",
+              "IsLoopMotion": true,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "0.5, 0, 0.2",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            }
+          }
+
+        }
+      }
+    }
+  },
+
+
+
+  "Doggy_Anus_All": {
+    "DisplayName": "尻並べ（アナル）",
+    "IsRandom": false,
+
+    "CoordinateList": [
+      {
+        "MaxGroup": 10,
+
+        "GroupCoordinates": [
+          {
+            "ArrayPosition": 0,
+            "PosString": "5.0, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0"
+          },
+          {
+            "ArrayPosition": 1,
+            "PosString": "5.75, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 2,
+            "PosString": "6.5, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 3,
+            "PosString": "7.25, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 4,
+            "PosString": "8.0, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 5,
+            "PosString": "8.75, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 6,
+            "PosString": "9.5, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 7,
+            "PosString": "10.25, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 8,
+            "PosString": "11.0, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          },
+          {
+            "ArrayPosition": 9,
+            "PosString": "11.75, 0.0, 1.8",
+            "RotString": "0.0, 0.0, 0.0, 1.0",
+            "ForceSexPos": {
+              "Waiting": 111,
+              "NormalPlay": 111,
+              "Orgasm": 111
+            },
+            "IsManVisible": false,
+            
+            "EyeSight": [
+              {
+                "SourceGroupMember": "Maid1",
+                "Type": "ToChara",
+                "EyeToCharaSetting": {
+                  "Type": "ClubOwner"
+                }
+              }
+            ]
+          }
+
+        ]
+
+      }
+    ],
+
+    "SpecialSetting": {
+      "MainGroupMotionOffset": {
+        "PosString": "0.0, 0.0, -0.4",
+        "RotString": "0.0, 0.0, 0.0, 1.0"
+      },
+      "MoveLeftSetting": {
+        "PreMoveMotion": {
+          "WaitingMotionBeforeMovement": {
+            "Motion": {
+              "ScriptFile": "sex_OM_kouhaiiA.ks",
+              "ScriptLabel": "*待機"
+            }
+          },
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "harem_seijyouiC_taiki_ikou_m_ONCE_.anm",
+              "MotionTag": "harem_seijyouic_taiki_ikou_m_once_.anm",
+              "IsLoopMotion": false,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "-0.5, 0, -0.2",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            },
+            "TweenOffset": {
+              "PosString": "-0.3, 0, 0",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          },
+
+          "MainGroupMaid": {
+            "Motion": {
+              "MotionFile": "inu_omocya_taiki_f.anm",
+              "MotionTag": "inu_omocya_taiki_f.anm",
+              "IsLoopMotion": true,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "0, 0, 0.4",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            }
+          },
+
+          "targetGroupMaid": {
+            "Motion": {
+              "MotionFile": "OM_kouhaii_taiki_f.anm",
+              "MotionTag": "om_kouhaii_taiki_f.anm",
+              "IsLoopMotion": false,
+              "IsBlend": true
+            },
+            "Offset": {
+              "PosString": "0, 0, 0.4",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            },
+            "TweenOffset": {
+              "PosString": "0, 0, -0.4",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            }
+          }
+        },
+        "PostMoveMotion": {
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "OM_kouhaii_taiki_m.anm",
+              "MotionTag": "om_kouhaii_taiki_m.anm",
+              "IsLoopMotion": true,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "-0.5, 0, 0.2",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            }
+          }
+        }
+      },
+
+      "MoveRightSetting": {
+        "PreMoveMotion": {
+          "WaitingMotionBeforeMovement": {
+            "Motion": {
+              "ScriptFile": "sex_OM_kouhaiiA.ks",
+              "ScriptLabel": "*待機"
+            }
+          },
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "harem_seijyoui_taiki_ikou_m_ONCE_.anm",
+              "MotionTag": "harem_seijyoui_taiki_ikou_m_once_.anm",
+              "IsLoopMotion": false,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "0.0, 0, -0.2",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            },
+            "TweenOffset": {
+              "PosString": "0.3, 0, 0",
+              "RotString": "0.0, 1.0, 0.0, 0.0"
+            }
+          },
+
+          "MainGroupMaid": {
+            "Motion": {
+              "MotionFile": "inu_omocya_taiki_f.anm",
+              "MotionTag": "inu_omocya_taiki_f.anm",
+              "IsLoopMotion": true,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "0, 0, 0.4",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            }
+
+          },
+
+          "targetGroupMaid": {
+            "Motion": {
+              "MotionFile": "OM_kouhaii_taiki_f.anm",
+              "MotionTag": "om_kouhaii_taiki_f.anm",
+              "IsLoopMotion": false,
+              "IsBlend": true
+            },
+            "Offset": {
+              "PosString": "0, 0, 0.4",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            },
+            "TweenOffset": {
+              "PosString": "0, 0, -0.4",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            }
+          }
+        },
+        "PostMoveMotion": {
+
+          "MainGroupMan": {
+            "Motion": {
+              "MotionFile": "OM_kouhaii_taiki_m.anm",
+              "MotionTag": "om_kouhaii_taiki_m.anm",
+              "IsLoopMotion": true,
+              "IsBlend": false
+            },
+            "Offset": {
+              "PosString": "0.5, 0, 0.2",
+              "RotString": "0.0, 0.0, 0.0, 1.0"
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+}

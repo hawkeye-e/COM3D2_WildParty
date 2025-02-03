@@ -16,6 +16,15 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
         internal int DebugUseCurrentGroupIndex = 0;
         internal bool DebugOneOffResetMarriageFlag = true;
 
+        internal List<Maid> DebugMaidList = new List<Maid>();
+        internal List<Maid> DebugManList = new List<Maid>();
+
+        internal float DebugX = 0f;
+        internal float DebugY = 0f;
+        internal float DebugZ = 0f;
+
+        internal bool killme = false;
+
         internal string[] DebugVoiceFileInQuestion = {
 
             "H13_tsou_06143.ogg"

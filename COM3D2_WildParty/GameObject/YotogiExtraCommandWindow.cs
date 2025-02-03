@@ -25,8 +25,8 @@ namespace COM3D2.WildParty.Plugin.CustomGameObject
         static Vector3 COMMAND_WINDOW_LOCATION = new Vector3(510f, 380f, 0f);
 
         static Vector3 CONTENT_HOLDER_LOCATION = new Vector3(120f, 506f, 5f);
-        static Vector3 SCROLL_BAR_UP_BUTTON_LOCATION = new Vector3(245f, 555f);
-        static Vector3 SCROLL_BAR_DOWN_BUTTON_LOCATION = new Vector3(245f, -230f);
+        static Vector3 SCROLL_BAR_UP_BUTTON_LOCATION = new Vector3(245f, 535f);
+        static Vector3 SCROLL_BAR_DOWN_BUTTON_LOCATION = new Vector3(245f, -250f);
 
         const float BUTTON_DISTANCE = -35f;
         #endregion
@@ -70,16 +70,16 @@ namespace COM3D2.WildParty.Plugin.CustomGameObject
         private bool _requireInit = true;
         private Mode _currentMode = Mode.Hidden;
 
-        public YotogiExtraCommandWindow(GameObject toBeCloned)
+        public YotogiExtraCommandWindow(GameObject toBeCloned, bool isClonedFromMasterCopy = true)
         {
             var clone = GameObject.Instantiate(toBeCloned);
 
             //Set it to active in order to avoid being destroy automatically, but at the same time we dont want it to appear on the screen so scale it to 0
             clone.SetActive(true);
             this.transform = clone.transform;
-
+            
             SetVisible(false);
-
+            
             //clone.transform.localScale = new Vector3(0f, 0f, 0f);
 
             //for (int i = 0; i < clone.transform.childCount; i++)
@@ -87,17 +87,25 @@ namespace COM3D2.WildParty.Plugin.CustomGameObject
 
             //rename to avoid confusion when debug
             clone.name = MODDED_OBJECT_NAME;
-            var contentParent = clone.transform.Find(ORIGINAL_CONTENT_HOLDER_PATH);
+            string contentHolderPath = ORIGINAL_CONTENT_HOLDER_PATH;
+            if (isClonedFromMasterCopy)
+                contentHolderPath = MODDED_CONTENT_HOLDER_PATH;
+            //var contentParent = clone.transform.Find(ORIGINAL_CONTENT_HOLDER_PATH);
+            var contentParent = clone.transform.Find(contentHolderPath);
+
             contentParent.name = MODDED_CONTENT_HOLDER_NAME;
-
+            
             //we dont need that arrow
-            var arrow = clone.transform.Find(ARROW_PATH);
-            arrow.gameObject.SetActive(false);
-            arrow.SetParent(null);
-
+            if (!isClonedFromMasterCopy) { 
+                var arrow = clone.transform.Find(ARROW_PATH);
+                arrow.gameObject.SetActive(false);
+                arrow.SetParent(null);
+            }
+            
             //config the positions a bit. we will have to do the remaining once it is attached to the yotogi scene
             var baseRect = clone.transform.Find(BASE_PATH).GetComponent<UIRect>();
             baseRect.SetRect(PANEL_POSITION_X, PANEL_POSITION_Y, PANEL_WIDTH, PANEL_HEIGHT);
+
             var scrollbarRect = clone.transform.Find(SCROLL_BAR_PATH).GetComponent<UIRect>();
             scrollbarRect.SetRect(PANEL_POSITION_X, PANEL_POSITION_Y, PANEL_WIDTH, PANEL_HEIGHT);
 
@@ -106,6 +114,7 @@ namespace COM3D2.WildParty.Plugin.CustomGameObject
 
             var DragMatRect = clone.transform.Find(DRAG_MAT_PATH).GetComponent<UIRect>();
             DragMatRect.SetRect(PANEL_POSITION_X, PANEL_POSITION_Y, PANEL_WIDTH, PANEL_HEIGHT);
+
             var pnl = clone.transform.Find(CONTENT_PATH).GetComponent<UIPanel>();
             pnl.SetRect(PANEL_POSITION_X, PANEL_POSITION_Y, CONTENT_HOLDER_WIDTH, CONTENT_HOLDER_HEIGHT);
 
@@ -200,7 +209,6 @@ namespace COM3D2.WildParty.Plugin.CustomGameObject
             for (int i = contentParent.childCount -1 ; i >= 0; i--)
             {
                 var btn = contentParent.GetChild(i);
-                WildParty.Log.LogInfo("try to remove "+ btn.GetComponent<UIButton>().name);
                 btn.gameObject.SetActive(false);
                 btn.SetParent(null);
                 btn.localScale = Vector3.zero;

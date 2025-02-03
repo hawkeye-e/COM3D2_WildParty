@@ -95,6 +95,33 @@ namespace ModResources {
         }
         
         /// <summary>
+        ///   查詢類似 {
+        ///  &quot;Houshi&quot;: {
+        ///    &quot;DisplayName&quot;: &quot;一緒に奉仕する&quot;,
+        ///    &quot;IsRandom&quot;: false,
+        ///    &quot;CoordinateList&quot;: [
+        ///      {
+        ///        &quot;MaxGroup&quot;: 4,
+        ///        &quot;GroupCoordinates&quot;: [
+        ///          {
+        ///            &quot;ArrayPosition&quot;: 0,
+        ///            &quot;PosString&quot;: &quot;8.45, 0.5, -1.5&quot;,
+        ///            &quot;RotString&quot;: &quot;0.0, 0.0, 0.0, 1.0&quot;,
+        ///            &quot;IKAttach&quot;: [
+        ///              {
+        ///                &quot;PosString&quot;: &quot;0.02, -0.04, -0.1&quot;,
+        ///                &quot;AttachType&quot;: &quot;NewPoint&quot;,
+        ///                &quot;Source&quot;: {
+        ///                  &quot;ArrayIndex&quot;: 0,
+        ///         [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingYotogiMapCoordinates {
+            get {
+                return ResourceManager.GetString("HaremKingYotogiMapCoordinates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查詢類似 イベント「[=EventName]」には最低[=Min]名、最大[=Max]名が必要です。 的當地語系化字串。
         /// </summary>
         internal static string MaidCountRequirementWarning {
@@ -217,7 +244,7 @@ namespace ModResources {
         ///    &quot;CoordinateList&quot;: [
         ///      {
         ///        &quot;MaxGroup&quot;: 20,
-        ///        &quot;Coordinates&quot;: [
+        ///        &quot;GroupCoordinates&quot;: [
         ///          {
         ///            &quot;ArrayPosition&quot;: 0,
         ///            &quot;PosString&quot;: &quot;0.0, 0.0, -1.4&quot;,
@@ -229,11 +256,77 @@ namespace ModResources {
         ///            &quot;RotString&quot;: &quot;0.0, 0.2, 0.0, 1.0&quot;
         ///          },
         ///          {
-        ///             [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        ///        [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
         /// </summary>
         internal static string OrgyYotogiMapCoordinates {
             get {
                 return ResourceManager.GetString("OrgyYotogiMapCoordinates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;Houshi&quot;: {
+        ///    &quot;DefaultSexPosID&quot;: 5,
+        ///    &quot;IsRandomAssign&quot;: false,
+        ///    &quot;IsShuffleMaidList&quot;: true,
+        ///    &quot;IsShuffleManList&quot;: false,
+        ///    &quot;ExcludePersonality&quot;: [ 190, 200, 230 ],
+        ///    &quot;GroupSetup&quot;: [
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;ManCount&quot;: 1,
+        ///        &quot;MaidCount&quot;: 2
+        ///      },
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 1,
+        ///        &quot;ManCount&quot;: 1,
+        ///        &quot;MaidCount&quot;: 1
+        ///      },
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 2,
+        ///        &quot;ManCount&quot;: 1,
+        ///        &quot;MaidCount&quot;: 1
+        ///      },
+        ///      {
+        ///        &quot; [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string PartyGroupSetup_HaremKing {
+            get {
+                return ResourceManager.GetString("PartyGroupSetup_HaremKing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;Houshi&quot;: {
+        ///    &quot;DefaultSexPosID&quot;: 5,
+        ///    &quot;IsRandomAssign&quot;: false,
+        ///    &quot;IsShuffleMaidList&quot;: true,
+        ///    &quot;IsShuffleManList&quot;: false,
+        ///    &quot;ExcludePersonality&quot;: [ 190, 200, 230 ],
+        ///    &quot;GroupSetup&quot;: [
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;ManCount&quot;: 1,
+        ///        &quot;MaidCount&quot;: 2
+        ///      },
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 1,
+        ///        &quot;ManCount&quot;: 1,
+        ///        &quot;MaidCount&quot;: 1
+        ///      },
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 2,
+        ///        &quot;ManCount&quot;: 1,
+        ///        &quot;MaidCount&quot;: 1
+        ///      },
+        ///      {
+        ///        &quot; [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string PartyGroupSetup_OrgyParty {
+            get {
+                return ResourceManager.GetString("PartyGroupSetup_OrgyParty", resourceCulture);
             }
         }
         
@@ -281,13 +374,25 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   查詢類似 SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,dummy
-        ///1,愛撫,sex_OM_aibu.ks,MF,TRUE,1,53000,53000,53000,53000,53000,53000,53000,38000,38000,38000,38000,38000,38000,53000,53000,38000,53000,53000,69000,69000,53000,53000,99000,TRUE,
-        ///2,セックス正常位,sex_OM_seijyoui.ks,MF,TRUE,50,53030,53030,53030,53030,53030,53030,53030,38030,38030,38030,38030,38030,38030,53030,53030,38030,53030,53030,6 [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        ///   查詢類似 SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,dummy
+        ///1,セックス正常位,sex_OM_seijyoui.ks,MF,TRUE,50,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,18910,20210,90,90,85110,TRUE,TRUE,
+        ///2,アナルセックス正常位,sex_OM_seijyouiA.ks,MF,TRUE,51,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,18920,20220,110,110,110,TRUE,TRUE,
+        ///3,セックス後背位,sex_OM_kouhaii.ks,MF [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
         /// </summary>
-        internal static string SexPosList {
+        internal static string SexPosList_HaremKing {
             get {
-                return ResourceManager.GetString("SexPosList", resourceCulture);
+                return ResourceManager.GetString("SexPosList_HaremKing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,dummy
+        ///1,愛撫,sex_OM_aibu.ks,MF,TRUE,1,53000,53000,53000,53000,53000,53000,53000,38000,38000,38000,38000,38000,38000,53000,53000,38000,53000,53000,69000,69000,53000,53000,99000,TRUE,TRUE,
+        ///2,セックス正常位,sex_OM_seijyoui.ks,MF,TRUE,50,53030,53030,53030,53030,53030,53030,53030,38030,38030,38030,38030,38030,38030,53030,53030,38 [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string SexPosList_OrgyParty {
+            get {
+                return ResourceManager.GetString("SexPosList_OrgyParty", resourceCulture);
             }
         }
         
@@ -351,6 +456,34 @@ namespace ModResources {
         internal static string SexPosValidLabels {
             get {
                 return ResourceManager.GetString("SexPosValidLabels", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 SexPosID,ExcitementLevel,LabelName,VoiceType,VoiceType2,LabelGroupID
+        ///100,0,*待機,NoVoiceSmile,,1
+        ///100,1,*待機,NoVoiceSmile,,1
+        ///100,2,*待機,NoVoiceSmile,,1
+        ///100,3,*待機,NoVoiceSmile,,1
+        ///101,0,*待機,Waiting,,2
+        ///101,1,*待機,Waiting,,2
+        ///101,2,*待機,Waiting,,2
+        ///101,3,*待機,Waiting,,2
+        ///102,0,*激しさ１乳首舐め,LickJob,,3
+        ///102,1,*激しさ１乳首舐め,LickJob,,3
+        ///102,2,*激しさ２乳首舐め,LickJob,,3
+        ///102,3,*激しさ３乳首舐め,LickJob,,3
+        ///103,0,*待機,Waiting,,4
+        ///103,1,*待機,Waiting,,4
+        ///103,2,*待機,Waiting,,4
+        ///103,3,*待機,Waiting,,4
+        ///104,0,*靴舐め,LickJob,,5
+        ///104,1,*靴舐め,LickJob,,5
+        /// [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string SexPosValidLabels_HaremKing {
+            get {
+                return ResourceManager.GetString("SexPosValidLabels_HaremKing", resourceCulture);
             }
         }
         

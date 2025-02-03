@@ -29,6 +29,7 @@ namespace COM3D2.WildParty.Plugin
         public List<string> ExcludeFlag;
 
         public List<MapInfo> AllowMap;
+        public DefaultMapInfo DefaultMap;
         public List<string> ExtraYotogiCommands;
         public string ADVEntryStep;
         public bool CanGainSkillExp;
@@ -56,6 +57,15 @@ namespace COM3D2.WildParty.Plugin
         internal class MapInfo
         {
             public int MapID;
+            public List<string> FormationOption;
+            public string DefaultFormation;
+        }
+
+        internal class DefaultMapInfo
+        {
+            public string DayMapID;
+            public string NightMapID;
+            public string BGM;
             public List<string> FormationOption;
             public string DefaultFormation;
         }

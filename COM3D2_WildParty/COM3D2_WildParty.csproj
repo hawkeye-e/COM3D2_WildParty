@@ -112,8 +112,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
+    <Compile Include="DataClass\AnimationEndTrigger.cs" />
     <Compile Include="DataClass\CameraView.cs" />
     <Compile Include="DataClass\ExtraYotogiCommand.cs" />
+    <Compile Include="DataClass\EyeSightSetting.cs" />
+    <Compile Include="DataClass\ForceSexPosInfo.cs" />
+    <Compile Include="DataClass\IKAttachInfo.cs" />
+    <Compile Include="DataClass\PartyGroupSetup.cs" />
     <Compile Include="DataClass\MotionInfo.cs" />
     <Compile Include="DataClass\SemenPattern.cs" />
     <Compile Include="DataClass\MasturbationMotion.cs" />
@@ -164,10 +169,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ImageResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resx\ScenarioDetailResource.Designer.cs">
+    <Compile Include="Resx\ScenarioOrgyParty.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ScenarioDetailResource.resx</DependentUpon>
+      <DependentUpon>ScenarioOrgyParty.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resx\ScenarioHaremKing.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScenarioHaremKing.resx</DependentUpon>
     </Compile>
     <Compile Include="Resx\TextResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -199,10 +209,15 @@
       <CustomToolNamespace>ModResources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resx\ScenarioDetailResource.resx">
+    <EmbeddedResource Include="Resx\ScenarioOrgyParty.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ScenarioDetailResource.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>ModResources</CustomToolNamespace>
+      <LastGenOutput>ScenarioOrgyParty.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ScenarioResources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resx\ScenarioHaremKing.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ScenarioHaremKing.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ScenarioResources</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Include="Resx\TextResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -218,6 +233,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ExtraYotogiComands.json" />
+    <None Include="Resources\HaremKingADVIntro.json" />
+    <None Include="Resources\HaremKingYotogiMapCoordinates.json" />
     <None Include="Resources\ManBodyOptions.csv" />
     <None Include="Resources\MasturbationMotion.csv" />
     <None Include="Resources\ModFetish.json" />
@@ -252,11 +269,15 @@
     <None Include="Resources\OrgyADV_Sister.json" />
     <None Include="Resources\OrgyADV_Yandere.json" />
     <None Include="Resources\OrgyYotogiMapCoordinates.json" />
+    <None Include="Resources\PartyGroupSetup_HaremKing.json" />
+    <None Include="Resources\PartyGroupSetup_OrgyParty.json" />
     <None Include="Resources\SexPosFace.csv" />
-    <None Include="Resources\SexPosList.csv" />
+    <None Include="Resources\SexPosList_HaremKing.csv" />
+    <None Include="Resources\SexPosList_OrgyParty.csv" />
     <None Include="Resources\SexPosSE.csv" />
     <None Include="Resources\SexPosSpecialLabels.csv" />
     <None Include="Resources\SexPosValidLabels.csv" />
+    <None Include="Resources\SexPosValidLabels_HaremKing.csv" />
     <None Include="Resources\SexStateDescription.json" />
     <None Include="Resources\SemenPattern.json" />
     <None Include="Resources\test.png" />
@@ -294,7 +315,7 @@
     <Folder Include="Doc\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icon_orgy_rgb.bmp" />
+    <None Include="Resources\icon_harem_king.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions />

@@ -9,9 +9,9 @@ namespace COM3D2.WildParty.Plugin
         public static Dictionary<int, Dictionary<string, ADVStep>> ADVStepData;
 
         //Key: Group Type (MF, MMF, FFM)
-        public static Dictionary<string, List<BackgroundGroupMotion.MotionItem>> BackgroundOrgyMotionList;
+        public static Dictionary<string, List<BackgroundGroupMotion.MotionItem>> BackgroundMotionList;
         //Key: personality id, Inner Key: Group Type
-        public static Dictionary<int, Dictionary<string, List<PlayableSkill.SkillItem>>> ValidOrgySkillList;
+        public static Dictionary<int, Dictionary<string, List<PlayableSkill.SkillItem>>> ValidSkillList;
         //Key: personality id
         //public static Dictionary<int, List<PersonalityVoice.VoiceEntry>> PersonalityVoiceList;
         public static Dictionary<int, PersonalityVoice> PersonalityVoiceList;
@@ -39,6 +39,9 @@ namespace COM3D2.WildParty.Plugin
         //Key: Command Data ID
         public static Dictionary<string, ExtraYotogiCommandData> ExtraYotogiCommandDataList;
 
+        //Key: Formation ID
+        public static Dictionary<string, PartyGroupSetup> PartyGroupSetupList;
+
         public ModUseData()
         {
         }
@@ -46,19 +49,8 @@ namespace COM3D2.WildParty.Plugin
         //Read all the necessary data from resources files
         public static void Init()
         {
-            ADVStepData = LoadScenarioManager.LoadScenario();
-
-            InitBackgroundMotionDictionary();
-            
-            ValidOrgySkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.TextResource.SexPosList);
-
-            InitAllVoiceDataFromCSV();
-
             ManBodyPartList = ReadManBodyPartCSVFile(ModResources.TextResource.ManBodyOptions);
-            VoiceFaceList = VoiceFace.ReadCSVFile(ModResources.TextResource.SexPosFace);
-
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.OrgyYotogiMapCoordinates);
-
+            
             ScenarioCategoryList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ScenarioCategory>>(ModResources.TextResource.ModScenarioCategory);
 
             ScenarioList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Scenario>>(ModResources.TextResource.ModScenario);
@@ -67,6 +59,7 @@ namespace COM3D2.WildParty.Plugin
 
             MasturbationMotionList = MasturbationMotion.ReadCSVFile(ModResources.TextResource.MasturbationMotion);
 
+            VoiceFaceList = VoiceFace.ReadCSVFile(ModResources.TextResource.SexPosFace);
             SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription);
 
             SemenPatternList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SemenPattern>>(ModResources.TextResource.SemenPattern);
@@ -78,15 +71,52 @@ namespace COM3D2.WildParty.Plugin
             FetishList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Fetish>>(ModResources.TextResource.ModFetish);
 
             ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.TextResource.ExtraYotogiComands);
-
         }
 
-        private static void InitScenarioDataList()
+        public static void InitDataForScenario(int scenarioID)
         {
-            //If the scenario steps data are split into different files, need to update this part accordingly
-            ADVStepData = new Dictionary<int, Dictionary<string, ADVStep>>();
-
+            ResetModUseData();
+            if (scenarioID == ScenarioIDList.OrgyPartyScenarioID)
+                InitDataForOrgyParty();
+            else if (scenarioID == ScenarioIDList.HaremKingScenarioID)
+                InitDataForHaremKing();
         }
+
+        private static void ResetModUseData()
+        {
+            ADVStepData = new Dictionary<int, Dictionary<string, ADVStep>>();
+            BackgroundMotionList = new Dictionary<string, List<BackgroundGroupMotion.MotionItem>>();
+            ValidSkillList = new Dictionary<int, Dictionary<string, List<PlayableSkill.SkillItem>>>();
+            PersonalityVoiceList = new Dictionary<int, PersonalityVoice>();
+            MapCoordinateList = new Dictionary<string, MapCoorindates>();
+        }
+
+        private static void InitDataForOrgyParty()
+        {
+            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.OrgyPartyScenarioID);
+
+            InitBackgroundMotionDictionary(ModResources.TextResource.SexPosList_OrgyParty, ModResources.TextResource.SexPosValidLabels);
+            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.TextResource.SexPosList_OrgyParty);
+
+            InitAllVoiceDataFromCSV();
+            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.OrgyYotogiMapCoordinates);
+
+            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.TextResource.PartyGroupSetup_OrgyParty);
+        }
+
+        private static void InitDataForHaremKing()
+        {
+            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.HaremKingScenarioID);
+
+            InitBackgroundMotionDictionary(ModResources.TextResource.SexPosList_HaremKing, ModResources.TextResource.SexPosValidLabels_HaremKing);
+            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.TextResource.SexPosList_HaremKing);
+
+            InitAllVoiceDataFromCSV();
+            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.HaremKingYotogiMapCoordinates);
+
+            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.TextResource.PartyGroupSetup_HaremKing);
+        }
+
 
         private static void InitAllVoiceDataFromCSV()
         {
@@ -137,12 +167,12 @@ namespace COM3D2.WildParty.Plugin
             PersonalityVoiceList.Add(personalityID, voiceData);
         }
 
-        private static void InitBackgroundMotionDictionary()
+        private static void InitBackgroundMotionDictionary(string resSexPos, string resLabel)
         {
-            BackgroundOrgyMotionList = BackgroundGroupMotion.ReadSexPosListCSVFile(ModResources.TextResource.SexPosList, ModResources.TextResource.SexPosValidLabels);
+            BackgroundMotionList = BackgroundGroupMotion.ReadSexPosListCSVFile(resSexPos, resLabel);
             List<MotionSpecialLabel> lstAll = MotionSpecialLabel.ReadCSVFile(ModResources.TextResource.SexPosSpecialLabels);
 
-            foreach(var kvp in BackgroundOrgyMotionList)
+            foreach(var kvp in BackgroundMotionList)
             {
                 foreach(var motionItem in kvp.Value)
                 {

@@ -5,6 +5,6 @@ namespace COM3D2.WildParty.Plugin
     internal class ScenarioIDList
     {
         internal const int OrgyPartyScenarioID = 9900001;
-
+        internal const int HaremKingScenarioID = 9901001;
     }
 }

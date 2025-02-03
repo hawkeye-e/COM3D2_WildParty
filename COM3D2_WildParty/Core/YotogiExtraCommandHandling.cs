@@ -27,6 +27,15 @@ namespace COM3D2.WildParty.Plugin.Core
                     return new EventDelegate(Orgy_ShowMaidList);
                 case Constant.ModYotogiCommandButtonID.FetishOrgy:
                     return new EventDelegate(Orgy_AddFetish_Orgy);
+
+                case Constant.ModYotogiCommandButtonID.ChangeFormationHaremKing:
+                    return new EventDelegate(HaremKing_ShowFormationOption);
+                case Constant.ModYotogiCommandButtonID.ChangeMaidHaremKing:
+                    return new EventDelegate(HaremKing_ShowMaidList);
+                case Constant.ModYotogiCommandButtonID.MoveLeftHaremKing:
+                    return new EventDelegate(HaremKing_MoveLeft);
+                case Constant.ModYotogiCommandButtonID.MoveRightHaremKing:
+                    return new EventDelegate(HaremKing_MoveRight);
                 default:
                     return null;
             }
@@ -41,7 +50,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 //Load the position list based on the info of maid zero
                 int personality = StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id;
                 string groupType = StateManager.Instance.PartyGroupList[0].GroupType;
-                var skillList = ModUseData.ValidOrgySkillList[personality][groupType];
+                var skillList = ModUseData.ValidSkillList[personality][groupType];
 
                 List<GameObject> buttons = new List<GameObject>();
 
@@ -72,7 +81,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 //Load the position list based on the info of maid zero
                 int personality = StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id;
                 string groupType = StateManager.Instance.PartyGroupList[0].GroupType;
-                var skillList = ModUseData.ValidOrgySkillList[personality][groupType];
+                var skillList = ModUseData.ValidSkillList[personality][groupType];
 
                 List<GameObject> buttons = new List<GameObject>();
 
@@ -94,8 +103,13 @@ namespace COM3D2.WildParty.Plugin.Core
             if (CheckRequireExtraCommandWindowPopulate(CustomGameObject.YotogiExtraCommandWindow.Mode.FormationList))
             {
                 //Load the formation list based on the current stage
-                var allowMapList = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First().AllowMap;
-                var formationOption = allowMapList.Where(x => x.MapID == YotogiStageSelectManager.SelectedStage.stageData.id).First().FormationOption;
+                Scenario scenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
+                List<string> formationOption;
+                if (scenario.AllowMap != null)
+                    formationOption = scenario.AllowMap.Where(x => x.MapID == YotogiStageSelectManager.SelectedStage.stageData.id).First().FormationOption;
+                else
+                    formationOption = scenario.DefaultMap.FormationOption;
+
 
                 List<GameObject> buttons = new List<GameObject>();
 
@@ -147,6 +161,183 @@ namespace COM3D2.WildParty.Plugin.Core
             int fetishID = Util.GetFetishIDByButtonID(Constant.ModYotogiCommandButtonID.FetishOrgy);
             CharacterHandling.AddFetish(maid, fetishID);
             CheckExtraYotogiCommandCondition(StateManager.Instance.InjectedButtons);
+        }
+
+        public static void HaremKing_ShowMaidList()
+        {
+            StateManager.Instance.ExtraCommandWindow.ResetScrollPosition();
+
+            if (CheckRequireExtraCommandWindowPopulate(CustomGameObject.YotogiExtraCommandWindow.Mode.MaidList))
+            {
+                //Load the position list based on the info of maid zero
+
+                List<GameObject> buttons = new List<GameObject>();
+
+                foreach (var maid in StateManager.Instance.SelectedMaidsList)
+                {
+
+                    var cmd = CloneCommandButton(Util.GetMaidDisplayName(maid), 
+                        new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeTargetMaid_Callback(maid.status.guid, PartyGroup.CurrentFormation, StateManager.Instance.PartyGroupList[0].SexPosID))
+                        );
+                    buttons.Add(cmd);
+                }
+                StateManager.Instance.ExtraCommandWindow.ShowContent(buttons, CustomGameObject.YotogiExtraCommandWindow.Mode.MaidList);
+
+                StateManager.Instance.ExtraCommandWindow.SetVisible(true);
+            }
+        }
+
+
+        public static void HaremKing_ShowFormationOption()
+        {
+            StateManager.Instance.ExtraCommandWindow.ResetScrollPosition();
+
+            if (CheckRequireExtraCommandWindowPopulate(CustomGameObject.YotogiExtraCommandWindow.Mode.FormationList))
+            {
+                //Load the formation list based on the current stage
+                Scenario scenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
+                List<string> formationOption;
+                if (scenario.AllowMap != null)
+                    formationOption = scenario.AllowMap.Where(x => x.MapID == YotogiStageSelectManager.SelectedStage.stageData.id).First().FormationOption;
+                else
+                    formationOption = scenario.DefaultMap.FormationOption;
+                
+
+                List<GameObject> buttons = new List<GameObject>();
+
+                foreach (var fid in formationOption)
+                {
+                    var coord = ModUseData.MapCoordinateList[fid];
+
+                    var cmd = CloneCommandButton(coord.DisplayName, new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeFormationWithNewGroup_Callback(fid)));
+                    var btn = cmd.GetComponent<UIButton>();
+                    if (fid == PartyGroup.CurrentFormation)
+                    {
+                        btn.isEnabled = false;
+                        btn.SetState(UIButtonColor.State.Disabled, true);
+                    }
+
+                    buttons.Add(cmd);
+                }
+                StateManager.Instance.ExtraCommandWindow.ShowContent(buttons, CustomGameObject.YotogiExtraCommandWindow.Mode.FormationList);
+
+                StateManager.Instance.ExtraCommandWindow.SetVisible(true);
+            }
+        }
+
+        //Function to set all yotogi command disabled
+        private static void BlockAllYotogiCommands()
+        {
+            var commandList = StateManager.Instance.YotogiCommandFactory;
+            for (int i = 0; i < commandList.transform.childCount; i++)
+            {
+                Transform childTransform = commandList.transform.GetChild(i);
+                UIButton childButton = childTransform.GetComponent<UIButton>();
+                if (childButton != null)
+                {
+                    childButton.enabled = false;
+                    childButton.isEnabled = false;
+                    childButton.SetState(UIButtonColor.State.Disabled, true);
+                }
+            }
+        }
+
+        private static void ResetMotionToWaiting(PartyGroup group, bool isMovingRight)
+        {
+            if(ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].SpecialSetting != null)
+            {
+                MapCoorindates.ManualMovementSettingInfo motionSettings = null;
+                if (isMovingRight)
+                    motionSettings = ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].SpecialSetting.MoveRightSetting;
+                else
+                    motionSettings = ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].SpecialSetting.MoveLeftSetting;
+
+                if(motionSettings != null)
+                    if(motionSettings.PreMoveMotion != null)
+                        if(motionSettings.PreMoveMotion.WaitingMotionBeforeMovement != null)
+                            if (motionSettings.PreMoveMotion.WaitingMotionBeforeMovement.Motion != null)
+                            {
+                                GameMain.Instance.ScriptMgr.LoadMotionScript(0, false, motionSettings.PreMoveMotion.WaitingMotionBeforeMovement.Motion.ScriptFile,
+                                    motionSettings.PreMoveMotion.WaitingMotionBeforeMovement.Motion.ScriptLabel, 
+                                    group.Maid1.status.guid, group.Man1.status.guid, false, false, false, false);
+                            }
+            }
+            
+        }
+
+        public static void HaremKing_MoveLeft()
+        {
+            if (!IsMainGroupChangeMemberIndexValid(-1))
+                return;
+
+            StateManager.Instance.ExtraCommandWindow.SetVisible(false);
+
+            //We dont want the user to be able to click any command when moving which will mess up animation and the logic flow
+            BlockAllYotogiCommands();
+
+            //Since some of the yotogi motion will constantly update the animation, we need to set the motion script of the main group to the static waiting before we apply any change
+            ResetMotionToWaiting(StateManager.Instance.PartyGroupList[0], false);
+
+            int currentMaidIndex = Util.GetIndexPositionInWorkingYotogiArrayForMaid(StateManager.Instance.PartyGroupList[0].Maid1);
+            PartyGroup targetMaidGroup = Util.GetPartyGroupByGUID(StateManager.Instance.YotogiWorkingMaidList[currentMaidIndex - 1].status.guid);
+
+            SetupPreSwapMotionEndTrigger(-1, false);
+
+            YotogiExtraCommandCallbacks.PlayPreMovementMotion(false, -1, StateManager.Instance.PartyGroupList[0], targetMaidGroup);
+
+        }
+
+        public static void HaremKing_MoveRight()
+        {
+            if (!IsMainGroupChangeMemberIndexValid(1))
+                return;
+
+            StateManager.Instance.ExtraCommandWindow.SetVisible(false);
+
+            //We dont want the user to be able to click any command when moving which will mess up animation and the logic flow
+            BlockAllYotogiCommands();
+
+            //Since some of the yotogi motion will constantly update the animation, we need to set the motion script of the main group to the static waiting before we apply any change
+            ResetMotionToWaiting(StateManager.Instance.PartyGroupList[0], true);
+
+
+            //Setup trigger to be executed when target animation starts
+            int currentMaidIndex = Util.GetIndexPositionInWorkingYotogiArrayForMaid(StateManager.Instance.PartyGroupList[0].Maid1);
+            PartyGroup targetMaidGroup = Util.GetPartyGroupByGUID(StateManager.Instance.YotogiWorkingMaidList[currentMaidIndex + 1].status.guid);
+
+            SetupPreSwapMotionEndTrigger(1, true);
+
+            //Load movement motion for main group
+            YotogiExtraCommandCallbacks.PlayPreMovementMotion(true, 1, StateManager.Instance.PartyGroupList[0], targetMaidGroup);
+        }
+
+        private static void SetupPreSwapMotionEndTrigger(int indexOffset, bool isMovingRight)
+        {
+            //Setup trigger to be executed when target animation starts
+            int currentMaidIndex = Util.GetIndexPositionInWorkingYotogiArrayForMaid(StateManager.Instance.PartyGroupList[0].Maid1);
+            PartyGroup targetMaidGroup = Util.GetPartyGroupByGUID(StateManager.Instance.YotogiWorkingMaidList[currentMaidIndex + indexOffset].status.guid);
+
+            StateManager.Instance.WaitingAnimationTrigger = new AnimationEndTrigger();
+            StateManager.Instance.WaitingAnimationTrigger.TargetGUID = StateManager.Instance.PartyGroupList[0].Man1.status.guid;
+            StateManager.Instance.WaitingAnimationTrigger.ToBeExecuted = new EventDelegate(() => YotogiExtraCommandCallbacks.HaremKing_SwapMainGroupMaid(currentMaidIndex, currentMaidIndex + indexOffset, isMovingRight));
+        }
+
+
+
+        private static bool IsMainGroupChangeMemberIndexValid(int indexOffset)
+        {
+            int currentIndex = Util.GetIndexPositionInWorkingYotogiArrayForMaid(StateManager.Instance.PartyGroupList[0].Maid1);
+            if (currentIndex < 0)
+                return false;
+
+            currentIndex += indexOffset;
+
+            //Check if it will be out of range
+            if (currentIndex >= StateManager.Instance.YotogiWorkingMaidList.Count || currentIndex < 0)
+            {
+                return false;
+            }
+            return true;
         }
 
 

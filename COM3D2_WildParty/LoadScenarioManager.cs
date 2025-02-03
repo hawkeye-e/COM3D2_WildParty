@@ -10,10 +10,14 @@ namespace COM3D2.WildParty.Plugin
     class LoadScenarioManager
     {
         
-        public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario()
+        public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)
         {
             Dictionary<int, Dictionary<string, ADVStep>> result = new Dictionary<int, Dictionary<string, ADVStep>>();
-            result.Add(ScenarioIDList.OrgyPartyScenarioID, LoadOrgyPartyScenario());
+
+            if(scenarioID == ScenarioIDList.OrgyPartyScenarioID)
+                result.Add(ScenarioIDList.OrgyPartyScenarioID, LoadOrgyPartyScenario());
+            else if(scenarioID == ScenarioIDList.HaremKingScenarioID)
+            result.Add(ScenarioIDList.HaremKingScenarioID, LoadHaremKingScenario());
 
             return result;
         }
@@ -22,34 +26,44 @@ namespace COM3D2.WildParty.Plugin
         {
             Dictionary<string, ADVStep> stepData = new Dictionary<string, ADVStep>();
 
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADVSetup);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADVIntro);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADVWelcomeGuest);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADVPostYotogi);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADVSetup);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADVIntro);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADVWelcomeGuest);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADVPostYotogi);
 
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Muku);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Majime);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Rindere);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Pure);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Pride);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Cool);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Yandere);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Anesan);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Genki);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Sadist);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Silent);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Devilish);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Ladylike);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Secretary);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Sister);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Curtness);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Missy);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Childhood);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Friendly);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Dame);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Masochist);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Cunning);
-            LoadResourcesFile(stepData, ModResources.ScenarioDetailResource.OrgyADV_Gyaru);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Muku);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Majime);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Rindere);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Pure);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Pride);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Cool);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Yandere);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Anesan);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Genki);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Sadist);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Silent);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Devilish);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Ladylike);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Secretary);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Sister);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Curtness);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Missy);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Childhood);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Friendly);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Dame);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Masochist);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Cunning);
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Gyaru);
+
+            return stepData;
+        }
+
+        public static Dictionary<string, ADVStep> LoadHaremKingScenario()
+        {
+            Dictionary<string, ADVStep> stepData = new Dictionary<string, ADVStep>();
+
+            LoadResourcesFile(stepData, ScenarioResources.ScenarioHaremKing.HaremKingADVIntro);
+            
 
             return stepData;
         }

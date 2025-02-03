@@ -1,0 +1,142 @@
+{
+  "haremking0001": {
+    "ID": "haremking0001",
+    "Type": "BG",
+    "Tag": "ShinShitsumu",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking0001_init_chara"
+  },
+
+  "haremking0001_init_chara": {
+    "ID": "haremking0001_init_chara",
+    "Type": "CharaInit",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0001",
+    "CharaInitData": {
+      "IsClubOwnerMainCharacter": true,
+      "ManRequired": 9
+    }
+  },
+
+  "haremking_intro_0001": {
+    "ID": "haremking_intro_0001",
+    "Type": "BGM",
+    "Tag": "BGM015.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0002"
+  },
+
+  "haremking_intro_0002": {
+    "ID": "haremking_intro_0002",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "haremking_intro_0003",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "ShowPenis": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組"
+        },
+        "PosRot": {
+          "PosString": "0.0, 0.5, -3.4",
+          "RotString": "0.0, 0.0, 0.0, 1.0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": false,
+        "PosRot": {
+          "PosString": "0, 0, 0",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+
+    ]
+  },
+
+  "haremking_intro_0003": {
+    "ID": "haremking_intro_0003",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0004",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 0,
+        "PosY": 1.6,
+        "PosZ": 0.9,
+        "TargetPosX": -0.1,
+        "TargetPosY": 1.5,
+        "TargetPosZ": -0.1,
+        "Distance": 1,
+        "AngleFrom": -179.6,
+        "AngleTo": 5.3
+      }
+    }
+  },
+
+  "haremking_intro_0004": {
+    "ID": "haremking_intro_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0005",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（メイドたちの努力のおかげで、エンパイアクラブはどんどん有名になっています。今では、様々なお客様から色んなイベントの開催を依頼されることが多くなりました。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "haremking_intro_0005": {
+    "ID": "haremking_intro_0005",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_yotogiplay_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は今、非常に充実した仕事をしている。より多くの人々に知られることは、俺にとっても誇りだ。）"
+    }
+  },
+
+  "haremking_intro_yotogiplay_closepanel": {
+    "ID": "org0010",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_yotogiplay_loadmodel"
+  },
+
+  "haremking_intro_yotogiplay_loadmodel": {
+    "ID": "haremking_intro_yotogiplay_loadmodel",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true
+      }
+    ],
+    "NextStepID": "haremking_start_yotogiplay"
+  },
+
+  "haremking_start_yotogiplay": {
+    "ID": "haremking_start_yotogiplay",
+    "Type": "Special",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "PostYotogi": { "IsKeepCharacterVisible": false },
+    "NextStepID": "haremking_postyotogi_init"
+  }
+}

@@ -20,6 +20,8 @@ namespace COM3D2.WildParty.Plugin
 
         public int SexPosID;
         public bool IsEstrus = false;
+        public bool IsIndependentExcitement = true;
+        public bool IsAutomatedGroup = true;
         public DateTime NextActionReviewTime = DateTime.MaxValue;   //For simulating the scene of the background group. If the current time pass this value, excitement rate will increase, etc...
         public int CurrentLabelGroupID = -1;
         public string CurrentLabelName;         //For group 0 used since setting the label is not in our control so we cant set the label group id defined by the mod directly
@@ -30,6 +32,8 @@ namespace COM3D2.WildParty.Plugin
 
         private bool isRequireLabelChange = false;
 
+        public bool RequireSmoothPositionChange = false;
+
         public string CurrentMaid1AnimationClipName;                //The current animation playing. Using for getting the animation length.
 
         public string Maid1VoiceType = "";
@@ -38,7 +42,11 @@ namespace COM3D2.WildParty.Plugin
         public static string CurrentFormation = "";
         public static Maid UnassignedMaid = null;   //For handling the special situation of main group being a CharacterEX personality and no man left in other group
 
+        public ForceSexPosInfo ForceSexPos = null;
+        public List<EyeSightSetting> ForceEyeSight = new List<EyeSightSetting>();
+        public List<IKAttachInfo> ForceIKAttach = new List<IKAttachInfo>();
 
+        public static ForceSexPosInfo.Type CurrentMainGroupMotionType = ForceSexPosInfo.Type.Waiting;
         public PartyGroup() { }
 
 
@@ -124,10 +132,17 @@ namespace COM3D2.WildParty.Plugin
         {
             if (maid != null)
             {
-                maid.transform.localPosition = Vector3.zero;
-                maid.transform.position = GroupPosition + GroupOffsetVector;
-                maid.transform.localRotation = new Quaternion(0,0,0,0);
-                maid.transform.rotation = GroupRotation;
+                if (RequireSmoothPositionChange)
+                {
+                    Util.SmoothMoveMaidPosition(maid, GroupPosition + GroupOffsetVector, GroupRotation);
+                }
+                else
+                {
+                    maid.transform.localPosition = Vector3.zero;
+                    maid.transform.position = GroupPosition + GroupOffsetVector;
+                    maid.transform.localRotation = new Quaternion(0, 0, 0, 0);
+                    maid.transform.rotation = GroupRotation;
+                }
                 maid.Visible = true;
             }
         }
@@ -178,7 +193,6 @@ namespace COM3D2.WildParty.Plugin
                 return true;
             }
 
-            //return (RNG.Random.Next(100) < ConfigurableValue.YotogiSimulation.ChangeMotionRateInPercentage);
             return (RNG.Random.Next(100) < Config.ChangeMotionRateInPercentage);
         }
 
@@ -192,6 +206,20 @@ namespace COM3D2.WildParty.Plugin
         {
             if (maid != null)
                 maid.body0.ReloadAnimation();
+        }
+
+        public void DetachAllIK()
+        {
+            DetachAllIK(Maid1);
+            DetachAllIK(Maid2);
+            DetachAllIK(Man1);
+            DetachAllIK(Man2);
+        }
+
+        private void DetachAllIK(Maid maid)
+        {
+            if (maid != null)
+                maid.body0.fullBodyIK.AllIKDetach();
         }
 
         //For debug use

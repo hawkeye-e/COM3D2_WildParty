@@ -15,6 +15,7 @@ namespace COM3D2.WildParty.Plugin
             public string DisplayName;
             public int Order;
             public bool IsDialogueAllowed;
+            public bool IsChoosable;
         }
 
         private class CSVParse
@@ -26,6 +27,7 @@ namespace COM3D2.WildParty.Plugin
             public string GroupType;
             public int PersonalityType;
             public bool IsDialogueAllowed;
+            public bool IsChoosable;
         }
 
 
@@ -58,9 +60,9 @@ namespace COM3D2.WildParty.Plugin
                 data.GroupType = rowData[3];
                 data.Order = int.Parse(rowData[5]);
                 data.IsDialogueAllowed = bool.Parse( rowData[29]);
-                
+                data.IsChoosable = bool.Parse(rowData[30]);
 
-                for(int p = 1; p <= Constant.PersonalityCount; p++)
+                for (int p = 1; p <= Constant.PersonalityCount; p++)
                 {
                     int columnIndex = p + 5;
                     int personalityValue = p * 10;
@@ -112,6 +114,7 @@ namespace COM3D2.WildParty.Plugin
             tmp.PersonalityType = personality;
             tmp.YotogiSkillID = yotogiSkillID;
             tmp.IsDialogueAllowed = parse.IsDialogueAllowed;
+            tmp.IsChoosable = parse.IsChoosable;
 
             list.Add(tmp);
         }

@@ -145,7 +145,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
             }
 
-            
+
         }
 
 
@@ -163,9 +163,19 @@ namespace COM3D2.WildParty.Plugin.Core
             return result;
         }
 
+        internal static void AssignPartyGrouping(string formationID)
+        {
+            if (ModUseData.PartyGroupSetupList[formationID].IsRandomAssign)
+            {
+                AssignPartyGroupingRandom(true);
+            }
+            else
+            {
+                AssignPartyGroupingBySetupInfo(formationID);
+            }
+        }
 
-
-        internal static void AssignPartyGrouping(bool retainMaidZero = false)
+        internal static void AssignPartyGroupingRandom(bool retainMaidZero = false)
         {
             StateManager.Instance.PartyGroupList.Clear();
             PartyGroup.UnassignedMaid = null;
@@ -179,7 +189,8 @@ namespace COM3D2.WildParty.Plugin.Core
 
 
             //Shuffle the man list
-            StateManager.Instance.MenList = ShuffleMaidOrManList(StateManager.Instance.MenList);
+            if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].IsShuffleManList)
+                StateManager.Instance.MenList = ShuffleMaidOrManList(StateManager.Instance.MenList);
             StateManager.Instance.MenList.Insert(0, firstMan);
 
 
@@ -189,7 +200,8 @@ namespace COM3D2.WildParty.Plugin.Core
                 Maid firstMaid = GameMain.Instance.CharacterMgr.GetMaid(0);
                 workingMaidList.Remove(firstMaid);
 
-                workingMaidList = ShuffleMaidOrManList(workingMaidList);
+                if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].IsShuffleMaidList)
+                    workingMaidList = ShuffleMaidOrManList(workingMaidList);
 
                 workingMaidList.Insert(0, firstMaid);
             }
@@ -197,6 +209,9 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 workingMaidList = ShuffleMaidOrManList(workingMaidList);
             }
+
+            StateManager.Instance.YotogiWorkingMaidList = workingMaidList;
+            StateManager.Instance.YotogiWorkingManList = StateManager.Instance.MenList;
 
             int numOfMale = StateManager.Instance.MaxManUsed;
             int numOfFemale = workingMaidList.Count;
@@ -287,6 +302,93 @@ namespace COM3D2.WildParty.Plugin.Core
             SetGroupZeroActive();
         }
 
+        internal static void AssignPartyGroupingBySetupInfo(string formationID, bool retainMaidZero = false)
+        {
+            PartyGroupSetup setupInfo = ModUseData.PartyGroupSetupList[formationID];
+
+            StateManager.Instance.PartyGroupList.Clear();
+
+            //Keep the master list unchanged so that the chosen maid will remain the same in the ADV
+            List<Maid> workingMaidList = new List<Maid>(StateManager.Instance.SelectedMaidsList);
+
+            if (setupInfo.IsShuffleMaidList)
+            {
+                if (retainMaidZero)
+                {
+                    Maid firstMaid = GameMain.Instance.CharacterMgr.GetMaid(0);
+                    workingMaidList.Remove(firstMaid);
+                    workingMaidList = ShuffleMaidOrManList(workingMaidList);
+                    workingMaidList.Insert(0, firstMaid);
+                }
+                else
+                    workingMaidList = ShuffleMaidOrManList(workingMaidList);
+            }
+            if (setupInfo.IsShuffleManList)
+                StateManager.Instance.MenList = ShuffleMaidOrManList(StateManager.Instance.MenList);
+
+            StateManager.Instance.YotogiWorkingMaidList = workingMaidList;
+            StateManager.Instance.YotogiWorkingManList = StateManager.Instance.MenList;
+
+            int maidRunningNumber = 0;
+            int manRunningNumber = 0;
+
+            foreach(var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
+            {
+                PartyGroup newGroup = new PartyGroup();
+                if(groupSetupInfo.MaidCount  >= 1 )
+                    newGroup.Maid1 = workingMaidList[maidRunningNumber++];
+                if (groupSetupInfo.MaidCount >= 2)
+                    newGroup.Maid2 = workingMaidList[maidRunningNumber++];
+                if (groupSetupInfo.ManCount >= 1)
+                    newGroup.Man1 = StateManager.Instance.MenList[manRunningNumber++];
+                if (groupSetupInfo.ManCount >= 2)
+                    newGroup.Man2 = StateManager.Instance.MenList[manRunningNumber++];
+
+                newGroup.IsAutomatedGroup = groupSetupInfo.IsAutomatedGroup;
+                
+                StateManager.Instance.PartyGroupList.Add(newGroup);
+            }
+
+            SetGroupZeroActive();
+        }
+
+        internal static void AssignPartyGrouping_SwapMember(Maid maid1, Maid maid2)
+        {
+            //If the sex is not the same, do nothing
+            if (maid1.boMAN != maid2.boMAN)
+                return;
+
+            PartyGroup group1 = Util.GetPartyGroupByCharacter(maid1);
+            PartyGroup group2 = Util.GetPartyGroupByCharacter(maid2);
+
+            if (group1 == null || group2 == null)
+                return;
+
+            //do the swapping
+            
+            ReplaceTargetMaid(group1, maid1, maid2);
+            ReplaceTargetMaid(group2, maid2, maid1);
+            
+        }
+
+        private static void ReplaceTargetMaid(PartyGroup group, Maid toBeReplaced, Maid newMaid)
+        {
+            if (!toBeReplaced.boMAN)
+            {
+                if (group.Maid1.status.guid == toBeReplaced.status.guid)
+                    group.Maid1 = newMaid;
+                else if (group.Maid2.status.guid == toBeReplaced.status.guid)
+                    group.Maid2 = newMaid;
+            }
+            else
+            {
+                if (group.Man1.status.guid == toBeReplaced.status.guid)
+                    group.Man1 = newMaid;
+                else if (group.Man2.status.guid == toBeReplaced.status.guid)
+                    group.Man2 = newMaid;
+            }
+        }
+
         internal static void CleanseCharacterMgrArray()
         {
             var groupZero = StateManager.Instance.PartyGroupList[0];
@@ -358,20 +460,26 @@ namespace COM3D2.WildParty.Plugin.Core
 
             int excitementLevel = group.ExcitementLevel;
 
-            var lstLabels = ModUseData.BackgroundOrgyMotionList[group.GroupType].Where(x => x.ID == group.SexPosID).First().ValidLabels;
+            var lstLabels = ModUseData.BackgroundMotionList[group.GroupType].Where(x => x.ID == group.SexPosID).First().ValidLabels;
 
             var motionLabelEntry = lstLabels.Where(x => x.ExcitementLevel == excitementLevel && x.LabelGroupID == group.CurrentLabelGroupID).First();
 
-            SetCharacterVoiceEntry(group.Maid1, PersonalityVoice.VoiceEntryType.NormalPlay, excitementLevel, motionLabelEntry.VoiceType1, group.IsEstrus);
+            if (!string.IsNullOrEmpty(motionLabelEntry.VoiceType1))
+            {
+                SetCharacterVoiceEntry(group.Maid1, PersonalityVoice.VoiceEntryType.NormalPlay, excitementLevel, motionLabelEntry.VoiceType1, group.IsEstrus);
 
-            //record the type for setting face anime
-            group.Maid1VoiceType = motionLabelEntry.VoiceType1;
+                //record the type for setting face anime
+                group.Maid1VoiceType = motionLabelEntry.VoiceType1;
+            }
 
             if (group.Maid2 != null)
             {
-                SetCharacterVoiceEntry(group.Maid2, PersonalityVoice.VoiceEntryType.NormalPlay, excitementLevel, motionLabelEntry.VoiceType2, group.IsEstrus);
+                if (!string.IsNullOrEmpty(motionLabelEntry.VoiceType2))
+                {
+                    SetCharacterVoiceEntry(group.Maid2, PersonalityVoice.VoiceEntryType.NormalPlay, excitementLevel, motionLabelEntry.VoiceType2, group.IsEstrus);
 
-                group.Maid2VoiceType = motionLabelEntry.VoiceType2;
+                    group.Maid2VoiceType = motionLabelEntry.VoiceType2;
+                }
             }
 
         }
@@ -510,11 +618,18 @@ namespace COM3D2.WildParty.Plugin.Core
             GameMain.Instance.ScriptMgr.StopMotionScript();
             foreach (var group in StateManager.Instance.PartyGroupList)
             {
-                StopMaidAnimeAndSound(group.Maid1);
-                StopMaidAnimeAndSound(group.Maid2);
-                StopMaidAnimeAndSound(group.Man1);
-                StopMaidAnimeAndSound(group.Man2);
+                StopCurrentAnimation(group);
             }
+        }
+
+        internal static void StopCurrentAnimation(PartyGroup group)
+        {
+            GameMain.Instance.ScriptMgr.StopMotionScript();
+            
+            StopMaidAnimeAndSound(group.Maid1);
+            StopMaidAnimeAndSound(group.Maid2);
+            StopMaidAnimeAndSound(group.Man1);
+            StopMaidAnimeAndSound(group.Man2);
         }
 
         internal static void StopMaidAnimeAndSound(Maid maid)
@@ -552,6 +667,76 @@ namespace COM3D2.WildParty.Plugin.Core
                 maid.status.AddPropensity(fetishID);
                 StateManager.Instance.YotogiProgressInfoList[maid.status.guid].CustomFetishEarned.Add(fetishID);
             }
+        }
+
+        internal static void IKAttachBone(IKAttachInfo ikInfo)
+        {
+            Maid srcMaid = GetMaidForIKCharaInfo(ikInfo.Source);
+            Maid targetMaid = GetMaidForIKCharaInfo(ikInfo.Target);
+
+            IKAttachBone(
+                TagSupportData.CreateAttachBoneTag(ikInfo.Pos.x, ikInfo.Pos.y, ikInfo.Pos.z, ikInfo.AttachType, ikInfo.Source.Bone, ikInfo.Target.Bone, ikInfo.PullOff),
+                srcMaid, targetMaid
+            );
+        }
+
+        private static Maid GetMaidForIKCharaInfo(IKAttachInfo.IKCharaInfo charaInfo)
+        {
+            if (charaInfo.ListType == IKAttachInfo.ArrayListType.Group)
+            {
+                PartyGroup group = StateManager.Instance.PartyGroupList[charaInfo.ArrayIndex];
+                if (charaInfo.MemberType == IKAttachInfo.GroupMemberType.Maid1)
+                    return group.Maid1;
+                else if (charaInfo.MemberType == IKAttachInfo.GroupMemberType.Maid2)
+                    return group.Maid2;
+                else if (charaInfo.MemberType == IKAttachInfo.GroupMemberType.Man1)
+                    return group.Man1;
+                else if (charaInfo.MemberType == IKAttachInfo.GroupMemberType.Man2)
+                    return group.Man2;
+            }else if(charaInfo.ListType == IKAttachInfo.ArrayListType.Maid)
+            {
+                return StateManager.Instance.YotogiWorkingMaidList[charaInfo.ArrayIndex];
+            }
+            else if (charaInfo.ListType == IKAttachInfo.ArrayListType.Man)
+            {
+                return StateManager.Instance.YotogiWorkingManList[charaInfo.ArrayIndex];
+            }
+
+            return null;
+        }
+
+        internal static void IKAttachBone(KagTagSupport tag_data, Maid source, Maid target)
+        {
+            string ik_name = tag_data.GetTagProperty("srcbone").AsString();
+            kt.ik.IKAttachParam iKAttachParam = kt.ik.IKScriptHelper.GetIKAttachParam(tag_data, source, target);
+            iKAttachParam.targetBoneName = tag_data.GetTagProperty("targetbone").AsString();
+            source.body0.fullBodyIK.IKAttach(ik_name, iKAttachParam);
+        }
+
+        internal static void SetDefaultGroupFormation()
+        {
+            var scenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
+            if (scenario.AllowMap != null)
+            {
+                PartyGroup.CurrentFormation = scenario.AllowMap.Where(x => x.MapID == YotogiStageSelectManager.SelectedStage.stageData.id).First().DefaultFormation;
+            }
+            else if (scenario.DefaultMap != null)
+            {
+                PartyGroup.CurrentFormation = scenario.DefaultMap.DefaultFormation;
+            }
+        }
+
+        internal static void PlayAnimation(Maid maid, string fileName, string tag, bool isLoop = true, bool isBlend = false, bool isQueued = false)
+        {
+            if (maid == null)
+                return;
+
+            float fade = 0f;
+            if (isBlend)
+                fade = 0.5f;
+
+            maid.body0.LoadAnime(tag, GameUty.FileSystem, fileName, false, isLoop);
+            maid.body0.CrossFade(maid.body0.LastAnimeFN, GameUty.FileSystem, additive: false, loop: isLoop, boAddQue: isQueued, fade: fade);
         }
     }
 }

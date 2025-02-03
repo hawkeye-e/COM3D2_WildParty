@@ -114,6 +114,15 @@ namespace COM3D2.WildParty.Plugin
             return maid.status.charaName.GetFullName().Trim();
         }
 
+        internal static void SmoothMoveMaidPosition(Maid maid, Vector3 targetPosition, Quaternion targetRotation)
+        {
+            System.Collections.Hashtable args = new System.Collections.Hashtable();
+            args.Add("position", targetPosition);
+            args.Add("rotation", targetRotation);
+            args.Add("scale", maid.transform.localScale);
+            iTween.MoveTo(maid.gameObject, args);
+        }
+
         public static void ResetAllGroupPosition()
         {
             for (int i = 0; i < StateManager.Instance.PartyGroupList.Count; i++)
@@ -129,26 +138,58 @@ namespace COM3D2.WildParty.Plugin
                 //Pick the one that fit the most group
                 MapCoorindates.CoordinateListInfo coords = coordsGroup.CoordinateList.Where(x => x.MaxGroup >= StateManager.Instance.PartyGroupList.Count).OrderBy(x => x.MaxGroup).First();
 
-                //Set special position
-                foreach (var item in coordsGroup.SpecialCoordinates)
+                //Set individual position
+                if (coords.IndividualCoordinates != null)
                 {
-                    if (item.Type == Constant.SpecialCoordinateType.Owner)
+                    foreach (var item in coords.IndividualCoordinates)
                     {
-                        StateManager.Instance.ClubOwner.transform.localPosition = Vector3.zero;
-                        StateManager.Instance.ClubOwner.transform.position = item.Pos;
-                        StateManager.Instance.ClubOwner.transform.rotation = item.Rot;
-                    }
-                    else if (item.Type == Constant.SpecialCoordinateType.UnassignedMaid)
-                    {
-                        if (PartyGroup.UnassignedMaid != null)
+                        if (item.Type == Constant.IndividualCoordinateType.Maid)
                         {
-                            PartyGroup.UnassignedMaid.transform.localPosition = Vector3.zero;
-                            PartyGroup.UnassignedMaid.transform.position = item.Pos;
-                            PartyGroup.UnassignedMaid.transform.rotation = item.Rot;
+                            if (StateManager.Instance.YotogiWorkingMaidList.Count > item.ArrayPosition)
+                            {
+                                StateManager.Instance.YotogiWorkingMaidList[item.ArrayPosition].transform.localPosition = Vector3.zero;
+                                StateManager.Instance.YotogiWorkingMaidList[item.ArrayPosition].transform.position = item.Pos;
+                                StateManager.Instance.YotogiWorkingMaidList[item.ArrayPosition].transform.rotation = item.Rot;
+                            }
+                        }
+                    }
+                }
+
+                //Set special position
+                if (coordsGroup.SpecialCoordinates != null)
+                {
+                    foreach (var item in coordsGroup.SpecialCoordinates)
+                    {
+                        if (item.Type == Constant.SpecialCoordinateType.Owner)
+                        {
+                            StateManager.Instance.ClubOwner.transform.localPosition = Vector3.zero;
+                            StateManager.Instance.ClubOwner.transform.position = item.Pos;
+                            StateManager.Instance.ClubOwner.transform.rotation = item.Rot;
+                        }
+                        else if (item.Type == Constant.SpecialCoordinateType.UnassignedMaid)
+                        {
+                            if (PartyGroup.UnassignedMaid != null)
+                            {
+                                PartyGroup.UnassignedMaid.transform.localPosition = Vector3.zero;
+                                PartyGroup.UnassignedMaid.transform.position = item.Pos;
+                                PartyGroup.UnassignedMaid.transform.rotation = item.Rot;
+                            }
                         }
                     }
                 }
             }
+        }
+
+        public static void SetAllMaidVisiblility(bool isVisible)
+        {
+            foreach(Maid maid in StateManager.Instance.SelectedMaidsList)
+                maid.Visible = isVisible;
+        }
+
+        public static void SetAllManVisiblility(bool isVisible)
+        {
+            foreach (Maid man in StateManager.Instance.MenList)
+                man.Visible = isVisible;
         }
 
         public static void SetAllPartyMemberVisibility(bool isVisible)
@@ -156,13 +197,13 @@ namespace COM3D2.WildParty.Plugin
             for (int i = 0; i < StateManager.Instance.PartyGroupList.Count; i++)
             {
                 if (StateManager.Instance.PartyGroupList[i].Maid1 != null)
-                    StateManager.Instance.PartyGroupList[i].Maid1.Visible = false;
+                    StateManager.Instance.PartyGroupList[i].Maid1.Visible = isVisible;
                 if (StateManager.Instance.PartyGroupList[i].Maid2 != null)
-                    StateManager.Instance.PartyGroupList[i].Maid2.Visible = false;
+                    StateManager.Instance.PartyGroupList[i].Maid2.Visible = isVisible;
                 if (StateManager.Instance.PartyGroupList[i].Man1 != null)
-                    StateManager.Instance.PartyGroupList[i].Man1.Visible = false;
+                    StateManager.Instance.PartyGroupList[i].Man1.Visible = isVisible;
                 if (StateManager.Instance.PartyGroupList[i].Man2 != null)
-                    StateManager.Instance.PartyGroupList[i].Man2.Visible = false;
+                    StateManager.Instance.PartyGroupList[i].Man2.Visible = isVisible;
             }
         }
 
@@ -199,13 +240,34 @@ namespace COM3D2.WildParty.Plugin
             return null;
         }
 
+        internal static int GetIndexPositionInWorkingYotogiArrayForMaid(Maid maid)
+        {
+            if (maid == null)
+                return -1;
+
+            for (int i = 0; i < StateManager.Instance.YotogiWorkingMaidList.Count; i++)
+                if (StateManager.Instance.YotogiWorkingMaidList[i].status.guid == maid.status.guid)
+                {
+                    return i;
+                }
+
+            return -1;
+        }
+
         internal static PlayableSkill.SkillItem GetGroupCurrentSkill(PartyGroup group)
         {
             if (StateManager.Instance.PartyGroupList.Count > 0)
             {
-                return ModUseData.ValidOrgySkillList[group.Maid1.status.personal.id][group.GroupType].Where(x => x.SexPosID == group.SexPosID).First();
+                return ModUseData.ValidSkillList[group.Maid1.status.personal.id][group.GroupType].Where(x => x.SexPosID == group.SexPosID).First();
             }
             return null;
+        }
+
+        internal static PlayableSkill.SkillItem GetMainGroupSkillIDBySexPosID(int sexPosID)
+        {
+            int personality = StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id;
+            string groupType = StateManager.Instance.PartyGroupList[0].GroupType;
+            return ModUseData.ValidSkillList[personality][groupType].Where(x => x.SexPosID == sexPosID).First();
         }
 
         internal static bool IsExPackPersonality(Maid maid)
@@ -288,7 +350,7 @@ namespace COM3D2.WildParty.Plugin
         {
             if (group == null)
                 return null;
-            return ModUseData.BackgroundOrgyMotionList[group.GroupType].Where(x => x.ID == group.SexPosID).First();
+            return ModUseData.BackgroundMotionList[group.GroupType].Where(x => x.ID == group.SexPosID).First();
         }
 
         internal static Maid GetSemenTarget(PartyGroup group, MotionSpecialLabel.SemenTarget target)

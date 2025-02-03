@@ -75,6 +75,22 @@ namespace COM3D2.WildParty.Plugin
             return result;
         }
 
+        public static ScriptManagerFast.KagTagSupportFast CreateAttachBoneTag(float x, float y, float z, string attachType, string srcBone, string targetBone, bool isPullOff = false)
+        {
+            ScriptManagerFast.KagTagSupportFast tag = new ScriptManagerFast.KagTagSupportFast();
+            tag.AddTagProperty("tagname", "ikattachbone");
+            tag.AddTagProperty("offsetx", x.ToString());
+            tag.AddTagProperty("offsety", y.ToString());
+            tag.AddTagProperty("offsetz", z.ToString());
+            tag.AddTagProperty("srcbone", srcBone);
+            tag.AddTagProperty("attach_type", attachType);
+            tag.AddTagProperty("targetbone", targetBone);
+            if(isPullOff)
+                tag.AddTagProperty("pull_off", "1");
+
+            return tag;
+        }
+
         //public static Dictionary<string, string> GetTagForSemenTextureHandling(SemenPattern pattern)
         //{
         //    Dictionary<string, string> result = new Dictionary<string, string>();

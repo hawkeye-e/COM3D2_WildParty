@@ -123,8 +123,6 @@ namespace COM3D2.WildParty.Plugin.Core
 
         private static void HandleGroupForStateOrgasm(PartyGroup group)
         {
-            Log.LogInfo(group.Maid1.status.fullNameJpStyle + " sex state: " + group.CurrentSexState);
-
             //Re-Initiate the excitement rate
             group.Maid1.status.currentExcite = Util.GetRandomExcitementRate();
 
@@ -243,7 +241,7 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             if (DateTime.Now > group.NextActionReviewTime)
             {
-                var lstMotion = ModUseData.BackgroundOrgyMotionList[group.GroupType];
+                var lstMotion = ModUseData.BackgroundMotionList[group.GroupType];
                 int rndMotion = RNG.Random.Next(lstMotion.Count);
 
                 group.SexPosID = lstMotion[rndMotion].ID;
@@ -321,7 +319,10 @@ namespace COM3D2.WildParty.Plugin.Core
             //Assign a review time for each group except group zero
             for (int i = 1; i < StateManager.Instance.PartyGroupList.Count; i++)
             {
-                StateManager.Instance.PartyGroupList[i].GenerateNextReviewTime();
+                if (StateManager.Instance.PartyGroupList[i].IsAutomatedGroup)
+                    StateManager.Instance.PartyGroupList[i].GenerateNextReviewTime();
+                else
+                    StateManager.Instance.PartyGroupList[i].NextActionReviewTime = DateTime.MaxValue;
             }
         }
     }

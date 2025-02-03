@@ -14,6 +14,7 @@ namespace COM3D2.WildParty.Plugin
         public CommandType Type;
         public int FetishID;
         public List<ConditionCheck> ConditionCheckTexts;
+        public List<string> FormationConstraint = null;   //If this list is null or empty, there is no restriction. Otherwise it contains the list of formation that allows to use this button.
 
         public class ConditionCheck
         {

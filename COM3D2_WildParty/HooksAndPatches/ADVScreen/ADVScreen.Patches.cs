@@ -58,12 +58,15 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.ADVScreen
 
                     if (moddedScenarioIDs.Contains(selectedMaidScheduleID))
                     {
+                        ModUseData.InitDataForScenario(selectedMaidScheduleID);
+
                         //Hit, set the flag so that the system will goes through the mod adv scene
                         var scenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == selectedMaidScheduleID).First();
 
                         StateManager.Instance.UndergoingModEventID = selectedMaidScheduleID;
                         StateManager.Instance.ModEventProgress = Constant.EventProgress.Init;
 
+                        StateManager.Instance.ExtraCommandWindow = new CustomGameObject.YotogiExtraCommandWindow(StateManager.Instance.ExtraCommandWindowMasterCopy.transform.gameObject);                        
                     }
                 }
             }

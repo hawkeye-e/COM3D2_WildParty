@@ -16,6 +16,8 @@ namespace COM3D2.WildParty.Plugin
 
         internal const string MainEventScriptFile = "AllMain.ks";
 
+        internal static readonly string[] ModIconNames = { ModResources.ImageResources.OrgyPartyIconFileName, ModResources.ImageResources.HaremKingIconFileName };
+
         //Name follows the dlc code
         internal static class PersonalityType
         {
@@ -203,19 +205,19 @@ namespace COM3D2.WildParty.Plugin
             };
         internal static readonly MotionInfo[] RandomMotionFemaleRestList =
         {
-            new MotionInfo("work_001.ks", "*しゃがみ＿待機", "syagami_pose_f.anm", "syagami_pose_f.anm", UseMotionScriptLoad: false),
-            new MotionInfo("ero_scene_001.ks", "*気絶", "ero_scene_kizetu_f.anm", "ero_scene_kizetu_f.anm", UseMotionScriptLoad: false),
-            new MotionInfo("ero_scene_001.ks", "*ピロトーク_一人", "pillow_talk_f.anm", "pillow_talk_f.anm", UseMotionScriptLoad: false)
+            new MotionInfo("work_001.ks", "*しゃがみ＿待機", "syagami_pose_f.anm", "syagami_pose_f.anm"),
+            new MotionInfo("ero_scene_001.ks", "*気絶", "ero_scene_kizetu_f.anm", "ero_scene_kizetu_f.anm"),
+            new MotionInfo("ero_scene_001.ks", "*ピロトーク_一人", "pillow_talk_f.anm", "pillow_talk_f.anm")
         };
 
         internal static readonly MotionInfo[] RandomMotionMaleRestList =
         {
-            //new MotionInfo("work_001.ks", "*しゃがみ＿待機", "syagami_pose_f.anm", "syagami_pose_f.anm", UseMotionScriptLoad: false),
-            //new MotionInfo("ero_scene_001.ks", "*気絶", "ero_scene_kizetu_f.anm", "ero_scene_kizetu_f.anm", UseMotionScriptLoad: false),
-            //new MotionInfo("ero_scene_001.ks", "*ピロトーク_一人", "pillow_talk_f.anm", "pillow_talk_f.anm", UseMotionScriptLoad: false)
-            new MotionInfo("", "", "mp_arai_taiki_m.anm", "mp_arai_taiki_m.anm", UseMotionScriptLoad: false),
-            new MotionInfo("", "", "taimenzai3_taiki_m.anm", "taimenzai3_taiki_m.anm", UseMotionScriptLoad: false),
-            new MotionInfo("", "", "om_kousoku_aibu_taiki_m.anm", "om_kousoku_aibu_taiki_m.anm", UseMotionScriptLoad: false)
+            //new MotionInfo("work_001.ks", "*しゃがみ＿待機", "syagami_pose_f.anm", "syagami_pose_f.anm"),
+            //new MotionInfo("ero_scene_001.ks", "*気絶", "ero_scene_kizetu_f.anm", "ero_scene_kizetu_f.anm"),
+            //new MotionInfo("ero_scene_001.ks", "*ピロトーク_一人", "pillow_talk_f.anm", "pillow_talk_f.anm")
+            new MotionInfo("", "", "mp_arai_taiki_m.anm", "mp_arai_taiki_m.anm"),
+            new MotionInfo("", "", "taimenzai3_taiki_m.anm", "taimenzai3_taiki_m.anm"),
+            new MotionInfo("", "", "om_kousoku_aibu_taiki_m.anm", "om_kousoku_aibu_taiki_m.anm")
         };
 
         //For coding use
@@ -440,6 +442,11 @@ namespace COM3D2.WildParty.Plugin
             internal const string UnassignedMaid = "UnassignedMaid";
         }
 
+        internal static class IndividualCoordinateType
+        {
+            internal const string Maid = "F";
+        }
+
         internal static class CallScreenName {
             internal const string Move = "Move";
             internal const string Title = "SceneToTitle";
@@ -466,6 +473,11 @@ namespace COM3D2.WildParty.Plugin
             internal const string ChangeFormation = "ChangeFormation";
             internal const string ChangePartner = "ChangePartner";
             internal const string FetishOrgy = "FetishOrgy";
+
+            internal const string ChangeFormationHaremKing = "ChangeFormationHaremKing";
+            internal const string ChangeMaidHaremKing = "ChangeMaidHaremKing";
+            internal const string MoveLeftHaremKing = "MoveLeftHaremKing";
+            internal const string MoveRightHaremKing = "MoveRightHaremKing";
         }
 
         internal static class CameraEaseType

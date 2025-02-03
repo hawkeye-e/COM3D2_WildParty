@@ -12,13 +12,10 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
     {
         internal static void PrepareExtraCommandWindow()
         {
-            //if (StateManager.Instance.ExtraCommandWindow == null)
-            //{
-                //Prepare the yotogi command windows by reusing the existing main category window in the schedule screen.
-                var mainCategoryWindow = Util.FindInActiveObjectByName(Constant.DefinedGameObjectNames.MainCategoryPanel);
-                CustomGameObject.YotogiExtraCommandWindow cmdWindow = new CustomGameObject.YotogiExtraCommandWindow(mainCategoryWindow);
-                StateManager.Instance.ExtraCommandWindow = cmdWindow;
-            //}
+            //Prepare the yotogi command windows by reusing the existing main category window in the schedule screen.
+            var mainCategoryWindow = Util.FindInActiveObjectByName(Constant.DefinedGameObjectNames.MainCategoryPanel);
+            CustomGameObject.YotogiExtraCommandWindow cmdWindow = new CustomGameObject.YotogiExtraCommandWindow(mainCategoryWindow, false);
+            StateManager.Instance.ExtraCommandWindowMasterCopy = cmdWindow;
         }
 
         internal static void InjectScheduleOptions()
@@ -88,13 +85,17 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
 
         internal static Texture2D LoadModScenarioIcon(string fileName)
         {
-            if (fileName == ModResources.ImageResources.OrgyPartIconFileName)
+            if (Constant.ModIconNames.Contains(fileName))
             {
                 System.IO.MemoryStream mStream = new System.IO.MemoryStream();
-                ModResources.ImageResources.icon_orgy.Save(mStream, ModResources.ImageResources.icon_orgy.RawFormat);
+                if (fileName == ModResources.ImageResources.OrgyPartyIconFileName)
+                    ModResources.ImageResources.icon_orgy.Save(mStream, ModResources.ImageResources.icon_orgy.RawFormat);
+                else if (fileName == ModResources.ImageResources.HaremKingIconFileName)
+                    ModResources.ImageResources.icon_harem_king.Save(mStream, ModResources.ImageResources.icon_harem_king.RawFormat);
+
                 Texture2D tex = new Texture2D(64, 64);
                 ImageConversion.LoadImage(tex, mStream.ToArray());
-                
+
                 return tex;
             }
 
@@ -103,7 +104,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
 
         internal static void SpoofFileExistence(string fileName, ref bool isExist)
         {
-            if (fileName == ModResources.ImageResources.OrgyPartIconFileName)
+            if (Constant.ModIconNames.Contains(fileName))
                 isExist = true;
         }
 

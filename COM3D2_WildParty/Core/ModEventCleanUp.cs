@@ -12,14 +12,14 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void ResetModEvent()
         {
             RemoveAddedStockMan(StateManager.Instance.MenList);
-
+            
             UnloadCharacters(StateManager.Instance.SelectedMaidsList);
             if (StateManager.Instance.ClubOwner != null && StateManager.Instance.MenList != null)
                 StateManager.Instance.MenList.Add(StateManager.Instance.ClubOwner);
             UnloadCharacters(StateManager.Instance.MenList, false);
-
+            
             RestoreBackupData();
-
+            
             //Reset all the states
             ResetAllState();
         }
@@ -43,6 +43,10 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             if (list == null)
                 return;
+            //Remove the owner from this list in case it is added here (club owner is not temporarily added stock man)
+            if (list.Contains(StateManager.Instance.ClubOwner))
+                list.Remove(StateManager.Instance.ClubOwner);
+            
             foreach (var chara in list)
             {
                 //For the man list, since we have add stock man on purpose and it have expanded the list. Need to remove those stock man list properly to prevent logic error when the game try to init all things.
@@ -109,14 +113,19 @@ namespace COM3D2.WildParty.Plugin.Core
             Util.ClearGenericCollection(StateManager.Instance.YotogiProgressInfoList);
             Util.ClearGenericCollection(StateManager.Instance.RandomPickIndexList);
 
+            Util.ClearGenericCollection(StateManager.Instance.YotogiWorkingMaidList);
+            Util.ClearGenericCollection(StateManager.Instance.YotogiWorkingManList);
 
             StateManager.Instance.RequireCheckModdedSceneFlag = false;
             StateManager.Instance.WaitForCharactersFullLoadFlag = false;
             StateManager.Instance.RequireInjectCommandButtons = false;
+            StateManager.Instance.SpoofChangeBackgroundFlag = false;
 
             StateManager.Instance.YotogiManager = null;
             StateManager.Instance.YotogiCommandFactory = null;
             StateManager.Instance.CommandMaskGroupTransform = null;
+            StateManager.Instance.ExtraCommandWindow = null;
+            StateManager.Instance.WaitingAnimationTrigger = null;
 
             StateManager.Instance.CurrentADVStepID = "";
             StateManager.Instance.ProcessedADVStepID = "";

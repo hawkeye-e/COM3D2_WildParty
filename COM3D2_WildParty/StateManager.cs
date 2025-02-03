@@ -24,6 +24,8 @@ namespace COM3D2.WildParty.Plugin
         internal List<Maid> OriginalManOrderList = new List<Maid>();
         internal List<Maid> SelectedMaidsList = new List<Maid>();
         internal List<Maid> MenList = new List<Maid>();
+        internal List<Maid> YotogiWorkingMaidList = new List<Maid>();           //For used in Yotogi scene, will be shuffled etc
+        internal List<Maid> YotogiWorkingManList = new List<Maid>();            //For used in Yotogi scene, will be shuffled etc
         internal Dictionary<string, YotogiProgressInfo> YotogiProgressInfoList = new Dictionary<string, YotogiProgressInfo>();
         internal Maid ClubOwner;
 
@@ -33,6 +35,8 @@ namespace COM3D2.WildParty.Plugin
         internal bool RequireCheckModdedSceneFlag = false;          //flag for indicating the condition of modded scene is to be checked or not. True: need to check
         
         internal bool SpoofActivateMaidObjectFlag = false;          //flag for prevent the system to uninit a maid object when shuffling
+
+        internal bool SpoofChangeBackgroundFlag = false;          //flag for prevent the system to uninit a maid object when shuffling
 
         internal string ModEventProgress = Constant.EventProgress.None;
 
@@ -65,9 +69,11 @@ namespace COM3D2.WildParty.Plugin
         internal string processingManGUID = "";
 
         internal CustomGameObject.YotogiExtraCommandWindow ExtraCommandWindow = null;
-        
-        
+        internal CustomGameObject.YotogiExtraCommandWindow ExtraCommandWindowMasterCopy = null;
+
         internal bool SpoofAudioLoadPlay = false;
 
+        //When the target starts the defined animation name, execute the event deletgate
+        internal AnimationEndTrigger WaitingAnimationTrigger = null;
     }
 }

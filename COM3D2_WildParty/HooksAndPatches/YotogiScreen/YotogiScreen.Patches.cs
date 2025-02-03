@@ -100,25 +100,29 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                         //only try to show panel if it is not enabled yet
                         if (isOver && !button.isEnabled)
                         {
-                            List<KeyValuePair<string[], Color>> displayConditions = new List<KeyValuePair<string[], Color>>();
-
-                            Fetish fetishInfo = ModUseData.FetishList.Where(x => x.ID == btn.Data.FetishID).First();
-                            foreach (ExtraYotogiCommandData.ConditionCheck condition in btn.Data.ConditionCheckTexts)
+                            if (btn.Data.Type == ExtraYotogiCommandData.CommandType.Fetish)
                             {
-                                string[] displayText = new string[1];
-                                displayText[0] = Core.YotogiExtraCommandHandling.ReplaceFetishConditionText(condition.DisplayText, fetishInfo);
 
-                                Color displayColor;
-                                if (Core.YotogiExtraCommandHandling.IsThisConditionFulfilled(condition.Field, fetishInfo))
-                                    displayColor = Color.white;
-                                else
-                                    displayColor = Color.gray;
+                                List<KeyValuePair<string[], Color>> displayConditions = new List<KeyValuePair<string[], Color>>();
 
-                                displayConditions.Add(new KeyValuePair<string[], Color>(displayText, displayColor));
+                                Fetish fetishInfo = ModUseData.FetishList.Where(x => x.ID == btn.Data.FetishID).First();
+                                foreach (ExtraYotogiCommandData.ConditionCheck condition in btn.Data.ConditionCheckTexts)
+                                {
+                                    string[] displayText = new string[1];
+                                    displayText[0] = Core.YotogiExtraCommandHandling.ReplaceFetishConditionText(condition.DisplayText, fetishInfo);
+
+                                    Color displayColor;
+                                    if (Core.YotogiExtraCommandHandling.IsThisConditionFulfilled(condition.Field, fetishInfo))
+                                        displayColor = Color.white;
+                                    else
+                                        displayColor = Color.gray;
+
+                                    displayConditions.Add(new KeyValuePair<string[], Color>(displayText, displayColor));
+                                }
+
+
+                                Core.YotogiExtraCommandHandling.ShowExecConditionPanel(btn.Button, displayConditions);
                             }
-
-
-                            Core.YotogiExtraCommandHandling.ShowExecConditionPanel(btn.Button, displayConditions);
                         }
                         else
                         {
@@ -148,7 +152,14 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
                     foreach (var commandType in Util.GetUndergoingScenario().ExtraYotogiCommands)
                     {
-                        var commandInfo = ModUseData.ExtraYotogiCommandDataList[commandType];
+                        ExtraYotogiCommandData commandInfo = ModUseData.ExtraYotogiCommandDataList[commandType];
+
+                        if(commandInfo.FormationConstraint != null && commandInfo.FormationConstraint.Count > 0)
+                        {
+                            if (!commandInfo.FormationConstraint.Contains(PartyGroup.CurrentFormation))
+                                continue;
+                        }
+                            
                         btn = Core.YotogiExtraCommandHandling.InjectCommandButton(commandInfo.Name, Core.YotogiExtraCommandHandling.GetButtonCallbackFromString(commandType), StateManager.Instance.YotogiCommandFactory.transform);
 
                         CustomGameObject.InjectYotogiCommand newCommand = new CustomGameObject.InjectYotogiCommand();
@@ -191,7 +202,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
         internal static void InitForYotogiScene(YotogiManager instance)
         {
-            if (StateManager.Instance.UndergoingModEventID == ScenarioIDList.OrgyPartyScenarioID)
+            if (StateManager.Instance.UndergoingModEventID > 0)
             {
                 if (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiInit)
                 {
@@ -200,18 +211,39 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                     StateManager.Instance.RequireInjectCommandButtons = true;
                     StateManager.Instance.YotogiManager = instance;
 
-                    Core.YotogiHandling.PlayRoomBGM(instance);
-
-                    Core.YotogiHandling.YotogiSkillCall(instance);
-
                     var scenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
-                    PartyGroup.CurrentFormation = scenario.AllowMap.Where(x => x.MapID == YotogiStageSelectManager.SelectedStage.stageData.id).First().DefaultFormation;
+
+                    Core.YotogiHandling.YotogiSkillCall(instance, ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
+
+                    if (scenario.AllowMap != null)
+                    {
+                        Core.YotogiHandling.PlayRoomBGM(instance);
+                    }
+                    else if(scenario.DefaultMap != null)
+                    {
+                        //Set the dummy stage to prevent crash and also spoof flag to avoid changing bg
+                        StateManager.Instance.SpoofChangeBackgroundFlag = true;
+                        YotogiStageSelectManager.SelectStage(YotogiStage.GetAllDatas(true)[0], null, GameMain.Instance.CharacterMgr.status.isDaytime);
+
+                        if (GameMain.Instance.CharacterMgr.status.isDaytime)
+                            GameMain.Instance.BgMgr.ChangeBg(scenario.DefaultMap.DayMapID);
+                        else
+                            GameMain.Instance.BgMgr.ChangeBg(scenario.DefaultMap.NightMapID);
+                        GameMain.Instance.SoundMgr.PlayBGM(scenario.DefaultMap.BGM, 1);
+
+                    }
 
                     Core.YotogiHandling.SetGroupToScene();
 
-                    //TODO: This is not a good way. Need to have some place to control if need to do this or not.
                     //assign the club owner motion
-                    Core.YotogiHandling.SetMasturbMotionToCharacter(StateManager.Instance.ClubOwner, MasturbationMotion.Type.ManKneeDown, true);
+                    MapCoorindates coordInfo = ModUseData.MapCoordinateList[PartyGroup.CurrentFormation];
+                    if (coordInfo.SpecialCoordinates != null)
+                    {
+                        var ownerAction = coordInfo.SpecialCoordinates.Where(x => x.Type == Constant.SpecialCoordinateType.Owner).FirstOrDefault();
+                        if (ownerAction != null)
+                            if (ownerAction.IsMasturbation)
+                                Core.YotogiHandling.SetMasturbMotionToCharacter(StateManager.Instance.ClubOwner, MasturbationMotion.Type.ManKneeDown, true);
+                    }
                 }
                 else
                 {
@@ -443,7 +475,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                     {
                         if (isGroupZero)
                         {
-                            var currentSkill = ModUseData.ValidOrgySkillList[StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id][StateManager.Instance.PartyGroupList[0].GroupType].Where(x => x.SexPosID == StateManager.Instance.PartyGroupList[0].SexPosID).First();
+                            var currentSkill = ModUseData.ValidSkillList[StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id][StateManager.Instance.PartyGroupList[0].GroupType].Where(x => x.SexPosID == StateManager.Instance.PartyGroupList[0].SexPosID).First();
                             
                             if (!currentSkill.IsDialogueAllowed)
                             {
@@ -631,6 +663,123 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 GameObject go = Traverse.Create(ypc).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerPositionChangerButton).GetValue<GameObject>();
 
                 go.transform.localScale = Vector3.zero;
+            }
+        }
+
+        internal static void ResetMaidVisibility()
+        {
+            Util.SetAllMaidVisiblility(true);
+        }
+
+        internal static void ApplyForceSetting(Maid maid)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (maid == null)
+                    return;
+
+                PartyGroup group = Util.GetPartyGroupByGUID(maid.status.guid);
+
+                if (group != null)
+                {
+
+
+                    foreach (var eyeSightSetting in group.ForceEyeSight)
+                    {
+                        Core.CustomADVProcessManager.SetCharacterEyeSight(group, eyeSightSetting);
+                    }
+                    if (PartyGroup.CurrentMainGroupMotionType == ForceSexPosInfo.Type.NormalPlay)
+                    {
+                        foreach (var ikInfo in group.ForceIKAttach)
+                        {
+                            Core.CharacterHandling.IKAttachBone(ikInfo);
+                        }
+                    }
+                }
+            }
+        }
+
+        internal static void RecordCommandTypeClicked(Yotogis.Skill.Data.Command.Data command_data)
+        {
+            switch (command_data.basic.command_type)
+            {
+                case Yotogi.SkillCommandType.挿入:
+                case Yotogi.SkillCommandType.単発_挿入:
+                case Yotogi.SkillCommandType.単発:
+                case Yotogi.SkillCommandType.継続:
+                    PartyGroup.CurrentMainGroupMotionType = ForceSexPosInfo.Type.NormalPlay;
+                    break;
+                case Yotogi.SkillCommandType.絶頂:
+                    PartyGroup.CurrentMainGroupMotionType = ForceSexPosInfo.Type.Orgasm;
+                    break;
+                case Yotogi.SkillCommandType.止める:
+                    PartyGroup.CurrentMainGroupMotionType = ForceSexPosInfo.Type.Waiting;
+                    break;
+            }
+        }
+
+        internal static void ApplyLinkedGroupMotionUponCommandClicked(Yotogis.Skill.Data.Command.Data command_data)
+        {
+            switch (command_data.basic.command_type)
+            {
+                case Yotogi.SkillCommandType.挿入:
+                case Yotogi.SkillCommandType.単発_挿入:
+                case Yotogi.SkillCommandType.単発:
+                case Yotogi.SkillCommandType.継続:
+                    ApplyLinkedGroupMotion(ForceSexPosInfo.Type.NormalPlay);
+                    break;
+                case Yotogi.SkillCommandType.絶頂:
+                    ApplyLinkedGroupMotion(ForceSexPosInfo.Type.Orgasm);
+                    break;
+                case Yotogi.SkillCommandType.止める:
+                    ApplyLinkedGroupMotion(ForceSexPosInfo.Type.Waiting);
+                    break;
+            }
+        }
+
+        private static void ApplyLinkedGroupMotion(ForceSexPosInfo.Type type)
+        {
+            foreach (var group in StateManager.Instance.PartyGroupList)
+            {
+                if (!group.IsIndependentExcitement)
+                {
+
+                    //sync the excitement value etc
+                    group.Maid1.status.currentExcite = StateManager.Instance.YotogiManager.maid.status.currentExcite;
+                    group.Maid1.status.currentSensual = StateManager.Instance.YotogiManager.maid.status.currentSensual;
+
+                    //set motion
+                    if (group.ForceSexPos != null)
+                    {
+                        int sexPosID = group.ForceSexPos.NormalPlay;
+                        if (type == ForceSexPosInfo.Type.Waiting)
+                            sexPosID = group.ForceSexPos.Waiting;
+                        else if (type == ForceSexPosInfo.Type.Orgasm)
+                            sexPosID = group.ForceSexPos.Orgasm;
+
+                        Core.YotogiHandling.ChangeBackgroundGroupSexPosition(group, sexPosID, true, true);
+                    }
+
+                }
+            }
+        }
+
+        internal static void CheckMaidAnimationTrigger(Maid maid)
+        {
+            if (StateManager.Instance.WaitingAnimationTrigger != null)
+            {
+                if (StateManager.Instance.WaitingAnimationTrigger.TargetGUID == maid.status.guid)
+                {
+                    if (maid.body0.GetAnimation() != null)
+                        if (!maid.body0.GetAnimation().isPlaying)
+                        {
+                            StateManager.Instance.WaitingAnimationTrigger.ToBeExecuted.Execute();
+
+                            //remove the trigger
+                            StateManager.Instance.WaitingAnimationTrigger = null;
+                        }
+
+                }
             }
         }
     }

@@ -23,6 +23,9 @@ namespace COM3D2.WildParty.Plugin.Core
                 case "orgy_start_yotogiplay":
                     ProcessADV_Step_org0101_YotogiPlay(instance, step);
                     break;
+                case "haremking_start_yotogiplay":
+                    ProcessADV_Step_HaremKing_YotogiPlay(instance, step);
+                    break;
             }
         }
 
@@ -77,6 +80,10 @@ namespace COM3D2.WildParty.Plugin.Core
 
             GameMain.Instance.MainCamera.FadeOut(f_dg: delegate
             {
+                CharacterHandling.SetDefaultGroupFormation();
+
+                CharacterHandling.AssignPartyGroupingRandom();
+
                 YotogiHandling.InitYotogiData();
 
 
@@ -84,5 +91,25 @@ namespace COM3D2.WildParty.Plugin.Core
             });
 
         }
+
+        private static void ProcessADV_Step_HaremKing_YotogiPlay(ADVKagManager instance, ADVStep step)
+        {
+            StateManager.Instance.ModEventProgress = Constant.EventProgress.YotogiInit;
+
+            GameMain.Instance.MainCamera.FadeOut(f_dg: delegate
+            {
+                //CharacterHandling.AssignPartyGrouping_HaremKing();
+                CharacterHandling.SetDefaultGroupFormation();
+
+                CharacterHandling.AssignPartyGrouping(PartyGroup.CurrentFormation);
+
+                YotogiHandling.InitYotogiData();
+
+
+                GameMain.Instance.LoadScene(step.Tag);
+            });
+
+        }
+        
     }
 }

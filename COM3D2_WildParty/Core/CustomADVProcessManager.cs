@@ -133,27 +133,34 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             CharacterHandling.InitSelectedMaids();
             CharacterHandling.BackupManOrder();
-
+            
+            if (step.CharaInitData.ManRequired >= 0)
+                StateManager.Instance.MaxManUsed = step.CharaInitData.ManRequired;
+            
             //init man
             for (int i = 0; i < StateManager.Instance.MaxManUsed; i++)
             {
                 var man = Core.CharacterHandling.InitMan(i);
                 StateManager.Instance.MenList.Add(man);
             }
-
-            //TODO: this part should have proper controlled by json?
-            if (StateManager.Instance.UndergoingModEventID == ScenarioIDList.OrgyPartyScenarioID)
+            
+            //init the club owner
+            StateManager.Instance.ClubOwner = StateManager.Instance.OriginalManOrderList[0];
+            StateManager.Instance.ClubOwner.Visible = true;
+            StateManager.Instance.ClubOwner.DutPropAll();
+            StateManager.Instance.ClubOwner.AllProcPropSeqStart();
+            StateManager.Instance.ClubOwner.transform.localPosition = new Vector3(-999f, -999f, -999f);
+            
+            if (!step.CharaInitData.IsClubOwnerMainCharacter)
             {
-                //For the orgy party, the Man[0] is replaced by a customer and will use his view to proceed the yotogi scene
-                //Backup the club owner game object and do the swap
+                //the Man[0] is replaced by a customer and will use his view to proceed the yotogi scene
                 GameMain.Instance.CharacterMgr.SetActiveMan(StateManager.Instance.MenList[0], 0);
-
-                StateManager.Instance.ClubOwner = StateManager.Instance.OriginalManOrderList[0];
-                StateManager.Instance.ClubOwner.Visible = true;
-                StateManager.Instance.ClubOwner.DutPropAll();
-                StateManager.Instance.ClubOwner.AllProcPropSeqStart();
-
-                StateManager.Instance.ClubOwner.transform.localPosition = new Vector3(-999f, -999f, -999f);
+            }
+            else
+            {
+                //The owner is the main character, put him as the first element of the men list 
+                StateManager.Instance.MenList.Insert(0, StateManager.Instance.ClubOwner);
+                GameMain.Instance.CharacterMgr.SetActiveMan(StateManager.Instance.ClubOwner, 0);
             }
         }
 
@@ -299,37 +306,49 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
+        internal static void SetCharacterEyeSight(PartyGroup group, EyeSightSetting eyeSightSetting)
+        {
+            if (eyeSightSetting.SourceGroupMember == EyeSightSetting.GroupMemberType.Maid1)
+                SetCharacterEyeSight(group.Maid1, eyeSightSetting);
+            else if (eyeSightSetting.SourceGroupMember == EyeSightSetting.GroupMemberType.Maid2)
+                SetCharacterEyeSight(group.Maid2, eyeSightSetting);
+            else if (eyeSightSetting.SourceGroupMember == EyeSightSetting.GroupMemberType.Man1)
+                SetCharacterEyeSight(group.Man1, eyeSightSetting);
+            else if (eyeSightSetting.SourceGroupMember == EyeSightSetting.GroupMemberType.Man2)
+                SetCharacterEyeSight(group.Man2, eyeSightSetting);
+        }
 
-        private static void SetCharacterEyeSight(Maid maid, ADVStep.EyeSightSetting eyeSightSetting)
+
+        internal static void SetCharacterEyeSight(Maid maid, EyeSightSetting eyeSightSetting)
         {
             if (maid == null)
                 return;
             if (eyeSightSetting == null)
                 return;
 
-            if (eyeSightSetting.Type == ADVStep.EyeSightSetting.EyeSightType.ToCamera)
+            if (eyeSightSetting.Type == EyeSightSetting.EyeSightType.ToCamera)
             {
                 maid.EyeToCamera((Maid.EyeMoveType)eyeSightSetting.EyeToCameraSetting.MoveType);
             }
-            else if (eyeSightSetting.Type == ADVStep.EyeSightSetting.EyeSightType.ToChara)
+            else if (eyeSightSetting.Type == EyeSightSetting.EyeSightType.ToChara)
             {
                 Maid target = null;
-                if (eyeSightSetting.EyeToCharaSetting.Type == ADVStep.EyeSightSetting.EyeToCharaSettingDetail.TargetType.ClubOwner)
+                if (eyeSightSetting.EyeToCharaSetting.Type == EyeSightSetting.EyeToCharaSettingDetail.TargetType.ClubOwner)
                     target = StateManager.Instance.ClubOwner;
-                else if (eyeSightSetting.EyeToCharaSetting.Type == ADVStep.EyeSightSetting.EyeToCharaSettingDetail.TargetType.Man)
+                else if (eyeSightSetting.EyeToCharaSetting.Type == EyeSightSetting.EyeToCharaSettingDetail.TargetType.Man)
                     target = StateManager.Instance.MenList[eyeSightSetting.EyeToCharaSetting.ArrayPosition];
-                else if (eyeSightSetting.EyeToCharaSetting.Type == ADVStep.EyeSightSetting.EyeToCharaSettingDetail.TargetType.Maid)
+                else if (eyeSightSetting.EyeToCharaSetting.Type == EyeSightSetting.EyeToCharaSettingDetail.TargetType.Maid)
                     target = StateManager.Instance.SelectedMaidsList[eyeSightSetting.EyeToCharaSetting.ArrayPosition];
-                else if (eyeSightSetting.EyeToCharaSetting.Type == ADVStep.EyeSightSetting.EyeToCharaSettingDetail.TargetType.GroupMember)
+                else if (eyeSightSetting.EyeToCharaSetting.Type == EyeSightSetting.EyeToCharaSettingDetail.TargetType.GroupMember)
                 {
                     PartyGroup group = StateManager.Instance.PartyGroupList[eyeSightSetting.EyeToCharaSetting.ArrayPosition];
-                    if (eyeSightSetting.EyeToCharaSetting.TargetGroupMember == ADVStep.EyeSightSetting.EyeToCharaSettingDetail.GroupMemberType.Maid1)
+                    if (eyeSightSetting.EyeToCharaSetting.TargetGroupMember == EyeSightSetting.GroupMemberType.Maid1)
                         target = group.Maid1;
-                    else if (eyeSightSetting.EyeToCharaSetting.TargetGroupMember == ADVStep.EyeSightSetting.EyeToCharaSettingDetail.GroupMemberType.Maid2)
+                    else if (eyeSightSetting.EyeToCharaSetting.TargetGroupMember == EyeSightSetting.GroupMemberType.Maid2)
                         target = group.Maid2;
-                    else if (eyeSightSetting.EyeToCharaSetting.TargetGroupMember == ADVStep.EyeSightSetting.EyeToCharaSettingDetail.GroupMemberType.Man1)
+                    else if (eyeSightSetting.EyeToCharaSetting.TargetGroupMember == EyeSightSetting.GroupMemberType.Man1)
                         target = group.Man1;
-                    else if (eyeSightSetting.EyeToCharaSetting.TargetGroupMember == ADVStep.EyeSightSetting.EyeToCharaSettingDetail.GroupMemberType.Man2)
+                    else if (eyeSightSetting.EyeToCharaSetting.TargetGroupMember == EyeSightSetting.GroupMemberType.Man2)
                         target = group.Man2;
                 }
 
@@ -344,11 +363,11 @@ namespace COM3D2.WildParty.Plugin.Core
                     maid.EyeToTarget(target, 0.5f, targetBone);
                 }
             }
-            else if (eyeSightSetting.Type == ADVStep.EyeSightSetting.EyeSightType.ToObject)
+            else if (eyeSightSetting.Type == EyeSightSetting.EyeSightType.ToObject)
             {
                 maid.EyeToTargetObject(eyeSightSetting.EyeToObjectSetting.Target.transform);
             }
-            else if (eyeSightSetting.Type == ADVStep.EyeSightSetting.EyeSightType.Reset)
+            else if (eyeSightSetting.Type == EyeSightSetting.EyeSightType.Reset)
             {
                 maid.EyeToReset();
             }
@@ -367,7 +386,6 @@ namespace COM3D2.WildParty.Plugin.Core
                 string motionFile = charaData.MotionInfo.MotionFile;
                 string motionTag = charaData.MotionInfo.MotionTag;
                 bool isLoop = charaData.MotionInfo.IsLoopMotion;
-                bool useMotionScriptLoad = charaData.MotionInfo.UseMotionScriptLoad;
 
                 if (!string.IsNullOrEmpty(charaData.MotionInfo.RandomMotion))
                 {
@@ -385,7 +403,6 @@ namespace COM3D2.WildParty.Plugin.Core
                         motionFile = randomList[rnd].MotionFile;
                         motionTag = randomList[rnd].MotionTag;
                         isLoop = randomList[rnd].IsLoopMotion;
-                        useMotionScriptLoad = randomList[rnd].UseMotionScriptLoad;
                     }
                 }
 
@@ -474,7 +491,7 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
-        private static void SetFaceAnimeToMaid(Maid maid, string faceAnime)
+        internal static void SetFaceAnimeToMaid(Maid maid, string faceAnime)
         {
             if (maid == null)
                 return;
@@ -687,6 +704,9 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 //goes back to the normal flow screen
                 tagList = TagSupportData.GetTagForCharacterSelectScreen();
+
+                //It is possible for the player to have setup more than 1 modded scenario in schedule, so set the flag to check it again
+                StateManager.Instance.RequireCheckModdedSceneFlag = true;
             }
             else
             {

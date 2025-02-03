@@ -198,6 +198,10 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                     }
                 }
             }
+            else if (Input.GetKeyDown(KeyCode.Keypad6))
+            {
+                DebugHelper.Debug.MapAvailableSkillForMaid(GameMain.Instance.CharacterMgr.GetMaid(0));
+            }
         }
 
         internal static void PrintCharacterSetup()
@@ -206,115 +210,15 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
             {
                 //For printing the json string for the character placement in adv scene (mainly for position and rotation info)
 
-                int counter = 0;
-                for (int i = 0; i < StateManager.Instance.SelectedMaidsList.Count; i++)
-                {
-                    Maid maid = StateManager.Instance.SelectedMaidsList[i];
-                    if (maid != null)
-                    {
-                        if (maid.Visible)
-                        {
-                            WildParty.Log.LogInfo(maid.status.fullNameJpStyle);
-                            WildParty.Log.LogInfo("{");
-                            WildParty.Log.LogInfo("\"Type\": \"F\",");
-                            WildParty.Log.LogInfo("\"ArrayPosition\": " + counter + ",");
-                            WildParty.Log.LogInfo("\"Visible\": true,");
-                            WildParty.Log.LogInfo("\"WaitLoad\": true,");
-                            WildParty.Log.LogInfo("\"MotionType\": \"RandomRest\"");
-                            WildParty.Log.LogInfo("\"FaceAnime\": \"RandomRest\",");
-                            WildParty.Log.LogInfo("\"PosRot\": {");
-                            WildParty.Log.LogInfo("\"PosString\": " + maid.transform.position + ",");
-                            WildParty.Log.LogInfo("\"RotString\": " + maid.transform.rotation + "");
-                            WildParty.Log.LogInfo("\"local PosString\": " + maid.transform.localPosition + ",");
-                            WildParty.Log.LogInfo("\"local RotString\": " + maid.transform.localRotation + "");
-                            //WildParty.Log.LogInfo("\"PosX\": " + maid.transform.localPosition.x.ToString("0.0") + ",");
-                            //WildParty.Log.LogInfo("\"PosY\": " + maid.transform.localPosition.y.ToString("0.0") + ",");
-                            //WildParty.Log.LogInfo("\"PosZ\": " + maid.transform.localPosition.z.ToString("0.0") + ",");
-                            //WildParty.Log.LogInfo("\"Rotate\": " + maid.GetRot().y.ToString("0.0") + "");
-                            WildParty.Log.LogInfo("}");
-                            WildParty.Log.LogInfo("},");
-
-                            counter++;
-                        }
-                    }
-                }
-
-                counter = 0;
-                for (int i = 0; i < StateManager.Instance.MenList.Count; i++)
-                {
-                    Maid maid = StateManager.Instance.MenList[i];
-                    if (maid != null)
-                    {
-                        if (maid.Visible)
-                        {
-                            WildParty.Log.LogInfo(maid.status.fullNameJpStyle);
-                            WildParty.Log.LogInfo("{");
-                            WildParty.Log.LogInfo("\"Type\": \"M\",");
-                            WildParty.Log.LogInfo("\"ArrayPosition\": " + counter + ",");
-                            WildParty.Log.LogInfo("\"Visible\": true,");
-                            WildParty.Log.LogInfo("\"ShowPenis\": true,");
-                            WildParty.Log.LogInfo("\"WaitLoad\": true,");
-                            WildParty.Log.LogInfo("\"MotionType\": \"RandomRest\"");
-                            WildParty.Log.LogInfo("\"PosRot\": {");
-                            WildParty.Log.LogInfo("\"PosString\": " + maid.transform.position + ",");
-                            WildParty.Log.LogInfo("\"RotString\": " + maid.transform.rotation + "");
-                            WildParty.Log.LogInfo("\"local PosString\": " + maid.transform.localPosition + ",");
-                            WildParty.Log.LogInfo("\"local RotString\": " + maid.transform.localRotation + "");
-                            //WildParty.Log.LogInfo("\"PosX\": " + maid.transform.localPosition.x.ToString("0.0") + ",");
-                            //WildParty.Log.LogInfo("\"PosY\": " + maid.transform.localPosition.y.ToString("0.0") + ",");
-                            //WildParty.Log.LogInfo("\"PosZ\": " + maid.transform.localPosition.z.ToString("0.0") + ",");
-                            //WildParty.Log.LogInfo("\"Rotate\": " + maid.GetRot().y.ToString("0.0") + "");
-                            WildParty.Log.LogInfo("}");
-                            WildParty.Log.LogInfo("},");
-
-                            counter++;
-                        }
-                    }
-                }
-
-                if (StateManager.Instance.ClubOwner != null)
-                {
-                    Maid maid = StateManager.Instance.ClubOwner;
-                    if (maid != null)
-                    {
-                        if (maid.Visible)
-                        {
-                            WildParty.Log.LogInfo("Club Owner: ");
-                            WildParty.Log.LogInfo(maid.status.fullNameJpStyle);
-                            WildParty.Log.LogInfo("{");
-                            WildParty.Log.LogInfo("\"Type\": \"M\",");
-                            WildParty.Log.LogInfo("\"ArrayPosition\": " + counter + ",");
-                            WildParty.Log.LogInfo("\"Visible\": true,");
-                            WildParty.Log.LogInfo("\"ShowPenis\": true,");
-                            WildParty.Log.LogInfo("\"WaitLoad\": true,");
-                            WildParty.Log.LogInfo("\"MotionType\": \"RandomRest\"");
-                            WildParty.Log.LogInfo("\"PosRot\": {");
-                            WildParty.Log.LogInfo("\"PosString\": " + maid.transform.position + ",");
-                            WildParty.Log.LogInfo("\"RotString\": " + maid.transform.rotation + "");
-                            WildParty.Log.LogInfo("\"local PosString\": " + maid.transform.localPosition + ",");
-                            WildParty.Log.LogInfo("\"local RotString\": " + maid.transform.localRotation + "");
-                            //WildParty.Log.LogInfo("\"PosX\": " + maid.transform.localPosition.x.ToString("0.0") + ",");
-                            //WildParty.Log.LogInfo("\"PosY\": " + maid.transform.localPosition.y.ToString("0.0") + ",");
-                            //WildParty.Log.LogInfo("\"PosZ\": " + maid.transform.localPosition.z.ToString("0.0") + ",");
-                            //WildParty.Log.LogInfo("\"Rotate\": " + maid.GetRot().y.ToString("0.0") + "");
-                            WildParty.Log.LogInfo("}");
-                            WildParty.Log.LogInfo("},");
-
-                            counter++;
-                        }
-                    }
-                }
-
-                ////This part is for studio mode
-                
                 //int counter = 0;
-                //for (int i = 0; i < GameMain.Instance.CharacterMgr.GetMaidCount(); i++)
+                //for (int i = 0; i < StateManager.Instance.SelectedMaidsList.Count; i++)
                 //{
-                //    Maid maid = GameMain.Instance.CharacterMgr.GetMaid(i);
+                //    Maid maid = StateManager.Instance.SelectedMaidsList[i];
                 //    if (maid != null)
                 //    {
                 //        if (maid.Visible)
                 //        {
+                //            WildParty.Log.LogInfo(maid.status.fullNameJpStyle);
                 //            WildParty.Log.LogInfo("{");
                 //            WildParty.Log.LogInfo("\"Type\": \"F\",");
                 //            WildParty.Log.LogInfo("\"ArrayPosition\": " + counter + ",");
@@ -323,8 +227,10 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                 //            WildParty.Log.LogInfo("\"MotionType\": \"RandomRest\"");
                 //            WildParty.Log.LogInfo("\"FaceAnime\": \"RandomRest\",");
                 //            WildParty.Log.LogInfo("\"PosRot\": {");
-                //            WildParty.Log.LogInfo("\"PosString\": \"" + maid.transform.position + "\",");
-                //            WildParty.Log.LogInfo("\"RotString\": \"" + maid.transform.rotation + "\"");
+                //            WildParty.Log.LogInfo("\"PosString\": " + maid.transform.position + ",");
+                //            WildParty.Log.LogInfo("\"RotString\": " + maid.transform.rotation + "");
+                //            WildParty.Log.LogInfo("\"local PosString\": " + maid.transform.localPosition + ",");
+                //            WildParty.Log.LogInfo("\"local RotString\": " + maid.transform.localRotation + "");
                 //            //WildParty.Log.LogInfo("\"PosX\": " + maid.transform.localPosition.x.ToString("0.0") + ",");
                 //            //WildParty.Log.LogInfo("\"PosY\": " + maid.transform.localPosition.y.ToString("0.0") + ",");
                 //            //WildParty.Log.LogInfo("\"PosZ\": " + maid.transform.localPosition.z.ToString("0.0") + ",");
@@ -338,13 +244,14 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                 //}
 
                 //counter = 0;
-                //for (int i = 0; i < GameMain.Instance.CharacterMgr.GetMaidCount(); i++)
+                //for (int i = 0; i < StateManager.Instance.MenList.Count; i++)
                 //{
-                //    Maid maid = GameMain.Instance.CharacterMgr.GetMan(i);
+                //    Maid maid = StateManager.Instance.MenList[i];
                 //    if (maid != null)
                 //    {
                 //        if (maid.Visible)
                 //        {
+                //            WildParty.Log.LogInfo(maid.status.fullNameJpStyle);
                 //            WildParty.Log.LogInfo("{");
                 //            WildParty.Log.LogInfo("\"Type\": \"M\",");
                 //            WildParty.Log.LogInfo("\"ArrayPosition\": " + counter + ",");
@@ -353,8 +260,10 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                 //            WildParty.Log.LogInfo("\"WaitLoad\": true,");
                 //            WildParty.Log.LogInfo("\"MotionType\": \"RandomRest\"");
                 //            WildParty.Log.LogInfo("\"PosRot\": {");
-                //            WildParty.Log.LogInfo("\"PosString\": \"" + maid.transform.position + "\",");
-                //            WildParty.Log.LogInfo("\"RotString\": \"" + maid.transform.rotation + "\"");
+                //            WildParty.Log.LogInfo("\"PosString\": " + maid.transform.position + ",");
+                //            WildParty.Log.LogInfo("\"RotString\": " + maid.transform.rotation + "");
+                //            WildParty.Log.LogInfo("\"local PosString\": " + maid.transform.localPosition + ",");
+                //            WildParty.Log.LogInfo("\"local RotString\": " + maid.transform.localRotation + "");
                 //            //WildParty.Log.LogInfo("\"PosX\": " + maid.transform.localPosition.x.ToString("0.0") + ",");
                 //            //WildParty.Log.LogInfo("\"PosY\": " + maid.transform.localPosition.y.ToString("0.0") + ",");
                 //            //WildParty.Log.LogInfo("\"PosZ\": " + maid.transform.localPosition.z.ToString("0.0") + ",");
@@ -366,6 +275,101 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                 //        }
                 //    }
                 //}
+
+                //if (StateManager.Instance.ClubOwner != null)
+                //{
+                //    Maid maid = StateManager.Instance.ClubOwner;
+                //    if (maid != null)
+                //    {
+                //        if (maid.Visible)
+                //        {
+                //            WildParty.Log.LogInfo("Club Owner: ");
+                //            WildParty.Log.LogInfo(maid.status.fullNameJpStyle);
+                //            WildParty.Log.LogInfo("{");
+                //            WildParty.Log.LogInfo("\"Type\": \"M\",");
+                //            WildParty.Log.LogInfo("\"ArrayPosition\": " + counter + ",");
+                //            WildParty.Log.LogInfo("\"Visible\": true,");
+                //            WildParty.Log.LogInfo("\"ShowPenis\": true,");
+                //            WildParty.Log.LogInfo("\"WaitLoad\": true,");
+                //            WildParty.Log.LogInfo("\"MotionType\": \"RandomRest\"");
+                //            WildParty.Log.LogInfo("\"PosRot\": {");
+                //            WildParty.Log.LogInfo("\"PosString\": " + maid.transform.position + ",");
+                //            WildParty.Log.LogInfo("\"RotString\": " + maid.transform.rotation + "");
+                //            WildParty.Log.LogInfo("\"local PosString\": " + maid.transform.localPosition + ",");
+                //            WildParty.Log.LogInfo("\"local RotString\": " + maid.transform.localRotation + "");
+                //            //WildParty.Log.LogInfo("\"PosX\": " + maid.transform.localPosition.x.ToString("0.0") + ",");
+                //            //WildParty.Log.LogInfo("\"PosY\": " + maid.transform.localPosition.y.ToString("0.0") + ",");
+                //            //WildParty.Log.LogInfo("\"PosZ\": " + maid.transform.localPosition.z.ToString("0.0") + ",");
+                //            //WildParty.Log.LogInfo("\"Rotate\": " + maid.GetRot().y.ToString("0.0") + "");
+                //            WildParty.Log.LogInfo("}");
+                //            WildParty.Log.LogInfo("},");
+
+                //            counter++;
+                //        }
+                //    }
+                //}
+
+                ////This part is for studio mode
+
+                int counter = 0;
+                for (int i = 0; i < GameMain.Instance.CharacterMgr.GetMaidCount(); i++)
+                {
+                    Maid maid = GameMain.Instance.CharacterMgr.GetMaid(i);
+                    if (maid != null)
+                    {
+                        if (maid.Visible)
+                        {
+                            WildParty.Log.LogInfo("{");
+                            WildParty.Log.LogInfo("\"Type\": \"F\",");
+                            WildParty.Log.LogInfo("\"ArrayPosition\": " + counter + ",");
+                            WildParty.Log.LogInfo("\"Visible\": true,");
+                            WildParty.Log.LogInfo("\"WaitLoad\": true,");
+                            WildParty.Log.LogInfo("\"MotionType\": \"RandomRest\"");
+                            WildParty.Log.LogInfo("\"FaceAnime\": \"RandomRest\",");
+                            WildParty.Log.LogInfo("\"PosRot\": {");
+                            WildParty.Log.LogInfo("\"PosString\": \"" + maid.transform.position + "\",");
+                            WildParty.Log.LogInfo("\"RotString\": \"" + maid.transform.rotation + "\"");
+                            //WildParty.Log.LogInfo("\"PosX\": " + maid.transform.localPosition.x.ToString("0.0") + ",");
+                            //WildParty.Log.LogInfo("\"PosY\": " + maid.transform.localPosition.y.ToString("0.0") + ",");
+                            //WildParty.Log.LogInfo("\"PosZ\": " + maid.transform.localPosition.z.ToString("0.0") + ",");
+                            //WildParty.Log.LogInfo("\"Rotate\": " + maid.GetRot().y.ToString("0.0") + "");
+                            WildParty.Log.LogInfo("}");
+                            WildParty.Log.LogInfo("},");
+
+                            counter++;
+                        }
+                    }
+                }
+
+                counter = 0;
+                for (int i = 0; i < GameMain.Instance.CharacterMgr.GetMaidCount(); i++)
+                {
+                    Maid maid = GameMain.Instance.CharacterMgr.GetMan(i);
+                    if (maid != null)
+                    {
+                        if (maid.Visible)
+                        {
+                            WildParty.Log.LogInfo("{");
+                            WildParty.Log.LogInfo("\"Type\": \"M\",");
+                            WildParty.Log.LogInfo("\"ArrayPosition\": " + counter + ",");
+                            WildParty.Log.LogInfo("\"Visible\": true,");
+                            WildParty.Log.LogInfo("\"ShowPenis\": true,");
+                            WildParty.Log.LogInfo("\"WaitLoad\": true,");
+                            WildParty.Log.LogInfo("\"MotionType\": \"RandomRest\"");
+                            WildParty.Log.LogInfo("\"PosRot\": {");
+                            WildParty.Log.LogInfo("\"PosString\": \"" + maid.transform.position + "\",");
+                            WildParty.Log.LogInfo("\"RotString\": \"" + maid.transform.rotation + "\"");
+                            //WildParty.Log.LogInfo("\"PosX\": " + maid.transform.localPosition.x.ToString("0.0") + ",");
+                            //WildParty.Log.LogInfo("\"PosY\": " + maid.transform.localPosition.y.ToString("0.0") + ",");
+                            //WildParty.Log.LogInfo("\"PosZ\": " + maid.transform.localPosition.z.ToString("0.0") + ",");
+                            //WildParty.Log.LogInfo("\"Rotate\": " + maid.GetRot().y.ToString("0.0") + "");
+                            WildParty.Log.LogInfo("}");
+                            WildParty.Log.LogInfo("},");
+
+                            counter++;
+                        }
+                    }
+                }
             }
         }
 
@@ -534,6 +538,70 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
 
                 WildParty.Log.LogInfo("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
             }
+            
+            else if (Input.GetKeyDown(KeyCode.Keypad9))
+            {
+                foreach(var g in StateManager.Instance.PartyGroupList)
+                {
+                    PrintCharacterPosRot(g.Maid1);
+                    PrintCharacterPosRot(g.Maid2);
+                    PrintCharacterPosRot(g.Man1);
+                    PrintCharacterPosRot(g.Man2);
+                }
+            }
+
+            else if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                float offset = 0.1f;
+                if (DebugHelper.DebugState.Instance.IsCtrlPressed)
+                    offset = 0.01f;
+                DebugHelper.DebugState.Instance.DebugX -= offset;
+                
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                float offset = 0.1f;
+                if (DebugHelper.DebugState.Instance.IsCtrlPressed)
+                    offset = 0.01f;
+                DebugHelper.DebugState.Instance.DebugX += offset;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                float offset = 0.1f;
+                if (DebugHelper.DebugState.Instance.IsCtrlPressed)
+                    offset = 0.01f;
+                DebugHelper.DebugState.Instance.DebugY -= offset;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                float offset = 0.1f;
+                if (DebugHelper.DebugState.Instance.IsCtrlPressed)
+                    offset = 0.01f;
+                DebugHelper.DebugState.Instance.DebugY += offset;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha5))
+            {
+                float offset = 0.1f;
+                if (DebugHelper.DebugState.Instance.IsCtrlPressed)
+                    offset = 0.01f;
+                DebugHelper.DebugState.Instance.DebugZ -= offset;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha6))
+            {
+                float offset = 0.1f;
+                if (DebugHelper.DebugState.Instance.IsCtrlPressed)
+                    offset = 0.01f;
+                DebugHelper.DebugState.Instance.DebugZ += offset;
+            }
+        }
+
+        private static void PrintCharacterPosRot(Maid maid)
+        {
+            if (maid == null)
+                return;
+            WildParty.Log.LogInfo(maid.status.fullNameJpStyle);
+            WildParty.Log.LogInfo("Pos: " + maid.transform.position);
+            WildParty.Log.LogInfo("Rot: " + maid.transform.rotation);
         }
 
         internal static void YotogiPlayGroupArrangement()
@@ -697,6 +765,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
             TestingUseRotateMaid(group.Maid2, offset);
             TestingUseRotateMaid(group.Man1, offset);
             TestingUseRotateMaid(group.Man2, offset);
+
+            group.GroupRotation = group.Maid1.transform.rotation;
 
             if (PartyGroup.UnassignedMaid != null)
                 PartyGroup.UnassignedMaid.transform.Rotate(Vector3.up, offset);

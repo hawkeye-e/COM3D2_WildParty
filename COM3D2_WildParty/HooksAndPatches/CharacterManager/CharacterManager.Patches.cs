@@ -129,7 +129,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
                     //Maid flow, we record the group index
                     for (int i = 0; i < StateManager.Instance.PartyGroupList.Count; i++)
                     {
-                        if (StateManager.Instance.PartyGroupList[i].Maid1.status.guid == __result.status.guid)
+                        if (__result != null && StateManager.Instance.PartyGroupList[i].Maid1.status.guid == __result.status.guid)
                         {
                             StateManager.Instance.currentGroup = i;
                             break;
