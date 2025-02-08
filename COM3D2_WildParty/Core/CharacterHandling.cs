@@ -372,6 +372,9 @@ namespace COM3D2.WildParty.Plugin.Core
                 newGroup.IsAutomatedGroup = groupSetupInfo.IsAutomatedGroup;
                 
                 StateManager.Instance.PartyGroupList.Add(newGroup);
+
+                if (maidRunningNumber >= StateManager.Instance.YotogiWorkingMaidList.Count)
+                    break;
             }
 
             SetGroupZeroActive();
