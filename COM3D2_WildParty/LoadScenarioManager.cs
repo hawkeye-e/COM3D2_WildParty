@@ -9,7 +9,67 @@ namespace COM3D2.WildParty.Plugin
     //If the scenario steps data are split into different files, need to update this class accordingly    
     class LoadScenarioManager
     {
-        
+        private static readonly string[] ScenarioOrgyPartyResList = { 
+            ScenarioResources.ScenarioOrgyParty.OrgyADVSetup,
+            ScenarioResources.ScenarioOrgyParty.OrgyADVIntro,
+            ScenarioResources.ScenarioOrgyParty.OrgyADVWelcomeGuest,
+            ScenarioResources.ScenarioOrgyParty.OrgyADVPostYotogi,
+
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Muku,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Majime,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Rindere,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Pure,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Pride,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Cool,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Yandere,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Anesan,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Genki,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Sadist,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Silent,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Devilish,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Ladylike,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Secretary,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Sister,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Curtness,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Missy,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Childhood,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Friendly,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Dame,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Masochist,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Cunning,
+            ScenarioResources.ScenarioOrgyParty.OrgyADV_Gyaru
+        };
+
+        private static readonly string[] ScenarioHaremKingResList = {
+            ScenarioResources.ScenarioHaremKing.HaremKingADVIntro,
+            ScenarioResources.ScenarioHaremKing.HaremKingADVPrivateRoom,
+            ScenarioResources.ScenarioHaremKing.HaremKingADVPostYotogi,
+
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Muku,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Majime,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Rindere,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Pure,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Cool,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Pride,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Yandere,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Anesan,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Genki,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Sadist,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Silent,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Devilish,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Ladylike,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Secretary,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Sister,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Curtness,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Missy,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Childhood,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Masochist,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Cunning,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Friendly,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Dame,
+            ScenarioResources.ScenarioHaremKing.HaremKingADV_Gyaru,
+        };
+
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)
         {
             Dictionary<int, Dictionary<string, ADVStep>> result = new Dictionary<int, Dictionary<string, ADVStep>>();
@@ -26,34 +86,9 @@ namespace COM3D2.WildParty.Plugin
         {
             Dictionary<string, ADVStep> stepData = new Dictionary<string, ADVStep>();
 
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADVSetup);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADVIntro);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADVWelcomeGuest);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADVPostYotogi);
+            for(int i=0; i< ScenarioOrgyPartyResList.Length; i++)
+                LoadResourcesFile(stepData, ScenarioOrgyPartyResList[i]);
 
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Muku);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Majime);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Rindere);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Pure);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Pride);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Cool);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Yandere);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Anesan);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Genki);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Sadist);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Silent);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Devilish);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Ladylike);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Secretary);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Sister);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Curtness);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Missy);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Childhood);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Friendly);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Dame);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Masochist);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Cunning);
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioOrgyParty.OrgyADV_Gyaru);
 
             return stepData;
         }
@@ -62,8 +97,8 @@ namespace COM3D2.WildParty.Plugin
         {
             Dictionary<string, ADVStep> stepData = new Dictionary<string, ADVStep>();
 
-            LoadResourcesFile(stepData, ScenarioResources.ScenarioHaremKing.HaremKingADVIntro);
-            
+            for (int i = 0; i < ScenarioHaremKingResList.Length; i++)
+                LoadResourcesFile(stepData, ScenarioHaremKingResList[i]);
 
             return stepData;
         }

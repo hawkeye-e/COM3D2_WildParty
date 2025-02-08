@@ -18,6 +18,13 @@ namespace COM3D2.WildParty.Plugin
 
         internal static readonly string[] ModIconNames = { ModResources.ImageResources.OrgyPartyIconFileName, ModResources.ImageResources.HaremKingIconFileName };
 
+        internal enum CharacterType
+        {
+            Maid,
+            Man,
+            NPC
+        }
+
         //Name follows the dlc code
         internal static class PersonalityType
         {
@@ -120,6 +127,16 @@ namespace COM3D2.WildParty.Plugin
             internal const string DailyLife = "BGM015.ogg";
             internal const string Yotogi = "BGM022.ogg";
             internal const string NightSky = "BGM019.ogg";
+        }
+
+        internal static class SE
+        {
+            internal const string Beep = "SE024.ogg";
+            internal const string PhoneRing = "SE023.ogg";
+            internal const string TakePhoto = "SE022.ogg";
+            internal const string CameraShutter = "SE074.ogg";
+            internal const string KnockDoor = "mmlSE_042.ogg";
+            internal const string OpenDoor = "mmlSE_065.ogg";
         }
 
 
@@ -245,6 +262,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string Group = "Group";
             internal const string Talk = "Talk";
             internal const string ChangeBGM = "BGM";
+            internal const string PlaySE = "SE";
             internal const string ChangeBackground = "BG";
             internal const string ChangeScene = "Scene";
             internal const string ChangeCamera = "Camera";
@@ -266,6 +284,8 @@ namespace COM3D2.WildParty.Plugin
 
             internal const string RemoveTexture = "RemoveTexture";
 
+            internal const string Shuffle = "Shuffle";
+
             internal const string ADVEnd = "ADVEnd";    //End the scenario and return to normal flow
         }
 
@@ -274,7 +294,9 @@ namespace COM3D2.WildParty.Plugin
             internal const string Narrative = "Narrative";
             internal const string Owner = "Owner";
             internal const string SelectedMaid = "SelectedMaid";        //Maid 0
+            internal const string Maid = "Maid";                        //Require Index position
             internal const string RandomMaid = "RandomMaid";
+            internal const string NPC = "NPC";
             internal const string All = "All";
         }
 
@@ -327,6 +349,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string SingleMaid = "F";
             internal const string AllMen = "M_ALL";
             internal const string AllMaids = "F_ALL";
+            internal const string NPC = "NPC";
         }
 
         internal static class EventProgress

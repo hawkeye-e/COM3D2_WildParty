@@ -11,11 +11,43 @@
     "ID": "haremking0001_init_chara",
     "Type": "CharaInit",
     "WaitingType": "Auto",
-    "NextStepID": "haremking_intro_0001",
+    "NextStepID": "haremking0001_init_shuffle",
     "CharaInitData": {
       "IsClubOwnerMainCharacter": true,
-      "ManRequired": 9
+      "ManRequired": 9,
+      "NPC": [
+        {
+          "Index": 0,
+          "Preset": "pre_maid_secretary",
+          "Name": "エマ"
+        }
+      ]
     }
+  },
+
+  "haremking0001_init_shuffle": {
+    "ID": "haremking0001_init_shuffle",
+    "Type": "Shuffle",
+    "ShuffleData": {
+      "TargetList": "F_ALL",
+      "KeepPosition": [ 0 ]
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "haremking0001_init_hide_men"
+  },
+
+  "haremking0001_init_hide_men": {
+    "ID": "haremking0001_init_hide_men",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "haremking_intro_0001",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": false
+      }
+    ]
   },
 
   "haremking_intro_0001": {
@@ -101,42 +133,820 @@
     "ID": "haremking_intro_0005",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "haremking_intro_yotogiplay_closepanel",
+    "NextStepID": "haremking_intro_0006",
     "TalkData": {
       "SpecificSpeaker": "Owner",
       "Text": "（俺は今、非常に充実した仕事をしている。より多くの人々に知られることは、俺にとっても誇りだ。）"
     }
   },
 
-  "haremking_intro_yotogiplay_closepanel": {
-    "ID": "org0010",
-    "Type": "CloseMsgPanel",
-    "WaitingType": "Auto",
-    "NextStepID": "haremking_intro_yotogiplay_loadmodel"
+  "haremking_intro_0006": {
+    "ID": "haremking_intro_0006",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0007",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（でもそのせいで、最近忙しくなりすぎている。実際、ここ数日、俺はメイドたちとイチャイチャしていない。）"
+    }
   },
 
-  "haremking_intro_yotogiplay_loadmodel": {
-    "ID": "haremking_intro_yotogiplay_loadmodel",
+  "haremking_intro_0007": {
+    "ID": "haremking_intro_0007",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0008",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（手持ちの仕事を終えたら、俺は彼女たちと一日中一緒に過ごさなければならない。彼女たちにとても欲しい！）"
+    }
+  },
+
+  "haremking_intro_0008": {
+    "ID": "haremking_intro_0008",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0009",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "よし！かんばるぞ！さっさと仕事を終えようと、彼女たちとの時間を作ろう！"
+    }
+  },
+
+  "haremking_intro_0009": {
+    "ID": "haremking_intro_0009",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "haremking_intro_0009a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "haremking_intro_0009a": {
+    "ID": "haremking_intro_0009a",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
+    "NextStepID": "haremking_intro_0010",
     "CharaData": [
       {
-        "Type": "F",
+        "Type": "M",
+        "IsMaster": true,
         "ArrayPosition": 0,
-        "Visible": true,
-        "WaitLoad": true
+        "Visible": false,
+        "WaitLoad": true,
+        "ShowPenis": false
       }
-    ],
-    "NextStepID": "haremking_start_yotogiplay"
+
+    ]
   },
 
-  "haremking_start_yotogiplay": {
-    "ID": "haremking_start_yotogiplay",
-    "Type": "Special",
-    "Tag": "SceneYotogi",
-    "WaitingType": "LoadScene",
-    "PostYotogi": { "IsKeepCharacterVisible": false },
-    "NextStepID": "haremking_postyotogi_init"
+  "haremking_intro_0010": {
+    "ID": "haremking_intro_0010",
+    "Type": "BG",
+    "Tag": "",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0011",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "haremking_intro_0011": {
+    "ID": "haremking_intro_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0011a",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "Text": "……"
+    }
+  },
+
+  "haremking_intro_0011a": {
+    "ID": "haremking_intro_0011a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0012",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "Text": "…"
+    }
+  },
+
+  "haremking_intro_0012": {
+    "ID": "haremking_intro_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0013",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "クソ…処理しなければならないことが多すぎるし、連絡しなければならない人も多すぎる！今日中に終わらせることはできなさそうだ…"
+    }
+  },
+
+  "haremking_intro_0013": {
+    "ID": "haremking_intro_0013",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0014",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "なんで仕事が次から次へとやってくるんだ？いつになったら、この仕事地獄から解放されるのかなの…？"
+    }
+  },
+
+  "haremking_intro_0014": {
+    "ID": "haremking_intro_0014",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0014a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "……もうだめだ…今すぐ[=Maid0Name]たちに会いたい…"
+    }
+  },
+
+  "haremking_intro_0014a": {
+    "ID": "haremking_intro_0014a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0015",
+    "TalkData": {
+      "SpecificSpeaker": "NPC",
+      "Index": 0,
+      "Text": "ご主人様……ご主人様、どうかしましたか？",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "ema_hisyo_00049.ogg",
+          "IsChoppingAudio": true,
+          "Endtime": 5
+        }
+      }
+    }
+  },
+
+  "haremking_intro_0015": {
+    "ID": "haremking_intro_0015",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "haremking_intro_0016",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "haremking_intro_0016": {
+    "ID": "haremking_intro_0016",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "haremking_intro_0016a",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "ShowPenis": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿考える"
+        },
+        "PosRot": {
+          "PosString": "0.0, 0.5, -3.4",
+          "RotString": "0.0, 0.0, 0.0, 1.0"
+        }
+      },
+      {
+        "Type": "NPC",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ダンス真剣",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": { "Type": "ClubOwner" }
+        },
+        "PosRot": {
+          "PosString": "0.0, 0.0, -1.5",
+          "RotString": "0.0, 1.0, 0.0, 0.0"
+        }
+      }
+    ]
+  },
+
+
+  "haremking_intro_0016a": {
+    "ID": "haremking_intro_0016a",
+    "Type": "BG",
+    "Tag": "ShinShitsumu",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0016b"
+  },
+
+  "haremking_intro_0016b": {
+    "ID": "haremking_intro_0016b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0017",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 0,
+        "PosY": 1.5,
+        "PosZ": -4.3,
+        "TargetPosX": 0,
+        "TargetPosY": 0.9,
+        "TargetPosZ": -0.9,
+        "Distance": 3.4,
+        "AngleFrom": -360.7,
+        "AngleTo": 10.3
+      }
+    }
+  },
+
+
+  "haremking_intro_0017": {
+    "ID": "haremking_intro_0017",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0018a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "…エマ…ここにいたのか…ごめん、気づかなかった。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "haremking_intro_0018a": {
+    "ID": "haremking_intro_0018a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "haremking_intro_0018",
+    "CharaData": [
+      {
+        "Type": "NPC",
+        "ArrayPosition": 0,
+        "FaceAnime": "閉じ目",
+        "Visible": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち腕を組む"
+        }
+      }
+    ]
+  },
+
+  "haremking_intro_0018": {
+    "ID": "haremking_intro_0018",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0019",
+    "TalkData": {
+      "SpecificSpeaker": "NPC",
+      "Index": 0,
+      "Text": "……手助けは必要ですか？　ご主人様。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "ema_hisyo_00130.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "haremking_intro_0019": {
+    "ID": "haremking_intro_0019",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0020a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "…ああ…そうだ…！助けがほしい！ちょっと用事あるので今日は休ませたい。残りの仕事を終わらせるのを手伝ってくれる？"
+    }
+  },
+
+  "haremking_intro_0020a": {
+    "ID": "haremking_intro_0020a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "haremking_intro_0020",
+    "CharaData": [
+      {
+        "Type": "NPC",
+        "ArrayPosition": 0,
+        "FaceAnime": "ダンス真剣２",
+        "Visible": true,
+        "MotionInfo": {
+          "MotionFile": "maid_stand02unazuki_ONCE_.anm",
+          "MotionTag": "maid_stand02unazuki_once_.anm",
+          "IsLoopMotion": false
+        }
+      }
+    ]
+  },
+
+  "haremking_intro_0020": {
+    "ID": "haremking_intro_0020",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0021",
+    "TalkData": {
+      "SpecificSpeaker": "NPC",
+      "Index": 0,
+      "Text": "わかりました。そちらは、私が何とかします。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "E0_00263.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4
+        }
+      }
+    }
+  },
+
+  "haremking_intro_0021": {
+    "ID": "haremking_intro_0021",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0022a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "すまんな、エマ、君に借りだ。"
+    }
+  },
+
+  "haremking_intro_0022a": {
+    "ID": "haremking_intro_0022a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "haremking_intro_0022",
+    "CharaData": [
+      {
+        "Type": "NPC",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "閉じ目",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      }
+    ]
+  },
+
+  "haremking_intro_0022": {
+    "ID": "haremking_intro_0022",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0023",
+    "TalkData": {
+      "SpecificSpeaker": "NPC",
+      "Index": 0,
+      "Text": "ご主人様の秘書ですから当然です。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "E0_00295.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "haremking_intro_0023": {
+    "ID": "haremking_intro_0023",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0024a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ありがとう…はぁ……やっと休みが取れる！今から出かける、あとは頼んだ。"
+    }
+  },
+
+  "haremking_intro_0024a": {
+    "ID": "haremking_intro_0024a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "haremking_intro_0024",
+    "CharaData": [
+      {
+        "Type": "NPC",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "ダンス真剣２"
+      }
+    ]
+  },
+
+  "haremking_intro_0024": {
+    "ID": "haremking_intro_0024",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0025",
+    "TalkData": {
+      "SpecificSpeaker": "NPC",
+      "Index": 0,
+      "Text": "行ってらっしゃいませ、ご主人様。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "E0_ositoyaka_00742.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "haremking_intro_0025": {
+    "ID": "haremking_intro_0025",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "haremking_intro_0026",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "haremking_intro_0026": {
+    "ID": "haremking_intro_0026",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "haremking_intro_0026a",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": false,
+        "WaitLoad": true,
+        "ShowPenis": false
+      },
+      {
+        "Type": "NPC",
+        "ArrayPosition": 0,
+        "Visible": false
+      }
+    ]
+  },
+
+  "haremking_intro_0026a": {
+    "ID": "haremking_intro_0026a",
+    "Type": "BG",
+    "Tag": "",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0027",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "haremking_intro_0027": {
+    "ID": "haremking_intro_0027",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0028",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（エマに助けてもらって、やっと仕事から解放された！）"
+    }
+  },
+
+  "haremking_intro_0028": {
+    "ID": "haremking_intro_0028",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0029",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（メイドに会う時間だ。本当に待ちきれない！）"
+    }
+  },
+
+  "haremking_intro_0029": {
+    "ID": "haremking_intro_0029",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "haremking_intro_0029a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+
+  "haremking_intro_0029a": {
+    "ID": "haremking_intro_0029a",
+    "Type": "BG",
+    "Tag": "OpemCafe",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0029b"
+  },
+
+  "haremking_intro_0029b": {
+    "ID": "haremking_intro_0029b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0029c",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 5.4,
+        "PosY": 1.75,
+        "PosZ": -25.3,
+        "TargetPosX": 4.2,
+        "TargetPosY": 1.55,
+        "TargetPosZ": -24.3,
+        "Distance": 1.6,
+        "AngleFrom": 309.3,
+        "AngleTo": 7.8
+      }
+    }
+  },
+
+  "haremking_intro_0029c": {
+    "ID": "haremking_intro_0029c",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "mmlSE_065.ogg"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0030"
+  },
+
+  "haremking_intro_0030": {
+    "ID": "haremking_intro_0030",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Maid0Name]、いるの？"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "haremking_intro_0031": {
+    "ID": "haremking_intro_0031",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "haremking_intro_0031a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+
+  "haremking_intro_0031a": {
+    "ID": "haremking_intro_0031a",
+    "Type": "BG",
+    "Tag": "Restaurant",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0031b"
+  },
+
+  "haremking_intro_0031b": {
+    "ID": "haremking_intro_0031b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0031c",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": -3,
+        "PosY": 1.75,
+        "PosZ": 10.5,
+        "TargetPosX": -2,
+        "TargetPosY": 1.55,
+        "TargetPosZ": 8.9,
+        "Distance": 1.9,
+        "AngleFrom": 147.3,
+        "AngleTo": 6.25
+      }
+    }
+  },
+
+  "haremking_intro_0031c": {
+    "ID": "haremking_intro_0031c",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "mmlSE_065.ogg"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0032"
+  },
+
+  "haremking_intro_0032": {
+    "ID": "haremking_intro_0032",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0033",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Maid1Name]？"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "haremking_intro_0033": {
+    "ID": "haremking_intro_0033",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "haremking_intro_0033a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+
+  "haremking_intro_0033a": {
+    "ID": "haremking_intro_0033a",
+    "Type": "BG",
+    "Tag": "BarLounge",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0033b"
+  },
+
+  "haremking_intro_0033b": {
+    "ID": "haremking_intro_0033b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0033c",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": -6.9,
+        "PosY": 1.93,
+        "PosZ": -4.83,
+        "TargetPosX": -4.75,
+        "TargetPosY": 1.55,
+        "TargetPosZ": -3.4,
+        "Distance": 2.6,
+        "AngleFrom": 56.35,
+        "AngleTo": 8.75
+      }
+    }
+  },
+
+
+  "haremking_intro_0033c": {
+    "ID": "haremking_intro_0033c",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "mmlSE_065.ogg"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0034"
+  },
+
+  "haremking_intro_0034": {
+    "ID": "haremking_intro_0034",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0035",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Maid2Name]？"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "haremking_intro_0035": {
+    "ID": "haremking_intro_0035",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "haremking_intro_0035a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+
+  "haremking_intro_0035a": {
+    "ID": "haremking_intro_0035a",
+    "Type": "BG",
+    "Tag": "EmpireClub_Entrance",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0035b"
+  },
+
+  "haremking_intro_0035b": {
+    "ID": "haremking_intro_0035b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0036",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": -4.3,
+        "PosY": 6.47,
+        "PosZ": -8.08,
+        "TargetPosX": -3.81,
+        "TargetPosY": 6.08,
+        "TargetPosZ": -6.95,
+        "Distance": 1.3,
+        "AngleFrom": 23.29,
+        "AngleTo": 17.43
+      }
+    }
+  },
+
+  "haremking_intro_0036": {
+    "ID": "haremking_intro_0036",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0037",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "変だな。どこでも見つからない。どこにいるのだろう？"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "haremking_intro_0037": {
+    "ID": "haremking_intro_0037",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0038",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "はぁ……せっかくの休憩時間もらったなのに、誰とも会えないなんてもったいないな……"
+    }
+  },
+
+  "haremking_intro_0038": {
+    "ID": "haremking_intro_0038",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE024.ogg"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_intro_0038a"
+  },
+
+  "haremking_intro_0038a": {
+    "ID": "haremking_intro_0038a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0039",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "お！[=Maid0Name]からのメッセージだ。えーと…\n「仕事終わったら早くプライベートルームに来て♪」"
+    }
+  },
+
+  "haremking_intro_0039": {
+    "ID": "haremking_intro_0039",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0040",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あっ、そこにいるか！よしわかった、すぐ行く。とにかく今日は[=Maid0Name]と一緒に過ごす、後で時間があるなら[=Maid1Name]たちを探しましょう。"
+    }
+  },
+
+  "haremking_intro_0040": {
+    "ID": "haremking_intro_0040",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "haremking_private_room_0001",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
   }
+
+
 }

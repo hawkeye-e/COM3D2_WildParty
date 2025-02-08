@@ -66,9 +66,19 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
                 foreach (var maid in StateManager.Instance.SelectedMaidsList)
                 {
                     if (maid.status.guid == StateManager.Instance.processingMaidGUID)
+                    {
                         result = maid;
+                        return;
+                    }
                 }
-
+                foreach (var maid in StateManager.Instance.NPCList)
+                {
+                    if (maid.status.guid == StateManager.Instance.processingMaidGUID)
+                    {
+                        result = maid;
+                        return;
+                    }
+                }
             }
         }
 

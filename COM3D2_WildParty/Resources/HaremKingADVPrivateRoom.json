@@ -1,0 +1,1025 @@
+{
+  "haremking_private_room_0001": {
+    "ID": "haremking_private_room_0001",
+    "Type": "BG",
+    "Tag": "privateroom2",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0001a"
+  },
+
+  "haremking_private_room_0001a": {
+    "ID": "haremking_private_room_0001a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0001b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": -0.76,
+        "PosY": 1.87,
+        "PosZ": -1.84,
+        "TargetPosX": -0.61,
+        "TargetPosY": 1.55,
+        "TargetPosZ": -2.32,
+        "Distance": 0.6,
+        "AngleFrom": 162.25,
+        "AngleTo": 31.72
+      }
+    }
+  },
+
+  "haremking_private_room_0001b": {
+    "ID": "haremking_private_room_0001b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "haremking_private_room_0001c",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "FaceAnime": "RandomSmile",
+        "PosRot": {
+          "PosString": "0.37, 0.00, -0.12",
+          "RotString": "0, -0.97, 0, 0.247"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": { "Type": "ClubOwner" }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "FaceAnime": "RandomSmile",
+        "PosRot": {
+          "PosString": "0.79, 0.00, -0.52",
+          "RotString": "0, -0.914, 0, 0.405"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": { "Type": "ClubOwner" }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "FaceAnime": "RandomSmile",
+        "PosRot": {
+          "PosString": "-0.18, 0.00, 0.01",
+          "RotString": "0, -1, 0.0, 0.01"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": { "Type": "ClubOwner" }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "FaceAnime": "RandomSmile",
+        "PosRot": {
+          "PosString": "1.19, 0.00, -0.96",
+          "RotString": "0, -0.857, 0, 0.516"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": { "Type": "ClubOwner" }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "FaceAnime": "RandomSmile",
+        "PosRot": {
+          "PosString": "-0.70, 0.00, 0.00",
+          "RotString": "0, 0.99, 0, 0.144"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": { "Type": "ClubOwner" }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "FaceAnime": "RandomSmile",
+        "PosRot": {
+          "PosString": "0.24, 0.00, 0.55",
+          "RotString": "0, 0.995, 0, -0.102"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": { "Type": "ClubOwner" }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "FaceAnime": "RandomSmile",
+        "PosRot": {
+          "PosString": "0.96, 0.00, 0.38",
+          "RotString": "0, -0.974, 0, 0.228"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": { "Type": "ClubOwner" }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "FaceAnime": "RandomSmile",
+        "PosRot": {
+          "PosString": "-0.33, 0.00, 0.55",
+          "RotString": "0, -1.0, 0, 0.003"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": { "Type": "ClubOwner" }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 8,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "FaceAnime": "RandomSmile",
+        "PosRot": {
+          "PosString": "1.42, 0.00, -0.33",
+          "RotString": "0, -0.899, 0, 0.437"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": { "Type": "ClubOwner" }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 9,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "FaceAnime": "RandomSmile",
+        "PosRot": {
+          "PosString": "-1.00, 0.00, 0.64",
+          "RotString": "0, 0.99, 0, 0.141"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": { "Type": "ClubOwner" }
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0001c": {
+    "ID": "haremking_private_room_0001c",
+    "Type": "Talk",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ただいま、[=Maid0Name]、会いたい…"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+
+  "haremking_private_room_0002": {
+    "ID": "haremking_private_room_0002",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "haremking_private_room_0002b",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "TargetPosX": -0.61,
+        "TargetPosY": 1.55,
+        "TargetPosZ": -2.32,
+        "Distance": 0.6,
+        "AngleFrom": 22.04,
+        "AngleTo": 4.7
+      }
+    }
+  },
+
+  "haremking_private_room_0002b": {
+    "ID": "haremking_private_room_0002b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ただいま、[=Maid0Name]、会いたい……よ…"
+    }
+  },
+
+  "haremking_private_room_0003": {
+    "ID": "haremking_private_room_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0004",
+    "TalkData": {
+      "SpecificSpeaker": "All",
+      "SpeakerName": "メイド一同",
+      "Text": "おかえりなさい～",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_tsou_69121.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        },
+        "Majime": {
+          "VoiceFile": "H1_tsou_68749.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        },
+        "Rindere": {
+          "VoiceFile": "H2_tsou_69063.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        },
+        "Pure": {
+          "VoiceFile": "S2_GP02_108970.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 0.4,
+          "EndTime": 2.5
+        },
+        "Cool": {
+          "VoiceFile": "S1_PMD_111390.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1,
+          "EndTime": 2
+        },
+        "Pride": {
+          "VoiceFile": "S0_PMD_110910.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.8,
+          "EndTime": 2.8
+        },
+        "Yandere": {
+          "VoiceFile": "S3_PMD_108682.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 0.9,
+          "EndTime": 1.9
+        },
+        "Anesan": {
+          "VoiceFile": "S4_PMD_107150.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 0.9,
+          "EndTime": 2
+        },
+        "Genki": {
+          "VoiceFile": "S5_PMD_107448.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.7,
+          "EndTime": 2.7
+        },
+        "Sadist": {
+          "VoiceFile": "S6_GP02A_106541.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.2,
+          "EndTime": 3.41
+        },
+        "Silent": {
+          "VoiceFile": "H3_tsou_61467.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 0,
+          "EndTime": 1.5
+        },
+        "Devilish": {
+          "VoiceFile": "H4_07549.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        },
+        "Ladylike": {
+          "VoiceFile": "H5_tsou_61252.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        },
+        "Secretary": {
+          "VoiceFile": "H6_tsou_61762.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.1
+        },
+        "Sister": {
+          "VoiceFile": "H7_tsou_61588.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.1
+        },
+        "Curtness": {
+          "VoiceFile": "H8_tsou_61240.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        },
+        "Missy": {
+          "VoiceFile": "H9_tsou_60391.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        },
+        "Childhood": {
+          "VoiceFile": "H10_GP02ADD_63993.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1,
+          "EndTime": 2
+        },
+        "Friendly": {
+          "VoiceFile": "V1_GP02ADD_52153.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 0.7,
+          "EndTime": 1.7
+        },
+        "Dame": {
+          "VoiceFile": "V0_GP02ADD_52153.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 0.7,
+          "EndTime": 1.9
+        },
+
+        "Masochist": {
+          "VoiceFile": "H11_05153.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.92
+        },
+        "Gyaru": {
+          "VoiceFile": "H13_tsou_06065.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.92
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0004": {
+    "ID": "haremking_private_room_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0005_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（部屋に入ると、メイドたちが素敵な笑顔で迎えてくれる。）"
+    }
+  },
+
+  "haremking_private_room_0005_Branch": {
+    "ID": "haremking_private_room_0005_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "haremking_private_room_0010_M_[=PType]"
+  },
+
+
+
+
+  "haremking_private_room_0011": {
+    "ID": "haremking_private_room_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0012",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "え？みんな？何しているの？"
+    }
+  },
+
+  "haremking_private_room_0012": {
+    "ID": "haremking_private_room_0012",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "haremking_private_room_0012a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬３涙０"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬３涙０"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬３涙０"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬３涙０"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬３涙０"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬３涙０"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬３涙０"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬３涙０"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 8,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬３涙０"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 9,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬３涙０"
+      }
+    ]
+  },
+
+  "haremking_private_room_0012a": {
+    "ID": "haremking_private_room_0012a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0012_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち片手を前に出す"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0012_Branch": {
+    "ID": "haremking_private_room_0012_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 2
+      }
+    ],
+    "NextStepID": "haremking_private_room_0020_M_[=PType]"
+  },
+
+
+  "haremking_private_room_0021": {
+    "ID": "haremking_private_room_0021",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "haremking_private_room_0022",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "haremking_private_room_0022": {
+    "ID": "haremking_private_room_0022",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "haremking_private_room_0022b",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "ShowPenis": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿深々"
+        },
+        "PosRot": {
+          "PosString": "8.50, 0.50, -0.05",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで会話"
+        },
+        "FaceAnime": "RandomHorny",
+        "PosRot": {
+          "PosString": "9.13, 0.50, 0.30",
+          "RotString": "0, 0.216, 0, 0.976"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで会話L"
+        },
+        "FaceAnime": "RandomHorny",
+        "PosRot": {
+          "PosString": "8.02, 0.50, 0.30",
+          "RotString": "0, 0.083, 0, 0.997"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "arai2_taiki_f.anm",
+          "MotionTag": "arai2_taiki_f.anm"
+        },
+        "FaceAnime": "RandomHorny",
+        "PosRot": {
+          "PosString": "8.48, 0.50, -0.03",
+          "RotString": "0, 1, 0, 0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "OM_fera_taiki_f.anm",
+          "MotionTag": "om_fera_taiki_f.anm"
+        },
+        "FaceAnime": "RandomHorny",
+        "PosRot": {
+          "PosString": "8.50, 0.00, 1.02",
+          "RotString": "0, 1, 0, 0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿待機"
+        },
+        "FaceAnime": "RandomHorny",
+        "PosRot": {
+          "PosString": "9.58, 0.00, 1.06",
+          "RotString": "0, 0.905, 0, -0.425"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿手合わせ"
+        },
+        "FaceAnime": "RandomHorny",
+        "PosRot": {
+          "PosString": "7.41, 0.00, 1.04",
+          "RotString": "0, 0.941, 0, 0.339"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_edit_pose_001.ks",
+          "ScriptLabel": "*ポーズ006"
+        },
+        "FaceAnime": "RandomHorny",
+        "PosRot": {
+          "PosString": "9.48, 0.50, -0.90",
+          "RotString": "0, -0.745, 0, 0.667"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        },
+        "FaceAnime": "RandomHorny",
+        "PosRot": {
+          "PosString": "7.46, 0.50, -0.84",
+          "RotString": "0, -0.429, 0, -0.903"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 8,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで手を合わせる"
+        },
+        "FaceAnime": "RandomHorny",
+        "PosRot": {
+          "PosString": "9.64, 0.50, 0.30",
+          "RotString": "0, 0.333, 0, 0.943"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 9,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで照れるL"
+        },
+        "FaceAnime": "RandomHorny",
+        "PosRot": {
+          "PosString": "7.41, 0.50, 0.30",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0022b": {
+    "ID": "haremking_private_room_0022b",
+    "Type": "BG",
+    "Tag": "",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0022c"
+  },
+
+  "haremking_private_room_0022c": {
+    "ID": "haremking_private_room_0022c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0023",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Maid0Name]と[=Maid2Name]は俺の腕を掴み、ベッドに押しやって、服を脱がされる）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "haremking_private_room_0023": {
+    "ID": "haremking_private_room_0023",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "haremking_private_room_0024",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "haremking_private_room_0024": {
+    "ID": "haremking_private_room_0024",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0024a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 6.59,
+        "PosY": 1.22,
+        "PosZ": 4.26,
+        "TargetPosX": 8.43,
+        "TargetPosY": 0.96,
+        "TargetPosZ": -0.06,
+        "Distance": 3.8,
+        "AngleFrom": 156.95,
+        "AngleTo": 3.15
+      }
+    }
+  },
+
+  "haremking_private_room_0024a": {
+    "ID": "haremking_private_room_0024a",
+    "Type": "BG",
+    "Tag": "privateroom2",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0024b"
+  },
+
+  "haremking_private_room_0024b": {
+    "ID": "haremking_private_room_0024b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0025_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あの…みんな、今…ヤリたいの？"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "haremking_private_room_0025_Branch": {
+    "ID": "haremking_private_room_0025_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 2
+      }
+    ],
+    "NextStepID": "haremking_private_room_0030_T_[=PType]"
+  },
+
+  "haremking_private_room_0031": {
+    "ID": "haremking_private_room_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0032_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "みんなと一緒に？ハーレムプレイはちょっと嫌い嫌いと思うで…他の女の子と一緒にするは嫌じゃないの？"
+    }
+  },
+
+  "haremking_private_room_0032_Branch": {
+    "ID": "haremking_private_room_0032_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "haremking_private_room_0040_M_[=PType]"
+  },
+
+  "haremking_private_room_0041_Branch": {
+    "ID": "haremking_private_room_0041_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 1
+      }
+    ],
+    "NextStepID": "haremking_private_room_0050_M_[=PType]"
+  },
+
+  "haremking_private_room_0051": {
+    "ID": "haremking_private_room_0051",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "haremking_private_room_0052",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "ShowPenis": true,
+        "MotionInfo": {
+          "MotionFile": "harem_housi_taiki_m.anm",
+          "MotionTag": "harem_housi_taiki_m.anm"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0052": {
+    "ID": "haremking_private_room_0052",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0053_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ゴクリ…これからのプレーをちょっと想像してみて、俺の息子は反応した）"
+    }
+  },
+
+
+  "haremking_private_room_0053_Branch": {
+    "ID": "haremking_private_room_0053_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 4
+      }
+    ],
+    "NextStepID": "haremking_private_room_0060_M_[=PType]"
+  },
+
+  "haremking_private_room_0061_Branch": {
+    "ID": "haremking_private_room_0061_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 2
+      }
+    ],
+    "NextStepID": "haremking_private_room_0070_M_[=PType]"
+  },
+
+
+  "haremking_private_room_0071_Branch": {
+    "ID": "haremking_private_room_0071_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 3
+      }
+    ],
+    "NextStepID": "haremking_private_room_0080_M_[=PType]"
+  },
+
+  "haremking_private_room_0081": {
+    "ID": "haremking_private_room_0081",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0082",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（彼女たちに囲まれていると、その吐息と体温が俺をじわじわと刺激する。）"
+    }
+  },
+
+  "haremking_private_room_0082": {
+    "ID": "haremking_private_room_0082",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0083",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（それに彼女たちの誘惑的な言葉に聞いて、俺はさらに興奮させました。もう我慢できない！）"
+    }
+  },
+
+  "haremking_private_room_0083": {
+    "ID": "haremking_private_room_0083",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0083_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "なぁ、みんな、そろそろ…"
+    }
+  },
+
+  "haremking_private_room_0083_Branch": {
+    "ID": "haremking_private_room_0083_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "haremking_private_room_0090_M_[=PType]"
+  },
+
+  "haremking_private_room_0091_Branch": {
+    "ID": "haremking_private_room_0091_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 1
+      }
+    ],
+    "NextStepID": "haremking_private_room_0100_M_[=PType]"
+  },
+
+  "haremking_private_room_0101": {
+    "ID": "haremking_private_room_0101",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_yotogiplay_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ、当然だ。ご主人様として皆を満足させてみせる！任せて！"
+    }
+  },
+
+
+  "haremking_intro_yotogiplay_closepanel": {
+    "ID": "haremking_intro_yotogiplay_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_start_yotogiplay"
+  },
+
+  "haremking_start_yotogiplay": {
+    "ID": "haremking_start_yotogiplay",
+    "Type": "Special",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "PostYotogi": { "IsKeepCharacterVisible": false },
+    "NextStepID": "haremking_postyotogi_init"
+  }
+}

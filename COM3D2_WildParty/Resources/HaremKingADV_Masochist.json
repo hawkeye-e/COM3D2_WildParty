@@ -1,0 +1,425 @@
+{
+  "haremking_private_room_0010_M_Masochist": {
+    "ID": "haremking_private_room_0010_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0010_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "haremking_private_room_0010_T_Masochist": {
+    "ID": "haremking_private_room_0010_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お疲れ様です！",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_CREV_05383.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0020_M_Masochist": {
+    "ID": "haremking_private_room_0020_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0020_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち片手を前に出す"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0020_T_Masochist": {
+    "ID": "haremking_private_room_0020_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "今日はどうしましょうか！　ぐふふふっ……",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04477.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.5
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0030_T_Masochist": {
+    "ID": "haremking_private_room_0030_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うへへ……そうですね♪",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_CREV_05365.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.7
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0040_M_Masochist": {
+    "ID": "haremking_private_room_0040_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0040_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0040_T_Masochist": {
+    "ID": "haremking_private_room_0040_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0041_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "え？　大丈夫ですよ？",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04627.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.7
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0050_M_Masochist": {
+    "ID": "haremking_private_room_0050_M_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0050_M_Masochist_2",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "じゃあ、みんなのこと…"
+    }
+  },
+
+  "haremking_private_room_0050_M_Masochist_2": {
+    "ID": "haremking_private_room_0050_M_Masochist_2",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0050_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１L"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0050_T_Masochist": {
+    "ID": "haremking_private_room_0050_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はい、私も大好きです♪",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04647.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+
+
+  "haremking_private_room_0060_M_Masochist": {
+    "ID": "haremking_private_room_0060_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0060_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+
+
+  "haremking_private_room_0060_T_Masochist": {
+    "ID": "haremking_private_room_0060_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "おふっ、ご、ごごごっ、ご主人様！　そ、それっ、物凄く大きく、大きくっ、なっていますけどどっ！？",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_03872.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0070_M_Masochist": {
+    "ID": "haremking_private_room_0070_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0070_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+
+  "haremking_private_room_0070_T_Masochist": {
+    "ID": "haremking_private_room_0070_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ご主人様だって、いつもよりおっきくしてますよぉ…",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04423.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.3,
+          "EndTime": 6.3
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0080_M_Masochist": {
+    "ID": "haremking_private_room_0080_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0080_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        }
+      }
+    ]
+  },
+
+
+  "haremking_private_room_0080_T_Masochist": {
+    "ID": "haremking_private_room_0080_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "大好きです、ご主人様のおちんちん♪",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_03804.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.2
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0090_M_Masochist": {
+    "ID": "haremking_private_room_0090_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0090_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_002.ks",
+          "ScriptLabel": "*ソファーで乗り出す３＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0090_T_Masochist": {
+    "ID": "haremking_private_room_0090_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0091_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁはぁ、ご主人様も、もう準備できてますよね。んんっ！　これから肉欲に塗れたひと時が……ごくり……",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_03256.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0100_M_Masochist": {
+    "ID": "haremking_private_room_0100_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0100_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_002.ks",
+          "ScriptLabel": "*ソファーで喜ぶL＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0100_T_Masochist": {
+    "ID": "haremking_private_room_0100_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふ、ふふっ、一緒に気持ちよくなりましょうね。",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04456.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.3
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0010_T_Masochist": {
+    "ID": "haremking_postyotogi_0010_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ……一緒にイっちゃいましたね……",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04555.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0020_T_Masochist": {
+    "ID": "haremking_postyotogi_0020_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふはぁぁ……　んっ、んふぅぅ……ご主人様の精液、いっぱい注がれて、気持ちいい……です。",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04411.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "haremking_postyotogi_0030_T_Masochist": {
+    "ID": "haremking_postyotogi_0030_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "すっごくエッチです……これに精液まで出ちゃったら……匂いだけで妊娠しちゃうかもです……ぐふふ……",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_03300.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

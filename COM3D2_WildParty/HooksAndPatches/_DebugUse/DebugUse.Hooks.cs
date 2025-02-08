@@ -6,6 +6,7 @@ using UnityEngine;
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using System.IO;
 
 namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
 {
@@ -38,7 +39,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
             Patches.PrintCameraInfo();
             Patches.PrintAllCapturedDialoguesAndTexts();
             Patches.PrintCharacterSetup();
-
+            Patches.ApplyAnimationInStudio();
         }
 
         //for logging down the motion file and label
@@ -48,13 +49,34 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
         {
             WildParty.Log.LogInfo("LoadMotionScriptPre: file_name: " + file_name + ", label: " + label_name);
             Patches.CaptureMotionFileNames(file_name, label_name);
+            if (DebugHelper.DebugState.Instance.ScriptInfoCapture.ContainsKey(file_name))
+            {
+                if (!DebugHelper.DebugState.Instance.ScriptInfoCapture[file_name].Contains(label_name))
+                    DebugHelper.DebugState.Instance.ScriptInfoCapture[file_name].Add(label_name);
+            }
+            else
+            {
+                List<string> list = new List<string>();
+                list.Add(label_name);
+                DebugHelper.DebugState.Instance.ScriptInfoCapture.Add(file_name, list);
+            }
+            
+        }
+
+        //Log the current clip name for each group playing
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(TBody), nameof(TBody.LoadAnime), new Type[] { typeof(string), typeof(AFileSystemBase), typeof(string), typeof(bool), typeof(bool) })]
+        private static void LoadAnime(TBody __instance, string tag, AFileSystemBase fileSystem, string filename, bool additive, bool loop)
+        {
+            WildParty.Log.LogInfo("TBody.LoadAnime: " + __instance.maid.status.fullNameJpStyle + ", filename: " + filename + ", tag: " + tag);
         }
 
         //log down the corresponding face anime for the motion
         [HarmonyPrefix]
         [HarmonyPatch(typeof(Maid), nameof(Maid.FaceAnime))]
-        private static void FaceAnimePre(string tag, float t, int chkcode)
+        private static void FaceAnimePre(Maid __instance, string tag, float t, int chkcode)
         {
+            //WildParty.Log.LogInfo("FaceAnimePre: " + __instance.status.fullNameJpStyle + ", tag: " + tag);
             Patches.CaptureMotionFaceInfo(tag);
         }
 
@@ -86,6 +108,20 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
         {
             Patches.YotogiPlayGroupArrangement();
             Patches.CaptureMotionSoundInfo();            
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(BgMgr), nameof(BgMgr.ChangeBg))]
+        private static void ChangeBg(string f_strPrefubName)
+        {
+            WildParty.Log.LogInfo("BgMgr.ChangeBg f_strPrefubName: " + f_strPrefubName);
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(SoundMgr), nameof(SoundMgr.PlaySe))]
+        private static void PlaySe(string f_strFileName, bool f_bLoop)
+        {
+            WildParty.Log.LogInfo("SoundMgr.PlaySe f_strFileName: " + f_strFileName + ", f_bLoop:" + f_bLoop);
         }
     }
 }

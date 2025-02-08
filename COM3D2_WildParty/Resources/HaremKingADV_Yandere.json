@@ -1,0 +1,412 @@
+{
+  "haremking_private_room_0010_M_Yandere": {
+    "ID": "haremking_private_room_0010_M_Yandere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0010_T_Yandere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "haremking_private_room_0010_T_Yandere": {
+    "ID": "haremking_private_room_0010_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お疲れ様です、ご主人様。",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_Plus_111132.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0020_M_Yandere": {
+    "ID": "haremking_private_room_0020_M_Yandere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0020_T_Yandere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち片手を前に出す"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0020_T_Yandere": {
+    "ID": "haremking_private_room_0020_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "とにかくこっちに来てください、ほら、いきましょうっ！",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53097.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.3
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0030_T_Yandere": {
+    "ID": "haremking_private_room_0030_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はい、その通りです。",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_107868.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0040_M_Yandere": {
+    "ID": "haremking_private_room_0040_M_Yandere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0040_T_Yandere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0040_T_Yandere": {
+    "ID": "haremking_private_room_0040_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0041_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、ご心配なく。",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_108088.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0050_M_Yandere": {
+    "ID": "haremking_private_room_0050_M_Yandere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0050_T_Yandere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１L"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0050_T_Yandere": {
+    "ID": "haremking_private_room_0050_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "皆様の事を大切に思っているの。",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_108089.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 8.5,
+          "EndTime": 11.35
+        }
+      }
+    }
+  },
+
+
+
+  "haremking_private_room_0060_M_Yandere": {
+    "ID": "haremking_private_room_0060_M_Yandere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0060_T_Yandere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+
+
+  "haremking_private_room_0060_T_Yandere": {
+    "ID": "haremking_private_room_0060_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ご主人様のがどんどん大きくなって、硬くなっていきます……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP02A_107151.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6.2,
+          "EndTime": 11.5
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0070_M_Yandere": {
+    "ID": "haremking_private_room_0070_M_Yandere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0070_T_Yandere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+
+  "haremking_private_room_0070_T_Yandere": {
+    "ID": "haremking_private_room_0070_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ああ、その、いつみても大きいです……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105012.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 6.2
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0080_M_Yandere": {
+    "ID": "haremking_private_room_0080_M_Yandere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0080_T_Yandere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        }
+      }
+    ]
+  },
+
+
+  "haremking_private_room_0080_T_Yandere": {
+    "ID": "haremking_private_room_0080_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ……ご主人様のおちんちん……とても可愛らしいです……愛しくて仕方がありません……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105014.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0090_M_Yandere": {
+    "ID": "haremking_private_room_0090_M_Yandere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0090_T_Yandere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_002.ks",
+          "ScriptLabel": "*ソファーで乗り出す３＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0090_T_Yandere": {
+    "ID": "haremking_private_room_0090_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0091_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "嬉しいです、幸せです……大切なメイドのみんなと一緒に……大好きなご主人様にご奉仕ができるなんて……ふふっ♪",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105020.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0100_M_Yandere": {
+    "ID": "haremking_private_room_0100_M_Yandere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0100_T_Yandere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_002.ks",
+          "ScriptLabel": "*ソファーで喜ぶL＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0100_T_Yandere": {
+    "ID": "haremking_private_room_0100_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "どうか……私達の事を幸せにして下さいね……？",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105023.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0010_T_Yandere": {
+    "ID": "haremking_postyotogi_0010_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はーっ…はううっ……ご主人様は本当に、凄いですね……私達の事をこんなに愛してくれるなんて……流石です……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105028.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0020_T_Yandere": {
+    "ID": "haremking_postyotogi_0020_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "おまんこがどろどろになるほど……はぁ、はぁ、精液が……♪　愛しています、ご主人様っ……ずっと一緒にいてくださいね……？",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105029.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "haremking_postyotogi_0030_T_Yandere": {
+    "ID": "haremking_postyotogi_0030_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁ、ママになってしまいますね……？　はぁ、はぁ、こんなに注がれてしまったのですから……妊娠確実です……♪",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105072.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

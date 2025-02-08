@@ -1,0 +1,396 @@
+{
+
+
+  "haremking_postyotogi_init": {
+    "ID": "haremking_postyotogi_init",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_postyotogi_0001",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "haremking_postyotogi_0001": {
+    "ID": "haremking_postyotogi_0001",
+    "Type": "BG",
+    "Tag": "privateroom2_nightoff",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_postyotogi_0001a"
+  },
+
+
+
+  "haremking_postyotogi_0001a": {
+    "ID": "haremking_postyotogi_0001a",
+    "Type": "BGM",
+    "Tag": "BGM019.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_postyotogi_0001b"
+  },
+
+  "haremking_postyotogi_0001b": {
+    "ID": "haremking_postyotogi_0001b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "haremking_postyotogi_0001c",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "ShowPenis": false,
+        "MotionInfo": {
+          "MotionFile": "asikoki_3_m.anm",
+          "MotionTag": "asikoki_3_m.anm"
+        },
+        "PosRot": {
+          "PosString": "8.50, 0.50, -1.82",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "pillow_talk_taiki_f.anm",
+          "MotionTag": "pillow_talk_taiki_f.anm"
+        },
+        "FaceAnime": "RandomHorny",
+        "PosRot": {
+          "PosString": "8.75, 0.50, -1.94",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_edit_pose_001.ks",
+          "ScriptLabel": "*ポーズ011"
+        },
+        "FaceAnime": "RandomRest",
+        "PosRot": {
+          "PosString": "8.19, 0.50, -1.85",
+          "RotString": "0, 0.667, 0, 0.745"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "OM_yorisoi_aibu_taiki_f.anm",
+          "MotionTag": "om_yorisoi_aibu_taiki_f.anm"
+        },
+        "FaceAnime": "RandomRest",
+        "PosRot": {
+          "PosString": "7.78, 0.50, -1.90",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "harem_seijyouiC_3_f.anm",
+          "MotionTag": "harem_seijyouic_3_f.anm"
+        },
+        "FaceAnime": "RandomRest",
+        "PosRot": {
+          "PosString": "9.19, 0.50, -1.64",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "ero_scene_001.ks",
+          "ScriptLabel": "*ピロトーク_一人"
+        },
+        "FaceAnime": "RandomRest",
+        "PosRot": {
+          "PosString": "9.31, 0.50, -1.65",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "harem_seijyoui_3_f2.anm",
+          "MotionTag": "harem_seijyoui_3_f2.anm"
+
+        },
+        "FaceAnime": "RandomRest",
+        "PosRot": {
+          "PosString": "7.73, 0.50, -1.80",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "ero_scene_001.ks",
+          "ScriptLabel": "*気絶"
+        },
+        "FaceAnime": "RandomRest",
+        "PosRot": {
+          "PosString": "9.12, 0.50, -0.15",
+          "RotString": "0, 0.732, 0, 0.681"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "pillow_talk_taiki_f.anm",
+          "MotionTag": "pillow_talk_taiki_f.anm"
+        },
+        "FaceAnime": "RandomRest",
+        "PosRot": {
+          "PosString": "9.04, 0.50, -0.41",
+          "RotString": "0, -0.716, 0, -0.699"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 8,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "ero_scene_001.ks",
+          "ScriptLabel": "*気絶"
+        },
+        "FaceAnime": "RandomRest",
+        "PosRot": {
+          "PosString": "7.54, 0.50, -0.61",
+          "RotString": "0, -0.706, 0, 0.709"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 9,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "pillow_talk_taiki_f.anm",
+          "MotionTag": "pillow_talk_taiki_f.anm"
+        },
+        "FaceAnime": "RandomRest",
+        "PosRot": {
+          "PosString": "7.59, 0.50, -0.39",
+          "RotString": "0, -0.676, 0, 0.737"
+        }
+      }
+    ]
+  },
+
+  "haremking_postyotogi_0001c": {
+    "ID": "haremking_postyotogi_0001c",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_postyotogi_0002",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 8.41,
+        "PosY": 3.48,
+        "PosZ": 2.29,
+        "TargetPosX": 8.37,
+        "TargetPosY": 0.57,
+        "TargetPosZ": -1.27,
+        "Distance": 4.6,
+        "AngleFrom": 180.6,
+        "AngleTo": 39.17
+      }
+    }
+  },
+
+  "haremking_postyotogi_0002": {
+    "ID": "haremking_postyotogi_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（数時間かけて何回もヤった後、俺はようやくみんなの欲求を満たす。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "haremking_postyotogi_0003": {
+    "ID": "haremking_postyotogi_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（完全に搾り取られた…もう射精できない…）"
+    }
+  },
+
+  "haremking_postyotogi_0004": {
+    "ID": "haremking_postyotogi_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0005_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺たちはみんな疲れて、一緒にベッドに横になった。）"
+    }
+  },
+
+  "haremking_postyotogi_0005_Branch": {
+    "ID": "haremking_postyotogi_0005_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "haremking_postyotogi_0010_T_[=PType]"
+  },
+
+  "haremking_postyotogi_0011_Branch": {
+    "ID": "haremking_postyotogi_0011_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 1
+      }
+    ],
+    "NextStepID": "haremking_postyotogi_0020_T_[=PType]"
+  },
+
+  "haremking_postyotogi_0021_Branch": {
+    "ID": "haremking_postyotogi_0021_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 2
+      }
+    ],
+    "NextStepID": "haremking_postyotogi_0030_T_[=PType]"
+  },
+
+  "haremking_postyotogi_0031": {
+    "ID": "haremking_postyotogi_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0032",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "今日は本当にありがとう。めっちゃ気持ちよかった。みんな、愛してるよ。"
+    }
+  },
+
+  "haremking_postyotogi_0032": {
+    "ID": "haremking_postyotogi_0032",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0033",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "また時間を絞って、みんなと一緒にプレーすることを約束するよ。"
+    }
+  },
+
+  "haremking_postyotogi_0033": {
+    "ID": "haremking_postyotogi_0033",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0034",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（身体は疲れているが、精神的には元気になった。明日から仕事また頑張れる。）"
+    }
+  },
+
+  "haremking_postyotogi_0034": {
+    "ID": "haremking_postyotogi_0034",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0035",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（このサプライズパーティーを行うために、彼女たちがスケジュールを調整し、エマに俺の仕事を手伝ってくれるように頼んだのを聞いた。）"
+    }
+  },
+
+  "haremking_postyotogi_0035": {
+    "ID": "haremking_postyotogi_0035",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0036",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（こんな俺を気にかけてくれるなんて、泣きそうになる。）"
+    }
+  },
+
+  "haremking_postyotogi_0036": {
+    "ID": "haremking_postyotogi_0036",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0037",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（彼女たちと恋をすることはとでも幸運だった。俺は本当に世界一幸せな男だ。）"
+    }
+  },
+
+  "haremking_postyotogi_0037": {
+    "ID": "haremking_postyotogi_0037",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_end",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（さて、今夜はみんなと一緒にぐっすり眠ろう…おやすみ………）"
+    }
+  },
+
+  "haremking_end": {
+    "ID": "haremking_end",
+    "Type": "Special",
+    "WaitingType": "FadeOut",
+    "NextStepID": "haremking_end2",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "haremking_end2": {
+    "ID": "haremking_end2",
+    "Type": "ADVEnd",
+    "WaitingType": "End"
+  }
+
+}

@@ -1,0 +1,427 @@
+{
+  "haremking_private_room_0010_M_Gyaru": {
+    "ID": "haremking_private_room_0010_M_Gyaru",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0010_T_Gyaru",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "haremking_private_room_0010_T_Gyaru": {
+    "ID": "haremking_private_room_0010_T_Gyaru",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "今日もお仕事お疲れ様。",
+      "VoiceData": {
+        "Gyaru": {
+          "VoiceFile": "H13_tsou_06121.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.4
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0020_M_Gyaru": {
+    "ID": "haremking_private_room_0020_M_Gyaru",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0020_T_Gyaru",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち片手を前に出す"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0020_T_Gyaru": {
+    "ID": "haremking_private_room_0020_T_Gyaru",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "こっちに来て。",
+      "VoiceData": {
+        "Gyaru": {
+          "VoiceFile": "H13_04063.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.8
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0030_T_Gyaru": {
+    "ID": "haremking_private_room_0030_T_Gyaru",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そうだよ～♪",
+      "VoiceData": {
+        "Gyaru": {
+          "VoiceFile": "H13_02675.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.4
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0040_M_Gyaru": {
+    "ID": "haremking_private_room_0040_M_Gyaru",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0040_T_Gyaru",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0040_T_Gyaru": {
+    "ID": "haremking_private_room_0040_T_Gyaru",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0041_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "大丈夫！",
+      "VoiceData": {
+        "Gyaru": {
+          "VoiceFile": "H13_03161.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.5
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0050_M_Gyaru": {
+    "ID": "haremking_private_room_0050_M_Gyaru",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0050_M_Gyaru_2",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "じゃあ、みんなのこと…"
+    }
+  },
+
+  "haremking_private_room_0050_M_Gyaru_2": {
+    "ID": "haremking_private_room_0050_M_Gyaru_2",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0050_T_Gyaru",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１L"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0050_T_Gyaru": {
+    "ID": "haremking_private_room_0050_T_Gyaru",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ウチも大好きだよ！",
+      "VoiceData": {
+        "Gyaru": {
+          "VoiceFile": "H13_04197.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.5
+        }
+      }
+    }
+  },
+
+
+
+  "haremking_private_room_0060_M_Gyaru": {
+    "ID": "haremking_private_room_0060_M_Gyaru",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0060_T_Gyaru",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+  
+
+  "haremking_private_room_0060_T_Gyaru": {
+    "ID": "haremking_private_room_0060_T_Gyaru",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "っていうかご主人様もう勃起しちゃってる……？",
+      "VoiceData": {
+        "Gyaru": {
+          "VoiceFile": "H13_04189.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5.8
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0070_M_Gyaru": {
+    "ID": "haremking_private_room_0070_M_Gyaru",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0070_T_Gyaru",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+
+  "haremking_private_room_0070_T_Gyaru": {
+    "ID": "haremking_private_room_0070_T_Gyaru",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えっと、めっちゃおっきくなってんね……",
+      "VoiceData": {
+        "Gyaru": {
+          "VoiceFile": "H13_tsou_06138.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0080_M_Gyaru": {
+    "ID": "haremking_private_room_0080_M_Gyaru",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0080_T_Gyaru",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        }
+      }
+    ]
+  },
+
+
+  "haremking_private_room_0080_T_Gyaru": {
+    "ID": "haremking_private_room_0080_T_Gyaru",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "なんだか、さっきより大きくなってない？",
+      "VoiceData": {
+        "Gyaru": {
+          "VoiceFile": "H13_tsou_06097.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5,
+          "EndTime": 5.5
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0090_M_Gyaru": {
+    "ID": "haremking_private_room_0090_M_Gyaru",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0090_T_Gyaru",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_002.ks",
+          "ScriptLabel": "*ソファーで乗り出す３＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0090_T_Gyaru": {
+    "ID": "haremking_private_room_0090_T_Gyaru",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0091_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ウチのことちゃぁんと満足させてよねっ？",
+      "VoiceData": {
+        "Gyaru": {
+          "VoiceFile": "H13_04289.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.5
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0100_M_Gyaru": {
+    "ID": "haremking_private_room_0100_M_Gyaru",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0100_T_Gyaru",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_002.ks",
+          "ScriptLabel": "*ソファーで喜ぶL＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0100_T_Gyaru": {
+    "ID": "haremking_private_room_0100_T_Gyaru",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いっぱいウチを愛してね……",
+      "VoiceData": {
+        "Gyaru": {
+          "VoiceFile": "H13_tsou_06145.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3,
+          "EndTime": 5.5
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0010_T_Gyaru": {
+    "ID": "haremking_postyotogi_0010_T_Gyaru",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁっ、ぁ……ご主人様すごすぎっ……まだ力入んないよ……",
+      "VoiceData": {
+        "Gyaru": {
+          "VoiceFile": "H13_04215.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0020_T_Gyaru": {
+    "ID": "haremking_postyotogi_0020_T_Gyaru",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いっぱい中に出してもらって、すっごい幸せな気分になっちゃった……♪",
+      "VoiceData": {
+        "Gyaru": {
+          "VoiceFile": "H13_04216.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "haremking_postyotogi_0030_T_Gyaru": {
+    "ID": "haremking_postyotogi_0030_T_Gyaru",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁっ……こんなにいっぱい精液もらっちゃったらさ、ご主人様の赤ちゃん……できちゃうかもよ……？",
+      "VoiceData": {
+        "Gyaru": {
+          "VoiceFile": "H13_04218.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

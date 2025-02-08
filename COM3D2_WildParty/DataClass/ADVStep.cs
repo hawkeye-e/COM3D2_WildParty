@@ -30,6 +30,8 @@ namespace COM3D2.WildParty.Plugin
         public ShowGroupMotion[] GroupData;       //Separate from ShowChara to not making things over complicated
         public PostYotogiSetup PostYotogi;
         public Texture[] TextureData;
+        public SE SEData;
+        public Shuffle ShuffleData;                 //This need to be placed after CharaInit
 
         public RandomPick PickData;             //This is for ordering to randomly pick some characters for later adv processing
         public List<MakeGroupFormat> GroupFormat;     //Assign group to perform group motion in ADV scene etc
@@ -45,6 +47,8 @@ namespace COM3D2.WildParty.Plugin
             public string SpecificSpeaker;
             public string SpeakerName;
             public string Text;                 //////For the case of narrative, man or all maids
+            public int Index;
+            public bool UseBranchIndex = false;
 
             public Dictionary<string, Voice> VoiceData;
 
@@ -132,12 +136,21 @@ namespace COM3D2.WildParty.Plugin
         {
             public int ManRequired = -1;        //Indicate how many man character needed to be initialized. Negative to skip (eg. it is decided from user input)
             public bool IsClubOwnerMainCharacter = true;    //True: Man[0] will be the owner; False: Man[0] will be replaced with other man character and owner is accessible from StateManager.Instance.ClubOwner
+            public List<NPCData> NPC;
+
+            internal class NPCData
+            {
+                public int Index;
+                public string Preset;           //The name could be in English or Japanese so this should be a better id?
+                public string Name;             //For making it more readable in json only. The name dispalyed in the game should still use CallName
+            }
         }
 
         internal class ShowChara
         {
             public string Type;
             public int ArrayPosition;
+            public bool UseBranchIndex = false;
 
             //In some scenario the master may be removed from the array, use this flag if want to do any setup with it in the adv. 
             //If this is set to true, the ArrayPosition has to be set to zero
@@ -238,6 +251,17 @@ namespace COM3D2.WildParty.Plugin
             public string Type;
             public int Target = -1;         //default -1 indicate all. Otherwise index position
         }
-        
+
+        internal class SE
+        {
+            public string FileName;
+            public bool IsLoop = false;
+        }
+
+        internal class Shuffle
+        {
+            public string TargetList;
+            public List<int> KeepPosition;
+        }
     }
 }

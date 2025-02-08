@@ -183,6 +183,61 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
             }
         }
 
+        internal static void ApplyAnimationInStudio()
+        {
+            if (Input.GetKeyDown(KeyCode.V))
+            {
+                //for setting animation in studio so that making the adv scene easier
+
+                for (int i = 0; i < GameMain.Instance.CharacterMgr.GetMaidCount(); i++)
+                {
+                    Maid maid = GameMain.Instance.CharacterMgr.GetMaid(i);
+                    if (maid != null)
+                        WildParty.Log.LogInfo(maid.status.fullNameJpStyle);
+
+                    if (i == 0)
+                    {
+                        Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
+                    }
+                    if (i == 2)
+                    {
+                        Core.CharacterHandling.PlayAnimation(maid, "OM_yorisoi_aibu_taiki_f.anm", "om_yorisoi_aibu_taiki_f.anm");
+
+                    }
+                    if (i == 3)
+                    {
+                        Core.CharacterHandling.PlayAnimation(maid, "harem_seijyouiC_3_f.anm", "harem_seijyouic_3_f.anm");
+
+                    }
+                    if (i == 4)
+                    {
+                        GameMain.Instance.ScriptMgr.LoadMotionScript(0, false, "ero_scene_001.ks", "*ピロトーク_一人", maid.status.guid, "");
+
+                    }
+                    if (i == 5)
+                    {
+                        Core.CharacterHandling.PlayAnimation(maid, "harem_seijyoui_3_f2.anm", "harem_seijyoui_3_f2.anm");
+                    }
+                    if (i == 6)
+                    {
+                        GameMain.Instance.ScriptMgr.LoadMotionScript(0, false, "ero_scene_001.ks", "*気絶", maid.status.guid, "");
+                    }
+                    if (i == 7)
+                    {
+                        Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
+                    }
+                    if (i == 8)
+                    {
+                        GameMain.Instance.ScriptMgr.LoadMotionScript(0, false, "ero_scene_001.ks", "*気絶", maid.status.guid, "");
+                    }
+                    if (i == 9)
+                    {
+                        Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
+                    }
+                }
+            }
+        }
+
         internal static void PrintAllCapturedDialoguesAndTexts()
         {
             if (Input.GetKeyDown(KeyCode.Z))
@@ -196,6 +251,12 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                     {
                         WildParty.Log.LogInfo(kvp.Value.Speaker + "," + kvp.Key + "," + kvp.Value.text);
                     }
+                }
+
+                foreach (var kvp in DebugHelper.DebugState.Instance.ScriptInfoCapture)
+                {
+                    foreach(var kvp2 in kvp.Value)
+                        WildParty.Log.LogInfo("script file: " + kvp.Key + ", label: " + kvp2);
                 }
             }
             else if (Input.GetKeyDown(KeyCode.Keypad6))
@@ -538,7 +599,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
 
                 WildParty.Log.LogInfo("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
             }
-            
+
             else if (Input.GetKeyDown(KeyCode.Keypad9))
             {
                 foreach(var g in StateManager.Instance.PartyGroupList)

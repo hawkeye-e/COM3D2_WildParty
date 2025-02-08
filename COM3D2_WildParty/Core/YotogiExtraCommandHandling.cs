@@ -175,11 +175,14 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 foreach (var maid in StateManager.Instance.SelectedMaidsList)
                 {
+                    if (IsShowButtonPerFormation(PartyGroup.CurrentFormation, maid))
+                    {
 
-                    var cmd = CloneCommandButton(Util.GetMaidDisplayName(maid), 
+                        var cmd = CloneCommandButton(Util.GetMaidDisplayName(maid),
                         new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeTargetMaid_Callback(maid.status.guid, PartyGroup.CurrentFormation, StateManager.Instance.PartyGroupList[0].SexPosID))
                         );
-                    buttons.Add(cmd);
+                        buttons.Add(cmd);
+                    }
                 }
                 StateManager.Instance.ExtraCommandWindow.ShowContent(buttons, CustomGameObject.YotogiExtraCommandWindow.Mode.MaidList);
 
@@ -209,15 +212,18 @@ namespace COM3D2.WildParty.Plugin.Core
                 {
                     var coord = ModUseData.MapCoordinateList[fid];
 
-                    var cmd = CloneCommandButton(coord.DisplayName, new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeFormationWithNewGroup_Callback(fid)));
-                    var btn = cmd.GetComponent<UIButton>();
-                    if (fid == PartyGroup.CurrentFormation)
+                    if (IsShowButtonPerFormation(fid, StateManager.Instance.PartyGroupList[0].Maid1))
                     {
-                        btn.isEnabled = false;
-                        btn.SetState(UIButtonColor.State.Disabled, true);
-                    }
+                        var cmd = CloneCommandButton(coord.DisplayName, new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeFormationWithNewGroup_Callback(fid)));
+                        var btn = cmd.GetComponent<UIButton>();
+                        if (fid == PartyGroup.CurrentFormation)
+                        {
+                            btn.isEnabled = false;
+                            btn.SetState(UIButtonColor.State.Disabled, true);
+                        }
 
-                    buttons.Add(cmd);
+                        buttons.Add(cmd);
+                    }
                 }
                 StateManager.Instance.ExtraCommandWindow.ShowContent(buttons, CustomGameObject.YotogiExtraCommandWindow.Mode.FormationList);
 
@@ -507,6 +513,16 @@ namespace COM3D2.WildParty.Plugin.Core
             Traverse yotogiPlayMgr = Traverse.Create(StateManager.Instance.YotogiManager.play_mgr);
             GameObject commandExecConditionsPanel = yotogiPlayMgr.Field(Constant.DefinedClassFieldNames.YotogiPlayManagerCommandExecConditionPanel).GetValue<GameObject>();
             commandExecConditionsPanel.SetActive(value: false);
+        }
+
+        private static bool IsShowButtonPerFormation(string formationID, Maid maid)
+        {
+            bool isShowButton = true;
+            var setupInfo = ModUseData.PartyGroupSetupList[formationID];
+            if (setupInfo.ExcludePersonality != null)
+                if (setupInfo.ExcludePersonality.Contains(maid.status.personal.id))
+                    isShowButton = false;
+            return isShowButton;
         }
     }
 }

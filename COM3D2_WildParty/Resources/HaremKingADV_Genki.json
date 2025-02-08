@@ -1,0 +1,414 @@
+{
+  "haremking_private_room_0010_M_Genki": {
+    "ID": "haremking_private_room_0010_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0010_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "haremking_private_room_0010_T_Genki": {
+    "ID": "haremking_private_room_0010_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お仕事お疲れ様。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02A_105464.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 0.8,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0020_M_Genki": {
+    "ID": "haremking_private_room_0020_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0020_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち片手を前に出す"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0020_T_Genki": {
+    "ID": "haremking_private_room_0020_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "とにかくこっちきてよ！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_X1P_53183.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.2
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0030_T_Genki": {
+    "ID": "haremking_private_room_0030_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "その通り～♪",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_X1P_53189.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.5
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0040_M_Genki": {
+    "ID": "haremking_private_room_0040_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0040_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0040_T_Genki": {
+    "ID": "haremking_private_room_0040_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0041_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "大丈夫だよぉ～",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02A_105432.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0050_M_Genki": {
+    "ID": "haremking_private_room_0050_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0050_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１L"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0050_T_Genki": {
+    "ID": "haremking_private_room_0050_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "みんなの事は大好きだから。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02C_106308.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4,
+          "EndTime": 6
+        }
+      }
+    }
+  },
+
+
+
+  "haremking_private_room_0060_M_Genki": {
+    "ID": "haremking_private_room_0060_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0060_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+
+
+  "haremking_private_room_0060_T_Genki": {
+    "ID": "haremking_private_room_0060_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うう……ご主人様、凄い大きくしてるよ……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105188.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0070_M_Genki": {
+    "ID": "haremking_private_room_0070_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0070_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+
+  "haremking_private_room_0070_T_Genki": {
+    "ID": "haremking_private_room_0070_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……ご主人様って、いつもよりも興奮してないかな……大きい気が……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02B_105691.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0080_M_Genki": {
+    "ID": "haremking_private_room_0080_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0080_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        }
+      }
+    ]
+  },
+
+
+  "haremking_private_room_0080_T_Genki": {
+    "ID": "haremking_private_room_0080_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "こうすると、ビクンってして。ご主人様のおちんちん、可愛いな……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105194.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 0.8
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0090_M_Genki": {
+    "ID": "haremking_private_room_0090_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0090_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_002.ks",
+          "ScriptLabel": "*ソファーで乗り出す３＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0090_T_Genki": {
+    "ID": "haremking_private_room_0090_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0091_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "こうやって一緒にご主人様にご奉仕するのも、なんだか幸せな感じがして好きだな……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105200.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0100_M_Genki": {
+    "ID": "haremking_private_room_0100_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0100_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_002.ks",
+          "ScriptLabel": "*ソファーで喜ぶL＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0100_T_Genki": {
+    "ID": "haremking_private_room_0100_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ご主人様、ボクたちを幸せにしてね……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105203.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0010_T_Genki": {
+    "ID": "haremking_postyotogi_0010_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁ……ご主人様、凄いや……ボクたち、すごい満足した……んぅっ……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105251.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0020_T_Genki": {
+    "ID": "haremking_postyotogi_0020_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁっ……すごいや、ご主人様……ボクたちの中、こんなにいっぱいになるまで注いでくれるなんて……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105222.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.9
+        }
+      }
+    }
+  },
+
+  "haremking_postyotogi_0030_T_Genki": {
+    "ID": "haremking_postyotogi_0030_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ……えへへ、もしかしたら、ボク達……ご主人様の精液で……ママになっちゃうかも……それも、いいよね……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105209.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

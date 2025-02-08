@@ -1,0 +1,413 @@
+{
+  "haremking_private_room_0010_M_Rindere": {
+    "ID": "haremking_private_room_0010_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0010_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "haremking_private_room_0010_T_Rindere": {
+    "ID": "haremking_private_room_0010_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "今日もお仕事お疲れ様。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_tsou_69119.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0020_M_Rindere": {
+    "ID": "haremking_private_room_0020_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0020_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち片手を前に出す"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0020_T_Rindere": {
+    "ID": "haremking_private_room_0020_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "とにかく！　今はこっちに来てくれ。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_X01_61695.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 11
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0030_T_Rindere": {
+    "ID": "haremking_private_room_0030_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ、そうだな…",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP01_19453.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0040_M_Rindere": {
+    "ID": "haremking_private_room_0040_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0040_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0040_T_Rindere": {
+    "ID": "haremking_private_room_0040_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0041_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、心配することはないさ。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP02D_26725.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3.5
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0050_M_Rindere": {
+    "ID": "haremking_private_room_0050_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0050_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１L"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0050_T_Rindere": {
+    "ID": "haremking_private_room_0050_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "皆が好きなんだ。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP02D_26726.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1,
+          "EndTime": 3.5
+        }
+      }
+    }
+  },
+
+
+
+  "haremking_private_room_0060_M_Rindere": {
+    "ID": "haremking_private_room_0060_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0060_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+
+
+  "haremking_private_room_0060_T_Rindere": {
+    "ID": "haremking_private_room_0060_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "今日は……いつもより大きくなっているな……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP02B_25520.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0070_M_Rindere": {
+    "ID": "haremking_private_room_0070_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0070_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+
+  "haremking_private_room_0070_T_Rindere": {
+    "ID": "haremking_private_room_0070_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "本当に、がちがちになっているな……硬くて、大きくて……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_X01_61720.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0080_M_Rindere": {
+    "ID": "haremking_private_room_0080_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0080_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        }
+      }
+    ]
+  },
+
+
+  "haremking_private_room_0080_T_Rindere": {
+    "ID": "haremking_private_room_0080_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ぴくんって、震えた……♪　可愛いぞご主人様……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP01_19389.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5.5
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0090_M_Rindere": {
+    "ID": "haremking_private_room_0090_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0090_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_002.ks",
+          "ScriptLabel": "*ソファーで乗り出す３＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0090_T_Rindere": {
+    "ID": "haremking_private_room_0090_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0091_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ご主人様……存分に可愛がってやってくれ……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP01_19463.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0100_M_Rindere": {
+    "ID": "haremking_private_room_0100_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0100_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_002.ks",
+          "ScriptLabel": "*ソファーで喜ぶL＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0100_T_Rindere": {
+    "ID": "haremking_private_room_0100_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私達の事……絶対幸せにしてくれるよな……？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP01_19394.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0010_T_Rindere": {
+    "ID": "haremking_postyotogi_0010_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、幸せ……だ……私達の事を愛してくれて……凄く、嬉しいよ……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP01_19395.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0020_T_Rindere": {
+    "ID": "haremking_postyotogi_0020_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私達のご主人様は最高だな……♪　ご主人様の精液でたぷたぷになってしまった……ふふ、大好きだぞ、ご主人様……♪",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP01_19396.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "haremking_postyotogi_0030_T_Rindere": {
+    "ID": "haremking_postyotogi_0030_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はふっ……そうだな、皆で母親になる……そういう幸せもあるのだと思う……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP01_19438.ogg",
+          "IsChoppingAudio": true,
+          "EndTime":  10
+        }
+      }
+    }
+  }
+}

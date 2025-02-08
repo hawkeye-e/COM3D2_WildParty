@@ -13,10 +13,11 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             RemoveAddedStockMan(StateManager.Instance.MenList);
             
-            UnloadCharacters(StateManager.Instance.SelectedMaidsList);
+            UnloadCharacters(StateManager.Instance.SelectedMaidsList, Constant.CharacterType.Maid);
             if (StateManager.Instance.ClubOwner != null && StateManager.Instance.MenList != null)
                 StateManager.Instance.MenList.Add(StateManager.Instance.ClubOwner);
-            UnloadCharacters(StateManager.Instance.MenList, false);
+            UnloadCharacters(StateManager.Instance.MenList, Constant.CharacterType.Man);
+            UnloadCharacters(StateManager.Instance.NPCList, Constant.CharacterType.NPC);
             
             RestoreBackupData();
             
@@ -56,12 +57,12 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
-        private static void UnloadCharacters(List<Maid> list, bool isMan = false)
+        private static void UnloadCharacters(List<Maid> list, Constant.CharacterType type)
         {
             if (list == null)
                 return;
             //The position here doesnt matter much, we just want to use a non-zero index here
-            int dummy_position = 5;
+            int dummy_position = 2;
             foreach (var chara in list)
             {
                 //may have scale it to zero to hide the model
@@ -70,12 +71,15 @@ namespace COM3D2.WildParty.Plugin.Core
                 //In order to unload the characters properly we use the original logic by KISS. Put the character in the maid list and deactivate it using the CharacterMgr
                 //Spoof flag is set as we dont want the game to load all the bones again during set active
                 StateManager.Instance.SpoofActivateMaidObjectFlag = true;
-                if (isMan)
+                if (type == Constant.CharacterType.Man)
                     GameMain.Instance.CharacterMgr.SetActiveMan(chara, dummy_position);
-                else
+                else if (type == Constant.CharacterType.Maid)
+                    GameMain.Instance.CharacterMgr.SetActiveMaid(chara, dummy_position);
+                else if (type == Constant.CharacterType.NPC)
                     GameMain.Instance.CharacterMgr.SetActiveMaid(chara, dummy_position);
                 StateManager.Instance.SpoofActivateMaidObjectFlag = false;
 
+                bool isMan = !(type == Constant.CharacterType.Maid || type == Constant.CharacterType.NPC);                
                 GameMain.Instance.CharacterMgr.Deactivate(dummy_position, isMan);
             }
         }
@@ -104,11 +108,13 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             StateManager.Instance.UndergoingModEventID = -1;
             StateManager.Instance.MaxManUsed = -1;
+            StateManager.Instance.BranchIndex = -1;
 
             Util.ClearGenericCollection(StateManager.Instance.PartyGroupList);
             Util.ClearGenericCollection(StateManager.Instance.OriginalManOrderList);
             Util.ClearGenericCollection(StateManager.Instance.SelectedMaidsList);
             Util.ClearGenericCollection(StateManager.Instance.MenList);
+            Util.ClearGenericCollection(StateManager.Instance.NPCList);
             Util.ClearGenericCollection(StateManager.Instance.InjectedButtons);
             Util.ClearGenericCollection(StateManager.Instance.YotogiProgressInfoList);
             Util.ClearGenericCollection(StateManager.Instance.RandomPickIndexList);

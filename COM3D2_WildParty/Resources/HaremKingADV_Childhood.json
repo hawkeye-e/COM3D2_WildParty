@@ -1,0 +1,414 @@
+{
+  "haremking_private_room_0010_M_Childhood": {
+    "ID": "haremking_private_room_0010_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0010_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "haremking_private_room_0010_T_Childhood": {
+    "ID": "haremking_private_room_0010_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えへへ……今日も１日お疲れ様でした、お兄様。",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP02ADD_62447.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 6.5
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0020_M_Childhood": {
+    "ID": "haremking_private_room_0020_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0020_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち片手を前に出す"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0020_T_Childhood": {
+    "ID": "haremking_private_room_0020_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "とりあえずこっちに来てください。",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_X1P_55084.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5.2
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0030_T_Childhood": {
+    "ID": "haremking_private_room_0030_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そうですよ♪",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP02ADD_62361.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.5
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0040_M_Childhood": {
+    "ID": "haremking_private_room_0040_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0040_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0040_T_Childhood": {
+    "ID": "haremking_private_room_0040_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0041_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ、大丈夫です。",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_KPV1_50870.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0050_M_Childhood": {
+    "ID": "haremking_private_room_0050_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0050_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１L"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0050_T_Childhood": {
+    "ID": "haremking_private_room_0050_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えへへ、みなさんのことはずっと大好きです！",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP02-M_62116.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5,
+          "EndTime": 5.75
+        }
+      }
+    }
+  },
+
+
+
+  "haremking_private_room_0060_M_Childhood": {
+    "ID": "haremking_private_room_0060_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0060_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+
+
+  "haremking_private_room_0060_T_Childhood": {
+    "ID": "haremking_private_room_0060_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ、うっ……いつみても、おっきいですね……お兄様のって……",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP01ADD_65578.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 8.5
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0070_M_Childhood": {
+    "ID": "haremking_private_room_0070_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0070_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+
+  "haremking_private_room_0070_T_Childhood": {
+    "ID": "haremking_private_room_0070_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お兄様の、なんだかいつもより、大きくなっていませんか……？",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP02ADD_62979.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0080_M_Childhood": {
+    "ID": "haremking_private_room_0080_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0080_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        }
+      }
+    ]
+  },
+
+
+  "haremking_private_room_0080_T_Childhood": {
+    "ID": "haremking_private_room_0080_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ……お兄様のおちんちん、ぴくんって震えましたね……可愛いです♪",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP01ADD_65580.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0090_M_Childhood": {
+    "ID": "haremking_private_room_0090_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0090_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_002.ks",
+          "ScriptLabel": "*ソファーで乗り出す３＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0090_T_Childhood": {
+    "ID": "haremking_private_room_0090_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0091_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お兄様ぁ……そ、そのっ……どっちも優しく……愛してくださいね……？",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP01ADD_65587.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.5
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0100_M_Childhood": {
+    "ID": "haremking_private_room_0100_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0100_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_002.ks",
+          "ScriptLabel": "*ソファーで喜ぶL＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0100_T_Childhood": {
+    "ID": "haremking_private_room_0100_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "わたし達の事……幸せにしてくださいね……？",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP01ADD_65589.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0010_T_Childhood": {
+    "ID": "haremking_postyotogi_0010_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はーっ……はぁっ……しあわせ……ですぅっ……んっ……わたしたちのこと、いっぱい愛してくれてぇ……",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP01ADD_65594.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0020_T_Childhood": {
+    "ID": "haremking_postyotogi_0020_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いっぱい、出されてしまいました……はぁ、はぁっ……お兄様の……変態……",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP01ADD_65666.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3
+        }
+      }
+    }
+  },
+
+  "haremking_postyotogi_0030_T_Childhood": {
+    "ID": "haremking_postyotogi_0030_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はうっ……お母さんになりたいですね……みんな一緒にっ……そういう幸せもあるのですね……",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP01ADD_65617.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

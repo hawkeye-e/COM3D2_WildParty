@@ -104,7 +104,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 foreach (var group in StateManager.Instance.PartyGroupList)
                     group.DetachAllIK();
 
-                CharacterHandling.AssignPartyGrouping(formationID);
+                CharacterHandling.AssignPartyGrouping(formationID, true);
 
                 YotogiHandling.UpdateParameterView(StateManager.Instance.PartyGroupList[0].Maid1);
 

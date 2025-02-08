@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using BepInEx.Logging;
 using UnityEngine;
+using HarmonyLib;
 
 namespace COM3D2.WildParty.Plugin.Core
 {
@@ -14,7 +15,7 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void ProcessADVStep(ADVKagManager instance)
         {
             if (StateManager.Instance.UndergoingModEventID > 0 && StateManager.Instance.ModEventProgress != Constant.EventProgress.Init)
-            {
+            {                
                 //If there is no such step found (wrong setup), terminate the mod event.
                 if (!ModUseData.ADVStepData[StateManager.Instance.UndergoingModEventID].ContainsKey(StateManager.Instance.CurrentADVStepID))
                 {
@@ -23,7 +24,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
 
                 CheckCameraPanFinish();
-
+                
 
                 //We dont want to process this over and over again if we are waiting for user input
                 if (StateManager.Instance.ProcessedADVStepID != StateManager.Instance.CurrentADVStepID)
@@ -35,6 +36,9 @@ namespace COM3D2.WildParty.Plugin.Core
                     {
                         case Constant.ADVType.ChangeBGM:
                             ProcessADVChangeBGM(instance, thisStep);
+                            break;
+                        case Constant.ADVType.PlaySE:
+                            ProcessADVPlaySE(instance, thisStep);
                             break;
                         case Constant.ADVType.ChangeBackground:
                             ProcessADVChangeBackground(instance, thisStep);
@@ -77,6 +81,9 @@ namespace COM3D2.WildParty.Plugin.Core
                             break;
                         case Constant.ADVType.RemoveTexture:
                             ProcessADVRemoveTexture(instance, thisStep);
+                            break;
+                        case Constant.ADVType.Shuffle:
+                            ProcessADVShuffle(instance, thisStep);
                             break;
                         case Constant.ADVType.Special:
                             ProcessADVSpecial(instance, thisStep);
@@ -162,11 +169,26 @@ namespace COM3D2.WildParty.Plugin.Core
                 StateManager.Instance.MenList.Insert(0, StateManager.Instance.ClubOwner);
                 GameMain.Instance.CharacterMgr.SetActiveMan(StateManager.Instance.ClubOwner, 0);
             }
+
+            //init NPC
+            if (step.CharaInitData.NPC != null)
+            {
+                StateManager.Instance.NPCList = new List<Maid>();
+                foreach (var npcRequest in step.CharaInitData.NPC) {
+                    Maid npc = CharacterHandling.InitNPCMaid(npcRequest.Preset);
+                    StateManager.Instance.NPCList.Add(npc);
+                }
+            }
         }
 
         private static void ProcessADVChangeBGM(ADVKagManager instance, ADVStep step)
         {
             GameMain.Instance.SoundMgr.PlayBGM(step.Tag, 1);
+        }
+
+        private static void ProcessADVPlaySE(ADVKagManager instance, ADVStep step)
+        {
+            GameMain.Instance.SoundMgr.PlaySe(step.SEData.FileName, step.SEData.IsLoop);
         }
 
         private static void ProcessADVChangeBackground(ADVKagManager instance, ADVStep step)
@@ -269,6 +291,8 @@ namespace COM3D2.WildParty.Plugin.Core
                             targetList = StateManager.Instance.MenList;
 
                     }
+                    else if (step.CharaData[i].Type == Constant.TargetType.NPC)
+                        targetList = StateManager.Instance.NPCList;
                     else
                         targetList = StateManager.Instance.SelectedMaidsList;
 
@@ -285,19 +309,20 @@ namespace COM3D2.WildParty.Plugin.Core
                         foreach (var man in StateManager.Instance.MenList)
                         {
                             SetADVCharaDataToCharacter(man, step.CharaData[i], true);
-
                         }
                         if (StateManager.Instance.ClubOwner != null)
                         {
                             SetADVCharaDataToCharacter(StateManager.Instance.ClubOwner, step.CharaData[i], true);
-
                         }
                     }
                     else
                     {
-                        if (targetList.Count > step.CharaData[i].ArrayPosition)
+                        int index = step.CharaData[i].ArrayPosition;
+                        if (step.CharaData[i].UseBranchIndex)
+                            index = StateManager.Instance.BranchIndex;
+                        if (targetList.Count > index)
                         {
-                            SetADVCharaDataToCharacter(targetList[step.CharaData[i].ArrayPosition], step.CharaData[i], step.CharaData[i].Type == Constant.TargetType.SingleMan);
+                            SetADVCharaDataToCharacter(targetList[index], step.CharaData[i], step.CharaData[i].Type == Constant.TargetType.SingleMan);
 
                         }
                     }
@@ -386,6 +411,8 @@ namespace COM3D2.WildParty.Plugin.Core
                 string motionFile = charaData.MotionInfo.MotionFile;
                 string motionTag = charaData.MotionInfo.MotionTag;
                 bool isLoop = charaData.MotionInfo.IsLoopMotion;
+                bool isBlend = charaData.MotionInfo.IsBlend;
+                bool isQueued = charaData.MotionInfo.IsQueued;
 
                 if (!string.IsNullOrEmpty(charaData.MotionInfo.RandomMotion))
                 {
@@ -403,6 +430,8 @@ namespace COM3D2.WildParty.Plugin.Core
                         motionFile = randomList[rnd].MotionFile;
                         motionTag = randomList[rnd].MotionTag;
                         isLoop = randomList[rnd].IsLoopMotion;
+                        isBlend = randomList[rnd].IsBlend;
+                        isQueued = randomList[rnd].IsQueued;
                     }
                 }
 
@@ -419,7 +448,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 if (!string.IsNullOrEmpty(motionTag) && !string.IsNullOrEmpty(motionFile))
                 {
                     maid.body0.LoadAnime(motionTag, GameMain.Instance.ScriptMgr.file_system, motionFile, false, isLoop);
-                    maid.body0.ReloadAnimation();
+                    CharacterHandling.PlayAnimation(maid, motionFile, motionTag, isLoop, isBlend, isQueued);
                 }
             }
 
@@ -580,7 +609,7 @@ namespace COM3D2.WildParty.Plugin.Core
             string speakerName;
             int voicePitch = 0;
             List<Maid> lstMaidToSpeak = null;
-            
+
             switch (step.TalkData.SpecificSpeaker)
             {
                 case Constant.ADVTalkSpearkerType.All:
@@ -599,6 +628,19 @@ namespace COM3D2.WildParty.Plugin.Core
                     lstMaidToSpeak = new List<Maid>() { mainMaid };
                     speakerName = mainMaid.status.callName;
                     break;
+                case Constant.ADVTalkSpearkerType.Maid:
+                    int index = step.TalkData.Index;
+                    if (step.TalkData.UseBranchIndex)
+                        index = StateManager.Instance.BranchIndex;
+                    Maid maid = StateManager.Instance.SelectedMaidsList[index];
+                    lstMaidToSpeak = new List<Maid>() { maid };
+                    speakerName = maid.status.callName;
+                    break;
+                case Constant.ADVTalkSpearkerType.NPC:
+                    Maid npcMaid = StateManager.Instance.NPCList[step.TalkData.Index];
+                    lstMaidToSpeak = new List<Maid>() { npcMaid };
+                    speakerName = npcMaid.status.callName;
+                    break;
                 default:
                     speakerName = step.TalkData.SpeakerName;
                     break;
@@ -611,6 +653,8 @@ namespace COM3D2.WildParty.Plugin.Core
             }
             else
             {
+                CharacterHandling.StopAllMaidSound();
+
                 bool isAudioChopped = false;
                 ADVStep.Talk.Voice voiceInfo = null;
 
@@ -619,23 +663,34 @@ namespace COM3D2.WildParty.Plugin.Core
                 foreach (var maid in lstMaidToSpeak)
                 {
                     //get the correct voice file by personality
-                    voiceInfo = step.TalkData.VoiceData.Where(x => x.Key == Util.GetPersonalityNameByValue(maid.status.personal.id)).First().Value;
-
-                    if (voiceInfo.IsChoppingAudio)
-                    {
-                        isAudioChopped = true;
-
-                        Helper.AudioChoppingManager.PlaySubClip(maid, step.ID, voiceInfo.VoiceFile, voiceInfo.StartTime, voiceInfo.EndTime, isAll);
-                    }
+                    if (step.TalkData.SpecificSpeaker == Constant.ADVTalkSpearkerType.NPC)
+                        voiceInfo = step.TalkData.VoiceData.First().Value;
                     else
                     {
-                        maid.AudioMan.LoadPlay(voiceInfo.VoiceFile, 0f, false);
+                        if(step.TalkData.VoiceData.ContainsKey(Util.GetPersonalityNameByValue(maid.status.personal.id)))
+                            voiceInfo = step.TalkData.VoiceData[Util.GetPersonalityNameByValue(maid.status.personal.id)];
+                    }
+
+                    if (voiceInfo != null)
+                    {
+                        if (voiceInfo.IsChoppingAudio)
+                        {
+                            isAudioChopped = true;
+
+                            Helper.AudioChoppingManager.PlaySubClip(maid, step.ID, voiceInfo.VoiceFile, voiceInfo.StartTime, voiceInfo.EndTime, isAll);
+                        }
+                        else
+                        {
+                            maid.AudioMan.LoadPlay(voiceInfo.VoiceFile, 0f, false);
+                        }
                     }
                 }
 
                 if (!isAll)
                 {
-                    string voiceFile = voiceInfo.VoiceFile;
+                    string voiceFile = "";
+                    if(voiceInfo != null)
+                        voiceFile = voiceInfo.VoiceFile;
                     //if it is chopped we use the id instead to reload from our own subclip library
                     if (isAudioChopped)
                         voiceFile = step.ID;
@@ -727,6 +782,8 @@ namespace COM3D2.WildParty.Plugin.Core
 
         private static void ProcessADVBranchByPersonality(ADVKagManager instance, ADVStep step)
         {
+            StateManager.Instance.BranchIndex = step.CharaData[0].ArrayPosition;
+
             string personalityName = Util.GetPersonalityNameByValue(StateManager.Instance.SelectedMaidsList[step.CharaData[0].ArrayPosition].status.personal.id);
             
             string nextStepID = step.NextStepID;
@@ -835,15 +892,53 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
+        private static void ProcessADVShuffle(ADVKagManager instance, ADVStep step)
+        {
+            if(step.ShuffleData != null)
+            {
+                List<Maid> targetList = null;
+                if (step.ShuffleData.TargetList == Constant.TargetType.AllMaids)
+                    targetList = StateManager.Instance.SelectedMaidsList;
+                else if (step.ShuffleData.TargetList == Constant.TargetType.AllMen)
+                    //...Seems never have a situation like this as all men are generated? Anyway implement it just in case
+                    targetList = StateManager.Instance.MenList;
+                else
+                    return;
+
+                List<Maid> shuffleList = new List<Maid>();
+                Dictionary<int, Maid> keepPositionList = new Dictionary<int, Maid>();
+                if (step.ShuffleData.KeepPosition != null)
+                {
+                    foreach (int index in step.ShuffleData.KeepPosition)
+                        keepPositionList.Add(index, targetList[index]);
+                    
+                    foreach (var kvp in keepPositionList)
+                        targetList.Remove(kvp.Value);
+                }
+
+                targetList = CharacterHandling.ShuffleMaidOrManList(targetList);
+
+                foreach (var kvp in keepPositionList.OrderByDescending(x => x.Key))
+                {
+                    targetList.Insert(kvp.Key, kvp.Value);
+                }
+
+                if (step.ShuffleData.TargetList == Constant.TargetType.AllMaids)
+                    StateManager.Instance.SelectedMaidsList = targetList;
+                else if (step.ShuffleData.TargetList == Constant.TargetType.AllMen)
+                    StateManager.Instance.MenList = targetList ;
+
+            }
+        }
 
         internal static void ADVSceneProceedToNextStep(string nextStepID = "")
         {
-
+            
             if (nextStepID == "")
                 StateManager.Instance.CurrentADVStepID = ModUseData.ADVStepData[StateManager.Instance.UndergoingModEventID][StateManager.Instance.CurrentADVStepID].NextStepID;
             else
                 StateManager.Instance.CurrentADVStepID = nextStepID;
-
+            
             StateManager.Instance.WaitForUserClick = false;
             StateManager.Instance.WaitForUserInput = false;
             StateManager.Instance.WaitForCameraPanFinish = false;

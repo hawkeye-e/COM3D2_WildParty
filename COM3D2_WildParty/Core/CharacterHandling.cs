@@ -47,6 +47,31 @@ namespace COM3D2.WildParty.Plugin.Core
             return man;
         }
 
+        internal static Maid InitNPCMaid(string presetName)
+        {
+            //Maid maid = GameMain.Instance.CharacterMgr.AddStockNpcMaid();
+            Maid maid = GameMain.Instance.CharacterMgr.AddStockMaid();
+            
+            foreach (var kvp in CharacterMgr.npcDatas)
+            {
+                if (kvp.Value.presetFileName == presetName)
+                {
+                    kvp.Value.Apply(maid);
+                    break;
+                }
+            }
+            if (maid != null)
+            {
+                maid.gameObject.name = maid.status.fullNameJpStyle;
+                maid.transform.localPosition = new Vector3(-999f, -999f, -999f);
+                maid.Visible = true;
+                maid.DutPropAll();
+                maid.AllProcPropSeqStart();
+            }
+
+            return maid;
+        }
+
         //Randomize the body of the temporary man
         private static void RandomizeManBody(Maid man)
         {
@@ -163,7 +188,7 @@ namespace COM3D2.WildParty.Plugin.Core
             return result;
         }
 
-        internal static void AssignPartyGrouping(string formationID)
+        internal static void AssignPartyGrouping(string formationID, bool retainMainZero = false)
         {
             if (ModUseData.PartyGroupSetupList[formationID].IsRandomAssign)
             {
@@ -171,7 +196,7 @@ namespace COM3D2.WildParty.Plugin.Core
             }
             else
             {
-                AssignPartyGroupingBySetupInfo(formationID);
+                AssignPartyGroupingBySetupInfo(formationID, retainMainZero);
             }
         }
 
@@ -440,13 +465,6 @@ namespace COM3D2.WildParty.Plugin.Core
             if (maid != null)
             {
                 maid.ActiveSlotNo = -1;
-                if (maid.pairMan != null)
-                {
-                    maid.pairMan.ActiveSlotNo = -1;
-                    maid.pairMan = null;
-                }
-
-
             }
         }
 
@@ -637,6 +655,24 @@ namespace COM3D2.WildParty.Plugin.Core
             if (maid != null)
             {
                 maid.StopAnime();
+                if (maid.AudioMan != null)
+                {
+                    maid.AudioMan.standAloneVoice = false;
+                    maid.AudioMan.Stop();
+                }
+            }
+        }
+
+        internal static void StopAllMaidSound()
+        {
+            foreach(Maid maid in StateManager.Instance.SelectedMaidsList)
+                StopMaidSound(maid);
+        }
+
+        internal static void StopMaidSound(Maid maid)
+        {
+            if (maid != null)
+            {
                 if (maid.AudioMan != null)
                 {
                     maid.AudioMan.standAloneVoice = false;

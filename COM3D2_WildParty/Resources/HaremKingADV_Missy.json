@@ -1,0 +1,413 @@
+{
+  "haremking_private_room_0010_M_Missy": {
+    "ID": "haremking_private_room_0010_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0010_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "haremking_private_room_0010_T_Missy": {
+    "ID": "haremking_private_room_0010_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "本日もお仕事お疲れ様です。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_tsou_60447.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0020_M_Missy": {
+    "ID": "haremking_private_room_0020_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0020_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち片手を前に出す"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0020_T_Missy": {
+    "ID": "haremking_private_room_0020_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ちょっとこっちへ……ほら、来てくださいませ！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_X1P_54752.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0030_T_Missy": {
+    "ID": "haremking_private_room_0030_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ、そうですわね！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62344.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0040_M_Missy": {
+    "ID": "haremking_private_room_0040_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0040_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0040_T_Missy": {
+    "ID": "haremking_private_room_0040_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0041_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ、ご安心ください。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62349.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0050_M_Missy": {
+    "ID": "haremking_private_room_0050_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0050_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１L"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0050_T_Missy": {
+    "ID": "haremking_private_room_0050_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ご主人様が大事に思っている皆さんのことが、大好きですから。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02-M_60024.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 7.3
+        }
+      }
+    }
+  },
+
+
+
+  "haremking_private_room_0060_M_Missy": {
+    "ID": "haremking_private_room_0060_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0060_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+
+
+  "haremking_private_room_0060_T_Missy": {
+    "ID": "haremking_private_room_0060_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ、うっ……いつみても、おおきいですわね……ご主人様のって……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_60539.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 7.2
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0070_M_Missy": {
+    "ID": "haremking_private_room_0070_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0070_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+
+  "haremking_private_room_0070_T_Missy": {
+    "ID": "haremking_private_room_0070_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うっ……ご主人様、なんだかいつもよりも、大きくされていませんか……？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62843.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0080_M_Missy": {
+    "ID": "haremking_private_room_0080_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0080_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        }
+      }
+    ]
+  },
+
+
+  "haremking_private_room_0080_T_Missy": {
+    "ID": "haremking_private_room_0080_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ……ご主人様のおちんちん、ぴくんって震えましたわね……可愛いです♪",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_60541.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0090_M_Missy": {
+    "ID": "haremking_private_room_0090_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0090_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_002.ks",
+          "ScriptLabel": "*ソファーで乗り出す３＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0090_T_Missy": {
+    "ID": "haremking_private_room_0090_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0091_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ご主人様ぁ……そ、そのっ……どちらも優しく……愛してくださいね……？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_60548.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.5
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0100_M_Missy": {
+    "ID": "haremking_private_room_0100_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0100_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_002.ks",
+          "ScriptLabel": "*ソファーで喜ぶL＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0100_T_Missy": {
+    "ID": "haremking_private_room_0100_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "わたくし達の事……幸せにしてくださいね……？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_60550.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0010_T_Missy": {
+    "ID": "haremking_postyotogi_0010_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はーっ……はぁっ……しあわせ……ですぅっ……んっ……わたくしたちのこと、いっぱい愛してくれてぇ……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_60555.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0020_T_Missy": {
+    "ID": "haremking_postyotogi_0020_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お腹にかかってますわぁ……あたたかいの……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63041.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4,
+          "EndTime": 9
+        }
+      }
+    }
+  },
+
+  "haremking_postyotogi_0030_T_Missy": {
+    "ID": "haremking_postyotogi_0030_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はう……お母さんになりたいですわ……みんな一緒にっ……そういう幸せもあるのですね……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_60570.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

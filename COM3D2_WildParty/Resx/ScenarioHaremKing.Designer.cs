@@ -62,10 +62,663 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Anesan&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Anesan&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Anesan&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Anesan&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Anesan&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Anesan {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Anesan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Childhood&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Childhood&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Childhood&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Childhood&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Childhood&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;Waiti [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Childhood {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Childhood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Cool&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Cool&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Cool&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Cool&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Cool&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;N [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Cool {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Cool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Cunning&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Cunning&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Cunning&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Cunning&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Cunning&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot; [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Cunning {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Cunning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Curtness&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Curtness&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Curtness&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Curtness&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Curtness&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingTyp [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Curtness {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Curtness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Dame&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Dame&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Dame&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Dame&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Dame&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;N [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Dame {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Dame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Devilish&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Devilish&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Devilish&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Devilish&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Devilish&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingTyp [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Devilish {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Devilish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Gyaru&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Gyaru&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Gyaru&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Gyaru&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Gyaru&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///  [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Friendly {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Friendly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Genki&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Genki&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Genki&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Genki&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Genki&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///  [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Genki {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Genki", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Gyaru&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Gyaru&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Gyaru&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Gyaru&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Gyaru&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///  [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Gyaru {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Gyaru", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Ladylike&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Ladylike&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Ladylike&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Ladylike&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Ladylike&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingTyp [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Ladylike {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Ladylike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Majime&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Majime&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Majime&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Majime&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Majime&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Majime {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Majime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Masochist&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Masochist&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Masochist&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Masochist&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Masochist&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;Waiti [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Masochist {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Masochist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Missy&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Missy&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Missy&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Missy&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Missy&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///  [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Missy {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Missy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Muku&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;N [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Muku {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Muku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Pride&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Pride&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Pride&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Pride&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Pride&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///  [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Pride {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Pride", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Pure&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Pure&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Pure&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Pure&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Pure&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;N [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Pure {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Pure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Rindere&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Rindere&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Rindere&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Rindere&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Rindere&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot; [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Rindere {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Rindere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Sadist&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Sadist&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Sadist&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Sadist&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Sadist&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Sadist {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Sadist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Secretary&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Secretary&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Secretary&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Secretary&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Secretary&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;Waiti [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Secretary {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Secretary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Silent&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Silent&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Silent&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Silent&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Silent&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Silent {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Silent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Sister&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Sister&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Sister&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Sister&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Sister&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Sister {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Sister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0010_M_Yandere&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_M_Yandere&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0010_T_Yandere&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0010_T_Yandere&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0010_T_Yandere&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot; [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADV_Yandere {
+            get {
+                return ResourceManager.GetString("HaremKingADV_Yandere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
         ///  &quot;haremking0001&quot;: {
         ///    &quot;ID&quot;: &quot;haremking0001&quot;,
         ///    &quot;Type&quot;: &quot;BG&quot;,
-        ///    &quot;Tag&quot;: &quot;ShinShitsumu_ChairRot&quot;,
+        ///    &quot;Tag&quot;: &quot;ShinShitsumu&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
         ///    &quot;NextStepID&quot;: &quot;haremking0001_init_chara&quot;
         ///  },
@@ -74,19 +727,78 @@ namespace ScenarioResources {
         ///    &quot;ID&quot;: &quot;haremking0001_init_chara&quot;,
         ///    &quot;Type&quot;: &quot;CharaInit&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;haremking_intro_0001&quot;,
-        ///    &quot;CharaInit&quot;: {
-        ///      &quot;IsClubOwnerMainCharacter&quot;: true
-        ///    }
-        ///  },
-        ///
-        ///  &quot;haremking_intro_0001&quot;: {
-        ///    &quot;ID&quot;: &quot;haremking_intro_0001&quot;,
-        ///    &quot;Type&quot;: &quot; [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        ///    &quot;NextStepID&quot;: &quot;haremking0001_init_hide_men&quot;,
+        ///    &quot;CharaInitData&quot;: {
+        ///      &quot;IsClubOwnerMainCharacter&quot;: true,
+        ///      &quot;ManRequired&quot;: 9,
+        ///      &quot;NPC&quot;: [
+        ///        {
+        ///          &quot;Index&quot;: 0,
+        ///          &quot;Pre [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
         /// </summary>
         internal static string HaremKingADVIntro {
             get {
                 return ResourceManager.GetString("HaremKingADVIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///
+        ///
+        ///  &quot;haremking_postyotogi_init&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_postyotogi_init&quot;,
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_postyotogi_0001&quot;,
+        ///    &quot;FadeData&quot;: {
+        ///      &quot;IsFadeIn&quot;: false,
+        ///      &quot;IsFadeOut&quot;: true
+        ///    }
+        ///  },
+        ///
+        ///  &quot;haremking_postyotogi_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_postyotogi_0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;privateroom2_nightoff&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_postyotogi_0001a&quot;
+        ///  },
+        ///
+        ///
+        ///
+        ///  &quot;haremking_postyotog [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADVPostYotogi {
+            get {
+                return ResourceManager.GetString("HaremKingADVPostYotogi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類似 {
+        ///  &quot;haremking_private_room_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;privateroom2&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0001a&quot;
+        ///  },
+        ///
+        ///  &quot;haremking_private_room_0001a&quot;: {
+        ///    &quot;ID&quot;: &quot;haremking_private_room_0001a&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;haremking_private_room_0001b&quot;,
+        ///    &quot;CameraData&quot;: {
+        ///      &quot;FixedPointData&quot;: {
+        ///        &quot;PosX&quot;: -0.76,
+        ///        &quot;PosY&quot;: 1.87,
+        ///        &quot;PosZ&quot;: -1.84 [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+        /// </summary>
+        internal static string HaremKingADVPrivateRoom {
+            get {
+                return ResourceManager.GetString("HaremKingADVPrivateRoom", resourceCulture);
             }
         }
     }

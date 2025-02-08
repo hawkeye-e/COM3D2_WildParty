@@ -25,9 +25,12 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
 
         internal bool killme = false;
 
+        internal Dictionary<string, List<string>> ScriptInfoCapture = new Dictionary<string, List<string>>();
+
+
         internal string[] DebugVoiceFileInQuestion = {
 
-            "H13_tsou_06143.ogg"
+             "H13_tsou_06143.ogg"
                 ,"H13_02762.ogg"
                 ,"H13_04671.ogg"
                 ,"H13_04183.ogg"

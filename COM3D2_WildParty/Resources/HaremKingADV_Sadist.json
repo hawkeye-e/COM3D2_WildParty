@@ -1,0 +1,409 @@
+{
+  "haremking_private_room_0010_M_Sadist": {
+    "ID": "haremking_private_room_0010_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0010_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "haremking_private_room_0010_T_Sadist": {
+    "ID": "haremking_private_room_0010_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お疲れ様。よく頑張ったわね。",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_Plus_57901.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0020_M_Sadist": {
+    "ID": "haremking_private_room_0020_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0020_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち片手を前に出す"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0020_T_Sadist": {
+    "ID": "haremking_private_room_0020_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "とにかくこっちに来なさい。",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1P_52346.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 7
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0030_T_Sadist": {
+    "ID": "haremking_private_room_0030_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、正解よ。",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP02A_106709.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0040_M_Sadist": {
+    "ID": "haremking_private_room_0040_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0040_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0040_T_Sadist": {
+    "ID": "haremking_private_room_0040_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0041_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そんなに悩まなくても大丈夫よ。",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1P_54064.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+  "haremking_private_room_0050_M_Sadist": {
+    "ID": "haremking_private_room_0050_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0050_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１L"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0050_T_Sadist": {
+    "ID": "haremking_private_room_0050_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "みんなが大好きだもの。",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP02C_107433.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 11.5
+        }
+      }
+    }
+  },
+
+
+
+  "haremking_private_room_0060_M_Sadist": {
+    "ID": "haremking_private_room_0060_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0060_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+
+
+  "haremking_private_room_0060_T_Sadist": {
+    "ID": "haremking_private_room_0060_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、ご主人様。凄い硬くなってるわ……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_104953.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0070_M_Sadist": {
+    "ID": "haremking_private_room_0070_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0070_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny"
+      }
+    ]
+  },
+
+  "haremking_private_room_0070_T_Sadist": {
+    "ID": "haremking_private_room_0070_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ね、ねぇ……ご主人様の……いつもこんなに大きかったかしら？",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP02B_106828.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0080_M_Sadist": {
+    "ID": "haremking_private_room_0080_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0080_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        }
+      }
+    ]
+  },
+
+
+  "haremking_private_room_0080_T_Sadist": {
+    "ID": "haremking_private_room_0080_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ……ふふ、可愛いわね。ほら。ぴくんって震えて怯えてるみたい……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_104959.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0090_M_Sadist": {
+    "ID": "haremking_private_room_0090_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0090_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_002.ks",
+          "ScriptLabel": "*ソファーで乗り出す３＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0090_T_Sadist": {
+    "ID": "haremking_private_room_0090_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0091_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私達を満足させなかったら、承知しないわよ？",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP02B_106822.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 10
+        }
+      }
+    }
+  },
+
+
+  "haremking_private_room_0100_M_Sadist": {
+    "ID": "haremking_private_room_0100_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "haremking_private_room_0100_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_002.ks",
+          "ScriptLabel": "*ソファーで喜ぶL＿移行"
+        }
+      }
+    ]
+  },
+
+  "haremking_private_room_0100_T_Sadist": {
+    "ID": "haremking_private_room_0100_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_private_room_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ご主人様、私達を幸せにするのよ……？",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_104968.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0010_T_Sadist": {
+    "ID": "haremking_postyotogi_0010_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ、はぁ……やるわね、ご主人様……私達をしっかりと満足させるなんて……ふふ、嬉しいわ。",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_104955.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "haremking_postyotogi_0020_T_Sadist": {
+    "ID": "haremking_postyotogi_0020_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁっ……んっ……本当に、私達にこんなに注ぐなんて……思ってもいなかったわ……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_104987.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "haremking_postyotogi_0030_T_Sadist": {
+    "ID": "haremking_postyotogi_0030_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁっ、はぁ……凄いわね……んっ……もう、こんなに出されて妊娠したらどうするのよ……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105031.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}
