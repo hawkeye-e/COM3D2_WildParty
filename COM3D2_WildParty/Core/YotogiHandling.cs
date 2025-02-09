@@ -50,10 +50,10 @@ namespace COM3D2.WildParty.Plugin.Core
 
             var label = motionItem.ValidLabels.Where(x => x.LabelGroupID == group.CurrentLabelGroupID && x.ExcitementLevel == excitementLevel).First();
 
-            GameMain.Instance.ScriptMgr.LoadMotionScript(1, false,
+            CharacterHandling.LoadMotionScript(1, false,
                 motionItem.FileName, label.LabelName,
                 group.Maid1.status.guid, group.Man1.status.guid, false, false, true, false);
-            
+
             group.ReloadAnimation();
 
             group.SexPosID = motionItem.ID;
@@ -80,10 +80,10 @@ namespace COM3D2.WildParty.Plugin.Core
 
             MotionSpecialLabel pickedLabel = lstSpecialLabel[RNG.Random.Next(lstSpecialLabel.Count)];
 
-            GameMain.Instance.ScriptMgr.LoadMotionScript(1, false,
+            CharacterHandling.LoadMotionScript(1, false,
                 motionItem.FileName, pickedLabel.Label,
                 group.Maid1.status.guid, group.Man1.status.guid, false, false, true, false);
-            
+
             return pickedLabel;
         }
 
@@ -257,15 +257,14 @@ namespace COM3D2.WildParty.Plugin.Core
                             {
                                 if (!string.IsNullOrEmpty(item.Motion.ScriptFile) && !string.IsNullOrEmpty(item.Motion.ScriptLabel))
                                 {
-                                    GameMain.Instance.ScriptMgr.LoadMotionScript(1, false,
-                                        item.Motion.ScriptFile, item.Motion.ScriptLabel,
-                                        maid.status.guid, "", false, false, false, false);
+                                    CharacterHandling.LoadMotionScript(1, false,
+                                       item.Motion.ScriptFile, item.Motion.ScriptLabel,
+                                       maid.status.guid, "", false, false, false, false);
                                 }
 
                                 if (!string.IsNullOrEmpty(item.Motion.MotionFile) && !string.IsNullOrEmpty(item.Motion.MotionTag))
                                 {
-                                    maid.body0.LoadAnime(item.Motion.MotionTag, GameUty.FileSystem, item.Motion.MotionFile, false, item.Motion.IsLoopMotion);
-                                    maid.body0.ReloadAnimation();
+                                    CharacterHandling.PlayAnimation(maid, item.Motion.MotionFile, item.Motion.MotionTag, item.Motion.IsLoopMotion);
                                 }
                             }
 
@@ -309,13 +308,12 @@ namespace COM3D2.WildParty.Plugin.Core
             if (isMan)
             {
                 maid.body0.SetChinkoVisible(true);
-                maid.body0.LoadAnime(mMotionData.Tag, GameUty.FileSystem, mMotionData.FileName, false, true);
-                maid.body0.ReloadAnimation();
+                CharacterHandling.PlayAnimation(maid, mMotionData.FileName, mMotionData.Tag);
             }
             else
             {
 
-                GameMain.Instance.ScriptMgr.LoadMotionScript(1, false,
+                CharacterHandling.LoadMotionScript(1, false,
                 mMotionData.MotionFileName, mMotionData.Label,
                 maid.status.guid, "", false, false, false, false);
 
@@ -381,7 +379,7 @@ namespace COM3D2.WildParty.Plugin.Core
             MotionSpecialLabel waitingLabel = motionItem.SpecialLabels.Where(x => x.Type == MotionSpecialLabel.LabelType.Waiting).First();
 
             if(loadMotionScript)
-            GameMain.Instance.ScriptMgr.LoadMotionScript(0, false,
+                CharacterHandling.LoadMotionScript(0, false,
                 motionItem.FileName, waitingLabel.Label,
                 "", "", false, false, false, false);
 

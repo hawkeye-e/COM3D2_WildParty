@@ -206,7 +206,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     if (group.Man1 != null)
                         manGUID = group.Man1.status.guid;
 
-                    GameMain.Instance.ScriptMgr.LoadMotionScript(0, false, setting.Motion.ScriptFile, setting.Motion.ScriptLabel, maidGUID,
+                    CharacterHandling.LoadMotionScript(0, false, setting.Motion.ScriptFile, setting.Motion.ScriptLabel, maidGUID,
                         manGUID, false, false, false, false);
                 }
 

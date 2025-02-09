@@ -45,7 +45,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
         //for logging down the motion file and label
         [HarmonyPrefix]
         [HarmonyPatch(typeof(ScriptManager), nameof(ScriptManager.LoadMotionScript))]
-        private static void LoadMotionScriptPre(int sloat, bool is_next, string file_name, string label_name, string maid_guid, string man_guid, bool face_fix, bool valid_pos, bool disable_diff_pos, bool body_mix_ok)
+        private static void LoadMotionScriptPre(int sloat, bool is_next, string file_name, string label_name, string maid_guid, string man_guid, bool face_fix, bool valid_pos, bool disable_diff_pos)
         {
             WildParty.Log.LogInfo("LoadMotionScriptPre: file_name: " + file_name + ", label: " + label_name);
             Patches.CaptureMotionFileNames(file_name, label_name);

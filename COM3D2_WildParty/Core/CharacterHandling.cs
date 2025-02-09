@@ -777,5 +777,11 @@ namespace COM3D2.WildParty.Plugin.Core
             maid.body0.LoadAnime(tag, GameUty.FileSystem, fileName, false, isLoop);
             maid.body0.CrossFade(maid.body0.LastAnimeFN, GameUty.FileSystem, additive: false, loop: isLoop, boAddQue: isQueued, fade: fade);
         }
+
+        //function definition copied from KISS code. All load motion script call from the mod should call here so that there is no need to handle the V2 compatible version everywhere
+        internal static void LoadMotionScript(int sloat, bool is_next, string file_name, string label_name = "", string maid_guid = "", string man_guid = "", bool face_fix = false, bool valid_pos = true, bool disable_diff_pos = false, bool body_mix_ok = false)
+        {
+            GameMain.Instance.ScriptMgr.LoadMotionScript(sloat, is_next, file_name, label_name, maid_guid, man_guid, face_fix, valid_pos, disable_diff_pos, body_mix_ok);
+        }
     }
 }

@@ -211,7 +211,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                     }
                     if (i == 4)
                     {
-                        GameMain.Instance.ScriptMgr.LoadMotionScript(0, false, "ero_scene_001.ks", "*ピロトーク_一人", maid.status.guid, "");
+                        Core.CharacterHandling.LoadMotionScript(0, false, "ero_scene_001.ks", "*ピロトーク_一人", maid.status.guid, "");
 
                     }
                     if (i == 5)
@@ -220,7 +220,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                     }
                     if (i == 6)
                     {
-                        GameMain.Instance.ScriptMgr.LoadMotionScript(0, false, "ero_scene_001.ks", "*気絶", maid.status.guid, "");
+                        Core.CharacterHandling.LoadMotionScript(0, false, "ero_scene_001.ks", "*気絶", maid.status.guid, "");
                     }
                     if (i == 7)
                     {
@@ -228,7 +228,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                     }
                     if (i == 8)
                     {
-                        GameMain.Instance.ScriptMgr.LoadMotionScript(0, false, "ero_scene_001.ks", "*気絶", maid.status.guid, "");
+                        Core.CharacterHandling.LoadMotionScript(0, false, "ero_scene_001.ks", "*気絶", maid.status.guid, "");
                     }
                     if (i == 9)
                     {

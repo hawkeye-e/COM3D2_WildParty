@@ -168,14 +168,14 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         //The original system use its own array position to locate the maid or man game object and assign motion or related stuff. We need to spoof to redirect it to assign to a different game object for those background groups.
         [HarmonyPrefix]
         [HarmonyPatch(typeof(ScriptManager), nameof(ScriptManager.LoadMotionScript))]
-        private static void LoadMotionScriptPre(int sloat, bool is_next, string file_name, string label_name, string maid_guid, string man_guid, bool face_fix, bool valid_pos, bool disable_diff_pos, bool body_mix_ok)
+        private static void LoadMotionScriptPre(int sloat, bool is_next, string file_name, string label_name, string maid_guid, string man_guid, bool face_fix, bool valid_pos, bool disable_diff_pos)
         {
             Patches.StartSpoofingLoadMotionScript(label_name, maid_guid, man_guid);
         }
 
         [HarmonyPostfix]
         [HarmonyPatch(typeof(ScriptManager), nameof(ScriptManager.LoadMotionScript))]
-        private static void LoadMotionScriptPost(int sloat, bool is_next, string file_name, string label_name, string maid_guid, string man_guid, bool face_fix, bool valid_pos, bool disable_diff_pos, bool body_mix_ok)
+        private static void LoadMotionScriptPost(int sloat, bool is_next, string file_name, string label_name, string maid_guid, string man_guid, bool face_fix, bool valid_pos, bool disable_diff_pos)
         {
             Patches.EndSpoofingLoadMotionScript();
         }

@@ -439,10 +439,9 @@ namespace COM3D2.WildParty.Plugin.Core
                 {
 
                     if (isMan)
-                        GameMain.Instance.ScriptMgr.LoadMotionScript(0, false, scriptFile, scriptLabel, "", maid.status.guid, false, false, false, false);
+                        CharacterHandling.LoadMotionScript(0, false, scriptFile, scriptLabel, "", maid.status.guid, false, false, false, false);
                     else
-                        GameMain.Instance.ScriptMgr.LoadMotionScript(0, false, scriptFile, scriptLabel, maid.status.guid, "", false, false, false, false);
-
+                        CharacterHandling.LoadMotionScript(0, false, scriptFile, scriptLabel, maid.status.guid, "", false, false, false, false);
                 }
 
                 if (!string.IsNullOrEmpty(motionTag) && !string.IsNullOrEmpty(motionFile))
@@ -572,7 +571,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
                         Maid maid = group.Maid1;
 
-                        GameMain.Instance.ScriptMgr.LoadMotionScript(0, false, step.GroupData[i].ScriptFile, step.GroupData[i].ScriptLabel, group.Maid1.status.guid, manID,
+                        CharacterHandling.LoadMotionScript(0, false, step.GroupData[i].ScriptFile, step.GroupData[i].ScriptLabel, group.Maid1.status.guid, manID,
                             false, false, false, false);
 
                     }

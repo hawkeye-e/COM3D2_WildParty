@@ -205,7 +205,12 @@ namespace COM3D2.WildParty.Plugin
         private void ReloadAnimationForMaid(Maid maid)
         {
             if (maid != null)
-                maid.body0.ReloadAnimation();
+            {
+                if (!string.IsNullOrEmpty(maid.body0.LastAnimeFN))
+                {
+                    maid.body0.CrossFade(maid.body0.LastAnimeFN, GameUty.FileSystem, additive: false, loop: true, boAddQue: false, 0f);
+                }
+            }
         }
 
         public void DetachAllIK()

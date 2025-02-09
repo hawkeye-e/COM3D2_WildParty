@@ -263,8 +263,8 @@ namespace COM3D2.WildParty.Plugin.Core
                         if(motionSettings.PreMoveMotion.WaitingMotionBeforeMovement != null)
                             if (motionSettings.PreMoveMotion.WaitingMotionBeforeMovement.Motion != null)
                             {
-                                GameMain.Instance.ScriptMgr.LoadMotionScript(0, false, motionSettings.PreMoveMotion.WaitingMotionBeforeMovement.Motion.ScriptFile,
-                                    motionSettings.PreMoveMotion.WaitingMotionBeforeMovement.Motion.ScriptLabel, 
+                                CharacterHandling.LoadMotionScript(0, false, motionSettings.PreMoveMotion.WaitingMotionBeforeMovement.Motion.ScriptFile,
+                                    motionSettings.PreMoveMotion.WaitingMotionBeforeMovement.Motion.ScriptLabel,
                                     group.Maid1.status.guid, group.Man1.status.guid, false, false, false, false);
                             }
             }
