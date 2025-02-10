@@ -68,12 +68,16 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
             Patches.SpoofFileExistence(file_name, ref __result);
         }
 
+#if COM3D2_5
+#if UNITY_2022_3
         [HarmonyPostfix]
         [HarmonyPatch(typeof(ExportCMUtility.FileSystemKCESExport), nameof(ExportCMUtility.FileSystemKCESExport.IsExistentFile))]
         private static void ExportCMUtility_FileSystem_KCESExportIsExistentFilePost(string internalName, ref bool __result)
         {
             Patches.SpoofFileExistence(internalName, ref __result);
         }
+#endif
+#endif
 
         //Patch the result to entertain some special flag checking defined by the mod
         [HarmonyPostfix]

@@ -82,7 +82,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
             StateManager.Instance.IsInjectScheduleOptionsFinish = true;
         }
 
-
+#if COM3D2_5
+#if UNITY_2022_3
         internal static Texture2D LoadModScenarioIcon(string fileName)
         {
             if (Constant.ModIconNames.Contains(fileName))
@@ -99,8 +100,33 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                 return tex;
             }
 
+
             return null;
         }
+#endif
+#endif
+
+#if COM3D2
+        internal static Texture2D LoadModScenarioIcon(string fileName)
+        {
+            if (Constant.ModIconNames.Contains(fileName))
+            {
+                System.IO.MemoryStream mStream = new System.IO.MemoryStream();
+                if (fileName == ModResources.ImageResources.OrgyPartyIconFileName)
+                    ModResources.ImageResources.icon_orgy.Save(mStream, ModResources.ImageResources.icon_orgy.RawFormat);
+                else if (fileName == ModResources.ImageResources.HaremKingIconFileName)
+                    ModResources.ImageResources.icon_harem_king.Save(mStream, ModResources.ImageResources.icon_harem_king.RawFormat);
+
+                Texture2D tex = new Texture2D(64, 64);
+                tex.LoadImage(mStream.ToArray());
+
+                return tex;
+            }
+
+            return null;
+        }
+#endif
+
 
         internal static void SpoofFileExistence(string fileName, ref bool isExist)
         {

@@ -221,11 +221,23 @@ namespace COM3D2.WildParty.Plugin
             DetachAllIK(Man2);
         }
 
+#if COM3D2_5
+#if UNITY_2022_3
         private void DetachAllIK(Maid maid)
         {
             if (maid != null)
                 maid.body0.fullBodyIK.AllIKDetach();
         }
+#endif
+#endif
+
+#if COM3D2
+        private void DetachAllIK(Maid maid)
+        {
+            if (maid != null)
+                maid.AllIKDetach();
+        }
+#endif
 
         //For debug use
         public override string ToString()

@@ -744,6 +744,8 @@ namespace COM3D2.WildParty.Plugin.Core
             return null;
         }
 
+#if COM3D2_5
+#if UNITY_2022_3
         internal static void IKAttachBone(KagTagSupport tag_data, Maid source, Maid target)
         {
             string ik_name = tag_data.GetTagProperty("srcbone").AsString();
@@ -751,6 +753,59 @@ namespace COM3D2.WildParty.Plugin.Core
             iKAttachParam.targetBoneName = tag_data.GetTagProperty("targetbone").AsString();
             source.body0.fullBodyIK.IKAttach(ik_name, iKAttachParam);
         }
+#endif
+#endif
+
+#if COM3D2
+        //Code copied from Kiss to evade the GetMaidAndMan
+        internal static void IKAttachBone(KagTagSupport tag_data, Maid source, Maid target)
+        {
+            string ik_name = tag_data.GetTagProperty("srcbone").AsString();
+            string targetBoneName = tag_data.GetTagProperty("targetbone").AsString();
+
+            IKCtrlData iKData = source.IKCtrl.GetIKData(ik_name);
+
+            Vector3 offset = Vector3.zero;
+            if (tag_data.IsValid("offsetx"))
+            {
+                offset.x = tag_data.GetTagProperty("offsetx").AsReal();
+            }
+            if (tag_data.IsValid("offsety"))
+            {
+                offset.y = tag_data.GetTagProperty("offsety").AsReal();
+            }
+            if (tag_data.IsValid("offsetz"))
+            {
+                offset.z = tag_data.GetTagProperty("offsetz").AsReal();
+            }
+
+            IKCtrlData.IKAttachType iKAttachType = IKCtrlData.IKAttachType.Point;
+            if (tag_data.IsValid("attach_type"))
+            {
+                iKAttachType = (IKCtrlData.IKAttachType)Enum.Parse(typeof(IKCtrlData.IKAttachType), tag_data.GetTagProperty("attach_type").AsString());
+            }
+            if (iKAttachType == IKCtrlData.IKAttachType.NewPoint)
+            {
+                if (tag_data.IsValid("offset_world"))
+                {
+                    iKData.posOffsetType = IKCtrlData.PosOffsetType.OffsetWorld;
+                }
+                else if (tag_data.IsValid("offset_bone"))
+                {
+                    iKData.posOffsetType = IKCtrlData.PosOffsetType.OffsetBone;
+                }
+            }
+            iKData.GetIKEnable(iKAttachType).Recet();
+            if (iKAttachType == IKCtrlData.IKAttachType.NewPoint && iKData is HandFootIKData)
+            {
+                HandFootIKData handFootIKData = iKData as HandFootIKData;
+                handFootIKData.SetPullState(!tag_data.IsValid("pull_off"));
+            }
+
+            source.IKTargetToBone(ik_name, target, targetBoneName, offset, iKAttachType, false, false);
+
+        }
+#endif
 
         internal static void SetDefaultGroupFormation()
         {
@@ -781,7 +836,15 @@ namespace COM3D2.WildParty.Plugin.Core
         //function definition copied from KISS code. All load motion script call from the mod should call here so that there is no need to handle the V2 compatible version everywhere
         internal static void LoadMotionScript(int sloat, bool is_next, string file_name, string label_name = "", string maid_guid = "", string man_guid = "", bool face_fix = false, bool valid_pos = true, bool disable_diff_pos = false, bool body_mix_ok = false)
         {
+#if COM3D2_5
+#if UNITY_2022_3
             GameMain.Instance.ScriptMgr.LoadMotionScript(sloat, is_next, file_name, label_name, maid_guid, man_guid, face_fix, valid_pos, disable_diff_pos, body_mix_ok);
+#endif
+#endif
+
+#if COM3D2
+            GameMain.Instance.ScriptMgr.LoadMotionScript(sloat, is_next, file_name, label_name, maid_guid, man_guid, face_fix, valid_pos, disable_diff_pos);
+#endif
         }
     }
 }
