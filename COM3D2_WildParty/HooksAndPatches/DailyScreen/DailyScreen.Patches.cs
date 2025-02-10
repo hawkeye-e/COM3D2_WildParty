@@ -66,10 +66,10 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                 newScenario.condManVisibleFlag1 = new List<string>();
                 newScenario.condManFlag0 = new List<string>();
                 newScenario.condManFlag1 = new List<string>();
-                newScenario.condPersonal = new List<int>();
+                newScenario.condPersonal = scenario.Personality;
                 newScenario.condInfo = scenario.ConditionInfoText;
                 newScenario.condRelationOld = new List<MaidStatus.Old.Relation>();
-                newScenario.pairCondPersonal = scenario.Personality;
+                newScenario.pairCondPersonal = new List<int>(); 
                 newScenario.condFacilityID = new List<List<int>>();
 
                 Schedule.ScheduleCSVData.YotogiData.Add(scenario.ScenarioID, newScenario);
