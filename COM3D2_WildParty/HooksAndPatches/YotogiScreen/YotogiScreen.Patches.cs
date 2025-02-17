@@ -519,7 +519,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                                         {
                                             //we want to replace it with a chopped audio clip, do not let the system to continue processing in the original way
                                             PersonalityVoice.OrgasmScreamEntry voiceEntry = voiceList.First();
-                                            Helper.AudioChoppingManager.PlaySubClip(targetMaid, "", voiceEntry.FileName, 0, voiceEntry.ChoppingTime);
+                                            Helper.AudioChoppingManager.PlaySubClip(targetMaid, "", voiceEntry.FileName, voiceEntry.StartTime, voiceEntry.EndTime);
                                             
                                             f_strFileName = "";
                                             f_bLoop = false;

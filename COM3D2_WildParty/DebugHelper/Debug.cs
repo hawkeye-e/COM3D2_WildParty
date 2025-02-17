@@ -15,13 +15,15 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
         public static void MapAvailableSkillForMaid(Maid maid)
         {
             Dictionary<string, int> mylist = new Dictionary<string, int>();
-            mylist.Add("セックス正常位", -1);
-            mylist.Add("アナルセックス正常位", -1);
-            mylist.Add("セックス後背位", -1);
-            mylist.Add("アナルセックス後背位", -1);
-            mylist.Add("ダブルフェラ", -1);
-            mylist.Add("セルフイラマ", -1);
-            
+            mylist.Add("寝取らせ輪姦4P奉仕", -1);
+            mylist.Add("寝取らせ輪姦3P両穴駅弁", -1);
+            mylist.Add("寝取らせ輪姦3P両穴後背位", -1);
+            mylist.Add("寝取らせ輪姦3P両穴セックス", -1);
+            mylist.Add("【ドスケベビッチ】乱交4P奉仕", -1);
+            mylist.Add("【ドスケベビッチ】乱交3P2穴駅弁", -1);
+            mylist.Add("【ドスケベビッチ】乱交4P台上正常位", -1);
+            mylist.Add("【ドスケベビッチ】乱交4P台上アナル正常位", -1);
+
 
 
 

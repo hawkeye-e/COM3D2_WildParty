@@ -80,6 +80,8 @@ namespace COM3D2.WildParty.Plugin
                 InitDataForOrgyParty();
             else if (scenarioID == ScenarioIDList.HaremKingScenarioID)
                 InitDataForHaremKing();
+            else if (scenarioID == ScenarioIDList.HappyGBClubScenarioID)
+                InitDataForHappyGBClub();
         }
 
         private static void ResetModUseData()
@@ -95,7 +97,7 @@ namespace COM3D2.WildParty.Plugin
         {
             ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.OrgyPartyScenarioID);
 
-            InitBackgroundMotionDictionary(ModResources.TextResource.SexPosList_OrgyParty, ModResources.TextResource.SexPosValidLabels_OrgyParty);
+            InitBackgroundMotionDictionary(ModResources.TextResource.SexPosList_OrgyParty, ModResources.TextResource.SexPosValidLabels_OrgyParty, ModResources.TextResource.SexPosSpecialLabels_OrgyParty);
             ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.TextResource.SexPosList_OrgyParty);
 
             InitAllVoiceDataFromCSV();
@@ -108,7 +110,7 @@ namespace COM3D2.WildParty.Plugin
         {
             ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.HaremKingScenarioID);
 
-            InitBackgroundMotionDictionary(ModResources.TextResource.SexPosList_HaremKing, ModResources.TextResource.SexPosValidLabels_HaremKing);
+            InitBackgroundMotionDictionary(ModResources.TextResource.SexPosList_HaremKing, ModResources.TextResource.SexPosValidLabels_HaremKing, ModResources.TextResource.SexPosSpecialLabels_HaremKing);
             ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.TextResource.SexPosList_HaremKing);
 
             InitAllVoiceDataFromCSV();
@@ -117,6 +119,18 @@ namespace COM3D2.WildParty.Plugin
             PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.TextResource.PartyGroupSetup_HaremKing);
         }
 
+        private static void InitDataForHappyGBClub()
+        {
+            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.HappyGBClubScenarioID);
+
+            InitBackgroundMotionDictionary(ModResources.TextResource.SexPosList_HappyGBClub, ModResources.TextResource.SexPosValidLabels_HappyGBClub, ModResources.TextResource.SexPosSpecialLabels_HappyGBClub);
+            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.TextResource.SexPosList_HappyGBClub);
+
+            InitAllVoiceDataFromCSV();
+            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.HappyGBClubYotogiMapCoordinates);
+
+            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.TextResource.PartyGroupSetup_HappyGBClub);
+        }
 
         private static void InitAllVoiceDataFromCSV()
         {
@@ -167,10 +181,16 @@ namespace COM3D2.WildParty.Plugin
             PersonalityVoiceList.Add(personalityID, voiceData);
         }
 
-        private static void InitBackgroundMotionDictionary(string resSexPos, string resLabel)
+        private static void InitBackgroundMotionDictionary(string resSexPos, string resLabel, string specialLabel)
         {
+            //Common label
             BackgroundMotionList = BackgroundGroupMotion.ReadSexPosListCSVFile(resSexPos, resLabel);
-            List<MotionSpecialLabel> lstAll = MotionSpecialLabel.ReadCSVFile(ModResources.TextResource.SexPosSpecialLabels);
+
+            //Special label
+            if (string.IsNullOrEmpty(specialLabel))
+                return;
+
+            List<MotionSpecialLabel> lstAll = MotionSpecialLabel.ReadCSVFile(specialLabel);
 
             foreach(var kvp in BackgroundMotionList)
             {

@@ -156,7 +156,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
 
                 Helper.AudioChoppingManager.PlaySubClip(maid, "", DebugHelper.DebugState.Instance.DebugVoiceFileInQuestion[DebugHelper.DebugState.Instance.DebugUseVoiceFileArrayIndex],
                     DebugHelper.DebugState.Instance.DebugSubclipAudioStartTime, DebugHelper.DebugState.Instance.DebugSubclipAudioEndTime);
-
+                WildParty.Log.LogInfo("Current File: " + DebugHelper.DebugState.Instance.DebugVoiceFileInQuestion[DebugHelper.DebugState.Instance.DebugUseVoiceFileArrayIndex]
+                    + " StartTime: " + DebugHelper.DebugState.Instance.DebugSubclipAudioStartTime + ", EndTime: " + DebugHelper.DebugState.Instance.DebugSubclipAudioEndTime);
             }
             else if (Input.GetKeyDown(KeyCode.Period))
             {

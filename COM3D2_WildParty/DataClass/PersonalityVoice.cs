@@ -27,7 +27,8 @@ namespace COM3D2.WildParty.Plugin
             public string Personality;
             public string Type;
             public string FileName;
-            public float ChoppingTime;
+            public float StartTime;
+            public float EndTime;
         }
 
         internal enum VoiceEntryType
@@ -80,7 +81,8 @@ namespace COM3D2.WildParty.Plugin
                 data.Personality = rowData[0];
                 data.Type = rowData[1];
                 data.FileName = rowData[2];
-                data.ChoppingTime = float.Parse(rowData[3]);
+                data.StartTime = float.Parse(rowData[3]);
+                data.EndTime = float.Parse(rowData[4]);
 
                 result.Add(data);
             }

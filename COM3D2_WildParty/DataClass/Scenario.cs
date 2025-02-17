@@ -23,10 +23,13 @@ namespace COM3D2.WildParty.Plugin
         public List<MaidStatus.Contract> Contract;
         public List<MaidStatus.Seikeiken> SexExperience;
         public List<MaidStatus.Relation> Relation;
+        public List<MaidStatus.SpecialRelation> SpecialRelation;
         public List<string> ConditionInfoText;
         public List<int> Personality;
-        public List<string> RequireFlag;
-        public List<string> ExcludeFlag;
+        public List<string> MaidRequireFlag;
+        public List<string> MaidExcludeFlag;
+        public List<string> MasterRequireFlag;
+        public List<string> MasterExcludeFlag;
 
         public List<MapInfo> AllowMap;
         public DefaultMapInfo DefaultMap;
@@ -51,8 +54,9 @@ namespace COM3D2.WildParty.Plugin
         private List<string> SexExperienceEnumString;
         [JsonProperty]
         private List<string> RelationEnumString;
+        [JsonProperty]
+        private List<string> SpecialRelationEnumString;
 
-        
 
         internal class MapInfo
         {
@@ -86,12 +90,15 @@ namespace COM3D2.WildParty.Plugin
         {
             if (ConditionInfoText == null) ConditionInfoText = new List<string>();
             if (Personality == null) Personality = new List<int>();
-            if (RequireFlag == null) RequireFlag = new List<string>();
-            if (ExcludeFlag == null) ExcludeFlag = new List<string>();
+            if (MaidRequireFlag == null) MaidRequireFlag = new List<string>();
+            if (MaidExcludeFlag == null) MaidExcludeFlag = new List<string>();
+            if (MasterRequireFlag == null) MasterRequireFlag = new List<string>();
+            if (MasterExcludeFlag == null) MasterExcludeFlag = new List<string>();
 
             Contract = new List<MaidStatus.Contract>();
             SexExperience = new List<MaidStatus.Seikeiken>();
             Relation = new List<MaidStatus.Relation>();
+            SpecialRelation = new List<MaidStatus.SpecialRelation>();
 
             //convert all the enum string to enum
             YotogiType = (Schedule.ScheduleCSVData.YotogiType)Enum.Parse(typeof(Schedule.ScheduleCSVData.YotogiType), YotogiTypeEnumString, true);
@@ -111,6 +118,11 @@ namespace COM3D2.WildParty.Plugin
             if (RelationEnumString != null)
                 foreach (string s in RelationEnumString)
                     Relation.Add((MaidStatus.Relation)Enum.Parse(typeof(MaidStatus.Relation), s, true));
+
+            if (SpecialRelationEnumString != null)
+                foreach (string s in SpecialRelationEnumString)
+                    SpecialRelation.Add((MaidStatus.SpecialRelation)Enum.Parse(typeof(MaidStatus.SpecialRelation), s, true));
+            
         }
     }
 }

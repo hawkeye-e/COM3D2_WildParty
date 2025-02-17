@@ -12,6 +12,7 @@ namespace COM3D2.WildParty.Plugin
         public Maid Maid2;
         public Maid Man1 = null;
         public Maid Man2 = null;
+        public Maid Man3 = null;
         public string Maid1CurrentAudioFile = "";
         public string Maid2CurrentAudioFile = "";
         public Vector3 GroupPosition = Vector3.zero;
@@ -67,6 +68,7 @@ namespace COM3D2.WildParty.Plugin
                 int count = 0;
                 if (Man1 != null) count++;
                 if (Man2 != null) count++;
+                if (Man3 != null) count++;
                 return count;
             }
         }
@@ -77,6 +79,7 @@ namespace COM3D2.WildParty.Plugin
             {
                 if (MaidCount == 2 && ManCount == 1) return Constant.GroupType.FFM;
                 else if (MaidCount == 1 && ManCount == 2) return Constant.GroupType.MMF;
+                else if (MaidCount == 1 && ManCount == 3) return Constant.GroupType.MMMF;
                 else if (MaidCount == 1 && ManCount == 1) return Constant.GroupType.MF;
                 else
                     return "";
@@ -126,6 +129,27 @@ namespace COM3D2.WildParty.Plugin
             SetCharacterPosition(Maid2);
             SetCharacterPosition(Man1);
             SetCharacterPosition(Man2);
+            SetCharacterPosition(Man3);
+        }
+
+        public Maid GetMaidAtIndex(int index)
+        {
+            if (index == 0)
+                return Maid1;
+            else if (index == 1)
+                return Maid2;
+            return null;
+        }
+
+        public Maid GetManAtIndex(int index)
+        {
+            if (index == 0)
+                return Man1;
+            else if (index == 1)
+                return Man2;
+            else if (index == 2)
+                return Man3;
+            return null;
         }
 
         private void SetCharacterPosition(Maid maid)
@@ -183,6 +207,7 @@ namespace COM3D2.WildParty.Plugin
             ReloadAnimationForMaid(Maid2);
             ReloadAnimationForMaid(Man1);
             ReloadAnimationForMaid(Man2);
+            ReloadAnimationForMaid(Man3);
         }
 
         public bool IsChangeMotionLabel()
@@ -219,6 +244,7 @@ namespace COM3D2.WildParty.Plugin
             DetachAllIK(Maid2);
             DetachAllIK(Man1);
             DetachAllIK(Man2);
+            DetachAllIK(Man3);
         }
 
 #if COM3D2_5
@@ -247,6 +273,7 @@ namespace COM3D2.WildParty.Plugin
             if (Maid2 != null) output += "Maid2: " + Maid2.status.fullNameJpStyle + ", ";
             if (Man1 != null) output += "Man1: " + Man1.status.fullNameJpStyle + ", ";
             if (Man2 != null) output += "Man2: " + Man2.status.fullNameJpStyle + ", ";
+            if (Man3 != null) output += "Man3: " + Man3.status.fullNameJpStyle + ", ";
             return output;
         }
 

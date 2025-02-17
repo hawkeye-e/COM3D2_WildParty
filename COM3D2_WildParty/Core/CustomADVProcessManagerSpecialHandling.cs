@@ -26,6 +26,9 @@ namespace COM3D2.WildParty.Plugin.Core
                 case "haremking_start_yotogiplay":
                     ProcessADV_Step_HaremKing_YotogiPlay(instance, step);
                     break;
+                case "hgbc_start_yotogiplay":
+                    ProcessADV_Step_HappyGBClub_YotogiPlay(instance, step);
+                    break;
             }
         }
 
@@ -84,6 +87,10 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 CharacterHandling.AssignPartyGroupingRandom();
 
+                YotogiHandling.SetupYotogiSceneInitialSkill(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
+
+                CharacterHandling.SetGroupZeroActive();
+
                 YotogiHandling.InitYotogiData();
 
 
@@ -103,6 +110,10 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 CharacterHandling.AssignPartyGrouping(PartyGroup.CurrentFormation);
 
+                YotogiHandling.SetupYotogiSceneInitialSkill(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
+
+                CharacterHandling.SetGroupZeroActive();
+
                 YotogiHandling.InitYotogiData();
 
 
@@ -110,6 +121,30 @@ namespace COM3D2.WildParty.Plugin.Core
             });
 
         }
+
+        private static void ProcessADV_Step_HappyGBClub_YotogiPlay(ADVKagManager instance, ADVStep step)
+        {
+            StateManager.Instance.ModEventProgress = Constant.EventProgress.YotogiInit;
+
+            GameMain.Instance.MainCamera.FadeOut(f_dg: delegate
+            {
+                CharacterHandling.SetDefaultGroupFormation();
+
+                CharacterHandling.AssignPartyGrouping(PartyGroup.CurrentFormation);
+
+                YotogiHandling.SetupYotogiSceneInitialSkill(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
+
+                CharacterHandling.SetGroupZeroActive();
+
+                YotogiHandling.InitYotogiData();
+
+
+                GameMain.Instance.LoadScene(step.Tag);
+            });
+
+        }
+
         
+
     }
 }

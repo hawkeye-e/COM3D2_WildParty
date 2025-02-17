@@ -712,7 +712,7 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             //Prevent error in the case of before the maid list initialized
             if (StateManager.Instance.SelectedMaidsList.Count > 0)
-            {
+            {       
                 System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(Constant.JsonReplaceTextLabels.RandomGroupRegex, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
                 var matches = regex.Matches(text);
                 foreach (System.Text.RegularExpressions.Match match in matches)
@@ -724,11 +724,13 @@ namespace COM3D2.WildParty.Plugin.Core
                     else if (match.Groups[2].Value == "Maid2Name")
                         text = text.Replace(match.Groups[0].Value, group.Maid2.status.callName);
                 }
-
-                text = text.Replace(Constant.JsonReplaceTextLabels.MaidZeroName, StateManager.Instance.SelectedMaidsList[0].status.callName)
-                            .Replace(Constant.JsonReplaceTextLabels.MaidOneName, StateManager.Instance.SelectedMaidsList[1].status.callName)
-                            .Replace(Constant.JsonReplaceTextLabels.MaidTwoName, StateManager.Instance.SelectedMaidsList[2].status.callName)
-                    ;
+                
+                text = text.Replace(Constant.JsonReplaceTextLabels.MaidZeroName, StateManager.Instance.SelectedMaidsList[0].status.callName);
+                if (StateManager.Instance.SelectedMaidsList.Count >= 2)
+                    text = text.Replace(Constant.JsonReplaceTextLabels.MaidOneName, StateManager.Instance.SelectedMaidsList[1].status.callName);
+                if (StateManager.Instance.SelectedMaidsList.Count >= 3)
+                    text = text.Replace(Constant.JsonReplaceTextLabels.MaidTwoName, StateManager.Instance.SelectedMaidsList[2].status.callName);
+                
             }
             text = text.Replace(Constant.JsonReplaceTextLabels.ClubName, GameMain.Instance.CharacterMgr.status.clubName);
             return text;

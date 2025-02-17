@@ -1,0 +1,77 @@
+{
+  "hgbc0001": {
+    "ID": "hgbc0001",
+    "Type": "BG",
+    "Tag": "",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc0001_init_chara"
+  },
+
+  "hgbc0001_init_chara": {
+    "ID": "hgbc0001_init_chara",
+    "Type": "CharaInit",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc0001_init_hide_men",
+    "CharaInitData": {
+      "IsClubOwnerMainCharacter": false,
+      "ManRequired": 8
+    }
+  },
+
+  "hgbc0001_init_hide_men": {
+    "ID": "hgbc0001_init_hide_men",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_intro_0001",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": false
+      }
+    ]
+  },
+
+  "hgbc_intro_0001": {
+    "ID": "hgbc_intro_0001",
+    "Type": "BGM",
+    "Tag": "BGM013.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_0002"
+  },
+
+  "hgbc_intro_0002": {
+    "ID": "hgbc_intro_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_yotogiplay_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ある晩、[=Maid0Name]が接待中のお客さんがが俺に会いたいと言ってきた。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+
+  "hgbc_intro_yotogiplay_closepanel": {
+    "ID": "hgbc_intro_yotogiplay_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_start_yotogiplay"
+  },
+
+  "hgbc_start_yotogiplay": {
+    "ID": "hgbc_start_yotogiplay",
+    "Type": "Special",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "PostYotogi": { "IsKeepCharacterVisible": false },
+    "NextStepID": "hgbc_postyotogi_init"
+  }
+
+}

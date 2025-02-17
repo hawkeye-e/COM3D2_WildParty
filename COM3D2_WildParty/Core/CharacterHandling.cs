@@ -144,32 +144,36 @@ namespace COM3D2.WildParty.Plugin.Core
                     lstMaid.Add(scheduleSlot);
             }
 
-            bool isLockParameters = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First().LockParameters;
+            Scenario scenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
+            bool isLockParameters = scenario.LockParameters;
 
             int maidCounter = 1;
             Maid mainMaid = GameMain.Instance.CharacterMgr.GetMaid(0);
 
             StateManager.Instance.SelectedMaidsList.Add(mainMaid);
             StateManager.Instance.YotogiProgressInfoList.Add(mainMaid.status.guid, new YotogiProgressInfo());
-            foreach (var maid in lstMaid)
+
+            if (scenario.IsGroupEvent)
             {
-                if (Schedule.ScheduleAPI.GetScheduleId(maid, GameMain.Instance.CharacterMgr.status.isDaytime) == StateManager.Instance.UndergoingModEventID)
+                foreach (var maid in lstMaid)
                 {
-                    if (maid.status.guid != mainMaid.status.guid)
+                    if (Schedule.ScheduleAPI.GetScheduleId(maid, GameMain.Instance.CharacterMgr.status.isDaytime) == StateManager.Instance.UndergoingModEventID)
                     {
-                        //this maid is set to the the event
-                        StateManager.Instance.SelectedMaidsList.Add(maid);
-                        StateManager.Instance.YotogiProgressInfoList.Add(maid.status.guid, new YotogiProgressInfo());
-                        InitMaid(maid);
+                        if (maid.status.guid != mainMaid.status.guid)
+                        {
+                            //this maid is set to the the event
+                            StateManager.Instance.SelectedMaidsList.Add(maid);
+                            StateManager.Instance.YotogiProgressInfoList.Add(maid.status.guid, new YotogiProgressInfo());
+                            InitMaid(maid);
 
-                        //Based on the scenario setting also set whether the maid could have her parameters changed in yotogi
-                        maid.status.enabledYotogiStatusLock = isLockParameters;
+                            //Based on the scenario setting also set whether the maid could have her parameters changed in yotogi
+                            maid.status.enabledYotogiStatusLock = isLockParameters;
 
-                        maidCounter++;
+                            maidCounter++;
+                        }
                     }
                 }
             }
-
 
         }
 
@@ -323,8 +327,6 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
             }
 
-            //now for group 0, we have to set the call the SetActive function from the original code
-            SetGroupZeroActive();
         }
 
         internal static void AssignPartyGroupingBySetupInfo(string formationID, bool retainMaidZero = false)
@@ -368,6 +370,8 @@ namespace COM3D2.WildParty.Plugin.Core
                     newGroup.Man1 = StateManager.Instance.MenList[manRunningNumber++];
                 if (groupSetupInfo.ManCount >= 2)
                     newGroup.Man2 = StateManager.Instance.MenList[manRunningNumber++];
+                if (groupSetupInfo.ManCount >= 3)
+                    newGroup.Man3 = StateManager.Instance.MenList[manRunningNumber++];
 
                 newGroup.IsAutomatedGroup = groupSetupInfo.IsAutomatedGroup;
                 
@@ -377,7 +381,6 @@ namespace COM3D2.WildParty.Plugin.Core
                     break;
             }
 
-            SetGroupZeroActive();
         }
 
         internal static void AssignPartyGrouping_SwapMember(Maid maid1, Maid maid2)
@@ -437,8 +440,9 @@ namespace COM3D2.WildParty.Plugin.Core
         }
 
         //Special handling for the User control group to make sure the system is referencing the correct maids and men
-        private static void SetGroupZeroActive()
+        internal static void SetGroupZeroActive()
         {
+            
             //back up the maid[0], maid[1], and man[1], we will have to set the gameobject visible later. No need for man[0] since he will be the temp protagonist in the yotogi scenario.
             Maid backupMaid0 = GameMain.Instance.CharacterMgr.GetMaid(0);
             Maid backupMaid1 = GameMain.Instance.CharacterMgr.GetMaid(1);
@@ -448,17 +452,19 @@ namespace COM3D2.WildParty.Plugin.Core
             UnlinkMaid(backupMaid1);
 
             PartyGroup group = StateManager.Instance.PartyGroupList[0];
-
+            PlayableSkill.SkillItem skill = Util.GetGroupCurrentSkill(group);
+            
             //Set the spoof flag so that the while object doesnt go through the whole initialization process again
             StateManager.Instance.SpoofActivateMaidObjectFlag = true;
 
             //assign the selected maid and man to the system array.
-            GameMain.Instance.CharacterMgr.SetActiveMaid(group.Maid1, 0);
-            GameMain.Instance.CharacterMgr.SetActiveMan(group.Man1, 0);
-            if (group.Maid2 != null)
-                GameMain.Instance.CharacterMgr.SetActiveMaid(group.Maid2, 1);
-            if (group.Man2 != null)
-                GameMain.Instance.CharacterMgr.SetActiveMan(group.Man2, 1);
+            for (int i=0; i< skill.MaidIndex.Count; i++)
+                if(group.GetMaidAtIndex(i) != null)
+                    GameMain.Instance.CharacterMgr.SetActiveMaid(group.GetMaidAtIndex(i), skill.MaidIndex[i]);
+
+            for (int i = 0; i < skill.ManIndex.Count; i++)
+                if (group.GetManAtIndex(i) != null)
+                    GameMain.Instance.CharacterMgr.SetActiveMan(group.GetManAtIndex(i), skill.ManIndex[i]);
 
             StateManager.Instance.SpoofActivateMaidObjectFlag = false;
         }
@@ -559,7 +565,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 if (voiceList != null && voiceList.Count > 0)
                 {
                     PersonalityVoice.OrgasmScreamEntry voiceEntry = voiceList.First();
-                    Helper.AudioChoppingManager.PlaySubClip(maid, "", voiceEntry.FileName, 0, voiceEntry.ChoppingTime);
+                    Helper.AudioChoppingManager.PlaySubClip(maid, "", voiceEntry.FileName, voiceEntry.StartTime, voiceEntry.EndTime);
                     return true;
                 }
             }

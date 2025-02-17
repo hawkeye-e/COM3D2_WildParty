@@ -16,6 +16,9 @@ namespace COM3D2.WildParty.Plugin
             public int Order;
             public bool IsDialogueAllowed;
             public bool IsChoosable;
+            public int Phase;
+            public List<int> MaidIndex;
+            public List<int> ManIndex;
         }
 
         private class CSVParse
@@ -28,6 +31,9 @@ namespace COM3D2.WildParty.Plugin
             public int PersonalityType;
             public bool IsDialogueAllowed;
             public bool IsChoosable;
+            public int Phase;
+            public string MaidIndexRaw;
+            public string ManIndexRaw;
         }
 
 
@@ -61,6 +67,9 @@ namespace COM3D2.WildParty.Plugin
                 data.Order = int.Parse(rowData[5]);
                 data.IsDialogueAllowed = bool.Parse( rowData[29]);
                 data.IsChoosable = bool.Parse(rowData[30]);
+                data.Phase = int.Parse(rowData[31]);
+                data.MaidIndexRaw = rowData[32];
+                data.ManIndexRaw = rowData[33];
 
                 for (int p = 1; p <= Constant.PersonalityCount; p++)
                 {
@@ -97,6 +106,17 @@ namespace COM3D2.WildParty.Plugin
                 newItem.Order = parseItem.Order;
                 newItem.YotogiSkillID = parseItem.YotogiSkillID;
                 newItem.IsDialogueAllowed = parseItem.IsDialogueAllowed;
+                newItem.Phase = parseItem.Phase;
+                
+                string[] maidIndexSplit = parseItem.MaidIndexRaw.Split(';');
+                newItem.MaidIndex = new List<int>();
+                for (int i = 0; i < maidIndexSplit.Length; i++)
+                    newItem.MaidIndex.Add(int.Parse(maidIndexSplit[i]));
+
+                string[] manIndexSplit = parseItem.ManIndexRaw.Split(';');
+                newItem.ManIndex = new List<int>();
+                for (int i = 0; i < manIndexSplit.Length; i++)
+                    newItem.ManIndex.Add(int.Parse(manIndexSplit[i]));
 
                 result[parseItem.PersonalityType][parseItem.GroupType].Add(newItem);
             }
@@ -115,6 +135,9 @@ namespace COM3D2.WildParty.Plugin
             tmp.YotogiSkillID = yotogiSkillID;
             tmp.IsDialogueAllowed = parse.IsDialogueAllowed;
             tmp.IsChoosable = parse.IsChoosable;
+            tmp.Phase = parse.Phase;
+            tmp.MaidIndexRaw = parse.MaidIndexRaw;
+            tmp.ManIndexRaw = parse.ManIndexRaw;
 
             list.Add(tmp);
         }

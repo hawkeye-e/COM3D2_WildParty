@@ -186,6 +186,11 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>ImageResources.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resx\ScenarioHappyGBClub.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>ScenarioHappyGBClub.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resx\ScenarioHaremKing.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -213,6 +218,11 @@
 	    <CustomToolNamespace>ModResources</CustomToolNamespace>
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>ImageResources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\ScenarioHappyGBClub.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>ScenarioHappyGBClub.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ScenarioResources</CustomToolNamespace>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resx\ScenarioHaremKing.resx">
 	    <CustomToolNamespace>ScenarioResources</CustomToolNamespace>

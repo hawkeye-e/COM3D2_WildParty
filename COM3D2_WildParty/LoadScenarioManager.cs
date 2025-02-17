@@ -70,35 +70,30 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioHaremKing.HaremKingADV_Gyaru,
         };
 
+        private static readonly string[] ScenarioHappyGBClubResList = {
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVIntro
+        };
+
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)
         {
             Dictionary<int, Dictionary<string, ADVStep>> result = new Dictionary<int, Dictionary<string, ADVStep>>();
 
-            if(scenarioID == ScenarioIDList.OrgyPartyScenarioID)
-                result.Add(ScenarioIDList.OrgyPartyScenarioID, LoadOrgyPartyScenario());
-            else if(scenarioID == ScenarioIDList.HaremKingScenarioID)
-            result.Add(ScenarioIDList.HaremKingScenarioID, LoadHaremKingScenario());
+            if (scenarioID == ScenarioIDList.OrgyPartyScenarioID)
+                result.Add(ScenarioIDList.OrgyPartyScenarioID, LoadScenarioFromResources(ScenarioOrgyPartyResList));
+            else if (scenarioID == ScenarioIDList.HaremKingScenarioID)
+                result.Add(ScenarioIDList.HaremKingScenarioID, LoadScenarioFromResources(ScenarioHaremKingResList));
+            else if (scenarioID == ScenarioIDList.HappyGBClubScenarioID)
+                result.Add(ScenarioIDList.HappyGBClubScenarioID, LoadScenarioFromResources(ScenarioHappyGBClubResList));
 
             return result;
         }
 
-        public static Dictionary<string, ADVStep> LoadOrgyPartyScenario()
+        public static Dictionary<string, ADVStep> LoadScenarioFromResources(string[] resArray)
         {
             Dictionary<string, ADVStep> stepData = new Dictionary<string, ADVStep>();
 
-            for(int i=0; i< ScenarioOrgyPartyResList.Length; i++)
-                LoadResourcesFile(stepData, ScenarioOrgyPartyResList[i]);
-
-
-            return stepData;
-        }
-
-        public static Dictionary<string, ADVStep> LoadHaremKingScenario()
-        {
-            Dictionary<string, ADVStep> stepData = new Dictionary<string, ADVStep>();
-
-            for (int i = 0; i < ScenarioHaremKingResList.Length; i++)
-                LoadResourcesFile(stepData, ScenarioHaremKingResList[i]);
+            for (int i = 0; i < resArray.Length; i++)
+                LoadResourcesFile(stepData, resArray[i]);
 
             return stepData;
         }

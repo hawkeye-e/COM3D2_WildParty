@@ -336,29 +336,29 @@ namespace COM3D2.WildParty.Plugin.Core
 
             //Mark the flag to ensure the extra command is added properly
             MarkInjectedButtonsDirty();
-
+            
             int personality = StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id;
             string groupType = StateManager.Instance.PartyGroupList[0].GroupType;
             var selectedSkill = ModUseData.ValidSkillList[personality][groupType].Where(x => x.YotogiSkillID == skillID).First();
 
             StateManager.Instance.PartyGroupList[0].SexPosID = selectedSkill.SexPosID;
             StateManager.Instance.PartyGroupList[0].GroupOffsetVector = Vector3.zero;
-
+            
             if (resetEstrus)
                 Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerEstrusMode).SetValue(false);
-
+            
             var data = Yotogis.Skill.Get(int.Parse(selectedSkill.YotogiSkillID));
-
+            
             //create a new skill array with only the selected skill
             KeyValuePair<Yotogis.Skill.Data, bool>[] kvps = new KeyValuePair<Yotogis.Skill.Data, bool>[1];
             kvps[0] = new KeyValuePair<Yotogis.Skill.Data, bool>(data, true);
             StateManager.Instance.YotogiManager.SetPlaySkillArray(kvps);
 
-
+            
             //reset the playing skill no
             StateManager.Instance.YotogiManager.null_mgr.SetNextLabel("");
             StateManager.Instance.YotogiManager.play_mgr.AdvanceSkillMove();
-
+            
             //refresh the command
             StateManager.Instance.YotogiManager.play_mgr.NextSkill();
 
@@ -375,22 +375,22 @@ namespace COM3D2.WildParty.Plugin.Core
                     break;
                 }
             }
-
+            
             MotionSpecialLabel waitingLabel = motionItem.SpecialLabels.Where(x => x.Type == MotionSpecialLabel.LabelType.Waiting).First();
-
-            if(loadMotionScript)
+            
+            if (loadMotionScript)
                 CharacterHandling.LoadMotionScript(0, false,
                 motionItem.FileName, waitingLabel.Label,
                 "", "", false, false, false, false);
-
+            
             bool isEstrus = Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerEstrusMode).GetValue<bool>();
             CharacterHandling.SetCharacterVoiceEntry(StateManager.Instance.PartyGroupList[0].Maid1, PersonalityVoice.VoiceEntryType.Waiting, StateManager.Instance.PartyGroupList[0].ExcitementLevel, waitingLabel.VoiceType1, isEstrus);
             CharacterHandling.SetCharacterVoiceEntry(StateManager.Instance.PartyGroupList[0].Maid2, PersonalityVoice.VoiceEntryType.Waiting, StateManager.Instance.PartyGroupList[0].ExcitementLevel, waitingLabel.VoiceType2, isEstrus);
-
+            
             StateManager.Instance.PartyGroupList[0].Maid1VoiceType = waitingLabel.VoiceType1;
             if (StateManager.Instance.PartyGroupList[0].Maid2 != null)
                 StateManager.Instance.PartyGroupList[0].Maid2VoiceType = waitingLabel.VoiceType2;
-
+            
             CharacterHandling.SetGroupFace(StateManager.Instance.PartyGroupList[0]);
         }
 
@@ -437,12 +437,17 @@ namespace COM3D2.WildParty.Plugin.Core
             manager.TagPlayBGMRoom(tagBGM);
         }
 
-        internal static void YotogiSkillCall(YotogiManager manager, int defaultSexPosID)
+        internal static void SetupYotogiSceneInitialSkill(int defaultSexPosID)
         {
             PlayableSkill.SkillItem initialSkill;
             initialSkill = GetSkill(StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id, StateManager.Instance.PartyGroupList[0].GroupType, defaultSexPosID);
 
             StateManager.Instance.PartyGroupList[0].SexPosID = initialSkill.SexPosID;
+        }
+
+        internal static void YotogiSkillCall(YotogiManager manager, int defaultSexPosID)
+        {
+            PlayableSkill.SkillItem initialSkill = Util.GetGroupCurrentSkill(StateManager.Instance.PartyGroupList[0]);
             ScriptManagerFast.KagTagSupportFast tag = TagSupportData.ConvertDictionaryToTagSupportType(TagSupportData.GetTagForYotogiSkillPlay(initialSkill.YotogiSkillID));
             manager.TagYotogiCall(tag);
         }

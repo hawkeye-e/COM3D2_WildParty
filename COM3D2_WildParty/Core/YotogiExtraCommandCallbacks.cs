@@ -66,32 +66,36 @@ namespace COM3D2.WildParty.Plugin.Core
                 StateManager.Instance.SpoofActivateMaidObjectFlag = true;
                 GameMain.Instance.CharacterMgr.SetActiveMaid(selectedMaid, 0);
                 StateManager.Instance.SpoofActivateMaidObjectFlag = false;
-
+                
                 CharacterHandling.StopCurrentAnimation();
 
                 if(string.IsNullOrEmpty(formationID))
                     CharacterHandling.AssignPartyGroupingRandom(true);
                 else
                     CharacterHandling.AssignPartyGroupingBySetupInfo(formationID, true);
+                
+                YotogiHandling.SetupYotogiSceneInitialSkill(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
+                CharacterHandling.SetGroupZeroActive();
+                
                 BackgroundGroupMotionManager.InitNextReviewTimer();
                 YotogiHandling.UpdateParameterView(StateManager.Instance.PartyGroupList[0].Maid1);
-
+                
                 //need to update the main group
                 //var initialSkill = YotogiHandling.GetRandomSkill(StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id, StateManager.Instance.PartyGroupList[0].GroupType);
                 var initialSkill = YotogiHandling.GetSkill(StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id, StateManager.Instance.PartyGroupList[0].GroupType, initialSexPosID);
                 CharacterHandling.CleanseCharacterMgrArray();
                 YotogiHandling.ChangeMainGroupSkill(initialSkill.YotogiSkillID);
-
+                
                 YotogiHandling.SetGroupToScene();
 
 
 
                 Util.ResetAllGroupPosition();
-
+                
                 CameraHandling.SetCameraLookAt(StateManager.Instance.PartyGroupList[0].Maid1);
 
                 StateManager.Instance.ExtraCommandWindow.SetVisible(false);
-
+                
             });
             GameMain.Instance.MainCamera.FadeIn(ConfigurableValue.CameraFadeTime);
         }
@@ -105,6 +109,9 @@ namespace COM3D2.WildParty.Plugin.Core
                     group.DetachAllIK();
 
                 CharacterHandling.AssignPartyGrouping(formationID, true);
+
+                YotogiHandling.SetupYotogiSceneInitialSkill(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
+                CharacterHandling.SetGroupZeroActive();
 
                 YotogiHandling.UpdateParameterView(StateManager.Instance.PartyGroupList[0].Maid1);
 

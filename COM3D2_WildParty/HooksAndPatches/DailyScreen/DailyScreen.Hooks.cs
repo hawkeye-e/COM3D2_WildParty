@@ -79,7 +79,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
 #endif
 #endif
 
-        //Patch the result to entertain some special flag checking defined by the mod
+        //Patch the result to entertain some special flag checking defined by the mod (call initiated from ScheduleAPI.EnableNightWork)
         [HarmonyPostfix]
         [HarmonyPatch(typeof(MaidStatus.Status), nameof(MaidStatus.Status.GetFlag))]
         private static void GetFlag(string flagName, ref int __result, MaidStatus.Status __instance)

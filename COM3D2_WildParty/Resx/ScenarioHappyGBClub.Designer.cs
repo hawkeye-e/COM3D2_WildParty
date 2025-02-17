@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ModResources {
+namespace ScenarioResources {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ModResources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ImageResources {
+    internal class ScenarioHappyGBClub {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ImageResources() {
+        internal ScenarioHappyGBClub() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ModResources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("COM3D2_WildParty.Resx.ImageResources", typeof(ImageResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("COM3D2_WildParty.Resx.ScenarioHappyGBClub", typeof(ScenarioHappyGBClub).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,59 +61,34 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to mod_icon_happy_gb_club.tex.
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc0001&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc0001_init_chara&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc0001_init_chara&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc0001_init_chara&quot;,
+        ///    &quot;Type&quot;: &quot;CharaInit&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc0001_init_hide_men&quot;,
+        ///    &quot;CharaInitData&quot;: {
+        ///      &quot;IsClubOwnerMainCharacter&quot;: false,
+        ///      &quot;ManRequired&quot;: 8
+        ///    }
+        ///  },
+        ///
+        ///  &quot;hgbc0001_init_hide_men&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc0001_init_hide_men&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HappyGBClubIconFileName {
+        internal static string HappyGBClubADVIntro {
             get {
-                return ResourceManager.GetString("HappyGBClubIconFileName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to mod_icon_harem_king.tex.
-        /// </summary>
-        internal static string HaremKingIconFileName {
-            get {
-                return ResourceManager.GetString("HaremKingIconFileName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icon_happy_gb_club {
-            get {
-                object obj = ResourceManager.GetObject("icon_happy_gb_club", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icon_harem_king {
-            get {
-                object obj = ResourceManager.GetObject("icon_harem_king", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icon_orgy {
-            get {
-                object obj = ResourceManager.GetObject("icon_orgy", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to mod_icon_orgy_party.tex.
-        /// </summary>
-        internal static string OrgyPartyIconFileName {
-            get {
-                return ResourceManager.GetString("OrgyPartyIconFileName", resourceCulture);
+                return ResourceManager.GetString("HappyGBClubADVIntro", resourceCulture);
             }
         }
     }

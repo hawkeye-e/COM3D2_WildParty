@@ -120,6 +120,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
 
                     if (StateManager.Instance.currentGroup >= 0 && __result != null && StateManager.Instance.PartyGroupList.Count > 1)
                     {
+                        //TODO: need to use the manIndex
                         if (manIndex == 0)
                         {
                             if (StateManager.Instance.PartyGroupList[StateManager.Instance.currentGroup].Man1 != null)

@@ -14,9 +14,11 @@ namespace COM3D2.WildParty.Plugin
         public string Type;                 //For the sex flow use
         public string SemenType1;           //For determine where the semen texture goes?
         public string SemenType2;
+        public string SemenType3;
         public SemenTarget SemenTarget1;
         public SemenTarget SemenTarget2;
-        
+        public SemenTarget SemenTarget3;
+
         public string VoiceType1;           //Maid1
         public string VoiceType2;           //Maid2
 
@@ -54,22 +56,28 @@ namespace COM3D2.WildParty.Plugin
                 newItem.Type = rowData[2];
                 newItem.SemenType1 = rowData[3];
                 newItem.SemenType2 = rowData[4];
-
-                if (string.IsNullOrEmpty(rowData[5]))
-                    newItem.SemenTarget1 = SemenTarget.None;
-                else
-                    newItem.SemenTarget1 = (SemenTarget)Enum.Parse(typeof(SemenTarget), rowData[5], true);
+                newItem.SemenType3 = rowData[5];
 
                 if (string.IsNullOrEmpty(rowData[6]))
+                    newItem.SemenTarget1 = SemenTarget.None;
+                else
+                    newItem.SemenTarget1 = (SemenTarget)Enum.Parse(typeof(SemenTarget), rowData[6], true);
+
+                if (string.IsNullOrEmpty(rowData[7]))
                     newItem.SemenTarget2 = SemenTarget.None;
                 else
-                    newItem.SemenTarget2 = (SemenTarget)Enum.Parse(typeof(SemenTarget), rowData[6], true);
+                    newItem.SemenTarget2 = (SemenTarget)Enum.Parse(typeof(SemenTarget), rowData[7], true);
 
-                newItem.VoiceType1 = rowData[7];
-                newItem.VoiceType2 = rowData[8];
+                if (string.IsNullOrEmpty(rowData[8]))
+                    newItem.SemenTarget3 = SemenTarget.None;
+                else
+                    newItem.SemenTarget3 = (SemenTarget)Enum.Parse(typeof(SemenTarget), rowData[8], true);
 
-                newItem.WaitLabel1 = rowData[9];
-                newItem.WaitLabel2 = rowData[10];
+                newItem.VoiceType1 = rowData[9];
+                newItem.VoiceType2 = rowData[10];
+
+                newItem.WaitLabel1 = rowData[11];
+                newItem.WaitLabel2 = rowData[12];
 
                 result.Add(newItem);
 

@@ -16,7 +16,11 @@ namespace COM3D2.WildParty.Plugin
 
         internal const string MainEventScriptFile = "AllMain.ks";
 
-        internal static readonly string[] ModIconNames = { ModResources.ImageResources.OrgyPartyIconFileName, ModResources.ImageResources.HaremKingIconFileName };
+        internal static readonly string[] ModIconNames = { 
+            ModResources.ImageResources.OrgyPartyIconFileName, 
+            ModResources.ImageResources.HaremKingIconFileName,
+            ModResources.ImageResources.HappyGBClubIconFileName
+        };
 
         internal enum CharacterType
         {
@@ -341,6 +345,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string MF = "MF";
             internal const string MMF = "MMF";
             internal const string FFM = "FFM";
+            internal const string MMMF = "MMMF";
         }
 
         internal static class TargetType

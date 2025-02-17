@@ -21,7 +21,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
         internal static void InjectScheduleOptions()
         {
             if (StateManager.Instance.IsInjectScheduleOptionsFinish)
-                return;
+                return;            
 
 
             //Inject the category
@@ -56,16 +56,16 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
 
                 newScenario.condSeikeiken = scenario.SexExperience;
 
-                newScenario.condFlag0 = scenario.ExcludeFlag;
-                newScenario.condFlag1 = scenario.RequireFlag;
+                newScenario.condFlag0 = scenario.MaidExcludeFlag;
+                newScenario.condFlag1 = scenario.MaidRequireFlag;
                 newScenario.condRelation = scenario.Relation;
 
                 newScenario.condAdditionalRelation = new List<MaidStatus.AdditionalRelation>();
-                newScenario.condSpecialRelation = new List<MaidStatus.SpecialRelation>();
+                newScenario.condSpecialRelation = scenario.SpecialRelation;
                 newScenario.condPackage = new List<string>();
                 newScenario.condManVisibleFlag1 = new List<string>();
-                newScenario.condManFlag0 = new List<string>();
-                newScenario.condManFlag1 = new List<string>();
+                newScenario.condManFlag0 = scenario.MasterExcludeFlag;
+                newScenario.condManFlag1 = scenario.MasterRequireFlag;
                 newScenario.condPersonal = scenario.Personality;
                 newScenario.condInfo = scenario.ConditionInfoText;
                 newScenario.condRelationOld = new List<MaidStatus.Old.Relation>();
@@ -93,6 +93,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                     ModResources.ImageResources.icon_orgy.Save(mStream, ModResources.ImageResources.icon_orgy.RawFormat);
                 else if (fileName == ModResources.ImageResources.HaremKingIconFileName)
                     ModResources.ImageResources.icon_harem_king.Save(mStream, ModResources.ImageResources.icon_harem_king.RawFormat);
+                else if (fileName == ModResources.ImageResources.HappyGBClubIconFileName)
+                    ModResources.ImageResources.icon_happy_gb_club.Save(mStream, ModResources.ImageResources.icon_happy_gb_club.RawFormat);
 
                 Texture2D tex = new Texture2D(64, 64);
                 ImageConversion.LoadImage(tex, mStream.ToArray());
@@ -116,6 +118,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                     ModResources.ImageResources.icon_orgy.Save(mStream, ModResources.ImageResources.icon_orgy.RawFormat);
                 else if (fileName == ModResources.ImageResources.HaremKingIconFileName)
                     ModResources.ImageResources.icon_harem_king.Save(mStream, ModResources.ImageResources.icon_harem_king.RawFormat);
+                else if (fileName == ModResources.ImageResources.HappyGBClubIconFileName)
+                    ModResources.ImageResources.icon_happy_gb_club.Save(mStream, ModResources.ImageResources.icon_happy_gb_club.RawFormat);
 
                 Texture2D tex = new Texture2D(64, 64);
                 tex.LoadImage(mStream.ToArray());
@@ -194,10 +198,13 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
 
         private static bool IsScenarioMaidCountValid(int scenarioID, int maidCount)
         {
+            var moddedScenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == scenarioID).First();
+
             if (maidCount <= 0)
                 return true;
+            if (!moddedScenario.IsGroupEvent)
+                return true;
 
-            var moddedScenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == scenarioID).First();
             return moddedScenario.MaidCount.Max >= maidCount && moddedScenario.MaidCount.Min <= maidCount;
         }
     }
