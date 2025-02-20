@@ -88,6 +88,9 @@ namespace COM3D2.WildParty.Plugin.Core
                         case Constant.ADVType.Special:
                             ProcessADVSpecial(instance, thisStep);
                             break;
+                        case Constant.ADVType.LoadYotogi:
+                            ProcessADVLoadYotogiScene(instance, thisStep);
+                            break;
                         case Constant.ADVType.ADVEnd:
                             ProcessADVEnd(instance);
                             break;
@@ -404,52 +407,8 @@ namespace COM3D2.WildParty.Plugin.Core
 
             SetCharacterEyeSight(maid, charaData.EyeSight);
 
-            if (charaData.MotionInfo != null)
-            {
-                string scriptFile = charaData.MotionInfo.ScriptFile;
-                string scriptLabel = charaData.MotionInfo.ScriptLabel;
-                string motionFile = charaData.MotionInfo.MotionFile;
-                string motionTag = charaData.MotionInfo.MotionTag;
-                bool isLoop = charaData.MotionInfo.IsLoopMotion;
-                bool isBlend = charaData.MotionInfo.IsBlend;
-                bool isQueued = charaData.MotionInfo.IsQueued;
+            CharacterHandling.ApplyMotionInfoToCharacter(maid, charaData.MotionInfo);
 
-                if (!string.IsNullOrEmpty(charaData.MotionInfo.RandomMotion))
-                {
-                    if (charaData.MotionInfo.RandomMotion == Constant.RandomMotionCode.RandomRest)
-                    {
-                        MotionInfo[] randomList;
-                        if (isMan)
-                            randomList = Constant.RandomMotionMaleRestList;
-                        else
-                            randomList = Constant.RandomMotionFemaleRestList;
-
-                        int rnd = RNG.Random.Next(randomList.Length);
-                        scriptFile = randomList[rnd].ScriptFile;
-                        scriptLabel = randomList[rnd].ScriptLabel;
-                        motionFile = randomList[rnd].MotionFile;
-                        motionTag = randomList[rnd].MotionTag;
-                        isLoop = randomList[rnd].IsLoopMotion;
-                        isBlend = randomList[rnd].IsBlend;
-                        isQueued = randomList[rnd].IsQueued;
-                    }
-                }
-
-                if (!string.IsNullOrEmpty(scriptFile))
-                {
-
-                    if (isMan)
-                        CharacterHandling.LoadMotionScript(0, false, scriptFile, scriptLabel, "", maid.status.guid, false, false, false, false);
-                    else
-                        CharacterHandling.LoadMotionScript(0, false, scriptFile, scriptLabel, maid.status.guid, "", false, false, false, false);
-                }
-
-                if (!string.IsNullOrEmpty(motionTag) && !string.IsNullOrEmpty(motionFile))
-                {
-                    maid.body0.LoadAnime(motionTag, GameMain.Instance.ScriptMgr.file_system, motionFile, false, isLoop);
-                    CharacterHandling.PlayAnimation(maid, motionFile, motionTag, isLoop, isBlend, isQueued);
-                }
-            }
 
             if (!isMan)
             {
@@ -524,25 +483,25 @@ namespace COM3D2.WildParty.Plugin.Core
             if (maid == null)
                 return;
 
-            if (faceAnime == Constant.RandomFaceAnimeCode.RandomSmile)
+            if (faceAnime == RandomList.FaceAnime.FaceAnimeCode.RandomSmile)
             {
-                int rnd = RNG.Random.Next(Constant.FaceAnimeRandomSmileList.Length);
-                maid.FaceAnime(Constant.FaceAnimeRandomSmileList[rnd]);
+                int rnd = RNG.Random.Next(RandomList.FaceAnime.SmileList.Length);
+                maid.FaceAnime(RandomList.FaceAnime.SmileList[rnd]);
             }
-            else if (faceAnime == Constant.RandomFaceAnimeCode.RandomOh)
+            else if (faceAnime == RandomList.FaceAnime.FaceAnimeCode.RandomOh)
             {
-                int rnd = RNG.Random.Next(Constant.FaceAnimeRandomOhList.Length);
-                maid.FaceAnime(Constant.FaceAnimeRandomOhList[rnd]);
+                int rnd = RNG.Random.Next(RandomList.FaceAnime.OhList.Length);
+                maid.FaceAnime(RandomList.FaceAnime.OhList[rnd]);
             }
-            else if (faceAnime == Constant.RandomFaceAnimeCode.RandomHorny)
+            else if (faceAnime == RandomList.FaceAnime.FaceAnimeCode.RandomHorny)
             {
-                int rnd = RNG.Random.Next(Constant.FaceAnimeRandomHornyList.Length);
-                maid.FaceAnime(Constant.FaceAnimeRandomHornyList[rnd]);
+                int rnd = RNG.Random.Next(RandomList.FaceAnime.HornyList.Length);
+                maid.FaceAnime(RandomList.FaceAnime.HornyList[rnd]);
             }
-            else if (faceAnime == Constant.RandomFaceAnimeCode.RandomRest)
+            else if (faceAnime == RandomList.FaceAnime.FaceAnimeCode.RandomRest)
             {
-                int rnd = RNG.Random.Next(Constant.FaceAnimeRandomRestList.Length);
-                maid.FaceAnime(Constant.FaceAnimeRandomRestList[rnd]);
+                int rnd = RNG.Random.Next(RandomList.FaceAnime.RestList.Length);
+                maid.FaceAnime(RandomList.FaceAnime.RestList[rnd]);
             }
             else
             {

@@ -16,6 +16,7 @@ namespace COM3D2.WildParty.Plugin
         public bool IsShuffleManList;
         public List<int> ExcludePersonality;
         public List<GroupSetupData> GroupSetup;
+        public int ExtraManCount = 0;
 
         internal class GroupSetupData
         {

@@ -9,17 +9,65 @@
           {
             "ArrayPosition": 0,
             "PosString": "0.19, 0.00, -0.93",
-            "RotString": "0.0, 1.0, 0.0, 0.0"
+            "RotString": "0.0, 1.0, 0.0, 0.0" 
+          }
+        ],
+        "ExtraManInfo": [
+          {
+            "ArrayPosition": 0,
+            "PosString": "-1.45, 0.00, -1.19",
+            "RotString": "0, 0.544, 0, 0.839",
+            "Motion": { "RandomMotion": "RandomStanding" }
+          },
+          {
+            "ArrayPosition": 1,
+            "PosString": "-1.03, 0.00, 0.00",
+            "RotString": "0, 0.817, 0, 0.576",
+            "Motion": { "RandomMotion": "RandomStanding" }
+          },
+          {
+            "ArrayPosition": 2,
+            "PosString": "1.45, 0.00, 0.00",
+            "RotString": "0, -0.921, 0, 0.390",
+            "Motion": { "RandomMotion": "RandomStanding" }
+          },
+          {
+            "ArrayPosition": 3,
+            "PosString": "1.70, 0.00, -1.17",
+            "RotString": "0, -0.630, 0, 0.776",
+            "Motion": { "RandomMotion": "RandomStanding" }
+          },
+          {
+            "ArrayPosition": 4,
+            "PosString": "1.02, 0.00, -2.11",
+            "RotString": "0, -0.210, 0, 0.978",
+            "Motion": { "RandomMotion": "RandomStanding" }
+          },
+          {
+            "ArrayPosition": 5,
+            "PosString": "-0.63, 0.00, -2.11",
+            "RotString": "0, 0.220, 0, 0.975",
+            "Motion": { "RandomMotion": "RandomStanding" }
+          }
+        ],
+        "IndividualCoordinates": [
+          {
+            "Type": "Owner",
+            "PosString": "-2.77, -0.28, -4.27",
+            "RotString": "0, -0.478, 0, 0.878",
+            "IsMasturbation": false,
+            "Motion": {
+              "ScriptFile": "h_man_001.ks",
+              "ScriptLabel": "*男ソファーワイン待機L"
+            },
+            "ExtraItemObjects": [
+              {
+                "ItemFile": "HandItemR_WineGlass_I_.menu",
+                "Target": "handitem"
+              }
+            ]
           }
         ]
-      }
-    ],
-    "SpecialCoordinates": [
-      {
-        "Type": "Owner",
-        "PosString": "-3.99, -0.28, -4.61",
-        "RotString": "0, 0.43852, 0, 0.89872",
-        "IsMasturbation": false
       }
     ]
   }

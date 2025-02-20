@@ -36,10 +36,12 @@ namespace COM3D2.WildParty.Plugin
 
             List<MotionItem> lstMF = new List<MotionItem>();
             List<MotionItem> lstMMF = new List<MotionItem>();
+            List<MotionItem> lstMMMF = new List<MotionItem>();
             List<MotionItem> lstFFM = new List<MotionItem>();
 
             result.Add(Constant.GroupType.MF, lstMF);
             result.Add(Constant.GroupType.MMF, lstMMF);
+            result.Add(Constant.GroupType.MMMF, lstMMMF);
             result.Add(Constant.GroupType.FFM, lstFFM);
 
             string[] csvHAnimation = resSexPos.Split('\n');
@@ -68,6 +70,9 @@ namespace COM3D2.WildParty.Plugin
                         break;
                     case Constant.GroupType.MMF:
                         lstMMF.Add(data);
+                        break;
+                    case Constant.GroupType.MMMF:
+                        lstMMMF.Add(data);
                         break;
                     case Constant.GroupType.FFM:
                         lstFFM.Add(data);

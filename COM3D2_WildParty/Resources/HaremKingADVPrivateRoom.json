@@ -1016,10 +1016,13 @@
 
   "haremking_start_yotogiplay": {
     "ID": "haremking_start_yotogiplay",
-    "Type": "Special",
+    "Type": "LoadYotogi",
     "Tag": "SceneYotogi",
     "WaitingType": "LoadScene",
-    "PostYotogi": { "IsKeepCharacterVisible": false },
+    "YotogiSetup": {
+      "Phase": 1,
+      "IsKeepCharacterVisibleAfterYotogi": false
+    },
     "NextStepID": "haremking_postyotogi_init"
   }
 }

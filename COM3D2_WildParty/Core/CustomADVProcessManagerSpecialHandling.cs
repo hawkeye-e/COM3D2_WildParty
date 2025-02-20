@@ -20,6 +20,14 @@ namespace COM3D2.WildParty.Plugin.Core
                 case "orgy_wg_CameraDecision":
                     ProcessADV_OrgyParty_CameraDecision(instance, step);
                     break;
+            }
+        }
+
+        private static void ProcessADVLoadYotogiScene(ADVKagManager instance, ADVStep step)
+        {
+            StateManager.Instance.YotogiPhase = step.YotogiSetup.Phase;
+            switch (step.ID)
+            {
                 case "orgy_start_yotogiplay":
                     ProcessADV_Step_org0101_YotogiPlay(instance, step);
                     break;

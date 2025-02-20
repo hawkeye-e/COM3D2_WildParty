@@ -11,6 +11,7 @@ namespace COM3D2.WildParty.Plugin
         public string ScriptLabel;
         public string MotionFile;
         public string MotionTag;
+        public string RandomMotion;
         public bool IsLoopMotion = true;
         public bool IsBlend = true;
         public bool IsQueued = false;

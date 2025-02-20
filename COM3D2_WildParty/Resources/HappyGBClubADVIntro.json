@@ -44,7 +44,7 @@
     "ID": "hgbc_intro_0002",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_yotogiplay_closepanel",
+    "NextStepID": "hgbc_intro_show_owner",
     "TalkData": {
       "SpecificSpeaker": "Owner",
       "Text": "（ある晩、[=Maid0Name]が接待中のお客さんがが俺に会いたいと言ってきた。）"
@@ -56,7 +56,20 @@
     }
   },
 
-
+  "hgbc_intro_show_owner": {
+    "ID": "hgbc_intro_show_owner",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_intro_yotogiplay_closepanel",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true
+      }
+    ]
+  },
 
   "hgbc_intro_yotogiplay_closepanel": {
     "ID": "hgbc_intro_yotogiplay_closepanel",
@@ -67,10 +80,13 @@
 
   "hgbc_start_yotogiplay": {
     "ID": "hgbc_start_yotogiplay",
-    "Type": "Special",
+    "Type": "LoadYotogi",
     "Tag": "SceneYotogi",
     "WaitingType": "LoadScene",
-    "PostYotogi": { "IsKeepCharacterVisible": false },
+    "YotogiSetup": {
+      "Phase": 1,
+      "IsKeepCharacterVisibleAfterYotogi": false
+    },
     "NextStepID": "hgbc_postyotogi_init"
   }
 

@@ -136,9 +136,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.ADVScreen
             {
                 ADVStep currentStep = ModUseData.ADVStepData[StateManager.Instance.UndergoingModEventID][StateManager.Instance.CurrentADVStepID];
 
-                if (currentStep.PostYotogi != null)
+                if (currentStep.YotogiSetup != null)
                 {
-                    if (currentStep.PostYotogi.IsKeepCharacterVisible)
+                    if (currentStep.YotogiSetup.IsKeepCharacterVisibleAfterYotogi)
                         return false;
                 }
             }

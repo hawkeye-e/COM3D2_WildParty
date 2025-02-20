@@ -6,11 +6,9 @@ using System.Text;
 namespace COM3D2.WildParty.Plugin
 {
     //When the target starts the defined animation name, execute the event deletgate
-    internal class AnimationEndTrigger
+    internal class TimeEndTrigger
     {
-        public string TargetGUID;
-        public string AnimationName;
-        public int ExtraWaitingTimeInSecond = 0;
+        public DateTime DueTime;
         public EventDelegate ToBeExecuted;
     }
 }

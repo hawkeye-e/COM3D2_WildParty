@@ -14,7 +14,8 @@ namespace COM3D2.WildParty.Plugin
         public CommandType Type;
         public int FetishID;
         public List<ConditionCheck> ConditionCheckTexts;
-        public List<string> FormationConstraint = null;   //If this list is null or empty, there is no restriction. Otherwise it contains the list of formation that allows to use this button.
+        public List<ConstraintSetting> Constraint = null;   //If this list is null or empty, there is no restriction. Otherwise it contains the list of formation that allows to use this button.
+        public OrgasmSettingInfo OrgasmSetting = null;
 
         public class ConditionCheck
         {
@@ -22,10 +23,24 @@ namespace COM3D2.WildParty.Plugin
             public string DisplayText;
         }
 
+        public class ConstraintSetting
+        {
+            public int EventID;
+            public List<int> SexPosIDs;
+        }
+
+        public class OrgasmSettingInfo
+        {
+            public string Type;
+            public int MinExcite;
+            public int ExciteDecay;
+        }
+
         public enum CommandType
         {
             Common,
-            Fetish
+            Fetish,
+            Orgasm
         }
     }
 }

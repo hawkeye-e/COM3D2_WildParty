@@ -28,7 +28,7 @@ namespace COM3D2.WildParty.Plugin
         public CharaInit CharaInitData;
         public ShowChara[] CharaData;
         public ShowGroupMotion[] GroupData;       //Separate from ShowChara to not making things over complicated
-        public PostYotogiSetup PostYotogi;
+        public YotogiSetupInfo YotogiSetup;
         public Texture[] TextureData;
         public SE SEData;
         public Shuffle ShuffleData;                 //This need to be placed after CharaInit
@@ -160,17 +160,13 @@ namespace COM3D2.WildParty.Plugin
             public bool ShowPenis = false;
             public bool OpenMouth = false;                              //True: open mouth for fella motion etc; False: default
 
-            public MotionInfoData MotionInfo;
+            public MotionInfo MotionInfo;
             public string FaceAnime;
             public string FaceBlend;
             public PosRot PosRot;
 
             public EyeSightSetting EyeSight;
 
-            public class MotionInfoData : MotionInfo
-            {              
-                public string RandomMotion;
-            }
         }
 
         internal class ShowGroupMotion
@@ -204,9 +200,10 @@ namespace COM3D2.WildParty.Plugin
             }
         }
 
-        internal class PostYotogiSetup
+        internal class YotogiSetupInfo
         {
-            public bool IsKeepCharacterVisible = true;              //The system will automatically hide all the characters when display the yotogi result. Set it to true to prevent from hiding them.
+            public int Phase;
+            public bool IsKeepCharacterVisibleAfterYotogi = true;              //The system will automatically hide all the characters when display the yotogi result. Set it to true to prevent from hiding them.
         }
 
         

@@ -18,7 +18,7 @@ namespace COM3D2.WildParty.Plugin.Core
             switch (buttonID)
             {
                 case Constant.ModYotogiCommandButtonID.ChangePosition:
-                    return new EventDelegate(Orgy_ChangePosition_ShowPositionList);
+                    return new EventDelegate(ChangePosition_ShowPositionList);
                 case Constant.ModYotogiCommandButtonID.ChangePositionAll:
                     return new EventDelegate(Orgy_MassChangePosition_ShowPositionList);
                 case Constant.ModYotogiCommandButtonID.ChangeFormation:
@@ -36,12 +36,20 @@ namespace COM3D2.WildParty.Plugin.Core
                     return new EventDelegate(HaremKing_MoveLeft);
                 case Constant.ModYotogiCommandButtonID.MoveRightHaremKing:
                     return new EventDelegate(HaremKing_MoveRight);
+
+                case Constant.ModYotogiCommandButtonID.OrgasmInternal:
+                case Constant.ModYotogiCommandButtonID.OrgasmExternal:
+                case Constant.ModYotogiCommandButtonID.OrgasmFace:
+                case Constant.ModYotogiCommandButtonID.OrgasmMouth:
+                case Constant.ModYotogiCommandButtonID.OrgasmBukkake:
+                case Constant.ModYotogiCommandButtonID.OrgasmBukkake2:
+                    return new EventDelegate(() => OrgasmCommandOnClick(buttonID));
                 default:
                     return null;
             }
         }
 
-        public static void Orgy_ChangePosition_ShowPositionList()
+        public static void ChangePosition_ShowPositionList()
         {
             StateManager.Instance.ExtraCommandWindow.ResetScrollPosition();
 
@@ -49,22 +57,31 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 //Load the position list based on the info of maid zero
                 int personality = StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id;
-                string groupType = StateManager.Instance.PartyGroupList[0].GroupType;
-                var skillList = ModUseData.ValidSkillList[personality][groupType];
+
+                List<string> possibleGroupTypes = new List<string> { StateManager.Instance.PartyGroupList[0].GroupType };
+                if (Util.GetUndergoingScenario().FlexibleManCountInYotogi)
+                    possibleGroupTypes = StateManager.Instance.PartyGroupList[0].GetPossibleGroupType();
+
 
                 List<GameObject> buttons = new List<GameObject>();
-
-                foreach (var skill in skillList)
+                foreach (var groupType in possibleGroupTypes)
                 {
-                    var cmd = CloneCommandButton(skill.DisplayName, new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeMainGroupSkill_Callback(skill.YotogiSkillID)));
-                    var btn = cmd.GetComponent<UIButton>();
-                    if (skill.SexPosID == StateManager.Instance.PartyGroupList[0].SexPosID)
-                    {
-                        btn.isEnabled = false;
-                        btn.SetState(UIButtonColor.State.Disabled, true);
-                    }
+                    if (!ModUseData.ValidSkillList[personality].ContainsKey(groupType))
+                        continue;
+                    var skillList = ModUseData.ValidSkillList[personality][groupType].Where(x => x.Phase == StateManager.Instance.YotogiPhase);
 
-                    buttons.Add(cmd);
+                    foreach (var skill in skillList)
+                    {
+                        var cmd = CloneCommandButton(skill.DisplayName, new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeMainGroupSkill_Callback(skill.YotogiSkillID)));
+                        var btn = cmd.GetComponent<UIButton>();
+                        if (skill.SexPosID == StateManager.Instance.PartyGroupList[0].SexPosID)
+                        {
+                            btn.isEnabled = false;
+                            btn.SetState(UIButtonColor.State.Disabled, true);
+                        }
+
+                        buttons.Add(cmd);
+                    }
                 }
                 StateManager.Instance.ExtraCommandWindow.ShowContent(buttons, CustomGameObject.YotogiExtraCommandWindow.Mode.PositionList);
 
@@ -204,7 +221,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     formationOption = scenario.AllowMap.Where(x => x.MapID == YotogiStageSelectManager.SelectedStage.stageData.id).First().FormationOption;
                 else
                     formationOption = scenario.DefaultMap.FormationOption;
-                
+
 
                 List<GameObject> buttons = new List<GameObject>();
 
@@ -241,7 +258,6 @@ namespace COM3D2.WildParty.Plugin.Core
                 UIButton childButton = childTransform.GetComponent<UIButton>();
                 if (childButton != null)
                 {
-                    childButton.enabled = false;
                     childButton.isEnabled = false;
                     childButton.SetState(UIButtonColor.State.Disabled, true);
                 }
@@ -250,7 +266,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
         private static void ResetMotionToWaiting(PartyGroup group, bool isMovingRight)
         {
-            if(ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].SpecialSetting != null)
+            if (ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].SpecialSetting != null)
             {
                 MapCoorindates.ManualMovementSettingInfo motionSettings = null;
                 if (isMovingRight)
@@ -258,9 +274,9 @@ namespace COM3D2.WildParty.Plugin.Core
                 else
                     motionSettings = ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].SpecialSetting.MoveLeftSetting;
 
-                if(motionSettings != null)
-                    if(motionSettings.PreMoveMotion != null)
-                        if(motionSettings.PreMoveMotion.WaitingMotionBeforeMovement != null)
+                if (motionSettings != null)
+                    if (motionSettings.PreMoveMotion != null)
+                        if (motionSettings.PreMoveMotion.WaitingMotionBeforeMovement != null)
                             if (motionSettings.PreMoveMotion.WaitingMotionBeforeMovement.Motion != null)
                             {
                                 CharacterHandling.LoadMotionScript(0, false, motionSettings.PreMoveMotion.WaitingMotionBeforeMovement.Motion.ScriptFile,
@@ -268,7 +284,7 @@ namespace COM3D2.WildParty.Plugin.Core
                                     group.Maid1.status.guid, group.Man1.status.guid, false, false, false, false);
                             }
             }
-            
+
         }
 
         public static void HaremKing_MoveLeft()
@@ -317,6 +333,133 @@ namespace COM3D2.WildParty.Plugin.Core
             YotogiExtraCommandCallbacks.PlayPreMovementMotion(true, 1, StateManager.Instance.PartyGroupList[0], targetMaidGroup);
         }
 
+        public static void OrgasmCommandOnClick(string buttonID)
+        {
+            PartyGroup mainGroup = StateManager.Instance.PartyGroupList[0];
+
+            //Find the orgasm type from resources by using button ID
+            string orgasmType = ModUseData.ExtraYotogiCommandDataList[buttonID].OrgasmSetting.Type;
+
+            //We dont want the user to be able to click any command when processing the the modded orgasm logic which will mess up animation and the logic flow
+            BlockAllYotogiCommands();
+
+            //Update the player state
+            Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerPlayerState).SetValue(YotogiPlay.PlayerState.Normal);
+
+            //deduct the excite value
+            bool isEstrus = Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerEstrusMode).GetValue<bool>();
+            YotogiParamBasicBar paramBasicBar = Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerParamBasicBar).GetValue<YotogiParamBasicBar>();
+            if (isEstrus)
+            {
+                mainGroup.Maid1.status.currentSensual -= ModUseData.ExtraYotogiCommandDataList[buttonID].OrgasmSetting.ExciteDecay;
+                paramBasicBar.SetCurrentSensual(mainGroup.Maid1.status.currentSensual, true);
+            }
+            else
+            {
+                mainGroup.Maid1.status.currentExcite -= ModUseData.ExtraYotogiCommandDataList[buttonID].OrgasmSetting.ExciteDecay;
+                paramBasicBar.SetCurrentExcite(mainGroup.Maid1.status.currentExcite, true);
+            }
+
+
+            //Use the orgasm type to locate the special label
+            BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemOfGroup(mainGroup);
+            MotionSpecialLabel spLabel = motionItem.SpecialLabels.Where(x => x.SexPosID == mainGroup.SexPosID && x.OrgasmType == orgasmType).FirstOrDefault();
+
+            if (spLabel != null)
+            {
+                mainGroup.CurrentOrgasmLabelRecord = spLabel;
+
+                CharacterHandling.LoadMotionScript(0, false, motionItem.FileName, spLabel.Label);
+
+                StateManager.Instance.AnimationChangeTrigger = new AnimationEndTrigger();
+                StateManager.Instance.AnimationChangeTrigger.TargetGUID = mainGroup.Maid1.status.guid;
+                StateManager.Instance.AnimationChangeTrigger.ExtraWaitingTimeInSecond = 2 + RNG.Random.Next(5);
+                StateManager.Instance.AnimationChangeTrigger.ToBeExecuted = new EventDelegate(() => OrgasmCommandFinishFollowUp());
+
+                var clip = mainGroup.Maid1.body0.m_Animation.GetClip(mainGroup.CurrentMaid1AnimationClipName);
+
+                //play the audio specfic
+                mainGroup.IsMaid1OrgasmScreamSet = CharacterHandling.SetOrgasmScreamVoice(mainGroup.Maid1, spLabel.VoiceType1);
+                mainGroup.IsMaid2OrgasmScreamSet = CharacterHandling.SetOrgasmScreamVoice(mainGroup.Maid2, spLabel.VoiceType2);
+
+                YotogiHandling.AddManOrgasmCountForGroup(mainGroup);
+                //
+            }
+        }
+
+        private static void OrgasmCommandFinishFollowUp()
+        {
+
+            //Get the next sex state
+            string nextState = ModUseData.SexStateList[SexState.StateType.OrgasmEnd].NextStates[0];
+
+            PartyGroup mainGroup = StateManager.Instance.PartyGroupList[0];
+            BackgroundGroupMotionManager.ProcessSemenForGroup(mainGroup);
+
+            if (nextState == SexState.StateType.OrgasmWait)
+            {
+                //Common rule
+                //Currently not in use
+            }
+            else if (nextState == SexState.StateType.ChangeMan)
+            {
+                //Gangbang rule
+                //randomly pick up the man from extra man list and swap with the main group
+
+                PlayableSkill.SkillItem currentSkill = Util.GetMainGroupSkillIDBySexPosID(mainGroup.SexPosID);
+
+                //Remove all existng IK 
+                mainGroup.DetachAllIK();
+
+                for (int i = 0; i < mainGroup.ManCount; i++)
+                {
+                    Maid toBeExtra = mainGroup.GetManAtIndex(i);
+                    int rnd = RNG.Random.Next(PartyGroup.ExtraManList.Count);
+                    Maid toBeMain = PartyGroup.ExtraManList[rnd];
+
+                    PartyGroup.ExtraManList.Remove(toBeMain);
+                    PartyGroup.ExtraManList.Insert(rnd, toBeExtra);
+
+                    mainGroup.SetManAtIndex(i, toBeMain);
+
+                    StateManager.Instance.SpoofActivateMaidObjectFlag = true;
+                    GameMain.Instance.CharacterMgr.SetActiveMan(toBeMain, currentSkill.ManIndex[i]);
+                    StateManager.Instance.SpoofActivateMaidObjectFlag = false;
+
+
+
+
+
+                }
+
+                //reload motion for the group
+                BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemOfGroup(mainGroup);
+                MotionSpecialLabel waitingLabel = motionItem.SpecialLabels.Where(x => x.Type == MotionSpecialLabel.LabelType.Waiting).First();
+
+                //Change skill will reset the current process of the yotogi...
+                YotogiHandling.SetMainGroupWaitingMotion(motionItem);
+
+                foreach (var setupInfo in PartyGroup.ExtraManSetupInfo)
+                {
+                    if (PartyGroup.ExtraManList.Count > setupInfo.ArrayPosition)
+                    {
+                        Maid man = PartyGroup.ExtraManList[setupInfo.ArrayPosition];
+                        CharacterHandling.ApplyMotionInfoToCharacter(man, setupInfo.Motion);
+                    }
+                }
+
+                //reassign position for the group
+                MapCoorindates.CoordinateListInfo coordinateListInfo = ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].CoordinateList.Where(x => x.MaxGroup >= StateManager.Instance.PartyGroupList.Count).OrderBy(x => x.MaxGroup).First();
+                MapCoorindates.CoordinatesInfo coordinatesInfo = coordinateListInfo.GroupCoordinates.Where(x => x.ArrayPosition == 0).First();
+                mainGroup.SetGroupPosition(coordinatesInfo.Pos, coordinatesInfo.Rot);
+
+            }
+
+            StateManager.Instance.YotogiManager.play_mgr.UpdateCommand();
+        }
+
+
+
         private static void SetupPreSwapMotionEndTrigger(int indexOffset, bool isMovingRight)
         {
             //Setup trigger to be executed when target animation starts
@@ -349,13 +492,16 @@ namespace COM3D2.WildParty.Plugin.Core
 
         internal static void CheckExtraYotogiCommandCondition(List<CustomGameObject.InjectYotogiCommand> injectedButtons)
         {
+            Maid maid = StateManager.Instance.PartyGroupList[0].Maid1;
+            var playerState = Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerPlayerState).GetValue<YotogiPlay.PlayerState>();
+
             foreach (var commandBtn in injectedButtons)
             {
                 //check if fulfill criteria and update the status of the button accordingly
                 if (commandBtn.Data.Type == ExtraYotogiCommandData.CommandType.Fetish)
                 {
                     Fetish fetishInfo = ModUseData.FetishList.Where(x => x.ID == commandBtn.Data.FetishID).First();
-                    Maid maid = StateManager.Instance.PartyGroupList[0].Maid1;
+
                     YotogiProgressInfo progressInfo = StateManager.Instance.YotogiProgressInfoList[maid.status.guid];
                     var button = commandBtn.Button.GetComponent<UIButton>();
 
@@ -378,20 +524,28 @@ namespace COM3D2.WildParty.Plugin.Core
                     isAllFulfilled = isAllFulfilled && (progressInfo.ManOrgasmInfo.Count >= fetishInfo.Conditions.ManCount);
                     isAllFulfilled = isAllFulfilled && (progressInfo.ManOrgasmInfo.Sum(x => x.Value) >= fetishInfo.Conditions.OrgasmCount);
 
-
-                    if (!isAllFulfilled)
-                    {
-                        button.enabled = isAllFulfilled;
-                        button.isEnabled = isAllFulfilled;
-                        button.SetState(UIButtonColor.State.Disabled, true);
-                    }
-                    else
-                    {
-                        button.enabled = isAllFulfilled;
-                        button.isEnabled = isAllFulfilled;
-                        button.SetState(UIButtonColor.State.Normal, true);
-                    }
+                    UpdateCommandButtonState(button, isAllFulfilled);
                 }
+                else if (commandBtn.Data.Type == ExtraYotogiCommandData.CommandType.Orgasm)
+                {
+                    bool isEnable = maid.status.currentExcite >= commandBtn.Data.OrgasmSetting.MinExcite && playerState == YotogiPlay.PlayerState.Insert;
+                    UpdateCommandButtonState(commandBtn.Button.GetComponent<UIButton>(), isEnable);
+                    //TODO: Orgasm command
+                }
+            }
+        }
+
+        private static void UpdateCommandButtonState(UIButton button, bool isEnable)
+        {
+            button.enabled = isEnable;
+            button.isEnabled = isEnable;
+            if (!isEnable)
+            {
+                button.SetState(UIButtonColor.State.Disabled, true);
+            }
+            else
+            {
+                button.SetState(UIButtonColor.State.Normal, true);
             }
         }
 

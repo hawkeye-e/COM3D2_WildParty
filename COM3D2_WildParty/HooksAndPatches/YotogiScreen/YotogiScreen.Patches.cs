@@ -135,9 +135,12 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
         internal static void InitExtraCommandButtons()
         {
-            InjectCommandButtons();
-            Core.YotogiExtraCommandHandling.CheckExtraYotogiCommandCondition(StateManager.Instance.InjectedButtons);
-            AttachExtraCommandWindow();
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                InjectCommandButtons();
+                Core.YotogiExtraCommandHandling.CheckExtraYotogiCommandCondition(StateManager.Instance.InjectedButtons);
+                AttachExtraCommandWindow();
+            }
         }
 
         internal static void InjectCommandButtons()
@@ -153,13 +156,18 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                     foreach (var commandType in Util.GetUndergoingScenario().ExtraYotogiCommands)
                     {
                         ExtraYotogiCommandData commandInfo = ModUseData.ExtraYotogiCommandDataList[commandType];
-
-                        if(commandInfo.FormationConstraint != null && commandInfo.FormationConstraint.Count > 0)
+                        
+                        if (commandInfo.Constraint != null && commandInfo.Constraint.Count > 0)
                         {
-                            if (!commandInfo.FormationConstraint.Contains(PartyGroup.CurrentFormation))
-                                continue;
+                            var constraintInfo = commandInfo.Constraint.Where(x => x.EventID == StateManager.Instance.UndergoingModEventID).FirstOrDefault();
+                            if(constraintInfo != null)
+                            {
+                                if (!constraintInfo.SexPosIDs.Contains(StateManager.Instance.PartyGroupList[0].SexPosID))
+                                    continue;
+                            }
+    
                         }
-                            
+
                         btn = Core.YotogiExtraCommandHandling.InjectCommandButton(commandInfo.Name, Core.YotogiExtraCommandHandling.GetButtonCallbackFromString(commandType), StateManager.Instance.YotogiCommandFactory.transform);
 
                         CustomGameObject.InjectYotogiCommand newCommand = new CustomGameObject.InjectYotogiCommand();
@@ -308,8 +316,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             {
                 if (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiPlay)
                 {
-                    if (StateManager.Instance.PartyGroupList != null && StateManager.Instance.PartyGroupList.Count > 0)
-                        Core.CameraHandling.SetCameraLookAt(StateManager.Instance.PartyGroupList[0].Maid1);
+                    if(!StateManager.Instance.ForceNoCameraResetAfterFadeIn)
+                        if (StateManager.Instance.PartyGroupList != null && StateManager.Instance.PartyGroupList.Count > 0)
+                            Core.CameraHandling.SetCameraLookAt(StateManager.Instance.PartyGroupList[0].Maid1);
                 }
             }
         }
@@ -781,6 +790,19 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
                 }
             }
+        }
+
+        internal static void CheckAnimationChangeTrigger(Maid maid)
+        {
+            //check if the maid is same as animation change trigger
+            if (StateManager.Instance.AnimationChangeTrigger != null)
+                if (StateManager.Instance.AnimationChangeTrigger.TargetGUID == maid.status.guid)
+                {
+                    StateManager.Instance.TimeEndTrigger = new TimeEndTrigger();
+                    StateManager.Instance.TimeEndTrigger.DueTime = DateTime.Now.AddSeconds(StateManager.Instance.AnimationChangeTrigger.ExtraWaitingTimeInSecond);
+                    StateManager.Instance.TimeEndTrigger.ToBeExecuted = StateManager.Instance.AnimationChangeTrigger.ToBeExecuted;
+                    StateManager.Instance.AnimationChangeTrigger = null;
+                }
         }
 
         internal static bool HandleCameraReset()

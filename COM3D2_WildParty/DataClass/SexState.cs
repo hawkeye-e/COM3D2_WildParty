@@ -21,6 +21,8 @@ namespace COM3D2.WildParty.Plugin
             internal const string OrgasmWait = "OrgasmWait";    //This is different from "Waiting". "Waiting" is the status when the group just change position and this one is after orgasm
             internal const string ChangePosition = "ChangePosition";
             internal const string NormalPlay = "NormalPlay";
+
+            internal const string ChangeMan = "ChangeMan";
         }
     }
 }

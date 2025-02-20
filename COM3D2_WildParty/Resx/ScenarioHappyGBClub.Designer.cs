@@ -39,7 +39,7 @@ namespace ScenarioResources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("COM3D2_WildParty.Resx.ScenarioHappyGBClub", typeof(ScenarioHappyGBClub).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("COM3D2.WildParty.Plugin.Resx.ScenarioHappyGBClub", typeof(ScenarioHappyGBClub).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

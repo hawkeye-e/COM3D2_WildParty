@@ -63,6 +63,8 @@ namespace COM3D2.WildParty.Plugin
         internal bool WaitForCameraPanFinish = false;
         internal CameraView TargetCameraAfterAnimation = null;
 
+        internal bool ForceNoCameraResetAfterFadeIn = false;
+
         internal List<int> RandomPickIndexList = null;
         
         //these 2 are for return the correct maid / man due to not using the list implemented by KISS
@@ -76,7 +78,11 @@ namespace COM3D2.WildParty.Plugin
 
         //When the target starts the defined animation name, execute the event deletgate
         internal AnimationEndTrigger WaitingAnimationTrigger = null;
+        internal AnimationEndTrigger AnimationChangeTrigger = null;
+        internal TimeEndTrigger TimeEndTrigger = null;
 
         internal int BranchIndex = -1;                          //For ADV processing
+
+        internal int YotogiPhase = 0;
     }
 }

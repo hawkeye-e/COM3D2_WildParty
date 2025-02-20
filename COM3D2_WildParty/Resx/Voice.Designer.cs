@@ -39,7 +39,7 @@ namespace ModResources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("COM3D2_WildParty.Resx.Voice", typeof(Voice).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("COM3D2.WildParty.Plugin.Resx.Voice", typeof(Voice).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -70,9 +70,8 @@ namespace ModResources {
         ///Muku,InsertMouth,1,H0_00286.ogg,H0_00286.ogg,
         ///Muku,InsertMouth,2,H0_00287.ogg,H0_00287.ogg,
         ///Muku,InsertMouth,3,H0_00288.ogg,H0_00288.ogg,
-        ///Majime,Insert,0,H1_00433.ogg,H1_00453.ogg,
-        ///Majime,Insert,1,H1_00434.ogg,H1_00454.ogg,
-        ///Majime,I [rest of string was truncated]&quot;;.
+        ///Muku,InsertBitch,0,H0_pink_66828.ogg,H0_pink_66828.ogg,
+        ///Muku,InsertBitch,1,H0_pink_66829.ogg,H0 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Voice_All_Insert {
             get {
@@ -81,21 +80,20 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Personality,Type,FileName,choppingTime,dummy
-        ///Muku,Aibu,H0_X01_62795.ogg,5,
-        ///Muku,Aibu,H0_X01_62796.ogg,5,
-        ///Muku,Piston,H0_X01_62797.ogg,5,
-        ///Muku,Piston,H0_X01_62798.ogg,5,
-        ///Muku,Piston,H0_X01_62801.ogg,5,
-        ///Muku,Piston,H0_X01_62802.ogg,5,
-        ///Muku,Fellatio,H0_X01_62805.ogg,5,
-        ///Muku,Fellatio,H0_X01_62806.ogg,5,
-        ///Muku,FellatioFace,H0_X01_62807.ogg,5,
-        ///Muku,FellatioFace,H0_X01_62808.ogg,5,
-        ///Muku,3PFellatio,H0_X01_61902.ogg,5,
-        ///Muku,3PFellatio,H0_X01_61903.ogg,5,
-        ///Muku,3PFellatioFace,H0_X01_61904.ogg,5,
-        ///Muku,3PFe [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Personality,Type,FileName,StartTime,EndTime,dummy
+        ///Muku,Aibu,H0_X01_62795.ogg,0,5,
+        ///Muku,Aibu,H0_X01_62796.ogg,0,5,
+        ///Muku,Piston,H0_X01_62797.ogg,0,5,
+        ///Muku,Piston,H0_X01_62798.ogg,0,5,
+        ///Muku,Piston,H0_X01_62801.ogg,0,5,
+        ///Muku,Piston,H0_X01_62802.ogg,0,5,
+        ///Muku,Fellatio,H0_X01_62805.ogg,0,5,
+        ///Muku,Fellatio,H0_X01_62806.ogg,0,5,
+        ///Muku,FellatioFace,H0_X01_62807.ogg,0,5,
+        ///Muku,FellatioFace,H0_X01_62808.ogg,0,5,
+        ///Muku,3PFellatio,H0_X01_61902.ogg,0,5,
+        ///Muku,3PFellatio,H0_X01_61903.ogg,0,5,
+        ///Muku,3PFellatioFace,H [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Voice_All_OrgasmScream {
             get {

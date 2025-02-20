@@ -25,6 +25,8 @@ namespace COM3D2.WildParty.Plugin
         public string WaitLabel1;           //Maid1
         public string WaitLabel2;           //Maid2
 
+        public string OrgasmType;
+
         public static class LabelType
         {
             public const string Waiting = "Waiting";
@@ -78,6 +80,8 @@ namespace COM3D2.WildParty.Plugin
 
                 newItem.WaitLabel1 = rowData[11];
                 newItem.WaitLabel2 = rowData[12];
+
+                newItem.OrgasmType = rowData[13];
 
                 result.Add(newItem);
 

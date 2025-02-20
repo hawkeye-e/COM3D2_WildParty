@@ -283,6 +283,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         private static void LoadAnime1Post(TBody __instance, string tag, AFileSystemBase fileSystem, string filename, bool additive, bool loop)
         {
             Patches.ApplyForceSetting(__instance.maid);
+            Patches.CheckAnimationChangeTrigger(__instance.maid);
         }
 
         
@@ -310,6 +311,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             //Check Review
             Core.BackgroundGroupMotionManager.CheckReviewForEachGroup(__instance, StateManager.Instance.PartyGroupList);
+            Core.YotogiHandling.CheckTimeEndTrigger();
         }
 
         

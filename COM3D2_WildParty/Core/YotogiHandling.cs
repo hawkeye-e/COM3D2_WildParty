@@ -31,7 +31,7 @@ namespace COM3D2.WildParty.Plugin.Core
             group.GroupOffsetVector = Vector3.zero;
             group.CurrentSexState = SexState.StateType.NormalPlay;
 
-            if(group.IsAutomatedGroup)
+            if (group.IsAutomatedGroup)
                 group.GenerateNextReviewTime();
 
             var motionItem = ModUseData.BackgroundMotionList[group.GroupType].Where(x => x.ID == sexPosID).First();
@@ -57,15 +57,15 @@ namespace COM3D2.WildParty.Plugin.Core
             group.ReloadAnimation();
 
             group.SexPosID = motionItem.ID;
-            
+
             if (playAudio)
                 CharacterHandling.SetGroupVoice(group);
-            
+
             CharacterHandling.SetGroupFace(group);
 
 
             group.SetGroupPosition();
-            
+
         }
 
         //Function for setting special motion (eg orgasm)
@@ -128,7 +128,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     currentGroup.SetGroupPosition(ValidCoordinates[i].Pos + positionOffset, forceRotation);
                 else
                     currentGroup.SetGroupPosition(ValidCoordinates[i].Pos, ValidCoordinates[i].Rot);
-                
+
             }
 
             //Set individual position
@@ -136,14 +136,26 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 foreach (var item in coords.IndividualCoordinates)
                 {
+                    Maid targetMaid = null;
                     if (item.Type == Constant.IndividualCoordinateType.Maid)
                     {
                         if (StateManager.Instance.YotogiWorkingMaidList.Count > item.ArrayPosition)
-                        {
-                            StateManager.Instance.YotogiWorkingMaidList[item.ArrayPosition].transform.localPosition = Vector3.zero;
-                            StateManager.Instance.YotogiWorkingMaidList[item.ArrayPosition].transform.position = item.Pos;
-                            StateManager.Instance.YotogiWorkingMaidList[item.ArrayPosition].transform.rotation = item.Rot;
-                        }
+                            targetMaid = StateManager.Instance.YotogiWorkingMaidList[item.ArrayPosition];
+                    }
+                    else if (item.Type == Constant.IndividualCoordinateType.Man)
+                    {
+                        if (StateManager.Instance.YotogiWorkingMaidList.Count > item.ArrayPosition)
+                            targetMaid = StateManager.Instance.YotogiWorkingManList[item.ArrayPosition];
+                    }
+                    else if (item.Type == Constant.IndividualCoordinateType.Owner)
+                        targetMaid = StateManager.Instance.ClubOwner;
+                    
+
+                    if(targetMaid != null)
+                    {
+                        targetMaid.transform.localPosition = Vector3.zero;
+                        targetMaid.transform.position = item.Pos;
+                        targetMaid.transform.rotation = item.Rot;
                     }
                 }
             }
@@ -169,6 +181,19 @@ namespace COM3D2.WildParty.Plugin.Core
                         }
                     }
                 }
+            }
+
+
+            //For extra man assigned to the group
+            if (coords.ExtraManInfo != null)
+            {
+                PartyGroup.ExtraManSetupInfo = new List<MapCoorindates.CoordinatesInfo>();
+
+                foreach (var extraManInfo in coords.ExtraManInfo)
+                {
+                    PartyGroup.ExtraManSetupInfo.Add(extraManInfo);
+                }
+                PartyGroup.SetExtraManPosition();
             }
         }
 
@@ -211,13 +236,13 @@ namespace COM3D2.WildParty.Plugin.Core
 
                     if (!coordinateListInfo.GroupCoordinates[i].IsManVisible)
                     {
-                        if(currentGroup.Man1 != null)
+                        if (currentGroup.Man1 != null)
                             currentGroup.Man1.transform.localScale = Vector3.zero;
                         if (currentGroup.Man2 != null)
                             currentGroup.Man2.transform.localScale = Vector3.zero;
                     }
 
-                    
+
                 }
 
                 if (coordinateListInfo.GroupCoordinates[i].EyeSight != null)
@@ -242,51 +267,74 @@ namespace COM3D2.WildParty.Plugin.Core
             }
 
             //Set Individual Motion
-            
-            if(coordinateListInfo.IndividualCoordinates != null)
+
+            if (coordinateListInfo.IndividualCoordinates != null)
             {
                 foreach (var item in coordinateListInfo.IndividualCoordinates)
                 {
+                    Maid targetMaid = null;
                     if (item.Type == Constant.IndividualCoordinateType.Maid)
                     {
                         if (StateManager.Instance.YotogiWorkingMaidList.Count > item.ArrayPosition)
+                            targetMaid = StateManager.Instance.YotogiWorkingMaidList[item.ArrayPosition];
+                    }
+                    else if (item.Type == Constant.IndividualCoordinateType.Man)
+                    {
+                        if (StateManager.Instance.YotogiWorkingMaidList.Count > item.ArrayPosition)
+                            targetMaid = StateManager.Instance.YotogiWorkingManList[item.ArrayPosition];
+                    }
+                    else if (item.Type == Constant.IndividualCoordinateType.Owner)
+                        targetMaid = StateManager.Instance.ClubOwner;
+
+                    if(targetMaid != null)
+                    {
+                        
+
+                        CharacterHandling.ApplyMotionInfoToCharacter(targetMaid, item.Motion);
+
+                        if (!string.IsNullOrEmpty(item.FaceAnime))
+                            CustomADVProcessManager.SetFaceAnimeToMaid(targetMaid, item.FaceAnime);
+
+                        if (item.EyeSight != null)
                         {
-                            Maid maid = StateManager.Instance.YotogiWorkingMaidList[item.ArrayPosition];
-
-                            if (item.Motion != null)
+                            foreach (var eyeSightSetting in item.EyeSight)
                             {
-                                if (!string.IsNullOrEmpty(item.Motion.ScriptFile) && !string.IsNullOrEmpty(item.Motion.ScriptLabel))
-                                {
-                                    CharacterHandling.LoadMotionScript(1, false,
-                                       item.Motion.ScriptFile, item.Motion.ScriptLabel,
-                                       maid.status.guid, "", false, false, false, false);
-                                }
-
-                                if (!string.IsNullOrEmpty(item.Motion.MotionFile) && !string.IsNullOrEmpty(item.Motion.MotionTag))
-                                {
-                                    CharacterHandling.PlayAnimation(maid, item.Motion.MotionFile, item.Motion.MotionTag, item.Motion.IsLoopMotion);
-                                }
+                                CustomADVProcessManager.SetCharacterEyeSight(targetMaid, eyeSightSetting);
                             }
+                        }
 
-                            if (!string.IsNullOrEmpty(item.FaceAnime))
-                                CustomADVProcessManager.SetFaceAnimeToMaid(maid, item.FaceAnime);
+                        if (item.ExtraItemObjects != null)
+                        {
+                            //the objects dont show up if it is not reset first...
+                            foreach (var extraItem in item.ExtraItemObjects)
+                                targetMaid.ResetProp(extraItem.Target, true);
+                            targetMaid.AllProcProp();
 
-                            if (item.EyeSight != null)
+                            foreach (var extraItem in item.ExtraItemObjects)
                             {
-                                foreach (var eyeSightSetting in item.EyeSight)
-                                {
-                                    CustomADVProcessManager.SetCharacterEyeSight(maid, eyeSightSetting);
-                                }
+                                targetMaid.SetProp(extraItem.Target, extraItem.ItemFile, 0, extraItem.IsTemp);
                             }
+                            targetMaid.AllProcProp();
                         }
                     }
                 }
             }
 
+            if (coordinateListInfo.ExtraManInfo != null)
+                {
+                    foreach(var extraManInfo in coordinateListInfo.ExtraManInfo)
+                    {
+                        if(PartyGroup.ExtraManList.Count > extraManInfo.ArrayPosition)
+                        {
+                            CharacterHandling.ApplyMotionInfoToCharacter(PartyGroup.ExtraManList[extraManInfo.ArrayPosition], extraManInfo.Motion);
+                        }
+                    }
+                }
+
             //Handle the case of unassigned maid
             if (PartyGroup.UnassignedMaid != null)
             {
-                if(coordsGroup.SpecialCoordinates.Where(x => x.Type == Constant.SpecialCoordinateType.UnassignedMaid).First().IsMasturbation)
+                if (coordsGroup.SpecialCoordinates.Where(x => x.Type == Constant.SpecialCoordinateType.UnassignedMaid).First().IsMasturbation)
                     SetMasturbMotionToCharacter(PartyGroup.UnassignedMaid, MasturbationMotion.Type.MaidOnFloor);
             }
 
@@ -336,29 +384,44 @@ namespace COM3D2.WildParty.Plugin.Core
 
             //Mark the flag to ensure the extra command is added properly
             MarkInjectedButtonsDirty();
-            
+
             int personality = StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id;
+            string targetGroupType = Util.GetSkillGroupType(StateManager.Instance.PartyGroupList[0], skillID);
+            var selectedSkill = ModUseData.ValidSkillList[personality][targetGroupType].Where(x => x.YotogiSkillID == skillID).First();
+
+            CheckSpecialRuleOnYotogiSkill(StateManager.Instance.PartyGroupList[0], selectedSkill.SexPosID);
+
+            //Check if change of number of man is needed
+            
+            if (targetGroupType != StateManager.Instance.PartyGroupList[0].GroupType)
+            {
+                ConvertToGroupType(StateManager.Instance.PartyGroupList[0], targetGroupType, skillID);
+            }
+
+            
             string groupType = StateManager.Instance.PartyGroupList[0].GroupType;
-            var selectedSkill = ModUseData.ValidSkillList[personality][groupType].Where(x => x.YotogiSkillID == skillID).First();
 
             StateManager.Instance.PartyGroupList[0].SexPosID = selectedSkill.SexPosID;
             StateManager.Instance.PartyGroupList[0].GroupOffsetVector = Vector3.zero;
-            
+
             if (resetEstrus)
                 Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerEstrusMode).SetValue(false);
-            
+
             var data = Yotogis.Skill.Get(int.Parse(selectedSkill.YotogiSkillID));
-            
+
             //create a new skill array with only the selected skill
             KeyValuePair<Yotogis.Skill.Data, bool>[] kvps = new KeyValuePair<Yotogis.Skill.Data, bool>[1];
             kvps[0] = new KeyValuePair<Yotogis.Skill.Data, bool>(data, true);
             StateManager.Instance.YotogiManager.SetPlaySkillArray(kvps);
 
-            
+
             //reset the playing skill no
             StateManager.Instance.YotogiManager.null_mgr.SetNextLabel("");
             StateManager.Instance.YotogiManager.play_mgr.AdvanceSkillMove();
-            
+
+            //reset the player state
+            Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerPlayerState).SetValue(YotogiPlay.PlayerState.Normal);
+
             //refresh the command
             StateManager.Instance.YotogiManager.play_mgr.NextSkill();
 
@@ -375,23 +438,42 @@ namespace COM3D2.WildParty.Plugin.Core
                     break;
                 }
             }
-            
+
+            SetMainGroupWaitingMotion(motionItem, loadMotionScript);
+        }
+
+        //A function for handling some very special case which is difficult to put in json
+        private static void CheckSpecialRuleOnYotogiSkill(PartyGroup group, int targetSexPosID)
+        {
+            if(StateManager.Instance.UndergoingModEventID == ScenarioIDList.HappyGBClubScenarioID && targetSexPosID == 2)
+            {
+                group.ForceCharacterVisibleOnPositionChange = false;
+                group.Man2.Visible = false;
+            }
+            else
+                group.ForceCharacterVisibleOnPositionChange = true;
+        }
+
+        internal static void SetMainGroupWaitingMotion(BackgroundGroupMotion.MotionItem motionItem, bool loadMotionScript = true)
+        {
+            PartyGroup group = StateManager.Instance.PartyGroupList[0];
+
             MotionSpecialLabel waitingLabel = motionItem.SpecialLabels.Where(x => x.Type == MotionSpecialLabel.LabelType.Waiting).First();
-            
+
             if (loadMotionScript)
                 CharacterHandling.LoadMotionScript(0, false,
                 motionItem.FileName, waitingLabel.Label,
                 "", "", false, false, false, false);
-            
+
             bool isEstrus = Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerEstrusMode).GetValue<bool>();
-            CharacterHandling.SetCharacterVoiceEntry(StateManager.Instance.PartyGroupList[0].Maid1, PersonalityVoice.VoiceEntryType.Waiting, StateManager.Instance.PartyGroupList[0].ExcitementLevel, waitingLabel.VoiceType1, isEstrus);
-            CharacterHandling.SetCharacterVoiceEntry(StateManager.Instance.PartyGroupList[0].Maid2, PersonalityVoice.VoiceEntryType.Waiting, StateManager.Instance.PartyGroupList[0].ExcitementLevel, waitingLabel.VoiceType2, isEstrus);
-            
-            StateManager.Instance.PartyGroupList[0].Maid1VoiceType = waitingLabel.VoiceType1;
-            if (StateManager.Instance.PartyGroupList[0].Maid2 != null)
-                StateManager.Instance.PartyGroupList[0].Maid2VoiceType = waitingLabel.VoiceType2;
-            
-            CharacterHandling.SetGroupFace(StateManager.Instance.PartyGroupList[0]);
+            CharacterHandling.SetCharacterVoiceEntry(group.Maid1, PersonalityVoice.VoiceEntryType.Waiting, group.ExcitementLevel, waitingLabel.VoiceType1, isEstrus);
+            CharacterHandling.SetCharacterVoiceEntry(group.Maid2, PersonalityVoice.VoiceEntryType.Waiting, group.ExcitementLevel, waitingLabel.VoiceType2, isEstrus);
+
+            group.Maid1VoiceType = waitingLabel.VoiceType1;
+            if (group.Maid2 != null)
+                group.Maid2VoiceType = waitingLabel.VoiceType2;
+
+            CharacterHandling.SetGroupFace(group);
         }
 
         internal static void MarkInjectedButtonsDirty()
@@ -501,6 +583,64 @@ namespace COM3D2.WildParty.Plugin.Core
             AddManOrgasmCountToMaid(group.Maid2, group.Man1);
             //unlikely to have a 2M2F case but put it here anyway.
             AddManOrgasmCountToMaid(group.Maid2, group.Man2);
+        }
+
+        private static void ConvertToGroupType(PartyGroup group, string targetGroupType, string targetSkillID)
+        {
+            int targetManCount = Util.GetGroupTypeMemberCount(targetGroupType, true);
+            if(targetManCount > group.ManCount)
+            {
+                //Need more man for the group, pull from extra man list
+                group.DetachAllIK();
+                PlayableSkill.SkillItem targetSkill = ModUseData.ValidSkillList[group.Maid1.status.personal.id][targetGroupType].Where(x => x.YotogiSkillID == targetSkillID).First();
+                while (group.ManCount < targetManCount)
+                {
+                    int indexToAdd = group.ManCount;
+                    int rndIndex = RNG.Random.Next(PartyGroup.ExtraManList.Count);
+                    Maid manToAdd = PartyGroup.ExtraManList[rndIndex];
+                    PartyGroup.ExtraManList.Remove(manToAdd);
+                    group.SetManAtIndex(indexToAdd, manToAdd);
+
+                    StateManager.Instance.SpoofActivateMaidObjectFlag = true;
+                    GameMain.Instance.CharacterMgr.SetActiveMan(manToAdd, targetSkill.ManIndex[indexToAdd]);
+                    StateManager.Instance.SpoofActivateMaidObjectFlag = false;
+
+                    group.SetGroupPosition();
+                }
+            }
+            else if(targetManCount < group.ManCount)
+            {
+                group.DetachAllIK();
+                //Remove man from group and put it back to extra man list
+                while(group.ManCount > targetManCount)
+                {
+                    int indexToRemove = group.ManCount - 1;
+                    Maid man = group.GetManAtIndex(indexToRemove);
+                    group.SetManAtIndex(indexToRemove, null);
+                    PartyGroup.ExtraManList.Add(man);
+
+                    var setupInfo = PartyGroup.ExtraManSetupInfo.Where(x => x.ArrayPosition == PartyGroup.ExtraManList.Count - 1).First();
+                    man.transform.position = setupInfo.Pos;
+                    man.transform.rotation = setupInfo.Rot;
+                    CharacterHandling.ApplyMotionInfoToCharacter(man, setupInfo.Motion);
+                }
+            }
+        }
+
+        internal static void CheckTimeEndTrigger()
+        {
+            if (StateManager.Instance.ModEventProgress != Constant.EventProgress.YotogiPlay)
+                return;
+
+            if (StateManager.Instance.TimeEndTrigger != null)
+            {
+                if (DateTime.Now > StateManager.Instance.TimeEndTrigger.DueTime)
+                {
+                    var delegateToExecute = StateManager.Instance.TimeEndTrigger.ToBeExecuted;
+                    StateManager.Instance.TimeEndTrigger = null;
+                    delegateToExecute.Execute();
+                }
+            }
         }
     }
 }

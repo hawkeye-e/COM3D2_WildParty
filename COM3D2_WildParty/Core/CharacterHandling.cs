@@ -362,16 +362,13 @@ namespace COM3D2.WildParty.Plugin.Core
             foreach(var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
             {
                 PartyGroup newGroup = new PartyGroup();
-                if(groupSetupInfo.MaidCount  >= 1 )
-                    newGroup.Maid1 = workingMaidList[maidRunningNumber++];
-                if (groupSetupInfo.MaidCount >= 2)
-                    newGroup.Maid2 = workingMaidList[maidRunningNumber++];
-                if (groupSetupInfo.ManCount >= 1)
-                    newGroup.Man1 = StateManager.Instance.MenList[manRunningNumber++];
-                if (groupSetupInfo.ManCount >= 2)
-                    newGroup.Man2 = StateManager.Instance.MenList[manRunningNumber++];
-                if (groupSetupInfo.ManCount >= 3)
-                    newGroup.Man3 = StateManager.Instance.MenList[manRunningNumber++];
+
+                for (int i = 0; i < groupSetupInfo.MaidCount; i++)
+                    newGroup.SetMaidAtIndex(i, workingMaidList[maidRunningNumber++]);
+                for (int i = 0; i < groupSetupInfo.ManCount; i++)
+                    newGroup.SetManAtIndex(i, StateManager.Instance.MenList[manRunningNumber++]);
+
+                
 
                 newGroup.IsAutomatedGroup = groupSetupInfo.IsAutomatedGroup;
                 
@@ -380,7 +377,8 @@ namespace COM3D2.WildParty.Plugin.Core
                 if (maidRunningNumber >= StateManager.Instance.YotogiWorkingMaidList.Count)
                     break;
             }
-
+            for (int i = 0; i < setupInfo.ExtraManCount; i++)
+                PartyGroup.ExtraManList.Add(StateManager.Instance.MenList[manRunningNumber++]);
         }
 
         internal static void AssignPartyGrouping_SwapMember(Maid maid1, Maid maid2)
@@ -442,7 +440,7 @@ namespace COM3D2.WildParty.Plugin.Core
         //Special handling for the User control group to make sure the system is referencing the correct maids and men
         internal static void SetGroupZeroActive()
         {
-            
+
             //back up the maid[0], maid[1], and man[1], we will have to set the gameobject visible later. No need for man[0] since he will be the temp protagonist in the yotogi scenario.
             Maid backupMaid0 = GameMain.Instance.CharacterMgr.GetMaid(0);
             Maid backupMaid1 = GameMain.Instance.CharacterMgr.GetMaid(1);
@@ -450,6 +448,8 @@ namespace COM3D2.WildParty.Plugin.Core
 
             UnlinkMaid(backupMaid0);
             UnlinkMaid(backupMaid1);
+
+            List<Maid> toBeReplacedManList = new List<Maid>();
 
             PartyGroup group = StateManager.Instance.PartyGroupList[0];
             PlayableSkill.SkillItem skill = Util.GetGroupCurrentSkill(group);
@@ -464,9 +464,25 @@ namespace COM3D2.WildParty.Plugin.Core
 
             for (int i = 0; i < skill.ManIndex.Count; i++)
                 if (group.GetManAtIndex(i) != null)
+                {
+                    toBeReplacedManList.Add(GameMain.Instance.CharacterMgr.GetMan(skill.ManIndex[i]));
+                    if (toBeReplacedManList.Contains(group.GetManAtIndex(i)))
+                        toBeReplacedManList.Remove(group.GetManAtIndex(i));
                     GameMain.Instance.CharacterMgr.SetActiveMan(group.GetManAtIndex(i), skill.ManIndex[i]);
+                }
 
-            StateManager.Instance.SpoofActivateMaidObjectFlag = false;
+            //Check if there is any null in the man list, need to fill something back there to avoid error
+            for (int i = 0; i < GameMain.Instance.CharacterMgr.GetManCount(); i++)
+            {
+                Maid man = GameMain.Instance.CharacterMgr.GetMan(i);
+                if (man == null)
+                {
+                    GameMain.Instance.CharacterMgr.SetActiveMan(toBeReplacedManList[0], i);
+                    toBeReplacedManList.RemoveAt(0);
+                }
+            }
+
+                StateManager.Instance.SpoofActivateMaidObjectFlag = false;
         }
 
         private static void UnlinkMaid(Maid maid)
@@ -851,6 +867,35 @@ namespace COM3D2.WildParty.Plugin.Core
 #if COM3D2
             GameMain.Instance.ScriptMgr.LoadMotionScript(sloat, is_next, file_name, label_name, maid_guid, man_guid, face_fix, valid_pos, disable_diff_pos);
 #endif
+        }
+
+        internal static void ApplyMotionInfoToCharacter(Maid maid, MotionInfo motionInfo)
+        {
+            if (motionInfo == null || maid == null)
+                return;
+
+            if (!string.IsNullOrEmpty(motionInfo.RandomMotion))
+            {
+                //Replace the variable if random motion is set
+                motionInfo = RandomList.Motion.GetRandomMotionByCode(motionInfo.RandomMotion, maid.boMAN);
+            }
+
+            if (!string.IsNullOrEmpty(motionInfo.ScriptFile))
+            {
+                string maidGUID = "";
+                string manGUID = "";
+
+                if (maid.boMAN)
+                    manGUID = maid.status.guid;
+                else
+                    maidGUID = maid.status.guid;
+
+                LoadMotionScript(0, false, motionInfo.ScriptFile, motionInfo.ScriptLabel, maidGUID, manGUID, false, false, false, false);
+            }
+            else
+            {
+                PlayAnimation(maid, motionInfo.MotionFile, motionInfo.MotionTag, motionInfo.IsLoopMotion, motionInfo.IsBlend, motionInfo.IsQueued);
+            }
         }
     }
 }

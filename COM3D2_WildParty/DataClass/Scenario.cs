@@ -39,6 +39,7 @@ namespace COM3D2.WildParty.Plugin
         public bool LockParameters;
         public bool UnlimitedMind;
         public bool IsGroupEvent;
+        public bool FlexibleManCountInYotogi = false;
         public MaidCountRequirement MaidCount;
         public List<ExtraScenarioFlag> SetScenarioFlag;
 

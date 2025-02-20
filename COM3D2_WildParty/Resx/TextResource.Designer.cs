@@ -39,7 +39,7 @@ namespace ModResources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("COM3D2_WildParty.Resx.TextResource", typeof(TextResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("COM3D2.WildParty.Plugin.Resx.TextResource", typeof(TextResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -105,18 +105,15 @@ namespace ModResources {
         ///        &quot;GroupCoordinates&quot;: [
         ///          {
         ///            &quot;ArrayPosition&quot;: 0,
-        ///            &quot;PosString&quot;: &quot;0.19, 0.00, -0.93&quot;,
-        ///            &quot;RotString&quot;: &quot;0.0, 1.0, 0.0, 0.0&quot;
-        ///          }
-        ///        ]
-        ///      }
-        ///    ],
-        ///    &quot;SpecialCoordinates&quot;: [
-        ///      {
-        ///        &quot;Type&quot;: &quot;Owner&quot;,
-        ///        &quot;PosString&quot;: &quot;-3.99, -0.28, -4.61&quot;,
-        ///        &quot;RotString&quot;: &quot;0, 0.43852, 0, 0.89872&quot;,
-        ///        &quot;IsMasturb [rest of string was truncated]&quot;;.
+        ///            &quot;GroupInfo&quot;: {
+        ///              &quot;ArrayPosition&quot;: 0,
+        ///              &quot;PosString&quot;: &quot;0.19, 0.00, -0.93&quot;,
+        ///              &quot;RotString&quot;: &quot;0.0, 1.0, 0.0, 0.0&quot;
+        ///            },
+        ///            &quot;ExtraManInfo&quot;: [
+        ///              {
+        ///                &quot;ArrayPosition&quot;: 0,
+        ///                &quot;PosString&quot;: &quot;-1.45, 0.00, -1.19 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string HappyGBClubYotogiMapCoordinates {
             get {
@@ -306,6 +303,7 @@ namespace ModResources {
         ///        &quot;ArrayPosition&quot;: 0,
         ///        &quot;ManCount&quot;: 3,
         ///        &quot;MaidCount&quot;: 1,
+        ///        &quot;ExtraManCount&quot;: 5,
         ///        &quot;IsAutomatedGroup&quot;: false
         ///      }
         ///    ]
@@ -476,12 +474,12 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,dummy
-        ///1,*待機,Waiting,,,,,,,Waiting,,,,
-        ///1,*口内射精,Orgasm,Mouth,Face,Breast,Maid1,Maid1,Maid1,3PFellatio,,OrgasmWaitExcite,,
-        ///1,*顔射,Orgasm,Face,Face,Breast,Maid1,Maid1,Maid1,3PFellatioFace,,OrgasmWaitExcite,,
-        ///1,*ぶっかけ２,Orgasm,Mouth,Face,Breast,Maid1,Maid1,Maid1,3PFellatioFace,,OrgasmWaitExcite,,
-        ///1,*ぶっかけ,Orgasm,Mouth,Face,Breast,Maid1,Maid1,Maid1,3PFellatioFace,,Org [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
+        ///1,*待機,Waiting,,,,,,,Waiting,,,,,
+        ///1,*顔射,Orgasm,Face,Face,Breast,Maid1,Maid1,Maid1,3PFellatioFace,,OrgasmWaitExcite,,Face,
+        ///1,*口内射精,Orgasm,Mouth,Face,Breast,Maid1,Maid1,Maid1,3PFellatio,,OrgasmWaitExcite,,Mouth,
+        ///1,*ぶっかけ２,Orgasm,Mouth,Face,Breast,Maid1,Maid1,Maid1,3PFellatioFace,,OrgasmWaitExcite,,Bukkake,
+        ///1,*ぶっかけ,Orgasm,Mouth,Face,Breast,Maid1, [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosSpecialLabels_HappyGBClub {
             get {
@@ -639,6 +637,38 @@ namespace ModResources {
         internal static string SexStateDescription {
             get {
                 return ResourceManager.GetString("SexStateDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;NormalPlay&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;Orgasm&quot; ]
+        ///  },
+        ///  &quot;Orgasm&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;OrgasmEnd&quot; ]
+        ///  },
+        ///  &quot;OrgasmEnd&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;OrgasmWait&quot; ]
+        ///  },
+        ///  &quot;OrgasmWait&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;ChangePosition&quot;, &quot;ChangePosition&quot;, &quot;ChangePosition&quot;, &quot;ChangePosition&quot;, &quot;Insert&quot; ]
+        ///  },
+        ///  &quot;ChangePosition&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;Insert&quot; ]
+        ///  },
+        ///  &quot;Insert&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;InsertEnd&quot; ]
+        ///  },
+        ///  &quot;InsertEnd&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;NormalPlay&quot; ]
+        ///  }
+        ///}
+        ///.
+        /// </summary>
+        internal static string SexStateDescription_GBType {
+            get {
+                return ResourceManager.GetString("SexStateDescription_GBType", resourceCulture);
             }
         }
     }

@@ -1239,10 +1239,13 @@
 
   "orgy_start_yotogiplay": {
     "ID": "orgy_start_yotogiplay",
-    "Type": "Special",
+    "Type": "LoadYotogi",
     "Tag": "SceneYotogi",
     "WaitingType": "LoadScene",
-    "PostYotogi": { "IsKeepCharacterVisible":  true },
+    "YotogiSetup": {
+      "Phase": 1,
+      "IsKeepCharacterVisibleAfterYotogi": false
+    },
     "NextStepID": "orgy_postyotogi_init"
   }
 

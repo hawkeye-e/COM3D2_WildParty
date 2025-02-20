@@ -214,51 +214,6 @@ namespace COM3D2.WildParty.Plugin
 
         }
 
-        internal static readonly string[] FaceAnimeRandomSmileList = { FaceAnimeType.GentleSmile, FaceAnimeType.Smile, FaceAnimeType.SmileWithEyeClosed };
-        internal static readonly string[] FaceAnimeRandomOhList = { FaceAnimeType.Thinking, FaceAnimeType.Thinking, FaceAnimeType.Puzzled };
-        internal static readonly string[] FaceAnimeRandomHornyList =
-            { FaceAnimeType.EroticExcited0, FaceAnimeType.EroticExcited1, FaceAnimeType.EroticExcited2, FaceAnimeType.EroticExcited3, 
-              FaceAnimeType.EroticAnticipate, FaceAnimeType.Aftertaste
-            };
-        internal static readonly string[] FaceAnimeRandomRestList =
-            { FaceAnimeType.Sigh, FaceAnimeType.CloseEye, FaceAnimeType.AfterOrgasm1, FaceAnimeType.AfterOrgasm2,
-              FaceAnimeType.AfterOrgasmExcite1, FaceAnimeType.AfterOrgasmExcite2
-            };
-        internal static readonly MotionInfo[] RandomMotionFemaleRestList =
-        {
-            new MotionInfo("work_001.ks", "*しゃがみ＿待機", "syagami_pose_f.anm", "syagami_pose_f.anm"),
-            new MotionInfo("ero_scene_001.ks", "*気絶", "ero_scene_kizetu_f.anm", "ero_scene_kizetu_f.anm"),
-            new MotionInfo("ero_scene_001.ks", "*ピロトーク_一人", "pillow_talk_f.anm", "pillow_talk_f.anm")
-        };
-
-        internal static readonly MotionInfo[] RandomMotionMaleRestList =
-        {
-            //new MotionInfo("work_001.ks", "*しゃがみ＿待機", "syagami_pose_f.anm", "syagami_pose_f.anm"),
-            //new MotionInfo("ero_scene_001.ks", "*気絶", "ero_scene_kizetu_f.anm", "ero_scene_kizetu_f.anm"),
-            //new MotionInfo("ero_scene_001.ks", "*ピロトーク_一人", "pillow_talk_f.anm", "pillow_talk_f.anm")
-            new MotionInfo("", "", "mp_arai_taiki_m.anm", "mp_arai_taiki_m.anm"),
-            new MotionInfo("", "", "taimenzai3_taiki_m.anm", "taimenzai3_taiki_m.anm"),
-            new MotionInfo("", "", "om_kousoku_aibu_taiki_m.anm", "om_kousoku_aibu_taiki_m.anm")
-        };
-
-        //For coding use
-        internal static class RandomFaceAnimeCode
-        {
-            internal const string RandomSmile = "RandomSmile";
-            internal const string RandomOh = "RandomOh";
-            internal const string RandomHorny = "RandomHorny";
-            internal const string RandomRest = "RandomRest";
-        }
-
-        internal static class RandomMotionCode
-        {
-            internal const string RandomRest = "RandomRest";
-        }
-
-        //////internal static class ADVSpecialValues
-        //////{
-        //////    internal static string ModScenarioEndID = "<<<END>>>";   //In the scenario json file, if the next step id is same with this string, the mod scenario will end and return to the normal flow
-        //////}
 
         internal static class ADVType
         {
@@ -281,7 +236,8 @@ namespace COM3D2.WildParty.Plugin
             
             internal const string BranchByPlace = "BranchByPlace";
             internal const string Special = "Special";  //Indicate the step require some special handling and need extra coding
-
+            internal const string LoadYotogi = "LoadYotogi";  //Separated from Special. 
+            
             internal const string Pick = "Pick";
             internal const string MakeGroup = "MakeGroup";  //Assign characters into a group in order to set group motion etc
             internal const string DismissGroup = "DismissGroup";  //Assign characters into a group in order to set group motion etc
@@ -415,6 +371,8 @@ namespace COM3D2.WildParty.Plugin
             internal const string YotogiPlayManagerCommandExecConditionList = "commandExecConditionList";
             internal const string YotogiPlayManagerCommandExecConditionPanel = "commandExecConditionsPanel";
             internal const string YotogiPlayManagerEstrusMode = "estrusMode";
+            internal const string YotogiPlayManagerPlayerState = "player_state_";
+            internal const string YotogiPlayManagerParamBasicBar = "param_basic_bar_";
 
             internal const string YotogiPlayManagerPositionChanger = "positionChanger";
 
@@ -473,6 +431,8 @@ namespace COM3D2.WildParty.Plugin
         internal static class IndividualCoordinateType
         {
             internal const string Maid = "F";
+            internal const string Man = "M";
+            internal const string Owner = "Owner";
         }
 
         internal static class CallScreenName {
@@ -506,6 +466,13 @@ namespace COM3D2.WildParty.Plugin
             internal const string ChangeMaidHaremKing = "ChangeMaidHaremKing";
             internal const string MoveLeftHaremKing = "MoveLeftHaremKing";
             internal const string MoveRightHaremKing = "MoveRightHaremKing";
+
+            internal const string OrgasmExternal = "OrgasmExternal";
+            internal const string OrgasmInternal = "OrgasmInternal";
+            internal const string OrgasmMouth = "OrgasmMouth";
+            internal const string OrgasmFace = "OrgasmFace";
+            internal const string OrgasmBukkake = "OrgasmBukkake";
+            internal const string OrgasmBukkake2 = "OrgasmBukkake2";
         }
 
         internal static class CameraEaseType
@@ -527,6 +494,16 @@ namespace COM3D2.WildParty.Plugin
         {
             internal const string ManCount = "ManCount";
             internal const string OrgasmCount = "OrgasmCount";
+        }
+
+        internal static class OrgasmType
+        {
+            internal const string Face = "Face";
+            internal const string Mouth = "Mouth";
+            internal const string Internal = "Internal";
+            internal const string External = "External";
+            internal const string Bukkake = "Bukkake";
+            internal const string Bukkake2 = "Bukkake2";
         }
     }
 }

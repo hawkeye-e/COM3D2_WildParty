@@ -13,6 +13,8 @@ namespace COM3D2.WildParty.Plugin
         public Maid Man1 = null;
         public Maid Man2 = null;
         public Maid Man3 = null;
+        public static List<Maid> ExtraManList = new List<Maid>();
+        public static List<MapCoorindates.CoordinatesInfo> ExtraManSetupInfo = new List<MapCoorindates.CoordinatesInfo>();
         public string Maid1CurrentAudioFile = "";
         public string Maid2CurrentAudioFile = "";
         public Vector3 GroupPosition = Vector3.zero;
@@ -34,6 +36,8 @@ namespace COM3D2.WildParty.Plugin
         private bool isRequireLabelChange = false;
 
         public bool RequireSmoothPositionChange = false;
+
+        public bool ForceCharacterVisibleOnPositionChange = true;
 
         public string CurrentMaid1AnimationClipName;                //The current animation playing. Using for getting the animation length.
 
@@ -87,6 +91,22 @@ namespace COM3D2.WildParty.Plugin
             
         }
 
+        //This function takes the extra man into consideration. If there is no extra man defined in the scenario do not use this function.
+        public List<string> GetPossibleGroupType()
+        {
+            List<string> result = new List<string>();
+            if (MaidCount == 2)
+                result.Add(Constant.GroupType.FFM);
+            else if(MaidCount == 1)
+            {
+                result.Add(Constant.GroupType.MF);
+                result.Add(Constant.GroupType.MMF);
+                result.Add(Constant.GroupType.MMMF);
+            }
+
+            return result;
+        }
+
         public int ExcitementRate
         {
             get
@@ -130,6 +150,30 @@ namespace COM3D2.WildParty.Plugin
             SetCharacterPosition(Man1);
             SetCharacterPosition(Man2);
             SetCharacterPosition(Man3);
+
+            SetExtraManPosition();
+        }
+
+        public static void SetExtraManPosition()
+        {
+            if (ExtraManSetupInfo == null || ExtraManList == null)
+                return;
+            foreach(var setupInfo in ExtraManSetupInfo)
+            {
+                if(ExtraManList.Count > setupInfo.ArrayPosition)
+                {
+                    Maid man = ExtraManList[setupInfo.ArrayPosition];
+
+                    man.Visible = setupInfo.IsManVisible;
+                    if (setupInfo.IsManVisible)
+                        man.transform.localScale = Vector3.one;
+                    else
+                        man.transform.localScale = Vector3.zero;
+                    man.transform.localPosition = Vector3.zero;
+                    man.transform.position = setupInfo.Pos;
+                    man.transform.rotation = setupInfo.Rot;
+                }
+            }
         }
 
         public Maid GetMaidAtIndex(int index)
@@ -152,6 +196,23 @@ namespace COM3D2.WildParty.Plugin
             return null;
         }
 
+        public void SetMaidAtIndex(int index, Maid maid)
+        {
+            if (index == 0)
+                Maid1 = maid;
+            else if (index == 1)
+                Maid2 = maid;
+        }
+        public void SetManAtIndex(int index, Maid maid)
+        {
+            if (index == 0)
+                Man1 = maid;
+            else if (index == 1)
+                Man2 = maid;
+            else if (index == 2)
+                Man3 = maid;
+        }
+
         private void SetCharacterPosition(Maid maid)
         {
             if (maid != null)
@@ -167,7 +228,9 @@ namespace COM3D2.WildParty.Plugin
                     maid.transform.localRotation = new Quaternion(0, 0, 0, 0);
                     maid.transform.rotation = GroupRotation;
                 }
-                maid.Visible = true;
+
+                if(ForceCharacterVisibleOnPositionChange)
+                    maid.Visible = true;
             }
         }
 
@@ -277,7 +340,7 @@ namespace COM3D2.WildParty.Plugin
             return output;
         }
 
-
+        
 
     }
 }

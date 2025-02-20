@@ -17,6 +17,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
                 {
                     if (group.Man1.status.guid == StateManager.Instance.processingManGUID)
                     {
+                        //TODO: use manindex
                         //If it is a hit, determine which man in the group is returned
                         if (manNo == 0)
                             result = group.Man1;

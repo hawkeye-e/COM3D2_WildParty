@@ -22,6 +22,7 @@ namespace COM3D2.WildParty.Plugin
             
             public List<CoordinatesInfo> GroupCoordinates;
             public List<CoordinatesInfo> IndividualCoordinates;
+            public List<CoordinatesInfo> ExtraManInfo;
         }
 
         internal class CoordinatesInfo : PosRot
@@ -32,6 +33,7 @@ namespace COM3D2.WildParty.Plugin
             public List<EyeSightSetting> EyeSight;
             public ForceSexPosInfo ForceSexPos;            //GroupCoordinates use only
             public List<IKAttachInfo> IKAttach;
+            public List<ExtraItemObject> ExtraItemObjects;
             //public int ForceSexPosID = -1;          
             public string FaceAnime = "";
             public bool IsIndependentExcitement = true;     //True: Do not copy the excitement value from group zero; False: Link to the group zero

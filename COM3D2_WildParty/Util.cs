@@ -143,14 +143,26 @@ namespace COM3D2.WildParty.Plugin
                 {
                     foreach (var item in coords.IndividualCoordinates)
                     {
+                        Maid targetMaid = null;
                         if (item.Type == Constant.IndividualCoordinateType.Maid)
                         {
                             if (StateManager.Instance.YotogiWorkingMaidList.Count > item.ArrayPosition)
-                            {
-                                StateManager.Instance.YotogiWorkingMaidList[item.ArrayPosition].transform.localPosition = Vector3.zero;
-                                StateManager.Instance.YotogiWorkingMaidList[item.ArrayPosition].transform.position = item.Pos;
-                                StateManager.Instance.YotogiWorkingMaidList[item.ArrayPosition].transform.rotation = item.Rot;
-                            }
+                                targetMaid = StateManager.Instance.YotogiWorkingMaidList[item.ArrayPosition];
+                        }
+                        else if (item.Type == Constant.IndividualCoordinateType.Man)
+                        {
+                            if (StateManager.Instance.YotogiWorkingMaidList.Count > item.ArrayPosition)
+                                targetMaid = StateManager.Instance.YotogiWorkingManList[item.ArrayPosition];
+                        }
+                        else if (item.Type == Constant.IndividualCoordinateType.Owner)
+                            targetMaid = StateManager.Instance.ClubOwner;
+
+
+                        if (targetMaid != null)
+                        {
+                            targetMaid.transform.localPosition = Vector3.zero;
+                            targetMaid.transform.position = item.Pos;
+                            targetMaid.transform.rotation = item.Rot;
                         }
                     }
                 }
@@ -268,6 +280,24 @@ namespace COM3D2.WildParty.Plugin
             int personality = StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id;
             string groupType = StateManager.Instance.PartyGroupList[0].GroupType;
             return ModUseData.ValidSkillList[personality][groupType].Where(x => x.SexPosID == sexPosID).First();
+        }
+
+        internal static string GetSkillGroupType(PartyGroup group, string skillID)
+        {
+            int personality = group.Maid1.status.personal.id;
+            foreach(var groupDictionary in ModUseData.ValidSkillList[personality])
+            {
+                foreach (var item in groupDictionary.Value)
+                    if (item.YotogiSkillID == skillID)
+                        return groupDictionary.Key;
+            }
+            return "";
+        }
+
+        internal static int GetGroupTypeMemberCount(string groupType, bool isMan)
+        {
+            char toCheck = isMan? 'M':'F';
+            return groupType.Count(x => x == toCheck);
         }
 
         internal static bool IsExPackPersonality(Maid maid)

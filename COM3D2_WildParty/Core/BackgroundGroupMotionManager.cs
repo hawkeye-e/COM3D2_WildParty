@@ -148,7 +148,7 @@ namespace COM3D2.WildParty.Plugin.Core
          * Due to TagTexMulAdd will call GetMaidAndMan function which will mess up the spoofing logic for other parts, I dont directly call TagTexMulAdd but follow the logic inside.
            Drawback: There are some special handlings on CRC body in TagTexMulAdd, so the effect wont apply in 3.0 version(I have no idea whether this mod will work or not in v3.0 anyway)
          */
-        private static void ProcessSemen(ADVKagManager instance, Maid maid, SemenPattern pattern)
+        private static void ProcessSemen(Maid maid, SemenPattern pattern)
         {
             if (maid == null)
                 return;
@@ -194,18 +194,29 @@ namespace COM3D2.WildParty.Plugin.Core
                 group.IsMaid2OrgasmScreamSet = false;
 
                 //add semen
-                BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemOfGroup(group);
-
-                if (ModUseData.SemenPatternList.ContainsKey(group.CurrentOrgasmLabelRecord.SemenType1))
-                    ProcessSemen(instance, Util.GetSemenTarget(group, group.CurrentOrgasmLabelRecord.SemenTarget1), ModUseData.SemenPatternList[group.CurrentOrgasmLabelRecord.SemenType1]);
-
-                if (!string.IsNullOrEmpty(group.CurrentOrgasmLabelRecord.SemenType2))
-                {
-                    if (ModUseData.SemenPatternList.ContainsKey(group.CurrentOrgasmLabelRecord.SemenType2))
-                        ProcessSemen(instance, Util.GetSemenTarget(group, group.CurrentOrgasmLabelRecord.SemenTarget2), ModUseData.SemenPatternList[group.CurrentOrgasmLabelRecord.SemenType2]);
-                }
+                ProcessSemenForGroup(group);
 
                 group.CurrentSexState = GetNextSexState(group.CurrentSexState);
+            }
+        }
+
+        internal static void ProcessSemenForGroup(PartyGroup group)
+        {
+            BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemOfGroup(group);
+
+            if (ModUseData.SemenPatternList.ContainsKey(group.CurrentOrgasmLabelRecord.SemenType1))
+                ProcessSemen(Util.GetSemenTarget(group, group.CurrentOrgasmLabelRecord.SemenTarget1), ModUseData.SemenPatternList[group.CurrentOrgasmLabelRecord.SemenType1]);
+
+            if (!string.IsNullOrEmpty(group.CurrentOrgasmLabelRecord.SemenType2))
+            {
+                if (ModUseData.SemenPatternList.ContainsKey(group.CurrentOrgasmLabelRecord.SemenType2))
+                    ProcessSemen(Util.GetSemenTarget(group, group.CurrentOrgasmLabelRecord.SemenTarget2), ModUseData.SemenPatternList[group.CurrentOrgasmLabelRecord.SemenType2]);
+            }
+
+            if (!string.IsNullOrEmpty(group.CurrentOrgasmLabelRecord.SemenType3))
+            {
+                if (ModUseData.SemenPatternList.ContainsKey(group.CurrentOrgasmLabelRecord.SemenType3))
+                    ProcessSemen(Util.GetSemenTarget(group, group.CurrentOrgasmLabelRecord.SemenTarget3), ModUseData.SemenPatternList[group.CurrentOrgasmLabelRecord.SemenType3]);
             }
         }
 

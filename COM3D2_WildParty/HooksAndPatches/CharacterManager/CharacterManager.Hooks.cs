@@ -79,7 +79,15 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
             Patches.SpoofGetManCharacters(tag_data, ref __result);
         }
 
-
+        //Some of the Yotogi Skill will try to load the new body. Since we havent setup the 3.0 body properly in this mod, the man character generated lacks the pairman and will cause crashing here.
+        //Since 3.0 body is not supported, force it to stop this process if the game is running a mod event.
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(CharacterMgr), nameof(CharacterMgr.SwapNewManBody))]
+        private static void SwapNewManBody(int activeSlot, ref bool toNewBody)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+                toNewBody = false;
+        }
 
     }
 }

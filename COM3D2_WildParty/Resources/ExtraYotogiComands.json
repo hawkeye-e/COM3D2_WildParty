@@ -39,18 +39,129 @@
   "ChangeMaidHaremKing": {
     "Name": "チェンジ",
     "Type": "Common",
-    "FormationConstraint": [ "Houshi", "Houshi_Standing" ]
+    "Constraint": [
+      {
+        "EventID": 9901001,
+        "SexPosIDs": [ 5, 6 ]
+      }
+    ]
   },
 
   "MoveLeftHaremKing": {
     "Name": "左に移動",
     "Type": "Common",
-    "FormationConstraint": [ "Missionary_All", "Missionary_Anus_All", "Doggy_All", "Doggy_Anus_All" ]
+    "Constraint": [
+      {
+        "EventID": 9901001,
+        "SexPosIDs": [ 1, 2, 3, 4 ]
+      }
+    ]
   },
 
   "MoveRightHaremKing": {
     "Name": "右に移動",
     "Type": "Common",
-    "FormationConstraint": [ "Missionary_All", "Missionary_Anus_All", "Doggy_All", "Doggy_Anus_All" ]
+    "Constraint": [
+      {
+        "EventID": 9901001,
+        "SexPosIDs": [ 1, 2, 3, 4 ]
+      }
+    ]
+  },
+
+  "OrgasmInternal": {
+    "Name": "中出しする",
+    "Type": "Orgasm",
+    "Constraint": [
+      {
+        "EventID": 9900002,
+        "SexPosIDs": [ 3 ]
+      }
+    ],
+    "OrgasmSetting": {
+      "Type": "Internal",
+      "MinExcite": 80,
+      "ExciteDecay": 68
+    }
+  },
+
+  "OrgasmExternal": {
+    "Name": "外出しする",
+    "Type": "Orgasm",
+    "Constraint": [
+      {
+        "EventID": 9900002,
+        "SexPosIDs": [ 3 ]
+      }
+    ],
+    "OrgasmSetting": {
+      "Type": "External",
+      "MinExcite": 80,
+      "ExciteDecay": 68
+    }
+  },
+
+  "OrgasmMouth": {
+    "Name": "口内射精",
+    "Type": "Orgasm",
+    "Constraint": [
+      {
+        "EventID": 9900002,
+        "SexPosIDs": [ 1 ]
+      }
+    ],
+    "OrgasmSetting": {
+      "Type": "Mouth",
+      "MinExcite": 80,
+      "ExciteDecay": 66
+    }
+  },
+
+  "OrgasmFace": {
+    "Name": "顔射",
+    "Type": "Orgasm",
+    "Constraint": [
+      {
+        "EventID": 9900002,
+        "SexPosIDs": [ 1 ]
+      }
+    ],
+    "OrgasmSetting": {
+      "Type": "Face",
+      "MinExcite": 80,
+      "ExciteDecay": 66
+    }
+  },
+
+  "OrgasmBukkake": {
+    "Name": "ぶっかけ",
+    "Type": "Orgasm",
+    "Constraint": [
+      {
+        "EventID": 9900002,
+        "SexPosIDs": [ 1 ]
+      }
+    ],
+    "OrgasmSetting": {
+      "Type": "Bukkake",
+      "MinExcite": -100,
+      "ExciteDecay": 66
+    }
+  },
+
+  "OrgasmBukkake2": {
+    "Name": "ぶっかけ２",
+    "Type": "Orgasm",
+    "Constraint": [
+      {
+        "EventID": 9900002,
+        "SexPosIDs": [ 1 ]
+      }
+    ],
+    "OrgasmSetting": {
+      "Type": "Bukkake2",
+      "MinExcite": -100,
+      "ExciteDecay": 66
+    }
   }
 }
