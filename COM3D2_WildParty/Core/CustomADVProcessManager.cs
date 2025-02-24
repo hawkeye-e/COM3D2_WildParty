@@ -154,6 +154,13 @@ namespace COM3D2.WildParty.Plugin.Core
                 StateManager.Instance.MenList.Add(man);
             }
 
+            //init the club owner
+            StateManager.Instance.ClubOwner = StateManager.Instance.OriginalManOrderList[0];
+            StateManager.Instance.ClubOwner.Visible = true;
+            StateManager.Instance.ClubOwner.DutPropAll();
+            StateManager.Instance.ClubOwner.AllProcPropSeqStart();
+            StateManager.Instance.ClubOwner.transform.localPosition = new Vector3(-999f, -999f, -999f);
+
             if (!step.CharaInitData.IsClubOwnerADVMainCharacter)
             {
                 //the Man[0] is replaced by a customer and will use his view to proceed the yotogi scene
@@ -166,20 +173,12 @@ namespace COM3D2.WildParty.Plugin.Core
                 GameMain.Instance.CharacterMgr.SetActiveMan(StateManager.Instance.ClubOwner, 0);
             }
 
-            //init the club owner
-            StateManager.Instance.ClubOwner = StateManager.Instance.OriginalManOrderList[0];
-            StateManager.Instance.ClubOwner.Visible = true;
-            StateManager.Instance.ClubOwner.DutPropAll();
-            StateManager.Instance.ClubOwner.AllProcPropSeqStart();
-            StateManager.Instance.ClubOwner.transform.localPosition = new Vector3(-999f, -999f, -999f);
-            
-            
             //init NPC
             StateManager.Instance.NPCList = new List<Maid>();
             if (step.CharaInitData.NPC != null)
             {
                 foreach (var npcRequest in step.CharaInitData.NPC) {
-                    Maid npc = CharacterHandling.InitNPCMaid(npcRequest.Preset);
+                    Maid npc = CharacterHandling.InitNPCMaid(npcRequest.Preset, npcRequest.EmptyLastName);
                     StateManager.Instance.NPCList.Insert(npcRequest.Index, npc);
                     
                 }

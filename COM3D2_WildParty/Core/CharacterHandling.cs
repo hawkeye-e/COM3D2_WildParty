@@ -39,14 +39,14 @@ namespace COM3D2.WildParty.Plugin.Core
             return man;
         }
 
-        internal static Maid InitNPCMaid(string presetName)
+        internal static Maid InitNPCMaid(string presetName, bool isEmptyLastName)
         {
             //Maid maid = GameMain.Instance.CharacterMgr.AddStockNpcMaid();
             Maid maid = GameMain.Instance.CharacterMgr.AddStockMaid();
             
             foreach (var kvp in CharacterMgr.npcDatas)
             {
-                if (kvp.Value.presetFileName == presetName)
+                if (kvp.Value.presetFileName == presetName && isEmptyLastName == string.IsNullOrEmpty(kvp.Value.lastName))
                 {
                     kvp.Value.Apply(maid);
                     break;
@@ -54,7 +54,7 @@ namespace COM3D2.WildParty.Plugin.Core
             }
 
             RenderMaidAfterInit(maid);
-            
+            DebugHelper.Debug.PrintDetail(maid.status);
             return maid;
         }
 

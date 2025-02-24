@@ -19,6 +19,7 @@
         {
           "Index": 0,
           "Preset": "pre_maid_secretary",
+          "EmptyLastName": false,
           "Name": "エマ"
         }
       ]
@@ -382,7 +383,7 @@
     "NextStepID": "haremking_intro_0018a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "…エマ…ここにいたのか…ごめん、気づかなかった。"
+      "Text": "…[=Name,NPC_F,0,FirstName]…ここにいたのか…ごめん、気づかなかった。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -486,7 +487,7 @@
     "NextStepID": "haremking_intro_0022a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "すまんな、エマ、君に借りだ。"
+      "Text": "すまんな、[=Name,NPC_F,0,FirstName]、君に借りだ。"
     }
   },
 
@@ -626,7 +627,7 @@
     "NextStepID": "haremking_intro_0028",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（エマに助けてもらって、やっと仕事から解放された！）"
+      "Text": "（[=Name,NPC_F,0,FirstName]に助けてもらって、やっと仕事から解放された！）"
     }
   },
 

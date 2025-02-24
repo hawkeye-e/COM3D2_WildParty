@@ -143,6 +143,7 @@ namespace COM3D2.WildParty.Plugin
             {
                 public int Index;               //Share the same array with ModNPC
                 public string Preset;           //The name could be in English or Japanese so this should be a better id?
+                public bool EmptyLastName = false;      //Since the preset could be duplicates in npcdatas, use this as indicate we want to load the preset with a last name or not in order to locate the correct preset we want
                 public string Name;             //For making it more readable in json only. The name dispalyed in the game should still use CallName
             }
 
