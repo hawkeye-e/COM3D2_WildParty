@@ -234,7 +234,7 @@
     "NextStepID": "haremking_private_room_0002",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ただいま、[=Maid0Name]、会いたい…"
+      "Text": "ただいま、[=Name,Maid,0,CallName]、会いたい…"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -269,7 +269,7 @@
     "NextStepID": "haremking_private_room_0003",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ただいま、[=Maid0Name]、会いたい……よ…"
+      "Text": "ただいま、[=Name,Maid,0,CallName]、会いたい……よ…"
     }
   },
 
@@ -759,7 +759,7 @@
     "NextStepID": "haremking_private_room_0023",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（[=Maid0Name]と[=Maid2Name]は俺の腕を掴み、ベッドに押しやって、服を脱がされる）"
+      "Text": "（[=Name,Maid,0,CallName]と[=Name,Maid,2,CallName]は俺の腕を掴み、ベッドに押しやって、服を脱がされる）"
     },
     "FadeData": {
       "IsFadeIn": true,

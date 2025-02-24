@@ -68,7 +68,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
         [HarmonyPatch(typeof(TBody), nameof(TBody.LoadAnime), new Type[] { typeof(string), typeof(AFileSystemBase), typeof(string), typeof(bool), typeof(bool) })]
         private static void LoadAnime(TBody __instance, string tag, AFileSystemBase fileSystem, string filename, bool additive, bool loop)
         {
-            WildParty.Log.LogInfo("TBody.LoadAnime: " + __instance?.maid?.status?.fullNameJpStyle + ", filename: " + filename + ", tag: " + tag);
+            //WildParty.Log.LogInfo("TBody.LoadAnime: " + __instance?.maid?.status?.fullNameJpStyle + ", filename: " + filename + ", tag: " + tag);
         }
 
         //log down the corresponding face anime for the motion
@@ -85,7 +85,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
         [HarmonyPatch(typeof(AudioSourceMgr), nameof(AudioSourceMgr.LoadPlay))]
         private static void LoadPlayPre(AudioSourceMgr __instance, string f_strFileName, float f_fFadeTime, bool f_bStreaming, bool f_bLoop)
         {
-            WildParty.Log.LogInfo("LoadPlayPre f_strFileName: " + f_strFileName + ", f_bLoop: " + f_bLoop);
+            //WildParty.Log.LogInfo("LoadPlayPre f_strFileName: " + f_strFileName + ", f_bLoop: " + f_bLoop);
             Patches.CaptureMotionVoiceFile(__instance, f_strFileName, f_bLoop);
         }
 

@@ -17,11 +17,20 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
                 {
                     if (group.Man1.status.guid == StateManager.Instance.processingManGUID)
                     {
-                        //If it is a hit, determine which man in the group is returned
-                        BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
-                        for (int i = 0; i < motionItem.ManIndex.Count; i++)
-                            if (motionItem.ManIndex[i] == manNo)
-                                result = group.GetManAtIndex(i);
+                        if (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiPlay)
+                        {
+                            //If it is a hit, determine which man in the group is returned
+                            BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
+
+                            for (int i = 0; i < motionItem.ManIndex.Count; i++)
+                                if (motionItem.ManIndex[i] == manNo)
+                                    result = group.GetManAtIndex(i);
+                        }
+                        else
+                        {
+                            //For the case of it is not a yotogi motion
+                            result = group.GetManAtIndex(manNo);
+                        }
                     }
                 }
                 //check also the club owner

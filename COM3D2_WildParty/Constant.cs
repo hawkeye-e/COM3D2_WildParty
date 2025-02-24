@@ -273,9 +273,6 @@ namespace COM3D2.WildParty.Plugin
 
         internal static class JsonReplaceTextLabels
         {
-            internal const string MaidZeroName = "[=Maid0Name]";
-            internal const string MaidOneName = "[=Maid1Name]";
-            internal const string MaidTwoName = "[=Maid2Name]";
             internal const string ClubName = "[=ClubName]";
 
             internal const string PersonalityType = "[=PType]";
@@ -285,8 +282,32 @@ namespace COM3D2.WildParty.Plugin
             internal const string OrgasmCount = "[=OrgasmCount]";
             internal const string CurrentManCount = "[=CurrentManCount]";
             internal const string CurrentOrgasmCount = "[=CurrentOrgasmCount]";
-            
+
+            /*Format: [=Name,{Source},{Index},{CallMethod}]
+             * {Source} :   "Maid" : From SelectedMaidsList; "NPC_F" : From NPCList;  "NPC_M" : From NPCManList
+             * {Index}  :   Index position in the source list
+             * {CallMethod} :   Options: "CallName", "FullName", "LastName", "FirstName"
+             */
+            internal const string CharacterNameRegex = @"\[\=Name,(Maid|NPC_F|NPC_M),(\d{1,2}),(CallName|FullName|LastName|FirstName|NickName)\]";
+            //internal const string CharacterNameRegex = @"\[\=Name,(\d{1,2}),([a-zA-Z0-9]+)\]";
+
+            //Format: [=RandomGroup,{GroupIndex},Maid{MaidIndex}Name]
             internal const string RandomGroupRegex = @"\[\=RandomGroup,(\d{1,2}),([a-zA-Z0-9]+)\]";
+
+            internal static class CharacterNameSourceType
+            {
+                internal const string Maid = "Maid";
+                internal const string NPCFemale = "NPC_F";
+                internal const string NPCMale = "NPC_M";
+            }
+            internal static class CharacterNameDisplayType
+            {
+                internal const string CallName = "CallName";
+                internal const string FullName = "FullName";
+                internal const string LastName = "LastName";
+                internal const string FirstName = "FirstName";
+                internal const string NickName = "NickName";
+            }
         }
 
         internal static class ResourcesTextReplaceLabel

@@ -57,10 +57,10 @@
     "ID": "hgbc_intro_0002",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_show_owner",
+    "NextStepID": "hgbc_intro_0003",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（ある晩、[=Maid0Name]が接待中のお客さんがが俺に会いたいと言ってきた。）"
+      "Text": "（ある晩、[=Name,Maid,0,CallName]が接待中のお客様がが俺に会いたいと言ってきた。）"
     },
 
     "FadeData": {
@@ -68,6 +68,33 @@
       "IsFadeOut": false
     }
   },
+
+  "hgbc_intro_0003": {
+    "ID": "hgbc_intro_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そのお客様の名前は神川原 貴人、あの有名な財閥・神川原グループの当主。この国の大金持ちだ。最近、俺のメイドが気に入ったようで、何度かここを訪れている。）"
+    }
+  },
+
+  "hgbc_intro_0004": {
+    "ID": "hgbc_intro_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_show_owner",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（問題がなければいいのだが…）"
+    }
+  },
+
+
+
+
+
 
   "hgbc_intro_show_owner": {
     "ID": "hgbc_intro_show_owner",

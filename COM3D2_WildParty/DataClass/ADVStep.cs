@@ -137,6 +137,7 @@ namespace COM3D2.WildParty.Plugin
             public int ManRequired = -1;        //Indicate how many man character needed to be initialized. Negative to skip (eg. it is decided from user input)
             public List<NPCData> NPC;
             public List<ModNPCData> ModNPC;
+            public bool IsClubOwnerADVMainCharacter = true;    //True: Man[0] will be the owner; False: Man[0] will be replaced with other man character and owner is accessible from StateManager.Instance.ClubOwner
 
             internal class NPCData
             {
@@ -191,6 +192,7 @@ namespace COM3D2.WildParty.Plugin
             public DetailSetup Maid2;
             public DetailSetup Man1;
             public DetailSetup Man2;
+            public DetailSetup Man3;
 
 
             public class DetailSetup

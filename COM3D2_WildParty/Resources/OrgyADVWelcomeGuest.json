@@ -1045,7 +1045,7 @@
     "TalkData": {
       "SpecificSpeaker": "",
       "SpeakerName": "お客様",
-      "Text": "[=Maid0Name]ちゃん！また会えて嬉しいよ。他のメイドさんにもね。"
+      "Text": "[=Name,Maid,0,CallName]ちゃん！また会えて嬉しいよ。他のメイドさんにもね。"
     }
   },
 
@@ -1167,7 +1167,7 @@
     "TalkData": {
       "SpecificSpeaker": "",
       "SpeakerName": "お客様",
-      "Text": "（ふふっ…その顔、[=Maid0Name]ちゃんも犯されるのを愉しみにしているみたい…）"
+      "Text": "（ふふっ…その顔、[=Name,Maid,0,CallName]ちゃんも犯されるのを愉しみにしているみたい…）"
     }
   },
 
@@ -1179,7 +1179,7 @@
     "TalkData": {
       "SpecificSpeaker": "",
       "SpeakerName": "お客様",
-      "Text": "（よし、俺これから[=Maid0Name]ちゃん、いや違う、みんなに大量の精液を注入するつもりだ。）"
+      "Text": "（よし、俺これから[=Name,Maid,0,CallName]ちゃん、いや違う、みんなに大量の精液を注入するつもりだ。）"
     }
   },
 
@@ -1244,7 +1244,8 @@
     "WaitingType": "LoadScene",
     "YotogiSetup": {
       "Phase": 1,
-      "IsKeepCharacterVisibleAfterYotogi": false
+      "IsKeepCharacterVisibleAfterYotogi": false,
+      "IsClubOwnerMainCharacter": false
     },
     "NextStepID": "orgy_postyotogi_init"
   }

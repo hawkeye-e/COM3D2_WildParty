@@ -115,6 +115,7 @@ namespace COM3D2.WildParty.Plugin.Core
             Util.ClearGenericCollection(StateManager.Instance.SelectedMaidsList);
             Util.ClearGenericCollection(StateManager.Instance.MenList);
             Util.ClearGenericCollection(StateManager.Instance.NPCList);
+            Util.ClearGenericCollection(StateManager.Instance.NPCManList);
             Util.ClearGenericCollection(StateManager.Instance.InjectedButtons);
             Util.ClearGenericCollection(StateManager.Instance.YotogiProgressInfoList);
             Util.ClearGenericCollection(StateManager.Instance.RandomPickIndexList);

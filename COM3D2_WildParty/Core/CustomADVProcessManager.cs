@@ -29,7 +29,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 //We dont want to process this over and over again if we are waiting for user input
                 if (StateManager.Instance.ProcessedADVStepID != StateManager.Instance.CurrentADVStepID)
                 {
-
+                    
                     //ADVStep thisStep = StateManager.Instance.dicADVSceneSteps[StateManager.Instance.CurrentADVStepID];
                     ADVStep thisStep = ModUseData.ADVStepData[StateManager.Instance.UndergoingModEventID][StateManager.Instance.CurrentADVStepID];
                     switch (thisStep.Type)
@@ -153,7 +153,19 @@ namespace COM3D2.WildParty.Plugin.Core
                 var man = Core.CharacterHandling.InitMan(i);
                 StateManager.Instance.MenList.Add(man);
             }
-            
+
+            if (!step.CharaInitData.IsClubOwnerADVMainCharacter)
+            {
+                //the Man[0] is replaced by a customer and will use his view to proceed the yotogi scene
+                GameMain.Instance.CharacterMgr.SetActiveMan(StateManager.Instance.MenList[0], 0);
+            }
+            else
+            {
+                //The owner is the main character, put him as the first element of the men list 
+                StateManager.Instance.MenList.Insert(0, StateManager.Instance.ClubOwner);
+                GameMain.Instance.CharacterMgr.SetActiveMan(StateManager.Instance.ClubOwner, 0);
+            }
+
             //init the club owner
             StateManager.Instance.ClubOwner = StateManager.Instance.OriginalManOrderList[0];
             StateManager.Instance.ClubOwner.Visible = true;
@@ -276,6 +288,9 @@ namespace COM3D2.WildParty.Plugin.Core
 
         private static void ProcessADVLoadScene(ADVKagManager instance, ADVStep step)
         {
+            //Special handling for loading up the background selection
+            if (step.YotogiSetup != null)
+                StateManager.Instance.YotogiPhase = step.YotogiSetup.Phase;
             GameMain.Instance.LoadScene(step.Tag);
         }
 
@@ -535,8 +550,6 @@ namespace COM3D2.WildParty.Plugin.Core
                         if (group.Man1 != null)
                             manID = group.Man1.status.guid;
 
-                        Maid maid = group.Maid1;
-
                         CharacterHandling.LoadMotionScript(0, false, step.GroupData[i].ScriptFile, step.GroupData[i].ScriptLabel, group.Maid1.status.guid, manID,
                             false, false, false, false);
 
@@ -546,6 +559,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     ProcessADVGroupIndividual(group.Maid2, step.GroupData[i].Maid2);
                     ProcessADVGroupIndividual(group.Man1, step.GroupData[i].Man1);
                     ProcessADVGroupIndividual(group.Man2, step.GroupData[i].Man2);
+                    ProcessADVGroupIndividual(group.Man3, step.GroupData[i].Man3);
 
                     if (step.GroupData[i].WaitLoad)
                     {
@@ -556,6 +570,8 @@ namespace COM3D2.WildParty.Plugin.Core
                             StateManager.Instance.WaitForFullLoadList.Add(group.Man1);
                         if (group.Man2 != null)
                             StateManager.Instance.WaitForFullLoadList.Add(group.Man2);
+                        if (group.Man3 != null)
+                            StateManager.Instance.WaitForFullLoadList.Add(group.Man3);
                     }
                     
                     group.GroupOffsetVector = Vector3.zero;
@@ -676,29 +692,71 @@ namespace COM3D2.WildParty.Plugin.Core
 
         private static string PrepareDialogueText(string text)
         {
-            //Prevent error in the case of before the maid list initialized
-            if (StateManager.Instance.SelectedMaidsList.Count > 0)
-            {       
-                System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(Constant.JsonReplaceTextLabels.RandomGroupRegex, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-                var matches = regex.Matches(text);
-                foreach (System.Text.RegularExpressions.Match match in matches)
-                {
-                    int index = StateManager.Instance.RandomPickIndexList[int.Parse(match.Groups[1].Value)];
-                    PartyGroup group = StateManager.Instance.PartyGroupList[index];
-                    if (match.Groups[2].Value == "Maid1Name")
-                        text = text.Replace(match.Groups[0].Value, group.Maid1.status.callName);
-                    else if (match.Groups[2].Value == "Maid2Name")
-                        text = text.Replace(match.Groups[0].Value, group.Maid2.status.callName);
-                }
+            text = PrepareCharacterNameText(text);
+            text = PrepareRandomGroupCharacterName(text);
+            
+            text = text.Replace(Constant.JsonReplaceTextLabels.ClubName, GameMain.Instance.CharacterMgr.status.clubName);
+            return text;
+        }
+
+        private static string PrepareRandomGroupCharacterName(string text)
+        {
+            System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(Constant.JsonReplaceTextLabels.RandomGroupRegex, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            var matches = regex.Matches(text);
+            foreach (System.Text.RegularExpressions.Match match in matches)
+            {
+                int index = StateManager.Instance.RandomPickIndexList[int.Parse(match.Groups[1].Value)];
+                PartyGroup group = StateManager.Instance.PartyGroupList[index];
+                if (match.Groups[2].Value == "Maid1Name")
+                    text = text.Replace(match.Groups[0].Value, group.Maid1.status.callName);
+                else if (match.Groups[2].Value == "Maid2Name")
+                    text = text.Replace(match.Groups[0].Value, group.Maid2.status.callName);
+            }
+
+            return text;
+        }
+
+        private static string PrepareCharacterNameText(string text)
+        {
+            System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(Constant.JsonReplaceTextLabels.CharacterNameRegex, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            var matches = regex.Matches(text);
+            foreach (System.Text.RegularExpressions.Match match in matches)
+            {
+
+                List<Maid> sourceList = null;
+                if (match.Groups[1].Value == Constant.JsonReplaceTextLabels.CharacterNameSourceType.NPCMale)
+                    sourceList = StateManager.Instance.NPCManList;
+                else if (match.Groups[1].Value == Constant.JsonReplaceTextLabels.CharacterNameSourceType.NPCFemale)
+                    sourceList = StateManager.Instance.NPCList;
+                else if (match.Groups[1].Value == Constant.JsonReplaceTextLabels.CharacterNameSourceType.Maid)
+                    sourceList = StateManager.Instance.SelectedMaidsList;
+
+                if (sourceList == null)
+                    return text;
+
+                Maid maid = sourceList[int.Parse(match.Groups[2].Value)];
                 
-                text = text.Replace(Constant.JsonReplaceTextLabels.MaidZeroName, StateManager.Instance.SelectedMaidsList[0].status.callName);
-                if (StateManager.Instance.SelectedMaidsList.Count >= 2)
-                    text = text.Replace(Constant.JsonReplaceTextLabels.MaidOneName, StateManager.Instance.SelectedMaidsList[1].status.callName);
-                if (StateManager.Instance.SelectedMaidsList.Count >= 3)
-                    text = text.Replace(Constant.JsonReplaceTextLabels.MaidTwoName, StateManager.Instance.SelectedMaidsList[2].status.callName);
+                string displayName = "";
+                if (match.Groups[3].Value == Constant.JsonReplaceTextLabels.CharacterNameDisplayType.FullName)
+                {
+                    if(Product.isJapan)
+                        displayName = maid.status.fullNameJpStyle;
+                    else
+                        displayName = maid.status.fullNameEnStyle;
+                }
+                else if (match.Groups[3].Value == Constant.JsonReplaceTextLabels.CharacterNameDisplayType.FirstName)
+                    displayName = maid.status.firstName;
+                else if (match.Groups[3].Value == Constant.JsonReplaceTextLabels.CharacterNameDisplayType.LastName)
+                    displayName = maid.status.lastName;
+                else if (match.Groups[3].Value == Constant.JsonReplaceTextLabels.CharacterNameDisplayType.NickName)
+                    displayName = maid.status.nickName;
+                else if (match.Groups[3].Value == Constant.JsonReplaceTextLabels.CharacterNameDisplayType.CallName)
+                    displayName = maid.status.callName;
+
+                text = text.Replace(match.Groups[0].Value, displayName);
                 
             }
-            text = text.Replace(Constant.JsonReplaceTextLabels.ClubName, GameMain.Instance.CharacterMgr.status.clubName);
+
             return text;
         }
 
