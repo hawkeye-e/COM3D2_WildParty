@@ -68,8 +68,15 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             //Since the value of the Next Label is removed when changing skill by our mod, here we fix it before the system process the click action
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                StateManager.Instance.ModEventProgress = Constant.EventProgress.YotogiEnd;
-                StateManager.Instance.YotogiManager.null_mgr.SetNextLabel(Constant.NextButtonLabel.YotogiPlayEnd);
+                if (StateManager.Instance.IsFinalYotogi)
+                {
+                    StateManager.Instance.ModEventProgress = Constant.EventProgress.YotogiEnd;
+                    StateManager.Instance.YotogiManager.null_mgr.SetNextLabel(Constant.NextButtonLabel.YotogiPlayEnd);
+                }
+                else
+                {
+                    StateManager.Instance.ModEventProgress = Constant.EventProgress.ADV;
+                }
                 
                 //To make the result window display the proper fetish added message
                 foreach (int fetish in StateManager.Instance.YotogiProgressInfoList[StateManager.Instance.YotogiManager.maid.status.guid].CustomFetishEarned)
@@ -153,7 +160,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
                     GameObject btn;
 
-                    foreach (var commandType in Util.GetUndergoingScenario().ExtraYotogiCommands)
+                    foreach (var commandType in Util.GetUndergoingScenario().YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First().ExtraYotogiCommands)
                     {
                         ExtraYotogiCommandData commandInfo = ModUseData.ExtraYotogiCommandDataList[commandType];
                         
@@ -219,25 +226,26 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                     StateManager.Instance.RequireInjectCommandButtons = true;
                     StateManager.Instance.YotogiManager = instance;
 
-                    var scenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
+                    Scenario scenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
+                    Scenario.YotogiSetupInfo yotogiSetup = scenario.YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First();
 
                     Core.YotogiHandling.YotogiSkillCall(instance, ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
 
-                    if (scenario.AllowMap != null)
+                    if (yotogiSetup.AllowMap != null)
                     {
                         Core.YotogiHandling.PlayRoomBGM(instance);
                     }
-                    else if(scenario.DefaultMap != null)
+                    else if(yotogiSetup.DefaultMap != null)
                     {
                         //Set the dummy stage to prevent crash and also spoof flag to avoid changing bg
                         StateManager.Instance.SpoofChangeBackgroundFlag = true;
                         YotogiStageSelectManager.SelectStage(YotogiStage.GetAllDatas(true)[0], null, GameMain.Instance.CharacterMgr.status.isDaytime);
 
                         if (GameMain.Instance.CharacterMgr.status.isDaytime)
-                            GameMain.Instance.BgMgr.ChangeBg(scenario.DefaultMap.DayMapID);
+                            GameMain.Instance.BgMgr.ChangeBg(yotogiSetup.DefaultMap.DayMapID);
                         else
-                            GameMain.Instance.BgMgr.ChangeBg(scenario.DefaultMap.NightMapID);
-                        GameMain.Instance.SoundMgr.PlayBGM(scenario.DefaultMap.BGM, 1);
+                            GameMain.Instance.BgMgr.ChangeBg(yotogiSetup.DefaultMap.NightMapID);
+                        GameMain.Instance.SoundMgr.PlayBGM(yotogiSetup.DefaultMap.BGM, 1);
 
                     }
 
@@ -376,8 +384,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                var scenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
-                var allowMaps = scenario.AllowMap.Select(x => x.MapID).ToList();
+                Scenario scenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
+                Scenario.YotogiSetupInfo yotogiSetup = scenario.YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First();
+                var allowMaps = yotogiSetup.AllowMap.Select(x => x.MapID).ToList();
                 enabled = allowMaps.Contains(stagePack.stageData.id);
             }
         }
@@ -773,6 +782,45 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             }
         }
 
+        internal static void ForceChangeManUponCommandClicked(Yotogis.Skill.Data.Command.Data command_data)
+        {
+            Scenario.YotogiSetupInfo yotogiSetup = Util.GetUndergoingScenario().YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First();
+            if (yotogiSetup.ForceChangeManWhenOrgasm)
+            {
+                if(command_data.basic.command_type == Yotogi.SkillCommandType.絶頂)
+                {
+                    Core.YotogiHandling.BlockAllYotogiCommands();
+                    VoiceLoopTrigger trigger = new VoiceLoopTrigger();
+                    trigger.TargetMaid = StateManager.Instance.PartyGroupList[0].Maid1;
+                    trigger.ToBeExecuted = new EventDelegate(() => ForceChangeManTriggerExecution(yotogiSetup.IsMainManOwner));
+                    StateManager.Instance.VoiceLoopTrigger = trigger;
+                }
+            }
+        }
+
+        private static void ForceChangeManTriggerExecution(bool isMainManOwner)
+        {
+            Core.YotogiHandling.ChangeManMembers(StateManager.Instance.PartyGroupList[0], isMainManOwner);
+            StateManager.Instance.YotogiManager.play_mgr.UpdateCommand();
+        }
+
+        internal static void CheckVoiceloopTrigger(AudioSourceMgr audioMgr, bool isLoop)
+        {
+            if(StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if(StateManager.Instance.VoiceLoopTrigger != null)
+                {
+                    if (isLoop && StateManager.Instance.VoiceLoopTrigger.TargetMaid.AudioMan.GetInstanceID() == audioMgr.GetInstanceID())
+                    {
+                        EventDelegate dg = StateManager.Instance.VoiceLoopTrigger.ToBeExecuted;
+                        StateManager.Instance.VoiceLoopTrigger = null;
+                        dg.Execute();
+                    }
+                }
+                
+            }
+        }
+
         internal static void CheckMaidAnimationTrigger(Maid maid)
         {
             if (StateManager.Instance.WaitingAnimationTrigger != null)
@@ -813,6 +861,67 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 return false;
             }
             return true;
+        }
+
+        internal static void LoadADVSceneAfterYotogi(WfScreenChildren instance)
+        {
+            if (instance.GetType() == typeof(YotogiPlayManager) && StateManager.Instance.ModEventProgress == Constant.EventProgress.ADV)
+            {
+                Util.ClearGenericCollection(StateManager.Instance.InjectedButtons);
+                StateManager.Instance.InjectedButtons = new List<CustomGameObject.InjectYotogiCommand>();
+                StateManager.Instance.ExtraCommandWindow = new CustomGameObject.YotogiExtraCommandWindow(StateManager.Instance.ExtraCommandWindowMasterCopy.transform.gameObject);
+
+                Core.CustomADVProcessManager.ADVSceneProceedToNextStep();
+                
+                //To fix the invalid status that causing the scene unable to go through the finish process when player click "next" in the yotogi play scene.
+                if (instance.fade_status != WfScreenChildren.FadeStatus.Wait)
+                {
+                    Traverse.Create(instance).Field(Constant.DefinedClassFieldNames.WfScreenChildrenFadeStatus).SetValue(WfScreenChildren.FadeStatus.Wait);
+                }
+                
+                GameMain.Instance.LoadScene(Constant.SceneType.ADV);
+            }
+        }
+
+        internal static void BackupModAddedExtraObjects(BgMgr bgMgr, List<KeyValuePair<string, GameObject>> extraObjectsBackupList)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiPlay)
+                {
+                    List<string> lstAddedObjectNames = new List<string>();
+                    if (StateManager.Instance.PartyGroupList != null)
+                        foreach (var group in StateManager.Instance.PartyGroupList)
+                            if (group.ExtraObjects != null)
+                                foreach (var itemName in group.ExtraObjects.Keys)
+                                    lstAddedObjectNames.Add(itemName);
+
+                    //Put the extra objects that requested by the mod to state and temporarily removed from the BgMgr so that the system will not destory them
+                    foreach (var attachObjName in bgMgr.m_DicAttachObj.Select(x => x.Key).ToList())
+                    {
+                        if (lstAddedObjectNames.Contains(attachObjName))
+                        {
+                            extraObjectsBackupList.Add(new KeyValuePair<string, GameObject>(attachObjName, bgMgr.m_DicAttachObj[attachObjName]));
+                            bgMgr.m_DicAttachObj.Remove(attachObjName);
+                        }
+                    }
+                }
+            }
+        }
+
+        internal static void RestoreModAddedExtraObjects(BgMgr bgMgr, List<KeyValuePair<string, GameObject>> extraObjectsBackupList)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiPlay)
+                {
+                    //put the extra objects back to the BgMgr list
+                    foreach (var kvp in extraObjectsBackupList)
+                    {
+                        bgMgr.m_DicAttachObj.Add(kvp.Key, kvp.Value);
+                    }
+                }
+            }
         }
     }
 }

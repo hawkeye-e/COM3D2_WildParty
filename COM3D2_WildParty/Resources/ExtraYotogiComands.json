@@ -22,11 +22,11 @@
     "ConditionCheckTexts": [
       {
         "Field": "ManCount",
-        "DisplayText": "[=ManCount]人以上とセックスする"
+        "DisplayText": "[=ManCount]人以上とセックスする（[=CurrentManCount]／[=ManCount]）"
       },
       {
         "Field": "OrgasmCount",
-        "DisplayText": "[=OrgasmCount]回以上で絶頂する"
+        "DisplayText": "[=OrgasmCount]回以上で絶頂する（[=CurrentOrgasmCount]／[=OrgasmCount]）"
       }
     ]
   },
@@ -163,5 +163,17 @@
       "MinExcite": -100,
       "ExciteDecay": 66
     }
+  },
+
+  "FetishGangBang": {
+    "Name": "性癖「輪姦大好き」",
+    "Type": "Fetish",
+    "FetishID": 99002,
+    "ConditionCheckTexts": [
+      {
+        "Field": "OrgasmCount",
+        "DisplayText": "[=OrgasmCount]回以上で絶頂する（[=CurrentOrgasmCount]／[=OrgasmCount]）"
+      }
+    ]
   }
 }

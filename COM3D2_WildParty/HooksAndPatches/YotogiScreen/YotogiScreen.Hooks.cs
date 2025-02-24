@@ -105,8 +105,15 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         [HarmonyPatch(typeof(WfScreenChildren), nameof(WfScreenChildren.Finish))]
         private static void YotogiNullManagerFinishPost(WfScreenChildren __instance)
         {
-            Patches.ProcessYotogiPlayEnd(__instance);
-            Patches.ProcessYotogiResultEnd(__instance);
+            if (StateManager.Instance.IsFinalYotogi)
+            {
+                Patches.ProcessYotogiPlayEnd(__instance);
+                Patches.ProcessYotogiResultEnd(__instance);
+            }
+            else
+            {
+                Patches.LoadADVSceneAfterYotogi(__instance);
+            }
         }
 
         //Try to look at the first maid whenever fade in occur during yotogi play
@@ -232,6 +239,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         private static void LoadPlayPre(AudioSourceMgr __instance, ref string f_strFileName, float f_fFadeTime, bool f_bStreaming, ref bool f_bLoop)
         {
             Patches.ReplaceNotSuitableVoice(__instance, ref f_strFileName, ref f_bLoop);
+            Patches.CheckVoiceloopTrigger(__instance, f_bLoop);
         }
 
 
@@ -346,6 +354,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             //Apply linked group motion if any when player click a command button
             Patches.ApplyLinkedGroupMotionUponCommandClicked(command_data);
+            //Force Man Change if it is required in the scenario
+            Patches.ForceChangeManUponCommandClicked(command_data);
         }
 
         [HarmonyPostfix]
@@ -361,6 +371,22 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             //Try to fix the camera to zoom to the main maid instead of some weird locations.
             return Patches.HandleCameraReset();
+        }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(BgMgr), nameof(BgMgr.DelPrefabFromBgAll))]
+        private static void DelPrefabFromBgAllPre(BgMgr __instance, out List<KeyValuePair<string, GameObject>> __state)
+        {
+            __state = new List<KeyValuePair<string, GameObject>>();
+            Patches.BackupModAddedExtraObjects(__instance, __state);
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(BgMgr), nameof(BgMgr.DelPrefabFromBgAll))]
+        private static void DelPrefabFromBgAllPost(BgMgr __instance, List<KeyValuePair<string, GameObject>> __state)
+        {
+            Patches.RestoreModAddedExtraObjects(__instance, __state);
+
         }
     }
 }

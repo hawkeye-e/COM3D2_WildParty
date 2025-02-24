@@ -122,6 +122,9 @@ namespace COM3D2.WildParty.Plugin.Core
             Util.ClearGenericCollection(StateManager.Instance.YotogiWorkingMaidList);
             Util.ClearGenericCollection(StateManager.Instance.YotogiWorkingManList);
 
+            Util.ClearGenericCollection(PartyGroup.ExtraManList);
+            Util.ClearGenericCollection(PartyGroup.ExtraManSetupInfo);
+
             StateManager.Instance.RequireCheckModdedSceneFlag = false;
             StateManager.Instance.WaitForCharactersFullLoadFlag = false;
             StateManager.Instance.RequireInjectCommandButtons = false;
@@ -132,6 +135,9 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.CommandMaskGroupTransform = null;
             StateManager.Instance.ExtraCommandWindow = null;
             StateManager.Instance.WaitingAnimationTrigger = null;
+            StateManager.Instance.AnimationChangeTrigger = null;
+            StateManager.Instance.VoiceLoopTrigger = null;
+            StateManager.Instance.TimeEndTrigger = null;
 
             StateManager.Instance.CurrentADVStepID = "";
             StateManager.Instance.ProcessedADVStepID = "";

@@ -187,6 +187,11 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>ImageResources.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resx\PresetResources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>PresetResources.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resx\ScenarioHappyGBClub.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -219,6 +224,11 @@
 	    <CustomToolNamespace>ModResources</CustomToolNamespace>
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>ImageResources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\PresetResources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>PresetResources.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ModResources</CustomToolNamespace>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resx\ScenarioHappyGBClub.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>

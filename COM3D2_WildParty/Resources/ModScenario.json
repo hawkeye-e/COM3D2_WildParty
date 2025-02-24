@@ -30,31 +30,37 @@
       "Min": 5
     },
 
-    "AllowMap": [
+    "YotogiSetup": [
       {
-        "MapID": 10,
-        "FormationOption": [ "Theatre_Scattered", "Theatre_2RowsA", "Theatre_2RowsB", "Theatre_CircleA", "Theatre_CircleB" ],
-        "DefaultFormation": "Theatre_Scattered"
-      },
-      {
-        "MapID": 70,
-        "FormationOption": [ "GuestBedroom_Scattered", "GuestBedroom_2RowsA", "GuestBedroom_2RowsB" ],
-        "DefaultFormation": "GuestBedroom_Scattered"
-      },
-      {
-        "MapID": 20,
-        "FormationOption": [ "Soap_Scattered" ],
-        "DefaultFormation": "Soap_Scattered"
+        "AllowMap": [
+          {
+            "MapID": 10,
+            "FormationOption": [ "Theatre_Scattered", "Theatre_2RowsA", "Theatre_2RowsB", "Theatre_CircleA", "Theatre_CircleB" ],
+            "DefaultFormation": "Theatre_Scattered"
+          },
+          {
+            "MapID": 70,
+            "FormationOption": [ "GuestBedroom_Scattered", "GuestBedroom_2RowsA", "GuestBedroom_2RowsB" ],
+            "DefaultFormation": "GuestBedroom_Scattered"
+          },
+          {
+            "MapID": 20,
+            "FormationOption": [ "Soap_Scattered" ],
+            "DefaultFormation": "Soap_Scattered"
+          }
+        ],
+
+        "ExtraYotogiCommands": [
+          "ChangePosition",
+          "ChangePositionAll",
+          "ChangeFormation",
+          "ChangePartner",
+          "FetishOrgy"
+        ],
+        "IsMainManOwner": false
       }
     ],
 
-    "ExtraYotogiCommands": [
-      "ChangePosition",
-      "ChangePositionAll",
-      "ChangeFormation",
-      "ChangePartner",
-      "FetishOrgy"
-    ],
 
     "CanGainSkillExp": false,
     "LockParameters": true,
@@ -99,19 +105,25 @@
       "Min": 5
     },
 
-    "DefaultMap": {
-      "DayMapID": "privateroom2",
-      "NightMapID": "privateroom2_night",
-      "BGM": "BGM021.ogg",
-      "FormationOption": [ "Houshi", "Houshi_Standing", "Missionary_All", "Missionary_Anus_All", "Doggy_All", "Doggy_Anus_All" ],
-      "DefaultFormation": "Houshi_Standing"
-    },
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "privateroom2",
+          "NightMapID": "privateroom2_night",
+          "BGM": "BGM021.ogg",
+          "FormationOption": [ "Houshi", "Houshi_Standing", "Missionary_All", "Missionary_Anus_All", "Doggy_All", "Doggy_Anus_All" ],
+          "DefaultFormation": "Houshi_Standing"
+        },
 
-    "ExtraYotogiCommands": [
-      "ChangeFormationHaremKing",
-      "ChangeMaidHaremKing",
-      "MoveLeftHaremKing",
-      "MoveRightHaremKing"
+        "ExtraYotogiCommands": [
+          "ChangeFormationHaremKing",
+          "ChangeMaidHaremKing",
+          "MoveLeftHaremKing",
+          "MoveRightHaremKing"
+        ],
+        "IsMainManOwner": true
+      }
     ],
 
     "CanGainSkillExp": false,
@@ -158,28 +170,62 @@
       "Min": 1
     },
 
-    "DefaultMap": {
-      "DayMapID": "poledancestage",
-      "NightMapID": "poledancestage",
-      "BGM": "BGM022.ogg",
-      "FormationOption": [ "Default" ],
-      "DefaultFormation": "Default"
-    },
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "poledancestage",
+          "NightMapID": "poledancestage",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Default" ],
+          "DefaultFormation": "Default"
+        },
 
-    "ExtraYotogiCommands": [
-      "ChangePosition",
-      "OrgasmInternal",
-      "OrgasmExternal",
-      "OrgasmMouth",
-      "OrgasmFace",
-      "OrgasmBukkake",
-      "OrgasmBukkake2"
+        "ExtraYotogiCommands": [
+          "ChangePosition",
+          "OrgasmInternal",
+          "OrgasmExternal",
+          "OrgasmMouth",
+          "OrgasmFace",
+          "OrgasmBukkake",
+          "OrgasmBukkake2",
+          "FetishGangBang"
+        ],
+        "FlexibleManCountInYotogi": true,
+        "ForceChangeManWhenOrgasm": true,
+        "IsMainManOwner": false
+      },
+      {
+        "Phase": 2,
+        "DefaultMap": {
+          "DayMapID": "poledancestage",
+          "NightMapID": "poledancestage",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Default_2nd" ],
+          "DefaultFormation": "Default_2nd"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition",
+          "OrgasmInternal",
+          "OrgasmExternal",
+          "OrgasmMouth",
+          "OrgasmFace",
+          "OrgasmBukkake",
+          "OrgasmBukkake2",
+          "FetishGangBang"
+        ],
+        "FlexibleManCountInYotogi": true,
+        "ForceChangeManWhenOrgasm": true,
+        "IsMainManOwner": true
+      }
     ],
+
 
     "CanGainSkillExp": false,
     "LockParameters": true,
     "UnlimitedMind": true,
-    "FlexibleManCountInYotogi": true,
+
 
     "SetScenarioFlag": [
       {

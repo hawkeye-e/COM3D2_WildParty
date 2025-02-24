@@ -85,8 +85,7 @@ namespace ModResources {
         ///    &quot;ConditionCheckTexts&quot;: [
         ///      {
         ///        &quot;Field&quot;: &quot;ManCount&quot;,
-        ///        &quot;DisplayText&quot;: &quot;[=ManCount]人以上とセックスする&quot;
-        /// [rest of string was truncated]&quot;;.
+        ///        &quot;DisplayText&quot;: &quot;[=ManCount]人以上とセックスする（[= [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ExtraYotogiComands {
             get {
@@ -105,15 +104,17 @@ namespace ModResources {
         ///        &quot;GroupCoordinates&quot;: [
         ///          {
         ///            &quot;ArrayPosition&quot;: 0,
-        ///            &quot;GroupInfo&quot;: {
-        ///              &quot;ArrayPosition&quot;: 0,
-        ///              &quot;PosString&quot;: &quot;0.19, 0.00, -0.93&quot;,
-        ///              &quot;RotString&quot;: &quot;0.0, 1.0, 0.0, 0.0&quot;
-        ///            },
-        ///            &quot;ExtraManInfo&quot;: [
-        ///              {
-        ///                &quot;ArrayPosition&quot;: 0,
-        ///                &quot;PosString&quot;: &quot;-1.45, 0.00, -1.19 [rest of string was truncated]&quot;;.
+        ///            &quot;PosString&quot;: &quot;0.19, 0.00, -0.93&quot;,
+        ///            &quot;RotString&quot;: &quot;0.0, 1.0, 0.0, 0.0&quot;
+        ///          },
+        ///          {
+        ///            &quot;ArrayPosition&quot;: 1,
+        ///            &quot;PosString&quot;: &quot;-1.00, 0.00, 0.85&quot;,
+        ///            &quot;RotString&quot;: &quot;0, 0.707, 0, -0.707&quot;
+        ///          },
+        ///          {
+        ///            &quot;ArrayPosition&quot;: 2,
+        ///  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string HappyGBClubYotogiMapCoordinates {
             get {
@@ -204,10 +205,18 @@ namespace ModResources {
         ///    &quot;DrawName&quot;: &quot;乱交大好き&quot;,
         ///    &quot;UniqueName&quot;: &quot;乱交大好き&quot;,
         ///    &quot;ColorType&quot;: &quot;Red&quot;,
-        ///    &quot;Conditions&quot;: 
-        ///    {
+        ///    &quot;Conditions&quot;: {
         ///      &quot;ManCount&quot;: 3,
         ///      &quot;OrgasmCount&quot;: 10
+        ///    }
+        ///  },
+        ///  {
+        ///    &quot;ID&quot;: 99002,
+        ///    &quot;DrawName&quot;: &quot;輪姦大好き&quot;,
+        ///    &quot;UniqueName&quot;: &quot;輪姦大好き&quot;,
+        ///    &quot;ColorType&quot;: &quot;Red&quot;,
+        ///    &quot;Conditions&quot;: {
+        ///      &quot;OrgasmCount&quot;: 50
         ///    }
         ///  }
         ///]
@@ -216,6 +225,36 @@ namespace ModResources {
         internal static string ModFetish {
             get {
                 return ResourceManager.GetString("ModFetish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;Kamigawara_Reika&quot;: {
+        ///    &quot;FirstName&quot;: &quot;麗華&quot;,
+        ///    &quot;LastName&quot;: &quot;神川原&quot;,
+        ///    &quot;NickName&quot;: &quot;麗華&quot;,
+        ///    &quot;WayToCall&quot;: &quot;FirstName&quot;,
+        ///    &quot;PresetFile&quot;: &quot;Kamigawara_Reika&quot;,
+        ///    &quot;Personality&quot;: 100,
+        ///    &quot;VoicePitch&quot;: 50
+        ///  },
+        ///
+        ///  &quot;Seikou_Haruna&quot;: {
+        ///    &quot;FirstName&quot;: &quot;はるな&quot;,
+        ///    &quot;LastName&quot;: &quot;星光&quot;,
+        ///    &quot;NickName&quot;: &quot;はるな&quot;,
+        ///    &quot;WayToCall&quot;: &quot;FirstName&quot;,
+        ///    &quot;PresetFile&quot;: &quot;Seikou_Haruna&quot;,
+        ///    &quot;Personality&quot;: 80,
+        ///    &quot;VoicePitch&quot;: 50
+        ///  }
+        ///}
+        ///.
+        /// </summary>
+        internal static string ModNPCFemale {
+            get {
+                return ResourceManager.GetString("ModNPCFemale", resourceCulture);
             }
         }
         
@@ -298,18 +337,22 @@ namespace ModResources {
         ///    &quot;IsRandomAssign&quot;: false,
         ///    &quot;IsShuffleMaidList&quot;: false,
         ///    &quot;IsShuffleManList&quot;: false,
+        ///    &quot;ExtraManCount&quot;: 28,
         ///    &quot;GroupSetup&quot;: [
         ///      {
         ///        &quot;ArrayPosition&quot;: 0,
         ///        &quot;ManCount&quot;: 3,
         ///        &quot;MaidCount&quot;: 1,
-        ///        &quot;ExtraManCount&quot;: 5,
         ///        &quot;IsAutomatedGroup&quot;: false
-        ///      }
-        ///    ]
-        ///  }
-        ///
-        ///}.
+        ///      },
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 1,
+        ///        &quot;ManCount&quot;: 3,
+        ///        &quot;MaidCount&quot;: 1,
+        ///        &quot;MaidFromNPC&quot;: true,
+        ///        &quot;IsAutomatedGroup&quot;: true,
+        ///        &quot;IsVoicelessGroup&quot;: true
+        ///       [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string PartyGroupSetup_HappyGBClub {
             get {
@@ -423,9 +466,9 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,Phase,MaidIndex,ManIndex,dummy
-        ///1,寝取らせ輪姦4P奉仕,sex_ran4p_housi_c001.ks,MMMF,TRUE,1,75400,75400,75400,59800,75400,75400,59800,59800,59800,59800,59800,59800,59800,75400,59800,59800,75400,75400,,,75400,75400,,TRUE,TRUE,1,0,1;2;3,
-        ///2,寝取らせ輪姦3P両穴駅弁,sex_ran3p_ekiben.ks,MMF,TRUE,2,75410,75410,75410,59810,75410,75410,59810,59810 [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,IsBGGroupUse,Phase,MaidIndex,ManIndex,dummy
+        ///1,寝取らせ輪姦4P奉仕,sex_ran4p_housi_c001.ks,MMMF,TRUE,1,75400,75400,75400,59800,75400,75400,59800,59800,59800,59800,59800,59800,59800,75400,59800,59800,75400,75400,,,75400,75400,,TRUE,TRUE,TRUE,1,0,1;2;3,
+        ///2,寝取らせ輪姦3P両穴駅弁,sex_OM_haimenekiben_c001.ks,MMF,TRUE,2,75410,75410,75410,598 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosList_HappyGBClub {
             get {
@@ -434,9 +477,9 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,Phase,MaidIndex,ManIndex,dummy
-        ///1,並べ正常位,sex_OM_seijyoui.ks,MF,TRUE,50,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,18910,20210,90,90,85110,TRUE,TRUE,1,0,0,
-        ///2,並べ正常位（アナル）,sex_OM_seijyouiA.ks,MF,TRUE,51,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,18920,20220,110,110,110,TRUE,TRUE,1,0 [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,IsBGGroupUse,Phase,MaidIndex,ManIndex,dummy
+        ///1,並べ正常位,sex_OM_seijyoui.ks,MF,TRUE,50,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,18910,20210,90,90,85110,TRUE,TRUE,FALSE,1,0,0,
+        ///2,並べ正常位（アナル）,sex_OM_seijyouiA.ks,MF,TRUE,51,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,18920,20220,110,11 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosList_HaremKing {
             get {
@@ -445,9 +488,9 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,Phase,MaidIndex,ManIndex,dummy
-        ///1,愛撫,sex_OM_aibu.ks,MF,TRUE,1,53000,53000,53000,53000,53000,53000,53000,38000,38000,38000,38000,38000,38000,53000,53000,38000,53000,53000,69000,69000,53000,53000,99000,TRUE,TRUE,1,0,0,
-        ///2,セックス正常位,sex_OM_seijyoui.ks,MF,TRUE,50,53030,53030,53030,53030,53030,53030,53030,38030,38030,38030,3 [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,IsBGGroupUse,Phase,MaidIndex,ManIndex,dummy
+        ///1,愛撫,sex_OM_aibu.ks,MF,TRUE,1,53000,53000,53000,53000,53000,53000,53000,38000,38000,38000,38000,38000,38000,53000,53000,38000,53000,53000,69000,69000,53000,53000,99000,TRUE,TRUE,TRUE,1,0,0,
+        ///2,セックス正常位,sex_OM_seijyoui.ks,MF,TRUE,50,53030,53030,53030,53030,53030,53030,53030,3 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosList_OrgyParty {
             get {
@@ -649,10 +692,10 @@ namespace ModResources {
         ///    &quot;NextStates&quot;: [ &quot;OrgasmEnd&quot; ]
         ///  },
         ///  &quot;OrgasmEnd&quot;: {
-        ///    &quot;NextStates&quot;: [ &quot;OrgasmWait&quot; ]
+        ///    &quot;NextStates&quot;: [ &quot;ChangeMan&quot; ]
         ///  },
-        ///  &quot;OrgasmWait&quot;: {
-        ///    &quot;NextStates&quot;: [ &quot;ChangePosition&quot;, &quot;ChangePosition&quot;, &quot;ChangePosition&quot;, &quot;ChangePosition&quot;, &quot;Insert&quot; ]
+        ///  &quot;ChangeMan&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;ChangePosition&quot; ]
         ///  },
         ///  &quot;ChangePosition&quot;: {
         ///    &quot;NextStates&quot;: [ &quot;Insert&quot; ]
@@ -669,6 +712,28 @@ namespace ModResources {
         internal static string SexStateDescription_GBType {
             get {
                 return ResourceManager.GetString("SexStateDescription_GBType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;9900002&quot;: {
+        ///    &quot;Offset&quot;: {
+        ///      &quot;PosString&quot;: &quot;0.00, 0.63, 0.00&quot;,
+        ///      &quot;RotString&quot;: &quot;0.0, 1.0, 0.0, 0.0&quot;
+        ///    },
+        ///    &quot;ExtraObjects&quot;: [
+        ///      {
+        ///
+        ///      }
+        ///    ]
+        ///  }
+        ///}
+        ///.
+        /// </summary>
+        internal static string YotogiMiscHandling {
+            get {
+                return ResourceManager.GetString("YotogiMiscHandling", resourceCulture);
             }
         }
     }

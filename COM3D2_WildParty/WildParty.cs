@@ -20,7 +20,7 @@ namespace COM3D2.WildParty.Plugin
         public const string GUID = "COM3D2.WildParty.Plugin";
         public const string Version = "0.2.0";
 
-        internal static new ManualLogSource Log;
+        internal static ManualLogSource Log;
 
         private void Awake()
         {
@@ -64,7 +64,7 @@ namespace COM3D2.WildParty.Plugin
         
         internal static class Hooks
         {
-            
+
         }
     }
 }

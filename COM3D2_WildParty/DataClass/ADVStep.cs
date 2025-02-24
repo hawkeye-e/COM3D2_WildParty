@@ -135,14 +135,21 @@ namespace COM3D2.WildParty.Plugin
         internal class CharaInit
         {
             public int ManRequired = -1;        //Indicate how many man character needed to be initialized. Negative to skip (eg. it is decided from user input)
-            public bool IsClubOwnerMainCharacter = true;    //True: Man[0] will be the owner; False: Man[0] will be replaced with other man character and owner is accessible from StateManager.Instance.ClubOwner
             public List<NPCData> NPC;
+            public List<ModNPCData> ModNPC;
 
             internal class NPCData
             {
-                public int Index;
+                public int Index;               //Share the same array with ModNPC
                 public string Preset;           //The name could be in English or Japanese so this should be a better id?
                 public string Name;             //For making it more readable in json only. The name dispalyed in the game should still use CallName
+            }
+
+            internal class ModNPCData
+            {
+                public int Index;               //Share the same array with NPC
+                public string NPCID;
+                public bool IsFemale = true;
             }
         }
 
@@ -204,6 +211,8 @@ namespace COM3D2.WildParty.Plugin
         {
             public int Phase;
             public bool IsKeepCharacterVisibleAfterYotogi = true;              //The system will automatically hide all the characters when display the yotogi result. Set it to true to prevent from hiding them.
+            public bool IsFinalYotogi = true;
+            public bool IsClubOwnerMainCharacter = true;    //True: Man[0] will be the owner; False: Man[0] will be replaced with other man character and owner is accessible from StateManager.Instance.ClubOwner
         }
 
         

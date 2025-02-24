@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using UnityEngine;
@@ -16,12 +17,7 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             //For maid, no need to create new. we take it from stock
             maid.gameObject.transform.SetParent(GameMain.Instance.CharacterMgr.GetMaid(0).gameObject.transform.parent, false);
-            maid.gameObject.name = maid.status.fullNameJpStyle;
-            maid.transform.localPosition = new Vector3(-999f, -999f, -999f);
-            maid.Visible = true;
-            maid.DutPropAll();
-            maid.AllProcPropSeqStart();
-
+            RenderMaidAfterInit(maid);
             StateManager.Instance.WaitForFullLoadList.Add(maid);
         }
 
@@ -36,11 +32,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             RandomizeManBody(man);
 
-            man.Visible = true;
-            man.DutPropAll();
-            man.AllProcPropSeqStart();
-
-            man.transform.localPosition = new Vector3(-999f, -999f, -999f);
+            RenderMaidAfterInit(man);
 
             StateManager.Instance.WaitForFullLoadList.Add(man);
 
@@ -60,6 +52,44 @@ namespace COM3D2.WildParty.Plugin.Core
                     break;
                 }
             }
+
+            RenderMaidAfterInit(maid);
+            
+            return maid;
+        }
+
+        internal static Maid InitModNPCFemale(string NPCID)
+        {
+            ModNPCFemale npcData = ModUseData.ModNPCFemaleList[NPCID];
+
+            Maid maid = GameMain.Instance.CharacterMgr.AddStockMaid();
+            CharacterMgr.Preset preset = LoadPreset(npcData.PresetFile);
+            GameMain.Instance.CharacterMgr.PresetSet(maid, preset);
+
+            if (maid != null)
+            {
+                maid.status.SetPersonal(npcData.Personality);
+                maid.VoicePitch = npcData.VoicePitch;
+
+                Traverse.Create(maid.status).Field(Constant.DefinedClassFieldNames.MaidStatusFirstName).SetValue(npcData.FirstName);
+                Traverse.Create(maid.status).Field(Constant.DefinedClassFieldNames.MaidStatusLastName).SetValue(npcData.LastName);
+                Traverse.Create(maid.status).Field(Constant.DefinedClassFieldNames.MaidStatusNickName).SetValue(npcData.NickName);
+
+                maid.status.isNickNameCall = false;
+                maid.status.isFirstNameCall = false;
+                if (npcData.WayToCall == ModNPC.CallType.NickName)
+                    maid.status.isNickNameCall = true;
+                else if (npcData.WayToCall == ModNPC.CallType.FirstName)
+                    maid.status.isFirstNameCall = true;
+
+                RenderMaidAfterInit(maid);
+            }
+
+            return maid;
+        }
+
+        internal static void RenderMaidAfterInit(Maid maid)
+        {
             if (maid != null)
             {
                 maid.gameObject.name = maid.status.fullNameJpStyle;
@@ -68,8 +98,6 @@ namespace COM3D2.WildParty.Plugin.Core
                 maid.DutPropAll();
                 maid.AllProcPropSeqStart();
             }
-
-            return maid;
         }
 
         //Randomize the body of the temporary man
@@ -358,27 +386,41 @@ namespace COM3D2.WildParty.Plugin.Core
 
             int maidRunningNumber = 0;
             int manRunningNumber = 0;
+            int NPCFemaleRunningNumber = 0;
 
             foreach(var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
             {
                 PartyGroup newGroup = new PartyGroup();
 
                 for (int i = 0; i < groupSetupInfo.MaidCount; i++)
-                    newGroup.SetMaidAtIndex(i, workingMaidList[maidRunningNumber++]);
+                {
+                    if(!groupSetupInfo.MaidFromNPC)
+                        newGroup.SetMaidAtIndex(i, workingMaidList[maidRunningNumber++]);
+                    else
+                        newGroup.SetMaidAtIndex(i, StateManager.Instance.NPCList[NPCFemaleRunningNumber++]);
+                }
                 for (int i = 0; i < groupSetupInfo.ManCount; i++)
                     newGroup.SetManAtIndex(i, StateManager.Instance.MenList[manRunningNumber++]);
 
                 
 
                 newGroup.IsAutomatedGroup = groupSetupInfo.IsAutomatedGroup;
-                
+                newGroup.IsVoicelessGroup = groupSetupInfo.IsVoicelessGroup;
+
+
                 StateManager.Instance.PartyGroupList.Add(newGroup);
 
-                if (maidRunningNumber >= StateManager.Instance.YotogiWorkingMaidList.Count)
+                if (maidRunningNumber >= StateManager.Instance.YotogiWorkingMaidList.Count && NPCFemaleRunningNumber >= StateManager.Instance.NPCList.Count)
                     break;
             }
-            for (int i = 0; i < setupInfo.ExtraManCount; i++)
-                PartyGroup.ExtraManList.Add(StateManager.Instance.MenList[manRunningNumber++]);
+
+            PartyGroup.ExtraManList = new Dictionary<int, Maid>();
+            for (int i = 0; i < setupInfo.ExtraManCount; i++) {
+                if (manRunningNumber >= StateManager.Instance.MenList.Count)
+                    PartyGroup.ExtraManList.Add(i, null);
+                else
+                    PartyGroup.ExtraManList.Add(i, StateManager.Instance.MenList[manRunningNumber++]);
+            }
         }
 
         internal static void AssignPartyGrouping_SwapMember(Maid maid1, Maid maid2)
@@ -509,7 +551,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             if (!string.IsNullOrEmpty(motionLabelEntry.VoiceType1))
             {
-                SetCharacterVoiceEntry(group.Maid1, PersonalityVoice.VoiceEntryType.NormalPlay, excitementLevel, motionLabelEntry.VoiceType1, group.IsEstrus);
+                SetCharacterVoiceEntry(group.Maid1, PersonalityVoice.VoiceEntryType.NormalPlay, excitementLevel, motionLabelEntry.VoiceType1, group.IsEstrus, group.IsVoicelessGroup);
 
                 //record the type for setting face anime
                 group.Maid1VoiceType = motionLabelEntry.VoiceType1;
@@ -519,7 +561,7 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 if (!string.IsNullOrEmpty(motionLabelEntry.VoiceType2))
                 {
-                    SetCharacterVoiceEntry(group.Maid2, PersonalityVoice.VoiceEntryType.NormalPlay, excitementLevel, motionLabelEntry.VoiceType2, group.IsEstrus);
+                    SetCharacterVoiceEntry(group.Maid2, PersonalityVoice.VoiceEntryType.NormalPlay, excitementLevel, motionLabelEntry.VoiceType2, group.IsEstrus, group.IsVoicelessGroup);
 
                     group.Maid2VoiceType = motionLabelEntry.VoiceType2;
                 }
@@ -527,7 +569,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
         }
 
-        internal static void SetCharacterVoiceEntry(Maid maid, PersonalityVoice.VoiceEntryType voiceEntryType, int excitementLevel, string voiceType, bool isEstrus)
+        internal static void SetCharacterVoiceEntry(Maid maid, PersonalityVoice.VoiceEntryType voiceEntryType, int excitementLevel, string voiceType, bool isEstrus, bool isVoiceless)
         {
             if (maid == null)
                 return;
@@ -555,7 +597,8 @@ namespace COM3D2.WildParty.Plugin.Core
 
             var voiceFile = (isEstrus ? targetVoiceList[rnd].EstrusFile : targetVoiceList[rnd].NormalFile);
 
-            SetCharacterVoice(maid, voiceFile);
+            if(!isVoiceless)
+                SetCharacterVoice(maid, voiceFile);
         }
 
         internal static void SetCharacterVoice(Maid maid, string voiceFile, bool isLoop = true)
@@ -832,13 +875,14 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void SetDefaultGroupFormation()
         {
             var scenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
-            if (scenario.AllowMap != null)
+            var yotogiSetup = scenario.YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First();
+            if (yotogiSetup.AllowMap != null)
             {
-                PartyGroup.CurrentFormation = scenario.AllowMap.Where(x => x.MapID == YotogiStageSelectManager.SelectedStage.stageData.id).First().DefaultFormation;
+                PartyGroup.CurrentFormation = yotogiSetup.AllowMap.Where(x => x.MapID == YotogiStageSelectManager.SelectedStage.stageData.id).First().DefaultFormation;
             }
-            else if (scenario.DefaultMap != null)
+            else if (yotogiSetup.DefaultMap != null)
             {
-                PartyGroup.CurrentFormation = scenario.DefaultMap.DefaultFormation;
+                PartyGroup.CurrentFormation = yotogiSetup.DefaultMap.DefaultFormation;
             }
         }
 
@@ -896,6 +940,17 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 PlayAnimation(maid, motionInfo.MotionFile, motionInfo.MotionTag, motionInfo.IsLoopMotion, motionInfo.IsBlend, motionInfo.IsQueued);
             }
+        }
+
+        internal static CharacterMgr.Preset LoadPreset(string presetFileName)
+        {
+            byte[] presetData = NPCPresetMapping.GetPresetResources(presetFileName);
+
+            BinaryReader binaryReader = new BinaryReader(new MemoryStream(presetData));
+            CharacterMgr.Preset result = CharacterMgr.PresetLoad(binaryReader, Path.GetFileName(presetFileName));
+            binaryReader.Close();
+
+            return result;
         }
     }
 }

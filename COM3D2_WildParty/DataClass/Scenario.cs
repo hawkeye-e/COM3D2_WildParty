@@ -31,15 +31,13 @@ namespace COM3D2.WildParty.Plugin
         public List<string> MasterRequireFlag;
         public List<string> MasterExcludeFlag;
 
-        public List<MapInfo> AllowMap;
-        public DefaultMapInfo DefaultMap;
-        public List<string> ExtraYotogiCommands;
+        
+        public List<YotogiSetupInfo> YotogiSetup;           //A list to allow multiple yotogi scene in a single scenario
         public string ADVEntryStep;
         public bool CanGainSkillExp;
         public bool LockParameters;
         public bool UnlimitedMind;
         public bool IsGroupEvent;
-        public bool FlexibleManCountInYotogi = false;
         public MaidCountRequirement MaidCount;
         public List<ExtraScenarioFlag> SetScenarioFlag;
 
@@ -58,6 +56,17 @@ namespace COM3D2.WildParty.Plugin
         [JsonProperty]
         private List<string> SpecialRelationEnumString;
 
+        internal class YotogiSetupInfo
+        {
+            public int Phase = 1;
+            public List<MapInfo> AllowMap;
+            public DefaultMapInfo DefaultMap;
+            public List<string> ExtraYotogiCommands;
+            
+            public bool FlexibleManCountInYotogi = false;
+            public bool ForceChangeManWhenOrgasm = false;
+            public bool IsMainManOwner;
+        }
 
         internal class MapInfo
         {

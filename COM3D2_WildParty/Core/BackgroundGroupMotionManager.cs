@@ -34,6 +34,8 @@ namespace COM3D2.WildParty.Plugin.Core
                     HandleGroupForStateInsert(groupList[i]);
                 else if (groupList[i].CurrentSexState == SexState.StateType.InsertEnd)
                     HandleGroupForStateInsertEnd(groupList[i]);
+                else if (groupList[i].CurrentSexState == SexState.StateType.ChangeMan)
+                    HandleGroupForStateChangeMan(groupList[i]);
             }
         }
 
@@ -135,8 +137,11 @@ namespace COM3D2.WildParty.Plugin.Core
             group.RequestNextReviewTimeAfter(clip.length);
 
             //play the audio specfic
-            group.IsMaid1OrgasmScreamSet = CharacterHandling.SetOrgasmScreamVoice(group.Maid1, pickedLabel.VoiceType1);
-            group.IsMaid2OrgasmScreamSet = CharacterHandling.SetOrgasmScreamVoice(group.Maid2, pickedLabel.VoiceType2);
+            if (!group.IsVoicelessGroup)
+            {
+                group.IsMaid1OrgasmScreamSet = CharacterHandling.SetOrgasmScreamVoice(group.Maid1, pickedLabel.VoiceType1);
+                group.IsMaid2OrgasmScreamSet = CharacterHandling.SetOrgasmScreamVoice(group.Maid2, pickedLabel.VoiceType2);
+            }
 
             //also update the progress info
             YotogiHandling.AddManOrgasmCountForGroup(group);
@@ -230,12 +235,12 @@ namespace COM3D2.WildParty.Plugin.Core
                 
                 int excitementLevel = group.ExcitementLevel;
 
-                CharacterHandling.SetCharacterVoiceEntry(group.Maid1, PersonalityVoice.VoiceEntryType.OrgasmWait, excitementLevel, group.CurrentOrgasmLabelRecord.WaitLabel1, group.IsEstrus);
+                CharacterHandling.SetCharacterVoiceEntry(group.Maid1, PersonalityVoice.VoiceEntryType.OrgasmWait, excitementLevel, group.CurrentOrgasmLabelRecord.WaitLabel1, group.IsEstrus, group.IsVoicelessGroup);
                 group.Maid1VoiceType = group.CurrentOrgasmLabelRecord.WaitLabel1;
 
                 if (group.Maid2 != null)
                 {
-                    CharacterHandling.SetCharacterVoiceEntry(group.Maid2, PersonalityVoice.VoiceEntryType.OrgasmWait, excitementLevel, group.CurrentOrgasmLabelRecord.WaitLabel2, group.IsEstrus);
+                    CharacterHandling.SetCharacterVoiceEntry(group.Maid2, PersonalityVoice.VoiceEntryType.OrgasmWait, excitementLevel, group.CurrentOrgasmLabelRecord.WaitLabel2, group.IsEstrus, group.IsVoicelessGroup);
                     group.Maid2VoiceType = group.CurrentOrgasmLabelRecord.WaitLabel2;
                 }
 
@@ -252,8 +257,30 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             if (DateTime.Now > group.NextActionReviewTime)
             {
-                var lstMotion = ModUseData.BackgroundMotionList[group.GroupType];
+                List<string> possibleGroupTypes = new List<string> { group.GroupType };
+                List<BackgroundGroupMotion.MotionItem> lstMotion = new List<BackgroundGroupMotion.MotionItem>();
+                if (Util.GetUndergoingScenario().YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First().FlexibleManCountInYotogi)
+                    possibleGroupTypes = group.GetPossibleGroupType();
+
+                foreach (var groupType in possibleGroupTypes)
+                {
+                    lstMotion.AddRange(ModUseData.BackgroundMotionList[groupType].Where(x => x.Phase == StateManager.Instance.YotogiPhase && x.IsBGGroupUse).ToList());
+                }
+                
                 int rndMotion = RNG.Random.Next(lstMotion.Count);
+
+                string targetGroupType = "";
+                foreach (var groupType in possibleGroupTypes)
+                {
+                    if(ModUseData.BackgroundMotionList[groupType].Any(x => x.ID == lstMotion[rndMotion].ID))
+                    {
+                        targetGroupType = groupType;
+                        break;
+                    }
+                }
+
+                if(group.GroupType != targetGroupType)
+                    YotogiHandling.ConvertToGroupType(group, targetGroupType, lstMotion[rndMotion].ID);
 
                 group.SexPosID = lstMotion[rndMotion].ID;
                 YotogiHandling.ChangeBackgroundGroupMotionWithSpecificLabel(group, SexState.StateType.Waiting);
@@ -286,12 +313,12 @@ namespace COM3D2.WildParty.Plugin.Core
                 YotogiHandling.ChangeBackgroundGroupMotionWithSpecificLabel(group, SexState.StateType.Insert);
 
                 //load the voice
-                CharacterHandling.SetCharacterVoiceEntry(group.Maid1, PersonalityVoice.VoiceEntryType.Insert, group.ExcitementLevel, insertLabel.VoiceType1, group.IsEstrus);
+                CharacterHandling.SetCharacterVoiceEntry(group.Maid1, PersonalityVoice.VoiceEntryType.Insert, group.ExcitementLevel, insertLabel.VoiceType1, group.IsEstrus, group.IsVoicelessGroup);
                 group.Maid1VoiceType = insertLabel.VoiceType1;
 
                 if (group.Maid2 != null)
                 {
-                    CharacterHandling.SetCharacterVoiceEntry(group.Maid2, PersonalityVoice.VoiceEntryType.Insert, group.ExcitementLevel, insertLabel.VoiceType2, group.IsEstrus);
+                    CharacterHandling.SetCharacterVoiceEntry(group.Maid2, PersonalityVoice.VoiceEntryType.Insert, group.ExcitementLevel, insertLabel.VoiceType2, group.IsEstrus, group.IsVoicelessGroup);
                     group.Maid2VoiceType = insertLabel.VoiceType2;
                 }
 
@@ -311,6 +338,17 @@ namespace COM3D2.WildParty.Plugin.Core
             if (DateTime.Now > group.NextActionReviewTime)
             {
                 //switch to normal play
+                group.CurrentSexState = GetNextSexState(group.CurrentSexState);
+            }
+        }
+
+        private static void HandleGroupForStateChangeMan(PartyGroup group)
+        {
+            if (DateTime.Now > group.NextActionReviewTime)
+            {
+                YotogiHandling.ChangeManMembers(group);
+
+                YotogiHandling.ChangeBackgroundGroupMotionWithSpecificLabel(group, MotionSpecialLabel.LabelType.Waiting);
                 group.CurrentSexState = GetNextSexState(group.CurrentSexState);
             }
         }

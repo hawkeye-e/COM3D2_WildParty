@@ -79,10 +79,13 @@ namespace COM3D2.WildParty.Plugin
         //When the target starts the defined animation name, execute the event deletgate
         internal AnimationEndTrigger WaitingAnimationTrigger = null;
         internal AnimationEndTrigger AnimationChangeTrigger = null;
+
+        internal VoiceLoopTrigger VoiceLoopTrigger = null;
         internal TimeEndTrigger TimeEndTrigger = null;
 
         internal int BranchIndex = -1;                          //For ADV processing
 
         internal int YotogiPhase = 0;
+        internal bool IsFinalYotogi = true;
     }
 }

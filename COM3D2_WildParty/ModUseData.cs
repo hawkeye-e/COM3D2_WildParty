@@ -42,6 +42,11 @@ namespace COM3D2.WildParty.Plugin
         //Key: Formation ID
         public static Dictionary<string, PartyGroupSetup> PartyGroupSetupList;
 
+        //Key: State ID
+        public static Dictionary<string, ModNPCFemale> ModNPCFemaleList;
+
+        //Key: ScenarioID
+        public static Dictionary<int, List<YotogiMiscSetup>> YotogiMiscSetupList;
         public ModUseData()
         {
         }
@@ -70,6 +75,10 @@ namespace COM3D2.WildParty.Plugin
             FetishList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Fetish>>(ModResources.TextResource.ModFetish);
 
             ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.TextResource.ExtraYotogiComands);
+
+            ModNPCFemaleList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ModNPCFemale>>(ModResources.TextResource.ModNPCFemale);
+
+            YotogiMiscSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<int, List<YotogiMiscSetup>>>(ModResources.TextResource.YotogiMiscHandling);
         }
 
         public static void InitDataForScenario(int scenarioID)

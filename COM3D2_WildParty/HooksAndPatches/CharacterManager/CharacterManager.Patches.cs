@@ -17,12 +17,11 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
                 {
                     if (group.Man1.status.guid == StateManager.Instance.processingManGUID)
                     {
-                        //TODO: use manindex
                         //If it is a hit, determine which man in the group is returned
-                        if (manNo == 0)
-                            result = group.Man1;
-                        else if (manNo == 1)
-                            result = group.Man2;
+                        BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
+                        for (int i = 0; i < motionItem.ManIndex.Count; i++)
+                            if (motionItem.ManIndex[i] == manNo)
+                                result = group.GetManAtIndex(i);
                     }
                 }
                 //check also the club owner
@@ -121,18 +120,12 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
 
                     if (StateManager.Instance.currentGroup >= 0 && __result != null && StateManager.Instance.PartyGroupList.Count > 1)
                     {
-                        //TODO: need to use the manIndex
-                        if (manIndex == 0)
-                        {
-                            if (StateManager.Instance.PartyGroupList[StateManager.Instance.currentGroup].Man1 != null)
-                                __result = StateManager.Instance.PartyGroupList[StateManager.Instance.currentGroup].Man1;
-                        }
-                        else if (manIndex == 1)
-                        {
+                        PartyGroup group = StateManager.Instance.PartyGroupList[StateManager.Instance.currentGroup];
+                        BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
 
-                            if (StateManager.Instance.PartyGroupList[StateManager.Instance.currentGroup].Man2 != null)
-                                __result = StateManager.Instance.PartyGroupList[StateManager.Instance.currentGroup].Man2;
-                        }
+                        for (int i = 0; i < motionItem.ManIndex.Count; i++)
+                            if (motionItem.ManIndex[i] == manIndex)
+                                __result = group.GetManAtIndex(i);
 
                     }
                 }

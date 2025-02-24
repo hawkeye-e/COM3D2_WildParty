@@ -15,7 +15,7 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void ProcessADVStep(ADVKagManager instance)
         {
             if (StateManager.Instance.UndergoingModEventID > 0 && StateManager.Instance.ModEventProgress != Constant.EventProgress.Init)
-            {                
+            {
                 //If there is no such step found (wrong setup), terminate the mod event.
                 if (!ModUseData.ADVStepData[StateManager.Instance.UndergoingModEventID].ContainsKey(StateManager.Instance.CurrentADVStepID))
                 {
@@ -161,25 +161,32 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.ClubOwner.AllProcPropSeqStart();
             StateManager.Instance.ClubOwner.transform.localPosition = new Vector3(-999f, -999f, -999f);
             
-            if (!step.CharaInitData.IsClubOwnerMainCharacter)
-            {
-                //the Man[0] is replaced by a customer and will use his view to proceed the yotogi scene
-                GameMain.Instance.CharacterMgr.SetActiveMan(StateManager.Instance.MenList[0], 0);
-            }
-            else
-            {
-                //The owner is the main character, put him as the first element of the men list 
-                StateManager.Instance.MenList.Insert(0, StateManager.Instance.ClubOwner);
-                GameMain.Instance.CharacterMgr.SetActiveMan(StateManager.Instance.ClubOwner, 0);
-            }
-
+            
             //init NPC
+            StateManager.Instance.NPCList = new List<Maid>();
             if (step.CharaInitData.NPC != null)
             {
-                StateManager.Instance.NPCList = new List<Maid>();
                 foreach (var npcRequest in step.CharaInitData.NPC) {
                     Maid npc = CharacterHandling.InitNPCMaid(npcRequest.Preset);
-                    StateManager.Instance.NPCList.Add(npc);
+                    StateManager.Instance.NPCList.Insert(npcRequest.Index, npc);
+                    
+                }
+            }
+
+            if (step.CharaInitData.ModNPC != null)
+            {
+                foreach (var modNPCRequest in step.CharaInitData.ModNPC)
+                {
+                    Maid npc = null;
+                    if (modNPCRequest.IsFemale)
+                    {
+                        npc = CharacterHandling.InitModNPCFemale(modNPCRequest.NPCID);
+                        StateManager.Instance.NPCList.Insert(modNPCRequest.Index, npc);
+                    }
+                    else
+                    {
+                        //TODO: Male NPC
+                    }
                 }
             }
         }

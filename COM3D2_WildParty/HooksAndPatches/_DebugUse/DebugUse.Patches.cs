@@ -245,12 +245,13 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                     if (i == 0)
                     {
                         Core.CharacterHandling.LoadMotionScript(0, false, "h_man_001.ks", "*男ソファーワイン待機L", "", maid.status.guid);
-                        //Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
+                        //Core.CharacterHandling.PlayAnimation(maid, "OM_kyousitu_aibu_taiki_m.anm", "OM_kyousitu_aibu_taiki_m.anm");
                     }
-                    if (i == 1)
+                    if (i >= 1)
                     {
-                        Core.CharacterHandling.LoadMotionScript(0, false, "h_man_001.ks", "*男ソファーワイン待機", "", maid.status.guid);
-                        //Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
+                        //Core.CharacterHandling.LoadMotionScript(0, false, "h_man_001.ks", "*男ソファーワイン待機", "", maid.status.guid);
+                        Core.CharacterHandling.PlayAnimation(maid, "harituke_sex_taiki_m.anm", "harituke_sex_taiki_m.anm");
+
                     }
                 }
             }

@@ -246,10 +246,27 @@ namespace COM3D2.WildParty.Plugin
             {
                 if (group.Maid1.status.guid == guid || group.Man1.status.guid == guid
                     || group.Maid2?.status.guid == guid || group.Man2?.status.guid == guid
+                     || group.Man3?.status.guid == guid
                     )
                     return group;
             }
             return null;
+        }
+
+        internal static MapCoorindates.CoordinatesInfo GetGroupCoordinateInfo(PartyGroup group)
+        {
+            //locate the group index
+            int groupIndex = -1;
+            for (int i = 0; i < StateManager.Instance.PartyGroupList.Count; i++)
+                if (StateManager.Instance.PartyGroupList[i] == group)
+                    groupIndex = i;
+
+            if (groupIndex < 0)
+                return null;
+
+            MapCoorindates.CoordinateListInfo coordinateListInfo = ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].CoordinateList.Where(x => x.MaxGroup >= StateManager.Instance.PartyGroupList.Count).OrderBy(x => x.MaxGroup).First();
+            MapCoorindates.CoordinatesInfo coordinatesInfo = coordinateListInfo.GroupCoordinates.Where(x => x.ArrayPosition == groupIndex).First();
+            return coordinatesInfo;
         }
 
         internal static int GetIndexPositionInWorkingYotogiArrayForMaid(Maid maid)
@@ -275,10 +292,10 @@ namespace COM3D2.WildParty.Plugin
             return null;
         }
 
-        internal static PlayableSkill.SkillItem GetMainGroupSkillIDBySexPosID(int sexPosID)
+        internal static PlayableSkill.SkillItem GetGroupSkillIDBySexPosID(PartyGroup group, int sexPosID)
         {
-            int personality = StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id;
-            string groupType = StateManager.Instance.PartyGroupList[0].GroupType;
+            int personality = group.Maid1.status.personal.id;
+            string groupType = group.GroupType;
             return ModUseData.ValidSkillList[personality][groupType].Where(x => x.SexPosID == sexPosID).First();
         }
 
@@ -381,6 +398,17 @@ namespace COM3D2.WildParty.Plugin
             if (group == null)
                 return null;
             return ModUseData.BackgroundMotionList[group.GroupType].Where(x => x.ID == group.SexPosID).First();
+        }
+
+        internal static BackgroundGroupMotion.MotionItem GetMotionItemBySexPosID(int sexPosID)
+        {
+            foreach(var kvp in ModUseData.BackgroundMotionList)
+            {
+                var list = kvp.Value.Where(x => x.ID == sexPosID).ToList();
+                if(list.Count > 0)
+                    return list[0];
+            }
+            return null;
         }
 
         internal static Maid GetSemenTarget(PartyGroup group, MotionSpecialLabel.SemenTarget target)

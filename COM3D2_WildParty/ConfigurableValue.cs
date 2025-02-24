@@ -7,6 +7,8 @@ namespace COM3D2.WildParty.Plugin
     {
         internal const int MaxOrgyPartyManCount = 20;        //While it is possible to add more so that you could have like 40 maids + 80 men, it would be slow as hell to load...
         internal const float CameraFadeTime = 0.5f;
+        internal const int OrgasmFinishFollowUpBaseExtraWaitingTimeInSecond = 2;
+        internal const int OrgasmFinishFollowUpVariableExtraWaitingTimeInSecond = 3;
         internal static class YotogiSimulation
         {
             //Values of this class will be included in the config to let the player edit. This class will act as default suggested value.

@@ -283,7 +283,9 @@ namespace COM3D2.WildParty.Plugin
 
             internal const string ManCount = "[=ManCount]";
             internal const string OrgasmCount = "[=OrgasmCount]";
-
+            internal const string CurrentManCount = "[=CurrentManCount]";
+            internal const string CurrentOrgasmCount = "[=CurrentOrgasmCount]";
+            
             internal const string RandomGroupRegex = @"\[\=RandomGroup,(\d{1,2}),([a-zA-Z0-9]+)\]";
         }
 
@@ -322,6 +324,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string YotogiPlay = "YOTOGI_PLAY";
             internal const string YotogiEnd = "YOTOGI_END";
 
+            internal const string ADV = "ADV";
             internal const string PostYotogiADV = "POST_YOTOGI_ADV";
 
             internal const string EndingADV = "ENDING_ADV";
@@ -383,6 +386,10 @@ namespace COM3D2.WildParty.Plugin
             internal const string CharacterSelectMainSelectedMaid = "select_maid_";
 
             internal const string UndressingManagerAllMaidArray = "all_maid_data_";
+
+            internal const string MaidStatusFirstName = "firstName_";
+            internal const string MaidStatusLastName = "lastName_";
+            internal const string MaidStatusNickName = "nickName_";
         }
 
         internal static class DefinedSearchPath

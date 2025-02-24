@@ -116,7 +116,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 YotogiHandling.UpdateParameterView(StateManager.Instance.PartyGroupList[0].Maid1);
 
                 //Core.YotogiHandling.YotogiSkillCall(StateManager.Instance.YotogiManager, ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
-                PlayableSkill.SkillItem skill = Util.GetMainGroupSkillIDBySexPosID(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
+                PlayableSkill.SkillItem skill = Util.GetGroupSkillIDBySexPosID(StateManager.Instance.PartyGroupList[0], ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
                 YotogiHandling.ChangeMainGroupSkill(skill.YotogiSkillID);
 
                 YotogiHandling.SetGroupToScene();
@@ -174,7 +174,7 @@ namespace COM3D2.WildParty.Plugin.Core
             int mainGroupSexPosID = ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID;
             int bgSexPosID = ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].BackgroundSexPosID;
 
-            PlayableSkill.SkillItem newMainGroupSkill = Util.GetMainGroupSkillIDBySexPosID(mainGroupSexPosID);
+            PlayableSkill.SkillItem newMainGroupSkill = Util.GetGroupSkillIDBySexPosID(StateManager.Instance.PartyGroupList[0], mainGroupSexPosID);
 
             //original maid motion
             YotogiHandling.ChangeBackgroundGroupSexPosition(originalMaidGroup, bgSexPosID, true);

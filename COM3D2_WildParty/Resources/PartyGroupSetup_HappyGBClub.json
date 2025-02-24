@@ -4,15 +4,62 @@
     "IsRandomAssign": false,
     "IsShuffleMaidList": false,
     "IsShuffleManList": false,
-    "ExtraManCount": 5,
+    "ExtraManCount": 28,
     "GroupSetup": [
       {
         "ArrayPosition": 0,
         "ManCount": 3,
         "MaidCount": 1,
         "IsAutomatedGroup": false
+      },
+      {
+        "ArrayPosition": 1,
+        "ManCount": 3,
+        "MaidCount": 1,
+        "MaidFromNPC": true,
+        "IsAutomatedGroup": true,
+        "IsVoicelessGroup": false
+      },
+      {
+        "ArrayPosition": 2,
+        "ManCount": 3,
+        "MaidCount": 1,
+        "MaidFromNPC": true,
+        "IsAutomatedGroup": true,
+        "IsVoicelessGroup": false
+      }
+    ]
+  },
+
+  "Default_2nd": {
+    "DefaultSexPosID": 5,
+    "IsRandomAssign": false,
+    "IsShuffleMaidList": false,
+    "IsShuffleManList": false,
+    "ExtraManCount": 28,
+    "GroupSetup": [
+      {
+        "ArrayPosition": 0,
+        "ManCount": 3,
+        "MaidCount": 1,
+        "IsAutomatedGroup": false
+      },
+      {
+        "ArrayPosition": 1,
+        "ManCount": 3,
+        "MaidCount": 1,
+        "MaidFromNPC": true,
+        "IsAutomatedGroup": true,
+        "IsVoicelessGroup": true
+      },
+      {
+        "ArrayPosition": 2,
+        "ManCount": 3,
+        "MaidCount": 1,
+        "MaidFromNPC": true,
+        "IsAutomatedGroup": true,
+        "IsVoicelessGroup": true
       }
     ]
   }
-
 }

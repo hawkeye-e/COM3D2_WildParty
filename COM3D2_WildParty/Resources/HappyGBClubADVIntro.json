@@ -13,8 +13,21 @@
     "WaitingType": "Auto",
     "NextStepID": "hgbc0001_init_hide_men",
     "CharaInitData": {
-      "IsClubOwnerMainCharacter": false,
-      "ManRequired": 8
+      "ManRequired": 34,
+      "ModNPC": [
+        {
+          "Index": 0,
+          "NPCID": "Shirohama_Natsumi"
+        },
+        {
+          "Index": 1,
+          "NPCID": "Seikou_Haruna"
+        },
+        {
+          "Index": 2,
+          "NPCID": "Kamigawara_Reika"
+        }
+      ]
     }
   },
 
@@ -85,9 +98,41 @@
     "WaitingType": "LoadScene",
     "YotogiSetup": {
       "Phase": 1,
-      "IsKeepCharacterVisibleAfterYotogi": false
+      "IsKeepCharacterVisibleAfterYotogi": true,
+      "IsFinalYotogi": false,
+      "IsClubOwnerMainCharacter": false
     },
-    "NextStepID": "hgbc_postyotogi_init"
-  }
+    "NextStepID": "hgbc_postyotogi1_init"
+  },
 
+
+  "hgbc_postyotogi1_init": {
+    "ID": "hgbc_postyotogi1_init",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_start_yotogiplay2",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "This is after yotogi 1"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_start_yotogiplay2": {
+    "ID": "hgbc_start_yotogiplay2",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "Phase": 2,
+      "IsKeepCharacterVisibleAfterYotogi": false,
+      "IsFinalYotogi": true,
+      "IsClubOwnerMainCharacter": true
+    },
+    "NextStepID": "hgbc_postyotogi2_init"
+  }
 }

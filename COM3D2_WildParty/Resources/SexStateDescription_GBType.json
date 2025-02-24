@@ -9,7 +9,7 @@
     "NextStates": [ "ChangeMan" ]
   },
   "ChangeMan": {
-    "NextStates": [ "Insert" ]
+    "NextStates": [ "Insert", "ChangePosition" ]
   },
   "ChangePosition": {
     "NextStates": [ "Insert" ]

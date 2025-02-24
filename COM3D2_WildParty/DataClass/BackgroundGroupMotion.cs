@@ -14,6 +14,10 @@ namespace COM3D2.WildParty.Plugin
             public string FileName;
             public List<MotionLabel> ValidLabels;
             public List<MotionSpecialLabel> SpecialLabels;
+            public int Phase;
+            public bool IsBGGroupUse;               //True: will be used by automated group; False: Not used by automated group. The labels information would be used by main group so have to leave a record here
+            public List<int> MaidIndex;
+            public List<int> ManIndex;
         }
 
         internal class MotionLabel
@@ -60,6 +64,21 @@ namespace COM3D2.WildParty.Plugin
                 MotionItem data = new MotionItem();
                 data.ID = int.Parse(rowData[0]);
                 data.FileName = rowData[2];
+                data.Phase = int.Parse(rowData[32]);
+                data.IsBGGroupUse = bool.Parse(rowData[31]);
+
+                string maidIndexRaw = rowData[33];
+                string manIndexRaw = rowData[34];
+
+                string[] maidIndexSplit = maidIndexRaw.Split(';');
+                data.MaidIndex = new List<int>();
+                for (int j = 0; j < maidIndexSplit.Length; j++)
+                    data.MaidIndex.Add(int.Parse(maidIndexSplit[j]));
+
+                string[] manIndexSplit = manIndexRaw.Split(';');
+                data.ManIndex = new List<int>();
+                for (int j = 0; j < manIndexSplit.Length; j++)
+                    data.ManIndex.Add(int.Parse(manIndexSplit[j]));
 
                 data.ValidLabels = lstMotionLabels.Where(x => x.ID == data.ID).ToList();
 

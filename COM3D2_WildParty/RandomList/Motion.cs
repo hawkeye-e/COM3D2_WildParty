@@ -23,7 +23,7 @@ namespace COM3D2.WildParty.Plugin.RandomList
         };
 
         internal static readonly MotionInfo[] MaleStandingList =
-{
+        {
             new MotionInfo("", "", "man_porse01.anm", "man_porse01.anm"),
             new MotionInfo("", "", "man_tati_seigan_m.anm", "man_tati_seigan_m.anm"),
             new MotionInfo("", "", "man_tati_tyarao_m.anm", "man_tati_tyarao_m.anm"),
@@ -31,10 +31,18 @@ namespace COM3D2.WildParty.Plugin.RandomList
             //new MotionInfo("", "", "poseizi_taiki_m.anm", "poseizi_taiki_m.anm")
         };
 
+        internal static readonly MotionInfo[] MaleStandingErectList =
+        {
+            new MotionInfo("", "", "turusi_sex_taiki_m.anm", "turusi_sex_taiki_m.anm"),
+            new MotionInfo("", "", "kousoku_irruma2_taiki_m.anm", "kousoku_irruma2_taiki_m.anm"),
+            
+        };
+
         internal static class RandomMotionCode
         {
             internal const string RandomRest = "RandomRest";
             internal const string RandomStanding = "RandomStanding";
+            internal const string RandomStandingErect = "RandomStandingErect";
         }
 
         public static MotionInfo GetRandomMotionByCode(string code, bool isMan)
@@ -51,11 +59,11 @@ namespace COM3D2.WildParty.Plugin.RandomList
                     targetList = FemaleRestList;
             }
             else if(code == RandomMotionCode.RandomStanding)
-            {
                 targetList = MaleStandingList;
-            }
+            else if (code == RandomMotionCode.RandomStandingErect)
+                targetList = MaleStandingErectList;
 
-            if(targetList != null)
+            if (targetList != null)
             {
                 int rnd = RNG.Random.Next(targetList.Length);
                 result = targetList[rnd];

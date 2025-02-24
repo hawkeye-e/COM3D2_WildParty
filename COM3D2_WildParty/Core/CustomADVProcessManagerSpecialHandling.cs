@@ -26,6 +26,26 @@ namespace COM3D2.WildParty.Plugin.Core
         private static void ProcessADVLoadYotogiScene(ADVKagManager instance, ADVStep step)
         {
             StateManager.Instance.YotogiPhase = step.YotogiSetup.Phase;
+            StateManager.Instance.IsFinalYotogi = step.YotogiSetup.IsFinalYotogi;
+
+            if (!step.YotogiSetup.IsClubOwnerMainCharacter)
+            {
+                //the Man[0] is replaced by a customer and will use his view to proceed the yotogi scene
+                StateManager.Instance.SpoofActivateMaidObjectFlag = true;
+                GameMain.Instance.CharacterMgr.SetActiveMan(StateManager.Instance.MenList[0], 0);
+                StateManager.Instance.SpoofActivateMaidObjectFlag = false;
+            }
+            else
+            {
+                //The owner is the main character, put him as the first element of the men list 
+                if(StateManager.Instance.ClubOwner.status.guid != StateManager.Instance.MenList[0].status.guid)
+                    StateManager.Instance.MenList.Insert(0, StateManager.Instance.ClubOwner);
+
+                StateManager.Instance.SpoofActivateMaidObjectFlag = true;
+                GameMain.Instance.CharacterMgr.SetActiveMan(StateManager.Instance.ClubOwner, 0);
+                StateManager.Instance.SpoofActivateMaidObjectFlag = false;
+            }
+
             switch (step.ID)
             {
                 case "orgy_start_yotogiplay":
@@ -35,6 +55,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     ProcessADV_Step_HaremKing_YotogiPlay(instance, step);
                     break;
                 case "hgbc_start_yotogiplay":
+                case "hgbc_start_yotogiplay2":
                     ProcessADV_Step_HappyGBClub_YotogiPlay(instance, step);
                     break;
             }

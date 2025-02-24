@@ -67,9 +67,9 @@ namespace COM3D2.WildParty.Plugin
                 data.Order = int.Parse(rowData[5]);
                 data.IsDialogueAllowed = bool.Parse( rowData[29]);
                 data.IsChoosable = bool.Parse(rowData[30]);
-                data.Phase = int.Parse(rowData[31]);
-                data.MaidIndexRaw = rowData[32];
-                data.ManIndexRaw = rowData[33];
+                data.Phase = int.Parse(rowData[32]);
+                data.MaidIndexRaw = rowData[33];
+                data.ManIndexRaw = rowData[34];
 
                 for (int p = 1; p <= Constant.PersonalityCount; p++)
                 {

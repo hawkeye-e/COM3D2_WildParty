@@ -59,7 +59,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 int personality = StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id;
 
                 List<string> possibleGroupTypes = new List<string> { StateManager.Instance.PartyGroupList[0].GroupType };
-                if (Util.GetUndergoingScenario().FlexibleManCountInYotogi)
+                if (Util.GetUndergoingScenario().YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First().FlexibleManCountInYotogi)
                     possibleGroupTypes = StateManager.Instance.PartyGroupList[0].GetPossibleGroupType();
 
 
@@ -69,7 +69,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     if (!ModUseData.ValidSkillList[personality].ContainsKey(groupType))
                         continue;
                     var skillList = ModUseData.ValidSkillList[personality][groupType].Where(x => x.Phase == StateManager.Instance.YotogiPhase);
-
+                    
                     foreach (var skill in skillList)
                     {
                         var cmd = CloneCommandButton(skill.DisplayName, new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeMainGroupSkill_Callback(skill.YotogiSkillID)));
@@ -121,11 +121,12 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 //Load the formation list based on the current stage
                 Scenario scenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
+                Scenario.YotogiSetupInfo yotogiSetup = scenario.YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First();
                 List<string> formationOption;
-                if (scenario.AllowMap != null)
-                    formationOption = scenario.AllowMap.Where(x => x.MapID == YotogiStageSelectManager.SelectedStage.stageData.id).First().FormationOption;
+                if (yotogiSetup.AllowMap != null)
+                    formationOption = yotogiSetup.AllowMap.Where(x => x.MapID == YotogiStageSelectManager.SelectedStage.stageData.id).First().FormationOption;
                 else
-                    formationOption = scenario.DefaultMap.FormationOption;
+                    formationOption = yotogiSetup.DefaultMap.FormationOption;
 
 
                 List<GameObject> buttons = new List<GameObject>();
@@ -216,11 +217,12 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 //Load the formation list based on the current stage
                 Scenario scenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
+                Scenario.YotogiSetupInfo yotogiSetup = scenario.YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First();
                 List<string> formationOption;
-                if (scenario.AllowMap != null)
-                    formationOption = scenario.AllowMap.Where(x => x.MapID == YotogiStageSelectManager.SelectedStage.stageData.id).First().FormationOption;
+                if (yotogiSetup.AllowMap != null)
+                    formationOption = yotogiSetup.AllowMap.Where(x => x.MapID == YotogiStageSelectManager.SelectedStage.stageData.id).First().FormationOption;
                 else
-                    formationOption = scenario.DefaultMap.FormationOption;
+                    formationOption = yotogiSetup.DefaultMap.FormationOption;
 
 
                 List<GameObject> buttons = new List<GameObject>();
@@ -248,22 +250,7 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
-        //Function to set all yotogi command disabled
-        private static void BlockAllYotogiCommands()
-        {
-            var commandList = StateManager.Instance.YotogiCommandFactory;
-            for (int i = 0; i < commandList.transform.childCount; i++)
-            {
-                Transform childTransform = commandList.transform.GetChild(i);
-                UIButton childButton = childTransform.GetComponent<UIButton>();
-                if (childButton != null)
-                {
-                    childButton.isEnabled = false;
-                    childButton.SetState(UIButtonColor.State.Disabled, true);
-                }
-            }
-        }
-
+        
         private static void ResetMotionToWaiting(PartyGroup group, bool isMovingRight)
         {
             if (ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].SpecialSetting != null)
@@ -295,7 +282,7 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.ExtraCommandWindow.SetVisible(false);
 
             //We dont want the user to be able to click any command when moving which will mess up animation and the logic flow
-            BlockAllYotogiCommands();
+            YotogiHandling.BlockAllYotogiCommands();
 
             //Since some of the yotogi motion will constantly update the animation, we need to set the motion script of the main group to the static waiting before we apply any change
             ResetMotionToWaiting(StateManager.Instance.PartyGroupList[0], false);
@@ -317,7 +304,7 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.ExtraCommandWindow.SetVisible(false);
 
             //We dont want the user to be able to click any command when moving which will mess up animation and the logic flow
-            BlockAllYotogiCommands();
+            YotogiHandling.BlockAllYotogiCommands();
 
             //Since some of the yotogi motion will constantly update the animation, we need to set the motion script of the main group to the static waiting before we apply any change
             ResetMotionToWaiting(StateManager.Instance.PartyGroupList[0], true);
@@ -341,7 +328,7 @@ namespace COM3D2.WildParty.Plugin.Core
             string orgasmType = ModUseData.ExtraYotogiCommandDataList[buttonID].OrgasmSetting.Type;
 
             //We dont want the user to be able to click any command when processing the the modded orgasm logic which will mess up animation and the logic flow
-            BlockAllYotogiCommands();
+            YotogiHandling.BlockAllYotogiCommands();
 
             //Update the player state
             Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerPlayerState).SetValue(YotogiPlay.PlayerState.Normal);
@@ -373,7 +360,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 StateManager.Instance.AnimationChangeTrigger = new AnimationEndTrigger();
                 StateManager.Instance.AnimationChangeTrigger.TargetGUID = mainGroup.Maid1.status.guid;
-                StateManager.Instance.AnimationChangeTrigger.ExtraWaitingTimeInSecond = 2 + RNG.Random.Next(5);
+                StateManager.Instance.AnimationChangeTrigger.ExtraWaitingTimeInSecond = ConfigurableValue.OrgasmFinishFollowUpBaseExtraWaitingTimeInSecond + RNG.Random.Next(ConfigurableValue.OrgasmFinishFollowUpVariableExtraWaitingTimeInSecond);
                 StateManager.Instance.AnimationChangeTrigger.ToBeExecuted = new EventDelegate(() => OrgasmCommandFinishFollowUp());
 
                 var clip = mainGroup.Maid1.body0.m_Animation.GetClip(mainGroup.CurrentMaid1AnimationClipName);
@@ -406,52 +393,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 //Gangbang rule
                 //randomly pick up the man from extra man list and swap with the main group
 
-                PlayableSkill.SkillItem currentSkill = Util.GetMainGroupSkillIDBySexPosID(mainGroup.SexPosID);
-
-                //Remove all existng IK 
-                mainGroup.DetachAllIK();
-
-                for (int i = 0; i < mainGroup.ManCount; i++)
-                {
-                    Maid toBeExtra = mainGroup.GetManAtIndex(i);
-                    int rnd = RNG.Random.Next(PartyGroup.ExtraManList.Count);
-                    Maid toBeMain = PartyGroup.ExtraManList[rnd];
-
-                    PartyGroup.ExtraManList.Remove(toBeMain);
-                    PartyGroup.ExtraManList.Insert(rnd, toBeExtra);
-
-                    mainGroup.SetManAtIndex(i, toBeMain);
-
-                    StateManager.Instance.SpoofActivateMaidObjectFlag = true;
-                    GameMain.Instance.CharacterMgr.SetActiveMan(toBeMain, currentSkill.ManIndex[i]);
-                    StateManager.Instance.SpoofActivateMaidObjectFlag = false;
-
-
-
-
-
-                }
-
-                //reload motion for the group
-                BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemOfGroup(mainGroup);
-                MotionSpecialLabel waitingLabel = motionItem.SpecialLabels.Where(x => x.Type == MotionSpecialLabel.LabelType.Waiting).First();
-
-                //Change skill will reset the current process of the yotogi...
-                YotogiHandling.SetMainGroupWaitingMotion(motionItem);
-
-                foreach (var setupInfo in PartyGroup.ExtraManSetupInfo)
-                {
-                    if (PartyGroup.ExtraManList.Count > setupInfo.ArrayPosition)
-                    {
-                        Maid man = PartyGroup.ExtraManList[setupInfo.ArrayPosition];
-                        CharacterHandling.ApplyMotionInfoToCharacter(man, setupInfo.Motion);
-                    }
-                }
-
-                //reassign position for the group
-                MapCoorindates.CoordinateListInfo coordinateListInfo = ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].CoordinateList.Where(x => x.MaxGroup >= StateManager.Instance.PartyGroupList.Count).OrderBy(x => x.MaxGroup).First();
-                MapCoorindates.CoordinatesInfo coordinatesInfo = coordinateListInfo.GroupCoordinates.Where(x => x.ArrayPosition == 0).First();
-                mainGroup.SetGroupPosition(coordinatesInfo.Pos, coordinatesInfo.Rot);
+                YotogiHandling.ChangeManMembers(mainGroup);
 
             }
 
@@ -494,17 +436,17 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             Maid maid = StateManager.Instance.PartyGroupList[0].Maid1;
             var playerState = Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerPlayerState).GetValue<YotogiPlay.PlayerState>();
-
+            
             foreach (var commandBtn in injectedButtons)
             {
                 //check if fulfill criteria and update the status of the button accordingly
                 if (commandBtn.Data.Type == ExtraYotogiCommandData.CommandType.Fetish)
                 {
                     Fetish fetishInfo = ModUseData.FetishList.Where(x => x.ID == commandBtn.Data.FetishID).First();
-
+                    
                     YotogiProgressInfo progressInfo = StateManager.Instance.YotogiProgressInfoList[maid.status.guid];
                     var button = commandBtn.Button.GetComponent<UIButton>();
-
+                    
                     //Check if it should be displayed
                     if (maid.status.propensitys.ContainsKey(fetishInfo.ID))
                     {
@@ -516,21 +458,24 @@ namespace COM3D2.WildParty.Plugin.Core
                     {
                         commandBtn.Button.transform.localScale = Vector3.one;
                     }
-
+                    
 
                     //check if it should be enabled
                     bool isAllFulfilled = true;
 
                     isAllFulfilled = isAllFulfilled && (progressInfo.ManOrgasmInfo.Count >= fetishInfo.Conditions.ManCount);
                     isAllFulfilled = isAllFulfilled && (progressInfo.ManOrgasmInfo.Sum(x => x.Value) >= fetishInfo.Conditions.OrgasmCount);
-
+                    
                     UpdateCommandButtonState(button, isAllFulfilled);
                 }
                 else if (commandBtn.Data.Type == ExtraYotogiCommandData.CommandType.Orgasm)
                 {
                     bool isEnable = maid.status.currentExcite >= commandBtn.Data.OrgasmSetting.MinExcite && playerState == YotogiPlay.PlayerState.Insert;
                     UpdateCommandButtonState(commandBtn.Button.GetComponent<UIButton>(), isEnable);
-                    //TODO: Orgasm command
+                }
+                else
+                {
+                    UpdateCommandButtonState(commandBtn.Button.GetComponent<UIButton>(), true);
                 }
             }
         }
@@ -620,8 +565,13 @@ namespace COM3D2.WildParty.Plugin.Core
 
         internal static string ReplaceFetishConditionText(string template, Fetish fetishInfo)
         {
+            Maid maid = StateManager.Instance.PartyGroupList[0].Maid1;
+            YotogiProgressInfo progressInfo = StateManager.Instance.YotogiProgressInfoList[maid.status.guid];
+
             return template.Replace(Constant.JsonReplaceTextLabels.ManCount, fetishInfo.Conditions.ManCount.ToString())
-                           .Replace(Constant.JsonReplaceTextLabels.OrgasmCount, fetishInfo.Conditions.OrgasmCount.ToString());
+                           .Replace(Constant.JsonReplaceTextLabels.OrgasmCount, fetishInfo.Conditions.OrgasmCount.ToString())
+                           .Replace(Constant.JsonReplaceTextLabels.CurrentManCount, progressInfo.ManOrgasmInfo.Count.ToString())
+                           .Replace(Constant.JsonReplaceTextLabels.CurrentOrgasmCount, progressInfo.ManOrgasmInfo.Sum(x => x.Value).ToString());
         }
 
         internal static bool IsThisConditionFulfilled(string field, Fetish fetishInfo)

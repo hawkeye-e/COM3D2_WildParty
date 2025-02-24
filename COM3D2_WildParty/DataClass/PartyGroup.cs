@@ -13,18 +13,18 @@ namespace COM3D2.WildParty.Plugin
         public Maid Man1 = null;
         public Maid Man2 = null;
         public Maid Man3 = null;
-        public static List<Maid> ExtraManList = new List<Maid>();
-        public static List<MapCoorindates.CoordinatesInfo> ExtraManSetupInfo = new List<MapCoorindates.CoordinatesInfo>();
         public string Maid1CurrentAudioFile = "";
         public string Maid2CurrentAudioFile = "";
         public Vector3 GroupPosition = Vector3.zero;
-        public Vector3 GroupOffsetVector = Vector3.zero;
+        public Vector3 GroupOffsetVector = Vector3.zero;            //from CharaAllOfsetPosPre
+        public Vector3 GroupOffsetVector2 = Vector3.zero;           //from TagAllPos
         public Quaternion GroupRotation = Quaternion.identity;
 
         public int SexPosID;
         public bool IsEstrus = false;
         public bool IsIndependentExcitement = true;
         public bool IsAutomatedGroup = true;
+        public bool IsVoicelessGroup = false;
         public DateTime NextActionReviewTime = DateTime.MaxValue;   //For simulating the scene of the background group. If the current time pass this value, excitement rate will increase, etc...
         public int CurrentLabelGroupID = -1;
         public string CurrentLabelName;         //For group 0 used since setting the label is not in our control so we cant set the label group id defined by the mod directly
@@ -51,7 +51,13 @@ namespace COM3D2.WildParty.Plugin
         public List<EyeSightSetting> ForceEyeSight = new List<EyeSightSetting>();
         public List<IKAttachInfo> ForceIKAttach = new List<IKAttachInfo>();
 
+        public Dictionary<string, GameObject> ExtraObjects = new Dictionary<string, GameObject>();
+
+        //Key: index
+        public static Dictionary<int, Maid> ExtraManList = new Dictionary<int, Maid>();
+        public static List<MapCoorindates.CoordinatesInfo> ExtraManSetupInfo = new List<MapCoorindates.CoordinatesInfo>();
         public static ForceSexPosInfo.Type CurrentMainGroupMotionType = ForceSexPosInfo.Type.Waiting;
+
         public PartyGroup() { }
 
 
@@ -164,14 +170,17 @@ namespace COM3D2.WildParty.Plugin
                 {
                     Maid man = ExtraManList[setupInfo.ArrayPosition];
 
-                    man.Visible = setupInfo.IsManVisible;
-                    if (setupInfo.IsManVisible)
-                        man.transform.localScale = Vector3.one;
-                    else
-                        man.transform.localScale = Vector3.zero;
-                    man.transform.localPosition = Vector3.zero;
-                    man.transform.position = setupInfo.Pos;
-                    man.transform.rotation = setupInfo.Rot;
+                    if (man != null)
+                    {
+                        man.Visible = setupInfo.IsManVisible;
+                        if (setupInfo.IsManVisible)
+                            man.transform.localScale = Vector3.one;
+                        else
+                            man.transform.localScale = Vector3.zero;
+                        man.transform.localPosition = Vector3.zero;
+                        man.transform.position = setupInfo.Pos;
+                        man.transform.rotation = setupInfo.Rot;
+                    }
                 }
             }
         }
@@ -219,12 +228,12 @@ namespace COM3D2.WildParty.Plugin
             {
                 if (RequireSmoothPositionChange)
                 {
-                    Util.SmoothMoveMaidPosition(maid, GroupPosition + GroupOffsetVector, GroupRotation);
+                    Util.SmoothMoveMaidPosition(maid, GroupPosition + GroupOffsetVector + GroupOffsetVector2, GroupRotation);
                 }
                 else
                 {
                     maid.transform.localPosition = Vector3.zero;
-                    maid.transform.position = GroupPosition + GroupOffsetVector;
+                    maid.transform.position = GroupPosition + GroupOffsetVector + GroupOffsetVector2;
                     maid.transform.localRotation = new Quaternion(0, 0, 0, 0);
                     maid.transform.rotation = GroupRotation;
                 }
@@ -327,6 +336,19 @@ namespace COM3D2.WildParty.Plugin
                 maid.AllIKDetach();
         }
 #endif
+
+        public static List<int> GetExtraManEmptySpotList()
+        {
+            List<int> list = new List<int>();
+
+            foreach(var kvp in ExtraManList)
+            {
+                if (kvp.Value == null)
+                    list.Add(kvp.Key);
+            }
+
+            return list;
+        }
 
         //For debug use
         public override string ToString()
