@@ -15,6 +15,9 @@
     "CharaInitData": {
       "IsClubOwnerMainCharacter": true,
       "ManRequired": 9,
+      "ValidManType": [
+        "YoungMan"
+      ],
       "NPC": [
         {
           "Index": 0,
@@ -72,7 +75,7 @@
         "ArrayPosition": 0,
         "Visible": true,
         "WaitLoad": true,
-        "ShowPenis": false,
+        "IsManNude": false,
         "MotionInfo": {
           "ScriptFile": "h_man_001.ks",
           "ScriptLabel": "*íjç¿ÇËÅQòrëg"
@@ -198,7 +201,7 @@
         "ArrayPosition": 0,
         "Visible": false,
         "WaitLoad": true,
-        "ShowPenis": false
+        "IsManNude": false
       }
 
     ]
@@ -314,7 +317,7 @@
         "ArrayPosition": 0,
         "Visible": true,
         "WaitLoad": true,
-        "ShowPenis": false,
+        "IsManNude": false,
         "MotionInfo": {
           "ScriptFile": "h_man_001.ks",
           "ScriptLabel": "*íjç¿ÇËÅQçlÇ¶ÇÈ"
@@ -598,7 +601,7 @@
         "ArrayPosition": 0,
         "Visible": false,
         "WaitLoad": true,
-        "ShowPenis": false
+        "IsManNude": false
       },
       {
         "Type": "NPC",

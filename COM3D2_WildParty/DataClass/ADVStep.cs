@@ -135,6 +135,7 @@ namespace COM3D2.WildParty.Plugin
         internal class CharaInit
         {
             public int ManRequired = -1;        //Indicate how many man character needed to be initialized. Negative to skip (eg. it is decided from user input)
+            public List<string> ValidManType;   //Referencing RandomizeManSetting. Required if ManRequired is non negative.
             public List<NPCData> NPC;
             public List<ModNPCData> ModNPC;
             public bool IsClubOwnerADVMainCharacter = true;    //True: Man[0] will be the owner; False: Man[0] will be replaced with other man character and owner is accessible from StateManager.Instance.ClubOwner
@@ -166,7 +167,7 @@ namespace COM3D2.WildParty.Plugin
             public bool IsMaster = false;       
             public bool Visible;
             public bool WaitLoad = false;
-            public bool ShowPenis = false;
+            public bool IsManNude = false;
             public bool OpenMouth = false;                              //True: open mouth for fella motion etc; False: default
 
             public MotionInfo MotionInfo;
@@ -200,7 +201,7 @@ namespace COM3D2.WildParty.Plugin
             {
                 public bool Visible;
                 
-                public bool ShowPenis = false;
+                public bool IsManNude = false;
 
                 public string FaceAnime;
                 public string FaceBlend;

@@ -150,7 +150,7 @@ namespace COM3D2.WildParty.Plugin.Core
             //init man
             for (int i = 0; i < StateManager.Instance.MaxManUsed; i++)
             {
-                var man = Core.CharacterHandling.InitMan(i);
+                var man = Core.CharacterHandling.InitMan(i, step.CharaInitData.ValidManType);
                 StateManager.Instance.MenList.Add(man);
             }
 
@@ -161,6 +161,7 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.ClubOwner.AllProcPropSeqStart();
             StateManager.Instance.ClubOwner.transform.localPosition = new Vector3(-999f, -999f, -999f);
 
+            StateManager.Instance.SpoofActivateMaidObjectFlag = true;
             if (!step.CharaInitData.IsClubOwnerADVMainCharacter)
             {
                 //the Man[0] is replaced by a customer and will use his view to proceed the yotogi scene
@@ -172,6 +173,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 StateManager.Instance.MenList.Insert(0, StateManager.Instance.ClubOwner);
                 GameMain.Instance.CharacterMgr.SetActiveMan(StateManager.Instance.ClubOwner, 0);
             }
+            StateManager.Instance.SpoofActivateMaidObjectFlag = false;
 
             //init NPC
             StateManager.Instance.NPCList = new List<Maid>();
@@ -197,6 +199,8 @@ namespace COM3D2.WildParty.Plugin.Core
                     else
                     {
                         //TODO: Male NPC
+                        npc = CharacterHandling.InitModNPCMale(modNPCRequest.NPCID);
+                        StateManager.Instance.NPCManList.Insert(modNPCRequest.Index, npc);
                     }
                 }
             }
@@ -447,7 +451,7 @@ namespace COM3D2.WildParty.Plugin.Core
             }
             else
             {
-                maid.body0.SetChinkoVisible(charaData.ShowPenis);
+                CharacterHandling.SetManClothing(maid, charaData.IsManNude);
             }
 
             if (charaData.PosRot != null)
@@ -470,7 +474,7 @@ namespace COM3D2.WildParty.Plugin.Core
             maid.Visible = setupData.Visible;
             if (maid.Visible)
             {
-                maid.body0.SetChinkoVisible(setupData.ShowPenis);
+                CharacterHandling.SetManClothing(maid, setupData.IsManNude);
                 maid.OpenMouth(setupData.OpenMouth);
 
                 if (!string.IsNullOrEmpty(setupData.FaceAnime))
@@ -495,7 +499,7 @@ namespace COM3D2.WildParty.Plugin.Core
             else
             {
                 maid.transform.localScale = Vector3.zero;
-                maid.body0.SetChinkoVisible(false);
+                CharacterHandling.SetManClothing(maid, false);
             }
         }
 

@@ -14,18 +14,32 @@
     "NextStepID": "hgbc0001_init_hide_men",
     "CharaInitData": {
       "ManRequired": 34,
+      "ValidManType": [
+        "YoungMan",
+        "Yanki",
+        "MiddleAged",
+        "Otaku"
+      ],
       "ModNPC": [
         {
           "Index": 0,
-          "NPCID": "Shirohama_Natsumi"
+          "NPCID": "Shirohama_Natsumi",
+          "IsFemale": true
         },
         {
           "Index": 1,
-          "NPCID": "Seikou_Haruna"
+          "NPCID": "Seikou_Haruna",
+          "IsFemale": true
         },
         {
           "Index": 2,
-          "NPCID": "Kamigawara_Reika"
+          "NPCID": "Kamigawara_Reika",
+          "IsFemale": true
+        },
+        {
+          "Index": 0,
+          "NPCID": "Kamigawara_Takahito",
+          "IsFemale": false
         }
       ]
     }
@@ -76,7 +90,7 @@
     "NextStepID": "hgbc_intro_0004",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（そのお客様の名前は神川原 貴人、あの有名な財閥・神川原グループの当主。この国の大金持ちだ。最近、俺のメイドが気に入ったようで、何度かここを訪れている。）"
+      "Text": "（そのお客様の名前は[=Name,NPC_M,0,FullName]、あの有名な財閥・[=Name,NPC_M,0,LastName]グループの当主。この国の大金持ちだ。最近、俺のメイドが気に入ったようで、何度かここを訪れている。）"
     }
   },
 

@@ -15,8 +15,8 @@ namespace COM3D2.WildParty.Plugin
         //Key: personality id
         //public static Dictionary<int, List<PersonalityVoice.VoiceEntry>> PersonalityVoiceList;
         public static Dictionary<int, PersonalityVoice> PersonalityVoiceList;
-        //Key: body part type, Value: file name
-        public static Dictionary<string, List<string>> ManBodyPartList;
+        //Key: body part type, Value: ManBodyPart
+        public static Dictionary<string, ManBodyInfo> ManBodyInfoList;
         //Level1 Key: Voice Type, Level2 Key: Excitement Level, 
         public static Dictionary<string, Dictionary<int, VoiceFace.VoiceFaceEntry>> VoiceFaceList;
         //Key: Formation ID ("Theatre_Scattered" etc)
@@ -42,8 +42,11 @@ namespace COM3D2.WildParty.Plugin
         //Key: Formation ID
         public static Dictionary<string, PartyGroupSetup> PartyGroupSetupList;
 
-        //Key: State ID
+        //Key: NPC ID
         public static Dictionary<string, ModNPCFemale> ModNPCFemaleList;
+
+        //Key: NPC ID
+        public static Dictionary<string, ModNPCMale> ModNPCMaleList;
 
         //Key: ScenarioID
         public static Dictionary<int, List<YotogiMiscSetup>> YotogiMiscSetupList;
@@ -54,8 +57,8 @@ namespace COM3D2.WildParty.Plugin
         //Read all the necessary data from resources files
         public static void Init()
         {
-            ManBodyPartList = ReadManBodyPartCSVFile(ModResources.TextResource.ManBodyOptions);
-            
+            ManBodyInfoList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ManBodyInfo>>(ModResources.TextResource.RandomizeManSetting);
+
             ScenarioCategoryList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ScenarioCategory>>(ModResources.TextResource.ModScenarioCategory);
 
             ScenarioList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Scenario>>(ModResources.TextResource.ModScenario);
@@ -77,6 +80,7 @@ namespace COM3D2.WildParty.Plugin
             ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.TextResource.ExtraYotogiComands);
 
             ModNPCFemaleList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ModNPCFemale>>(ModResources.TextResource.ModNPCFemale);
+            ModNPCMaleList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ModNPCMale>>(ModResources.TextResource.ModNPCMale);
 
             YotogiMiscSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<int, List<YotogiMiscSetup>>>(ModResources.TextResource.YotogiMiscHandling);
         }
@@ -217,27 +221,6 @@ namespace COM3D2.WildParty.Plugin
             }
         }
 
-        private static Dictionary<string, List<string>> ReadManBodyPartCSVFile(string resFile)
-        {
-
-            Dictionary<string, List<string>> result = new Dictionary<string, List<string>>();
-
-            string[] csvMan = resFile.Split('\n');
-            //first line is header so we start with i = 1
-            for (int i = 1; i < csvMan.Length; i++)
-            {
-                if (csvMan[i] == "") continue;      //in case empty row
-                string[] rowData = csvMan[i].Split(',');
-
-                if (!result.ContainsKey(rowData[0]))
-                    result.Add(rowData[0], new List<string>());
-
-
-                result[rowData[0]].Add(rowData[1]);
-            }
-
-            return result;
-        }
 
     }
 }

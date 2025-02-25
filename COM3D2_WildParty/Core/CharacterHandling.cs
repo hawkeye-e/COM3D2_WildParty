@@ -21,7 +21,7 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.WaitForFullLoadList.Add(maid);
         }
 
-        internal static Maid InitMan(int manSlot)
+        internal static Maid InitMan(int manSlot, List<string> manTypeKeyList)
         {
             Maid man;
 
@@ -30,7 +30,7 @@ namespace COM3D2.WildParty.Plugin.Core
             man.gameObject.transform.SetParent(GameMain.Instance.CharacterMgr.GetMaid(0).gameObject.transform.parent, false);
             man.gameObject.name = Constant.DefinedGameObjectNames.ModAddedManGameObjectPrefix + manSlot;
 
-            RandomizeManBody(man);
+            RandomizeManBody(man, manTypeKeyList);
 
             RenderMaidAfterInit(man);
 
@@ -54,7 +54,8 @@ namespace COM3D2.WildParty.Plugin.Core
             }
 
             RenderMaidAfterInit(maid);
-            DebugHelper.Debug.PrintDetail(maid.status);
+            StateManager.Instance.WaitForFullLoadList.Add(maid);
+            
             return maid;
         }
 
@@ -83,9 +84,46 @@ namespace COM3D2.WildParty.Plugin.Core
                     maid.status.isFirstNameCall = true;
 
                 RenderMaidAfterInit(maid);
+
+                StateManager.Instance.WaitForFullLoadList.Add(maid);
             }
 
             return maid;
+        }
+
+        internal static Maid InitModNPCMale(string NPCID)
+        {
+            ModNPCMale npcData = ModUseData.ModNPCMaleList[NPCID];
+
+            Maid man = GameMain.Instance.CharacterMgr.AddStockMan();
+
+            string[] npcColor = npcData.Color.Split(',');
+            Color manColor = new Color(float.Parse(npcColor[0].Trim()), float.Parse(npcColor[1].Trim()), float.Parse(npcColor[2].Trim()));
+            SetManBody(man, manColor, npcData.BodySize, npcData.Head, npcData.Clothed);
+
+            Traverse.Create(man.status).Field(Constant.DefinedClassFieldNames.MaidStatusFirstName).SetValue(npcData.FirstName);
+            Traverse.Create(man.status).Field(Constant.DefinedClassFieldNames.MaidStatusLastName).SetValue(npcData.LastName);
+            Traverse.Create(man.status).Field(Constant.DefinedClassFieldNames.MaidStatusNickName).SetValue(npcData.NickName);
+
+            man.status.isNickNameCall = false;
+            man.status.isFirstNameCall = false;
+            if (npcData.WayToCall == ModNPC.CallType.NickName)
+                man.status.isNickNameCall = true;
+            else if (npcData.WayToCall == ModNPC.CallType.FirstName)
+                man.status.isFirstNameCall = true;
+
+            RenderMaidAfterInit(man);
+
+            StateManager.Instance.WaitForFullLoadList.Add(man);
+
+            ManClothingInfo manClothingInfo = new ManClothingInfo();
+            manClothingInfo.IsNude = false;
+            manClothingInfo.Clothed = npcData.Clothed.Trim();
+            manClothingInfo.Nude = npcData.Nude.Trim();
+            StateManager.Instance.ManClothingList.Add(man.status.guid, manClothingInfo);
+
+
+            return man;
         }
 
         internal static void RenderMaidAfterInit(Maid maid)
@@ -101,31 +139,49 @@ namespace COM3D2.WildParty.Plugin.Core
         }
 
         //Randomize the body of the temporary man
-        private static void RandomizeManBody(Maid man)
+        private static void RandomizeManBody(Maid man, List<string> manTypeKeyList)
         {
+            string pickedType = manTypeKeyList[RNG.Random.Next(manTypeKeyList.Count)];
+            ManBodyInfo pickedInfo = ModUseData.ManBodyInfoList[pickedType];
+            ManBodyInfo.BodyInfo pickedBodyInfo = pickedInfo.Body[RNG.Random.Next(pickedInfo.Body.Count)];
+
             //Body color
-            man.ManColor = new Color(RNG.Random.Next(256) / 256f, RNG.Random.Next(256) / 256f, RNG.Random.Next(256) / 256f);
+            Color manColor = new Color(RNG.Random.Next(256) / 256f, RNG.Random.Next(256) / 256f, RNG.Random.Next(256) / 256f);
 
             //How slim or fat
-            MaidProp prop = man.GetProp(MPN.Hara);
-            int hara = RNG.Random.Next(100);
-            man.SetProp(MPN.Hara, hara);
+            int hara = pickedBodyInfo.Min + RNG.Random.Next(pickedBodyInfo.Max - pickedBodyInfo.Min);
 
 
             //head
-            int head = RNG.Random.Next(ModUseData.ManBodyPartList[Constant.ManBodyOptionType.Head].Count);
-            string strFileName = ModUseData.ManBodyPartList[Constant.ManBodyOptionType.Head][head].Trim();
-
-            int ridHead = System.IO.Path.GetFileName(strFileName).ToLower().GetHashCode();
-
-            man.SetProp(MPN.head, strFileName, ridHead);
-
+            int head = RNG.Random.Next(pickedInfo.Head.Count);
+            string strHeadFileName = pickedInfo.Head[head].Trim();
+            
             //body
-            int body = RNG.Random.Next(ModUseData.ManBodyPartList[Constant.ManBodyOptionType.Body].Count);
-            strFileName = ModUseData.ManBodyPartList[Constant.ManBodyOptionType.Body][body].Trim();
+            string strBodyFileName = pickedBodyInfo.Clothed.Trim();
 
-            int ridBody = System.IO.Path.GetFileName(strFileName).ToLower().GetHashCode();
-            man.SetProp(MPN.body, strFileName, ridBody);
+            SetManBody(man, manColor, hara, strHeadFileName, strBodyFileName);
+
+            //put the info into the dictionary
+            ManClothingInfo manClothingInfo = new ManClothingInfo();
+            manClothingInfo.IsNude = false;
+            manClothingInfo.Clothed = pickedBodyInfo.Clothed.Trim();
+            manClothingInfo.Nude = pickedBodyInfo.Nude.Trim();
+            StateManager.Instance.ManClothingList.Add(man.status.guid, manClothingInfo);
+        }
+
+        private static void SetManBody(Maid man, Color manColor, int bodySize, string headFile, string bodyFile)
+        {
+            //Body color
+            man.ManColor = manColor;
+
+            //How slim or fat
+            man.SetProp(MPN.Hara, bodySize);
+
+            int ridHead = Path.GetFileName(headFile).ToLower().GetHashCode();
+            man.SetProp(MPN.head, headFile, ridHead);
+
+            int ridBody = Path.GetFileName(bodyFile).ToLower().GetHashCode();
+            man.SetProp(MPN.body, bodyFile, ridBody);
         }
 
         internal static void BackupManOrder()
@@ -951,6 +1007,37 @@ namespace COM3D2.WildParty.Plugin.Core
             binaryReader.Close();
 
             return result;
+        }
+
+        internal static void SetManClothing(Maid man, bool isNude)
+        {
+            if (man == null)
+                return;
+            if (!man.boMAN)
+                return;
+
+            //Penis
+            man.body0.SetChinkoVisible(isNude);
+
+            //Clothes
+            if (StateManager.Instance.ManClothingList.ContainsKey(man.status.guid))
+            {
+
+                if (StateManager.Instance.ManClothingList[man.status.guid].IsNude == isNude)
+                    return;
+                else
+                {
+                    string fileName;
+                    if (isNude)
+                        fileName = StateManager.Instance.ManClothingList[man.status.guid].Nude;
+                    else
+                        fileName = StateManager.Instance.ManClothingList[man.status.guid].Clothed;
+
+                    int ridBody = Path.GetFileName(fileName).ToLower().GetHashCode();
+                    man.SetProp(MPN.body, fileName, ridBody);
+                    
+                }
+            }
         }
     }
 }

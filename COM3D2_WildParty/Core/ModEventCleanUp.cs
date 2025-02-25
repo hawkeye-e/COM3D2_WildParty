@@ -18,7 +18,8 @@ namespace COM3D2.WildParty.Plugin.Core
                 StateManager.Instance.MenList.Add(StateManager.Instance.ClubOwner);
             UnloadCharacters(StateManager.Instance.MenList, Constant.CharacterType.Man);
             UnloadCharacters(StateManager.Instance.NPCList, Constant.CharacterType.NPC);
-            
+            UnloadCharacters(StateManager.Instance.NPCManList, Constant.CharacterType.Man);
+
             RestoreBackupData();
             
             //Reset all the states
@@ -116,6 +117,7 @@ namespace COM3D2.WildParty.Plugin.Core
             Util.ClearGenericCollection(StateManager.Instance.MenList);
             Util.ClearGenericCollection(StateManager.Instance.NPCList);
             Util.ClearGenericCollection(StateManager.Instance.NPCManList);
+            Util.ClearGenericCollection(StateManager.Instance.ManClothingList);
             Util.ClearGenericCollection(StateManager.Instance.InjectedButtons);
             Util.ClearGenericCollection(StateManager.Instance.YotogiProgressInfoList);
             Util.ClearGenericCollection(StateManager.Instance.RandomPickIndexList);

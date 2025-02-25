@@ -159,26 +159,16 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Type,FileName
-        ///head,mhead003_i_.menu
-        ///head,mhead000_i_.menu
-        ///head,mhead004_i_.menu
-        ///head,mhead002_i_.menu
-        ///head,mhead001_i_.menu
-        ///head,mhead008_i_.menu
-        ///head,mhead005_i_.menu
-        ///head,mhead006_i_.menu
-        ///head,mhead007_i_.menu
-        ///head,mhead009_i_.menu
-        ///head,mhead010_i_.menu
-        ///body,mbody004_i_.menu
-        ///body,mbody_i_.menu
-        ///body,mbody001_i_.menu
-        ///body,mbody003_i_.menu
-        ///body,mbody006_i_.menu
-        ///body,mbody005_i_.menu
-        ///body,mbody002_i_.menu
-        ///.
+        ///   Looks up a localized string similar to Type,FileName,NudeBodyOption,ClothedBodyOption,AdultPartOption,KidsPartOption,BodyGroup,Dummy
+        ///head,mhead003_i_.menu,FALSE,FALSE,TRUE,FALSE,0,
+        ///head,mhead000_i_.menu,FALSE,FALSE,TRUE,FALSE,0,
+        ///head,mhead004_i_.menu,FALSE,FALSE,TRUE,FALSE,0,
+        ///head,mhead002_i_.menu,FALSE,FALSE,TRUE,FALSE,0,
+        ///head,mhead001_i_.menu,FALSE,FALSE,TRUE,FALSE,0,
+        ///head,mhead008_i_.menu,FALSE,FALSE,FALSE,TRUE,0,
+        ///head,mhead005_i_.menu,FALSE,FALSE,TRUE,FALSE,0,
+        ///head,mhead006_i_.menu,FALSE,FALSE,TRUE,FALSE,0,
+        ///head,mhead007_i_.menu,FAL [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ManBodyOptions {
             get {
@@ -231,9 +221,9 @@ namespace ModResources {
         /// <summary>
         ///   Looks up a localized string similar to {
         ///  &quot;Kamigawara_Reika&quot;: {
-        ///    &quot;FirstName&quot;: &quot;麗華&quot;,
-        ///    &quot;LastName&quot;: &quot;神川原&quot;,
-        ///    &quot;NickName&quot;: &quot;麗華&quot;,
+        ///    &quot;FirstName&quot;: &quot;・・・ﾘ&quot;,
+        ///    &quot;LastName&quot;: &quot;・_・・・ｴ&quot;,
+        ///    &quot;NickName&quot;: &quot;・・・ﾘ&quot;,
         ///    &quot;WayToCall&quot;: &quot;FirstName&quot;,
         ///    &quot;PresetFile&quot;: &quot;Kamigawara_Reika&quot;,
         ///    &quot;Personality&quot;: 100,
@@ -241,20 +231,46 @@ namespace ModResources {
         ///  },
         ///
         ///  &quot;Seikou_Haruna&quot;: {
-        ///    &quot;FirstName&quot;: &quot;はるな&quot;,
-        ///    &quot;LastName&quot;: &quot;星光&quot;,
-        ///    &quot;NickName&quot;: &quot;はるな&quot;,
+        ///    &quot;FirstName&quot;: &quot;・ﾍ・・・ﾈ&quot;,
+        ///    &quot;LastName&quot;: &quot;・ｯ・・&quot;,
+        ///    &quot;NickName&quot;: &quot;・ﾍ・・・ﾈ&quot;,
         ///    &quot;WayToCall&quot;: &quot;FirstName&quot;,
         ///    &quot;PresetFile&quot;: &quot;Seikou_Haruna&quot;,
         ///    &quot;Personality&quot;: 80,
-        ///    &quot;VoicePitch&quot;: 50
-        ///  }
-        ///}
-        ///.
+        ///    &quot;VoicePitch&quot;: 80
+        ///  },
+        ///
+        ///  &quot;Shirohama_Natsumi&quot;: {
+        ///    &quot;FirstName&quot;: &quot;・ﾈ・ﾂ・ﾝ&quot;,
+        ///     [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ModNPCFemale {
             get {
                 return ResourceManager.GetString("ModNPCFemale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;Kamigawara_Takahito&quot;: {
+        ///    &quot;FirstName&quot;: &quot;貴人&quot;,
+        ///    &quot;LastName&quot;: &quot;神川原&quot;,
+        ///    &quot;NickName&quot;: &quot;貴人&quot;,
+        ///    &quot;WayToCall&quot;: &quot;LastName&quot;,
+        ///    &quot;Head&quot;: &quot;mhead001_i_.menu&quot;,
+        ///    &quot;Clothed&quot;: &quot;mbody006_i_.menu&quot;,
+        ///    &quot;Nude&quot;: &quot;mbody001_i_.menu&quot;,
+        ///    &quot;BodySize&quot;: 0,
+        ///    &quot;Color&quot;: &quot;255, 251, 101&quot;
+        ///  },
+        ///
+        ///  
+        ///}
+        ///.
+        /// </summary>
+        internal static string ModNPCMale {
+            get {
+                return ResourceManager.GetString("ModNPCMale", resourceCulture);
             }
         }
         
@@ -351,8 +367,8 @@ namespace ModResources {
         ///        &quot;MaidCount&quot;: 1,
         ///        &quot;MaidFromNPC&quot;: true,
         ///        &quot;IsAutomatedGroup&quot;: true,
-        ///        &quot;IsVoicelessGroup&quot;: true
-        ///       [rest of string was truncated]&quot;;.
+        ///        &quot;IsVoicelessGroup&quot;: false
+        ///      [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string PartyGroupSetup_HappyGBClub {
             get {
@@ -419,6 +435,34 @@ namespace ModResources {
         internal static string PartyGroupSetup_OrgyParty {
             get {
                 return ResourceManager.GetString("PartyGroupSetup_OrgyParty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;YoungMan&quot;: {
+        ///    &quot;Head&quot;: [ &quot;mhead003_i_.menu&quot;, &quot;mhead000_i_.menu&quot;, &quot;mhead002_i_.menu&quot;, &quot;mhead001_i_.menu&quot;, &quot;mhead005_i_.menu&quot; ],
+        ///    &quot;Body&quot;: [
+        ///      {
+        ///        &quot;Clothed&quot;: &quot;mbody_i_.menu&quot;,
+        ///        &quot;Nude&quot;: &quot;mbody_i_.menu&quot;,
+        ///        &quot;Min&quot;: 0,
+        ///        &quot;Max&quot;: 100
+        ///      },
+        ///      {
+        ///        &quot;Clothed&quot;: &quot;mbody002_i_.menu&quot;,
+        ///        &quot;Nude&quot;: &quot;mbody001_i_.menu&quot;,
+        ///        &quot;Min&quot;: 0,
+        ///        &quot;Max&quot;: 50
+        ///      },
+        ///      {
+        ///        &quot;Clothed&quot;: &quot;mbody006_i_.menu&quot;,
+        ///        &quot;Nude&quot;: &quot;mbody001_i_.menu&quot;,
+        ///        &quot;Mi [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string RandomizeManSetting {
+            get {
+                return ResourceManager.GetString("RandomizeManSetting", resourceCulture);
             }
         }
         
@@ -695,7 +739,7 @@ namespace ModResources {
         ///    &quot;NextStates&quot;: [ &quot;ChangeMan&quot; ]
         ///  },
         ///  &quot;ChangeMan&quot;: {
-        ///    &quot;NextStates&quot;: [ &quot;ChangePosition&quot; ]
+        ///    &quot;NextStates&quot;: [ &quot;Insert&quot;, &quot;ChangePosition&quot; ]
         ///  },
         ///  &quot;ChangePosition&quot;: {
         ///    &quot;NextStates&quot;: [ &quot;Insert&quot; ]
@@ -717,17 +761,26 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;9900002&quot;: {
-        ///    &quot;Offset&quot;: {
-        ///      &quot;PosString&quot;: &quot;0.00, 0.63, 0.00&quot;,
-        ///      &quot;RotString&quot;: &quot;0.0, 1.0, 0.0, 0.0&quot;
-        ///    },
-        ///    &quot;ExtraObjects&quot;: [
-        ///      {
-        ///
-        ///      }
-        ///    ]
-        ///  }
+        ///  &quot;9900002&quot;: [
+        ///    {
+        ///      &quot;SexPosIDs&quot;: [ 7, 8 ],
+        ///      &quot;Offset&quot;: {
+        ///        &quot;PosString&quot;: &quot;0.00, 0.63, 0.00&quot;,
+        ///        &quot;RotString&quot;: &quot;0.0, 0.0, 0.0, 0.0&quot;
+        ///      },
+        ///      &quot;ExtraObjects&quot;: [
+        ///        {
+        ///          &quot;Src&quot;: &quot;Odogu_SimpleTable&quot;,
+        ///          &quot;Name&quot;: &quot;台&quot;,
+        ///          &quot;Dest&quot;: &quot;&quot;,
+        ///          &quot;Offset&quot;: {
+        ///            &quot;PosString&quot;: &quot;-0.027, -0.125, -0.276&quot;,
+        ///            &quot;RotString&quot;: &quot;-90, 0, 0&quot;
+        ///          }
+        ///        }
+        ///      ]
+        ///    }
+        ///  ]
         ///}
         ///.
         /// </summary>

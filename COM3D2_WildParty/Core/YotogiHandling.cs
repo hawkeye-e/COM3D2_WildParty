@@ -361,7 +361,7 @@ namespace COM3D2.WildParty.Plugin.Core
             var mMotionData = ModUseData.MasturbationMotionList[type];
             if (isMan)
             {
-                maid.body0.SetChinkoVisible(true);
+                CharacterHandling.SetManClothing(maid, true);
                 CharacterHandling.PlayAnimation(maid, mMotionData.FileName, mMotionData.Tag);
             }
             else
@@ -559,7 +559,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             foreach (var man in StateManager.Instance.MenList)
             {
-                man.body0.SetChinkoVisible(true);
+                CharacterHandling.SetManClothing(man, true);
             }
         }
 

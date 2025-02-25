@@ -16,7 +16,11 @@ namespace COM3D2.WildParty.Plugin
 
     internal class ModNPCMale : ModNPC
     {
-        public string PresetFile;
+        public string Head;
+        public string Clothed;
+        public string Nude;
+        public int BodySize;        //Range: [0-100]
+        public string Color;        //RGB separated by comma
     }
 
     internal class ModNPC

@@ -26,6 +26,8 @@ namespace COM3D2.WildParty.Plugin
         internal List<Maid> MenList = new List<Maid>();
         internal List<Maid> NPCList = new List<Maid>();                         //For female NPC (both in-game or mod added) only
         internal List<Maid> NPCManList = new List<Maid>();                      //For male NPC only
+        //Key: Maid GUID
+        internal Dictionary<string, ManClothingInfo> ManClothingList = new Dictionary<string, ManClothingInfo>();   //For storing the info of clothed and nude body of a man
         internal List<Maid> YotogiWorkingMaidList = new List<Maid>();           //For used in Yotogi scene, will be shuffled etc
         internal List<Maid> YotogiWorkingManList = new List<Maid>();            //For used in Yotogi scene, will be shuffled etc
         internal Dictionary<string, YotogiProgressInfo> YotogiProgressInfoList = new Dictionary<string, YotogiProgressInfo>();
