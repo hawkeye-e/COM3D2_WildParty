@@ -784,16 +784,19 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
         internal static void ForceChangeManUponCommandClicked(Yotogis.Skill.Data.Command.Data command_data)
         {
-            Scenario.YotogiSetupInfo yotogiSetup = Util.GetUndergoingScenario().YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First();
-            if (yotogiSetup.ForceChangeManWhenOrgasm)
+            if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                if(command_data.basic.command_type == Yotogi.SkillCommandType.絶頂)
+                Scenario.YotogiSetupInfo yotogiSetup = Util.GetUndergoingScenario().YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First();
+                if (yotogiSetup.ForceChangeManWhenOrgasm)
                 {
-                    Core.YotogiHandling.BlockAllYotogiCommands();
-                    VoiceLoopTrigger trigger = new VoiceLoopTrigger();
-                    trigger.TargetMaid = StateManager.Instance.PartyGroupList[0].Maid1;
-                    trigger.ToBeExecuted = new EventDelegate(() => ForceChangeManTriggerExecution(yotogiSetup.IsMainManOwner));
-                    StateManager.Instance.VoiceLoopTrigger = trigger;
+                    if (command_data.basic.command_type == Yotogi.SkillCommandType.絶頂)
+                    {
+                        Core.YotogiHandling.BlockAllYotogiCommands();
+                        VoiceLoopTrigger trigger = new VoiceLoopTrigger();
+                        trigger.TargetMaid = StateManager.Instance.PartyGroupList[0].Maid1;
+                        trigger.ToBeExecuted = new EventDelegate(() => ForceChangeManTriggerExecution(yotogiSetup.IsMainManOwner));
+                        StateManager.Instance.VoiceLoopTrigger = trigger;
+                    }
                 }
             }
         }
