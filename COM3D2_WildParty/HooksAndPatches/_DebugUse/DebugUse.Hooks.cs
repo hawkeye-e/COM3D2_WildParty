@@ -30,7 +30,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
             Patches.CapturePrivateTouchEventDialogues(voiceData);
         }
 
-
+        /* B: Clothing; X: Coordinates; Z: dialogue files; C: Camera; V: Apply hardcoded motion 
+        */
         [HarmonyPostfix]
         [HarmonyPatch(typeof(ADVKagManager), nameof(ADVKagManager.Update))]
         private static void UpdatePost(ADVKagManager __instance)

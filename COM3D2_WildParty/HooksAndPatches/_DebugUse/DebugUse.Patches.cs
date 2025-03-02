@@ -190,52 +190,57 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
             {
                 //for setting animation in studio so that making the adv scene easier
 
-                //for (int i = 0; i < GameMain.Instance.CharacterMgr.GetMaidCount(); i++)
-                //{
-                //    Maid maid = GameMain.Instance.CharacterMgr.GetMaid(i);
-                //    if (maid != null)
-                //        WildParty.Log.LogInfo(maid.status.fullNameJpStyle);
+                for (int i = 0; i < GameMain.Instance.CharacterMgr.GetMaidCount(); i++)
+                {
+                    Maid maid = GameMain.Instance.CharacterMgr.GetMaid(i);
+                    if (maid != null)
+                        WildParty.Log.LogInfo(maid.status.fullNameJpStyle);
 
-                //    if (i == 0)
-                //    {
-                //        Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
-                //    }
-                //    if (i == 2)
-                //    {
-                //        Core.CharacterHandling.PlayAnimation(maid, "OM_yorisoi_aibu_taiki_f.anm", "om_yorisoi_aibu_taiki_f.anm");
+                    if (i == 0)
+                    {
+                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_002.ks", "*会話座りがっかり", maid.status.guid, "");
+                        //Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
+                    }
+                    if (i == 2)
+                    {
+                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り呆れる", maid.status.guid, "");
+                        //Core.CharacterHandling.PlayAnimation(maid, "OM_yorisoi_aibu_taiki_f.anm", "om_yorisoi_aibu_taiki_f.anm");
 
-                //    }
-                //    if (i == 3)
-                //    {
-                //        Core.CharacterHandling.PlayAnimation(maid, "harem_seijyouiC_3_f.anm", "harem_seijyouic_3_f.anm");
+                    }
+                    if (i == 3)
+                    {
+                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り口元に手を当てる", maid.status.guid, "");
+                        //Core.CharacterHandling.PlayAnimation(maid, "harem_seijyouiC_3_f.anm", "harem_seijyouic_3_f.anm");
 
-                //    }
-                //    if (i == 4)
-                //    {
-                //        Core.CharacterHandling.LoadMotionScript(0, false, "ero_scene_001.ks", "*ピロトーク_一人", maid.status.guid, "");
+                    }
+                    if (i == 4)
+                    {
+                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り腕を組む", maid.status.guid, "");
 
-                //    }
-                //    if (i == 5)
-                //    {
-                //        Core.CharacterHandling.PlayAnimation(maid, "harem_seijyoui_3_f2.anm", "harem_seijyoui_3_f2.anm");
-                //    }
-                //    if (i == 6)
-                //    {
-                //        Core.CharacterHandling.LoadMotionScript(0, false, "ero_scene_001.ks", "*気絶", maid.status.guid, "");
-                //    }
-                //    if (i == 7)
-                //    {
-                //        Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
-                //    }
-                //    if (i == 8)
-                //    {
-                //        Core.CharacterHandling.LoadMotionScript(0, false, "ero_scene_001.ks", "*気絶", maid.status.guid, "");
-                //    }
-                //    if (i == 9)
-                //    {
-                //        Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
-                //    }
-                //}
+                    }
+                    if (i == 5)
+                    {
+                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り前傾", maid.status.guid, "");
+                        //Core.CharacterHandling.PlayAnimation(maid, "harem_seijyoui_3_f2.anm", "harem_seijyoui_3_f2.anm");
+                    }
+                    if (i == 6)
+                    {
+                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り喜ぶ", maid.status.guid, "");
+                    }
+                    if (i == 7)
+                    {
+                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り照れる", maid.status.guid, "");
+                        //Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
+                    }
+                    if (i == 8)
+                    {
+                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り照れる", maid.status.guid, "");
+                    }
+                    if (i == 9)
+                    {
+                        //Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
+                    }
+                }
                 for (int i = 0; i < GameMain.Instance.CharacterMgr.GetManCount(); i++)
                 {
                     Maid maid = GameMain.Instance.CharacterMgr.GetMan(i);
@@ -286,6 +291,20 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
 
         internal static void PrintCharacterSetup()
         {
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                //Maid maid = StateManager.Instance.SelectedMaidsList[0];
+                Maid maid = GameMain.Instance.CharacterMgr.GetMaid(0);
+                
+                Type type = typeof(Constant.ClothingTag); 
+                foreach (var p in type.GetFields(System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic))
+                {
+                    var tag = p.GetValue(null).ToString();
+                    var mp = maid.GetProp(tag);
+                    WildParty.Log.LogInfo(tag + "," + mp.strFileName);
+                }
+                
+            }
             if (Input.GetKeyDown(KeyCode.X))
             {
                 //For printing the json string for the character placement in adv scene (mainly for position and rotation info)

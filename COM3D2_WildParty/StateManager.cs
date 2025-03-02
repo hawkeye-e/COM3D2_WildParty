@@ -86,6 +86,8 @@ namespace COM3D2.WildParty.Plugin
         internal VoiceLoopTrigger VoiceLoopTrigger = null;
         internal TimeEndTrigger TimeEndTrigger = null;
 
+        internal DateTime ADVResumeTime = DateTime.MinValue;
+
         internal int BranchIndex = -1;                          //For ADV processing
 
         internal int YotogiPhase = 0;

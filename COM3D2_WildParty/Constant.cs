@@ -22,6 +22,27 @@ namespace COM3D2.WildParty.Plugin
             ModResources.ImageResources.HappyGBClubIconFileName
         };
 
+        internal static readonly string[] DressingClothingTagArray = {
+            ClothingTag.acchat,
+            ClothingTag.headset,
+            ClothingTag.wear,
+            ClothingTag.skirt,
+            ClothingTag.onepiece,
+            ClothingTag.mizugi,
+            ClothingTag.bra,
+            ClothingTag.panz,
+            ClothingTag.acckubi,
+            ClothingTag.acckubiwa,
+            ClothingTag.shoes,
+            ClothingTag.stkg,
+            ClothingTag.accude,
+            ClothingTag.accsenaka,
+            ClothingTag.glove,
+            ClothingTag.accashi,
+            ClothingTag.accshippo,
+        };
+
+
         internal enum CharacterType
         {
             Maid,
@@ -245,6 +266,8 @@ namespace COM3D2.WildParty.Plugin
             internal const string RemoveTexture = "RemoveTexture";
 
             internal const string Shuffle = "Shuffle";
+            internal const string ListUpdate = "ListUpdate";
+            internal const string TimeWait = "TimeWait";
 
             internal const string ADVEnd = "ADVEnd";    //End the scenario and return to normal flow
         }
@@ -256,7 +279,8 @@ namespace COM3D2.WildParty.Plugin
             internal const string SelectedMaid = "SelectedMaid";        //Maid 0
             internal const string Maid = "Maid";                        //Require Index position
             internal const string RandomMaid = "RandomMaid";
-            internal const string NPC = "NPC";
+            internal const string NPCFemale = "NPC_F";
+            internal const string NPCMale = "NPC_M";
             internal const string All = "All";
         }
 
@@ -274,6 +298,7 @@ namespace COM3D2.WildParty.Plugin
         internal static class JsonReplaceTextLabels
         {
             internal const string ClubName = "[=ClubName]";
+            internal const string ClubOwnerName = "[=ClubOwnerName]";
 
             internal const string PersonalityType = "[=PType]";
             internal const string MapType = "[=MType]";
@@ -333,7 +358,8 @@ namespace COM3D2.WildParty.Plugin
             internal const string SingleMaid = "F";
             internal const string AllMen = "M_ALL";
             internal const string AllMaids = "F_ALL";
-            internal const string NPC = "NPC";
+            internal const string NPCFemale = "NPC_F";
+            internal const string NPCMale = "NPC_M";
         }
 
         internal static class EventProgress
@@ -460,6 +486,8 @@ namespace COM3D2.WildParty.Plugin
         {
             internal const string Maid = "F";
             internal const string Man = "M";
+            internal const string NPCMale = "NPC_M";
+            internal const string NPCFemale = "NPC_F";
             internal const string Owner = "Owner";
         }
 
@@ -532,6 +560,37 @@ namespace COM3D2.WildParty.Plugin
             internal const string External = "External";
             internal const string Bukkake = "Bukkake";
             internal const string Bukkake2 = "Bukkake2";
+        }
+
+        
+        internal static class ClothingTag
+        {
+            internal const string acchat = "acchat";            //帽子
+            internal const string headset = "headset";          //ヘッドドレス
+            internal const string acckami = "acckami";          //前髪
+            internal const string acckamisub = "acckamisub";    //リボン
+            internal const string wear = "wear";                //トップス
+            internal const string skirt = "skirt";              //ボトムス
+            internal const string megane = "megane";            //メガネ
+            internal const string acchead = "acchead";          //アイマスク
+            internal const string onepiece = "onepiece";        //ワンピース
+            internal const string mizugi = "mizugi";            //水着
+            internal const string accmimi = "accmimi";          //耳
+            internal const string acchana = "acchana";          //鼻
+            internal const string bra = "bra";                  //ブラジャー
+            internal const string panz = "panz";                //パンツ
+            internal const string acckubi = "acckubi";          //ネックレス
+            internal const string acckubiwa = "acckubiwa";      //チョーカー
+            internal const string shoes = "shoes";              //靴
+            internal const string stkg = "stkg";                //靴下
+            internal const string accude = "accude";            //腕
+            internal const string accsenaka = "accsenaka";      //背中
+            internal const string glove = "glove";              //手袋
+            internal const string accashi = "accashi";          //足首
+            internal const string accshippo = "accshippo";      //しっぽ
+            internal const string accheso = "accheso";          //へそ
+            internal const string accnip = "accnip";            //乳首
+            internal const string accxxx = "accxxx";            //前穴
         }
     }
 }

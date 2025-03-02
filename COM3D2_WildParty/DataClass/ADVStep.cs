@@ -32,6 +32,7 @@ namespace COM3D2.WildParty.Plugin
         public Texture[] TextureData;
         public SE SEData;
         public Shuffle ShuffleData;                 //This need to be placed after CharaInit
+        public ListUpdate ListUpdateData;           //For adding or removing the NPC from the list to include or exclude them from yotogi scene
 
         public RandomPick PickData;             //This is for ordering to randomly pick some characters for later adv processing
         public List<MakeGroupFormat> GroupFormat;     //Assign group to perform group motion in ADV scene etc
@@ -68,6 +69,7 @@ namespace COM3D2.WildParty.Plugin
             public FixedPointType FixedPointData;       //Normally use this one for ADV scene, as we should have full control on the character placement
             public LookAtType LookAtData;               //Mainly used for situation where random character placement is involved and want to focus on certain character
             public CameraMoveType MoveType = CameraMoveType.Instant;
+            public float AnimationTime = 2f;            //For Camera pan use only
 
             internal enum CameraType
             {
@@ -176,7 +178,8 @@ namespace COM3D2.WildParty.Plugin
             public PosRot PosRot;
 
             public EyeSightSetting EyeSight;
-
+            public ExtraObjectsSetting ExtraObjectsInfo;
+            public string ClothesSetID;
         }
 
         internal class ShowGroupMotion
@@ -186,6 +189,7 @@ namespace COM3D2.WildParty.Plugin
 
             public string ScriptFile;
             public string ScriptLabel;
+            public int SexPosID = -1;           //in case we are trying to apply yotogi motion to the group
 
             public PosRot PosRot;
             public bool WaitLoad = false;
@@ -240,6 +244,7 @@ namespace COM3D2.WildParty.Plugin
             public GroupMemberInfo Maid2;
             public GroupMemberInfo Man1;
             public GroupMemberInfo Man2;
+            public GroupMemberInfo Man3;
 
             public class GroupMemberInfo
             {
@@ -250,6 +255,7 @@ namespace COM3D2.WildParty.Plugin
             public class MemberType
             {
                 public const string Owner = "Owner";
+                public const string NPC = "NPC";
             }
 
         }
@@ -272,6 +278,25 @@ namespace COM3D2.WildParty.Plugin
         {
             public string TargetList;
             public List<int> KeepPosition;
+        }
+
+        internal class ListUpdate
+        {
+            public List<ListUpdateDetail> Add;
+            public List<ListUpdateDetail> Remove;
+
+            internal class ListUpdateDetail
+            {
+                public string Type;
+                public int SrcPosition;
+                public int PositionToInsert;
+            }
+        }
+
+        internal class ExtraObjectsSetting
+        {
+            public List<ExtraItemObject> AddObjects;
+            public List<string> RemoveObjects;     //For remove, only need to provide the Target
         }
     }
 }

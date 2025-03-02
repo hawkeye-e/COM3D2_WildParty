@@ -13,6 +13,7 @@
     "WaitingType": "Auto",
     "NextStepID": "hgbc0001_init_hide_men",
     "CharaInitData": {
+      "IsClubOwnerADVMainCharacter": false,
       "ManRequired": 34,
       "ValidManType": [
         "YoungMan",
@@ -39,6 +40,26 @@
         {
           "Index": 0,
           "NPCID": "Kamigawara_Takahito",
+          "IsFemale": false
+        },
+        {
+          "Index": 1,
+          "NPCID": "Mob1",
+          "IsFemale": false
+        },
+        {
+          "Index": 2,
+          "NPCID": "Mob2",
+          "IsFemale": false
+        },
+        {
+          "Index": 3,
+          "NPCID": "Mob3",
+          "IsFemale": false
+        },
+        {
+          "Index": 4,
+          "NPCID": "Mob4",
           "IsFemale": false
         }
       ]
@@ -98,82 +119,643 @@
     "ID": "hgbc_intro_0004",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_show_owner",
+    "NextStepID": "hgbc_intro_0005",
     "TalkData": {
       "SpecificSpeaker": "Owner",
       "Text": "（問題がなければいいのだが…）"
     }
   },
 
+  "hgbc_intro_0005": {
+    "ID": "hgbc_intro_0005",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_0005a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
 
+  "hgbc_intro_0005a": {
+    "ID": "hgbc_intro_0005a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_0005b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 3.74,
+        "PosY": 1.19,
+        "PosZ": 7.4,
+        "TargetPosX": 1.08,
+        "TargetPosY": -0.16,
+        "TargetPosZ": 9.04,
+        "Distance": 3.4,
+        "AngleFrom": 301.68,
+        "AngleTo": 23.33
+      }
+    }
+  },
 
-
-
-
-  "hgbc_intro_show_owner": {
-    "ID": "hgbc_intro_show_owner",
+  "hgbc_intro_0005b": {
+    "ID": "hgbc_intro_0005b",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "hgbc_intro_yotogiplay_closepanel",
+    "NextStepID": "hgbc_intro_0005c",
     "CharaData": [
       {
         "Type": "M",
         "IsMaster": true,
-        "Visible": true
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "0.28, -1.33, 8.47",
+          "RotString": "0.0, 0.0, 0.0, 1.0"
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿深々"
+        },
+        "PosRot": {
+          "PosString": "0.26, -0.85, 10.11",
+          "RotString": "0.0, 1.0, 0.0, 0.0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "work_001.ks",
+          "ScriptLabel": "*ワイン待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "-0.54, -0.81, 9.68",
+          "RotString": "0, 1, 0, 0"
+        },
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "HandItemR_WineGlass_I_.menu",
+              "Target": "handitem"
+            }
+          ]
+        }
       }
+
     ]
   },
 
-  "hgbc_intro_yotogiplay_closepanel": {
-    "ID": "hgbc_intro_yotogiplay_closepanel",
-    "Type": "CloseMsgPanel",
+  "hgbc_intro_0005c": {
+    "ID": "hgbc_intro_0005c",
+    "Type": "BG",
+    "Tag": "Theater",
     "WaitingType": "Auto",
-    "NextStepID": "hgbc_start_yotogiplay"
-  },
-
-  "hgbc_start_yotogiplay": {
-    "ID": "hgbc_start_yotogiplay",
-    "Type": "LoadYotogi",
-    "Tag": "SceneYotogi",
-    "WaitingType": "LoadScene",
-    "YotogiSetup": {
-      "Phase": 1,
-      "IsKeepCharacterVisibleAfterYotogi": true,
-      "IsFinalYotogi": false,
-      "IsClubOwnerMainCharacter": false
-    },
-    "NextStepID": "hgbc_postyotogi1_init"
+    "NextStepID": "hgbc_intro_0006"
   },
 
 
-  "hgbc_postyotogi1_init": {
-    "ID": "hgbc_postyotogi1_init",
+  "hgbc_intro_0006": {
+    "ID": "hgbc_intro_0006",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_start_yotogiplay2",
+    "NextStepID": "hgbc_intro_0007",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "This is after yotogi 1"
+      "Text": "はじめまして、[=Name,NPC_M,0,LastName]さん。どのようなご用件でしょうか？"
     },
-
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
     }
   },
 
-  "hgbc_start_yotogiplay2": {
-    "ID": "hgbc_start_yotogiplay2",
-    "Type": "LoadYotogi",
-    "Tag": "SceneYotogi",
-    "WaitingType": "LoadScene",
-    "YotogiSetup": {
-      "Phase": 2,
-      "IsKeepCharacterVisibleAfterYotogi": false,
-      "IsFinalYotogi": true,
-      "IsClubOwnerMainCharacter": true
+  "hgbc_intro_0007": {
+    "ID": "hgbc_intro_0007",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0008",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "やぁ、よろしくね、オーナーさん。はははっ、大丈夫、大丈夫！そんなに堅苦しくする必要はないよ、ただおしゃべりしたいだけ。"
+    }
+  },
+
+  "hgbc_intro_0008": {
+    "ID": "hgbc_intro_0008",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0009",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "こんな素晴らしい場所を作った、君は本当に大した人だ。だから俺のビジネス・パートナーたちも君を褒め続けているんのか。"
+    }
+  },
+
+  "hgbc_intro_0009": {
+    "ID": "hgbc_intro_0009",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0010",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ありがとうごさいます。お褒めいただき、とても光栄です。"
+    }
+  },
+
+  "hgbc_intro_0010": {
+    "ID": "hgbc_intro_0010",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は[=Name,NPC_M,0,LastName]さんとクラブについて少し話を続ける。そして、彼はポケットから何かを取り出す。）"
+    }
+  },
+
+  "hgbc_intro_0011": {
+    "ID": "hgbc_intro_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0012",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "さて、[=ClubOwnerName]くん、みせたいものがある。きっと気に入ると思うよ。"
+    }
+  },
+
+  "hgbc_intro_0012": {
+    "ID": "hgbc_intro_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0013",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（…来た。[=Name,NPC_M,0,LastName]さんのような男はここで俺と話をするだけで、時間を無駄にすることはないだろう。）"
+    }
+  },
+
+  "hgbc_intro_0013": {
+    "ID": "hgbc_intro_0013",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0014",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（彼は俺に招待状のようなものを手渡した。えっと…）"
+    }
+  },
+
+  "hgbc_intro_0014": {
+    "ID": "hgbc_intro_0014",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0015",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（……りんかんクラブ…？）"
+    }
+  },
+
+  "hgbc_intro_0015": {
+    "ID": "hgbc_intro_0015",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0016",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（こんな場所で、彼が男をアウトドア活動に誘うとは思えない。どう考えでもこれは「輪姦クラブ」だろ…さすがに直球すぎる…）"
+    }
+  },
+
+  "hgbc_intro_0016": {
+    "ID": "hgbc_intro_0016",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0017",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あの…これは……なんていうか…メイドを守らないといけないので…これはちょっと……"
+    }
+  },
+
+  "hgbc_intro_0017": {
+    "ID": "hgbc_intro_0017",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0018",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺がそう言うのを聞いて、彼は大笑いました。）"
+    }
+  },
+
+  "hgbc_intro_0018": {
+    "ID": "hgbc_intro_0018",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0019",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "ははははははっ！いやいや、[=ClubOwnerName]くん、何を考えているんだ？まあ、名前は確かにちょっとアレよね。疑うのは当然のことだ。"
+    }
+  },
+
+  "hgbc_intro_0019": {
+    "ID": "hgbc_intro_0019",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0020",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "でも安心して。これは紳士のクラブだ、決してひどいことはしない。女性に危害を加えようとする者は追い出されよ。"
+    }
+  },
+
+  "hgbc_intro_0020": {
+    "ID": "hgbc_intro_0020",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "えぇ…"
+    }
+  },
+
+  "hgbc_intro_0021": {
+    "ID": "hgbc_intro_0021",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0022",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "[=ClubOwnerName]くん、大感謝祭のことを聞きた。参加したことはないけれど、聞いたところではめっちゃ素晴らしいイベントだ。"
+    }
+  },
+
+  "hgbc_intro_0022": {
+    "ID": "hgbc_intro_0022",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0023",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "でも、それで満足か？もっともっと刺激的なことを欲しいでしょ？"
+    }
+  },
+
+  "hgbc_intro_0023": {
+    "ID": "hgbc_intro_0023",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0024",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "まぁ…"
+    }
+  },
+
+  "hgbc_intro_0024": {
+    "ID": "hgbc_intro_0024",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0025",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "俺は知ってるよ、君も「こっち側の人間」だ。君も[=Name,Maid,0,CallName]ちゃんも他のメイドさんたちも、きっと気に入ることでしょう。"
+    }
+  },
+
+  "hgbc_intro_0025": {
+    "ID": "hgbc_intro_0025",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0026",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（……正直、彼の言う通り、俺もメイドたちを参加させたいと思っている。しかし、これは大感謝祭よりさらに一線を越える…どうすればいいんだ？）"
+    }
+  },
+
+  "hgbc_intro_0026": {
+    "ID": "hgbc_intro_0026",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0027",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あの…考える時間が欲しい…"
+    }
+  },
+
+  "hgbc_intro_0027": {
+    "ID": "hgbc_intro_0027",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0028",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "はははっ、もちろん！そうだ、俺たちのクラブを訪れて、活動を見てみましょう。そこに座って見ているだけでもいい。もし興味を持てれば、いつでも参加できるよ。"
+    }
+  },
+
+  "hgbc_intro_0028": {
+    "ID": "hgbc_intro_0028",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0029",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "自分の目で確かめる。どう思う？"
+    }
+  },
+
+  "hgbc_intro_0029": {
+    "ID": "hgbc_intro_0029",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0030",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "…お誘いありがとうございます。メイドと相談してみます。"
+    }
+  },
+
+  "hgbc_intro_0030": {
+    "ID": "hgbc_intro_0030",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "ははは、それでいい。返事を楽しみにしているよ。"
+    }
+  },
+
+  "hgbc_intro_0031": {
+    "ID": "hgbc_intro_0031",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_0031a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_intro_0031a": {
+    "ID": "hgbc_intro_0031a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_0031b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 999,
+        "PosY": 999,
+        "PosZ": 999,
+        "TargetPosX": 1000,
+        "TargetPosY": 1000,
+        "TargetPosZ": 1000,
+        "Distance": 0,
+        "AngleFrom": 0,
+        "AngleTo": 0
+      }
+    }
+  },
+
+  "hgbc_intro_0031b": {
+    "ID": "hgbc_intro_0031b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_intro_0031c",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": false
+      },
+      {
+        "Type": "NPC_M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": false
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        },
+        "PosRot": {
+          "PosString": "-10.26, -1.33, 5.71",
+          "RotString": "0, -0.742, 0, 0.671"
+        },
+        "ExtraObjectsInfo": {
+          "RemoveObjects": [ "handitem" ]
+        }
+      }
+
+    ]
+  },
+
+  "hgbc_intro_0031c": {
+    "ID": "hgbc_intro_0031c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0032",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そして、[=Name,NPC_M,0,LastName]さんは[=Name,Maid,0,CallName]と何杯か飲んだ後、帰っていった。）"
     },
-    "NextStepID": "hgbc_postyotogi2_init"
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_0032": {
+    "ID": "hgbc_intro_0032",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0033",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺はその招待状のことをずっと思い悩んでいる。[=Name,Maid,0,CallName]はそれを見て、俺に近づいてくる。）"
+    }
+  },
+
+  "hgbc_intro_0033": {
+    "ID": "hgbc_intro_0033",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_0033a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_intro_0033a": {
+    "ID": "hgbc_intro_0033a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_0033b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": -11.81,
+        "PosY": 0.3,
+        "PosZ": 5.49,
+        "TargetPosX": -11.32,
+        "TargetPosY": 0.23,
+        "TargetPosZ": 5.55,
+        "Distance": 0.5,
+        "AngleFrom": 82.69,
+        "AngleTo": 8.12
+      }
+    }
+  },
+
+  "hgbc_intro_0033b": {
+    "ID": "hgbc_intro_0033b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0034_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "こめんな、[=Name,Maid,0,CallName]。聞いてのとおり…はあ……この招待状には本当に頭が痛くなる…"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_0034_Branch": {
+    "ID": "hgbc_intro_0034_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_intro_0034_M_[=PType]"
+  },
+
+  "hgbc_intro_0040": {
+    "ID": "hgbc_intro_0040",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "え？"
+    }
+  },
+
+  "hgbc_intro_0041": {
+    "ID": "hgbc_intro_0041",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0042",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（聞き間違いか？いや、ないたろ。俺の妻[=Name,Maid,0,CallName]、今輪姦されたいと言った…）"
+    }
+  },
+
+  "hgbc_intro_0042": {
+    "ID": "hgbc_intro_0042",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0043",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（いつからこんな淫乱な女になった。…まぁ、別に悪いことじゃない。むしろこれがいい。）"
+    }
+  },
+
+  "hgbc_intro_0043": {
+    "ID": "hgbc_intro_0043",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0044_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "じゃあ…試してみるか？"
+    }
+  },
+
+  "hgbc_intro_0044_Branch": {
+    "ID": "hgbc_intro_0044_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_intro_0044_M_[=PType]"
+  },
+
+  "hgbc_intro_0050": {
+    "ID": "hgbc_intro_0050",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_lakeside_0001",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
   }
+
+
+
 }

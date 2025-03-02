@@ -20,7 +20,7 @@ namespace COM3D2.WildParty.Plugin
         public Vector3 GroupOffsetVector2 = Vector3.zero;           //from TagAllPos
         public Quaternion GroupRotation = Quaternion.identity;
 
-        public int SexPosID;
+        public int SexPosID = -1;
         public bool IsEstrus = false;
         public bool IsIndependentExcitement = true;
         public bool IsAutomatedGroup = true;
@@ -180,6 +180,7 @@ namespace COM3D2.WildParty.Plugin
                         man.transform.localPosition = Vector3.zero;
                         man.transform.position = setupInfo.Pos;
                         man.transform.rotation = setupInfo.Rot;
+                        man.body0.SetBoneHitHeightY(setupInfo.Pos.y);
                     }
                 }
             }
@@ -236,6 +237,7 @@ namespace COM3D2.WildParty.Plugin
                     maid.transform.position = GroupPosition + GroupOffsetVector + GroupOffsetVector2;
                     maid.transform.localRotation = new Quaternion(0, 0, 0, 0);
                     maid.transform.rotation = GroupRotation;
+                    maid.body0.SetBoneHitHeightY(maid.transform.position.y);
                 }
 
                 if(ForceCharacterVisibleOnPositionChange)

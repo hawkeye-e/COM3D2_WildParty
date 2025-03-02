@@ -17,27 +17,49 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
                 {
                     if (group.Man1.status.guid == StateManager.Instance.processingManGUID)
                     {
-                        if (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiPlay)
+                        if(group.SexPosID >= 0)
                         {
                             //If it is a hit, determine which man in the group is returned
                             BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
-
+                            
                             for (int i = 0; i < motionItem.ManIndex.Count; i++)
                                 if (motionItem.ManIndex[i] == manNo)
+                                {
                                     result = group.GetManAtIndex(i);
+                                    return;
+                                }
                         }
                         else
                         {
                             //For the case of it is not a yotogi motion
                             result = group.GetManAtIndex(manNo);
+                            return;
                         }
                     }
                 }
                 //check also the club owner
                 if (StateManager.Instance.ClubOwner != null)
                     if (StateManager.Instance.ClubOwner.status.guid == StateManager.Instance.processingManGUID)
+                    {
                         result = StateManager.Instance.ClubOwner;
-
+                        return;
+                    }
+                //man list
+                if (StateManager.Instance.MenList != null)
+                    foreach (Maid man in StateManager.Instance.MenList)
+                        if (man.status.guid == StateManager.Instance.processingManGUID)
+                        {
+                            result = man;
+                            return;
+                        }
+                //npc list
+                if (StateManager.Instance.NPCManList != null)
+                    foreach (Maid npc in StateManager.Instance.NPCManList)
+                        if (npc.status.guid == StateManager.Instance.processingManGUID)
+                        {
+                            result = npc;
+                            return;
+                        }
             }
         }
 

@@ -1,0 +1,1528 @@
+{
+  "hgbc_intro_cafe_0001": {
+    "ID": "hgbc_intro_cafe_0001",
+    "Type": "BG",
+    "Tag": "OpemCafe",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0001a"
+  },
+
+  "hgbc_intro_cafe_0001a": {
+    "ID": "hgbc_intro_cafe_0001a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0001b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 999,
+        "PosY": 999,
+        "PosZ": 999,
+        "TargetPosX": 1000,
+        "TargetPosY": 1000,
+        "TargetPosZ": 1000,
+        "Distance": 0,
+        "AngleFrom": 0,
+        "AngleTo": 0
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0001b": {
+    "ID": "hgbc_intro_cafe_0001b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0001c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "（そして、ある建物に到着する。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_cafe_0001c": {
+    "ID": "hgbc_intro_cafe_0001c",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_cafe_0001_chara",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+
+
+
+  "hgbc_intro_cafe_0001_chara": {
+    "ID": "hgbc_intro_cafe_0001_chara",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_intro_cafe_0010_init_camera",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "5.35, 0.00, -22.09",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "4.32, 0.00, -22.07",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組"
+        },
+        "PosRot": {
+          "PosString": "-0.22, 0.44, -23.36",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組"
+        },
+        "PosRot": {
+          "PosString": "-3.81, 0.44, -20.71",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "通常",
+        "FaceBlend": "頬０涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "5.40, 0.00, -22.93",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        },
+        "PosRot": {
+          "PosString": "4.34, 0.00, -22.96",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0010_init_camera": {
+    "ID": "hgbc_intro_cafe_0010_init_camera",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0010_camerapan",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 5.34,
+        "PosY": 1.83,
+        "PosZ": -22.21,
+        "TargetPosX": 5.3,
+        "TargetPosY": 1.83,
+        "TargetPosZ": -22.12,
+        "Distance": 0.1,
+        "AngleFrom": 334.19,
+        "AngleTo": 0.04
+      }
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_cafe_0010_camerapan": {
+    "ID": "hgbc_intro_cafe_0010_camerapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "hgbc_intro_cafe_0011",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "AnimationTime": 5,
+      "FixedPointData": {
+        "PosX": 7.49,
+        "PosY": 1.97,
+        "PosZ": -20.93,
+        "TargetPosX": 5.18,
+        "TargetPosY": 1.56,
+        "TargetPosZ": -22.06,
+        "Distance": 2.6,
+        "AngleFrom": 244.07,
+        "AngleTo": 9.05
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0011": {
+    "ID": "hgbc_intro_cafe_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0012",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ふーん…普通のカフェみたい……）"
+    }
+  },
+
+  "hgbc_intro_cafe_0012": {
+    "ID": "hgbc_intro_cafe_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0013",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "よし、到着！あ、[=Name,NPC_F,2,CallName]、まずはドレスコードに着替えてませんか？俺は始める前に[=ClubOwnerName]くんと[=Name,Maid,0,CallName]ちゃんに少し説明しておく。"
+    }
+  },
+
+  "hgbc_intro_cafe_0013": {
+    "ID": "hgbc_intro_cafe_0013",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0014",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "ふふふっ、そうですわね。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00016.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0014": {
+    "ID": "hgbc_intro_cafe_0014",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_cafe_0014a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_intro_cafe_0014a": {
+    "ID": "hgbc_intro_cafe_0014a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_intro_cafe_0015",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": false,
+        "WaitLoad": true,
+        "ClothesSetID": "FullNude"
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0015": {
+    "ID": "hgbc_intro_cafe_0015",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0016",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,NPC_F,2,CallName]さんが着替えに行くと、[=Name,NPC_M,0,CallName]さんが説明を始める。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_cafe_0016": {
+    "ID": "hgbc_intro_cafe_0016",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0017",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "ここはラウンジだ。今はあまり人がいないが、普段はここに人が集まって休んでいる。食事をしてもいいし、休んでもいいし、誰と話してもいい。"
+    }
+  },
+
+  "hgbc_intro_cafe_0017": {
+    "ID": "hgbc_intro_cafe_0017",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0018",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "もちろん、セックスしてもいい。何をするのも自由だ。"
+    }
+  },
+
+  "hgbc_intro_cafe_0018": {
+    "ID": "hgbc_intro_cafe_0018",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_cafe_0018a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_intro_cafe_0018a": {
+    "ID": "hgbc_intro_cafe_0018a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0018b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 999,
+        "PosY": 999,
+        "PosZ": 999,
+        "TargetPosX": 1000,
+        "TargetPosY": 1000,
+        "TargetPosZ": 1000,
+        "Distance": 0,
+        "AngleFrom": 0,
+        "AngleTo": 0
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0018b": {
+    "ID": "hgbc_intro_cafe_0018b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0019_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,NPC_M,0,CallName]さんが説明しているとき、[=Name,NPC_F,2,CallName]さんは着替えを終えだが…）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_cafe_0019_Branch": {
+    "ID": "hgbc_intro_cafe_0019_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_intro_cafe_0020_T_[=PType]"
+  },
+
+  "hgbc_intro_cafe_0021": {
+    "ID": "hgbc_intro_cafe_0021",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0021a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 7.49,
+        "PosY": 1.97,
+        "PosZ": -20.93,
+        "TargetPosX": 5.18,
+        "TargetPosY": 1.56,
+        "TargetPosZ": -22.06,
+        "Distance": 2.6,
+        "AngleFrom": 244.07,
+        "AngleTo": 9.05
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0021a": {
+    "ID": "hgbc_intro_cafe_0021a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_intro_cafe_0022",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0022": {
+    "ID": "hgbc_intro_cafe_0022",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0022_camerapan",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 5.15,
+        "PosY": 0.74,
+        "PosZ": -22.88,
+        "TargetPosX": 4.35,
+        "TargetPosY": 0.72,
+        "TargetPosZ": -22.96,
+        "Distance": 0.8,
+        "AngleFrom": 264.43,
+        "AngleTo": 1.59
+      }
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_cafe_0022_camerapan": {
+    "ID": "hgbc_intro_cafe_0022_camerapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "hgbc_intro_cafe_0023",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "AnimationTime": 5,
+      "FixedPointData": {
+        "PosX": 5.15,
+        "PosY": 1.53,
+        "PosZ": -22.88,
+        "TargetPosX": 4.33,
+        "TargetPosY": 1.53,
+        "TargetPosZ": -22.95,
+        "Distance": 0.8,
+        "AngleFrom": 264.43,
+        "AngleTo": 1.59
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0023": {
+    "ID": "hgbc_intro_cafe_0023",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0024",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,NPC_F,2,CallName]さんは裸のままで戻ってきた！）"
+    }
+  },
+
+
+
+  "hgbc_intro_cafe_0024": {
+    "ID": "hgbc_intro_cafe_0024",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0025",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（肌はとても綺麗し、くびれもとても美しいし、おっぱいもとてもでかい。めっちゃいい女だ……ヤりたいなぁ…）"
+    }
+  },
+
+  "hgbc_intro_cafe_0025": {
+    "ID": "hgbc_intro_cafe_0025",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0025a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        },
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0025a": {
+    "ID": "hgbc_intro_cafe_0025a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0026",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "そんなに見つめられては恥ずかしいですわ。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00036.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0026": {
+    "ID": "hgbc_intro_cafe_0026",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0027_Branch",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 4.92,
+        "PosY": 1.67,
+        "PosZ": -22.36,
+        "TargetPosX": 5.44,
+        "TargetPosY": 1.51,
+        "TargetPosZ": -23.08,
+        "Distance": 0.9,
+        "AngleFrom": 144.67,
+        "AngleTo": 9.98
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0027_Branch": {
+    "ID": "hgbc_intro_cafe_0027_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_intro_cafe_0030_M_[=PType]"
+  },
+
+  "hgbc_intro_cafe_0031": {
+    "ID": "hgbc_intro_cafe_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0032",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,NPC_F,2,CallName]さんの体は魅力的すぎるので、ついに……ハハ……ごめん…反省します…"
+    }
+  },
+
+  "hgbc_intro_cafe_0032": {
+    "ID": "hgbc_intro_cafe_0032",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0032a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 7.49,
+        "PosY": 1.97,
+        "PosZ": -20.93,
+        "TargetPosX": 5.18,
+        "TargetPosY": 1.56,
+        "TargetPosZ": -22.06,
+        "Distance": 2.6,
+        "AngleFrom": 244.07,
+        "AngleTo": 9.05
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0032a": {
+    "ID": "hgbc_intro_cafe_0032a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0032b",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "通常",
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0032b": {
+    "ID": "hgbc_intro_cafe_0032b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0033",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "ふふっ、嬉しいことを言ってくれますのね。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00009.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0033": {
+    "ID": "hgbc_intro_cafe_0033",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0034",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "はははっ、いいの、いいの！こういう場所だからね。りんかんだからドレスコードは自然を尊重する裸だ！はははははっ！"
+    }
+  },
+
+  "hgbc_intro_cafe_0034": {
+    "ID": "hgbc_intro_cafe_0034",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0035",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（えぇ…これジョークか…？困るな…）\nハハッ…"
+    }
+  },
+
+  "hgbc_intro_cafe_0035": {
+    "ID": "hgbc_intro_cafe_0035",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0036",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "わたくしたちの世界にいらっしゃいな。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00085.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0036": {
+    "ID": "hgbc_intro_cafe_0036",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0037",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "大丈夫！すぐにこれは素晴らしいと思うようになるよ。"
+    }
+  },
+
+  "hgbc_intro_cafe_0037": {
+    "ID": "hgbc_intro_cafe_0037",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_cafe_0037a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_intro_cafe_0037a": {
+    "ID": "hgbc_intro_cafe_0037a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0037b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 999,
+        "PosY": 999,
+        "PosZ": 999,
+        "TargetPosX": 1000,
+        "TargetPosY": 1000,
+        "TargetPosZ": 1000,
+        "Distance": 0,
+        "AngleFrom": 0,
+        "AngleTo": 0
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0037b": {
+    "ID": "hgbc_intro_cafe_0037b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_intro_cafe_0037c",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "5.35, 0.00, -22.09",
+          "RotString": "0, 0.908, 0, -0.418"
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "4.32, 0.00, -22.07",
+          "RotString": "0, 1, 0, 0.00248"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "4.41, 0.00, -23.88",
+          "RotString": "0, 0.99402, 0, 0.10920"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "3.56, 0.00, -23.15",
+          "RotString": "0, 0.812, 0, -0.584"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "5.40, 0.00, -22.93",
+          "RotString": "0, 0.867, 0, -0.498"
+        }
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "4.34, 0.00, -22.96",
+          "RotString": "0, 0.99983, 0, -0.019"
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0037c": {
+    "ID": "hgbc_intro_cafe_0037c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0038",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（その時、二人の男が近づいてきて、[=Name,NPC_F,2,CallName]さんに話しかけた。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_cafe_0038": {
+    "ID": "hgbc_intro_cafe_0038",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_cafe_0038a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+
+  "hgbc_intro_cafe_0038a": {
+    "ID": "hgbc_intro_cafe_0038a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0038b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 7.06,
+        "PosY": 2.4,
+        "PosZ": -24.8,
+        "TargetPosX": 4.55,
+        "TargetPosY": 1.46,
+        "TargetPosZ": -23.24,
+        "Distance": 3.1,
+        "AngleFrom": 301.86,
+        "AngleTo": 17.74
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0038b": {
+    "ID": "hgbc_intro_cafe_0038b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0039",
+    "TalkData": {
+      "SpeakerName": "男１",
+      "Text": "[=Name,NPC_F,2,CallName]さん、来てくれたか！いやぁ、今日の体もめっちゃエロいなぁ！ほら見て見て、俺のちんぽはもうこんなに勃起している～イク手伝いをしてほしいなぁ～[=Name,NPC_F,2,CallName]さんのフェラが恋しいよ～"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_cafe_0039": {
+    "ID": "hgbc_intro_cafe_0039",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0040",
+    "TalkData": {
+      "SpeakerName": "男２",
+      "Text": "[=Name,NPC_F,2,CallName]さん、今日は君のおっぱいでいっぱい遊びたいよ。そのデカパイ握ってめっちゃ中出ししたいなぁ～いいよね？"
+    }
+  },
+
+  "hgbc_intro_cafe_0040": {
+    "ID": "hgbc_intro_cafe_0040",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（うわぁ、こいつら……あの[=Name,NPC_M,0,FullName]の前で彼の妻の[=Name,NPC_F,2,CallName]さんとあんなに露骨な話をするんだ…）"
+    }
+  },
+
+  "hgbc_intro_cafe_0041": {
+    "ID": "hgbc_intro_cafe_0041",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_intro_cafe_0041a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0041a": {
+    "ID": "hgbc_intro_cafe_0041a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0042",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "あら、構いませんのよ。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00017.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0042": {
+    "ID": "hgbc_intro_cafe_0042",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0043",
+    "TalkData": {
+      "SpeakerName": "男１",
+      "Text": "じゃあ[=Name,NPC_M,0,CallName]さん、奥さんをお借りして遊びますよ。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_cafe_0043": {
+    "ID": "hgbc_intro_cafe_0043",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0044",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "いいよいいよ、楽しんで！"
+    }
+  },
+
+  "hgbc_intro_cafe_0044": {
+    "ID": "hgbc_intro_cafe_0044",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0045",
+    "TalkData": {
+      "SpeakerName": "男２",
+      "Text": "行こう、[=Name,NPC_F,2,CallName]さん。歩く間、俺たちのちんぽを握ってくれる？今からとことん輪姦して、君は何度でも絶頂を約束するよ！"
+    }
+  },
+
+  "hgbc_intro_cafe_0045": {
+    "ID": "hgbc_intro_cafe_0045",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0046",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "ふふふ……嬉しいですわ。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00034.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3.4
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0046": {
+    "ID": "hgbc_intro_cafe_0046",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0047",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "[=ClubOwnerName]くん、[=Name,Maid,0,CallName]ちゃん、俺たちもドレスコードに変えようか？更衣室はあそこだ。見逃すことはないだろう。"
+    }
+  },
+
+  "hgbc_intro_cafe_0047": {
+    "ID": "hgbc_intro_cafe_0047",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_cafe_0047a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_intro_cafe_0047a": {
+    "ID": "hgbc_intro_cafe_0047a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0047b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 999,
+        "PosY": 999,
+        "PosZ": 999,
+        "TargetPosX": 1000,
+        "TargetPosY": 1000,
+        "TargetPosZ": 1000,
+        "Distance": 0,
+        "AngleFrom": 0,
+        "AngleTo": 0
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0047b": {
+    "ID": "hgbc_intro_cafe_0047b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0048",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,NPC_F,2,CallName]さんはあの２人とある部屋に入る。俺たちは更衣室で服を脱いで、ラウンジに戻ってきて。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_cafe_0048": {
+    "ID": "hgbc_intro_cafe_0048",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_cafe_0048a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_intro_cafe_0048a": {
+    "ID": "hgbc_intro_cafe_0048a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_intro_cafe_0048b",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "6.52, 0.00, -22.31",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "7.42, 0.00, -21.56",
+          "RotString": "0, 1, 0, 0"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": false,
+        "WaitLoad": true,
+        "IsManNude": true
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": false,
+        "WaitLoad": true,
+        "IsManNude": true
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "恥ずかしい",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "7.43, 0.00, -22.93",
+          "RotString": "0, 0, 0, 1"
+        },
+        "ClothesSetID": "FullNude"
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": false,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0048b": {
+    "ID": "hgbc_intro_cafe_0048b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0049_Branch",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 5.28,
+        "PosY": 2.31,
+        "PosZ": -19.96,
+        "TargetPosX": 6.79,
+        "TargetPosY": 1.52,
+        "TargetPosZ": -21.92,
+        "Distance": 2.6,
+        "AngleFrom": 142.57,
+        "AngleTo": 17.74
+      }
+    }
+  },
+
+
+  "hgbc_intro_cafe_0049_Branch": {
+    "ID": "hgbc_intro_cafe_0049_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_intro_cafe_0050_M_[=PType]"
+  },
+
+  "hgbc_intro_cafe_0051": {
+    "ID": "hgbc_intro_cafe_0051",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0051_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "おっ！いいね～やっぱり[=Name,Maid,0,CallName]ちゃんの体はすごく綺麗だ。さすがエンパイアクラブのメイドさん。ははははっ！"
+    }
+  },
+
+  "hgbc_intro_cafe_0051_Branch": {
+    "ID": "hgbc_intro_cafe_0051_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_intro_cafe_0052_M_[=PType]"
+  },
+
+  "hgbc_intro_cafe_0053": {
+    "ID": "hgbc_intro_cafe_0053",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_intro_cafe_0053a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0053a": {
+    "ID": "hgbc_intro_cafe_0053a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0054",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "さで、このクラブのルールをちょっと説明しよう。"
+    }
+  },
+
+  "hgbc_intro_cafe_0054": {
+    "ID": "hgbc_intro_cafe_0054",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0055",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "二人ともこのクラブの名前は知っているよね。そう、ここは輪姦のためのクラブだ。でも安心して、暴力とか脅迫とか一切しない。"
+    }
+  },
+
+  "hgbc_intro_cafe_0055": {
+    "ID": "hgbc_intro_cafe_0055",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0056",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "むしろ女性メンバーが尊重されだ。まぁ、ここの女性メンバーは多半は男性メンバーの彼女や妻だからだ。"
+    }
+  },
+
+  "hgbc_intro_cafe_0056": {
+    "ID": "hgbc_intro_cafe_0056",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0057",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "名前は輪姦クラブだが、普通のセックスをやっても構わない。ただし心の浮気は絶対ダメ、すべては肉体の快楽のためだけだ。"
+    }
+  },
+
+  "hgbc_intro_cafe_0057": {
+    "ID": "hgbc_intro_cafe_0057",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0058",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（まあ、合理的な）"
+    }
+  },
+
+  "hgbc_intro_cafe_0058": {
+    "ID": "hgbc_intro_cafe_0058",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0058a",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "これは重要なことだ。[=Name,Maid,0,CallName]ちゃん、このチョーカーを受け取って、首にかけろ。"
+    }
+  },
+
+  "hgbc_intro_cafe_0058a": {
+    "ID": "hgbc_intro_cafe_0058a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0059_Branch",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 7.34,
+        "PosY": 1.58,
+        "PosZ": -21.99,
+        "TargetPosX": 7.35,
+        "TargetPosY": 1.56,
+        "TargetPosZ": -22.09,
+        "Distance": 0.1,
+        "AngleFrom": 174.01,
+        "AngleTo": 13.4
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0059_Branch": {
+    "ID": "hgbc_intro_cafe_0059_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_intro_cafe_0060_T_[=PType]"
+  },
+
+  "hgbc_intro_cafe_0061": {
+    "ID": "hgbc_intro_cafe_0061",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_cafe_0061a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_intro_cafe_0061a": {
+    "ID": "hgbc_intro_cafe_0061a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_intro_cafe_0062",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "ClothesSetID": "HappyGBClub_NoSex"
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0062": {
+    "ID": "hgbc_intro_cafe_0062",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0062a",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "そうそう、こうだ。女性メンバーがこれをつけると、今休憩中で、セックスしたくないという意味になる。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_cafe_0062a": {
+    "ID": "hgbc_intro_cafe_0062a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0063",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 5.28,
+        "PosY": 2.31,
+        "PosZ": -19.96,
+        "TargetPosX": 6.79,
+        "TargetPosY": 1.52,
+        "TargetPosZ": -21.92,
+        "Distance": 2.6,
+        "AngleFrom": 142.57,
+        "AngleTo": 17.74
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0063": {
+    "ID": "hgbc_intro_cafe_0063",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0064",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "さっき、あの二人が[=Name,NPC_F,2,CallName]にセックスを誘ったのを見ただろ？それは、[=Name,NPC_F,2,CallName]がチョーカーをつけていないからだ。"
+    }
+  },
+
+  "hgbc_intro_cafe_0064": {
+    "ID": "hgbc_intro_cafe_0064",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0065",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "もし[=Name,NPC_F,2,CallName]がチョーカーをつけていたら、あの二人はそんな風に話しかけることはルール違反だ。"
+    }
+  },
+
+  "hgbc_intro_cafe_0065": {
+    "ID": "hgbc_intro_cafe_0065",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0066",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "ルールを破った者はクラブから追い出す。さらに、俺は必ず[=Name,NPC_M,0,CallName]グループの力を使って、そんな奴を罰する。"
+    }
+  },
+
+  "hgbc_intro_cafe_0066": {
+    "ID": "hgbc_intro_cafe_0066",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0067",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（…こわっ！）"
+    }
+  },
+
+  "hgbc_intro_cafe_0067": {
+    "ID": "hgbc_intro_cafe_0067",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0068",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "まぁ、そう言っても、今まで誰も違反していない。皆はルールを守り、このようなプレーを楽しんでいる紳士だ。はははっ！"
+    }
+  },
+
+  "hgbc_intro_cafe_0068": {
+    "ID": "hgbc_intro_cafe_0068",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0069",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "さぁ、退屈なルールはこのくらいにして、メインイベントを始めようか。行為室に行こう、輪姦ショーを楽しみましょう。"
+    }
+  },
+
+  "hgbc_intro_cafe_0069": {
+    "ID": "hgbc_intro_cafe_0069",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_cafe_0069a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_intro_cafe_0069a": {
+    "ID": "hgbc_intro_cafe_0069a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0070",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 999,
+        "PosY": 999,
+        "PosZ": 999,
+        "TargetPosX": 1000,
+        "TargetPosY": 1000,
+        "TargetPosZ": 1000,
+        "Distance": 0,
+        "AngleFrom": 0,
+        "AngleTo": 0
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0070": {
+    "ID": "hgbc_intro_cafe_0070",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（よし、いよいよだ。楽しみだな……[=Name,Maid,0,CallName]も参加してくれたら、きっともっと楽しくなる…）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_cafe_0071": {
+    "ID": "hgbc_intro_cafe_0071",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_poledancestage_0001",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  }
+
+}

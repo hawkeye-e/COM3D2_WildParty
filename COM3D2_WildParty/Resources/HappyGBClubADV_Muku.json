@@ -1,0 +1,431 @@
+{
+  "hgbc_intro_0034_M_Muku": {
+    "ID": "hgbc_intro_0034_M_Muku",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_0034_T_Muku",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "FaceBlend": "頬３涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頬掻き"
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_0034_T_Muku": {
+    "ID": "hgbc_intro_0034_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0040",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ちょっと、思うところはあったんだけど……ほんの少しだけ、興味もあったし……いいかなって……",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_Y_27277.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "hgbc_intro_0044_M_Muku": {
+    "ID": "hgbc_intro_0044_M_Muku",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_0044_T_Muku",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_0044_T_Muku": {
+    "ID": "hgbc_intro_0044_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0050",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うん！",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_GP02C_24803.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.8
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_lakeside_0006_T_Muku": {
+    "ID": "hgbc_intro_lakeside_0006_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0010",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "おはようございます。",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_X01_62661.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0020_T_Muku": {
+    "ID": "hgbc_intro_cafe_0020_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えっ……？",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_GP_17492.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0030_M_Muku": {
+    "ID": "hgbc_intro_cafe_0030_M_Muku",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0030_T_Muku",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "むー",
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0030_T_Muku": {
+    "ID": "hgbc_intro_cafe_0030_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……むぅ……ご主人様…",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_GP01_18852.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0050_M_Muku": {
+    "ID": "hgbc_intro_cafe_0050_M_Muku",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0050_T_Muku",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "恥ずかしい",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちがっかり"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0050_T_Muku": {
+    "ID": "hgbc_intro_cafe_0050_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お……お待たせしました。",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_PMD_27232.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4
+        }
+      }
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "hgbc_intro_cafe_0052_M_Muku": {
+    "ID": "hgbc_intro_cafe_0052_M_Muku",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0052_T_Muku",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "恥ずかしい",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頬掻き"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0052_T_Muku": {
+    "ID": "hgbc_intro_cafe_0052_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0053",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ、ありがとうございます……",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_13722.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0060_T_Muku": {
+    "ID": "hgbc_intro_cafe_0060_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はい。",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_10137.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "hgbc_intro_poledancestage_0031_T_Muku": {
+    "ID": "hgbc_intro_poledancestage_0031_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0032",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はーっ……はーっ……ご主人様……",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_GP02_23235.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0034_T_Muku": {
+    "ID": "hgbc_intro_poledancestage_0034_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0035",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ……はぁ……",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_X1Kai_63388.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3.7
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0042_T_Muku": {
+    "ID": "hgbc_intro_poledancestage_0042_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0043_T_Muku",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ご主人様……",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_PMD_27355.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0043_T_Muku": {
+    "ID": "hgbc_intro_poledancestage_0043_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0044_T_Muku",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……えっちなあたしのこと……嫌いになったりしますか……？",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_PMD_27450.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.3,
+          "EndTime": 10
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0044_T_Muku": {
+    "ID": "hgbc_intro_poledancestage_0044_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0045",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "まさか。むしろえっちな[=Name,Maid,0,CallName]は大好きだ。"
+    }
+  },
+
+  "hgbc_intro_poledancestage_0048_T_Muku": {
+    "ID": "hgbc_intro_poledancestage_0048_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0049",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うんっ、ありがとう……それじゃ、行ってくるねっ！",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_GP02C_24808.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0057_T_Muku": {
+    "ID": "hgbc_intro_poledancestage_0057_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0058_T_Muku",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "…あたし、知らない人のおちんちんに……囲まれてちゃってます……んぁっ……",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_X1Kai_63360.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.8
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0058_T_Muku": {
+    "ID": "hgbc_intro_poledancestage_0058_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0059",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぅぅ……汗臭くて、それに……凄く熱くて、硬い……あたし……初めて会った人のおちんちん……綺麗にしちゃいますね……んちゅ……",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_X1Kai_63361.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0071_T_Muku": {
+    "ID": "hgbc_intro_poledancestage_0071_T_Muku",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0072",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ん……そんなこと、言わないでください……でも、しゃぶって、欲しいんですよね……しょうがないですね……はむ……",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_X1Kai_63365.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

@@ -31,7 +31,9 @@ namespace COM3D2.WildParty.Plugin
                 Man,
                 Maid,
                 ClubOwner,
-                GroupMember
+                GroupMember,
+                NPCMale,
+                NPCFemale
             }
 
             

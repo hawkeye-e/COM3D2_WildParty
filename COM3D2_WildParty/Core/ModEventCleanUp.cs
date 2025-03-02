@@ -12,7 +12,8 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void ResetModEvent()
         {
             RemoveAddedStockMan(StateManager.Instance.MenList);
-            
+            RemoveAddedStockMan(StateManager.Instance.NPCManList);
+
             UnloadCharacters(StateManager.Instance.SelectedMaidsList, Constant.CharacterType.Maid);
             if (StateManager.Instance.ClubOwner != null && StateManager.Instance.MenList != null)
                 StateManager.Instance.MenList.Add(StateManager.Instance.ClubOwner);

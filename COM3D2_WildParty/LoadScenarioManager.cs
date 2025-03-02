@@ -71,7 +71,12 @@ namespace COM3D2.WildParty.Plugin
         };
 
         private static readonly string[] ScenarioHappyGBClubResList = {
-            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVIntro
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVIntro,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVIntroLakeside,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVIntroCafe,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVIntroPoleDanceStage,
+
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Muku
         };
 
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)

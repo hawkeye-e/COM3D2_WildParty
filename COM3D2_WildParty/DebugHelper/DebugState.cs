@@ -31,17 +31,14 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
         internal string[] DebugVoiceFileInQuestion = {
 
 
+"H0_GP02C_24681.ogg",
+"H0_X1Kai_63361.ogg",
+"H0_X1Kai_63365.ogg",
 
-"H4_pink_62255.ogg",
-"H4_pink_62259.ogg",
-"H5_pink_62233.ogg",
-"H5_pink_62249.ogg",
-"H5_pink_62235.ogg",
-"H5_pink_62251.ogg",
-"H5_pink_62274.ogg",
-"H5_pink_62306.ogg",
-"H5_pink_62237.ogg",
-"H5_pink_62239.ogg"
+"H0_X1Kai_63375.ogg",
+"H0_X1Kai_63376.ogg",
+"H0_X1Kai_63377.ogg",
+"H0_X1Kai_63378.ogg"
 
 
         };

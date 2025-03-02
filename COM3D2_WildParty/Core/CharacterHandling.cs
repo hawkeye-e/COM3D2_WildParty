@@ -43,7 +43,7 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             //Maid maid = GameMain.Instance.CharacterMgr.AddStockNpcMaid();
             Maid maid = GameMain.Instance.CharacterMgr.AddStockMaid();
-            
+
             foreach (var kvp in CharacterMgr.npcDatas)
             {
                 if (kvp.Value.presetFileName == presetName && isEmptyLastName == string.IsNullOrEmpty(kvp.Value.lastName))
@@ -55,7 +55,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             RenderMaidAfterInit(maid);
             StateManager.Instance.WaitForFullLoadList.Add(maid);
-            
+
             return maid;
         }
 
@@ -98,7 +98,7 @@ namespace COM3D2.WildParty.Plugin.Core
             Maid man = GameMain.Instance.CharacterMgr.AddStockMan();
 
             string[] npcColor = npcData.Color.Split(',');
-            Color manColor = new Color(float.Parse(npcColor[0].Trim()), float.Parse(npcColor[1].Trim()), float.Parse(npcColor[2].Trim()));
+            Color manColor = new Color(float.Parse(npcColor[0].Trim()) / 256f, float.Parse(npcColor[1].Trim()) / 256f, float.Parse(npcColor[2].Trim()) / 256f);
             SetManBody(man, manColor, npcData.BodySize, npcData.Head, npcData.Clothed);
 
             Traverse.Create(man.status).Field(Constant.DefinedClassFieldNames.MaidStatusFirstName).SetValue(npcData.FirstName);
@@ -155,7 +155,7 @@ namespace COM3D2.WildParty.Plugin.Core
             //head
             int head = RNG.Random.Next(pickedInfo.Head.Count);
             string strHeadFileName = pickedInfo.Head[head].Trim();
-            
+
             //body
             string strBodyFileName = pickedBodyInfo.Clothed.Trim();
 
@@ -444,13 +444,13 @@ namespace COM3D2.WildParty.Plugin.Core
             int manRunningNumber = 0;
             int NPCFemaleRunningNumber = 0;
 
-            foreach(var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
+            foreach (var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
             {
                 PartyGroup newGroup = new PartyGroup();
 
                 for (int i = 0; i < groupSetupInfo.MaidCount; i++)
                 {
-                    if(!groupSetupInfo.MaidFromNPC)
+                    if (!groupSetupInfo.MaidFromNPC)
                         newGroup.SetMaidAtIndex(i, workingMaidList[maidRunningNumber++]);
                     else
                         newGroup.SetMaidAtIndex(i, StateManager.Instance.NPCList[NPCFemaleRunningNumber++]);
@@ -458,7 +458,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 for (int i = 0; i < groupSetupInfo.ManCount; i++)
                     newGroup.SetManAtIndex(i, StateManager.Instance.MenList[manRunningNumber++]);
 
-                
+
 
                 newGroup.IsAutomatedGroup = groupSetupInfo.IsAutomatedGroup;
                 newGroup.IsVoicelessGroup = groupSetupInfo.IsVoicelessGroup;
@@ -471,7 +471,8 @@ namespace COM3D2.WildParty.Plugin.Core
             }
 
             PartyGroup.ExtraManList = new Dictionary<int, Maid>();
-            for (int i = 0; i < setupInfo.ExtraManCount; i++) {
+            for (int i = 0; i < setupInfo.ExtraManCount; i++)
+            {
                 if (manRunningNumber >= StateManager.Instance.MenList.Count)
                     PartyGroup.ExtraManList.Add(i, null);
                 else
@@ -492,10 +493,10 @@ namespace COM3D2.WildParty.Plugin.Core
                 return;
 
             //do the swapping
-            
+
             ReplaceTargetMaid(group1, maid1, maid2);
             ReplaceTargetMaid(group2, maid2, maid1);
-            
+
         }
 
         private static void ReplaceTargetMaid(PartyGroup group, Maid toBeReplaced, Maid newMaid)
@@ -551,13 +552,13 @@ namespace COM3D2.WildParty.Plugin.Core
 
             PartyGroup group = StateManager.Instance.PartyGroupList[0];
             PlayableSkill.SkillItem skill = Util.GetGroupCurrentSkill(group);
-            
+
             //Set the spoof flag so that the while object doesnt go through the whole initialization process again
             StateManager.Instance.SpoofActivateMaidObjectFlag = true;
 
             //assign the selected maid and man to the system array.
-            for (int i=0; i< skill.MaidIndex.Count; i++)
-                if(group.GetMaidAtIndex(i) != null)
+            for (int i = 0; i < skill.MaidIndex.Count; i++)
+                if (group.GetMaidAtIndex(i) != null)
                     GameMain.Instance.CharacterMgr.SetActiveMaid(group.GetMaidAtIndex(i), skill.MaidIndex[i]);
 
             for (int i = 0; i < skill.ManIndex.Count; i++)
@@ -580,7 +581,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
             }
 
-                StateManager.Instance.SpoofActivateMaidObjectFlag = false;
+            StateManager.Instance.SpoofActivateMaidObjectFlag = false;
         }
 
         private static void UnlinkMaid(Maid maid)
@@ -653,7 +654,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             var voiceFile = (isEstrus ? targetVoiceList[rnd].EstrusFile : targetVoiceList[rnd].NormalFile);
 
-            if(!isVoiceless)
+            if (!isVoiceless)
                 SetCharacterVoice(maid, voiceFile);
         }
 
@@ -767,7 +768,7 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void StopCurrentAnimation(PartyGroup group)
         {
             GameMain.Instance.ScriptMgr.StopMotionScript();
-            
+
             StopMaidAnimeAndSound(group.Maid1);
             StopMaidAnimeAndSound(group.Maid2);
             StopMaidAnimeAndSound(group.Man1);
@@ -789,8 +790,11 @@ namespace COM3D2.WildParty.Plugin.Core
 
         internal static void StopAllMaidSound()
         {
-            foreach(Maid maid in StateManager.Instance.SelectedMaidsList)
+            foreach (Maid maid in StateManager.Instance.SelectedMaidsList)
                 StopMaidSound(maid);
+            if (StateManager.Instance.NPCList != null)
+                foreach (Maid npc in StateManager.Instance.NPCList)
+                    StopMaidSound(npc);
         }
 
         internal static void StopMaidSound(Maid maid)
@@ -853,7 +857,8 @@ namespace COM3D2.WildParty.Plugin.Core
                     return group.Man1;
                 else if (charaInfo.MemberType == IKAttachInfo.GroupMemberType.Man2)
                     return group.Man2;
-            }else if(charaInfo.ListType == IKAttachInfo.ArrayListType.Maid)
+            }
+            else if (charaInfo.ListType == IKAttachInfo.ArrayListType.Maid)
             {
                 return StateManager.Instance.YotogiWorkingMaidList[charaInfo.ArrayIndex];
             }
@@ -1035,9 +1040,60 @@ namespace COM3D2.WildParty.Plugin.Core
 
                     int ridBody = Path.GetFileName(fileName).ToLower().GetHashCode();
                     man.SetProp(MPN.body, fileName, ridBody);
-                    
+                    man.AllProcProp();
                 }
             }
+        }
+
+        internal static void AttachObjectToCharacter(Maid maid, List<ExtraItemObject> extraItemObjects)
+        {
+            if (extraItemObjects != null)
+            {
+                //the objects dont show up if it is not reset first...
+                foreach (var extraItem in extraItemObjects)
+                    maid.ResetProp(extraItem.Target, true);
+                maid.AllProcProp();
+
+                foreach (var extraItem in extraItemObjects)
+                {
+                    maid.SetProp(extraItem.Target, extraItem.ItemFile, 0, extraItem.IsTemp);
+                }
+                maid.AllProcProp();
+            }
+        }
+
+        internal static void RemoveObjectFromCharacter(Maid maid, List<string> positionToRemove)
+        {
+            if (positionToRemove != null)
+            {
+                foreach (var position in positionToRemove)
+                    maid.ResetProp(position, true);
+                maid.AllProcProp();
+            }
+        }
+
+        internal static void SetFemaleClothing(Maid maid, string clothesSetID)
+        {
+            if (maid == null || string.IsNullOrEmpty(clothesSetID))
+                return;
+            ClothesSet targetSet = ModUseData.ClothesSetList[clothesSetID];
+            ClothesSet nudeSet = ModUseData.ClothesSetList[ModResources.TextResource.NudeClothesSetID];
+
+            for (int i = 0; i < Constant.DressingClothingTagArray.Length; i++)
+            {
+                string slotName = Constant.DressingClothingTagArray[i];
+                string fileName = "";
+                if (targetSet.RequireNude)
+                    fileName = nudeSet.Slots[slotName];
+                if (targetSet.Slots.ContainsKey(slotName))
+                    fileName = targetSet.Slots[slotName];
+
+                maid.ResetProp(slotName, true);
+                maid.AllProcProp();
+                maid.SetProp(slotName, fileName, 0, true);
+                maid.AllProcProp();
+            }
+
         }
     }
 }

@@ -62,6 +62,30 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;FullNude&quot;: {
+        ///    &quot;acchat&quot;: &quot;_I_acchat_del.menu&quot;,
+        ///    &quot;headset&quot;: &quot;_I_headset_del.menu&quot;,
+        ///    &quot;acckami&quot;: &quot;_I_acckami_del.menu&quot;,
+        ///    &quot;acckamisub&quot;: &quot;_I_acckamisub_del.menu&quot;,
+        ///    &quot;wear&quot;: &quot;_I_wear_del.menu&quot;,
+        ///    &quot;skirt&quot;: &quot;_I_skirt_del.menu&quot;,
+        ///    &quot;megane&quot;: &quot;_I_megane_del.menu&quot;,
+        ///    &quot;acchead&quot;: &quot;_I_acchead_del.menu&quot;,
+        ///    &quot;onepiece&quot;: &quot;_I_onepiece_del.menu&quot;,
+        ///    &quot;mizugi&quot;: &quot;_I_mizugi_del.menu&quot;,
+        ///    &quot;accmimi&quot;: &quot;_I_accmimi_del.menu&quot;,
+        ///    &quot;acchana&quot;: &quot;_I_acchana_del.menu&quot;,
+        ///    &quot;bra&quot;: &quot;_I_bra_del.menu&quot;,
+        ///  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ClothesSet {
+            get {
+                return ResourceManager.GetString("ClothesSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;ChangePosition&quot;: {
         ///    &quot;Name&quot;: &quot;体位変更&quot;,
         ///    &quot;Type&quot;: &quot;Common&quot;
@@ -221,19 +245,19 @@ namespace ModResources {
         /// <summary>
         ///   Looks up a localized string similar to {
         ///  &quot;Kamigawara_Reika&quot;: {
-        ///    &quot;FirstName&quot;: &quot;・・・ﾘ&quot;,
-        ///    &quot;LastName&quot;: &quot;・_・・・ｴ&quot;,
-        ///    &quot;NickName&quot;: &quot;・・・ﾘ&quot;,
+        ///    &quot;FirstName&quot;: &quot;麗華&quot;,
+        ///    &quot;LastName&quot;: &quot;神川原&quot;,
+        ///    &quot;NickName&quot;: &quot;麗華&quot;,
         ///    &quot;WayToCall&quot;: &quot;FirstName&quot;,
         ///    &quot;PresetFile&quot;: &quot;Kamigawara_Reika&quot;,
         ///    &quot;Personality&quot;: 100,
-        ///    &quot;VoicePitch&quot;: 50
+        ///    &quot;VoicePitch&quot;: 25
         ///  },
         ///
         ///  &quot;Seikou_Haruna&quot;: {
-        ///    &quot;FirstName&quot;: &quot;・ﾍ・・・ﾈ&quot;,
-        ///    &quot;LastName&quot;: &quot;・ｯ・・&quot;,
-        ///    &quot;NickName&quot;: &quot;・ﾍ・・・ﾈ&quot;,
+        ///    &quot;FirstName&quot;: &quot;はるな&quot;,
+        ///    &quot;LastName&quot;: &quot;星光&quot;,
+        ///    &quot;NickName&quot;: &quot;はるな&quot;,
         ///    &quot;WayToCall&quot;: &quot;FirstName&quot;,
         ///    &quot;PresetFile&quot;: &quot;Seikou_Haruna&quot;,
         ///    &quot;Personality&quot;: 80,
@@ -241,8 +265,8 @@ namespace ModResources {
         ///  },
         ///
         ///  &quot;Shirohama_Natsumi&quot;: {
-        ///    &quot;FirstName&quot;: &quot;・ﾈ・ﾂ・ﾝ&quot;,
-        ///     [rest of string was truncated]&quot;;.
+        ///    &quot;FirstName&quot;: &quot;なつみ&quot;,
+        ///    &quot;LastName&quot;: &quot;城浜&quot;,        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ModNPCFemale {
             get {
@@ -314,6 +338,15 @@ namespace ModResources {
         internal static string ModScenarioCategory {
             get {
                 return ResourceManager.GetString("ModScenarioCategory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FullNude.
+        /// </summary>
+        internal static string NudeClothesSetID {
+            get {
+                return ResourceManager.GetString("NudeClothesSetID", resourceCulture);
             }
         }
         

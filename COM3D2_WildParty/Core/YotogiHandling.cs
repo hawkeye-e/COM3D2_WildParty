@@ -151,6 +151,16 @@ namespace COM3D2.WildParty.Plugin.Core
                         if (StateManager.Instance.YotogiWorkingMaidList.Count > item.ArrayPosition)
                             targetMaid = StateManager.Instance.YotogiWorkingManList[item.ArrayPosition];
                     }
+                    else if (item.Type == Constant.IndividualCoordinateType.NPCMale)
+                    {
+                        if (StateManager.Instance.NPCManList.Count > item.ArrayPosition)
+                            targetMaid = StateManager.Instance.NPCManList[item.ArrayPosition];
+                    }
+                    else if (item.Type == Constant.IndividualCoordinateType.NPCFemale)
+                    {
+                        if (StateManager.Instance.NPCManList.Count > item.ArrayPosition)
+                            targetMaid = StateManager.Instance.NPCList[item.ArrayPosition];
+                    }
                     else if (item.Type == Constant.IndividualCoordinateType.Owner)
                         targetMaid = StateManager.Instance.ClubOwner;
                     
@@ -160,6 +170,7 @@ namespace COM3D2.WildParty.Plugin.Core
                         targetMaid.transform.localPosition = Vector3.zero;
                         targetMaid.transform.position = item.Pos;
                         targetMaid.transform.rotation = item.Rot;
+                        targetMaid.body0.SetBoneHitHeightY(item.Pos.y);
                     }
                 }
             }
@@ -174,6 +185,7 @@ namespace COM3D2.WildParty.Plugin.Core
                         StateManager.Instance.ClubOwner.transform.localPosition = Vector3.zero;
                         StateManager.Instance.ClubOwner.transform.position = item.Pos;
                         StateManager.Instance.ClubOwner.transform.rotation = item.Rot;
+                        StateManager.Instance.ClubOwner.body0.SetBoneHitHeightY(item.Pos.y);
                     }
                     else if (item.Type == Constant.SpecialCoordinateType.UnassignedMaid)
                     {
@@ -182,6 +194,7 @@ namespace COM3D2.WildParty.Plugin.Core
                             PartyGroup.UnassignedMaid.transform.localPosition = Vector3.zero;
                             PartyGroup.UnassignedMaid.transform.position = item.Pos;
                             PartyGroup.UnassignedMaid.transform.rotation = item.Rot;
+                            PartyGroup.UnassignedMaid.body0.SetBoneHitHeightY(item.Pos.y);
                         }
                     }
                 }
@@ -289,6 +302,16 @@ namespace COM3D2.WildParty.Plugin.Core
                         if (StateManager.Instance.YotogiWorkingMaidList.Count > item.ArrayPosition)
                             targetMaid = StateManager.Instance.YotogiWorkingManList[item.ArrayPosition];
                     }
+                    else if (item.Type == Constant.IndividualCoordinateType.NPCMale)
+                    {
+                        if (StateManager.Instance.NPCManList.Count > item.ArrayPosition)
+                            targetMaid = StateManager.Instance.NPCManList[item.ArrayPosition];
+                    }
+                    else if (item.Type == Constant.IndividualCoordinateType.NPCFemale)
+                    {
+                        if (StateManager.Instance.NPCManList.Count > item.ArrayPosition)
+                            targetMaid = StateManager.Instance.NPCList[item.ArrayPosition];
+                    }
                     else if (item.Type == Constant.IndividualCoordinateType.Owner)
                         targetMaid = StateManager.Instance.ClubOwner;
 
@@ -309,19 +332,7 @@ namespace COM3D2.WildParty.Plugin.Core
                             }
                         }
 
-                        if (item.ExtraItemObjects != null)
-                        {
-                            //the objects dont show up if it is not reset first...
-                            foreach (var extraItem in item.ExtraItemObjects)
-                                targetMaid.ResetProp(extraItem.Target, true);
-                            targetMaid.AllProcProp();
-
-                            foreach (var extraItem in item.ExtraItemObjects)
-                            {
-                                targetMaid.SetProp(extraItem.Target, extraItem.ItemFile, 0, extraItem.IsTemp);
-                            }
-                            targetMaid.AllProcProp();
-                        }
+                        CharacterHandling.AttachObjectToCharacter(targetMaid, item.ExtraItemObjects);
                     }
                 }
             }
@@ -656,6 +667,7 @@ namespace COM3D2.WildParty.Plugin.Core
                         var setupInfo = PartyGroup.ExtraManSetupInfo.Where(x => x.ArrayPosition == PartyGroup.ExtraManList.Count - 1).First();
                         man.transform.position = setupInfo.Pos;
                         man.transform.rotation = setupInfo.Rot;
+                        man.body0.SetBoneHitHeightY(setupInfo.Pos.y);
                         CharacterHandling.ApplyMotionInfoToCharacter(man, setupInfo.Motion);
                     }
                 }

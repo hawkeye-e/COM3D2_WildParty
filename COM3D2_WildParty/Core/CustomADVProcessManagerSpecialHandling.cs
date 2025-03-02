@@ -54,8 +54,8 @@ namespace COM3D2.WildParty.Plugin.Core
                 case "haremking_start_yotogiplay":
                     ProcessADV_Step_HaremKing_YotogiPlay(instance, step);
                     break;
-                case "hgbc_start_yotogiplay":
-                case "hgbc_start_yotogiplay2":
+                case "hgbc_start_yotogiplay_phase1":
+                case "hgbc_start_yotogiplay_phase2":
                     ProcessADV_Step_HappyGBClub_YotogiPlay(instance, step);
                     break;
             }
@@ -158,15 +158,15 @@ namespace COM3D2.WildParty.Plugin.Core
             GameMain.Instance.MainCamera.FadeOut(f_dg: delegate
             {
                 CharacterHandling.SetDefaultGroupFormation();
-
+                
                 CharacterHandling.AssignPartyGrouping(PartyGroup.CurrentFormation);
-
+                
                 YotogiHandling.SetupYotogiSceneInitialSkill(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
-
+                
                 CharacterHandling.SetGroupZeroActive();
-
+                
                 YotogiHandling.InitYotogiData();
-
+                
 
                 GameMain.Instance.LoadScene(step.Tag);
             });

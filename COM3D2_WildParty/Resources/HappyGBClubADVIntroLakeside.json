@@ -1,0 +1,368 @@
+{
+  "hgbc_intro_lakeside_0001": {
+    "ID": "hgbc_intro_lakeside_0001",
+    "Type": "BG",
+    "Tag": "",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_lakeside_0001a"
+  },
+
+  "hgbc_intro_lakeside_0001a": {
+    "ID": "hgbc_intro_lakeside_0001a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_lakeside_0001b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": 999,
+        "PosY": 999,
+        "PosZ": 999,
+        "TargetPosX": 1000,
+        "TargetPosY": 1000,
+        "TargetPosZ": 1000,
+        "Distance": 0,
+        "AngleFrom": 0,
+        "AngleTo": 0
+      }
+    }
+  },
+
+  "hgbc_intro_lakeside_0001b": {
+    "ID": "hgbc_intro_lakeside_0001b",
+    "Type": "BGM",
+    "Tag": "BGM018.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_lakeside_0001c"
+  },
+
+  "hgbc_intro_lakeside_0001c": {
+    "ID": "hgbc_intro_lakeside_0001c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0002a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "数日後"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_lakeside_0002a": {
+    "ID": "hgbc_intro_lakeside_0002a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0002b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "（今日はりんかんクラブを訪れる日だ。俺と[=Name,Maid,0,CallName]は早起きして出かける準備をする。）"
+    }
+  },
+
+  "hgbc_intro_lakeside_0002b": {
+    "ID": "hgbc_intro_lakeside_0002b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0002c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "（頭を冷やした後、りんかんクラブのついで少し不安になったのかもしれない、[=Name,Maid,0,CallName]が今日は見るだけしたいって言っだ。）"
+    }
+  },
+
+  "hgbc_intro_lakeside_0002c": {
+    "ID": "hgbc_intro_lakeside_0002c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0002d",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "（最初からそのつもりだったけど……まぁ、状況によっては、[=Name,Maid,0,CallName]に参加を勧めたい。結局俺も[=Name,Maid,0,CallName]の輪姦を見たいな…）"
+    }
+  },
+
+  "hgbc_intro_lakeside_0002d": {
+    "ID": "hgbc_intro_lakeside_0002d",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0002e",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "（俺たちはとあるの山奥の私有地に車を走らせる。ここに着く前には厳重な警備とフェンスがあるので、プライバシーは十分に保護されていると思う。さすが[=Name,NPC_M,0,LastName]グループだ。）"
+    }
+  },
+
+  "hgbc_intro_lakeside_0002e": {
+    "ID": "hgbc_intro_lakeside_0002e",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "（俺たちは湖畔に車を止める。そこで[=Name,NPC_M,0,LastName]さんが俺たちを待っていた。）"
+    }
+  },
+
+  "hgbc_intro_lakeside_0003": {
+    "ID": "hgbc_intro_lakeside_0003",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_lakeside_0003a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_intro_lakeside_0003a": {
+    "ID": "hgbc_intro_lakeside_0003a",
+    "Type": "BG",
+    "Tag": "campsite_day",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_lakeside_0003b"
+  },
+
+  "hgbc_intro_lakeside_0003b": {
+    "ID": "hgbc_intro_lakeside_0003b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_intro_lakeside_0003c",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-2.47, 0.00, -1.16",
+          "RotString": "0, 0.543, 0, 0.840"
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-1.06, 0.00, 0.12",
+          "RotString": "0, 0.840, 0, -0.543"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "通常",
+        "FaceBlend": "頬０涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-2.47, 0.00, -0.37",
+          "RotString": "0, 0.543, 0, 0.840"
+        }
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        },
+        "PosRot": {
+          "PosString": "-0.90, 0.00, -0.47",
+          "RotString": "0, 0.840, 0, -0.543"
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_lakeside_0003c": {
+    "ID": "hgbc_intro_lakeside_0003c",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_lakeside_0004",
+    "CameraData": {
+      "FixedPointData": {
+        "PosX": -4.59,
+        "PosY": 2.03,
+        "PosZ": -2.68,
+        "TargetPosX": -2.6,
+        "TargetPosY": 1.61,
+        "TargetPosZ": -0.91,
+        "Distance": 2.7,
+        "AngleFrom": 48.26,
+        "AngleTo": 9.05
+      }
+    }
+  },
+
+
+  "hgbc_intro_lakeside_0004": {
+    "ID": "hgbc_intro_lakeside_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0005",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "ははは、ようこそ[=ClubOwnerName]くん、[=Name,Maid,0,CallName]ちゃん。君たちはきっと来ると言ったろ。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_lakeside_0005": {
+    "ID": "hgbc_intro_lakeside_0005",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0006_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "歓迎してくれてありがとう、[=Name,NPC_M,0,LastName]さん。今日は[=Name,Maid,0,CallName]と一緒に見学してもらうと思います。"
+    }
+  },
+
+  "hgbc_intro_lakeside_0006_Branch": {
+    "ID": "hgbc_intro_lakeside_0006_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_intro_lakeside_0006_T_[=PType]"
+  },
+
+  "hgbc_intro_lakeside_0010": {
+    "ID": "hgbc_intro_lakeside_0010",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0011",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "おはよう！こちらは妻の[=Name,NPC_F,2,FirstName]。"
+    }
+  },
+
+  "hgbc_intro_lakeside_0011": {
+    "ID": "hgbc_intro_lakeside_0011",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_intro_lakeside_0011a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "hgbc_intro_lakeside_0011a": {
+    "ID": "hgbc_intro_lakeside_0011a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0012",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "ふふふっ、よろしくお願いしますわね。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00001.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 8.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_lakeside_0012": {
+    "ID": "hgbc_intro_lakeside_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0013",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（おっ！[=Name,NPC_F,2,CallName]さんめっちゃ美人だな、ものすごく上品な女性の感じ…）"
+    }
+  },
+
+  "hgbc_intro_lakeside_0013": {
+    "ID": "hgbc_intro_lakeside_0013",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0014",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（……いや待って…[=Name,NPC_M,0,CallName]さんが[=Name,NPC_F,2,CallName]さんをここに連れてきたということは、自分の妻も輪姦させたいということか？）"
+    }
+  },
+
+  "hgbc_intro_lakeside_0014": {
+    "ID": "hgbc_intro_lakeside_0014",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0020",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（だからこそ「こっち側の人間」か…）"
+    }
+  },
+
+  "hgbc_intro_lakeside_0020": {
+    "ID": "hgbc_intro_lakeside_0020",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0021",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "さあ、時間を無駄にしない、行こうか。案内する。"
+    }
+  },
+
+  "hgbc_intro_lakeside_0021": {
+    "ID": "hgbc_intro_lakeside_0021",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_intro_cafe_0001",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  }
+}

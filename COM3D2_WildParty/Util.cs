@@ -154,6 +154,16 @@ namespace COM3D2.WildParty.Plugin
                             if (StateManager.Instance.YotogiWorkingMaidList.Count > item.ArrayPosition)
                                 targetMaid = StateManager.Instance.YotogiWorkingManList[item.ArrayPosition];
                         }
+                        else if (item.Type == Constant.IndividualCoordinateType.NPCMale)
+                        {
+                            if (StateManager.Instance.NPCManList.Count > item.ArrayPosition)
+                                targetMaid = StateManager.Instance.NPCManList[item.ArrayPosition];
+                        }
+                        else if (item.Type == Constant.IndividualCoordinateType.NPCFemale)
+                        {
+                            if (StateManager.Instance.NPCManList.Count > item.ArrayPosition)
+                                targetMaid = StateManager.Instance.NPCList[item.ArrayPosition];
+                        }
                         else if (item.Type == Constant.IndividualCoordinateType.Owner)
                             targetMaid = StateManager.Instance.ClubOwner;
 
@@ -163,6 +173,7 @@ namespace COM3D2.WildParty.Plugin
                             targetMaid.transform.localPosition = Vector3.zero;
                             targetMaid.transform.position = item.Pos;
                             targetMaid.transform.rotation = item.Rot;
+                            targetMaid.body0.SetBoneHitHeightY(item.Pos.y);
                         }
                     }
                 }
@@ -177,6 +188,7 @@ namespace COM3D2.WildParty.Plugin
                             StateManager.Instance.ClubOwner.transform.localPosition = Vector3.zero;
                             StateManager.Instance.ClubOwner.transform.position = item.Pos;
                             StateManager.Instance.ClubOwner.transform.rotation = item.Rot;
+                            StateManager.Instance.ClubOwner.body0.SetBoneHitHeightY(item.Pos.y);
                         }
                         else if (item.Type == Constant.SpecialCoordinateType.UnassignedMaid)
                         {
@@ -185,6 +197,7 @@ namespace COM3D2.WildParty.Plugin
                                 PartyGroup.UnassignedMaid.transform.localPosition = Vector3.zero;
                                 PartyGroup.UnassignedMaid.transform.position = item.Pos;
                                 PartyGroup.UnassignedMaid.transform.rotation = item.Rot;
+                                PartyGroup.UnassignedMaid.body0.SetBoneHitHeightY(item.Pos.y);
                             }
                         }
                     }

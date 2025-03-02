@@ -62,6 +62,37 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Muku&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Muku&quot;: {
+        ///    &quot;I [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Muku {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Muku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;hgbc0001&quot;: {
         ///    &quot;ID&quot;: &quot;hgbc0001&quot;,
         ///    &quot;Type&quot;: &quot;BG&quot;,
@@ -76,19 +107,104 @@ namespace ScenarioResources {
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
         ///    &quot;NextStepID&quot;: &quot;hgbc0001_init_hide_men&quot;,
         ///    &quot;CharaInitData&quot;: {
-        ///      &quot;IsClubOwnerMainCharacter&quot;: false,
-        ///      &quot;ManRequired&quot;: 8
-        ///    }
-        ///  },
-        ///
-        ///  &quot;hgbc0001_init_hide_men&quot;: {
-        ///    &quot;ID&quot;: &quot;hgbc0001_init_hide_men&quot;,
-        ///    &quot;Type&quot;: &quot;Chara&quot;,
-        ///  [rest of string was truncated]&quot;;.
+        ///      &quot;IsClubOwnerADVMainCharacter&quot;: false,
+        ///      &quot;ManRequired&quot;: 34,
+        ///      &quot;ValidManType&quot;: [
+        ///        &quot;YoungMan&quot;,
+        ///        &quot;Yanki&quot;,
+        ///        &quot;MiddleAged&quot;,
+        ///        &quot;Otaku [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string HappyGBClubADVIntro {
             get {
                 return ResourceManager.GetString("HappyGBClubADVIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_cafe_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_cafe_0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;OpemCafe&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_cafe_0001a&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_cafe_0001a&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_cafe_0001a&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_cafe_0001b&quot;,
+        ///    &quot;CameraData&quot;: {
+        ///      &quot;FixedPointData&quot;: {
+        ///        &quot;PosX&quot;: 999,
+        ///        &quot;PosY&quot;: 999,
+        ///        &quot;PosZ&quot;: 999,
+        ///        &quot;TargetPosX&quot;: 1000,
+        ///        &quot;TargetPosY [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADVIntroCafe {
+            get {
+                return ResourceManager.GetString("HappyGBClubADVIntroCafe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_lakeside_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_lakeside_0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_lakeside_0001a&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_lakeside_0001a&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_lakeside_0001a&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_lakeside_0001b&quot;,
+        ///    &quot;CameraData&quot;: {
+        ///      &quot;FixedPointData&quot;: {
+        ///        &quot;PosX&quot;: 999,
+        ///        &quot;PosY&quot;: 999,
+        ///        &quot;PosZ&quot;: 999,
+        ///        &quot;TargetPosX&quot;: 1000,
+        ///    [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADVIntroLakeside {
+            get {
+                return ResourceManager.GetString("HappyGBClubADVIntroLakeside", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_cafe_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_cafe_0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;OpemCafe&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_cafe_0001a&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_cafe_0001a&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_cafe_0001a&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_cafe_0001b&quot;,
+        ///    &quot;CameraData&quot;: {
+        ///      &quot;FixedPointData&quot;: {
+        ///        &quot;PosX&quot;: 999,
+        ///        &quot;PosY&quot;: 999,
+        ///        &quot;PosZ&quot;: 999,
+        ///        &quot;TargetPosX&quot;: 1000,
+        ///        &quot;TargetPosY [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADVIntroPoleDanceStage {
+            get {
+                return ResourceManager.GetString("HappyGBClubADVIntroPoleDanceStage", resourceCulture);
             }
         }
     }
