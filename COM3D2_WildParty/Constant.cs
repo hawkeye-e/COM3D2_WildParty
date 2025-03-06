@@ -601,5 +601,12 @@ namespace COM3D2.WildParty.Plugin
             internal const string GangBangNormal = "GangBangNormal";
             internal const string GangBangQueued = "GangBangQueued";
         }
+
+        internal static class YotogiSceneCode
+        {
+            internal const string OrgyParty = "OrgyParty";
+            internal const string HaremKing = "HaremKing";
+            internal const string HappyGBClub = "HappyGBClub";
+        }
     }
 }

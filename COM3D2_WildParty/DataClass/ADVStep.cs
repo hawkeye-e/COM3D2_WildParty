@@ -202,6 +202,7 @@ namespace COM3D2.WildParty.Plugin
 
         internal class YotogiSetupInfo
         {
+            public string YotogiCode;
             public int Phase;
             public bool IsKeepCharacterVisibleAfterYotogi = true;              //The system will automatically hide all the characters when display the yotogi result. Set it to true to prevent from hiding them.
             public bool IsFinalYotogi = true;
