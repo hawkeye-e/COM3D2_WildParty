@@ -26,6 +26,8 @@ namespace COM3D2.WildParty.Plugin
         internal List<Maid> MenList = new List<Maid>();
         internal List<Maid> NPCList = new List<Maid>();                         //For female NPC (both in-game or mod added) only
         internal List<Maid> NPCManList = new List<Maid>();                      //For male NPC only
+
+        internal List<Maid> DummyManList = new List<Maid>();                    //This is for filling the null place in the man array of the system.
         //Key: Maid GUID
         internal Dictionary<string, ManClothingInfo> ManClothingList = new Dictionary<string, ManClothingInfo>();   //For storing the info of clothed and nude body of a man
         internal List<Maid> YotogiWorkingMaidList = new List<Maid>();           //For used in Yotogi scene, will be shuffled etc
@@ -84,7 +86,7 @@ namespace COM3D2.WildParty.Plugin
         internal AnimationEndTrigger AnimationChangeTrigger = null;
 
         internal VoiceLoopTrigger VoiceLoopTrigger = null;
-        internal TimeEndTrigger TimeEndTrigger = null;
+        internal List<TimeEndTrigger> TimeEndTriggerList = new List<TimeEndTrigger>();
 
         internal DateTime ADVResumeTime = DateTime.MinValue;
 

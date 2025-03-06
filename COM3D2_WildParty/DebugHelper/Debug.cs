@@ -125,6 +125,19 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
             }
         }
 
+        public static void PrintTransformTreeNameOnly(Transform t, string currentPath)
+        {
+            if (t != null)
+            {
+                Log.LogInfo("Path: " + currentPath + ".[" + t.name + "]");
+
+                for (int i = 0; i < t.childCount; i++)
+                {
+                    PrintTransformTreeNameOnly(t.GetChild(i), currentPath + ".[" + t.name + "]");
+                }
+            }
+        }
+
         internal static void PrintTransformTree(Transform t, string currentPath = "")
         {
             if (t != null)

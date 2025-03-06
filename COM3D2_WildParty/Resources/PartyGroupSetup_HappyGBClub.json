@@ -1,10 +1,18 @@
 {
-  "Default": {
+  "Phase1_Default": {
     "DefaultSexPosID": 1,
     "IsRandomAssign": false,
     "IsShuffleMaidList": false,
     "IsShuffleManList": false,
     "ExtraManCount": 28,
+
+    "CameraSetup": {
+      "PosString": "-2.09,1.58,-3.04",
+      "TargetPosString": "0.26,0.39,-1.22",
+      "AroundAngleString": "52.34,21.78",
+      "Distance": 3.2
+    },
+
     "GroupSetup": [
       {
         "ArrayPosition": 0,
@@ -31,7 +39,7 @@
     ]
   },
 
-  "Default_2nd": {
+  "Phase2_Default": {
     "DefaultSexPosID": 5,
     "IsRandomAssign": false,
     "IsShuffleMaidList": false,
@@ -59,6 +67,215 @@
         "MaidFromNPC": true,
         "IsAutomatedGroup": true,
         "IsVoicelessGroup": true
+      }
+    ]
+  },
+
+
+  "Phase3_Missionary": {
+    "DefaultSexPosID": 14,
+    "BackgroundSexPosID": 14,
+    "IsRandomAssign": false,
+    "IsShuffleMaidList": false,
+    "IsShuffleManList": false,
+
+    "CameraSetup": {
+      "PosString": "-1.68, 3.16, -2.45",
+      "TargetPosString": "-3.42, 0.00, 0.86",
+      "AroundAngleString": "-27.82, 40.21",
+      "Distance": 4.9
+    },
+
+    "MovingQueueSetup": {
+      "StandingAnimationFile": "turusi_sex_taiki_m.anm",
+      "StandingMotionOffsetString": "0, 0, 0.346",
+      "WalkingMotionOffsetString": "0, 0.1, 0",
+      "RotationOffsetString": "0, 180, 0",
+      "MaidMotionOffsetString": "0,0,0"
+    },
+
+    "DefaultStandingAnimationFile": "turusi_sex_taiki_m.anm",
+    "GroupSetup": [
+      {
+        "ArrayPosition": 0,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 11,
+        "IsAutomatedGroup": false
+      },
+      {
+        "ArrayPosition": 1,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 10,
+        "MaidFromNPC": true,
+        "IsAutomatedGroup": true,
+        "IsVoicelessGroup": false
+      },
+      {
+        "ArrayPosition": 2,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 10,
+        "MaidFromNPC": true,
+        "IsAutomatedGroup": true,
+        "IsVoicelessGroup": false
+      }
+    ]
+  },
+
+
+  "Phase3_Missionary_Anus": {
+    "DefaultSexPosID": 15,
+    "BackgroundSexPosID": 15,
+    "IsRandomAssign": false,
+    "IsShuffleMaidList": false,
+    "IsShuffleManList": false,
+
+    "CameraSetup": {
+      "PosString": "-1.68, 3.16, -2.45",
+      "TargetPosString": "-3.42, 0.00, 0.86",
+      "AroundAngleString": "-27.82, 40.21",
+      "Distance": 4.9
+    },
+
+    "MovingQueueSetup": {
+      "StandingAnimationFile": "turusi_sex_taiki_m.anm",
+      "StandingMotionOffsetString": "0, 0, 0.346",
+      "WalkingMotionOffsetString": "0, 0.1, 0",
+      "RotationOffsetString": "0, 180, 0",
+      "MaidMotionOffsetString": "0,0,0"
+    },
+
+    "GroupSetup": [
+      {
+        "ArrayPosition": 0,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 11,
+        "IsAutomatedGroup": false
+      },
+      {
+        "ArrayPosition": 1,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 10,
+        "MaidFromNPC": true,
+        "IsAutomatedGroup": true,
+        "IsVoicelessGroup": false
+      },
+      {
+        "ArrayPosition": 2,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 10,
+        "MaidFromNPC": true,
+        "IsAutomatedGroup": true,
+        "IsVoicelessGroup": false
+      }
+    ]
+  },
+
+
+  "Phase3_Doggy": {
+    "DefaultSexPosID": 16,
+    "BackgroundSexPosID": 16,
+    "IsRandomAssign": false,
+    "IsShuffleMaidList": false,
+    "IsShuffleManList": false,
+
+    "CameraSetup": {
+      "PosString": "-1.68, 3.16, -2.45",
+      "TargetPosString": "-3.42, 0.00, 0.86",
+      "AroundAngleString": "-27.82, 40.21",
+      "Distance": 4.9
+    },
+
+    "MovingQueueSetup": {
+      "StandingAnimationFile": "siriname_taiki_m.anm",
+      "StandingMotionOffsetString": "0, 0, 0",
+      "WalkingMotionOffsetString": "0, 0.1, 0",
+      "RotationOffsetString": "0, 0, 0",
+      "MaidMotionOffsetString": "0,0,-0.45"
+    },
+
+    "GroupSetup": [
+      {
+        "ArrayPosition": 0,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 11,
+        "IsAutomatedGroup": false
+      },
+      {
+        "ArrayPosition": 1,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 10,
+        "MaidFromNPC": true,
+        "IsAutomatedGroup": true,
+        "IsVoicelessGroup": false
+      },
+      {
+        "ArrayPosition": 2,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 10,
+        "MaidFromNPC": true,
+        "IsAutomatedGroup": true,
+        "IsVoicelessGroup": false
+      }
+    ]
+  },
+
+
+  "Phase3_Doggy_Anus": {
+    "DefaultSexPosID": 17,
+    "BackgroundSexPosID": 17,
+    "IsRandomAssign": false,
+    "IsShuffleMaidList": false,
+    "IsShuffleManList": false,
+
+    "CameraSetup": {
+      "PosString": "-1.68, 3.16, -2.45",
+      "TargetPosString": "-3.42, 0.00, 0.86",
+      "AroundAngleString": "-27.82, 40.21",
+      "Distance": 4.9
+    },
+
+    "MovingQueueSetup": {
+      "StandingAnimationFile": "siriname_taiki_m.anm",
+      "StandingMotionOffsetString": "0, 0, 0.19",
+      "WalkingMotionOffsetString": "0, 0.1, 0",
+      "RotationOffsetString": "0, 0, 0",
+      "MaidMotionOffsetString": "0,0,-0.45"
+    },
+
+    "GroupSetup": [
+      {
+        "ArrayPosition": 0,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 11,
+        "IsAutomatedGroup": false
+      },
+      {
+        "ArrayPosition": 1,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 10,
+        "MaidFromNPC": true,
+        "IsAutomatedGroup": true,
+        "IsVoicelessGroup": false
+      },
+      {
+        "ArrayPosition": 2,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 10,
+        "MaidFromNPC": true,
+        "IsAutomatedGroup": true,
+        "IsVoicelessGroup": false
       }
     ]
   }

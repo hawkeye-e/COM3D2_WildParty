@@ -12,7 +12,7 @@ namespace COM3D2.WildParty.Plugin
         internal const int SensualRateMaxCap = 300;
         internal const int YotogiExcitementLevelStep = 100;
 
-        internal static readonly string[] FellatioLabel = { "Fellatio", "DeepThroat", "PainFellatio", "FellatioExcite", "FellatioDrunk" };
+        internal static readonly string[] FellatioLabel = { "Fellatio", "DeepThroat", "PainFellatio", "FellatioExcite", "FellatioDrunk", "FellatioBitch" };
 
         internal const string MainEventScriptFile = "AllMain.ks";
 
@@ -529,6 +529,8 @@ namespace COM3D2.WildParty.Plugin
             internal const string OrgasmFace = "OrgasmFace";
             internal const string OrgasmBukkake = "OrgasmBukkake";
             internal const string OrgasmBukkake2 = "OrgasmBukkake2";
+
+            internal const string ChangeFormationHappyGBClub = "ChangeFormationHappyGBClub";
         }
 
         internal static class CameraEaseType
@@ -591,6 +593,13 @@ namespace COM3D2.WildParty.Plugin
             internal const string accheso = "accheso";          //へそ
             internal const string accnip = "accnip";            //乳首
             internal const string accxxx = "accxxx";            //前穴
+        }
+
+        internal static class SexStateRuleDefinition
+        {
+            internal const string Common = "Common";
+            internal const string GangBangNormal = "GangBangNormal";
+            internal const string GangBangQueued = "GangBangQueued";
         }
     }
 }

@@ -363,6 +363,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         private static void MaidUpdatePost(Maid __instance)
         {
             Patches.CheckMaidAnimationTrigger(__instance);
+            Core.YotogiHandling.CheckManWalkTrigger(__instance);
         }
 
         [HarmonyPrefix]

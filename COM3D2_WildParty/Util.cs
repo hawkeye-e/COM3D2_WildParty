@@ -229,6 +229,8 @@ namespace COM3D2.WildParty.Plugin
                     StateManager.Instance.PartyGroupList[i].Man1.Visible = isVisible;
                 if (StateManager.Instance.PartyGroupList[i].Man2 != null)
                     StateManager.Instance.PartyGroupList[i].Man2.Visible = isVisible;
+                if (StateManager.Instance.PartyGroupList[i].Man3 != null)
+                    StateManager.Instance.PartyGroupList[i].Man3.Visible = isVisible;
             }
         }
 
@@ -238,6 +240,7 @@ namespace COM3D2.WildParty.Plugin
             {
                 if (group.Maid1.status.guid == chara.status.guid || group.Man1.status.guid == chara.status.guid
                     || group.Maid2?.status.guid == chara.status.guid || group.Man2?.status.guid == chara.status.guid
+                    || group.Man3?.status.guid == chara.status.guid
                     )
                     return group;
             }
@@ -521,6 +524,24 @@ namespace COM3D2.WildParty.Plugin
             }
 
             return true;
+        }
+
+        public static Vector2 ParseVector2RawString(string vectorInString)
+        {
+            var split = vectorInString.Split(',');
+            return new Vector2(float.Parse(split[0].Trim()), float.Parse(split[1].Trim()));
+        }
+
+        public static Vector3 ParseVector3RawString(string vectorInString)
+        {
+            var split = vectorInString.Split(',');
+            return new Vector3(float.Parse(split[0].Trim()), float.Parse(split[1].Trim()), float.Parse(split[2].Trim()));
+        }
+
+        public static Quaternion ParseQuaternionRawString(string quaternionInString)
+        {
+            var split = quaternionInString.Split(',');
+            return new Quaternion(float.Parse(split[0].Trim()), float.Parse(split[1].Trim()), float.Parse(split[2].Trim()), float.Parse(split[3].Trim()));
         }
     }
 }

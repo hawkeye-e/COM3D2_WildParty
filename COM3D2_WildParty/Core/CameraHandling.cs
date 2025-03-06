@@ -33,6 +33,20 @@ namespace COM3D2.WildParty.Plugin.Core
 
         }
 
+        internal static void SetCameraLookAtFixedPoint(CameraDataInJson parsedData)
+        {
+            SetCameraLookAtFixedPoint(parsedData.Pos, parsedData.TargetPos, parsedData.Distance, parsedData.AroundAngle);
+        }
+
+        internal static void SetCameraLookAtFixedPoint(Vector3 cameraPos, Vector3 targetPos, float distance, Vector2 AroundAngle)
+        {
+            GameMain.Instance.MainCamera.SetPos(cameraPos);
+            GameMain.Instance.MainCamera.SetTargetPos(targetPos);
+            GameMain.Instance.MainCamera.SetDistance(distance);
+
+            GameMain.Instance.MainCamera.SetAroundAngle(AroundAngle);
+        }
+
         internal static void AnimateCameraToLookAt(Maid maid)
         {
             AnimateCameraToLookAt(maid, ConfigurableValue.YotogiCameraWork.TargetVectorOffset, ConfigurableValue.YotogiCameraWork.CameraDistance,

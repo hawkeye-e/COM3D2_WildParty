@@ -9,6 +9,7 @@ namespace COM3D2.WildParty.Plugin
 {
     internal class ADVStep
     {
+#pragma warning disable 0649
         public string ID;
         public string Type;
         public string NextStepID;
@@ -66,7 +67,7 @@ namespace COM3D2.WildParty.Plugin
         internal class Camera
         {
             public CameraType Type = CameraType.FixedPoint;
-            public FixedPointType FixedPointData;       //Normally use this one for ADV scene, as we should have full control on the character placement
+            public CameraDataInJson FixedPointData;     //Normally use this one for ADV scene, as we should have full control on the character placement
             public LookAtType LookAtData;               //Mainly used for situation where random character placement is involved and want to focus on certain character
             public CameraMoveType MoveType = CameraMoveType.Instant;
             public float AnimationTime = 2f;            //For Camera pan use only
@@ -91,22 +92,6 @@ namespace COM3D2.WildParty.Plugin
                 Instant,
                 Smooth
             }
-
-            internal class FixedPointType
-            {
-                public float PosX;
-                public float PosY;
-                public float PosZ;
-                public float TargetPosX;
-                public float TargetPosY;
-                public float TargetPosZ;
-                public float Distance;
-                public float AngleFrom;
-                public float AngleTo;
-            }
-
-            
-
             internal class LookAtType
             {
                 public TargetType Target;
@@ -298,5 +283,6 @@ namespace COM3D2.WildParty.Plugin
             public List<ExtraItemObject> AddObjects;
             public List<string> RemoveObjects;     //For remove, only need to provide the Target
         }
+#pragma warning restore 0649
     }
 }

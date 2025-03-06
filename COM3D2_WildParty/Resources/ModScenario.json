@@ -57,7 +57,9 @@
           "ChangePartner",
           "FetishOrgy"
         ],
-        "IsMainManOwner": false
+        "IsMainManOwner": false,
+
+        "SexStateRule": "Common"
       }
     ],
 
@@ -122,7 +124,9 @@
           "MoveLeftHaremKing",
           "MoveRightHaremKing"
         ],
-        "IsMainManOwner": true
+        "IsMainManOwner": true,
+
+        "SexStateRule": "Common"
       }
     ],
 
@@ -177,8 +181,8 @@
           "DayMapID": "poledancestage",
           "NightMapID": "poledancestage",
           "BGM": "BGM022.ogg",
-          "FormationOption": [ "Default" ],
-          "DefaultFormation": "Default"
+          "FormationOption": [ "Phase1_Default" ],
+          "DefaultFormation": "Phase1_Default"
         },
 
         "ExtraYotogiCommands": [
@@ -193,7 +197,9 @@
         ],
         "FlexibleManCountInYotogi": true,
         "ForceChangeManWhenOrgasm": true,
-        "IsMainManOwner": false
+        "IsMainManOwner": false,
+
+        "SexStateRule": "GangBang"
       },
       {
         "Phase": 2,
@@ -201,23 +207,40 @@
           "DayMapID": "poledancestage",
           "NightMapID": "poledancestage",
           "BGM": "BGM022.ogg",
-          "FormationOption": [ "Default_2nd" ],
-          "DefaultFormation": "Default_2nd"
+          "FormationOption": [ "Phase2_Default" ],
+          "DefaultFormation": "Phase2_Default"
         },
 
         "ExtraYotogiCommands": [
           "ChangePosition",
-          "OrgasmInternal",
-          "OrgasmExternal",
-          "OrgasmMouth",
-          "OrgasmFace",
-          "OrgasmBukkake",
-          "OrgasmBukkake2",
           "FetishGangBang"
         ],
         "FlexibleManCountInYotogi": true,
         "ForceChangeManWhenOrgasm": true,
-        "IsMainManOwner": true
+        "IsMainManOwner": true,
+
+        "SexStateRule": "GangBang"
+      },
+
+      {
+        "Phase": 3,
+        "DefaultMap": {
+          "DayMapID": "poledancestage",
+          "NightMapID": "poledancestage",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Phase3_Missionary", "Phase3_Missionary_Anus", "Phase3_Doggy", "Phase3_Doggy_Anus" ],
+          "DefaultFormation": "Phase3_Missionary"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeFormationHappyGBClub",
+          "FetishGangBang"
+        ],
+        "FlexibleManCountInYotogi": true,
+        "ForceChangeManWhenOrgasm": true,
+        "IsMainManOwner": false,
+
+        "SexStateRule": "GangBangQueued"
       }
     ],
 

@@ -66,6 +66,8 @@ namespace COM3D2.WildParty.Plugin
             public bool FlexibleManCountInYotogi = false;
             public bool ForceChangeManWhenOrgasm = false;
             public bool IsMainManOwner;
+
+            public string SexStateRule;
         }
 
         internal class MapInfo

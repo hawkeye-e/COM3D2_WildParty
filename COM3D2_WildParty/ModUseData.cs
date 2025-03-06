@@ -109,7 +109,6 @@ namespace COM3D2.WildParty.Plugin
             ValidSkillList = new Dictionary<int, Dictionary<string, List<PlayableSkill.SkillItem>>>();
             PersonalityVoiceList = new Dictionary<int, PersonalityVoice>();
             MapCoordinateList = new Dictionary<string, MapCoorindates>();
-            SexStateList = new Dictionary<string, SexState>();
         }
 
         private static void InitDataForOrgyParty()
@@ -123,8 +122,6 @@ namespace COM3D2.WildParty.Plugin
             MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.OrgyYotogiMapCoordinates);
 
             PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.TextResource.PartyGroupSetup_OrgyParty);
-
-            SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription);
         }
 
         private static void InitDataForHaremKing()
@@ -138,8 +135,6 @@ namespace COM3D2.WildParty.Plugin
             MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.HaremKingYotogiMapCoordinates);
 
             PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.TextResource.PartyGroupSetup_HaremKing);
-
-            SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription);
         }
 
         private static void InitDataForHappyGBClub()
@@ -153,8 +148,6 @@ namespace COM3D2.WildParty.Plugin
             MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.HappyGBClubYotogiMapCoordinates);
 
             PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.TextResource.PartyGroupSetup_HappyGBClub);
-
-            SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_GBType);
         }
 
         private static void InitAllVoiceDataFromCSV()
@@ -227,6 +220,15 @@ namespace COM3D2.WildParty.Plugin
             }
         }
 
-
+        public static void LoadSexStateRule(string ruleName)
+        {
+            SexStateList = new Dictionary<string, SexState>();
+            if(ruleName == Constant.SexStateRuleDefinition.GangBangNormal)
+                SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_GBType);
+            else if (ruleName == Constant.SexStateRuleDefinition.GangBangQueued)
+                SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_GBQueuedType);
+            else
+                SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription);
+        }
     }
 }

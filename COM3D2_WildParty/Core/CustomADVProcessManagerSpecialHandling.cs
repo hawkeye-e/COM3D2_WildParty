@@ -46,6 +46,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 StateManager.Instance.SpoofActivateMaidObjectFlag = false;
             }
 
+            //TODO: it is not good to use ID, convert to use tag and put them in some constant field?
             switch (step.ID)
             {
                 case "orgy_start_yotogiplay":
@@ -56,6 +57,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     break;
                 case "hgbc_start_yotogiplay_phase1":
                 case "hgbc_start_yotogiplay_phase2":
+                case "hgbc_start_yotogiplay_phase3":
                     ProcessADV_Step_HappyGBClub_YotogiPlay(instance, step);
                     break;
             }

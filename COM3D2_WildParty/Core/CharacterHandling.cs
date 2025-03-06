@@ -470,13 +470,26 @@ namespace COM3D2.WildParty.Plugin.Core
                     break;
             }
 
-            PartyGroup.ExtraManList = new Dictionary<int, Maid>();
+            //Shared extra man handling
+            PartyGroup.SharedExtraManList = new Dictionary<int, Maid>();
             for (int i = 0; i < setupInfo.ExtraManCount; i++)
             {
                 if (manRunningNumber >= StateManager.Instance.MenList.Count)
-                    PartyGroup.ExtraManList.Add(i, null);
+                    PartyGroup.SharedExtraManList.Add(i, null);
                 else
-                    PartyGroup.ExtraManList.Add(i, StateManager.Instance.MenList[manRunningNumber++]);
+                    PartyGroup.SharedExtraManList.Add(i, StateManager.Instance.MenList[manRunningNumber++]);
+            }
+
+            //Extra man for each group handling
+            foreach (var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
+            {
+                for (int i = 0; i < groupSetupInfo.ExtraManCount; i++)
+                {
+                    if (manRunningNumber >= StateManager.Instance.MenList.Count)
+                        StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].ExtraManList.Add(i, null);
+                    else
+                        StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].ExtraManList.Add(i, StateManager.Instance.MenList[manRunningNumber++]);
+                }
             }
         }
 
@@ -548,36 +561,40 @@ namespace COM3D2.WildParty.Plugin.Core
             UnlinkMaid(backupMaid0);
             UnlinkMaid(backupMaid1);
 
-            List<Maid> toBeReplacedManList = new List<Maid>();
-
             PartyGroup group = StateManager.Instance.PartyGroupList[0];
             PlayableSkill.SkillItem skill = Util.GetGroupCurrentSkill(group);
 
             //Set the spoof flag so that the while object doesnt go through the whole initialization process again
             StateManager.Instance.SpoofActivateMaidObjectFlag = true;
-
+            
             //assign the selected maid and man to the system array.
             for (int i = 0; i < skill.MaidIndex.Count; i++)
                 if (group.GetMaidAtIndex(i) != null)
                     GameMain.Instance.CharacterMgr.SetActiveMaid(group.GetMaidAtIndex(i), skill.MaidIndex[i]);
-
+            
             for (int i = 0; i < skill.ManIndex.Count; i++)
                 if (group.GetManAtIndex(i) != null)
                 {
-                    toBeReplacedManList.Add(GameMain.Instance.CharacterMgr.GetMan(skill.ManIndex[i]));
-                    if (toBeReplacedManList.Contains(group.GetManAtIndex(i)))
-                        toBeReplacedManList.Remove(group.GetManAtIndex(i));
                     GameMain.Instance.CharacterMgr.SetActiveMan(group.GetManAtIndex(i), skill.ManIndex[i]);
                 }
 
             //Check if there is any null in the man list, need to fill something back there to avoid error
+            List<Maid> currentManArray = new List<Maid>();
+            for (int i = 0; i < GameMain.Instance.CharacterMgr.GetManCount(); i++)
+            {
+                Maid man = GameMain.Instance.CharacterMgr.GetMan(i);
+                if (man != null)
+                    currentManArray.Add(man);
+            }
+
             for (int i = 0; i < GameMain.Instance.CharacterMgr.GetManCount(); i++)
             {
                 Maid man = GameMain.Instance.CharacterMgr.GetMan(i);
                 if (man == null)
                 {
-                    GameMain.Instance.CharacterMgr.SetActiveMan(toBeReplacedManList[0], i);
-                    toBeReplacedManList.RemoveAt(0);
+                    //pull a random man from the man list and fill it in. The null place is not used by main group so it should be fine to fill in any man?
+                    Maid randomMan = StateManager.Instance.MenList.Where(x => !currentManArray.Contains(x)).First();
+                    GameMain.Instance.CharacterMgr.SetActiveMan(randomMan, i);
                 }
             }
 
@@ -954,7 +971,9 @@ namespace COM3D2.WildParty.Plugin.Core
 
             float fade = 0f;
             if (isBlend)
-                fade = 0.5f;
+                fade = ConfigurableValue.AnimationBlendTime;
+            else
+                maid.body0.StopAnime();
 
             maid.body0.LoadAnime(tag, GameUty.FileSystem, fileName, false, isLoop);
             maid.body0.CrossFade(maid.body0.LastAnimeFN, GameUty.FileSystem, additive: false, loop: isLoop, boAddQue: isQueued, fade: fade);

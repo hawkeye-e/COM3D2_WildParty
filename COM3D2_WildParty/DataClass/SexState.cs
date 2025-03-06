@@ -23,6 +23,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string NormalPlay = "NormalPlay";
 
             internal const string ChangeMan = "ChangeMan";
+            internal const string ChangeManFromQueue = "ChangeManFromQueue";
         }
     }
 }

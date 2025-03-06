@@ -63,20 +63,19 @@ namespace ModResources {
         /// <summary>
         ///   Looks up a localized string similar to {
         ///  &quot;FullNude&quot;: {
-        ///    &quot;acchat&quot;: &quot;_I_acchat_del.menu&quot;,
-        ///    &quot;headset&quot;: &quot;_I_headset_del.menu&quot;,
-        ///    &quot;acckami&quot;: &quot;_I_acckami_del.menu&quot;,
-        ///    &quot;acckamisub&quot;: &quot;_I_acckamisub_del.menu&quot;,
-        ///    &quot;wear&quot;: &quot;_I_wear_del.menu&quot;,
-        ///    &quot;skirt&quot;: &quot;_I_skirt_del.menu&quot;,
-        ///    &quot;megane&quot;: &quot;_I_megane_del.menu&quot;,
-        ///    &quot;acchead&quot;: &quot;_I_acchead_del.menu&quot;,
-        ///    &quot;onepiece&quot;: &quot;_I_onepiece_del.menu&quot;,
-        ///    &quot;mizugi&quot;: &quot;_I_mizugi_del.menu&quot;,
-        ///    &quot;accmimi&quot;: &quot;_I_accmimi_del.menu&quot;,
-        ///    &quot;acchana&quot;: &quot;_I_acchana_del.menu&quot;,
-        ///    &quot;bra&quot;: &quot;_I_bra_del.menu&quot;,
-        ///  [rest of string was truncated]&quot;;.
+        ///    &quot;Slots&quot;: {
+        ///      &quot;acchat&quot;: &quot;_I_acchat_del.menu&quot;,
+        ///      &quot;headset&quot;: &quot;_I_headset_del.menu&quot;,
+        ///      &quot;acckami&quot;: &quot;_I_acckami_del.menu&quot;,
+        ///      &quot;acckamisub&quot;: &quot;_I_acckamisub_del.menu&quot;,
+        ///      &quot;wear&quot;: &quot;_I_wear_del.menu&quot;,
+        ///      &quot;skirt&quot;: &quot;_I_skirt_del.menu&quot;,
+        ///      &quot;megane&quot;: &quot;_I_megane_del.menu&quot;,
+        ///      &quot;acchead&quot;: &quot;_I_acchead_del.menu&quot;,
+        ///      &quot;onepiece&quot;: &quot;_I_onepiece_del.menu&quot;,
+        ///      &quot;mizugi&quot;: &quot;_I_mizugi_del.menu&quot;,
+        ///      &quot;accmimi&quot;: &quot;_I_accmimi_del.menu&quot;,
+        ///      &quot;acchana&quot;: &quot;_I_acchana_del. [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ClothesSet {
             get {
@@ -119,7 +118,7 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;Default&quot;: {
+        ///  &quot;Phase1_Default&quot;: {
         ///    &quot;DisplayName&quot;: &quot;&quot;,
         ///    &quot;IsRandom&quot;: false,
         ///    &quot;CoordinateList&quot;: [
@@ -137,8 +136,7 @@ namespace ModResources {
         ///            &quot;RotString&quot;: &quot;0, 0.707, 0, -0.707&quot;
         ///          },
         ///          {
-        ///            &quot;ArrayPosition&quot;: 2,
-        ///  [rest of string was truncated]&quot;;.
+        ///            &quot;ArrayPosition&quot; [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string HappyGBClubYotogiMapCoordinates {
             get {
@@ -288,9 +286,14 @@ namespace ModResources {
         ///    &quot;Color&quot;: &quot;255, 251, 101&quot;
         ///  },
         ///
-        ///  
-        ///}
-        ///.
+        ///  &quot;Mob1&quot;: {
+        ///    &quot;FirstName&quot;: &quot;Mob 1&quot;,
+        ///    &quot;LastName&quot;: &quot;Mob 1&quot;,
+        ///    &quot;NickName&quot;: &quot;Mob 1&quot;,
+        ///    &quot;WayToCall&quot;: &quot;LastName&quot;,
+        ///    &quot;Head&quot;: &quot;mhead004_i_.menu&quot;,
+        ///    &quot;Clothed&quot;: &quot;mbody002_i_.menu&quot;,
+        ///    &quot;Nude&quot;: &quot;mbody001_i_.menu [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ModNPCMale {
             get {
@@ -381,7 +384,7 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;Default&quot;: {
+        ///  &quot;Phase1_Default&quot;: {
         ///    &quot;DefaultSexPosID&quot;: 1,
         ///    &quot;IsRandomAssign&quot;: false,
         ///    &quot;IsShuffleMaidList&quot;: false,
@@ -400,8 +403,7 @@ namespace ModResources {
         ///        &quot;MaidCount&quot;: 1,
         ///        &quot;MaidFromNPC&quot;: true,
         ///        &quot;IsAutomatedGroup&quot;: true,
-        ///        &quot;IsVoicelessGroup&quot;: false
-        ///      [rest of string was truncated]&quot;;.
+        ///        &quot;IsVoicelessGroup&quot;: false [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string PartyGroupSetup_HappyGBClub {
             get {
@@ -757,6 +759,38 @@ namespace ModResources {
         internal static string SexStateDescription {
             get {
                 return ResourceManager.GetString("SexStateDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;NormalPlay&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;Orgasm&quot; ]
+        ///  },
+        ///  &quot;Orgasm&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;OrgasmEnd&quot; ]
+        ///  },
+        ///  &quot;OrgasmEnd&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;ChangeMan&quot; ]
+        ///  },
+        ///  &quot;ChangeMan&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;Insert&quot;, &quot;ChangePosition&quot; ]
+        ///  },
+        ///  &quot;ChangePosition&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;Insert&quot; ]
+        ///  },
+        ///  &quot;Insert&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;InsertEnd&quot; ]
+        ///  },
+        ///  &quot;InsertEnd&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;NormalPlay&quot; ]
+        ///  }
+        ///}
+        ///.
+        /// </summary>
+        internal static string SexStateDescription_GBQueuedType {
+            get {
+                return ResourceManager.GetString("SexStateDescription_GBQueuedType", resourceCulture);
             }
         }
         

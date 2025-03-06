@@ -181,26 +181,78 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;hgbc_intro_cafe_0001&quot;: {
-        ///    &quot;ID&quot;: &quot;hgbc_intro_cafe_0001&quot;,
+        ///  &quot;hgbc_intro_poledancestage_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_poledancestage_0001&quot;,
         ///    &quot;Type&quot;: &quot;BG&quot;,
-        ///    &quot;Tag&quot;: &quot;OpemCafe&quot;,
+        ///    &quot;Tag&quot;: &quot;poledancestage&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_cafe_0001a&quot;
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_poledancestage_0001a&quot;
         ///  },
         ///
-        ///  &quot;hgbc_intro_cafe_0001a&quot;: {
-        ///    &quot;ID&quot;: &quot;hgbc_intro_cafe_0001a&quot;,
-        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///  &quot;hgbc_intro_poledancestage_0001a&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_poledancestage_0001a&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_cafe_0001b&quot;,
-        ///    &quot;CameraData&quot;: {
-        ///      &quot;FixedPointData&quot;: {
-        ///        &quot;PosX&quot;: 999,
-        ///        &quot;PosY&quot;: 999,
-        ///        &quot;PosZ&quot;: 999,
-        ///        &quot;TargetPosX&quot;: 1000,
-        ///        &quot;TargetPosY [rest of string was truncated]&quot;;.
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_poledancestage_0001b&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_poledancestage_0001b&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_pole [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADVIntroPhase2 {
+            get {
+                return ResourceManager.GetString("HappyGBClubADVIntroPhase2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_poledancestage_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_poledancestage_0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;poledancestage&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_poledancestage_0001a&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_poledancestage_0001a&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_poledancestage_0001a&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_poledancestage_0001b&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_poledancestage_0001b&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_pole [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADVIntroPhase3 {
+            get {
+                return ResourceManager.GetString("HappyGBClubADVIntroPhase3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_poledancestage_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_poledancestage_0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;poledancestage&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_poledancestage_0001a&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_poledancestage_0001a&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_poledancestage_0001a&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_poledancestage_0001b&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_poledancestage_0001b&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_pole [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string HappyGBClubADVIntroPoleDanceStage {
             get {

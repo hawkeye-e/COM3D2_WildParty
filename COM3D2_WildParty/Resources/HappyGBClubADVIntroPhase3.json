@@ -1,0 +1,42 @@
+{
+  "hgbc_phase3_init": {
+    "ID": "hgbc_phase3_init",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0001",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "This is after yotogi 2"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_phase3_0001": {
+    "ID": "hgbc_phase3_0001",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_start_yotogiplay_phase3"
+  },
+
+
+
+
+  "hgbc_start_yotogiplay_phase3": {
+    "ID": "hgbc_start_yotogiplay_phase3",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "Phase": 3,
+      "IsKeepCharacterVisibleAfterYotogi": false,
+      "IsFinalYotogi": true,
+      "IsClubOwnerMainCharacter": false
+    },
+    "NextStepID": "hgbc_postyotogi_init"
+  }
+}

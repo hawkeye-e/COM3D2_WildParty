@@ -29,7 +29,8 @@ namespace COM3D2.WildParty.Plugin.Core
                     return new EventDelegate(Orgy_AddFetish_Orgy);
 
                 case Constant.ModYotogiCommandButtonID.ChangeFormationHaremKing:
-                    return new EventDelegate(HaremKing_ShowFormationOption);
+                case Constant.ModYotogiCommandButtonID.ChangeFormationHappyGBClub:
+                    return new EventDelegate(ShowFormationOption_AsChangePositionCommand);
                 case Constant.ModYotogiCommandButtonID.ChangeMaidHaremKing:
                     return new EventDelegate(HaremKing_ShowMaidList);
                 case Constant.ModYotogiCommandButtonID.MoveLeftHaremKing:
@@ -209,7 +210,7 @@ namespace COM3D2.WildParty.Plugin.Core
         }
 
 
-        public static void HaremKing_ShowFormationOption()
+        public static void ShowFormationOption_AsChangePositionCommand()
         {
             StateManager.Instance.ExtraCommandWindow.ResetScrollPosition();
 
@@ -393,7 +394,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 //Gangbang rule
                 //randomly pick up the man from extra man list and swap with the main group
 
-                YotogiHandling.ChangeManMembers(mainGroup);
+                YotogiHandling.ChangeManMembersShareListType(mainGroup);
 
             }
 

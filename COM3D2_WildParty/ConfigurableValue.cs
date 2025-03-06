@@ -9,6 +9,11 @@ namespace COM3D2.WildParty.Plugin
         internal const float CameraFadeTime = 0.5f;
         internal const int OrgasmFinishFollowUpBaseExtraWaitingTimeInSecond = 2;
         internal const int OrgasmFinishFollowUpVariableExtraWaitingTimeInSecond = 3;
+
+        internal const int GangBangReQueueMinLengthDiffLimit = 2;       //When a man is trying to requeue after orgasm, if the minimum length of all queues is X, the man is allowed to join a queue if its length <= X + (this value)
+        internal const int ReplacedOrgasmWaitBufferTime = 2;
+        internal const float AnimationBlendTime = 0.5f;
+
         internal static class YotogiSimulation
         {
             //Values of this class will be included in the config to let the player edit. This class will act as default suggested value.

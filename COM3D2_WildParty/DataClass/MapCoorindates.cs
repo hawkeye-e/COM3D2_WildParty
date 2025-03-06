@@ -22,7 +22,7 @@ namespace COM3D2.WildParty.Plugin
             
             public List<CoordinatesInfo> GroupCoordinates;
             public List<CoordinatesInfo> IndividualCoordinates;
-            public List<CoordinatesInfo> ExtraManInfo;
+            public List<ExtraManCoordinatesInfo> ExtraManInfo;
         }
 
         internal class CoordinatesInfo : PosRot
@@ -40,6 +40,11 @@ namespace COM3D2.WildParty.Plugin
             //public bool IsAutomatedGroup = true;            //True: Use the BackgroundGroupMotionManager logic; False: Static motion
             public bool IsMasturbation = false;
             public bool IsManVisible = true;
+        }
+
+        internal class ExtraManCoordinatesInfo : CoordinatesInfo
+        {
+            public int GroupIndex = -1;                     //Negative for no group. Indicate which group it is belonged to.
         }
 
         internal class SpecialSettingInfo

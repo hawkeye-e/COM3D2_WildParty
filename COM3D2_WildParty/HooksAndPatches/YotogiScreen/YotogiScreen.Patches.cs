@@ -44,6 +44,14 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                         Core.CharacterHandling.RemoveSemenTexture(maid);
                     }
                 }
+
+                foreach (var maid in StateManager.Instance.NPCList)
+                {
+                    if (maid != null)
+                    {
+                        Core.CharacterHandling.RemoveSemenTexture(maid);
+                    }
+                }
             }
         }
 
@@ -324,9 +332,18 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             {
                 if (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiPlay)
                 {
-                    if(!StateManager.Instance.ForceNoCameraResetAfterFadeIn)
-                        if (StateManager.Instance.PartyGroupList != null && StateManager.Instance.PartyGroupList.Count > 0)
-                            Core.CameraHandling.SetCameraLookAt(StateManager.Instance.PartyGroupList[0].Maid1);
+                    if (!StateManager.Instance.ForceNoCameraResetAfterFadeIn)
+                    {
+                        if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].CameraSetup != null)
+                        {
+                            Core.CameraHandling.SetCameraLookAtFixedPoint(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].CameraSetup);
+                        }
+                        else
+                        {
+                            if (StateManager.Instance.PartyGroupList != null && StateManager.Instance.PartyGroupList.Count > 0)
+                                Core.CameraHandling.SetCameraLookAt(StateManager.Instance.PartyGroupList[0].Maid1);
+                        }
+                    }
                 }
             }
         }
@@ -494,10 +511,10 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                         if (isGroupZero)
                         {
                             var currentSkill = ModUseData.ValidSkillList[StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id][StateManager.Instance.PartyGroupList[0].GroupType].Where(x => x.SexPosID == StateManager.Instance.PartyGroupList[0].SexPosID).First();
-                            
+
                             if (!currentSkill.IsDialogueAllowed)
                             {
-
+                                
                                 //Replace the dialogue that doesnt fit the sitation with moaning (eg For FFM harem, the dialogue is always mentioning the master which doesnt fit for the orgy party)
 
                                 var group0 = StateManager.Instance.PartyGroupList[0];
@@ -523,7 +540,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                                 MotionSpecialLabel spLabel = Util.GetCurrentMotionSpecialLabel(group0, group0.CurrentLabelName);
 
                                 bool isEstrus = Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerEstrusMode).GetValue<bool>();
-
+                                
                                 if (spLabel != null)
                                 {
                                     if (spLabel.Type == MotionSpecialLabel.LabelType.Orgasm)
@@ -532,13 +549,19 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                                         string voiceType = isMaid1 ? spLabel.VoiceType1 : spLabel.VoiceType2;
 
                                         var voiceList = ModUseData.PersonalityVoiceList[targetMaid.status.personal.id].OrgasmScream.Where(x => x.Type == voiceType && x.Personality == Util.GetPersonalityNameByValue(targetMaid.status.personal.id)).ToList();
-
+                                        
                                         if (voiceList != null && voiceList.Count > 0)
                                         {
                                             //we want to replace it with a chopped audio clip, do not let the system to continue processing in the original way
-                                            PersonalityVoice.OrgasmScreamEntry voiceEntry = voiceList.First();
+                                            int rnd = RNG.Random.Next(voiceList.Count);
+                                            PersonalityVoice.OrgasmScreamEntry voiceEntry = voiceList[rnd];
                                             Helper.AudioChoppingManager.PlaySubClip(targetMaid, "", voiceEntry.FileName, voiceEntry.StartTime, voiceEntry.EndTime);
-                                            
+
+                                            TimeEndTrigger trigger = new TimeEndTrigger();
+                                            trigger.DueTime = DateTime.Now.AddSeconds(voiceEntry.EndTime - voiceEntry.StartTime + ConfigurableValue.ReplacedOrgasmWaitBufferTime);
+                                            trigger.ToBeExecuted = new EventDelegate(() => PlayOrgasmWaitVoiceChoppedCase(targetMaid, group0));
+                                            StateManager.Instance.TimeEndTriggerList.Add(trigger);
+
                                             f_strFileName = "";
                                             f_bLoop = false;
                                         }
@@ -792,19 +815,31 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                     if (command_data.basic.command_type == Yotogi.SkillCommandType.絶頂)
                     {
                         Core.YotogiHandling.BlockAllYotogiCommands();
+
+                        EventDelegate toBeExec;
+                        if(StateManager.Instance.PartyGroupList[0].ExtraManList.Count > 0)
+                            toBeExec = new EventDelegate(() => ForceChangeManQueueTypeTriggerExecution());
+                        else
+                            toBeExec = new EventDelegate(() => ForceChangeManShareListTypeTriggerExecution(yotogiSetup.IsMainManOwner));
+
                         VoiceLoopTrigger trigger = new VoiceLoopTrigger();
                         trigger.TargetMaid = StateManager.Instance.PartyGroupList[0].Maid1;
-                        trigger.ToBeExecuted = new EventDelegate(() => ForceChangeManTriggerExecution(yotogiSetup.IsMainManOwner));
+                        trigger.ToBeExecuted = toBeExec;
                         StateManager.Instance.VoiceLoopTrigger = trigger;
                     }
                 }
             }
         }
 
-        private static void ForceChangeManTriggerExecution(bool isMainManOwner)
+        private static void ForceChangeManShareListTypeTriggerExecution(bool isMainManOwner)
         {
-            Core.YotogiHandling.ChangeManMembers(StateManager.Instance.PartyGroupList[0], isMainManOwner);
+            Core.YotogiHandling.ChangeManMembersShareListType(StateManager.Instance.PartyGroupList[0], isMainManOwner);
             StateManager.Instance.YotogiManager.play_mgr.UpdateCommand();
+        }
+
+        private static void ForceChangeManQueueTypeTriggerExecution()
+        {
+            Core.YotogiHandling.ChangeManMembersQueueType(StateManager.Instance.PartyGroupList[0]);
         }
 
         internal static void CheckVoiceloopTrigger(AudioSourceMgr audioMgr, bool isLoop)
@@ -849,10 +884,12 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             if (StateManager.Instance.AnimationChangeTrigger != null)
                 if (StateManager.Instance.AnimationChangeTrigger.TargetGUID == maid.status.guid)
                 {
-                    StateManager.Instance.TimeEndTrigger = new TimeEndTrigger();
-                    StateManager.Instance.TimeEndTrigger.DueTime = DateTime.Now.AddSeconds(StateManager.Instance.AnimationChangeTrigger.ExtraWaitingTimeInSecond);
-                    StateManager.Instance.TimeEndTrigger.ToBeExecuted = StateManager.Instance.AnimationChangeTrigger.ToBeExecuted;
+                    TimeEndTrigger trigger = new TimeEndTrigger();
+                    trigger.DueTime = DateTime.Now.AddSeconds(StateManager.Instance.AnimationChangeTrigger.ExtraWaitingTimeInSecond);
+                    trigger.ToBeExecuted = StateManager.Instance.AnimationChangeTrigger.ToBeExecuted;
                     StateManager.Instance.AnimationChangeTrigger = null;
+
+                    StateManager.Instance.TimeEndTriggerList.Add(trigger);
                 }
         }
 
@@ -860,7 +897,10 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                Core.CameraHandling.SetCameraLookAt(GameMain.Instance.CharacterMgr.GetMaid(0));
+                if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].CameraSetup != null)
+                    Core.CameraHandling.SetCameraLookAtFixedPoint(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].CameraSetup);
+                else
+                    Core.CameraHandling.SetCameraLookAt(GameMain.Instance.CharacterMgr.GetMaid(0));
                 return false;
             }
             return true;
@@ -925,6 +965,25 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                     }
                 }
             }
+        }
+
+        private static void PlayOrgasmWaitVoiceChoppedCase(Maid maid, PartyGroup group)
+        {
+            BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
+
+            List<MotionSpecialLabel> lstSpecialLabel = motionItem.SpecialLabels.Where(x => x.Type == MotionSpecialLabel.LabelType.Orgasm).ToList();
+
+            MotionSpecialLabel pickedLabel = lstSpecialLabel[RNG.Random.Next(lstSpecialLabel.Count)];
+
+            string labelName;
+            if (group.Maid1 == maid)
+                labelName = pickedLabel.WaitLabel1;
+            else
+                labelName = pickedLabel.WaitLabel2;
+
+            bool isEstrus = Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerEstrusMode).GetValue<bool>();
+
+            Core.CharacterHandling.SetCharacterVoiceEntry(maid, PersonalityVoice.VoiceEntryType.OrgasmWait, group.ExcitementLevel, labelName, isEstrus, false);
         }
     }
 }

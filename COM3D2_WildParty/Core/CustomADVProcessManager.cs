@@ -245,15 +245,15 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 if (step.CameraData.MoveType == ADVStep.Camera.CameraMoveType.Instant)
                 {
-                    GameMain.Instance.MainCamera.SetPos(new Vector3(step.CameraData.FixedPointData.PosX, step.CameraData.FixedPointData.PosY, step.CameraData.FixedPointData.PosZ));
-                    GameMain.Instance.MainCamera.SetTargetPos(new Vector3(step.CameraData.FixedPointData.TargetPosX, step.CameraData.FixedPointData.TargetPosY, step.CameraData.FixedPointData.TargetPosZ));
+                    GameMain.Instance.MainCamera.SetPos(step.CameraData.FixedPointData.Pos);
+                    GameMain.Instance.MainCamera.SetTargetPos(step.CameraData.FixedPointData.TargetPos);
                     GameMain.Instance.MainCamera.SetDistance(step.CameraData.FixedPointData.Distance);
-                    GameMain.Instance.MainCamera.SetAroundAngle(new Vector2(step.CameraData.FixedPointData.AngleFrom, step.CameraData.FixedPointData.AngleTo));
+                    GameMain.Instance.MainCamera.SetAroundAngle(step.CameraData.FixedPointData.AroundAngle);
                 }
                 else
                 {
-                    CameraHandling.AnimateCameraToLookAt(new Vector3(step.CameraData.FixedPointData.TargetPosX, step.CameraData.FixedPointData.TargetPosY, step.CameraData.FixedPointData.TargetPosZ), step.CameraData.FixedPointData.Distance,
-                        step.CameraData.FixedPointData.AngleFrom, step.CameraData.FixedPointData.AngleTo, step.CameraData.AnimationTime);
+                    CameraHandling.AnimateCameraToLookAt(step.CameraData.FixedPointData.TargetPos, step.CameraData.FixedPointData.Distance,
+                        step.CameraData.FixedPointData.AroundAngle.x, step.CameraData.FixedPointData.AroundAngle.y, step.CameraData.AnimationTime);
                 }
             }
             else if (step.CameraData.Type == ADVStep.Camera.CameraType.LookAt)

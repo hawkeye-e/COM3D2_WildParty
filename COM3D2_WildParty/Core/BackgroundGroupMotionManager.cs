@@ -36,6 +36,8 @@ namespace COM3D2.WildParty.Plugin.Core
                     HandleGroupForStateInsertEnd(groupList[i]);
                 else if (groupList[i].CurrentSexState == SexState.StateType.ChangeMan)
                     HandleGroupForStateChangeMan(groupList[i]);
+                else if (groupList[i].CurrentSexState == SexState.StateType.ChangeManFromQueue)
+                    HandleGroupForStateChangeManFromQueue(groupList[i]);
             }
         }
 
@@ -346,11 +348,28 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             if (DateTime.Now > group.NextActionReviewTime)
             {
-                YotogiHandling.ChangeManMembers(group);
+                YotogiHandling.ChangeManMembersShareListType(group);
 
                 YotogiHandling.ChangeBackgroundGroupMotionWithSpecificLabel(group, MotionSpecialLabel.LabelType.Waiting);
                 group.CurrentSexState = GetNextSexState(group.CurrentSexState);
             }
+        }
+
+        private static void HandleGroupForStateChangeManFromQueue(PartyGroup group)
+        {
+            if (DateTime.Now > group.NextActionReviewTime)
+            {
+                YotogiHandling.ChangeManMembersQueueType(group, new EventDelegate(() => OnChangeManMembersQueueTypeFinish(group)) );
+
+                //The next review time will be resumed after all change man member process finished
+                group.StopNextReviewTime();
+            }
+        }
+
+        private static void OnChangeManMembersQueueTypeFinish(PartyGroup group)
+        {
+            group.GenerateNextReviewTime(0);
+            group.CurrentSexState = GetNextSexState(group.CurrentSexState);
         }
 
 

@@ -54,8 +54,14 @@ namespace COM3D2.WildParty.Plugin
         public Dictionary<string, GameObject> ExtraObjects = new Dictionary<string, GameObject>();
 
         //Key: index
-        public static Dictionary<int, Maid> ExtraManList = new Dictionary<int, Maid>();
-        public static List<MapCoorindates.CoordinatesInfo> ExtraManSetupInfo = new List<MapCoorindates.CoordinatesInfo>();
+        public Dictionary<int, Maid> ExtraManList = new Dictionary<int, Maid>();
+        public List<MapCoorindates.CoordinatesInfo> ExtraManSetupInfo = new List<MapCoorindates.CoordinatesInfo>();
+        public List<int> MovingExtraManIndexList = new List<int>();
+        public List<Maid> MovingGroupMemberList = new List<Maid>();
+
+        //Key: index
+        public static Dictionary<int, Maid> SharedExtraManList = new Dictionary<int, Maid>();
+        public static List<MapCoorindates.CoordinatesInfo> SharedExtraManSetupInfo = new List<MapCoorindates.CoordinatesInfo>();
         public static ForceSexPosInfo.Type CurrentMainGroupMotionType = ForceSexPosInfo.Type.Waiting;
 
         public PartyGroup() { }
@@ -157,18 +163,53 @@ namespace COM3D2.WildParty.Plugin
             SetCharacterPosition(Man2);
             SetCharacterPosition(Man3);
 
-            SetExtraManPosition();
+            SetSharedExtraManPosition();
+
+            //Do not enforce the extra man position if they are moving
+            if (MovingExtraManIndexList.Count == 0)
+                SetExtraManPosition();
         }
 
-        public static void SetExtraManPosition()
+        public void SetExtraManPosition()
         {
-            if (ExtraManSetupInfo == null || ExtraManList == null)
-                return;
-            foreach(var setupInfo in ExtraManSetupInfo)
+            SetExtraManPosition(ExtraManList, ExtraManSetupInfo);
+        }
+
+        public void SetExtraManPosition(int position)
+        {
+            var setupInfo = ExtraManSetupInfo[position];
+
+            Maid man = ExtraManList[setupInfo.ArrayPosition];
+
+            if (man != null)
             {
-                if(ExtraManList.Count > setupInfo.ArrayPosition)
+                man.Visible = setupInfo.IsManVisible;
+                if (setupInfo.IsManVisible)
+                    man.transform.localScale = Vector3.one;
+                else
+                    man.transform.localScale = Vector3.zero;
+                man.transform.localPosition = Vector3.zero;
+                man.transform.position = setupInfo.Pos;
+                man.transform.rotation = setupInfo.Rot;
+                man.body0.SetBoneHitHeightY(setupInfo.Pos.y);
+
+            }
+        }
+
+        public static void SetSharedExtraManPosition()
+        {
+            SetExtraManPosition(SharedExtraManList, SharedExtraManSetupInfo);
+        }
+
+        private static void SetExtraManPosition(Dictionary<int, Maid> extraManList, List<MapCoorindates.CoordinatesInfo> infoList)
+        {
+            if (infoList == null || extraManList == null)
+                return;
+            foreach (var setupInfo in infoList)
+            {
+                if (extraManList.ContainsKey(setupInfo.ArrayPosition))
                 {
-                    Maid man = ExtraManList[setupInfo.ArrayPosition];
+                    Maid man = extraManList[setupInfo.ArrayPosition];
 
                     if (man != null)
                     {
@@ -223,10 +264,13 @@ namespace COM3D2.WildParty.Plugin
                 Man3 = maid;
         }
 
-        private void SetCharacterPosition(Maid maid)
+        public void SetCharacterPosition(Maid maid)
         {
             if (maid != null)
             {
+                if (MovingGroupMemberList.Contains(maid))
+                    return;
+
                 if (RequireSmoothPositionChange)
                 {
                     Util.SmoothMoveMaidPosition(maid, GroupPosition + GroupOffsetVector + GroupOffsetVector2, GroupRotation);
@@ -343,7 +387,7 @@ namespace COM3D2.WildParty.Plugin
         {
             List<int> list = new List<int>();
 
-            foreach(var kvp in ExtraManList)
+            foreach(var kvp in SharedExtraManList)
             {
                 if (kvp.Value == null)
                     list.Add(kvp.Key);
