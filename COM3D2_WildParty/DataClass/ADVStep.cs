@@ -178,6 +178,7 @@ namespace COM3D2.WildParty.Plugin
 
             public PosRot PosRot;
             public bool WaitLoad = false;
+            public bool BlockInputUntilMotionChange = false;      
 
             public DetailSetup Maid1;
             public DetailSetup Maid2;
@@ -251,7 +252,9 @@ namespace COM3D2.WildParty.Plugin
         public class Texture
         {
             public string Type;
-            public int Target = -1;         //default -1 indicate all. Otherwise index position
+            public string TargetType = Constant.TargetType.SingleMaid;      //Use Constant.TargetType; Valid Option: "F": maid list, "F_ALL": All maids, "NPC_F": NPC Female List
+            public int IndexPosition;                                       
+            public List<string> BodyTarget;                                 //Required for add only. Ignored when remove texture.
         }
 
         internal class SE

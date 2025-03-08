@@ -75,8 +75,8 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVIntroLakeside,
             ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVIntroCafe,
             ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVIntroPoleDanceStage,
-            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVIntroPhase2,
-            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVIntroPhase3,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVPhase2,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVPhase3,
 
             ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Muku
         };

@@ -359,10 +359,8 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 CharacterHandling.LoadMotionScript(0, false, motionItem.FileName, spLabel.Label);
 
-                StateManager.Instance.AnimationChangeTrigger = new AnimationEndTrigger();
-                StateManager.Instance.AnimationChangeTrigger.TargetGUID = mainGroup.Maid1.status.guid;
-                StateManager.Instance.AnimationChangeTrigger.ExtraWaitingTimeInSecond = ConfigurableValue.OrgasmFinishFollowUpBaseExtraWaitingTimeInSecond + RNG.Random.Next(ConfigurableValue.OrgasmFinishFollowUpVariableExtraWaitingTimeInSecond);
-                StateManager.Instance.AnimationChangeTrigger.ToBeExecuted = new EventDelegate(() => OrgasmCommandFinishFollowUp());
+                Trigger.AnimationEndTrigger trigger = new Trigger.AnimationEndTrigger(mainGroup.Maid1, new EventDelegate(() => OrgasmCommandFinishFollowUp()), ConfigurableValue.OrgasmFinishFollowUpBaseExtraWaitingTimeInSecond + RNG.Random.Next(ConfigurableValue.OrgasmFinishFollowUpVariableExtraWaitingTimeInSecond));
+                StateManager.Instance.AnimationChangeTrigger = trigger;
 
                 var clip = mainGroup.Maid1.body0.m_Animation.GetClip(mainGroup.CurrentMaid1AnimationClipName);
 
@@ -409,9 +407,8 @@ namespace COM3D2.WildParty.Plugin.Core
             int currentMaidIndex = Util.GetIndexPositionInWorkingYotogiArrayForMaid(StateManager.Instance.PartyGroupList[0].Maid1);
             PartyGroup targetMaidGroup = Util.GetPartyGroupByGUID(StateManager.Instance.YotogiWorkingMaidList[currentMaidIndex + indexOffset].status.guid);
 
-            StateManager.Instance.WaitingAnimationTrigger = new AnimationEndTrigger();
-            StateManager.Instance.WaitingAnimationTrigger.TargetGUID = StateManager.Instance.PartyGroupList[0].Man1.status.guid;
-            StateManager.Instance.WaitingAnimationTrigger.ToBeExecuted = new EventDelegate(() => YotogiExtraCommandCallbacks.HaremKing_SwapMainGroupMaid(currentMaidIndex, currentMaidIndex + indexOffset, isMovingRight));
+            Trigger.AnimationEndTrigger trigger = new Trigger.AnimationEndTrigger(StateManager.Instance.PartyGroupList[0].Man1, new EventDelegate(() => YotogiExtraCommandCallbacks.HaremKing_SwapMainGroupMaid(currentMaidIndex, currentMaidIndex + indexOffset, isMovingRight)));
+            StateManager.Instance.WaitingAnimationTrigger = trigger;
         }
 
 

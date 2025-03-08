@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using BepInEx.Logging;
+using COM3D2.WildParty.Plugin.Trigger;
 using HarmonyLib;
 using UnityEngine;
 
@@ -296,7 +297,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         //Process when the player clicks Next button in the yotogi play scene
         internal static void ProcessYotogiPlayEnd(WfScreenChildren instance)
         {
-            if (instance.GetType() == typeof(YotogiPlayManager) && StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiEnd)
+            if (instance.GetType() == typeof(YotogiPlayManager) && 
+                (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiEnd || StateManager.Instance.ModEventProgress == Constant.EventProgress.ADV))
             {
                 //terminate all the automated process of background groups
                 foreach (var group in StateManager.Instance.PartyGroupList)
@@ -304,6 +306,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                     group.StopAudio();
                     group.StopNextReviewTime();
                 }
+
+                PartyGroup.SharedExtraManList.Clear();
 
                 //To fix the invalid status that causing the scene unable to go through the finish process when player click "next" in the yotogi play scene.
                 if (instance.fade_status != WfScreenChildren.FadeStatus.Wait)
@@ -863,18 +867,10 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             if (StateManager.Instance.WaitingAnimationTrigger != null)
             {
-                if (StateManager.Instance.WaitingAnimationTrigger.TargetGUID == maid.status.guid)
-                {
-                    if (maid.body0.GetAnimation() != null)
-                        if (!maid.body0.GetAnimation().isPlaying)
-                        {
-                            StateManager.Instance.WaitingAnimationTrigger.ToBeExecuted.Execute();
-
-                            //remove the trigger
-                            StateManager.Instance.WaitingAnimationTrigger = null;
-                        }
-
-                }
+                bool isExecuted = StateManager.Instance.WaitingAnimationTrigger.CheckTrigger(maid);
+                if (isExecuted)
+                    StateManager.Instance.WaitingAnimationTrigger = null;
+               
             }
         }
 
@@ -882,15 +878,13 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             //check if the maid is same as animation change trigger
             if (StateManager.Instance.AnimationChangeTrigger != null)
-                if (StateManager.Instance.AnimationChangeTrigger.TargetGUID == maid.status.guid)
+            {
+                bool isExecuted = StateManager.Instance.AnimationChangeTrigger.CheckTrigger(maid);
+                if (isExecuted)
                 {
-                    TimeEndTrigger trigger = new TimeEndTrigger();
-                    trigger.DueTime = DateTime.Now.AddSeconds(StateManager.Instance.AnimationChangeTrigger.ExtraWaitingTimeInSecond);
-                    trigger.ToBeExecuted = StateManager.Instance.AnimationChangeTrigger.ToBeExecuted;
                     StateManager.Instance.AnimationChangeTrigger = null;
-
-                    StateManager.Instance.TimeEndTriggerList.Add(trigger);
                 }
+            }
         }
 
         internal static bool HandleCameraReset()
@@ -916,11 +910,6 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
                 Core.CustomADVProcessManager.ADVSceneProceedToNextStep();
                 
-                //To fix the invalid status that causing the scene unable to go through the finish process when player click "next" in the yotogi play scene.
-                if (instance.fade_status != WfScreenChildren.FadeStatus.Wait)
-                {
-                    Traverse.Create(instance).Field(Constant.DefinedClassFieldNames.WfScreenChildrenFadeStatus).SetValue(WfScreenChildren.FadeStatus.Wait);
-                }
                 
                 GameMain.Instance.LoadScene(Constant.SceneType.ADV);
             }
@@ -984,6 +973,25 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             bool isEstrus = Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerEstrusMode).GetValue<bool>();
 
             Core.CharacterHandling.SetCharacterVoiceEntry(maid, PersonalityVoice.VoiceEntryType.OrgasmWait, group.ExcitementLevel, labelName, isEstrus, false);
+        }
+
+        internal static void ApplyClothesSetting()
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiPlay)
+                {
+                    PartyGroupSetup setupInfo = ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation];
+                    foreach (var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
+                    {
+                        if (!string.IsNullOrEmpty(groupSetupInfo.ClothesSet))
+                        {
+                            for (int i = 0; i < groupSetupInfo.MaidCount; i++)
+                                Core.CharacterHandling.SetFemaleClothing(StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].GetMaidAtIndex(i), groupSetupInfo.ClothesSet);
+                        }
+                    }
+                }
+            }
         }
     }
 }

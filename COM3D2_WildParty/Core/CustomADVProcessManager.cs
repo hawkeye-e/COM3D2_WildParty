@@ -5,6 +5,7 @@ using System.Text;
 using BepInEx.Logging;
 using UnityEngine;
 using HarmonyLib;
+using COM3D2.WildParty.Plugin.Trigger;
 
 namespace COM3D2.WildParty.Plugin.Core
 {
@@ -25,6 +26,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 CheckCameraPanFinish();
                 CheckTimeWaitFinish();
+                CheckSystemFadeOutFinish();
 
 
                 //We dont want to process this over and over again if we are waiting for user input
@@ -79,6 +81,9 @@ namespace COM3D2.WildParty.Plugin.Core
                             break;
                         case Constant.ADVType.DismissGroup:
                             ProcessADVDismissGroup(instance, thisStep);
+                            break;
+                        case Constant.ADVType.AddTexture:
+                            ProcessADVAddTexture(instance, thisStep);
                             break;
                         case Constant.ADVType.RemoveTexture:
                             ProcessADVRemoveTexture(instance, thisStep);
@@ -138,6 +143,9 @@ namespace COM3D2.WildParty.Plugin.Core
                             break;
                         case Constant.WaitingType.CameraPan:
                             StateManager.Instance.WaitForCameraPanFinish = true;
+                            break;
+                        case Constant.WaitingType.SystemFadeOut:
+                            StateManager.Instance.WaitForSystemFadeOut = true;
                             break;
                     }
 
@@ -611,7 +619,13 @@ namespace COM3D2.WildParty.Plugin.Core
                         group.SetGroupPosition(step.GroupData[i].PosRot.Pos, step.GroupData[i].PosRot.Rot);
                     
                     group.SetGroupPosition();
-                    
+
+                    if (step.GroupData[i].BlockInputUntilMotionChange)
+                    {
+                        StateManager.Instance.WaitForMotionChange = true;
+                        AnimationEndTrigger trigger = new AnimationEndTrigger(group.Maid1, new EventDelegate(ADVMotionChangeComplete));
+                        StateManager.Instance.AnimationChangeTrigger = trigger;
+                    }
                 }
             }
         }
@@ -954,6 +968,43 @@ namespace COM3D2.WildParty.Plugin.Core
                 StateManager.Instance.PartyGroupList.RemoveAt(groupIndex);
             }
         }
+        
+        private static void ProcessADVAddTexture(ADVKagManager instance, ADVStep step)
+        {
+            if (step.TextureData != null)
+            {
+                foreach (ADVStep.Texture data in step.TextureData)
+                {
+                    if (data.Type == Constant.TextureType.Semen)
+                    {
+                        if (data.TargetType == Constant.TargetType.AllMaids)
+                        {
+                            foreach (Maid maid in StateManager.Instance.SelectedMaidsList)
+                            {
+                                foreach (string bodyPart in data.BodyTarget)
+                                    if (ModUseData.SemenPatternList.ContainsKey(bodyPart))
+                                        CharacterHandling.AddSemenTexture(maid, ModUseData.SemenPatternList[bodyPart]);
+                            }
+
+                        }
+                        else
+                        {
+                            Maid maid = null;
+                            if (data.TargetType == Constant.TargetType.SingleMaid)
+                                maid = StateManager.Instance.SelectedMaidsList[data.IndexPosition];
+                            else if (data.TargetType == Constant.TargetType.NPCFemale)
+                                maid = StateManager.Instance.NPCList[data.IndexPosition];
+
+                            foreach (string bodyPart in data.BodyTarget)
+                                if (ModUseData.SemenPatternList.ContainsKey(bodyPart))
+                                    CharacterHandling.AddSemenTexture(maid, ModUseData.SemenPatternList[bodyPart]);
+                        }
+
+                        
+                    }
+                }
+            }
+        }
 
         private static void ProcessADVRemoveTexture(ADVKagManager instance, ADVStep step)
         {
@@ -963,13 +1014,21 @@ namespace COM3D2.WildParty.Plugin.Core
                 {
                     if (data.Type == Constant.TextureType.Semen)
                     {
-                        if (data.Target < 0)
+                        if (data.TargetType == Constant.TargetType.AllMaids)
                         {
                             foreach (Maid maid in StateManager.Instance.SelectedMaidsList)
                                 CharacterHandling.RemoveSemenTexture(maid);
                         }
                         else
-                            CharacterHandling.RemoveSemenTexture(StateManager.Instance.SelectedMaidsList[data.Target]);
+                        {
+                            Maid maid = null;
+                            if (data.TargetType == Constant.TargetType.SingleMaid)
+                                maid = StateManager.Instance.SelectedMaidsList[data.IndexPosition];
+                            else if (data.TargetType == Constant.TargetType.NPCFemale)
+                                maid = StateManager.Instance.NPCList[data.IndexPosition];
+
+                            CharacterHandling.RemoveSemenTexture(maid);
+                        }
                     }
                 }
             }
@@ -1043,18 +1102,18 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 if (step.ListUpdateData.Remove != null)
                 {
-                    foreach (var addData in step.ListUpdateData.Remove)
+                    foreach (var removeData in step.ListUpdateData.Remove)
                     {
                         Maid maid;
                         List<Maid> targetList;
-                        if (addData.Type == Constant.TargetType.NPCMale)
+                        if (removeData.Type == Constant.TargetType.NPCMale)
                         {
-                            maid = StateManager.Instance.NPCManList[addData.SrcPosition];
+                            maid = StateManager.Instance.NPCManList[removeData.SrcPosition];
                             targetList = StateManager.Instance.MenList;
                         }
                         else
                         {
-                            maid = StateManager.Instance.NPCList[addData.SrcPosition];
+                            maid = StateManager.Instance.NPCList[removeData.SrcPosition];
                             targetList = StateManager.Instance.SelectedMaidsList;
                         }
 
@@ -1135,6 +1194,23 @@ namespace COM3D2.WildParty.Plugin.Core
                 StateManager.Instance.ADVResumeTime = DateTime.MinValue;
                 ADVSceneProceedToNextStep();
             }
+        }
+
+        private static void CheckSystemFadeOutFinish()
+        {
+            if (StateManager.Instance.WaitForSystemFadeOut)
+            {
+                if (GameMain.Instance.MainCamera.GetFadeState() == CameraMain.FadeState.Out)
+                {
+                    StateManager.Instance.WaitForSystemFadeOut = false;
+                    ADVSceneProceedToNextStep();
+                }
+            }
+        }
+
+        private static void ADVMotionChangeComplete()
+        {
+            StateManager.Instance.WaitForMotionChange = false;
         }
     }
 }

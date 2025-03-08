@@ -105,9 +105,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         [HarmonyPatch(typeof(WfScreenChildren), nameof(WfScreenChildren.Finish))]
         private static void YotogiNullManagerFinishPost(WfScreenChildren __instance)
         {
+            Patches.ProcessYotogiPlayEnd(__instance);
             if (StateManager.Instance.IsFinalYotogi)
             {
-                Patches.ProcessYotogiPlayEnd(__instance);
                 Patches.ProcessYotogiResultEnd(__instance);
             }
             else
@@ -291,7 +291,6 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         private static void LoadAnime1Post(TBody __instance, string tag, AFileSystemBase fileSystem, string filename, bool additive, bool loop)
         {
             Patches.ApplyForceSetting(__instance.maid);
-            Patches.CheckAnimationChangeTrigger(__instance.maid);
         }
 
         
@@ -363,6 +362,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         private static void MaidUpdatePost(Maid __instance)
         {
             Patches.CheckMaidAnimationTrigger(__instance);
+            Patches.CheckAnimationChangeTrigger(__instance);
             Core.YotogiHandling.CheckManWalkTrigger(__instance);
         }
 
@@ -388,6 +388,14 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             Patches.RestoreModAddedExtraObjects(__instance, __state);
 
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(YotogiManager), nameof(YotogiManager.ResetWorld))]
+        private static void ResetWorld()
+        {
+            //In the yotogi scene, the clothes will be reset at the beginning. Apply the clothing setting if it is defined in the json file.
+            Patches.ApplyClothesSetting();
         }
     }
 }

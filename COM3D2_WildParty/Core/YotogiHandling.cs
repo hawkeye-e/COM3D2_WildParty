@@ -5,6 +5,7 @@ using System.Text;
 using UnityEngine;
 using BepInEx.Logging;
 using HarmonyLib;
+using COM3D2.WildParty.Plugin.Trigger;
 
 namespace COM3D2.WildParty.Plugin.Core
 {

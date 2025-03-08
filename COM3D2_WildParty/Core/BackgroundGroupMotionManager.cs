@@ -151,40 +151,6 @@ namespace COM3D2.WildParty.Plugin.Core
             group.CurrentSexState = GetNextSexState(group.CurrentSexState);
         }
 
-        /*
-         * Due to TagTexMulAdd will call GetMaidAndMan function which will mess up the spoofing logic for other parts, I dont directly call TagTexMulAdd but follow the logic inside.
-           Drawback: There are some special handlings on CRC body in TagTexMulAdd, so the effect wont apply in 3.0 version(I have no idea whether this mod will work or not in v3.0 anyway)
-         */
-        private static void ProcessSemen(Maid maid, SemenPattern pattern)
-        {
-            if (maid == null)
-                return;
-
-            List<string> slotToBeProc = new List<string>();
-
-            for (int i = 0; i < pattern.SplashCount; i++)
-            {
-                int xValue = RNG.Random.Next(pattern.XRange[i].MinValue, pattern.XRange[i].MaxValue);
-                int yValue = RNG.Random.Next(pattern.YRange[i].MinValue, pattern.YRange[i].MaxValue);
-                float rotValue = RNG.Random.Next((int)(pattern.RotRange[i].MinValue * 100), (int)(pattern.RotRange[i].MaxValue * 100)) / 100.0f;
-                float scaleValue = RNG.Random.Next((int)(pattern.Scale[i].MinValue * 100), (int)(pattern.Scale[i].MaxValue * 100)) / 100.0f;
-
-                int rnd = RNG.Random.Next(pattern.FileName[i].Count);
-                string fileName = pattern.FileName[i][rnd];
-
-                foreach (var propName in pattern.PropName)
-                {
-                    maid.body0.MulTexSet(pattern.Slotname, pattern.MatNo, propName, pattern.LayerNo, fileName, pattern.BlendMode, pattern.Add,
-                        xValue, yValue, rotValue, scaleValue, pattern.NoTransform, pattern.SubProp, pattern.Alpha, pattern.TargetBodyTexSize);
-                }
-                if (!slotToBeProc.Contains(pattern.Slotname))
-                    slotToBeProc.Add(pattern.Slotname);
-            }
-
-            foreach (var slot in slotToBeProc)
-                maid.body0.MulTexProc(slot);
-        }
-
         //Mainly for adding the semen texture
         private static void HandleGroupForStateOrgasmEnd(ADVKagManager instance, PartyGroup group)
         {
@@ -212,18 +178,18 @@ namespace COM3D2.WildParty.Plugin.Core
             BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemOfGroup(group);
 
             if (ModUseData.SemenPatternList.ContainsKey(group.CurrentOrgasmLabelRecord.SemenType1))
-                ProcessSemen(Util.GetSemenTarget(group, group.CurrentOrgasmLabelRecord.SemenTarget1), ModUseData.SemenPatternList[group.CurrentOrgasmLabelRecord.SemenType1]);
+                CharacterHandling.AddSemenTexture(Util.GetSemenTarget(group, group.CurrentOrgasmLabelRecord.SemenTarget1), ModUseData.SemenPatternList[group.CurrentOrgasmLabelRecord.SemenType1]);
 
             if (!string.IsNullOrEmpty(group.CurrentOrgasmLabelRecord.SemenType2))
             {
                 if (ModUseData.SemenPatternList.ContainsKey(group.CurrentOrgasmLabelRecord.SemenType2))
-                    ProcessSemen(Util.GetSemenTarget(group, group.CurrentOrgasmLabelRecord.SemenTarget2), ModUseData.SemenPatternList[group.CurrentOrgasmLabelRecord.SemenType2]);
+                    CharacterHandling.AddSemenTexture(Util.GetSemenTarget(group, group.CurrentOrgasmLabelRecord.SemenTarget2), ModUseData.SemenPatternList[group.CurrentOrgasmLabelRecord.SemenType2]);
             }
 
             if (!string.IsNullOrEmpty(group.CurrentOrgasmLabelRecord.SemenType3))
             {
                 if (ModUseData.SemenPatternList.ContainsKey(group.CurrentOrgasmLabelRecord.SemenType3))
-                    ProcessSemen(Util.GetSemenTarget(group, group.CurrentOrgasmLabelRecord.SemenTarget3), ModUseData.SemenPatternList[group.CurrentOrgasmLabelRecord.SemenType3]);
+                    CharacterHandling.AddSemenTexture(Util.GetSemenTarget(group, group.CurrentOrgasmLabelRecord.SemenTarget3), ModUseData.SemenPatternList[group.CurrentOrgasmLabelRecord.SemenType3]);
             }
         }
 

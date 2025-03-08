@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COM3D2.WildParty.Plugin.Trigger;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -66,6 +67,8 @@ namespace COM3D2.WildParty.Plugin
         internal bool WaitForUserClick = false;
         internal bool WaitForUserInput = false;
         internal bool WaitForCameraPanFinish = false;
+        internal bool WaitForSystemFadeOut = false;
+        internal bool WaitForMotionChange = false;
         internal CameraView TargetCameraAfterAnimation = null;
 
         internal bool ForceNoCameraResetAfterFadeIn = false;

@@ -99,7 +99,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.ADVScreen
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                if (StateManager.Instance.WaitForUserClick)
+                if (StateManager.Instance.WaitForUserClick && !StateManager.Instance.WaitForMotionChange)
                 {
                     Core.CustomADVProcessManager.ADVSceneProceedToNextStep();
                 }

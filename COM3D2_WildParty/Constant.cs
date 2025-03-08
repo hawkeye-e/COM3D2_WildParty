@@ -263,6 +263,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string MakeGroup = "MakeGroup";  //Assign characters into a group in order to set group motion etc
             internal const string DismissGroup = "DismissGroup";  //Assign characters into a group in order to set group motion etc
 
+            internal const string AddTexture = "AddTexture";
             internal const string RemoveTexture = "RemoveTexture";
 
             internal const string Shuffle = "Shuffle";
@@ -291,6 +292,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string InputChoice = "InputChoice";
             internal const string FadeOut = "FadeOut";
             internal const string CameraPan = "CameraPan";
+            internal const string SystemFadeOut = "SystemFadeOut";      //This one is for waiting for the fade out caused by the original system not by this mod
 
             internal const string Special = "Special";  //Need special handling to proceed to next step (eg. doing some branching). 
         }
@@ -437,6 +439,8 @@ namespace COM3D2.WildParty.Plugin
             internal const string MaidStatusFirstName = "firstName_";
             internal const string MaidStatusLastName = "lastName_";
             internal const string MaidStatusNickName = "nickName_";
+
+            internal const string TBodyAnimCache = "m_AnimCache";
         }
 
         internal static class DefinedSearchPath
@@ -607,6 +611,20 @@ namespace COM3D2.WildParty.Plugin
             internal const string OrgyParty = "OrgyParty";
             internal const string HaremKing = "HaremKing";
             internal const string HappyGBClub = "HappyGBClub";
+        }
+
+        internal static class TexturePattern
+        {
+            internal class Semen
+            {
+                internal const string Vagina = "Vagina";
+                internal const string Belly = "Belly";
+                internal const string Ass = "Ass";
+                internal const string Back = "Back";
+                internal const string Breast = "Breast";
+                internal const string Mouth = "Mouth";
+                internal const string Face = "Face";
+            }
         }
     }
 }

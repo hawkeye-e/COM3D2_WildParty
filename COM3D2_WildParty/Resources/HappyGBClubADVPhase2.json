@@ -1,0 +1,2044 @@
+{
+
+  "hgbc_phase2_init": {
+    "ID": "hgbc_phase2_init",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "SystemFadeOut",
+    "NextStepID": "hgbc_phase2_init_a"
+  },
+
+  "hgbc_phase2_init_a": {
+    "ID": "hgbc_phase2_init_a",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_phase2_init_b"
+  },
+
+  "hgbc_phase2_init_b": {
+    "ID": "hgbc_phase2_init_b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_phase2_init_c",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "hgbc_phase2_init_c": {
+    "ID": "hgbc_phase2_init_c",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "hgbc_phase2_remove_takahito"
+  },
+
+  "hgbc_phase2_remove_takahito": {
+    "ID": "hgbc_phase2_remove_takahito",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_init_d",
+    "ListUpdateData": {
+      "Remove": [
+        {
+          "Type": "NPC_M",
+          "SrcPosition": 0
+        }
+      ]
+    }
+  },
+
+  "hgbc_phase2_init_d": {
+    "ID": "hgbc_phase2_init_d",
+    "Type": "Shuffle",
+    "ShuffleData": {
+      "TargetList": "M_ALL"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_phase2_init_e"
+  },
+
+
+
+  "hgbc_phase2_init_e": {
+    "ID": "hgbc_phase2_init_e",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_init_f",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-999, -999, -999",
+          "RotString": "0, 1, 0, 0"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "ClothesSetID": "FullNude"
+      }
+    ]
+  },
+
+  "hgbc_phase2_init_f": {
+    "ID": "hgbc_phase2_init_f",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_init_g",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "0.51, 0.00, -2.12",
+          "RotString": "0, 0.97829, 0, 0.20724"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 8,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "1.94, 0.00, -0.67",
+          "RotString": "0, 0.59126, 0, 0.80648"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 9,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "2.44, 0.00, 1.24",
+          "RotString": "0, 0.52628, 0, 0.85031"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 10,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.97, 0.00, 0.00",
+          "RotString": "0, 0.86307, 0, -0.50508"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 11,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-2.28, 0.00, 0.56",
+          "RotString": "0, 0.75842, 0, -0.65176"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 12,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.98, 0.00, 1.76",
+          "RotString": "0, 0.51509, 0, -0.85713"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 13,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.64, 0.00, -0.57",
+          "RotString": "0, 0.57647, 0, -0.81712"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 14,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.01, 0.00, 2.73",
+          "RotString": "0, 0.01918, 0, 0.99982"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 15,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "1.70, 0.00, -1.36",
+          "RotString": "0, 0.82156, 0, 0.57013"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 16,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.40, 0.00, 3.29",
+          "RotString": "0, 0.16534, 0, 0.98624"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 17,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.62, 0.00, 2.32",
+          "RotString": "0, 0.22750, 0, -0.97378"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 18,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "0.59, 0.00, 2.32",
+          "RotString": "0, 0.32845, 0, -0.94452"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 19,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "1.70, 0.00, 2.34",
+          "RotString": "0, 0.18873, 0, 0.98203"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組"
+        },
+        "PosRot": {
+          "PosString": "-2.39, -0.28, -4.53",
+          "RotString": "0, 0.519, 0, -0.855"
+        },
+        "ExtraObjectsInfo": {
+          "RemoveObjects": [ "handitem" ]
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組"
+        },
+        "PosRot": {
+          "PosString": "-3.32, -0.28, -3.32",
+          "RotString": "0, 0.999, 0, 0.052"
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_init_g": {
+    "ID": "hgbc_phase2_init_g",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_phase2_init_h",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 0
+        },
+        "Man2": {
+          "Type": "M",
+          "ArrayPosition": 1
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      },
+      {
+        "GroupIndex": 1,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 2
+        },
+        "Man2": {
+          "Type": "M",
+          "ArrayPosition": 3
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 0
+        }
+      },
+      {
+        "GroupIndex": 2,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 4
+        },
+        "Man2": {
+          "Type": "M",
+          "ArrayPosition": 5
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 1
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_init_h": {
+    "ID": "hgbc_phase2_init_h",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0001",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana_c001.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 4,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "Man2": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "0.19, 0.00, -0.93",
+          "RotString": "0.0, 1.0, 0.0, 0.0"
+        }
+      },
+
+      {
+        "ArrayPosition": 1,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*激しさ２キス",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "接吻",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "Man2": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-1.00, 0.00, 0.85",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      },
+
+      {
+        "ArrayPosition": 2,
+        "ScriptFile": "sex_ran3p_udemoti_kouhaii_fera.ks",
+        "ScriptLabel": "*喉奥を責める",
+        "SexPosID": 11,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "閉じフェラ快楽",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "Man2": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "1.20, 0.00, 0.85",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0001": {
+    "ID": "hgbc_phase2_0001",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（男たちはステージ上の女たちを輪姦し続ける。そして、[=Name,Maid,0,CallName]がとてもうっとりした顔をして気持ち良さそうにみえる。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_phase2_0002": {
+    "ID": "hgbc_phase2_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（……美しい…やはりこの姿が一番だ。[=Name,Maid,0,CallName]の蕩けそうな顔を見て、俺も心の底から微笑みました。）"
+    }
+  },
+
+  "hgbc_phase2_0003": {
+    "ID": "hgbc_phase2_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（この場所に連れてきて本当によかった。メンバーになるも悪くないかな。）"
+    }
+  },
+
+  "hgbc_phase2_0004": {
+    "ID": "hgbc_phase2_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0005",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そう思っていたとき、[=Name,NPC_M,0,LastName]さんは少し休んで、俺に話しかけに来た。）"
+    }
+  },
+
+  "hgbc_phase2_0005": {
+    "ID": "hgbc_phase2_0005",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_phase2_0005a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_phase2_0005a": {
+    "ID": "hgbc_phase2_0005a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_phase2_0006",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-5.04, 0.93, -6.02",
+        "TargetPosString": "-3.23, 0.35, -3.82",
+        "AroundAngleString": "39.46, 11.53",
+        "Distance": 2.9
+      }
+    }
+  },
+
+  "hgbc_phase2_0006": {
+    "ID": "hgbc_phase2_0006",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0007",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "お疲れ様です！[=Name,Maid,0,CallName]はいかがでしょうか？"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_phase2_0007": {
+    "ID": "hgbc_phase2_0007",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0008",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "ふぅ…すごく気持ちよかった。いやぁ～奥さんは本当に素晴らしいだ。おっぱいもマンコも最高だね、エロすぎてたまらん。"
+    }
+  },
+
+  "hgbc_phase2_0008": {
+    "ID": "hgbc_phase2_0008",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0009",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "最も重要なのは、そのチンポを欲しがる表情だ。こんなの女を見たら、どんな男でも激しく突かずにはいられないたろ。"
+    }
+  },
+
+  "hgbc_phase2_0009": {
+    "ID": "hgbc_phase2_0009",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0010",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ありがとうごさいます！自慢の妻です。"
+    }
+  },
+
+  "hgbc_phase2_0010": {
+    "ID": "hgbc_phase2_0010",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0011",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "はははっ！誇らしげだね！そうだ、[=ClubOwnerName]くん、そこに行ってみんなと一緒に奥さん犯してはどう？"
+    }
+  },
+
+  "hgbc_phase2_0011": {
+    "ID": "hgbc_phase2_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0012",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "見てるだけで気持ちが良いのは分かるが、夫として、たまには妻と愛し合うは必要だよ。しかも、今ヤるならきっと凄く気持ちいいよ！"
+    }
+  },
+
+  "hgbc_phase2_0012": {
+    "ID": "hgbc_phase2_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0013",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "そうですね…今ちょっと興奮してきたので、そうしますか。"
+    }
+  },
+
+  "hgbc_phase2_0013": {
+    "ID": "hgbc_phase2_0013",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0014",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "はははっ！それはいい。俺も[=Name,NPC_F,2,CallName]を見つけてヤるつもりだ。では。"
+    }
+  },
+
+  "hgbc_phase2_0014": {
+    "ID": "hgbc_phase2_0014",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_phase2_0014a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_phase2_0014a": {
+    "ID": "hgbc_phase2_0014a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_phase2_0014b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "hgbc_phase2_0014b": {
+    "ID": "hgbc_phase2_0014b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0015",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺はステージ上の男たちに加わる。今、２人の男が[=Name,Maid,0,CallName]を犯している。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_phase2_0015": {
+    "ID": "hgbc_phase2_0015",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_phase2_0015a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_phase2_0015a": {
+    "ID": "hgbc_phase2_0015a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0015b",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" },
+        "PosRot": {
+          "PosString": "-0.76, 0.00, -1.31",
+          "RotString": "0, 0.914, 0, -0.407"
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-999, -999, -999",
+          "RotString": "0, 1, 0, 0"
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0015b": {
+    "ID": "hgbc_phase2_0015b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_phase2_0016_Branch",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.86, 2.12, -1.56",
+        "TargetPosString": "0.07, 0.46, -0.65",
+        "AroundAngleString": "64.73, 37.93",
+        "Distance": 2.7
+      }
+    }
+  },
+
+  "hgbc_phase2_0016_Branch": {
+    "ID": "hgbc_phase2_0016_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0017_T_[=PType]",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_phase2_0018": {
+    "ID": "hgbc_phase2_0018",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0019_Branch",
+    "TalkData": {
+      "SpeakerName": "男５",
+      "Text": "お前の体がたまらねぇ！何回射精しでもやりたりねぇよ！おい、俺のチンポはどうだ？気持ちいいだろ？"
+    }
+  },
+
+  "hgbc_phase2_0019_Branch": {
+    "ID": "hgbc_phase2_0019_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0020_T_[=PType]"
+  },
+
+  "hgbc_phase2_0021": {
+    "ID": "hgbc_phase2_0021",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0021a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana_c001.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 4,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "hgbc_phase2_0021a": {
+    "ID": "hgbc_phase2_0021a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0022_Branch",
+    "TalkData": {
+      "SpeakerName": "男６",
+      "Text": "おらっ！出すぞっ！お前が大好きな精液だぞ！欲しいたろ？欲しいならちゃんと言えよ！"
+    }
+  },
+
+  "hgbc_phase2_0022_Branch": {
+    "ID": "hgbc_phase2_0022_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0023_T_[=PType]"
+  },
+
+  "hgbc_phase2_0024": {
+    "ID": "hgbc_phase2_0024",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0025",
+    "TalkData": {
+      "SpeakerName": "男６",
+      "Text": "じゃあ孕ませてあげる！孕めえっ！妊娠しろぉ！"
+    }
+  },
+
+  "hgbc_phase2_0025": {
+    "ID": "hgbc_phase2_0025",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0025a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana_c001.ks",
+        "ScriptLabel": "*射精中",
+        "SexPosID": 4,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "hgbc_phase2_0025a": {
+    "ID": "hgbc_phase2_0025a",
+    "Type": "AddTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_phase2_0026_Branch",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F",
+        "IndexPosition": 0,
+        "BodyTarget": [ "Vagina", "Vagina" ]
+      }
+    ]
+  },
+
+  "hgbc_phase2_0026_Branch": {
+    "ID": "hgbc_phase2_0026_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0027_T_[=PType]"
+  },
+
+  "hgbc_phase2_0028": {
+    "ID": "hgbc_phase2_0028",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0029",
+    "TalkData": {
+      "SpeakerName": "男５",
+      "Text": "よし、交代だ！"
+    }
+  },
+
+  "hgbc_phase2_0029": {
+    "ID": "hgbc_phase2_0029",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0030",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あの…皆さん、[=Name,Maid,0,CallName]の夫です。次は俺の番でいいですか？"
+    }
+  },
+
+  "hgbc_phase2_0030": {
+    "ID": "hgbc_phase2_0030",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0031",
+    "TalkData": {
+      "SpeakerName": "男７",
+      "Text": "おお！エンパイアクラブのオーナーさんですか！奥さんは本当にいい女ですね、羨ましいぞ。さぁ、どうぞどうぞ。"
+    }
+  },
+
+  "hgbc_phase2_0031": {
+    "ID": "hgbc_phase2_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0032",
+    "TalkData": {
+      "SpeakerName": "男８",
+      "Text": "オーナーさん、多勢の人に犯された妻のアソコをどんどん味わえ！きっと気に入るよ！"
+    }
+  },
+
+  "hgbc_phase2_0032": {
+    "ID": "hgbc_phase2_0032",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_phase2_0032a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_phase2_0032a": {
+    "ID": "hgbc_phase2_0032a",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "0",
+    "NextStepID": "hgbc_phase2_0032b"
+  },
+
+  "hgbc_phase2_0032b": {
+    "ID": "hgbc_phase2_0032b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0032c",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "0.00, 0.00, -2.24",
+          "RotString": "0, 1, 0, 0"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "1.16, 0.00, -1.86",
+          "RotString": "0, 0.95570, 0, 0.29433"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0032c": {
+    "ID": "hgbc_phase2_0032c",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_phase2_0032d",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "Owner",
+          "ArrayPosition": 0
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0032d": {
+    "ID": "hgbc_phase2_0032d",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0032e",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 14,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "0.19, 0.00, -0.93",
+          "RotString": "0.0, 1.0, 0.0, 0.0"
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0032e": {
+    "ID": "hgbc_phase2_0032e",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_phase2_0033",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.50, 1.43, -2.10",
+        "TargetPosString": "-0.86, 1.01, -1.62",
+        "AroundAngleString": "52.93, 27.68",
+        "Distance": 0.9
+      }
+    }
+  },
+
+  "hgbc_phase2_0033": {
+    "ID": "hgbc_phase2_0033",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0034_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は[=Name,Maid,0,CallName]を抱いている。彼女の火照った体は汗ばんでおり、たまらない香りを放っていた。そのせいで、俺のチンポは前例のない勃起した。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_phase2_0034_Branch": {
+    "ID": "hgbc_phase2_0034_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0035_T_[=PType]"
+  },
+
+  "hgbc_phase2_0036": {
+    "ID": "hgbc_phase2_0036",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0037_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,Maid,0,CallName]、よくやってくれた。ほら、[=Name,Maid,0,CallName]とヤッた後はみんながこんな快楽を得た。"
+    }
+  },
+
+  "hgbc_phase2_0037_Branch": {
+    "ID": "hgbc_phase2_0037_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0038_T_[=PType]"
+  },
+
+  "hgbc_phase2_0039": {
+    "ID": "hgbc_phase2_0039",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0040",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "今度は俺の番だ。俺たちがどれだけラブラブか、みんなに見せてあげましょう。じゃあ、入れるよ。"
+    }
+  },
+
+  "hgbc_phase2_0040": {
+    "ID": "hgbc_phase2_0040",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0040a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*挿入",
+        "SexPosID": 14,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "hgbc_phase2_0040a": {
+    "ID": "hgbc_phase2_0040a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（おっ！やばい！この精液まみれなアソコがすごく濡れている、ぬるぬるで滑るのでピストンしやすい！今まで[=Name,Maid,0,CallName]と愛し合うとき、こんな感触はなかった！）"
+    }
+  },
+
+  "hgbc_phase2_0041": {
+    "ID": "hgbc_phase2_0041",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0042_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 14,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "hgbc_phase2_0042_Branch": {
+    "ID": "hgbc_phase2_0042_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0050_T_[=PType]"
+  },
+
+  "hgbc_phase2_0053": {
+    "ID": "hgbc_phase2_0053",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0054",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "俺も[=Name,Maid,0,CallName]とするのが大好きだよ！[=Name,Maid,0,CallName]の体は最高だ！"
+    }
+  },
+
+  "hgbc_phase2_0054": {
+    "ID": "hgbc_phase2_0054",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0055_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 14,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "hgbc_phase2_0055_Branch": {
+    "ID": "hgbc_phase2_0055_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0060_T_[=PType]"
+  },
+
+  "hgbc_phase2_0061": {
+    "ID": "hgbc_phase2_0061",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0062a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ１キス",
+        "SexPosID": 14,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "接吻",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0062": {
+    "ID": "hgbc_phase2_0062",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0062a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ、もちろん、キスしよ！愛してるよ！めっちゃ愛してるよ！"
+    }
+  },
+
+  "hgbc_phase2_0062a": {
+    "ID": "hgbc_phase2_0062a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0063_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は貪欲に[=Name,Maid,0,CallName]にキスをしていた。多くのチンポを奉仕してきたその柔らかい唇、今でもとても魅力的です。）"
+    }
+  },
+
+  "hgbc_phase2_0063_Branch": {
+    "ID": "hgbc_phase2_0063_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0070_T_[=PType]"
+  },
+
+  "hgbc_phase2_0072": {
+    "ID": "hgbc_phase2_0072",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0073",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 14,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0073": {
+    "ID": "hgbc_phase2_0073",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0074_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あぁ…ヤバイ！[=Name,Maid,0,CallName]のマンコが気持ち過ぎる！ああぁ…だめだ…もう我慢できん！うぅ…出るぞ！"
+    }
+  },
+
+  "hgbc_phase2_0074_Branch": {
+    "ID": "hgbc_phase2_0074_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0080_T_[=PType]"
+  },
+
+  "hgbc_phase2_0081": {
+    "ID": "hgbc_phase2_0081",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0081a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*射精中",
+        "SexPosID": 14,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0081a": {
+    "ID": "hgbc_phase2_0081a",
+    "Type": "AddTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_phase2_0082_Branch",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F",
+        "IndexPosition": 0,
+        "BodyTarget": [ "Vagina", "Vagina" ]
+      }
+    ]
+  },
+
+  "hgbc_phase2_0082_Branch": {
+    "ID": "hgbc_phase2_0082_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0090_T_[=PType]"
+  },
+
+  "hgbc_phase2_0092": {
+    "ID": "hgbc_phase2_0092",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0093",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ハァ…ハァ…[=Name,Maid,0,CallName]、すごく気持ちよかった……ハァ…ハァ…"
+    }
+  },
+
+  "hgbc_phase2_0093": {
+    "ID": "hgbc_phase2_0093",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0094",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ハァ…でも俺わかるよ、これだけは物足りんでしょ？"
+    }
+  },
+
+  "hgbc_phase2_0094": {
+    "ID": "hgbc_phase2_0094",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_phase2_0095",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_phase2_0095": {
+    "ID": "hgbc_phase2_0095",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_phase2_0096",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "hgbc_phase2_0096": {
+    "ID": "hgbc_phase2_0096",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0097_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺が[=Name,Maid,0,CallName]の足をつかんて持ち上げる。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_phase2_0097_Branch": {
+    "ID": "hgbc_phase2_0097_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0100_T_[=PType]"
+  },
+
+  "hgbc_phase2_0101": {
+    "ID": "hgbc_phase2_0101",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_phase2_0102",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_phase2_0102": {
+    "ID": "hgbc_phase2_0102",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0102a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_haimenekiben.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 100,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ期待",
+          "FaceBlend": "頬３涙０"
+        },
+        "PosRot": {
+          "PosString": "0.19, 0.80, -0.93",
+          "RotString": "0.0, 0.0, 0.0, 1.0"
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0102a": {
+    "ID": "hgbc_phase2_0102a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_phase2_0102b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-2.18, 2.16, -3.37",
+        "TargetPosString": "-0.32, 1.32, -1.44",
+        "AroundAngleString": "43.95, 17.43",
+        "Distance": 2.8
+      }
+    }
+  },
+
+  "hgbc_phase2_0102b": {
+    "ID": "hgbc_phase2_0102b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0103",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "みんな！俺の妻を一緒に犯してくれませんか？今の[=Name,Maid,0,CallName]はもうたった一本のチンポでは満足しないんだ。手伝てくれないか？"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_phase2_0103": {
+    "ID": "hgbc_phase2_0103",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0104",
+    "TalkData": {
+      "SpeakerName": "男９",
+      "Text": "おお！もちろんだ！俺たちがここにいるのは、ここの底なし女たちを満足させるためからな！"
+    }
+  },
+
+  "hgbc_phase2_0104": {
+    "ID": "hgbc_phase2_0104",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0105",
+    "TalkData": {
+      "SpeakerName": "男１０",
+      "Text": "旦那さんからの依頼を受け入れないわけねぇたろ！いいぜ！俺のチンポはいつでも準備ができるよ！"
+    }
+  },
+
+  "hgbc_phase2_0105": {
+    "ID": "hgbc_phase2_0105",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0106",
+    "TalkData": {
+      "SpeakerName": "男１１",
+      "Text": "いい旦那をお持ちじゃないか、[=Name,Maid,0,CallName]ちゃん！彼は自分の楽しみだけでなく、君もイかせるためにこんな頑張ってるよ！"
+    }
+  },
+
+  "hgbc_phase2_0106": {
+    "ID": "hgbc_phase2_0106",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0107",
+    "TalkData": {
+      "SpeakerName": "男１２",
+      "Text": "まさに夫婦の鑑！羨ましいな……もちろん手伝うよ！必ず奥さんを満足させてみせる！"
+    }
+  },
+
+  "hgbc_phase2_0107": {
+    "ID": "hgbc_phase2_0107",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0108",
+    "TalkData": {
+      "SpeakerName": "男１３",
+      "Text": "へへぇ、オーナーさん、一緒に奥さんがチンポがなければ生きられない体にするぜ！"
+    }
+  },
+
+  "hgbc_phase2_0108": {
+    "ID": "hgbc_phase2_0108",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0109",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ、ありがとう、みんな！"
+    }
+  },
+
+  "hgbc_phase2_0109": {
+    "ID": "hgbc_phase2_0109",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_phase2_0110",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_phase2_0110": {
+    "ID": "hgbc_phase2_0110",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "0",
+    "NextStepID": "hgbc_phase2_0110a"
+  },
+
+  "hgbc_phase2_0110a": {
+    "ID": "hgbc_phase2_0110a",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_phase2_0110b",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "Owner",
+          "ArrayPosition": 0
+        },
+        "Man2": {
+          "Type": "M",
+          "ArrayPosition": 12
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0110b": {
+    "ID": "hgbc_phase2_0110b",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0110c",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ期待",
+          "FaceBlend": "頬３涙０"
+        },
+        "PosRot": {
+          "PosString": "0.19, 0.00, -0.93",
+          "RotString": "0.0, 1.0, 0.0, 0.0"
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0110c": {
+    "ID": "hgbc_phase2_0110c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0111",
+    "TalkData": {
+      "SpeakerName": "男１１",
+      "Text": "よし、ヤるぞ、旦那さん！"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_phase2_0111": {
+    "ID": "hgbc_phase2_0111",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0112_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ、頼むだ！"
+    }
+  },
+
+  "hgbc_phase2_0112_Branch": {
+    "ID": "hgbc_phase2_0112_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0120_T_[=PType]"
+  },
+
+  "hgbc_phase2_0121": {
+    "ID": "hgbc_phase2_0121",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0122",
+    "TalkData": {
+      "SpeakerName": "男１１",
+      "Text": "言ったな！じゃ、遠慮なく！"
+    }
+  },
+
+  "hgbc_phase2_0122": {
+    "ID": "hgbc_phase2_0122",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0123",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "入れるよ、[=Name,Maid,0,CallName]の大好きのチンポだ！"
+    }
+  },
+
+  "hgbc_phase2_0123": {
+    "ID": "hgbc_phase2_0123",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0124_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*挿入",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0124_Branch": {
+    "ID": "hgbc_phase2_0124_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0130_T_[=PType]"
+  },
+
+  "hgbc_phase2_0131": {
+    "ID": "hgbc_phase2_0131",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0131a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0131a": {
+    "ID": "hgbc_phase2_0131a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0132",
+    "TalkData": {
+      "SpeakerName": "男１１",
+      "Text": "[=Name,Maid,0,CallName]ちゃん、キスしないか？大好きな旦那さんの目の前に俺とキスしよ！そうしたら間違いなく旦那さんのチンポはもっと硬くなるよ！"
+    }
+  },
+
+  "hgbc_phase2_0132": {
+    "ID": "hgbc_phase2_0132",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0133_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*激しさ１キス",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "接吻",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0133_Branch": {
+    "ID": "hgbc_phase2_0133_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0140_T_[=PType]"
+  },
+
+  "hgbc_phase2_0141": {
+    "ID": "hgbc_phase2_0141",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0142",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "いいねぇ…いいねぇ！この背徳感！すごくいい！"
+    }
+  },
+
+  "hgbc_phase2_0142": {
+    "ID": "hgbc_phase2_0142",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0143",
+    "TalkData": {
+      "SpeakerName": "男１１",
+      "Text": "本当に俺の言った通りにした、[=Name,Maid,0,CallName]ちゃん！すげぇエッチな子だね！気持ち良くなるならなんでもやるじゃないか！"
+    }
+  },
+
+  "hgbc_phase2_0143": {
+    "ID": "hgbc_phase2_0143",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0144_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0144_Branch": {
+    "ID": "hgbc_phase2_0144_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0150_T_[=PType]"
+  },
+
+  "hgbc_phase2_0151": {
+    "ID": "hgbc_phase2_0151",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0152",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "いいよ、エッチな子でもいいよ！俺は[=Name,Maid,0,CallName]がどんな淫乱でも受け入れるよ！どんどん淫乱女になってもいいよ！"
+    }
+  },
+
+  "hgbc_phase2_0152": {
+    "ID": "hgbc_phase2_0152",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0153_Branch",
+    "TalkData": {
+      "SpeakerName": "男１１",
+      "Text": "おおっ！じゃあ、[=Name,Maid,0,CallName]ちゃん、俺のチンポでどう感じたか、旦那さんに報告してみてぇ！"
+    }
+  },
+
+  "hgbc_phase2_0153_Branch": {
+    "ID": "hgbc_phase2_0153_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0160_T_[=PType]"
+  },
+
+  "hgbc_phase2_0161": {
+    "ID": "hgbc_phase2_0161",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0162_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "夫として負けてられないな！[=Name,Maid,0,CallName]、もっともっと行くよ！"
+    }
+  },
+
+  "hgbc_phase2_0162_Branch": {
+    "ID": "hgbc_phase2_0162_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0170_T_[=PType]"
+  },
+
+  "hgbc_phase2_0171": {
+    "ID": "hgbc_phase2_0171",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0172_Branch",
+    "TalkData": {
+      "SpeakerName": "男１１",
+      "Text": "おい！マンコ緩めるな！俺が射精するまでギュウギュウに締めろ！次の人を待たせるな！"
+    }
+  },
+
+  "hgbc_phase2_0172_Branch": {
+    "ID": "hgbc_phase2_0172_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0180_T_[=PType]"
+  },
+
+  "hgbc_phase2_0181": {
+    "ID": "hgbc_phase2_0181",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0182",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0182": {
+    "ID": "hgbc_phase2_0182",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0183_Branch",
+    "TalkData": {
+      "SpeakerName": "男１１",
+      "Text": "うおっ！めっちゃくちゃきつい！いいぜ、ご褒美だ！ほら出すぞ！お前の大好きな精液だぞ！"
+    }
+  },
+
+  "hgbc_phase2_0183_Branch": {
+    "ID": "hgbc_phase2_0183_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0190_T_[=PType]"
+  },
+
+  "hgbc_phase2_0191": {
+    "ID": "hgbc_phase2_0191",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase2_0192",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*射精中",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_phase2_0192": {
+    "ID": "hgbc_phase2_0192",
+    "Type": "AddTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_phase2_0193_Branch",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F",
+        "IndexPosition": 0,
+        "BodyTarget": [ "Vagina", "Vagina" ]
+      }
+    ]
+  },
+
+  "hgbc_phase2_0193_Branch": {
+    "ID": "hgbc_phase2_0193_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_phase2_0200_T_[=PType]"
+  },
+
+  "hgbc_phase2_0201": {
+    "ID": "hgbc_phase2_0201",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_hide_kamikawara",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,Maid,0,CallName]、休む時間を与えないぞ！まだまだこれからだ！"
+    }
+  },
+
+
+  "hgbc_intro_hide_kamikawara": {
+    "ID": "hgbc_intro_hide_kamikawara",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_intro_yotogiplay_phase2_closepanel",
+    "CharaData": [
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": false
+      }
+    ]
+  },
+
+  "hgbc_intro_yotogiplay_phase2_closepanel": {
+    "ID": "hgbc_intro_yotogiplay_phase1_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_start_yotogiplay_phase2"
+  },
+
+
+
+  "hgbc_start_yotogiplay_phase2": {
+    "ID": "hgbc_start_yotogiplay_phase2",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "HappyGBClub",
+      "Phase": 2,
+      "IsKeepCharacterVisibleAfterYotogi": false,
+      "IsFinalYotogi": false,
+      "IsClubOwnerMainCharacter": true
+    },
+    "NextStepID": "hgbc_phase3_init"
+  }
+}

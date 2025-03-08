@@ -28,7 +28,8 @@ namespace COM3D2.WildParty.Plugin
             public int ExtraManCount = 0;
             public bool IsAutomatedGroup = true;            //True: Use the BackgroundGroupMotionManager logic; False: Static motion
             public bool MaidFromNPC = false;                //True: Get the maid from NPCList; False: Get the maid from YotogiWorkingMaidList
-            public bool IsVoicelessGroup = false;                //True: No Voice in yotogi scene; False: Play Voice according to personality id in yotogi scene
+            public bool IsVoicelessGroup = false;           //True: No Voice in yotogi scene; False: Play Voice according to personality id in yotogi scene
+            public string ClothesSet = "";                  //ID from ClothesSet.json ; Empty string: no change;
         }
 
         internal class MovingQueueSetupData

@@ -138,11 +138,9 @@ namespace ScenarioResources {
         ///    &quot;NextStepID&quot;: &quot;hgbc_intro_cafe_0001b&quot;,
         ///    &quot;CameraData&quot;: {
         ///      &quot;FixedPointData&quot;: {
-        ///        &quot;PosX&quot;: 999,
-        ///        &quot;PosY&quot;: 999,
-        ///        &quot;PosZ&quot;: 999,
-        ///        &quot;TargetPosX&quot;: 1000,
-        ///        &quot;TargetPosY [rest of string was truncated]&quot;;.
+        ///        &quot;PosString&quot;: &quot;999,999,999&quot;,
+        ///        &quot;TargetPosString&quot;: &quot;1000,1000,1000&quot;,
+        ///        &quot;AroundAngleString&quot;: &quot;0 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string HappyGBClubADVIntroCafe {
             get {
@@ -167,11 +165,9 @@ namespace ScenarioResources {
         ///    &quot;NextStepID&quot;: &quot;hgbc_intro_lakeside_0001b&quot;,
         ///    &quot;CameraData&quot;: {
         ///      &quot;FixedPointData&quot;: {
-        ///        &quot;PosX&quot;: 999,
-        ///        &quot;PosY&quot;: 999,
-        ///        &quot;PosZ&quot;: 999,
-        ///        &quot;TargetPosX&quot;: 1000,
-        ///    [rest of string was truncated]&quot;;.
+        ///        &quot;PosString&quot;: &quot;999,999,999&quot;,
+        ///        &quot;TargetPosString&quot;: &quot;1000,1000,1000&quot;,
+        ///        &quot;Around [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string HappyGBClubADVIntroLakeside {
             get {
@@ -200,63 +196,72 @@ namespace ScenarioResources {
         ///  &quot;hgbc_intro_poledancestage_0001b&quot;: {
         ///    &quot;ID&quot;: &quot;hgbc_intro_pole [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string HappyGBClubADVIntroPhase2 {
-            get {
-                return ResourceManager.GetString("HappyGBClubADVIntroPhase2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {
-        ///  &quot;hgbc_intro_poledancestage_0001&quot;: {
-        ///    &quot;ID&quot;: &quot;hgbc_intro_poledancestage_0001&quot;,
-        ///    &quot;Type&quot;: &quot;BG&quot;,
-        ///    &quot;Tag&quot;: &quot;poledancestage&quot;,
-        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_poledancestage_0001a&quot;
-        ///  },
-        ///
-        ///  &quot;hgbc_intro_poledancestage_0001a&quot;: {
-        ///    &quot;ID&quot;: &quot;hgbc_intro_poledancestage_0001a&quot;,
-        ///    &quot;Type&quot;: &quot;BGM&quot;,
-        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
-        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_poledancestage_0001b&quot;
-        ///  },
-        ///
-        ///  &quot;hgbc_intro_poledancestage_0001b&quot;: {
-        ///    &quot;ID&quot;: &quot;hgbc_intro_pole [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string HappyGBClubADVIntroPhase3 {
-            get {
-                return ResourceManager.GetString("HappyGBClubADVIntroPhase3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {
-        ///  &quot;hgbc_intro_poledancestage_0001&quot;: {
-        ///    &quot;ID&quot;: &quot;hgbc_intro_poledancestage_0001&quot;,
-        ///    &quot;Type&quot;: &quot;BG&quot;,
-        ///    &quot;Tag&quot;: &quot;poledancestage&quot;,
-        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_poledancestage_0001a&quot;
-        ///  },
-        ///
-        ///  &quot;hgbc_intro_poledancestage_0001a&quot;: {
-        ///    &quot;ID&quot;: &quot;hgbc_intro_poledancestage_0001a&quot;,
-        ///    &quot;Type&quot;: &quot;BGM&quot;,
-        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
-        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_poledancestage_0001b&quot;
-        ///  },
-        ///
-        ///  &quot;hgbc_intro_poledancestage_0001b&quot;: {
-        ///    &quot;ID&quot;: &quot;hgbc_intro_pole [rest of string was truncated]&quot;;.
-        /// </summary>
         internal static string HappyGBClubADVIntroPoleDanceStage {
             get {
                 return ResourceManager.GetString("HappyGBClubADVIntroPoleDanceStage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///
+        ///  &quot;hgbc_phase2_init&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_phase2_init&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_phase2_0001&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Owner&quot;,
+        ///      &quot;Text&quot;: &quot;This is after yotogi 1&quot;
+        ///    },
+        ///
+        ///    &quot;FadeData&quot;: {
+        ///      &quot;IsFadeIn&quot;: true,
+        ///      &quot;IsFadeOut&quot;: false
+        ///    }
+        ///  },
+        ///
+        ///  &quot;hgbc_phase2_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_poledancestage_0001a&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_star [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADVPhase2 {
+            get {
+                return ResourceManager.GetString("HappyGBClubADVPhase2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_phase3_init&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_phase3_init&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_phase3_0001&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Owner&quot;,
+        ///      &quot;Text&quot;: &quot;This is after yotogi 2&quot;
+        ///    },
+        ///
+        ///    &quot;FadeData&quot;: {
+        ///      &quot;IsFadeIn&quot;: true,
+        ///      &quot;IsFadeOut&quot;: false
+        ///    }
+        ///  },
+        ///
+        ///  &quot;hgbc_phase3_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_phase3_0001&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_start_yotogiplay_phas [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADVPhase3 {
+            get {
+                return ResourceManager.GetString("HappyGBClubADVPhase3", resourceCulture);
             }
         }
     }
