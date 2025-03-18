@@ -88,6 +88,12 @@ namespace COM3D2.WildParty.Plugin.Core
                         case Constant.ADVType.RemoveTexture:
                             ProcessADVRemoveTexture(instance, thisStep);
                             break;
+                        case Constant.ADVType.AddObject:
+                            ProcessADVAddObject(instance, thisStep);
+                            break;
+                        case Constant.ADVType.RemoveObject:
+                            ProcessADVRemoveObject(instance, thisStep);
+                            break;
                         case Constant.ADVType.Shuffle:
                             ProcessADVShuffle(instance, thisStep);
                             break;
@@ -123,6 +129,7 @@ namespace COM3D2.WildParty.Plugin.Core
                                     ADVSceneProceedToNextStep();
                                 };
                             }
+                            CharacterHandling.StopAllMaidSound();
                             GameMain.Instance.MainCamera.FadeOut(f_dg: dg);
                         }
                     }
@@ -158,7 +165,7 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             CharacterHandling.InitSelectedMaids();
             CharacterHandling.BackupManOrder();
-            
+
             if (step.CharaInitData.ManRequired >= 0)
                 StateManager.Instance.MaxManUsed = step.CharaInitData.ManRequired;
             
@@ -168,14 +175,14 @@ namespace COM3D2.WildParty.Plugin.Core
                 var man = Core.CharacterHandling.InitMan(i, step.CharaInitData.ValidManType);
                 StateManager.Instance.MenList.Add(man);
             }
-
+            
             //init the club owner
             StateManager.Instance.ClubOwner = StateManager.Instance.OriginalManOrderList[0];
             StateManager.Instance.ClubOwner.Visible = true;
             StateManager.Instance.ClubOwner.DutPropAll();
             StateManager.Instance.ClubOwner.AllProcPropSeqStart();
             StateManager.Instance.ClubOwner.transform.localPosition = new Vector3(-999f, -999f, -999f);
-
+            
             StateManager.Instance.SpoofActivateMaidObjectFlag = true;
             if (!step.CharaInitData.IsClubOwnerADVMainCharacter)
             {
@@ -194,13 +201,14 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.NPCList = new List<Maid>();
             if (step.CharaInitData.NPC != null)
             {
-                foreach (var npcRequest in step.CharaInitData.NPC) {
+                foreach (var npcRequest in step.CharaInitData.NPC)
+                {
                     Maid npc = CharacterHandling.InitNPCMaid(npcRequest.Preset, npcRequest.EmptyLastName);
                     StateManager.Instance.NPCList.Insert(npcRequest.Index, npc);
-                    
+
                 }
             }
-
+            
             if (step.CharaInitData.ModNPC != null)
             {
                 foreach (var modNPCRequest in step.CharaInitData.ModNPC)
@@ -305,6 +313,11 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
 
             }
+
+            if(step.CameraData.LockCamera != null)
+            {
+                GameMain.Instance.MainCamera.SetControl(!step.CameraData.LockCamera.IsLock);
+            }
         }
 
         private static void ProcessADVLoadScene(ADVKagManager instance, ADVStep step)
@@ -360,6 +373,20 @@ namespace COM3D2.WildParty.Plugin.Core
                         if (StateManager.Instance.ClubOwner != null)
                         {
                             SetADVCharaDataToCharacter(StateManager.Instance.ClubOwner, step.CharaData[i], true);
+                        }
+                    }
+                    else if (step.CharaData[i].Type == Constant.TargetType.AllNPCFemale)
+                    {
+                        foreach (var maid in StateManager.Instance.NPCList)
+                        {
+                            SetADVCharaDataToCharacter(maid, step.CharaData[i], false);
+                        }
+                    }
+                    else if (step.CharaData[i].Type == Constant.TargetType.AllNPCMale)
+                    {
+                        foreach (var man in StateManager.Instance.NPCManList)
+                        {
+                            SetADVCharaDataToCharacter(man, step.CharaData[i], true);
                         }
                     }
                     else
@@ -576,9 +603,9 @@ namespace COM3D2.WildParty.Plugin.Core
                     if (step.GroupData[i].UseRandomPick)
                         targetGroupIndex = StateManager.Instance.RandomPickIndexList[step.GroupData[i].ArrayPosition];
 
-                    
+
                     PartyGroup group = StateManager.Instance.PartyGroupList[targetGroupIndex];
-                    
+
                     if (!string.IsNullOrEmpty(step.GroupData[i].ScriptFile) && !string.IsNullOrEmpty(step.GroupData[i].ScriptLabel))
                     {
                         string manID = "";
@@ -591,10 +618,10 @@ namespace COM3D2.WildParty.Plugin.Core
                         }
 
                         CharacterHandling.LoadMotionScript(0, false, step.GroupData[i].ScriptFile, step.GroupData[i].ScriptLabel, group.Maid1.status.guid, manID,
-                            false, false, false, false);
+                            false, true, false, false);
 
                     }
-                    
+
                     ProcessADVGroupIndividual(group.Maid1, step.GroupData[i].Maid1);
                     ProcessADVGroupIndividual(group.Maid2, step.GroupData[i].Maid2);
                     ProcessADVGroupIndividual(group.Man1, step.GroupData[i].Man1);
@@ -613,11 +640,11 @@ namespace COM3D2.WildParty.Plugin.Core
                         if (group.Man3 != null)
                             StateManager.Instance.WaitForFullLoadList.Add(group.Man3);
                     }
-                    
+
                     group.GroupOffsetVector = Vector3.zero;
                     if (step.GroupData[i].PosRot != null)
                         group.SetGroupPosition(step.GroupData[i].PosRot.Pos, step.GroupData[i].PosRot.Rot);
-                    
+
                     group.SetGroupPosition();
 
                     if (step.GroupData[i].BlockInputUntilMotionChange)
@@ -650,7 +677,6 @@ namespace COM3D2.WildParty.Plugin.Core
                     speakerName = GameMain.Instance.CharacterMgr.status.playerName;
                     break;
                 case Constant.ADVTalkSpearkerType.SelectedMaid:
-                    //Maid mainMaid = GameMain.Instance.CharacterMgr.GetMaid(0);
                     Maid mainMaid = StateManager.Instance.SelectedMaidsList[0];
                     lstMaidToSpeak = new List<Maid>() { mainMaid };
                     speakerName = mainMaid.status.callName;
@@ -678,7 +704,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     speakerName = step.TalkData.SpeakerName;
                     break;
             }
-            
+
             if (lstMaidToSpeak == null)
             {
                 //there is no audio to be played in this step, narrative or a man speaking
@@ -700,7 +726,7 @@ namespace COM3D2.WildParty.Plugin.Core
                         voiceInfo = step.TalkData.VoiceData.First().Value;
                     else
                     {
-                        if(step.TalkData.VoiceData.ContainsKey(Util.GetPersonalityNameByValue(maid.status.personal.id)))
+                        if (step.TalkData.VoiceData.ContainsKey(Util.GetPersonalityNameByValue(maid.status.personal.id)))
                             voiceInfo = step.TalkData.VoiceData[Util.GetPersonalityNameByValue(maid.status.personal.id)];
                     }
 
@@ -722,7 +748,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 if (!isAll)
                 {
                     string voiceFile = "";
-                    if(voiceInfo != null)
+                    if (voiceInfo != null)
                         voiceFile = voiceInfo.VoiceFile;
                     //if it is chopped we use the id instead to reload from our own subclip library
                     if (isAudioChopped)
@@ -746,10 +772,10 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             text = PrepareCharacterNameText(text);
             text = PrepareRandomGroupCharacterName(text);
-            
+
             text = text.Replace(Constant.JsonReplaceTextLabels.ClubName, GameMain.Instance.CharacterMgr.status.clubName);
             text = text.Replace(Constant.JsonReplaceTextLabels.ClubOwnerName, GameMain.Instance.CharacterMgr.status.playerName);
-            
+
             return text;
         }
 
@@ -789,11 +815,11 @@ namespace COM3D2.WildParty.Plugin.Core
                     return text;
 
                 Maid maid = sourceList[int.Parse(match.Groups[2].Value)];
-                
+
                 string displayName = "";
                 if (match.Groups[3].Value == Constant.JsonReplaceTextLabels.CharacterNameDisplayType.FullName)
                 {
-                    if(Product.isJapan)
+                    if (Product.isJapan)
                         displayName = maid.status.fullNameJpStyle;
                     else
                         displayName = maid.status.fullNameEnStyle;
@@ -808,7 +834,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     displayName = maid.status.callName;
 
                 text = text.Replace(match.Groups[0].Value, displayName);
-                
+
             }
 
             return text;
@@ -864,10 +890,10 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.BranchIndex = step.CharaData[0].ArrayPosition;
 
             string personalityName = Util.GetPersonalityNameByValue(StateManager.Instance.SelectedMaidsList[step.CharaData[0].ArrayPosition].status.personal.id);
-            
+
             string nextStepID = step.NextStepID;
             nextStepID = nextStepID.Replace(Constant.JsonReplaceTextLabels.PersonalityType, personalityName);
-            
+
             ADVSceneProceedToNextStep(nextStepID);
         }
 
@@ -908,10 +934,10 @@ namespace COM3D2.WildParty.Plugin.Core
                 foreach (ADVStep.MakeGroupFormat groupInfo in step.GroupFormat)
                 {
                     PartyGroup group;
-                    
+
                     while (StateManager.Instance.PartyGroupList.Count <= groupInfo.GroupIndex)
                         StateManager.Instance.PartyGroupList.Add(new PartyGroup());
-                    
+
                     group = new PartyGroup();
                     StateManager.Instance.PartyGroupList[groupInfo.GroupIndex] = group;
 
@@ -924,7 +950,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
                     group.GroupOffsetVector = Vector3.zero;
                     group.SetGroupPosition(group.Maid1.transform.position, group.Maid1.transform.rotation);
-                   
+
                 }
             }
 
@@ -937,7 +963,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             if (isMan)
             {
-                if(requestInfo.Type == ADVStep.MakeGroupFormat.MemberType.Owner)
+                if (requestInfo.Type == ADVStep.MakeGroupFormat.MemberType.Owner)
                     return StateManager.Instance.ClubOwner;
                 else if (requestInfo.Type == ADVStep.MakeGroupFormat.MemberType.NPC)
                     return StateManager.Instance.NPCManList[requestInfo.ArrayPosition];
@@ -957,7 +983,7 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             if (step.Tag == "ALL")
             {
-                foreach(var group in StateManager.Instance.PartyGroupList)
+                foreach (var group in StateManager.Instance.PartyGroupList)
                     group.DetachAllIK();
                 StateManager.Instance.PartyGroupList.Clear();
             }
@@ -968,7 +994,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 StateManager.Instance.PartyGroupList.RemoveAt(groupIndex);
             }
         }
-        
+
         private static void ProcessADVAddTexture(ADVKagManager instance, ADVStep step)
         {
             if (step.TextureData != null)
@@ -1000,7 +1026,7 @@ namespace COM3D2.WildParty.Plugin.Core
                                     CharacterHandling.AddSemenTexture(maid, ModUseData.SemenPatternList[bodyPart]);
                         }
 
-                        
+
                     }
                 }
             }
@@ -1034,15 +1060,46 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
+        private static void ProcessADVAddObject(ADVKagManager instance, ADVStep step)
+        {
+            if(step.WorldObjectData != null)
+            {
+                foreach(var objData in step.WorldObjectData)
+                {
+                    GameObject addedObject = GameMain.Instance.BgMgr.AddPrefabToBg(objData.Src, objData.ObjectID, "", Vector3.zero, Vector3.zero);
+
+                    if (addedObject != null)
+                    {
+                        addedObject.transform.position = objData.PosRot.Pos;
+                        addedObject.transform.rotation = objData.PosRot.Rot;
+
+                        StateManager.Instance.AddedGameObjectList.Add(objData.ObjectID, addedObject);
+                    }
+                }
+            }
+        }
+
+        private static void ProcessADVRemoveObject(ADVKagManager instance, ADVStep step)
+        {
+            if (step.WorldObjectData != null)
+            {
+                foreach (var objData in step.WorldObjectData)
+                {
+                    GameMain.Instance.BgMgr.DelPrefabFromBg(objData.ObjectID);
+                    
+                    StateManager.Instance.AddedGameObjectList.Remove(objData.ObjectID);
+                }
+            }
+        }
+
         private static void ProcessADVShuffle(ADVKagManager instance, ADVStep step)
         {
-            if(step.ShuffleData != null)
+            if (step.ShuffleData != null)
             {
                 List<Maid> targetList = null;
                 if (step.ShuffleData.TargetList == Constant.TargetType.AllMaids)
                     targetList = StateManager.Instance.SelectedMaidsList;
                 else if (step.ShuffleData.TargetList == Constant.TargetType.AllMen)
-                    //...Seems never have a situation like this as all men are generated? Anyway implement it just in case
                     targetList = StateManager.Instance.MenList;
                 else
                     return;
@@ -1053,7 +1110,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 {
                     foreach (int index in step.ShuffleData.KeepPosition)
                         keepPositionList.Add(index, targetList[index]);
-                    
+
                     foreach (var kvp in keepPositionList)
                         targetList.Remove(kvp.Value);
                 }
@@ -1068,7 +1125,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 if (step.ShuffleData.TargetList == Constant.TargetType.AllMaids)
                     StateManager.Instance.SelectedMaidsList = targetList;
                 else if (step.ShuffleData.TargetList == Constant.TargetType.AllMen)
-                    StateManager.Instance.MenList = targetList ;
+                    StateManager.Instance.MenList = targetList;
 
             }
         }
@@ -1083,7 +1140,12 @@ namespace COM3D2.WildParty.Plugin.Core
                     {
                         Maid maid;
                         List<Maid> targetList;
-                        if (addData.Type == Constant.TargetType.NPCMale)
+                        if (addData.Type == Constant.TargetType.ClubOwner)
+                        {
+                            maid = StateManager.Instance.ClubOwner;
+                            targetList = StateManager.Instance.MenList;
+                        }
+                        else if (addData.Type == Constant.TargetType.NPCMale)
                         {
                             maid = StateManager.Instance.NPCManList[addData.SrcPosition];
                             targetList = StateManager.Instance.MenList;
@@ -1106,7 +1168,12 @@ namespace COM3D2.WildParty.Plugin.Core
                     {
                         Maid maid;
                         List<Maid> targetList;
-                        if (removeData.Type == Constant.TargetType.NPCMale)
+                        if (removeData.Type == Constant.TargetType.ClubOwner)
+                        {
+                            maid = StateManager.Instance.ClubOwner;
+                            targetList = StateManager.Instance.MenList;
+                        }
+                        else if (removeData.Type == Constant.TargetType.NPCMale)
                         {
                             maid = StateManager.Instance.NPCManList[removeData.SrcPosition];
                             targetList = StateManager.Instance.MenList;
@@ -1132,12 +1199,14 @@ namespace COM3D2.WildParty.Plugin.Core
 
         internal static void ADVSceneProceedToNextStep(string nextStepID = "")
         {
-            
+            if (StateManager.Instance.UndergoingModEventID <= 0 || string.IsNullOrEmpty(StateManager.Instance.CurrentADVStepID))
+                return;
+
             if (nextStepID == "")
                 StateManager.Instance.CurrentADVStepID = ModUseData.ADVStepData[StateManager.Instance.UndergoingModEventID][StateManager.Instance.CurrentADVStepID].NextStepID;
             else
                 StateManager.Instance.CurrentADVStepID = nextStepID;
-            
+
             StateManager.Instance.WaitForUserClick = false;
             StateManager.Instance.WaitForUserInput = false;
             StateManager.Instance.WaitForCameraPanFinish = false;
@@ -1189,7 +1258,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
         private static void CheckTimeWaitFinish()
         {
-            if(DateTime.Now > StateManager.Instance.ADVResumeTime && StateManager.Instance.ADVResumeTime != DateTime.MinValue)
+            if (DateTime.Now > StateManager.Instance.ADVResumeTime && StateManager.Instance.ADVResumeTime != DateTime.MinValue)
             {
                 StateManager.Instance.ADVResumeTime = DateTime.MinValue;
                 ADVSceneProceedToNextStep();

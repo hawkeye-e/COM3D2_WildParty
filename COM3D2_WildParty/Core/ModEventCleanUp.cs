@@ -14,12 +14,16 @@ namespace COM3D2.WildParty.Plugin.Core
             RemoveAddedStockMan(StateManager.Instance.MenList);
             RemoveAddedStockMan(StateManager.Instance.NPCManList);
 
+            ResetAllMaid();
+
             UnloadCharacters(StateManager.Instance.SelectedMaidsList, Constant.CharacterType.Maid);
             if (StateManager.Instance.ClubOwner != null && StateManager.Instance.MenList != null)
                 StateManager.Instance.MenList.Add(StateManager.Instance.ClubOwner);
             UnloadCharacters(StateManager.Instance.MenList, Constant.CharacterType.Man);
             UnloadCharacters(StateManager.Instance.NPCList, Constant.CharacterType.NPC);
             UnloadCharacters(StateManager.Instance.NPCManList, Constant.CharacterType.Man);
+            
+            RemoveAddedObjects();
 
             RestoreBackupData();
             
@@ -103,7 +107,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     
                     GameMain.Instance.CharacterMgr.CharaVisible(i, false, true);
                 }
-            }
+            }  
         }
 
         private static void ResetAllState()
@@ -132,11 +136,16 @@ namespace COM3D2.WildParty.Plugin.Core
             Util.ClearGenericCollection(PartyGroup.SharedExtraManSetupInfo);
 
             Util.ClearGenericCollection(StateManager.Instance.TimeEndTriggerList);
+            Util.ClearGenericCollection(StateManager.Instance.AddedGameObjectList);
+
+            Util.ClearGenericCollection(StateManager.Instance.BackupMaidClothingList);
 
             StateManager.Instance.RequireCheckModdedSceneFlag = false;
             StateManager.Instance.WaitForCharactersFullLoadFlag = false;
             StateManager.Instance.RequireInjectCommandButtons = false;
             StateManager.Instance.SpoofChangeBackgroundFlag = false;
+
+            StateManager.Instance.IsMotionKagSetPosition = false;
 
             StateManager.Instance.YotogiManager = null;
             StateManager.Instance.YotogiCommandFactory = null;
@@ -146,11 +155,13 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.AnimationChangeTrigger = null;
             StateManager.Instance.VoiceLoopTrigger = null;
 
+            StateManager.Instance.CurrentMotionKagHandlingGroup = null;
+
             StateManager.Instance.CurrentADVStepID = "";
             StateManager.Instance.ProcessedADVStepID = "";
             StateManager.Instance.processingMaidGUID = "";
             StateManager.Instance.processingManGUID = "";
-        }
+    }
 
 
         internal static void RemoveMaidsFromSelectionList(List<Maid> maidList)
@@ -158,6 +169,21 @@ namespace COM3D2.WildParty.Plugin.Core
             foreach (var maid in maidList)
             {
                 SceneCharacterSelect.chara_guid_stock_list.Remove(maid.status.guid);
+            }
+        }
+
+        private static void RemoveAddedObjects()
+        {
+            foreach(var kvp in StateManager.Instance.AddedGameObjectList)
+                GameMain.Instance.BgMgr.DelPrefabFromBg(kvp.Key);
+        }
+
+        private static void ResetAllMaid()
+        {
+            foreach (Maid maid in StateManager.Instance.SelectedMaidsList)
+            {
+                CharacterHandling.RestoreMaidClothesInfo(maid);
+                maid.ResetAll();
             }
         }
     }

@@ -34,6 +34,7 @@ namespace COM3D2.WildParty.Plugin
         public SE SEData;
         public Shuffle ShuffleData;                 //This need to be placed after CharaInit
         public ListUpdate ListUpdateData;           //For adding or removing the NPC from the list to include or exclude them from yotogi scene
+        public List<WorldObject> WorldObjectData;
 
         public RandomPick PickData;             //This is for ordering to randomly pick some characters for later adv processing
         public List<MakeGroupFormat> GroupFormat;     //Assign group to perform group motion in ADV scene etc
@@ -71,6 +72,12 @@ namespace COM3D2.WildParty.Plugin
             public LookAtType LookAtData;               //Mainly used for situation where random character placement is involved and want to focus on certain character
             public CameraMoveType MoveType = CameraMoveType.Instant;
             public float AnimationTime = 2f;            //For Camera pan use only
+            public LockCameraInfo LockCamera;
+
+            internal class LockCameraInfo
+            {
+                public bool IsLock = false;
+            }
 
             internal enum CameraType
             {
@@ -164,7 +171,7 @@ namespace COM3D2.WildParty.Plugin
 
             public EyeSightSetting EyeSight;
             public ExtraObjectsSetting ExtraObjectsInfo;
-            public string ClothesSetID;
+            public string ClothesSetID;                                 //Special ID: "RESET", reset all applied ClothesSetID. Otherwise follows ClothesSet.json
         }
 
         internal class ShowGroupMotion
@@ -287,6 +294,14 @@ namespace COM3D2.WildParty.Plugin
             public List<ExtraItemObject> AddObjects;
             public List<string> RemoveObjects;     //For remove, only need to provide the Target
         }
+
+        internal class WorldObject
+        {
+            public string Src;
+            public string ObjectID;                 //Used for removing the object
+            public PosRot PosRot;
+        }
+
 #pragma warning restore 0649
     }
 }

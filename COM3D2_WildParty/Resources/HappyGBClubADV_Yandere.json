@@ -1,9 +1,9 @@
 {
-  "hgbc_intro_0034_M_Muku": {
-    "ID": "hgbc_intro_0034_M_Muku",
+  "hgbc_intro_0034_M_Yandere": {
+    "ID": "hgbc_intro_0034_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "hgbc_intro_0034_T_Muku",
+    "NextStepID": "hgbc_intro_0034_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -19,30 +19,31 @@
     ]
   },
 
-  "hgbc_intro_0034_T_Muku": {
-    "ID": "hgbc_intro_0034_T_Muku",
+  "hgbc_intro_0034_T_Yandere": {
+    "ID": "hgbc_intro_0034_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_0040",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ちょっと、思うところはあったんだけど……ほんの少しだけ、興味もあったし……いいかなって……",
+      "Text": "……私も考えたのですけれど……こういうことに、興味がなかった訳ではありませんし……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27277.ogg",
-          "IsChoppingAudio": false
+        "Yandere": {
+          "VoiceFile": "S3_Y_108476.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 8.4
         }
       }
     }
   },
 
 
-  "hgbc_intro_0044_M_Muku": {
-    "ID": "hgbc_intro_0044_M_Muku",
+  "hgbc_intro_0044_M_Yandere": {
+    "ID": "hgbc_intro_0044_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "hgbc_intro_0044_T_Muku",
+    "NextStepID": "hgbc_intro_0044_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -57,46 +58,46 @@
     ]
   },
 
-  "hgbc_intro_0044_T_Muku": {
-    "ID": "hgbc_intro_0044_T_Muku",
+  "hgbc_intro_0044_T_Yandere": {
+    "ID": "hgbc_intro_0044_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_0050",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "うん！",
+      "Text": "はい！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24803.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_108113.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 0.8
+          "EndTime": 1
         }
       }
     }
   },
 
-  "hgbc_intro_lakeside_0006_T_Muku": {
-    "ID": "hgbc_intro_lakeside_0006_T_Muku",
+  "hgbc_intro_lakeside_0006_T_Yandere": {
+    "ID": "hgbc_intro_lakeside_0006_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_lakeside_0010",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "おはようございます。",
+      "Text": "おはようございます…",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62661.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53436.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 3.5
+          "StartTime": 3
         }
       }
     }
   },
 
-  "hgbc_intro_cafe_0020_T_Muku": {
-    "ID": "hgbc_intro_cafe_0020_T_Muku",
+  "hgbc_intro_cafe_0020_T_Yandere": {
+    "ID": "hgbc_intro_cafe_0020_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0021",
@@ -105,19 +106,19 @@
       "UseBranchIndex": true,
       "Text": "えっ……？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_17492.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_52851.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_intro_cafe_0030_M_Muku": {
-    "ID": "hgbc_intro_cafe_0030_M_Muku",
+  "hgbc_intro_cafe_0030_M_Yandere": {
+    "ID": "hgbc_intro_cafe_0030_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "hgbc_intro_cafe_0030_T_Muku",
+    "NextStepID": "hgbc_intro_cafe_0030_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -134,81 +135,29 @@
     ]
   },
 
-  "hgbc_intro_cafe_0030_T_Muku": {
-    "ID": "hgbc_intro_cafe_0030_T_Muku",
+  "hgbc_intro_cafe_0030_T_Yandere": {
+    "ID": "hgbc_intro_cafe_0030_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0031",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "……むぅ……ご主人様…",
+      "Text": "むぅ、うぅぅぅぅっ、うぅぅぅぅぅぅ……ご主人様ぁ…………？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_18852.ogg",
-          "IsChoppingAudio": true,
-          "EndTime": 3
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_107614.ogg",
+          "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_intro_cafe_0050_M_Muku": {
-    "ID": "hgbc_intro_cafe_0050_M_Muku",
+  "hgbc_intro_cafe_0050_M_Yandere": {
+    "ID": "hgbc_intro_cafe_0050_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "hgbc_intro_cafe_0050_T_Muku",
-    "CharaData": [
-      {
-        "Type": "F",
-        "ArrayPosition": 0,
-        "Visible": true,
-        "FaceAnime": "恥ずかしい",
-        "FaceBlend": "頬２涙０",
-        "MotionInfo": {
-          "ScriptFile": "h_kaiwa_tati_001.ks",
-          "ScriptLabel": "*会話立ちがっかり"
-        },
-        "EyeSight": {
-          "Type": "ToChara",
-          "EyeToCharaSetting": {
-            "Type": "NPCMale",
-            "ArrayPosition": 0
-          }
-        }
-      }
-    ]
-  },
-
-  "hgbc_intro_cafe_0050_T_Muku": {
-    "ID": "hgbc_intro_cafe_0050_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_cafe_0051",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "お……お待たせしました。",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27232.ogg",
-          "IsChoppingAudio": true,
-          "EndTime": 4
-        }
-      }
-    },
-    "FadeData": {
-      "IsFadeIn": true,
-      "IsFadeOut": false
-    }
-  },
-
-
-  "hgbc_intro_cafe_0052_M_Muku": {
-    "ID": "hgbc_intro_cafe_0052_M_Muku",
-    "Type": "Chara",
-    "WaitingType": "Auto",
-    "NextStepID": "hgbc_intro_cafe_0052_T_Muku",
+    "NextStepID": "hgbc_intro_cafe_0050_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -231,198 +180,253 @@
     ]
   },
 
-  "hgbc_intro_cafe_0052_T_Muku": {
-    "ID": "hgbc_intro_cafe_0052_T_Muku",
+  "hgbc_intro_cafe_0050_T_Yandere": {
+    "ID": "hgbc_intro_cafe_0050_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お待たせしてすみません。",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_X1P_52858.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.5
+        }
+      }
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "hgbc_intro_cafe_0052_M_Yandere": {
+    "ID": "hgbc_intro_cafe_0052_M_Yandere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0052_T_Yandere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "恥ずかしい",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0052_T_Yandere": {
+    "ID": "hgbc_intro_cafe_0052_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0053",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あ、ありがとうございます……",
+      "Text": "ありがとう、ございます……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_13722.ogg",
-          "IsChoppingAudio": false
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_107488.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 7.2
         }
       }
     }
   },
 
-  "hgbc_intro_cafe_0060_T_Muku": {
-    "ID": "hgbc_intro_cafe_0060_T_Muku",
+  "hgbc_intro_cafe_0060_T_Yandere": {
+    "ID": "hgbc_intro_cafe_0060_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0061",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はい。",
+      "Text": "……はい。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_10137.ogg",
-          "IsChoppingAudio": false
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105642.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.1
         }
       }
     }
   },
 
 
-  "hgbc_intro_poledancestage_0031_T_Muku": {
-    "ID": "hgbc_intro_poledancestage_0031_T_Muku",
+  "hgbc_intro_poledancestage_0031_T_Yandere": {
+    "ID": "hgbc_intro_poledancestage_0031_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_poledancestage_0032",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はーっ……はーっ……ご主人様……",
+      "Text": "はぁ……はぁぁ……ご主人様……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02_23235.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_107390.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 4
+          "StartTime": 2.2,
+          "EndTime": 6.8
         }
       }
     }
   },
 
-  "hgbc_intro_poledancestage_0034_T_Muku": {
-    "ID": "hgbc_intro_poledancestage_0034_T_Muku",
+  "hgbc_intro_poledancestage_0034_T_Yandere": {
+    "ID": "hgbc_intro_poledancestage_0034_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_poledancestage_0035",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はぁ……はぁ……",
+      "Text": "はぁ、はぁ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63388.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105584.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 3.7
+          "EndTime": 1.9
         }
       }
     }
   },
 
-  "hgbc_intro_poledancestage_0042_T_Muku": {
-    "ID": "hgbc_intro_poledancestage_0042_T_Muku",
+  "hgbc_intro_poledancestage_0042_T_Yandere": {
+    "ID": "hgbc_intro_poledancestage_0042_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_poledancestage_0043_T_Muku",
+    "NextStepID": "hgbc_intro_poledancestage_0043_T_Yandere",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
       "Text": "ご主人様……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27355.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_PMD_108708.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 2
+          "EndTime": 2.2
         }
       }
     }
   },
 
-  "hgbc_intro_poledancestage_0043_T_Muku": {
-    "ID": "hgbc_intro_poledancestage_0043_T_Muku",
+  "hgbc_intro_poledancestage_0043_T_Yandere": {
+    "ID": "hgbc_intro_poledancestage_0043_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_poledancestage_0044_T_Muku",
+    "NextStepID": "hgbc_intro_poledancestage_0044_T_Yandere",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "……えっちなあたしのこと……嫌いになったりしますか……？",
+      "Text": "……今すぐ、したいんです……こんなにエッチな子で、ごめんなさい……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27450.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_PMD_109128.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 4.3,
-          "EndTime": 10
+          "StartTime": 4.1,
+          "EndTime": 9.6
         }
       }
     }
   },
 
-  "hgbc_intro_poledancestage_0044_T_Muku": {
-    "ID": "hgbc_intro_poledancestage_0044_T_Muku",
+  "hgbc_intro_poledancestage_0044_T_Yandere": {
+    "ID": "hgbc_intro_poledancestage_0044_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_poledancestage_0045",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "まさか。むしろえっちな[=Name,Maid,0,CallName]は大好きだ。"
+      "Text": "いやいや、謝らないで。むしろえっちな[=Name,Maid,0,CallName]は大好きだ。"
     }
   },
 
-  "hgbc_intro_poledancestage_0048_T_Muku": {
-    "ID": "hgbc_intro_poledancestage_0048_T_Muku",
+  "hgbc_intro_poledancestage_0048_T_Yandere": {
+    "ID": "hgbc_intro_poledancestage_0048_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_poledancestage_0049",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "うんっ、ありがとう……それじゃ、行ってくるねっ！",
+      "Text": "……行ってきます！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24808.ogg",
-          "IsChoppingAudio": false
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_108091.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 9.6
         }
       }
     }
   },
 
-  "hgbc_intro_poledancestage_0057_T_Muku": {
-    "ID": "hgbc_intro_poledancestage_0057_T_Muku",
+  "hgbc_intro_poledancestage_0057_T_Yandere": {
+    "ID": "hgbc_intro_poledancestage_0057_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_poledancestage_0058_T_Muku",
+    "NextStepID": "hgbc_intro_poledancestage_0058_T_Yandere",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "…あたし、知らない人のおちんちんに……囲まれてちゃってます……んぁっ……",
+      "Text": "…私、知らない人のおちんちんに……囲まれてしまっています……あぁ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63360.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54911.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 4.8
+          "StartTime": 3.8
         }
       }
     }
   },
 
-  "hgbc_intro_poledancestage_0058_T_Muku": {
-    "ID": "hgbc_intro_poledancestage_0058_T_Muku",
+  "hgbc_intro_poledancestage_0058_T_Yandere": {
+    "ID": "hgbc_intro_poledancestage_0058_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_poledancestage_0059",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はぅぅ……汗臭くて、それに……凄く熱くて、硬い……あたし……初めて会った人のおちんちん……綺麗にしちゃいますね……んちゅ……",
+      "Text": "あぅぅ……汗臭くて、それに……凄く熱くて、硬いです……私……初めて会った人のおちんちん……綺麗にしますね……ちゅ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63361.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54912.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_intro_poledancestage_0071_T_Muku": {
-    "ID": "hgbc_intro_poledancestage_0071_T_Muku",
+  "hgbc_intro_poledancestage_0071_T_Yandere": {
+    "ID": "hgbc_intro_poledancestage_0071_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_poledancestage_0072",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ん……そんなこと、言わないでください……でも、しゃぶって、欲しいんですよね……しょうがないですね……はむ……",
+      "Text": "ん……そんなこと、言わないで下さい……ですが、しゃぶって欲しいのですよね……仕方ありません……あむ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63365.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54916.ogg",
           "IsChoppingAudio": false
         }
       }
@@ -430,435 +434,437 @@
   },
 
 
-  "hgbc_phase2_0017_T_Muku": {
-    "ID": "hgbc_phase2_0017_T_Muku",
+  "hgbc_phase2_0017_T_Yandere": {
+    "ID": "hgbc_phase2_0017_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0018",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ぅんっ、んんっ……あっ、あぁんっ……ダメっ、ぃやっ……気持ち、いいっ……あっ、はぁっ……感じるっ、感じちゃうっ……！",
+      "Text": "んっ、んっ……あんっ、ああっ……ダメっ、あぅっ……き、気持ちいいっ……あっあっ……感じるっ、感じちゃうっ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63375.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54926.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0020_T_Muku": {
-    "ID": "hgbc_phase2_0020_T_Muku",
+  "hgbc_phase2_0020_T_Yandere": {
+    "ID": "hgbc_phase2_0020_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0021",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "いいですっ、はあっ……！　このおちんちん、凄いですぅっ……！　おっきくて、硬くて……ぅあああっ……！",
+      "Text": "いいですっ、ああっ……！　このおちんちん凄いですぅっ……！　大きくて、硬くて……あああっ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63376.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54927.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0023_T_Muku": {
-    "ID": "hgbc_phase2_0023_T_Muku",
+  "hgbc_phase2_0023_T_Yandere": {
+    "ID": "hgbc_phase2_0023_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0024",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ほ、欲しいですぅっ……！　んぁぅっ！　んぁっんぁっんぁっ……！中に、中にくださいっ……あなたの精液、中に出してぇ……！",
+      "Text": "欲しいですっ……！　んんぅっ！　あっあっあっ……！　中に、中にくださいっ……あなたの精液、中に出してぇ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63377.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54928.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0027_T_Muku": {
-    "ID": "hgbc_phase2_0027_T_Muku",
+  "hgbc_phase2_0027_T_Yandere": {
+    "ID": "hgbc_phase2_0027_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0028",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "んいぃ……！　あっ……んはあああああああぁ～～～～～～っ！！！",
+      "Text": "ひぃ……！　あ……あああああああああぁ～～～～～～っ！！！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63351.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54902.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0035_T_Muku": {
-    "ID": "hgbc_phase2_0035_T_Muku",
+  "hgbc_phase2_0035_T_Yandere": {
+    "ID": "hgbc_phase2_0035_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0036",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ご主人様……",
+      "Text": "……ご主人様……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_18766.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02A_107306.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 2
+          "EndTime": 2.9
         }
       }
     }
   },
 
-  "hgbc_phase2_0038_T_Muku": {
-    "ID": "hgbc_phase2_0038_T_Muku",
+  "hgbc_phase2_0038_T_Yandere": {
+    "ID": "hgbc_phase2_0038_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0039",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はぁっ……そう、なんですね……んぁっ……皆さんに喜んでもらえると、あたしも……嬉しいですっ……",
+      "Text": "あふ……そう、なんですね……んん……喜んでいただけると、私も……嬉しいです……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63383.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54934.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0050_T_Muku": {
-    "ID": "hgbc_phase2_0050_T_Muku",
+  "hgbc_phase2_0050_T_Yandere": {
+    "ID": "hgbc_phase2_0050_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_phase2_0051_T_Muku",
+    "NextStepID": "hgbc_phase2_0051_T_Yandere",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "くひっ……！　はぁ、はぁ……んぁあっ……気持ちいい、です……っ……はぁんっ……！",
+      "Text": "くふっ……！　はぁ、はぁ……ああっ……お上手、です……っ……あぁんっ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63384.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54935.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0051_T_Muku": {
-    "ID": "hgbc_phase2_0051_T_Muku",
+  "hgbc_phase2_0051_T_Yandere": {
+    "ID": "hgbc_phase2_0051_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0053",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はぁ、んんっ！　ご主人様、もっとぉぉ、んん、ご主人様とするのが、いちばん、好き、大好きですぅぅっ！",
+      "Text": "はぁ、んんっ！　ご主人様、もっと、激しくしてくださいっ！　ご主人様、好きっ！　もっと、私にご主人様を、激しくくださいぃ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_18799.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP01_106118.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0060_T_Muku": {
-    "ID": "hgbc_phase2_0060_T_Muku",
+  "hgbc_phase2_0060_T_Yandere": {
+    "ID": "hgbc_phase2_0060_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0061",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ご主人様……あたしにキスしてください……",
+      "Text": "ご主人様、キスをしても良いですか……？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_18702.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP01_106022.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 3.4
+          "EndTime": 3.3
         }
       }
     }
   },
 
-  "hgbc_phase2_0070_T_Muku": {
-    "ID": "hgbc_phase2_0070_T_Muku",
+  "hgbc_phase2_0070_T_Yandere": {
+    "ID": "hgbc_phase2_0070_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_phase2_0071_T_Muku",
+    "NextStepID": "hgbc_phase2_0071_T_Yandere",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ちゅっ……じゅるっ……はぁ、はうっ……んっ……ご主人様ぁ、ご主人様ぁぁ……んぅんっ……ちゅっ……",
+      "Text": "ちゅっ……じゅるっ……はぁ、はうっ……んっ……ご主人様、ご主人様……んぅんっ……ちゅっ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_18745.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP01_106065.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0071_T_Muku": {
-    "ID": "hgbc_phase2_0071_T_Muku",
+  "hgbc_phase2_0071_T_Yandere": {
+    "ID": "hgbc_phase2_0071_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0072",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "んちゅっ……じゅるっ……はぁ、はうっ……んぅんっ……んちゅっ……じゅるっ……ご主人様、はぁ、もっとぉ……",
+      "Text": "んちゅっ……じゅるっ……はぁ、はうっ……んぅんっ……んちゅっ……じゅるっ……ご主人様、もっと……もっとぉ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_18754.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP01_106074.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0080_T_Muku": {
-    "ID": "hgbc_phase2_0080_T_Muku",
+  "hgbc_phase2_0080_T_Yandere": {
+    "ID": "hgbc_phase2_0080_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0081",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "んんっ、ああ、出してぇ、外は嫌ですぅ、んんっ！　んくぅんっ……！　おまんこの奥じゃないとダメぇっ、はぁ、はひっ、ご主人様、ご主人様ぁっ！",
+      "Text": "んんっ、ああ、中に、中にくださいっ！　ご主人様、ご主人様……私の中に、一滴も残らず注いでください！　ご主人様、ご主人様ぁっ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_18800.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP01_106119.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0090_T_Muku": {
-    "ID": "hgbc_phase2_0090_T_Muku",
+  "hgbc_phase2_0090_T_Yandere": {
+    "ID": "hgbc_phase2_0090_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_phase2_0091_T_Muku",
+    "NextStepID": "hgbc_phase2_0091_T_Yandere",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あっ、あああああああああああああああっ！！",
+      "Text": "ご主人様っ、ああああああああああ～～～～～～～～～っ！！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_18801.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP01_106290.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0091_T_Muku": {
-    "ID": "hgbc_phase2_0091_T_Muku",
+  "hgbc_phase2_0091_T_Yandere": {
+    "ID": "hgbc_phase2_0091_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0092",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "っあぁ、はぁ……ご主人様の精液、こんなに、いっぱいぃ……",
+      "Text": "はぁ、はぁっ……ご主人様の精液が、溢れるくらいだされて……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_25669.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_107520.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0100_T_Muku": {
-    "ID": "hgbc_phase2_0100_T_Muku",
+  "hgbc_phase2_0100_T_Yandere": {
+    "ID": "hgbc_phase2_0100_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0101",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "きゃっ！？　ご、ご主人様っ……？　いきなり、なんで……",
+      "Text": "きゃっ……！　ご、ご主人様……？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_25668.ogg",
-          "IsChoppingAudio": false
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_107503.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
         }
       }
     }
   },
 
-  "hgbc_phase2_0120_T_Muku": {
-    "ID": "hgbc_phase2_0120_T_Muku",
+  "hgbc_phase2_0120_T_Yandere": {
+    "ID": "hgbc_phase2_0120_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0121",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "……はぁ、んっ……あたしのこと、滅茶苦茶にしちゃっていいですよ……？",
+      "Text": "……はぁはぁ……どうぞ、私の身体……貴方達の好きな様にしてください……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62690.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53465.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0130_T_Muku": {
-    "ID": "hgbc_phase2_0130_T_Muku",
+  "hgbc_phase2_0130_T_Yandere": {
+    "ID": "hgbc_phase2_0130_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0131",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "んぅっ……ふぁあぁん……おちんちん、入ってくるぅっ……！",
+      "Text": "んんっ……ふあぁぁ……おちんちん入ってくるぅっ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63369.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54920.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0140_T_Muku": {
-    "ID": "hgbc_phase2_0140_T_Muku",
+  "hgbc_phase2_0140_T_Yandere": {
+    "ID": "hgbc_phase2_0140_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0141",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "だったら……ふあ、んっ、ちゅっ、ちゅぷっ、もっとしていいです……んうっ、もっとキスして……んぢゅるっ！　ぢゅるるるっ！",
+      "Text": "ああ……そうなんですね……でしたら、はあ……あむっ、んっ、ちゅぶっ、もっと唇を奪ってください……んっ、ぢゅるっ、ぢゅるるっ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27120.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_PMD_108769.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0150_T_Muku": {
-    "ID": "hgbc_phase2_0150_T_Muku",
+  "hgbc_phase2_0150_T_Yandere": {
+    "ID": "hgbc_phase2_0150_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0151",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "んはぁ……はぁ……だってぇ……んぅ……",
+      "Text": "はぁ……はぁ……だってぇ……んん……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63370.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54921.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0160_T_Muku": {
-    "ID": "hgbc_phase2_0160_T_Muku",
+  "hgbc_phase2_0160_T_Yandere": {
+    "ID": "hgbc_phase2_0160_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0161",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ひあっ！　あっ、あああっ！　ふっ、深いですっ！　固いのが深いところっ、突いてますっ！　くあああっ！",
+      "Text": "きゃううんっ！　ふあっ、ああんっ！　そっ、そんなところまで、ひっ、ううっ！　奥まで刺さって、突き上げられてますっ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27215.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_PMD_108864.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0170_T_Muku": {
-    "ID": "hgbc_phase2_0170_T_Muku",
+  "hgbc_phase2_0170_T_Yandere": {
+    "ID": "hgbc_phase2_0170_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0171",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あ、あなたぁっ……！　んあぁっ！　ぅあっ！　あぁんっ！　は、激しっ！　後ろから、おちんちんっ……ずんっ……ずんっ……てぇっ……！",
+      "Text": "あ、貴方様ぁっ……！　ひあぁっ！　ああっ！　ああっ！　は、激しいっ！　後ろから、おちんちんがっ……ずんずんってぇ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63305.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54856.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0180_T_Muku": {
-    "ID": "hgbc_phase2_0180_T_Muku",
+  "hgbc_phase2_0180_T_Yandere": {
+    "ID": "hgbc_phase2_0180_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0181",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ひぅ、んっ、あひっ、あっ、あっん！　ごめん、なさいぃっ！　おちんちん、いっぱい締め付けますぅっ！　ひゃ、んんっ、はぁ、あぁっ！",
+      "Text": "んぅううう、はぁ、あっ！　ご、ごめんなさい！　んっ、私、ちゃんと……締め付け、ますからっ！　はぁ、ああっ、んぅ、ひぐっ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24538.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02A_107312.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase2_0190_T_Muku": {
-    "ID": "hgbc_phase2_0190_T_Muku",
+
+  "hgbc_phase2_0190_T_Yandere": {
+    "ID": "hgbc_phase2_0190_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0191",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "精子、膣内にいっぱい、ちょうだい、ぁああああっ！",
+      "Text": "精子、膣内に、いっぱい、ちょうだいっ！　あっ、ぅうううっ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16937.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105726.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 1.7
+          "StartTime": 1.4
         }
       }
     }
   },
 
-  "hgbc_phase2_0200_T_Muku": {
-    "ID": "hgbc_phase2_0200_T_Muku",
+  "hgbc_phase2_0200_T_Yandere": {
+    "ID": "hgbc_phase2_0200_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0201",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "んんぅっ……！　んぁあああぁぁ～～～～～～っ！",
+      "Text": "んんんっ……！　ふああああぁぁ～～～～～～っ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63387.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54938.ogg",
           "IsChoppingAudio": false
         }
       }
@@ -866,66 +872,67 @@
   },
 
 
-  "hgbc_phase3_0010_T_Muku": {
-    "ID": "hgbc_phase3_0010_T_Muku",
+  "hgbc_phase3_0010_T_Yandere": {
+    "ID": "hgbc_phase3_0010_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0011",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はあっ、あんむ、お、お願いですっ、またあたしに出してくださいっ！　いっぱい精液出してっ！",
+      "Text": "んううっ、はむっ、んぢゅうっ！　お……お願いします、また私に出してください……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27338.ogg",
-          "IsChoppingAudio": false
+        "Yandere": {
+          "VoiceFile": "S3_PMD_108987.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 8.1
         }
       }
     }
   },
 
-  "hgbc_phase3_0020_T_Muku": {
-    "ID": "hgbc_phase3_0020_T_Muku",
+  "hgbc_phase3_0020_T_Yandere": {
+    "ID": "hgbc_phase3_0020_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0021",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ひあああっ！　あっ、あああっ！　ふぐっ！　こっ、これっ、すごいっ、すごいですっ！　あたしっ、すぐにイッちゃうぅぅっ！",
+      "Text": "んっ、あああっ！　はあっ、はひんっ！　いいっ、いいですっ！　こんなにしてもらったら、私ぃっ！　イキますっ！　イッてしまいますっ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27339.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_PMD_108988.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase3_0030_T_Muku": {
-    "ID": "hgbc_phase3_0030_T_Muku",
+  "hgbc_phase3_0030_T_Yandere": {
+    "ID": "hgbc_phase3_0030_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_phase3_0032_M_Muku",
+    "NextStepID": "hgbc_phase3_0032_M_Yandere",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "うっ、嬉しいですっ！　あっ、あああっ、イクっ、もうイクっ！　ほんとにイッちゃうっ！　んっ、あああああああーーーっ！",
+      "Text": "嬉しい……嬉しいです！　はあっ、あっ、あああっ！　イクっ！　イキますっ！　あっ、あああっ！　イクぅぅぅぅぅーーーっ！！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27340.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_PMD_108989.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase3_0032_M_Muku": {
-    "ID": "hgbc_phase3_0032_M_Muku",
+  "hgbc_phase3_0032_M_Yandere": {
+    "ID": "hgbc_phase3_0032_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "hgbc_phase3_0033_T_Muku",
+    "NextStepID": "hgbc_phase3_0033_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -937,255 +944,256 @@
     ]
   },
 
-  "hgbc_phase3_0033_T_Muku": {
-    "ID": "hgbc_phase3_0033_T_Muku",
+  "hgbc_phase3_0033_T_Yandere": {
+    "ID": "hgbc_phase3_0033_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0034",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はあはあ……ふふっ、こんなにいっぱい出してくれて……すごく嬉しいです……",
+      "Text": "はあっ、ああ……ふああ……こんなにたくさん……私、嬉しくて……溶けてしまいます……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27341.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_PMD_108990.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase3_0080_T_Muku": {
-    "ID": "hgbc_phase3_0080_T_Muku",
+  "hgbc_phase3_0080_T_Yandere": {
+    "ID": "hgbc_phase3_0080_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0081",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "んんぅ……そ、その……あなたの……おちんちん……ください……お願いします……！",
+      "Text": "んんぅ、そ、その……貴方のおちんちん……太くて大きいおちんちんが欲しいです……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62621.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53396.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase3_0083_T_Muku": {
-    "ID": "hgbc_phase3_0083_T_Muku",
+  "hgbc_phase3_0083_T_Yandere": {
+    "ID": "hgbc_phase3_0083_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0084",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あ、あぁ……あなたのおちんちんを、あたしのおまんこにいれてください……！　あなたのおちんちんでイキたいからぁ……！",
+      "Text": "あ、あぁっ……貴方のおちんちんを、私のおまんこいれてください……！　貴方の立派なおちんちんでイキたいんです……！！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62622.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53397.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase3_0085_T_Muku": {
-    "ID": "hgbc_phase3_0085_T_Muku",
+  "hgbc_phase3_0085_T_Yandere": {
+    "ID": "hgbc_phase3_0085_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0086",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "んぁっ……はあっ……やっぱり、おっきいです……んふぅ……！",
+      "Text": "んんっ……ふあっ……やっぱり、大きいです……くふぅ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63341.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54892.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase3_0087_T_Muku": {
-    "ID": "hgbc_phase3_0087_T_Muku",
+  "hgbc_phase3_0087_T_Yandere": {
+    "ID": "hgbc_phase3_0087_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0088",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はぁ、はぁ……ふぅ……はい……んくっ……気持ちいいですっ……ぁんっ……あっ……ぁふっ……",
+      "Text": "はぁ、はぁ……うぅ……はい……んっ……気持ちいいですっ……あんっ……あっ……あっ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63345.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54896.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase3_0090_T_Muku": {
-    "ID": "hgbc_phase3_0090_T_Muku",
+  "hgbc_phase3_0090_T_Yandere": {
+    "ID": "hgbc_phase3_0090_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0091",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はぁ、はひぃっ！　んくぅっ、ひぐ、ひぃいいんっ！　はぁ、はぁ、レイプで感じる変態さんに、なるぅっ、んぁああっ！",
+      "Text": "はぁ、はひぃっ！　んくぅっ、ひぐ、ひぃいいんっ！　はぁ、はぁ、私、犯されて感じる変態にっ、なってしまいますっ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_17823.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105566.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_phase3_0093_T_Muku": {
-    "ID": "hgbc_phase3_0093_T_Muku",
+  "hgbc_phase3_0093_T_Yandere": {
+    "ID": "hgbc_phase3_0093_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0094",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ぅああぁ～～！　もう無理ぃっ！　ダメぇ！　ぃいっ！　いいですっ！　おちんちんっ！　いいのぉ！　んはあっ！　おまんこ蕩けてるぅっ！",
+      "Text": "あああぁ～～！　ダメダメぇ！　ひぃっ！　いいですっ！　おちんちんいいのぉ！　ああっ！　おまんこ蕩けるぅっ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63349.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1Kai_54900.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_postyotogi_0010_T_Muku": {
-    "ID": "hgbc_postyotogi_0010_T_Muku",
+  "hgbc_postyotogi_0010_T_Yandere": {
+    "ID": "hgbc_postyotogi_0010_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0011",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あっ、あっん！　イくっ、気持ちいいっ！　見て、見ててぇっ、ご主人様ぁっ！　はぁ、あっ！",
+      "Text": "くぅ、うう、ご主人様、み、見てください！　私が、お仕置きされてっ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24539.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02A_107313.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 5.8
+          "EndTime": 8.2
         }
       }
     }
   },
 
-  "hgbc_postyotogi_0020_T_Muku": {
-    "ID": "hgbc_postyotogi_0020_T_Muku",
+  "hgbc_postyotogi_0020_T_Yandere": {
+    "ID": "hgbc_postyotogi_0020_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0021",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あっ！　あっ！　イクッ！　はぁぁぁんんっ！　あんっ、あん……うぁ……はぁ、はぁ……き、気持ちいいですぅぅ……うはっ、はぁ、はぁ！",
+      "Text": "あっ！　あっ！　い、イキますっ！　はぁぁぁんんっ！　あんっ、あん……うぁ……はぁ、はぁ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_17459.ogg",
-          "IsChoppingAudio": false
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105928.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 11.3
         }
       }
     }
   },
 
-  "hgbc_postyotogi_0030_T_Muku": {
-    "ID": "hgbc_postyotogi_0030_T_Muku",
+  "hgbc_postyotogi_0030_T_Yandere": {
+    "ID": "hgbc_postyotogi_0030_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0031",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はひぃぃ……あたしぃ、淫乱メイドですぅ……精液、いっぱぁい出してもらってぇ……おまんこ気持ちよくなっちゃいましたぁ……",
+      "Text": "ふぅ、ううう……淫乱なメイドです……んっ、ご主人様じゃないのに……精液を出してもらって、感じて、おまんこ気持ちよくなったんです……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24541.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02A_107315.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_postyotogi_0050_T_Muku": {
-    "ID": "hgbc_postyotogi_0050_T_Muku",
+  "hgbc_postyotogi_0050_T_Yandere": {
+    "ID": "hgbc_postyotogi_0050_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0051",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "は……はい……♪　何度だってお相手しちゃいますね……！",
+      "Text": "は……はいっ！　貴方様のおちんちんがおかしくなるまで……何度だってお相手します……あぁっ♪",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62582.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53357.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_postyotogi_0060_T_Muku": {
-    "ID": "hgbc_postyotogi_0060_T_Muku",
+  "hgbc_postyotogi_0060_T_Yandere": {
+    "ID": "hgbc_postyotogi_0060_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_postyotogi_0060a_T_Muku",
+    "NextStepID": "hgbc_postyotogi_0060a_T_Yandere",
     "TalkData": {
       "SpeakerName": "男１８",
       "Text": "今度はケツだ！ほら、太いチンポにケツマンコボコボコにされて気持ちいいんだね！"
     }
   },
 
-  "hgbc_postyotogi_0060a_T_Muku": {
-    "ID": "hgbc_postyotogi_0060a_T_Muku",
+  "hgbc_postyotogi_0060a_T_Yandere": {
+    "ID": "hgbc_postyotogi_0060a_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0061",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ぁふっ、んっ、ぁあ！　お、奥まで擦れて、はぅっ、んぅぅ！　ゃっ、そんなとこ、までぇっ……！",
+      "Text": "ぁふっ、んっ、ぁあ！　お、奥まで擦れて、はぅっ、んぅぅ！　ゃっ、そんなところ、までっ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02_23160.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02A_106952.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_postyotogi_0070_T_Muku": {
-    "ID": "hgbc_postyotogi_0070_T_Muku",
+  "hgbc_postyotogi_0070_T_Yandere": {
+    "ID": "hgbc_postyotogi_0070_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_postyotogi_0071_T_Muku",
+    "NextStepID": "hgbc_postyotogi_0071_T_Yandere",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "んひっ……！？　ひぐっ、ひぃいっ！　ふぐっ、ふぐぅうううっ！？　ああ、イったばかりのケツマンコにもう一回ぃっ……！？",
+      "Text": "ひぐっ、はぁ、あああ……！？　うぅ、やっ、もう、イったのに……また、ケツマンコにきてっ！　やっ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24677.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_107631.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 6.9
+          "EndTime": 7.5
         }
       }
     }
   },
 
-  "hgbc_postyotogi_0071_T_Muku": {
-    "ID": "hgbc_postyotogi_0071_T_Muku",
+  "hgbc_postyotogi_0071_T_Yandere": {
+    "ID": "hgbc_postyotogi_0071_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0071a",
@@ -1195,36 +1203,36 @@
     }
   },
 
-  "hgbc_postyotogi_0080_T_Muku": {
-    "ID": "hgbc_postyotogi_0080_T_Muku",
+  "hgbc_postyotogi_0080_T_Yandere": {
+    "ID": "hgbc_postyotogi_0080_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0081",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ふ、ぉおっ……！？　はぁ、ザーメン出るぅ、んぐっ、んぅっんっ！　いっぱい突かれてっ、はぐっ、ふぇええっ！　けつあなからザーメン出ちゃうの、んんん～～っ！！",
+      "Text": "ふぅ、ううう……はぁ、ああ、ザーメン、いっぱい来てますっ、んぅう！　突かれて、、ごほっ、ぐぅ、ザーメン、漏れちゃいますっ、ううう！　んぅうう！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24678.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_107632.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "hgbc_postyotogi_0120_T_Muku": {
-    "ID": "hgbc_postyotogi_0120_T_Muku",
+  "hgbc_postyotogi_0120_T_Yandere": {
+    "ID": "hgbc_postyotogi_0120_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0121",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "……すっごく気持ちよかったですぅ……乱暴にされて、おまんこキュンキュンしちゃいました。",
+      "Text": "ええ……その、はしたないですが……私、乱暴にされて、とても興奮してしまいました……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_17748.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105813.ogg",
           "IsChoppingAudio": true,
           "EndTime": 10.5
         }
@@ -1232,18 +1240,18 @@
     }
   },
 
-  "hgbc_postyotogi_0140_T_Muku": {
-    "ID": "hgbc_postyotogi_0140_T_Muku",
+  "hgbc_postyotogi_0140_T_Yandere": {
+    "ID": "hgbc_postyotogi_0140_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0141",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "えへへ、ご主人様のことほめられて嬉しいですけど、複雑な気分ですね……",
+      "Text": "……ふふ、ご主人様が褒められていることは嬉しいです……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_18892.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP01_106209.ogg",
           "IsChoppingAudio": false
         }
       }
@@ -1252,11 +1260,11 @@
 
 
 
-  "hgbc_postyotogi_0170_M_Muku": {
-    "ID": "hgbc_postyotogi_0170_M_Muku",
+  "hgbc_postyotogi_0170_M_Yandere": {
+    "ID": "hgbc_postyotogi_0170_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "hgbc_postyotogi_0170_T_Muku",
+    "NextStepID": "hgbc_postyotogi_0170_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -1271,30 +1279,31 @@
     ]
   },
 
-  "hgbc_postyotogi_0170_T_Muku": {
-    "ID": "hgbc_postyotogi_0170_T_Muku",
+  "hgbc_postyotogi_0170_T_Yandere": {
+    "ID": "hgbc_postyotogi_0170_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0171",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "えへへっ♪　とっても素敵です！　あなた♪",
+      "Text": "ええ、ここに来てからたくさん素敵なことがありました。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_61946.ogg",
-          "IsChoppingAudio": false
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53188.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5.5
         }
       }
     }
   },
 
 
-  "hgbc_postyotogi_0180_M_Muku": {
-    "ID": "hgbc_postyotogi_0180_M_Muku",
+  "hgbc_postyotogi_0180_M_Yandere": {
+    "ID": "hgbc_postyotogi_0180_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "hgbc_postyotogi_0180_T_Muku",
+    "NextStepID": "hgbc_postyotogi_0180_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -1309,18 +1318,18 @@
     ]
   },
 
-  "hgbc_postyotogi_0180_T_Muku": {
-    "ID": "hgbc_postyotogi_0180_T_Muku",
+  "hgbc_postyotogi_0180_T_Yandere": {
+    "ID": "hgbc_postyotogi_0180_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0181",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はぅ……なんだか未だに夢みたいです……",
+      "Text": "はぁ……なんだか未だに信じられませんね。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62262.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53037.ogg",
           "IsChoppingAudio": false
         }
       }
@@ -1328,11 +1337,11 @@
   },
 
 
-  "hgbc_postyotogi_0190_M_Muku": {
-    "ID": "hgbc_postyotogi_0190_M_Muku",
+  "hgbc_postyotogi_0190_M_Yandere": {
+    "ID": "hgbc_postyotogi_0190_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "hgbc_postyotogi_0190_T_Muku",
+    "NextStepID": "hgbc_postyotogi_0190_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -1347,31 +1356,31 @@
     ]
   },
 
-  "hgbc_postyotogi_0190_T_Muku": {
-    "ID": "hgbc_postyotogi_0190_T_Muku",
+  "hgbc_postyotogi_0190_T_Yandere": {
+    "ID": "hgbc_postyotogi_0190_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0191",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "どうして楽しい時間はすぐに過ぎていっちゃうんでしょうね……",
+      "Text": "どうして楽しい時間ってすぐに過ぎてしまうんでしょう……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_61998.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_52830.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 5.8
+          "StartTime": 7.5
         }
       }
     }
   },
 
 
-  "hgbc_postyotogi_0200_M_Muku": {
-    "ID": "hgbc_postyotogi_0200_M_Muku",
+  "hgbc_postyotogi_0200_M_Yandere": {
+    "ID": "hgbc_postyotogi_0200_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "hgbc_postyotogi_0200_T_Muku",
+    "NextStepID": "hgbc_postyotogi_0200_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -1386,31 +1395,31 @@
     ]
   },
 
-  "hgbc_postyotogi_0200_T_Muku": {
-    "ID": "hgbc_postyotogi_0200_T_Muku",
+  "hgbc_postyotogi_0200_T_Yandere": {
+    "ID": "hgbc_postyotogi_0200_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0201",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "えへへ、じゃああたしに任せてください。",
+      "Text": "任せてください。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62349.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53180.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 3.5
+          "EndTime": 1.8
         }
       }
     }
   },
 
 
-  "hgbc_postyotogi_0210_M_Muku": {
-    "ID": "hgbc_postyotogi_0210_M_Muku",
+  "hgbc_postyotogi_0210_M_Yandere": {
+    "ID": "hgbc_postyotogi_0210_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "hgbc_postyotogi_0210_T_Muku",
+    "NextStepID": "hgbc_postyotogi_0210_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -1425,20 +1434,20 @@
     ]
   },
 
-  "hgbc_postyotogi_0210_T_Muku": {
-    "ID": "hgbc_postyotogi_0210_T_Muku",
+  "hgbc_postyotogi_0210_T_Yandere": {
+    "ID": "hgbc_postyotogi_0210_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0211",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はい！　じゃあ帰りましょうか。",
+      "Text": "はい。では帰りましょうか。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62006.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_52838.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 4.5
+          "EndTime": 3.8
         }
       }
     }

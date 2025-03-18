@@ -371,14 +371,17 @@ namespace COM3D2.WildParty.Plugin.Core
                 YotogiHandling.AddManOrgasmCountForGroup(mainGroup);
                 //
             }
+
+            StateManager.Instance.PartyGroupList[0].BlockMotionScriptChange = true;
         }
 
         private static void OrgasmCommandFinishFollowUp()
         {
+            StateManager.Instance.PartyGroupList[0].BlockMotionScriptChange = false;
 
             //Get the next sex state
             string nextState = ModUseData.SexStateList[SexState.StateType.OrgasmEnd].NextStates[0];
-
+            
             PartyGroup mainGroup = StateManager.Instance.PartyGroupList[0];
             BackgroundGroupMotionManager.ProcessSemenForGroup(mainGroup);
 
@@ -391,7 +394,7 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 //Gangbang rule
                 //randomly pick up the man from extra man list and swap with the main group
-
+                
                 YotogiHandling.ChangeManMembersShareListType(mainGroup);
 
             }
@@ -434,7 +437,7 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             Maid maid = StateManager.Instance.PartyGroupList[0].Maid1;
             var playerState = Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerPlayerState).GetValue<YotogiPlay.PlayerState>();
-            
+
             foreach (var commandBtn in injectedButtons)
             {
                 //check if fulfill criteria and update the status of the button accordingly

@@ -145,5 +145,42 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.ADVScreen
 
             return true;
         }
+
+        internal static void StartIndividualOffsetHandling(BaseKagManager baseKagManager)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (baseKagManager is MotionKagManager)
+                {
+                    MotionKagManager motionKagManager = (MotionKagManager)baseKagManager;
+                    StartMotionKagIndividualOffsetHandling(motionKagManager);
+                }
+            }
+        }
+
+        internal static void StartMotionKagIndividualOffsetHandling(MotionKagManager motionKagManager)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (motionKagManager.main_maid != null)
+                {
+                    PartyGroup group = Util.GetPartyGroupByCharacter(motionKagManager.main_maid);
+                    if (group != null)
+                    {
+                        StateManager.Instance.IsMotionKagSetPosition = true;
+                        StateManager.Instance.CurrentMotionKagHandlingGroup = group;
+                    }
+                }
+            }
+        }
+
+        internal static void EndIndividualOffsetHandling()
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                StateManager.Instance.IsMotionKagSetPosition = false;
+                StateManager.Instance.CurrentMotionKagHandlingGroup = null;
+            }
+        }
     }
 }

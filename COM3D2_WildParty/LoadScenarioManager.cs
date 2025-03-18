@@ -77,8 +77,29 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVIntroPoleDanceStage,
             ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVPhase2,
             ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVPhase3,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADVPostYotogi,
 
-            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Muku
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Muku,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Majime,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Rindere,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Pure,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Cool,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Pride,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Yandere,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Anesan,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Genki,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Sadist,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Silent,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Devilish,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Ladylike,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Secretary,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Sister,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Curtness,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Missy,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Childhood,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Friendly,
+            ScenarioResources.ScenarioHappyGBClub.HappyGBClubADV_Dame,
+
         };
 
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)

@@ -77,6 +77,10 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             //Since the value of the Next Label is removed when changing skill by our mod, here we fix it before the system process the click action
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
+                //Remove any extra objects generated in yotogi
+                foreach (PartyGroup group in StateManager.Instance.PartyGroupList)
+                    Core.YotogiHandling.ResetYotogiMiscSetup(group);
+
                 if (StateManager.Instance.IsFinalYotogi)
                 {
                     StateManager.Instance.ModEventProgress = Constant.EventProgress.YotogiEnd;
@@ -85,6 +89,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 else
                 {
                     StateManager.Instance.ModEventProgress = Constant.EventProgress.ADV;
+                    StateManager.Instance.YotogiManager.null_mgr.SetNextLabel(Constant.NextButtonLabel.YotogiPlayEnd);
                 }
                 
                 //To make the result window display the proper fetish added message
@@ -93,14 +98,13 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             }
         }
 
-        //Preseve the ExtraCommandWindow from being destroyed.
-        internal static void PreserveExtraCommandWindow()
+        //Since the the ExtraCommandWindow will be cloned when yotogi scene start each time, destroy the used one
+        internal static void DestroyExtraCommandWindow()
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                StateManager.Instance.ExtraCommandWindow.transform.SetParent(null);
-                StateManager.Instance.ExtraCommandWindow.SetVisible(false);
-                StateManager.Instance.ExtraCommandWindow.SetActive(true);
+                if(StateManager.Instance.ExtraCommandWindow != null)
+                    StateManager.Instance.ExtraCommandWindow.Destroy();
             }
         }
 
@@ -238,8 +242,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                     Scenario scenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
                     Scenario.YotogiSetupInfo yotogiSetup = scenario.YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First();
 
-                    Core.YotogiHandling.YotogiSkillCall(instance, ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
-
+                    Core.YotogiHandling.YotogiSkillCall(instance, Util.GetCurrentDefaultSexPosID());
+                    
                     if (yotogiSetup.AllowMap != null)
                     {
                         Core.YotogiHandling.PlayRoomBGM(instance);
@@ -416,6 +420,21 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
+                if (!string.IsNullOrEmpty(man_guid))
+                {
+                    string name = "";
+                    foreach (var man in StateManager.Instance.MenList)
+                        if (man.status.guid == man_guid)
+                            name = man.status.fullNameJpStyle;
+                    foreach (var man in StateManager.Instance.NPCManList)
+                        if (man.status.guid == man_guid)
+                            name = man.status.fullNameJpStyle;
+                    if (StateManager.Instance.ClubOwner != null)
+                        if (StateManager.Instance.ClubOwner.status.guid == man_guid)
+                            name = StateManager.Instance.ClubOwner.status.fullNameJpStyle;
+                    
+                }
+
                 StateManager.Instance.processingMaidGUID = maid_guid;
                 StateManager.Instance.processingManGUID = man_guid;
 
@@ -991,6 +1010,61 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                         }
                     }
                 }
+            }
+        }
+
+        //Return true if need to block loading motion script
+        internal static bool CheckBlockLoadMotionScript(string maid_guid)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (maid_guid == "")
+                {
+                    //this is group zero. we try mark down the label name here
+                    if (StateManager.Instance.PartyGroupList != null)
+                        if (StateManager.Instance.PartyGroupList.Count > 0)
+                            return StateManager.Instance.PartyGroupList[0].BlockMotionScriptChange;
+                }
+            }
+
+            return false;
+        }
+
+        internal static void SetOffsetVectorForGroup(Maid targetMaid, Vector3 offsetVector)
+        {
+            if (StateManager.Instance.IsMotionKagSetPosition)
+            {
+                PartyGroup group = StateManager.Instance.CurrentMotionKagHandlingGroup;
+                if (targetMaid.boMAN)
+                {
+                    //man
+                    for (int i = 0; i < group.ManCount; i++)
+                    {
+                        Maid man = group.GetManAtIndex(i);
+                        if (man.GetInstanceID() == targetMaid.GetInstanceID())
+                        {
+                            if (!group.ManOffsetList.ContainsKey(i))
+                                group.ManOffsetList.Add(i, offsetVector);
+                            else
+                                group.ManOffsetList[i] = offsetVector;
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < group.MaidCount; i++)
+                    {
+                        Maid maid = group.GetMaidAtIndex(i);
+                        if (maid.GetInstanceID() == targetMaid.GetInstanceID())
+                        {
+                            if (!group.MaidOffsetList.ContainsKey(i))
+                                group.MaidOffsetList.Add(i, offsetVector);
+                            else
+                                group.MaidOffsetList[i] = offsetVector;
+                        }
+                    }
+                }
+
             }
         }
     }

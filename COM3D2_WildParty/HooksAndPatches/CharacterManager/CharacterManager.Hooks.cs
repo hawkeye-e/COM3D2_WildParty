@@ -74,9 +74,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
         //By observation it seems it will always get the maid first and then man, so we record the result and use it to return the correct man character later.
         [HarmonyPostfix]
         [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.GetMaidAndMan), new Type[] { typeof(KagTagSupport), typeof(bool) })]
-        private static void GetMaidAndManPost(KagTagSupport tag_data, bool maid_priority, ref Maid __result)
+        private static void GetMaidAndManPost(BaseKagManager __instance, KagTagSupport tag_data, bool maid_priority, ref Maid __result)
         {
-            Patches.SpoofGetManCharacters(tag_data, ref __result);
+            Patches.SpoofGetManCharacters(__instance, tag_data, ref __result);
         }
 
         //Some of the Yotogi Skill will try to load the new body. Since we havent setup the 3.0 body properly in this mod, the man character generated lacks the pairman and will cause crashing here.

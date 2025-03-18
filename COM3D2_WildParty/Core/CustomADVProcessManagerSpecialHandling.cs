@@ -115,7 +115,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 CharacterHandling.AssignPartyGroupingRandom();
 
-                YotogiHandling.SetupYotogiSceneInitialSkill(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
+                YotogiHandling.SetupYotogiSceneInitialSkill(Util.GetCurrentDefaultSexPosID());
 
                 CharacterHandling.SetGroupZeroActive();
 
@@ -133,12 +133,11 @@ namespace COM3D2.WildParty.Plugin.Core
 
             GameMain.Instance.MainCamera.FadeOut(f_dg: delegate
             {
-                //CharacterHandling.AssignPartyGrouping_HaremKing();
                 CharacterHandling.SetDefaultGroupFormation();
 
                 CharacterHandling.AssignPartyGrouping(PartyGroup.CurrentFormation);
 
-                YotogiHandling.SetupYotogiSceneInitialSkill(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
+                YotogiHandling.SetupYotogiSceneInitialSkill(Util.GetCurrentDefaultSexPosID());
 
                 CharacterHandling.SetGroupZeroActive();
 
@@ -159,9 +158,9 @@ namespace COM3D2.WildParty.Plugin.Core
                 CharacterHandling.SetDefaultGroupFormation();
                 
                 CharacterHandling.AssignPartyGrouping(PartyGroup.CurrentFormation);
-                
-                YotogiHandling.SetupYotogiSceneInitialSkill(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
-                
+
+                YotogiHandling.SetupYotogiSceneInitialSkill(Util.GetCurrentDefaultSexPosID());
+
                 CharacterHandling.SetGroupZeroActive();
                 
                 YotogiHandling.InitYotogiData();

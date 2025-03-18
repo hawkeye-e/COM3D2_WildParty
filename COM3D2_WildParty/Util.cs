@@ -333,9 +333,49 @@ namespace COM3D2.WildParty.Plugin
             return groupType.Count(x => x == toCheck);
         }
 
+        internal static Maid SearchManCharacterByGUID(string GUID)
+        {
+            //check also the club owner
+            if (StateManager.Instance.ClubOwner != null)
+                if (StateManager.Instance.ClubOwner.status.guid == GUID)
+                {
+                    return StateManager.Instance.ClubOwner;
+                }
+            //man list
+            if (StateManager.Instance.MenList != null)
+                foreach (Maid man in StateManager.Instance.MenList)
+                    if (man.status.guid == GUID)
+                    {
+                        return man;
+                    }
+            //npc list
+            if (StateManager.Instance.NPCManList != null)
+                foreach (Maid npc in StateManager.Instance.NPCManList)
+                    if (npc.status.guid == StateManager.Instance.processingManGUID)
+                    {
+                        return npc;
+                    }
+
+            return null;
+        }
+
         internal static bool IsExPackPersonality(Maid maid)
         {
             return Constant.EXPackPersonality.Contains(maid.status.personal.id);
+        }
+
+        internal static int GetCurrentDefaultSexPosID()
+        {
+            int result = ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID;
+            if(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].SpecialCaseDefaultSexPosIDList != null)
+            {
+                var specialCase = ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].SpecialCaseDefaultSexPosIDList.Where(x => x.Personality.Contains(StateManager.Instance.SelectedMaidsList[0].status.personal.id)).FirstOrDefault();
+
+                if (specialCase != null)
+                    result = specialCase.DefaultSexPosID;
+            }
+
+            return result;
         }
         
         internal static BackupParamAccessor.Params GetBackupParam(Maid maid, bool isDaytime)

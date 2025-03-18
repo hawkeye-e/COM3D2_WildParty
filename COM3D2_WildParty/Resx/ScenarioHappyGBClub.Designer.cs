@@ -62,6 +62,343 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Anesan&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Anesan&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Anesan&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Anesan&quot;: { [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Anesan {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Anesan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Muku&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Muku&quot;: {
+        ///    &quot;I [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Childhood {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Childhood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Cool&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Cool&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Cool&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Cool&quot;: {
+        ///    &quot;I [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Cool {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Cool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Muku&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Muku&quot;: {
+        ///    &quot;I [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Curtness {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Curtness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Muku&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Muku&quot;: {
+        ///    &quot;I [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Dame {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Dame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Devilish&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Devilish&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Devilish&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Devi [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Devilish {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Devilish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Muku&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Muku&quot;: {
+        ///    &quot;I [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Friendly {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Friendly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Genki&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Genki&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Genki&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Genki&quot;: {
+        ///   [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Genki {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Genki", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Ladylike&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Ladylike&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Ladylike&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Lady [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Ladylike {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Ladylike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Majime&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Majime&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Majime&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Majime&quot;: { [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Majime {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Majime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Muku&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Muku&quot;: {
+        ///    &quot;I [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Missy {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Missy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;hgbc_intro_0034_M_Muku&quot;: {
         ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Muku&quot;,
         ///    &quot;Type&quot;: &quot;Chara&quot;,
@@ -88,6 +425,248 @@ namespace ScenarioResources {
         internal static string HappyGBClubADV_Muku {
             get {
                 return ResourceManager.GetString("HappyGBClubADV_Muku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Pride&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Pride&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Pride&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Pride&quot;: {
+        ///   [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Pride {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Pride", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Pure&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Pure&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Pure&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Pure&quot;: {
+        ///    &quot;I [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Pure {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Pure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Rindere&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Rindere&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Rindere&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Rindere [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Rindere {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Rindere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Sadist&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Sadist&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Sadist&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Sadist&quot;: { [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Sadist {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Sadist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Secretary&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Secretary&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Secretary&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_S [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Secretary {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Secretary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Silent&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Silent&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Silent&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Silent&quot;: { [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Silent {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Silent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Sister&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Sister&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Sister&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Sister&quot;: { [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Sister {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Sister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_intro_0034_M_Yandere&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_intro_0034_M_Yandere&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_intro_0034_T_Yandere&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;発情&quot;,
+        ///        &quot;FaceBlend&quot;: &quot;頬３涙０&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;hgbc_intro_0034_T_Yandere [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADV_Yandere {
+            get {
+                return ResourceManager.GetString("HappyGBClubADV_Yandere", resourceCulture);
             }
         }
         
@@ -207,26 +786,25 @@ namespace ScenarioResources {
         ///
         ///  &quot;hgbc_phase2_init&quot;: {
         ///    &quot;ID&quot;: &quot;hgbc_phase2_init&quot;,
-        ///    &quot;Type&quot;: &quot;Talk&quot;,
-        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
-        ///    &quot;NextStepID&quot;: &quot;hgbc_phase2_0001&quot;,
-        ///    &quot;TalkData&quot;: {
-        ///      &quot;SpecificSpeaker&quot;: &quot;Owner&quot;,
-        ///      &quot;Text&quot;: &quot;This is after yotogi 1&quot;
-        ///    },
-        ///
-        ///    &quot;FadeData&quot;: {
-        ///      &quot;IsFadeIn&quot;: true,
-        ///      &quot;IsFadeOut&quot;: false
-        ///    }
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_phase2_init_a&quot;
         ///  },
         ///
-        ///  &quot;hgbc_phase2_0001&quot;: {
-        ///    &quot;ID&quot;: &quot;hgbc_intro_poledancestage_0001a&quot;,
+        ///  &quot;hgbc_phase2_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_phase2_init_a&quot;,
         ///    &quot;Type&quot;: &quot;BGM&quot;,
         ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;hgbc_star [rest of string was truncated]&quot;;.
+        ///    &quot;NextStepID&quot;: &quot;hgbc_phase2_init_b&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_phase2_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_phase2_init_b&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_phase2_init_c&quot;,
+        ///   [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string HappyGBClubADVPhase2 {
             get {
@@ -238,30 +816,58 @@ namespace ScenarioResources {
         ///   Looks up a localized string similar to {
         ///  &quot;hgbc_phase3_init&quot;: {
         ///    &quot;ID&quot;: &quot;hgbc_phase3_init&quot;,
-        ///    &quot;Type&quot;: &quot;Talk&quot;,
-        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
-        ///    &quot;NextStepID&quot;: &quot;hgbc_phase3_0001&quot;,
-        ///    &quot;TalkData&quot;: {
-        ///      &quot;SpecificSpeaker&quot;: &quot;Owner&quot;,
-        ///      &quot;Text&quot;: &quot;This is after yotogi 2&quot;
-        ///    },
-        ///
-        ///    &quot;FadeData&quot;: {
-        ///      &quot;IsFadeIn&quot;: true,
-        ///      &quot;IsFadeOut&quot;: false
-        ///    }
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_phase3_init_a&quot;
         ///  },
         ///
-        ///  &quot;hgbc_phase3_0001&quot;: {
-        ///    &quot;ID&quot;: &quot;hgbc_phase3_0001&quot;,
+        ///  &quot;hgbc_phase3_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_phase3_init_a&quot;,
         ///    &quot;Type&quot;: &quot;BGM&quot;,
         ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;hgbc_start_yotogiplay_phas [rest of string was truncated]&quot;;.
+        ///    &quot;NextStepID&quot;: &quot;hgbc_phase3_init_b&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_phase3_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_phase3_init_b&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_phase3_init_c&quot;,
+        ///     [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string HappyGBClubADVPhase3 {
             get {
                 return ResourceManager.GetString("HappyGBClubADVPhase3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_postyotogi_init&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_postyotogi_init&quot;,
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_postyotogi_init_a&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_postyotogi_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_postyotogi_init_a&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_postyotogi_init_b&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_postyotogi_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_postyotogi_init_b&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStep [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HappyGBClubADVPostYotogi {
+            get {
+                return ResourceManager.GetString("HappyGBClubADVPostYotogi", resourceCulture);
             }
         }
     }

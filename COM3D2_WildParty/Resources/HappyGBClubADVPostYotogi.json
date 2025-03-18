@@ -1,0 +1,3076 @@
+{
+  "hgbc_postyotogi_init": {
+    "ID": "hgbc_postyotogi_init",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "SystemFadeOut",
+    "NextStepID": "hgbc_postyotogi_init_a"
+  },
+
+  "hgbc_postyotogi_init_a": {
+    "ID": "hgbc_postyotogi_init_a",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_init_b"
+  },
+
+  "hgbc_postyotogi_init_b": {
+    "ID": "hgbc_postyotogi_init_b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_init_c",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-0.21, 1.54, -5.59",
+        "TargetPosString": "-2.52, 0.23, -1.00",
+        "AroundAngleString": "333.29, 14.33",
+        "Distance": 4.5
+      },
+      "LockCamera": { "IsLock": true }
+    }
+  },
+
+  "hgbc_postyotogi_init_c": {
+    "ID": "hgbc_postyotogi_init_c",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "hgbc_postyotogi_init_d"
+  },
+
+  "hgbc_postyotogi_init_d": {
+    "ID": "hgbc_postyotogi_init_d",
+    "Type": "Shuffle",
+    "ShuffleData": {
+      "TargetList": "M_ALL"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_init_e"
+  },
+
+  "hgbc_postyotogi_init_e": {
+    "ID": "hgbc_postyotogi_init_e",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_init_f",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-999, -999, -999",
+          "RotString": "0, 1, 0, 0"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_init_f": {
+    "ID": "hgbc_postyotogi_init_f",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_init_g",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-2.73, 0.00, 1.00",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-2.73, 0.00, 2.20",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-2.73, 0.00, 3.40",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-2.13, 0.00, 1.00",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-2.13, 0.00, 2.20",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 8,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-2.13, 0.00, 3.40",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 9,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.53, 0.00, 1.00",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 10,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.53, 0.00, 2.20",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 11,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.53, 0.00, 3.40",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 12,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.93, 0.00, 1.00",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 13,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.93, 0.00, 2.20",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 14,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.93, 0.00, 3.40",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 15,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.33, 0.00, 1.00",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 16,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.33, 0.00, 2.20",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 17,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.33, 0.00, 3.40",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 18,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "0.27, 0.00, 1.00",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 19,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "0.27, 0.00, 2.20",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 20,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "0.27, 0.00, 3.40",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      }
+    ]
+  },
+
+
+  "hgbc_postyotogi_init_g": {
+    "ID": "hgbc_postyotogi_init_g",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_init_h",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 0
+        },
+        "Maid1": {
+          "Type": "F",
+          "ArrayPosition": 0
+        }
+      },
+      {
+        "GroupIndex": 1,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 1
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 0
+        }
+      },
+      {
+        "GroupIndex": 2,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 2
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 1
+        }
+      },
+      {
+        "GroupIndex": 3,
+        "Man1": {
+          "Type": "NPC",
+          "ArrayPosition": 0
+        },
+        "Man2": {
+          "Type": "Owner"
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 2
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_init_h": {
+    "ID": "hgbc_postyotogi_init_h",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0001",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 14,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-3.20, 0.00, 1.00",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        }
+      },
+
+      {
+        "ArrayPosition": 1,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ２キス",
+        "SexPosID": 14,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "接吻",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-3.20, 0.00, 2.20",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        }
+      },
+
+      {
+        "ArrayPosition": 2,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ２胸揉み",
+        "SexPosID": 14,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮３",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-3.20, 0.00, 3.40",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        }
+      },
+
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮３",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "Man2": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-3.96, -0.75, -1.18",
+          "RotString": "0, 1, 0, 0"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0001": {
+    "ID": "hgbc_postyotogi_0001",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺たちは獣のようにセックスを続ける。[=Name,NPC_M,0,LastName]さんは俺に加われ、一緒に[=Name,NPC_F,2,CallName]さんを犯す。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_postyotogi_0002": {
+    "ID": "hgbc_postyotogi_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（相手の肉体に欲情している間、ときどき[=Name,Maid,0,CallName]とお互いに見つめ合う。）"
+    }
+  },
+
+  "hgbc_postyotogi_0003": {
+    "ID": "hgbc_postyotogi_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺と[=Name,Maid,0,CallName]は、お互いが他人と狂ったようなセックスをするのを見て、筆舌に尽くしがたい快楽を感じている。）"
+    }
+  },
+
+  "hgbc_postyotogi_0004": {
+    "ID": "hgbc_postyotogi_0004",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0004b",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-2.03, 1.21, -2.28",
+        "TargetPosString": "-3.31, 0.80, -1.60",
+        "AroundAngleString": "297.96, 15.89",
+        "Distance": 1.5
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0004b": {
+    "ID": "hgbc_postyotogi_0004b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0005",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああぁ……[=Name,NPC_F,2,CallName]さんの生マンコめっちゃ気持ち良いよ！このままマンコが俺のチンポの形になれ！"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_postyotogi_0005": {
+    "ID": "hgbc_postyotogi_0005",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0006",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "ひあっ！　あっ、くううっ！　あっ、あなたのチンポっ、わたくしの奥に突き刺さってますわっ！　はあっ、素敵ですっ、素敵ですぅっ！",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00093.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0006": {
+    "ID": "hgbc_postyotogi_0006",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0007",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "悪い妻だな、[=Name,NPC_F,2,CallName]！俺とセックスするとき、一度もこんなことを言わなかった！[=ClubOwnerName]くんのチンポに恋してるじゃねか！"
+    }
+  },
+
+  "hgbc_postyotogi_0007": {
+    "ID": "hgbc_postyotogi_0007",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0008",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "だっ、だって、ひううっ！　マンコが気持ちよくてっ、はひっ、んくううっ！　もうダメになりますぅっ！",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00065.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0008": {
+    "ID": "hgbc_postyotogi_0008",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0008a",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-2.02, 1.57, -0.54",
+        "TargetPosString": "-2.08, 1.52, -0.49",
+        "AroundAngleString": "312.63, 33.59",
+        "Distance": 0.1
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0008a": {
+    "ID": "hgbc_postyotogi_0008a",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0009_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 14,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0009_Branch": {
+    "ID": "hgbc_postyotogi_0009_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_postyotogi_0010_T_[=PType]"
+  },
+
+  "hgbc_postyotogi_0011": {
+    "ID": "hgbc_postyotogi_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0012",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ！見てるよ！いいぞ！このまま男の精液を搾り出せ！エンパイアクラブのメイドの良さを知ってもらう！"
+    }
+  },
+
+  "hgbc_postyotogi_0012": {
+    "ID": "hgbc_postyotogi_0012",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0013",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*射精中",
+        "SexPosID": 14,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ痛み３",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0013": {
+    "ID": "hgbc_postyotogi_0013",
+    "Type": "AddTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0014_Branch",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F",
+        "IndexPosition": 0,
+        "BodyTarget": [ "Vagina" ]
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0014_Branch": {
+    "ID": "hgbc_postyotogi_0014_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_postyotogi_0020_T_[=PType]"
+  },
+
+  "hgbc_postyotogi_0021": {
+    "ID": "hgbc_postyotogi_0021",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0022",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 14,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮３",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0022": {
+    "ID": "hgbc_postyotogi_0022",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0023_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "素晴らしいぞ、[=Name,Maid,0,CallName]！本当に淫らな女だ、ますます愛しているよ！"
+    }
+  },
+
+  "hgbc_postyotogi_0023_Branch": {
+    "ID": "hgbc_postyotogi_0023_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_postyotogi_0030_T_[=PType]"
+  },
+
+  "hgbc_postyotogi_0031": {
+    "ID": "hgbc_postyotogi_0031",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0032",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-2.03, 1.21, -2.28",
+        "TargetPosString": "-3.31, 0.80, -1.60",
+        "AroundAngleString": "297.96, 15.89",
+        "Distance": 1.5
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0032": {
+    "ID": "hgbc_postyotogi_0032",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0033",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "[=ClubOwnerName]くん、[=Name,NPC_F,2,CallName]に集中しよう。負けてられんぞ！俺たちのチンポでマンコもアナルもイキ狂わせましょう！"
+    }
+  },
+
+  "hgbc_postyotogi_0033": {
+    "ID": "hgbc_postyotogi_0033",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0034",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ、もちろんだ！[=Name,NPC_F,2,CallName]さん、しっかりマンコとケツ穴締めろよ！"
+    }
+  },
+
+  "hgbc_postyotogi_0034": {
+    "ID": "hgbc_postyotogi_0034",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0034a",
+    "GroupData": [
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ羞恥３",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0034a": {
+    "ID": "hgbc_postyotogi_0034a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0035",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "はっ、はいぃっ！　あっ、あああっ、イクっ、わたくしっ、もう……イッてしまいますっ！　くううううっ！",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00066.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0035": {
+    "ID": "hgbc_postyotogi_0035",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0036",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "みっちりマン肉が絡んでくる、たまんねぇ！出るぞ、[=Name,NPC_F,2,CallName]さん！たっぷり味わえ！"
+    }
+  },
+
+  "hgbc_postyotogi_0036": {
+    "ID": "hgbc_postyotogi_0036",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0036a",
+    "GroupData": [
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*射精中",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ痛み３",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0036a": {
+    "ID": "hgbc_postyotogi_0036a",
+    "Type": "AddTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0036c",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F",
+        "IndexPosition": 0,
+        "BodyTarget": [ "Vagina", "Vagina" ]
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0036c": {
+    "ID": "hgbc_postyotogi_0036c",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "0",
+    "NextStepID": "hgbc_postyotogi_0036d"
+  },
+
+  "hgbc_postyotogi_0036d": {
+    "ID": "hgbc_postyotogi_0036d",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0036e",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 3
+        },
+        "Maid1": {
+          "Type": "F",
+          "ArrayPosition": 0
+        }
+      },
+      {
+        "GroupIndex": 1,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 1
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 0
+        }
+      },
+      {
+        "GroupIndex": 2,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 2
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 1
+        }
+      },
+      {
+        "GroupIndex": 3,
+        "Man1": {
+          "Type": "NPC",
+          "ArrayPosition": 0
+        },
+        "Man2": {
+          "Type": "Owner"
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 2
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0036e": {
+    "ID": "hgbc_postyotogi_0036e",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0036f",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-2.73, 0.00, 1.00",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 9,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-2.13, 0.00, 1.00",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 12,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.53, 0.00, 1.00",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 15,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.93, 0.00, 1.00",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 18,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.33, 0.00, 1.00",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "0.27, 0.00, 1.00",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        },
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0036f": {
+    "ID": "hgbc_postyotogi_0036f",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0037",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyouiA.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 15,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ期待",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-3.20, 0.00, 1.00",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        }
+      }
+    ]
+  },
+
+
+  "hgbc_postyotogi_0037": {
+    "ID": "hgbc_postyotogi_0037",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0038",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "イクっ！　んっ、んんんっ！　イクイクっ、イックうぅぅぅぅぅーーーっ！！",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00104.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0038": {
+    "ID": "hgbc_postyotogi_0038",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0038a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "発情"
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0038a": {
+    "ID": "hgbc_postyotogi_0038a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0039",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "ひっ、ううう……！　はあっ、はあっ、はあ……すごい、ですわ……こんなにたくさん出されたら……妊娠してしまいます……ふふふ……",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00105.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0039": {
+    "ID": "hgbc_postyotogi_0039",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0040",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-2.02, 1.57, -0.54",
+        "TargetPosString": "-2.08, 1.52, -0.49",
+        "AroundAngleString": "312.63, 33.59",
+        "Distance": 0.1
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0040": {
+    "ID": "hgbc_postyotogi_0040",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0041",
+    "TalkData": {
+      "SpeakerName": "男１８",
+      "Text": "また俺の番だ。ちゃんと俺のチンポも接待しろよ！"
+    }
+  },
+
+  "hgbc_postyotogi_0041": {
+    "ID": "hgbc_postyotogi_0041",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0042_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyouiA.ks",
+        "ScriptLabel": "*挿入",
+        "SexPosID": 15,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ好感３",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0042_Branch": {
+    "ID": "hgbc_postyotogi_0042_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_postyotogi_0050_T_[=PType]"
+  },
+
+  "hgbc_postyotogi_0051": {
+    "ID": "hgbc_postyotogi_0051",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0053_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyouiA.ks",
+        "ScriptLabel": "*激しさ２胸揉み",
+        "SexPosID": 15,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮３",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+
+
+  "hgbc_postyotogi_0053_Branch": {
+    "ID": "hgbc_postyotogi_0053_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_postyotogi_0060_T_[=PType]"
+  },
+
+  "hgbc_postyotogi_0061": {
+    "ID": "hgbc_postyotogi_0061",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0062",
+    "TalkData": {
+      "SpeakerName": "男１８",
+      "Text": "[=Name,Maid,0,CallName]ちゃんはたくさんの男に穴を使われるために存在しているだね！とんなハメまくっても締りはそのままっ！最高のメス穴だ！"
+    }
+  },
+
+  "hgbc_postyotogi_0062": {
+    "ID": "hgbc_postyotogi_0062",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0063_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyouiA.ks",
+        "ScriptLabel": "*激しさ３胸揉み",
+        "SexPosID": 15,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0063_Branch": {
+    "ID": "hgbc_postyotogi_0063_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_postyotogi_0070_T_[=PType]"
+  },
+
+
+
+  "hgbc_postyotogi_0071a": {
+    "ID": "hgbc_postyotogi_0071a",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "3",
+    "NextStepID": "hgbc_postyotogi_0071b"
+  },
+
+  "hgbc_postyotogi_0071b": {
+    "ID": "hgbc_postyotogi_0071b",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0071c",
+    "GroupFormat": [
+      {
+        "GroupIndex": 3,
+        "Man1": {
+          "Type": "Owner"
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 2
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0071c": {
+    "ID": "hgbc_postyotogi_0071c",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0072",
+    "CharaData": [
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-3.96, -0.75, -0.8",
+          "RotString": "0, 1, 0, 0"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0072": {
+    "ID": "hgbc_postyotogi_0072",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0073_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_tati_tekoki_aibu.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 103,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "にっこり",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0073_Branch": {
+    "ID": "hgbc_postyotogi_0073_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_postyotogi_0080_T_[=PType]"
+  },
+
+  "hgbc_postyotogi_0081": {
+    "ID": "hgbc_postyotogi_0081",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0082",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-2.03, 1.21, -2.28",
+        "TargetPosString": "-3.31, 0.80, -1.60",
+        "AroundAngleString": "297.96, 15.89",
+        "Distance": 1.5
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0082": {
+    "ID": "hgbc_postyotogi_0082",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0083",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ふぅ……何度も射精した、さすがに限界だよ…"
+    }
+  },
+
+  "hgbc_postyotogi_0083": {
+    "ID": "hgbc_postyotogi_0083",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0084",
+    "GroupData": [
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_tati_tekoki_aibu.ks",
+        "ScriptLabel": "*両手コキ",
+        "SexPosID": 103,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "誘惑",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0084": {
+    "ID": "hgbc_postyotogi_0084",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0085",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "あらあら……！",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00087.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0085": {
+    "ID": "hgbc_postyotogi_0085",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0086",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（うっ……！[=Name,NPC_F,2,CallName]さんはその手で俺のチンポをまた擦った。そのえげつない手コキのテクと[=Name,Maid,0,CallName]のエロい声のせいで、俺はまたまた勃起した。）"
+    }
+  },
+
+  "hgbc_postyotogi_0086": {
+    "ID": "hgbc_postyotogi_0086",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0087",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "あなたのここ……オチンポ、どんどん固くなっていますのに……ふふふっ。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00086.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.8
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0087": {
+    "ID": "hgbc_postyotogi_0087",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0088",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（また俺のチンポをねだり続けかよ、この淫らな女め！……男としてこの誘いに乗るしかねぇ！）"
+    }
+  },
+
+  "hgbc_postyotogi_0088": {
+    "ID": "hgbc_postyotogi_0088",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0089",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,NPC_F,2,CallName]さんは本当にヤリマンビッチだね…"
+    }
+  },
+
+  "hgbc_postyotogi_0089": {
+    "ID": "hgbc_postyotogi_0089",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0090",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "あらぁ……ひどいことを言いますのね。でも……ふふっ、確かにその通りですわ。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00106.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 9.5
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0090": {
+    "ID": "hgbc_postyotogi_0090",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ！こんなヤリマンビッチに誘惑されたら、もうやめられん！よかろう、玉が空になるまでヤり続けるよ！"
+    }
+  },
+
+  "hgbc_postyotogi_0091": {
+    "ID": "hgbc_postyotogi_0091",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0092",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "そうですわね。こんなに興奮しているのに、いまさら止めることなんて出来ませんもの……ふふふっ。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00089.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0092": {
+    "ID": "hgbc_postyotogi_0092",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "3",
+    "NextStepID": "hgbc_postyotogi_0093"
+  },
+
+  "hgbc_postyotogi_0093": {
+    "ID": "hgbc_postyotogi_0093",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0094",
+    "GroupFormat": [
+      {
+        "GroupIndex": 3,
+        "Man1": {
+          "Type": "NPC",
+          "ArrayPosition": 0
+        },
+        "Man2": {
+          "Type": "Owner"
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 2
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0094": {
+    "ID": "hgbc_postyotogi_0094",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0095",
+    "GroupData": [
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ期待",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0095": {
+    "ID": "hgbc_postyotogi_0095",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0096",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,NPC_F,2,CallName]さん、俺のバキバキチンポ大好きだね？そんなに気持ちいいものなのか？"
+    }
+  },
+
+  "hgbc_postyotogi_0096": {
+    "ID": "hgbc_postyotogi_0096",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0097",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "んっ、んんんっ！　はあっ、ああっ！　とてもいいですわ！　主人なんて比べものになりませんの！　はあんっ、ふああっ！",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00049.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0097": {
+    "ID": "hgbc_postyotogi_0097",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0098",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "うわぁ、[=Name,NPC_M,0,LastName]さんの前でこんなことを言ったんだ！"
+    }
+  },
+
+  "hgbc_postyotogi_0098": {
+    "ID": "hgbc_postyotogi_0098",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0099",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "いっ、いいのっ、いいのぉっ！　はあっ、ああっ、気持ちいい方がいいからっ、あっ、あああっ、ふあああっ！",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00050.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0099": {
+    "ID": "hgbc_postyotogi_0099",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0100",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "あ～あ、[=Name,NPC_F,2,CallName]、よく俺の前で徹くんのチンポを比べられるわね！こんなひどいことするなら……俺はさらに興奮するよ！オラァ！夫のチンポはどうた！"
+    }
+  },
+
+  "hgbc_postyotogi_0100": {
+    "ID": "hgbc_postyotogi_0100",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0101",
+    "GroupData": [
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮３",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0101": {
+    "ID": "hgbc_postyotogi_0101",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0102",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "んあっ！　あひっ、んっ、あああっ！　あっ、あなたぁっ！　はっ、はげし、すぎますっ！　くうっ、ひうっ！　んああっ！",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00091.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0102": {
+    "ID": "hgbc_postyotogi_0102",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0103",
+    "GroupData": [
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0103": {
+    "ID": "hgbc_postyotogi_0103",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0104",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "初めて会ったとき、[=Name,NPC_F,2,CallName]さんは上品な女性だと思った！なのに…まさか本当の姿はこんなにチンポのことしか考えられない淫乱メスかよ！こんな淫乱メスはお仕置きが必要だな！"
+    }
+  },
+
+  "hgbc_postyotogi_0104": {
+    "ID": "hgbc_postyotogi_0104",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0105",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "申し訳ありませんっ、ああっ、申し訳ありませんっ！　悪いのはわたくしですから、んっ、くうっ！　もっと責めてくださいませっ！",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00092.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0105": {
+    "ID": "hgbc_postyotogi_0105",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0106",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "あ～あ、そうだ、罰が必要だね！罰はもちろん、ここにいる全員に輪姦されるだ！みんな、まだまだ続くよ！チンポ絶やすなっ！"
+    }
+  },
+
+  "hgbc_postyotogi_0106": {
+    "ID": "hgbc_postyotogi_0106",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_postyotogi_0107",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_postyotogi_0107": {
+    "ID": "hgbc_postyotogi_0107",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0108",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0108": {
+    "ID": "hgbc_postyotogi_0108",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0109",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（行為室のみんなはほとんど正気を失いそうな、ただセックスを続けている。何時間これを続けているのかもうわからない。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_postyotogi_0109": {
+    "ID": "hgbc_postyotogi_0109",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0110",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は[=Name,Maid,0,CallName]と[=Name,NPC_F,2,CallName]さんの他にも、女性メンバーとも輪姦した。）"
+    }
+  },
+
+  "hgbc_postyotogi_0110": {
+    "ID": "hgbc_postyotogi_0110",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0111",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（もはや何も考えず、ただ肉欲的な快楽を追い求めるだけ……）"
+    }
+  },
+
+  "hgbc_postyotogi_0111": {
+    "ID": "hgbc_postyotogi_0111",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_postyotogi_0112",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_postyotogi_0112": {
+    "ID": "hgbc_postyotogi_0112",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0112a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "4.02, 1.92, -6.50",
+        "TargetPosString": "0.69, 0.28, -4.53",
+        "AroundAngleString": "300.65, 23.02",
+        "Distance": 4.2
+      },
+      "LockCamera": { "IsLock": false }
+    }
+  },
+
+  "hgbc_postyotogi_0112a": {
+    "ID": "hgbc_postyotogi_0112a",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "hgbc_postyotogi_0112b"
+  },
+
+  "hgbc_postyotogi_0112b": {
+    "ID": "hgbc_postyotogi_0112b",
+    "Type": "Shuffle",
+    "ShuffleData": {
+      "TargetList": "M_ALL"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0112c"
+  },
+
+  "hgbc_postyotogi_0112c": {
+    "ID": "hgbc_postyotogi_0112c",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0112d",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-999, -999, -999",
+          "RotString": "0, 1, 0, 0"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      }
+
+    ]
+  },
+
+  "hgbc_postyotogi_0112d": {
+    "ID": "hgbc_postyotogi_0112d",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0112e",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "2.12, -0.75, -3.00",
+          "RotString": "0, 0.341, 0, 0.94"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-3.36, -0.75, -5.44",
+          "RotString": "0, 0.877, 0, -0.481"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.54, 0.00, -2.27",
+          "RotString": "0, 0.239, 0, -0.971"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.81, -0.30, -6.68",
+          "RotString": "0.00000, 0.68996, 0.00000, 0.72384"
+        },
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男ソファーワイン待機"
+        },
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "HandItemR_WineGlass_I_.menu",
+              "Target": "handitem"
+            }
+          ]
+        }
+      },
+
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 2,
+        "Visible": false,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+
+  "hgbc_postyotogi_0112e": {
+    "ID": "hgbc_postyotogi_0112e",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0112f",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "Owner"
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 1
+        }
+      },
+      {
+        "GroupIndex": 1,
+        "Man1": {
+          "Type": "NPC",
+          "ArrayPosition": 0
+        },
+        "Maid1": {
+          "Type": "F",
+          "ArrayPosition": 0
+        }
+      },
+      {
+        "GroupIndex": 2,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 0
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 0
+        }
+      },
+      {
+        "GroupIndex": 3,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 1
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 2
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0112f": {
+    "ID": "hgbc_postyotogi_0112f",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0113",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 104,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロフェラ快楽",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-0.42, -0.75, -4.06",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "ArrayPosition": 1,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 104,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロフェラ快楽",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "0.49, -0.75, -4.06",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "ArrayPosition": 2,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 104,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロフェラ快楽",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "1.39, -0.75, -4.06",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 104,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロフェラ快楽",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-1.30, -0.75, -4.06",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+    ]
+  },
+
+
+  "hgbc_postyotogi_0113": {
+    "ID": "hgbc_postyotogi_0113",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0114",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "で、今日の輪姦はどうだった？[=Name,Maid,0,CallName]ちゃん。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_postyotogi_0114": {
+    "ID": "hgbc_postyotogi_0114",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0115_Branch",
+    "GroupData": [
+
+      {
+        "ArrayPosition": 1,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 104,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "恥ずかしい",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0115_Branch": {
+    "ID": "hgbc_postyotogi_0115_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_postyotogi_0120_T_[=PType]"
+  },
+
+
+  "hgbc_postyotogi_0121": {
+    "ID": "hgbc_postyotogi_0121",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0121a",
+    "GroupData": [
+
+      {
+        "ArrayPosition": 1,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 104,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロフェラ快楽",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0121a": {
+    "ID": "hgbc_postyotogi_0121a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0122",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "はははっ、良かったね！楽しそうでなにより！[=ClubOwnerName]くん、君は？"
+    }
+  },
+
+  "hgbc_postyotogi_0122": {
+    "ID": "hgbc_postyotogi_0122",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0123",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "とても楽しかった。輪姦ってこんな快楽なものだとは知らなかった。しかもいろんな有名人とヤっては特別な経験だな。"
+    }
+  },
+
+  "hgbc_postyotogi_0123": {
+    "ID": "hgbc_postyotogi_0123",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0123a",
+    "GroupData": [
+
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 104,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロフェラ快楽",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0123a": {
+    "ID": "hgbc_postyotogi_0123a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0124",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 1,
+      "Text": "あぶっ、ぢゅるるっ、うんっ♪　マジこのチンポサイコー！　硬くて太くて……これ、たまんないかも……！",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U18_X01_00005.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0124": {
+    "ID": "hgbc_postyotogi_0124",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0125",
+    "TalkData": {
+      "SpeakerName": "男１９",
+      "Text": "[=Name,NPC_F,1,CallName]ちゃん、[=ClubOwnerName]さんのチンポを吸うすぎじゃね？マスコミにバレたら、ファンたちはとても傷つくだよ！"
+    }
+  },
+
+  "hgbc_postyotogi_0125": {
+    "ID": "hgbc_postyotogi_0125",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0126",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 1,
+      "Text": "……んぢゅぷっ、はぁっ、このチンポは、そう簡単に離さないから……",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U18_X01_00026.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6.5
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0126": {
+    "ID": "hgbc_postyotogi_0126",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0126a",
+    "GroupData": [
+
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_fera_ir.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 102,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロフェラ快楽",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0126a": {
+    "ID": "hgbc_postyotogi_0126a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0127",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "大丈夫、俺のチンポは逃げないよ。[=Name,NPC_F,1,CallName]ちゃんが満足するまで、好きなだけ咥えさせてあげるよ。ほら、こうやって咥えてみて？"
+    }
+  },
+
+  "hgbc_postyotogi_0127": {
+    "ID": "hgbc_postyotogi_0127",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0127a",
+    "GroupData": [
+
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 104,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "にっこり",
+          "FaceBlend": "頬３涙０",
+          "EyeSight": {
+            "Type": "ToChara",
+            "EyeToCharaSetting": {
+              "Type": "ClubOwner"
+            }
+          }
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0127a": {
+    "ID": "hgbc_postyotogi_0127a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0128",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "あなたは女を悦ばせる手管に慣れていますのね……",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00038.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0128": {
+    "ID": "hgbc_postyotogi_0128",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0128a",
+    "GroupData": [
+
+      {
+        "ArrayPosition": 2,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 104,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "優しさ",
+          "FaceBlend": "頬３涙０",
+          "EyeSight": {
+            "Type": "ToChara",
+            "EyeToCharaSetting": {
+              "Type": "ClubOwner"
+            }
+          }
+        }
+      },
+
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 104,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロフェラ快楽",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0128a": {
+    "ID": "hgbc_postyotogi_0128a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0129",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 0,
+      "Text": "オジサン、やっぱりうまかったでしょ？",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U8_Date05_00216.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0129": {
+    "ID": "hgbc_postyotogi_0129",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0130",
+    "GroupData": [
+
+      {
+        "ArrayPosition": 2,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 104,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロフェラ快楽",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+
+  "hgbc_postyotogi_0130": {
+    "ID": "hgbc_postyotogi_0130",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0131",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "だからオジサンじゃねーよ…"
+    }
+  },
+
+  "hgbc_postyotogi_0131": {
+    "ID": "hgbc_postyotogi_0131",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0132_Branch",
+    "GroupData": [
+
+      {
+        "ArrayPosition": 1,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 104,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "微笑み",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0132_Branch": {
+    "ID": "hgbc_postyotogi_0132_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_postyotogi_0140_T_[=PType]"
+  },
+
+  "hgbc_postyotogi_0141": {
+    "ID": "hgbc_postyotogi_0141",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0141a",
+    "GroupData": [
+
+      {
+        "ArrayPosition": 1,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 104,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロフェラ快楽",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0141a": {
+    "ID": "hgbc_postyotogi_0141a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0142",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "いやぁ、大したものだ[=ClubOwnerName]くん。皆、君の腕前に惚れ込んでいるようだね。モテモテじゃん～ははっ！"
+    }
+  },
+
+  "hgbc_postyotogi_0142": {
+    "ID": "hgbc_postyotogi_0142",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0143",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "じゃあ、どうだい？メンバーになりたいか？きっとここでの人気者になれる。"
+    }
+  },
+
+  "hgbc_postyotogi_0143": {
+    "ID": "hgbc_postyotogi_0143",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0144",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "まあ、[=Name,Maid,0,CallName]も楽しんでいるので、ぜひ参加させてもらいたい。もし断ったら、彼女は怒るだろう。"
+    }
+  },
+
+  "hgbc_postyotogi_0144": {
+    "ID": "hgbc_postyotogi_0144",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0145",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "おおっ！いいね！改めて『輪姦クラブ』へようこそ！これからもよろしく！エンパイアクラブの他のメイドも連れてきてくれるのを楽しみにしているよ。"
+    }
+  },
+
+  "hgbc_postyotogi_0145": {
+    "ID": "hgbc_postyotogi_0145",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0146",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "でも信頼できるメイドだけ、公にできないクラブだから。まあもちろん、君の判断を信じてるよ。"
+    }
+  },
+
+  "hgbc_postyotogi_0146": {
+    "ID": "hgbc_postyotogi_0146",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0147",
+    "TalkData": {
+      "SpeakerName": "男２０",
+      "Text": "エンパイアクラブのオーナーさんが新加入か！いいニュースだな。"
+    }
+  },
+
+  "hgbc_postyotogi_0147": {
+    "ID": "hgbc_postyotogi_0147",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0148",
+    "TalkData": {
+      "SpeakerName": "男２１",
+      "Text": "これからもたくさんの愉しいことができるぞ！期待してるね！"
+    }
+  },
+
+  "hgbc_postyotogi_0148": {
+    "ID": "hgbc_postyotogi_0148",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0149",
+    "TalkData": {
+      "SpeakerName": "男１９",
+      "Text": "[=ClubOwnerName]さん、今度ここに来るときは、俺の彼女を紹介するよ。あいつはとても淫乱だ、きっと気に入ると思うよ！"
+    }
+  },
+
+  "hgbc_postyotogi_0149": {
+    "ID": "hgbc_postyotogi_0149",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0150",
+    "TalkData": {
+      "SpeakerName": "男２２",
+      "Text": "俺の妻もだよ。最近、新しい男をヤってみたいと言ったばかり！手を貸してくれないか。"
+    }
+  },
+
+  "hgbc_postyotogi_0150": {
+    "ID": "hgbc_postyotogi_0150",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ、会うのが待ちきれないな！"
+    }
+  },
+
+  "hgbc_postyotogi_0151": {
+    "ID": "hgbc_postyotogi_0151",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0152",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "ははは、どうやらみんないい友達になったみたいだね。そうだ、[=ClubOwnerName]くん、もし[=Name,NPC_F,2,CallName]とヤりたいなら、電話してくれ。きっとここに行くよ。"
+    }
+  },
+
+  "hgbc_postyotogi_0152": {
+    "ID": "hgbc_postyotogi_0152",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0153",
+    "GroupData": [
+
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 104,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "にっこり",
+          "FaceBlend": "頬３涙０",
+          "EyeSight": {
+            "Type": "ToChara",
+            "EyeToCharaSetting": {
+              "Type": "ClubOwner"
+            }
+          }
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0153": {
+    "ID": "hgbc_postyotogi_0153",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0154",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "ふふふっ、これからもわたくしをお願いしますわ。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "Sawa_00080.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6.2
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0154": {
+    "ID": "hgbc_postyotogi_0154",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_postyotogi_0155",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_postyotogi_0155": {
+    "ID": "hgbc_postyotogi_0155",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0156",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0156": {
+    "ID": "hgbc_postyotogi_0156",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0157",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は獣ような交尾を続ける、ついに射精できないほど疲れてしまいました。ラウンジに戻って休んでいると、すでに日没の時間だった。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_postyotogi_0157": {
+    "ID": "hgbc_postyotogi_0157",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0158",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]と俺は、明日はまだエンパイアクラブで働かなければならないので、みんなに別れを告げる。）"
+    }
+  },
+
+  "hgbc_postyotogi_0158": {
+    "ID": "hgbc_postyotogi_0158",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_postyotogi_0159",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_postyotogi_0159": {
+    "ID": "hgbc_postyotogi_0159",
+    "Type": "BG",
+    "Tag": "campsite_dust",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0160"
+  },
+
+  "hgbc_postyotogi_0160": {
+    "ID": "hgbc_postyotogi_0160",
+    "Type": "BGM",
+    "Tag": "BGM019.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0161"
+  },
+
+  "hgbc_postyotogi_0161": {
+    "ID": "hgbc_postyotogi_0161",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "hgbc_postyotogi_0162"
+  },
+
+  "hgbc_postyotogi_0162": {
+    "ID": "hgbc_postyotogi_0162",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0162_remove_texture",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": false,
+        "WaitLoad": true
+      },
+      {
+        "Type": "NPC_M_ALL",
+        "Visible": false,
+        "WaitLoad": true
+      },
+      {
+        "Type": "NPC_F_ALL",
+        "Visible": false,
+        "WaitLoad": true
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "ClothesSetID": "RESET"
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0162_remove_texture": {
+    "ID": "hgbc_postyotogi_0162_remove_texture",
+    "Type": "RemoveTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0163",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F_ALL"
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0163": {
+    "ID": "hgbc_postyotogi_0163",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_postyotogi_0164",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "3.49, 0.00, 3.50",
+          "RotString": "0, 0.762, 0, -0.648"
+        },
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0164": {
+    "ID": "hgbc_postyotogi_0164",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0165",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "3.07, 1.63, 2.83",
+        "TargetPosString": "3.50, 1.57, 3.50",
+        "AroundAngleString": "32.99, 4.39",
+        "Distance": 0.8
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0165": {
+    "ID": "hgbc_postyotogi_0165",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0166_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "もうこんな時間か……[=Name,Maid,0,CallName]、今日の見学はどう思う？いろんな男達に輪姦されって悪くないだろ？"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_postyotogi_0166_Branch": {
+    "ID": "hgbc_postyotogi_0166_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_postyotogi_0170_M_[=PType]"
+  },
+
+  "hgbc_postyotogi_0171": {
+    "ID": "hgbc_postyotogi_0171",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0172_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ふーん、新しい扉を開いたみたいたね。……うん、ここに来て良かったな。"
+    }
+  },
+
+  "hgbc_postyotogi_0172_Branch": {
+    "ID": "hgbc_postyotogi_0172_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_postyotogi_0180_M_[=PType]"
+  },
+
+  "hgbc_postyotogi_0181": {
+    "ID": "hgbc_postyotogi_0181",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0182_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "凄く気に入っているみたいたね。"
+    }
+  },
+
+  "hgbc_postyotogi_0182_Branch": {
+    "ID": "hgbc_postyotogi_0182_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_postyotogi_0190_M_[=PType]"
+  },
+
+  "hgbc_postyotogi_0191": {
+    "ID": "hgbc_postyotogi_0191",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0192",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "はは、そんなこと言うな。メンバーになったから、いつでも戻ってこられるよ。"
+    }
+  },
+
+  "hgbc_postyotogi_0192": {
+    "ID": "hgbc_postyotogi_0192",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0193_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "エンパイアクラブに戻ったら、他のメイドたちにこのクラブを勧めよう。愉しいことはみんなで分かち合わないとね。"
+    }
+  },
+
+  "hgbc_postyotogi_0193_Branch": {
+    "ID": "hgbc_postyotogi_0193_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_postyotogi_0200_M_[=PType]"
+  },
+
+  "hgbc_postyotogi_0201": {
+    "ID": "hgbc_postyotogi_0201",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0202",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "任せるよ。今度はみんなと一緒に行くか。"
+    }
+  },
+
+  "hgbc_postyotogi_0202": {
+    "ID": "hgbc_postyotogi_0202",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "hgbc_postyotogi_0210_M_[=PType]"
+  },
+
+  "hgbc_postyotogi_0211": {
+    "ID": "hgbc_postyotogi_0211",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0212",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "よし、家に戻ろう！"
+    }
+  },
+
+  "hgbc_postyotogi_0212": {
+    "ID": "hgbc_postyotogi_0212",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_end",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺たちはこの放蕩の場所を離れ、現実に戻りました。これから、この非現実的な場所を定期的に訪れるだろう、俺たちはもうこの退廃的な快楽にはまってしまったから…）"
+    }
+  },
+
+  "hgbc_end": {
+    "ID": "hgbc_end",
+    "Type": "Special",
+    "WaitingType": "FadeOut",
+    "NextStepID": "hgbc_end2",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "hgbc_end2": {
+    "ID": "hgbc_end2",
+    "Type": "ADVEnd",
+    "WaitingType": "End"
+  }
+}

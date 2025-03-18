@@ -36,6 +36,12 @@ namespace COM3D2.WildParty.Plugin
         internal Dictionary<string, YotogiProgressInfo> YotogiProgressInfoList = new Dictionary<string, YotogiProgressInfo>();
         internal Maid ClubOwner;
 
+        //Key: Maid Guid, Value.Key: ClothingTag, Value.Value: clothes file name 
+        internal Dictionary<string, Dictionary<string, string>> BackupMaidClothingList = new Dictionary<string, Dictionary<string, string>>();
+
+        //Key: Object ID defined in json
+        internal Dictionary<string, GameObject> AddedGameObjectList = new Dictionary<string, GameObject>();
+
         internal int MaxManUsed = -1;
 
         internal int UndergoingModEventID = -1;                     //A number as to fit the data type of the schedule event in the game
@@ -97,5 +103,8 @@ namespace COM3D2.WildParty.Plugin
 
         internal int YotogiPhase = 0;
         internal bool IsFinalYotogi = true;
+
+        internal PartyGroup CurrentMotionKagHandlingGroup = null;
+        internal bool IsMotionKagSetPosition = false;
     }
 }

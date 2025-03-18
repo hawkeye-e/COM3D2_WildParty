@@ -10,6 +10,7 @@ namespace COM3D2.WildParty.Plugin
     internal class PartyGroupSetup
     {
         public int DefaultSexPosID = -1;
+        public List<SpecialCaseDefaultSexPosID> SpecialCaseDefaultSexPosIDList = null;
         public int BackgroundSexPosID = -1;
         public bool IsRandomAssign;
         public bool IsShuffleMaidList;
@@ -63,6 +64,13 @@ namespace COM3D2.WildParty.Plugin
             {
                 get { return Util.ParseVector3RawString(MaidMotionOffsetString); }
             }
+        }
+
+        internal class SpecialCaseDefaultSexPosID
+        {
+            public List<int> Personality;
+            public int DefaultSexPosID;
+
         }
     }
 }

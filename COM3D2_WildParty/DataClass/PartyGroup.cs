@@ -39,6 +39,8 @@ namespace COM3D2.WildParty.Plugin
 
         public bool ForceCharacterVisibleOnPositionChange = true;
 
+        public bool BlockMotionScriptChange = false;                //A flag for blocking the system to change the motion script automatically when modded orgasm command is clicked
+
         public string CurrentMaid1AnimationClipName;                //The current animation playing. Using for getting the animation length.
 
         public string Maid1VoiceType = "";
@@ -50,6 +52,9 @@ namespace COM3D2.WildParty.Plugin
         public ForceSexPosInfo ForceSexPos = null;
         public List<EyeSightSetting> ForceEyeSight = new List<EyeSightSetting>();
         public List<IKAttachInfo> ForceIKAttach = new List<IKAttachInfo>();
+
+        public Dictionary<int, Vector3> MaidOffsetList = new Dictionary<int, Vector3>();
+        public Dictionary<int, Vector3> ManOffsetList = new Dictionary<int, Vector3>();
 
         public Dictionary<string, GameObject> ExtraObjects = new Dictionary<string, GameObject>();
 
@@ -157,11 +162,11 @@ namespace COM3D2.WildParty.Plugin
 
         public void SetGroupPosition()
         {
-            SetCharacterPosition(Maid1);
-            SetCharacterPosition(Maid2);
-            SetCharacterPosition(Man1);
-            SetCharacterPosition(Man2);
-            SetCharacterPosition(Man3);
+            SetCharacterPosition(Maid1, 0);
+            SetCharacterPosition(Maid2, 1);
+            SetCharacterPosition(Man1, 0);
+            SetCharacterPosition(Man2, 1);
+            SetCharacterPosition(Man3, 2);
 
             SetSharedExtraManPosition();
 
@@ -264,21 +269,23 @@ namespace COM3D2.WildParty.Plugin
                 Man3 = maid;
         }
 
-        public void SetCharacterPosition(Maid maid)
+        public void SetCharacterPosition(Maid maid, int indexPosition)
         {
             if (maid != null)
             {
                 if (MovingGroupMemberList.Contains(maid))
                     return;
 
+                Vector3 individualOffset = GetIndividualOffset(maid.boMAN, indexPosition);
+
                 if (RequireSmoothPositionChange)
                 {
-                    Util.SmoothMoveMaidPosition(maid, GroupPosition + GroupOffsetVector + GroupOffsetVector2, GroupRotation);
+                    Util.SmoothMoveMaidPosition(maid, GroupPosition + GroupOffsetVector + GroupOffsetVector2 + individualOffset, GroupRotation);
                 }
                 else
                 {
                     maid.transform.localPosition = Vector3.zero;
-                    maid.transform.position = GroupPosition + GroupOffsetVector + GroupOffsetVector2;
+                    maid.transform.position = GroupPosition + GroupOffsetVector + GroupOffsetVector2 + individualOffset;
                     maid.transform.localRotation = new Quaternion(0, 0, 0, 0);
                     maid.transform.rotation = GroupRotation;
                     maid.body0.SetBoneHitHeightY(maid.transform.position.y);
@@ -287,6 +294,21 @@ namespace COM3D2.WildParty.Plugin
                 if(ForceCharacterVisibleOnPositionChange)
                     maid.Visible = true;
             }
+        }
+
+        private Vector3 GetIndividualOffset(bool isMan, int indexPosition)
+        {
+            Vector3 individualOffset = Vector3.zero;
+            Dictionary<int, Vector3> targetDict;
+            if (isMan)
+                targetDict = ManOffsetList;
+            else
+                targetDict = MaidOffsetList;
+
+            if(targetDict.ContainsKey(indexPosition))
+                individualOffset = targetDict[indexPosition];
+
+            return individualOffset;
         }
 
         public void StopAudio()

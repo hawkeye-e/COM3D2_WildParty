@@ -41,7 +41,13 @@
   },
 
   "Phase2_Default": {
-    "DefaultSexPosID": 5,
+    "DefaultSexPosID": 6,
+    "SpecialCaseDefaultSexPosIDList": [
+      {
+        "Personality": [ 60, 70 ],
+        "DefaultSexPosID": 12
+      }
+    ],
     "IsRandomAssign": false,
     "IsShuffleMaidList": false,
     "IsShuffleManList": false,
@@ -57,7 +63,7 @@
     "GroupSetup": [
       {
         "ArrayPosition": 0,
-        "ManCount": 3,
+        "ManCount": 2,
         "MaidCount": 1,
         "IsAutomatedGroup": false,
         "ClothesSet": "FullNude"

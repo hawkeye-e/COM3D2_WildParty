@@ -376,7 +376,7 @@
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "hgbc_intro_cafe_0022",
+    "NextStepID": "hgbc_intro_cafe_0021b",
     "CharaData": [
       {
         "Type": "NPC_F",
@@ -385,6 +385,14 @@
         "WaitLoad": true
       }
     ]
+  },
+
+  "hgbc_intro_cafe_0021b": {
+    "ID": "hgbc_intro_cafe_0021b",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0022"
   },
 
   "hgbc_intro_cafe_0022": {
@@ -526,7 +534,7 @@
     "NextStepID": "hgbc_intro_cafe_0032",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "[=Name,NPC_F,2,CallName]さんの体は魅力的すぎるので、ついに……ハハ……ごめん…反省します…"
+      "Text": "いや違う違う！[=Name,NPC_F,2,CallName]さんの体は魅力的すぎるので、ついに……ハハ……ごめん…反省します…"
     }
   },
 
@@ -1221,7 +1229,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "名前は輪姦クラブだが、普通のセックスをやっても構わない。ただし心の浮気は禁止、すべては肉体の快楽のためだけだ。"
+      "Text": "名前は『輪姦クラブ』だが、普通のセックスをやっても構わない。ただし心の浮気は禁止、すべては肉体の快楽のためだけだ。"
     }
   },
 

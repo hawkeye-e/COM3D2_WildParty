@@ -73,8 +73,8 @@ namespace COM3D2.WildParty.Plugin.Core
                     CharacterHandling.AssignPartyGroupingRandom(true);
                 else
                     CharacterHandling.AssignPartyGroupingBySetupInfo(formationID, true);
-                
-                YotogiHandling.SetupYotogiSceneInitialSkill(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
+
+                YotogiHandling.SetupYotogiSceneInitialSkill(Util.GetCurrentDefaultSexPosID());
                 CharacterHandling.SetGroupZeroActive();
                 
                 BackgroundGroupMotionManager.InitNextReviewTimer();
@@ -110,17 +110,15 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 CharacterHandling.AssignPartyGrouping(formationID, true);
 
-                YotogiHandling.SetupYotogiSceneInitialSkill(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
+                YotogiHandling.SetupYotogiSceneInitialSkill(Util.GetCurrentDefaultSexPosID());
                 CharacterHandling.SetGroupZeroActive();
 
                 YotogiHandling.UpdateParameterView(StateManager.Instance.PartyGroupList[0].Maid1);
 
-                //Core.YotogiHandling.YotogiSkillCall(StateManager.Instance.YotogiManager, ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
-                PlayableSkill.SkillItem skill = Util.GetGroupSkillIDBySexPosID(StateManager.Instance.PartyGroupList[0], ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID);
+                PlayableSkill.SkillItem skill = Util.GetGroupSkillIDBySexPosID(StateManager.Instance.PartyGroupList[0], Util.GetCurrentDefaultSexPosID());
                 YotogiHandling.ChangeMainGroupSkill(skill.YotogiSkillID);
 
                 YotogiHandling.SetGroupToScene();
-                //YotogiHandling.SetGroupFormation(formationID);
 
                 StateManager.Instance.ExtraCommandWindow.SetVisible(false);
 
@@ -170,8 +168,8 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.PartyGroupList[0].SetGroupPosition(selectedMaidGroupCoordinateInfo.Pos + positionOffset, forceRotation);
 
             originalMaidGroup.SetGroupPosition(originalMaidGroupCoordinateInfo.Pos, originalMaidGroupCoordinateInfo.Rot);
-            
-            int mainGroupSexPosID = ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].DefaultSexPosID;
+
+            int mainGroupSexPosID = Util.GetCurrentDefaultSexPosID();
             int bgSexPosID = ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].BackgroundSexPosID;
 
             PlayableSkill.SkillItem newMainGroupSkill = Util.GetGroupSkillIDBySexPosID(StateManager.Instance.PartyGroupList[0], mainGroupSexPosID);

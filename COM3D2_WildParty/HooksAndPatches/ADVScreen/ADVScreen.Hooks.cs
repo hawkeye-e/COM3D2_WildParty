@@ -102,5 +102,34 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.ADVScreen
         {
             return Patches.IsAllowHideCharacters();
         }
+
+        //Record the offset for individual characters in a group in order to make the motion look more natural in ADV scene
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagSetManOffsetPos))]
+        private static void TagSetManOffsetPosPre(BaseKagManager __instance, KagTagSupport tag_data)
+        {
+            Patches.StartIndividualOffsetHandling(__instance);
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagSetManOffsetPos))]
+        private static void TagSetManOffsetPosPost(KagTagSupport tag_data)
+        {
+            Patches.EndIndividualOffsetHandling();
+        }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(MotionKagManager), "TagSetMaidOffsetMultiPos2")]
+        private static void TagSetMaidOffsetMultiPos2Pre(MotionKagManager __instance, KagTagSupport tag_data)
+        {
+            Patches.StartMotionKagIndividualOffsetHandling(__instance);
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(MotionKagManager), "TagSetMaidOffsetMultiPos2")]
+        private static void TagSetMaidOffsetMultiPos2Post(KagTagSupport tag_data)
+        {
+            Patches.EndIndividualOffsetHandling();
+        }
     }
 }

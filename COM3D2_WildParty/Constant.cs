@@ -11,6 +11,7 @@ namespace COM3D2.WildParty.Plugin
         internal const int ExcitementRateMaxCap = 300;
         internal const int SensualRateMaxCap = 300;
         internal const int YotogiExcitementLevelStep = 100;
+        internal const string ClothesSetResetCode = "RESET";
 
         internal static readonly string[] FellatioLabel = { "Fellatio", "DeepThroat", "PainFellatio", "FellatioExcite", "FellatioDrunk", "FellatioBitch" };
 
@@ -270,6 +271,9 @@ namespace COM3D2.WildParty.Plugin
             internal const string ListUpdate = "ListUpdate";
             internal const string TimeWait = "TimeWait";
 
+            internal const string AddObject = "AddObject";
+            internal const string RemoveObject = "RemoveObject";
+
             internal const string ADVEnd = "ADVEnd";    //End the scenario and return to normal flow
         }
 
@@ -356,12 +360,15 @@ namespace COM3D2.WildParty.Plugin
 
         internal static class TargetType
         {
+            internal const string ClubOwner = "Owner";
             internal const string SingleMan = "M";
             internal const string SingleMaid = "F";
             internal const string AllMen = "M_ALL";
             internal const string AllMaids = "F_ALL";
             internal const string NPCFemale = "NPC_F";
             internal const string NPCMale = "NPC_M";
+            internal const string AllNPCFemale = "NPC_F_ALL";
+            internal const string AllNPCMale = "NPC_M_ALL";
         }
 
         internal static class EventProgress

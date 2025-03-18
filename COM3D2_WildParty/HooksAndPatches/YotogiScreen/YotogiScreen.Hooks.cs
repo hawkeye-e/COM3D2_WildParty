@@ -52,7 +52,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         [HarmonyPatch(typeof(YotogiPlayManager), nameof(YotogiPlayManager.OnClickNext))]
         private static void YotogiPlayManagerOnClickNextPre()
         {
-            Patches.PreserveExtraCommandWindow();
+            Patches.DestroyExtraCommandWindow();
             Patches.HandleYotogiPlayEnd();
         }
 
@@ -175,9 +175,13 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         //The original system use its own array position to locate the maid or man game object and assign motion or related stuff. We need to spoof to redirect it to assign to a different game object for those background groups.
         [HarmonyPrefix]
         [HarmonyPatch(typeof(ScriptManager), nameof(ScriptManager.LoadMotionScript))]
-        private static void LoadMotionScriptPre(int sloat, bool is_next, string file_name, string label_name, string maid_guid, string man_guid, bool face_fix, bool valid_pos, bool disable_diff_pos)
+        private static bool LoadMotionScriptPre(int sloat, bool is_next, string file_name, string label_name, string maid_guid, string man_guid, bool face_fix, bool valid_pos, bool disable_diff_pos)
         {
+            if (Patches.CheckBlockLoadMotionScript(maid_guid))
+                return false;
             Patches.StartSpoofingLoadMotionScript(label_name, maid_guid, man_guid);
+
+            return true;
         }
 
         [HarmonyPostfix]
@@ -243,12 +247,16 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         }
 
 
-        //This is trying to force the group zero to stay in our defined position instead of jumping to the default one defined by KISS when clicking command button
-        //We have to avoid using SetPos and SetRot in YotogiPlay due to we have modified the behaviour here
         [HarmonyPostfix]
         [HarmonyPatch(typeof(Maid), nameof(Maid.SetPos))]
-        private static void MaidSetPosPost()
+        private static void MaidSetPosPost(Maid __instance, Vector3 f_vecLocalPos)
         {
+            //The system will calculate a offset vector for the motion of a character in a blackbox,
+            //we have to capture it to apply it to the characters in the ADV scene in order to make the motion looks more natural
+            Patches.SetOffsetVectorForGroup(__instance, f_vecLocalPos);
+
+            //This is trying to force the group zero to stay in our defined position instead of jumping to the default one defined by KISS when clicking command button
+            //We have to avoid using SetPos and SetRot in YotogiPlay due to we have modified the behaviour here
             Patches.ForceGroupPosition();
         }
 

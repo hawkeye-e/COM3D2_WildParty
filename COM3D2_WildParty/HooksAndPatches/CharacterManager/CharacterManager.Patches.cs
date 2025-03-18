@@ -37,29 +37,11 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
                         }
                     }
                 }
-                //check also the club owner
-                if (StateManager.Instance.ClubOwner != null)
-                    if (StateManager.Instance.ClubOwner.status.guid == StateManager.Instance.processingManGUID)
-                    {
-                        result = StateManager.Instance.ClubOwner;
-                        return;
-                    }
-                //man list
-                if (StateManager.Instance.MenList != null)
-                    foreach (Maid man in StateManager.Instance.MenList)
-                        if (man.status.guid == StateManager.Instance.processingManGUID)
-                        {
-                            result = man;
-                            return;
-                        }
-                //npc list
-                if (StateManager.Instance.NPCManList != null)
-                    foreach (Maid npc in StateManager.Instance.NPCManList)
-                        if (npc.status.guid == StateManager.Instance.processingManGUID)
-                        {
-                            result = npc;
-                            return;
-                        }
+
+                Maid searchResult = Util.SearchManCharacterByGUID(StateManager.Instance.processingManGUID);
+                if (searchResult != null)
+                    result = searchResult;
+
             }
         }
 
@@ -139,37 +121,67 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
             return true;
         }
 
-        
-        internal static void SpoofGetManCharacters(KagTagSupport tag_data, ref Maid __result)
+
+        internal static void SpoofGetManCharacters(BaseKagManager instance, KagTagSupport tag_data, ref Maid __result)
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
+                if (!(instance is MotionKagManager))
+                    return;
+                if (__result == null)
+                    return;
+
+                MotionKagManager motionKagManager = (MotionKagManager)instance;
+
                 if (tag_data.IsValid("man"))
                 {
-                    //Use the recorded group index to locate the correct man characters and return as result
-                    int manIndex = tag_data.GetTagProperty("man").AsInteger();
+                    Maid man = motionKagManager.main_man;
+                    Maid maid = motionKagManager.main_maid;
 
-                    if (StateManager.Instance.currentGroup >= 0 && __result != null && StateManager.Instance.PartyGroupList.Count > 1)
+                    if (maid != null)
                     {
-                        PartyGroup group = StateManager.Instance.PartyGroupList[StateManager.Instance.currentGroup];
-                        BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
+                        //this is a group motion
+                        int manIndex = tag_data.GetTagProperty("man").AsInteger();
 
-                        for (int i = 0; i < motionItem.ManIndex.Count; i++)
-                            if (motionItem.ManIndex[i] == manIndex)
-                                __result = group.GetManAtIndex(i);
+                        //use maid to search for the group.
+                        PartyGroup group = Util.GetPartyGroupByCharacter(maid);
 
+                        if (group != null)
+                        {
+                            BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
+
+                            for (int i = 0; i < motionItem.ManIndex.Count; i++)
+                                if (motionItem.ManIndex[i] == manIndex)
+                                    __result = group.GetManAtIndex(i);
+                        }
                     }
+                    else
+                    {
+                        __result = man;
+                    }
+
                 }
                 else
                 {
-                    //Maid flow, we record the group index
-                    for (int i = 0; i < StateManager.Instance.PartyGroupList.Count; i++)
+                    //Maid flow
+                    Maid maid = motionKagManager.main_maid;
+
+                    int maidIndex = tag_data.GetTagProperty("maid").AsInteger();
+
+                    if (maidIndex > 0)
                     {
-                        if (__result != null && StateManager.Instance.PartyGroupList[i].Maid1.status.guid == __result.status.guid)
+                        PartyGroup group = Util.GetPartyGroupByCharacter(maid);
+                        if (group != null)
                         {
-                            StateManager.Instance.currentGroup = i;
-                            break;
+                            BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
+                            for (int i = 0; i < motionItem.MaidIndex.Count; i++)
+                                if (motionItem.MaidIndex[i] == maidIndex)
+                                    __result = group.GetMaidAtIndex(i);
                         }
+                    }
+                    else
+                    {
+                        __result = maid;
                     }
                 }
             }

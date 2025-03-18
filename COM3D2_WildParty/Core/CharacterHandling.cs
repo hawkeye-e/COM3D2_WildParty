@@ -259,6 +259,10 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
             }
 
+            //Backup all maid clothes information. We will use this info to restore the clothing information when the mod event is reset
+            foreach(Maid maid in StateManager.Instance.SelectedMaidsList)
+                BackupMaidClothesInfo(maid);
+
         }
 
 
@@ -1129,24 +1133,61 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             if (maid == null || string.IsNullOrEmpty(clothesSetID))
                 return;
-            ClothesSet targetSet = ModUseData.ClothesSetList[clothesSetID];
-            ClothesSet nudeSet = ModUseData.ClothesSetList[ModResources.TextResource.NudeClothesSetID];
+
+            if (clothesSetID == Constant.ClothesSetResetCode)
+            {
+                RestoreMaidClothesInfo(maid);
+            }
+            else
+            {
+                ClothesSet targetSet = ModUseData.ClothesSetList[clothesSetID];
+                ClothesSet nudeSet = ModUseData.ClothesSetList[ModResources.TextResource.NudeClothesSetID];
+
+                for (int i = 0; i < Constant.DressingClothingTagArray.Length; i++)
+                {
+                    string slotName = Constant.DressingClothingTagArray[i];
+                    string fileName = "";
+                    if (targetSet.RequireNude)
+                        fileName = nudeSet.Slots[slotName];
+                    if (targetSet.Slots.ContainsKey(slotName))
+                        fileName = targetSet.Slots[slotName];
+
+                    maid.ResetProp(slotName, true);
+                    maid.AllProcProp();
+                    maid.SetProp(slotName, fileName, 0, false);
+                    maid.AllProcProp();
+                }
+            }
+        }
+
+        internal static void RestoreMaidClothesInfo(Maid maid)
+        {
+            if (maid == null)
+                return;
+            if (!StateManager.Instance.BackupMaidClothingList.ContainsKey(maid.status.guid))
+                return;
+
+            Dictionary<string, string> maidClothesDict = StateManager.Instance.BackupMaidClothingList[maid.status.guid];
+            foreach(var kvp in maidClothesDict)
+            {
+                maid.SetProp(kvp.Key, kvp.Value, 0, false);
+            }
+            maid.AllProcProp();
+        }
+
+        private static void BackupMaidClothesInfo(Maid maid)
+        {
+            Dictionary<string, string> maidClothesDict = new Dictionary<string, string>();
 
             for (int i = 0; i < Constant.DressingClothingTagArray.Length; i++)
             {
-                string slotName = Constant.DressingClothingTagArray[i];
-                string fileName = "";
-                if (targetSet.RequireNude)
-                    fileName = nudeSet.Slots[slotName];
-                if (targetSet.Slots.ContainsKey(slotName))
-                    fileName = targetSet.Slots[slotName];
-
-                maid.ResetProp(slotName, true);
-                maid.AllProcProp();
-                maid.SetProp(slotName, fileName, 0, true);
-                maid.AllProcProp();
+                maidClothesDict.Add(Constant.DressingClothingTagArray[i], maid.GetProp(Constant.DressingClothingTagArray[i]).strFileName);
             }
 
+            if (!StateManager.Instance.BackupMaidClothingList.ContainsKey(maid.status.guid))
+                StateManager.Instance.BackupMaidClothingList.Add(maid.status.guid, maidClothesDict);            
+            else
+                StateManager.Instance.BackupMaidClothingList[maid.status.guid] = maidClothesDict;
         }
     }
 }

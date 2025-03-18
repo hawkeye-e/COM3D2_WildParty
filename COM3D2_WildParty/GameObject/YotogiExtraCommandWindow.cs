@@ -67,12 +67,14 @@ namespace COM3D2.WildParty.Plugin.CustomGameObject
         }
 
         public Transform transform;
+        private GameObject MainObject;
         private bool _requireInit = true;
         private Mode _currentMode = Mode.Hidden;
 
         public YotogiExtraCommandWindow(GameObject toBeCloned, bool isClonedFromMasterCopy = true)
         {
             var clone = GameObject.Instantiate(toBeCloned);
+            this.MainObject = clone;
 
             //Set it to active in order to avoid being destroy automatically, but at the same time we dont want it to appear on the screen so scale it to 0
             clone.SetActive(true);
@@ -220,6 +222,11 @@ namespace COM3D2.WildParty.Plugin.CustomGameObject
         {
             var scrollView = transform.Find(CONTENT_PATH);
             scrollView.GetComponent<UIScrollView>().ResetPosition();
+        }
+
+        public void Destroy()
+        {
+            UnityEngine.Object.Destroy(this.MainObject);
         }
     }
 }
