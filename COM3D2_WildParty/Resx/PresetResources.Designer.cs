@@ -73,6 +73,16 @@ namespace ModResources {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Kamigawara_Reika_v2 {
+            get {
+                object obj = ResourceManager.GetObject("Kamigawara_Reika_v2", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] Seikou_Haruna {
             get {
                 object obj = ResourceManager.GetObject("Seikou_Haruna", resourceCulture);
@@ -83,9 +93,29 @@ namespace ModResources {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Seikou_Haruna_v2 {
+            get {
+                object obj = ResourceManager.GetObject("Seikou_Haruna_v2", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] Shirohama_Natsumi {
             get {
                 object obj = ResourceManager.GetObject("Shirohama_Natsumi", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Shirohama_Natsumi_v2 {
+            get {
+                object obj = ResourceManager.GetObject("Shirohama_Natsumi_v2", resourceCulture);
                 return ((byte[])(obj));
             }
         }

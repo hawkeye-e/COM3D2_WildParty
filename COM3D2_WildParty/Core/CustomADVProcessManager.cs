@@ -479,6 +479,8 @@ namespace COM3D2.WildParty.Plugin.Core
         private static void SetADVCharaDataToCharacter(Maid maid, ADVStep.ShowChara charaData, bool isMan = false)
         {
             maid.Visible = charaData.Visible;
+            if (charaData.Visible)
+                maid.transform.localScale = Vector3.one;
 
             if (!isMan)
             {

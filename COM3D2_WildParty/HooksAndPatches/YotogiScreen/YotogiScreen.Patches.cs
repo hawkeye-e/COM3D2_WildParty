@@ -438,8 +438,11 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 StateManager.Instance.processingMaidGUID = maid_guid;
                 StateManager.Instance.processingManGUID = man_guid;
 
+                if (maid_guid == "" && man_guid == "")
+                    StateManager.Instance.IsMainGroupMotionScriptFlag = true;
+
                 if (maid_guid == "")
-                {
+                {                    
                     //this is group zero. we try mark down the label name here
                     if (StateManager.Instance.PartyGroupList != null)
                         if (StateManager.Instance.PartyGroupList.Count > 0)
@@ -455,6 +458,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             {
                 StateManager.Instance.processingMaidGUID = "";
                 StateManager.Instance.processingManGUID = "";
+
+                StateManager.Instance.IsMainGroupMotionScriptFlag = false;
             }
         }
 
@@ -1001,12 +1006,15 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 if (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiPlay)
                 {
                     PartyGroupSetup setupInfo = ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation];
-                    foreach (var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
+                    if (setupInfo.GroupSetup != null)
                     {
-                        if (!string.IsNullOrEmpty(groupSetupInfo.ClothesSet))
+                        foreach (var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
                         {
-                            for (int i = 0; i < groupSetupInfo.MaidCount; i++)
-                                Core.CharacterHandling.SetFemaleClothing(StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].GetMaidAtIndex(i), groupSetupInfo.ClothesSet);
+                            if (!string.IsNullOrEmpty(groupSetupInfo.ClothesSet))
+                            {
+                                for (int i = 0; i < groupSetupInfo.MaidCount; i++)
+                                    Core.CharacterHandling.SetFemaleClothing(StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].GetMaidAtIndex(i), groupSetupInfo.ClothesSet);
+                            }
                         }
                     }
                 }
@@ -1024,6 +1032,12 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                     if (StateManager.Instance.PartyGroupList != null)
                         if (StateManager.Instance.PartyGroupList.Count > 0)
                             return StateManager.Instance.PartyGroupList[0].BlockMotionScriptChange;
+                }
+                else
+                {
+                    PartyGroup group = Util.GetPartyGroupByGUID(maid_guid);
+                    if(group != null)
+                        return group.BlockMotionScriptChange;
                 }
             }
 
@@ -1065,6 +1079,25 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                     }
                 }
 
+            }
+        }
+
+        internal static void SetMainGroupMaidAndManInfoInMotionKagManager(BaseKagManager baseKagManager)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (StateManager.Instance.IsMainGroupMotionScriptFlag && StateManager.Instance.PartyGroupList != null && StateManager.Instance.PartyGroupList.Count > 0)
+                {
+                    if (baseKagManager is MotionKagManager)
+                    {
+
+                        MotionKagManager motionKagManager = (MotionKagManager)baseKagManager;
+                        if (motionKagManager.main_man == null)
+                            motionKagManager.SetMainMan(StateManager.Instance.PartyGroupList[0].GetManAtIndex(0));
+                        if (motionKagManager.main_maid == null)
+                            motionKagManager.SetMainMaid(StateManager.Instance.PartyGroupList[0].GetMaidAtIndex(0));
+                    }
+                }
             }
         }
     }

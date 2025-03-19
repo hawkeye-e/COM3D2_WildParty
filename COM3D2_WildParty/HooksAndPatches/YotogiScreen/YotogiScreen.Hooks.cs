@@ -189,15 +189,10 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         private static void LoadMotionScriptPost(int sloat, bool is_next, string file_name, string label_name, string maid_guid, string man_guid, bool face_fix, bool valid_pos, bool disable_diff_pos)
         {
             Patches.EndSpoofingLoadMotionScript();
-        }
-
-        //When this function is called the system will always try to set the main group to its default position of the map which is not what we want. Apply the position setting again.
-        [HarmonyPostfix]
-        [HarmonyPatch(typeof(ScriptManager), nameof(ScriptManager.LoadMotionScript))]
-        private static void LoadYotogiScriptPost(string file_name, string label_name)
-        {
+            //When this function is called the system will always try to set the main group to its default position of the map which is not what we want. Apply the position setting again.
             if (StateManager.Instance.UndergoingModEventID > 0 && StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiPlay)
-                Util.ResetAllGroupPosition();
+                if (!Patches.CheckBlockLoadMotionScript(maid_guid))
+                    Util.ResetAllGroupPosition();
         }
 
         //Patch to hide the extra command window when the main command window is sliding out of screen
@@ -405,5 +400,15 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             //In the yotogi scene, the clothes will be reset at the beginning. Apply the clothing setting if it is defined in the json file.
             Patches.ApplyClothesSetting();
         }
+
+#if COM3D2
+        //The V2 version does not set the maid and man in the MotionKagManager for the main group during LoadMotionScript. We have to set it so that we can identify the main group when the system trying to get the maid / man.
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.LoadScriptFile))]
+        private static void LoadScriptFile(BaseKagManager __instance, string file_name, string label_name)
+        {
+            Patches.SetMainGroupMaidAndManInfoInMotionKagManager(__instance);
+        }
+#endif
     }
 }

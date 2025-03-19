@@ -9,7 +9,7 @@ namespace COM3D2.WildParty.Plugin
 {
     internal class ModNPCFemale : ModNPC
     {
-        public string PresetFile;
+        public PresetFileDetail PresetFile;
         public int Personality;
         public int VoicePitch;
     }
@@ -36,5 +36,11 @@ namespace COM3D2.WildParty.Plugin
             LastName,
             NickName
         }
+    }
+
+    internal class PresetFileDetail
+    {
+        public string V2_5;
+        public string V2;
     }
 }

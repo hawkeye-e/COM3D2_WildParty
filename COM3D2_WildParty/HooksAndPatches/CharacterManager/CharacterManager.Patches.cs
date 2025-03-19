@@ -17,7 +17,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
                 {
                     if (group.Man1.status.guid == StateManager.Instance.processingManGUID)
                     {
-                        if(group.SexPosID >= 0)
+                        if (group.SexPosID >= 0)
                         {
                             //If it is a hit, determine which man in the group is returned
                             BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
@@ -150,9 +150,14 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
                         {
                             BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
 
-                            for (int i = 0; i < motionItem.ManIndex.Count; i++)
-                                if (motionItem.ManIndex[i] == manIndex)
-                                    __result = group.GetManAtIndex(i);
+                            if (motionItem == null)
+                                __result = group.GetManAtIndex(0);
+                            else
+                            {
+                                for (int i = 0; i < motionItem.ManIndex.Count; i++)
+                                    if (motionItem.ManIndex[i] == manIndex)
+                                        __result = group.GetManAtIndex(i);
+                            }
                         }
                     }
                     else
@@ -174,14 +179,21 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
                         if (group != null)
                         {
                             BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
-                            for (int i = 0; i < motionItem.MaidIndex.Count; i++)
-                                if (motionItem.MaidIndex[i] == maidIndex)
-                                    __result = group.GetMaidAtIndex(i);
+
+                            if (motionItem == null)
+                                __result = group.GetMaidAtIndex(0);
+                            else
+                            {
+                                for (int i = 0; i < motionItem.MaidIndex.Count; i++)
+                                    if (motionItem.MaidIndex[i] == maidIndex)
+                                        __result = group.GetMaidAtIndex(i);
+                            }
                         }
                     }
                     else
                     {
-                        __result = maid;
+                        if(maid != null)
+                            __result = maid;
                     }
                 }
             }

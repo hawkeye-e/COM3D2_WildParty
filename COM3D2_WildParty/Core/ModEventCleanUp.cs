@@ -146,6 +146,7 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.SpoofChangeBackgroundFlag = false;
 
             StateManager.Instance.IsMotionKagSetPosition = false;
+            StateManager.Instance.IsMainGroupMotionScriptFlag = false;
 
             StateManager.Instance.YotogiManager = null;
             StateManager.Instance.YotogiCommandFactory = null;

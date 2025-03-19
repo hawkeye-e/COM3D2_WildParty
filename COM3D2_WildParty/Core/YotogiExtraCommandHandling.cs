@@ -291,10 +291,9 @@ namespace COM3D2.WildParty.Plugin.Core
             int currentMaidIndex = Util.GetIndexPositionInWorkingYotogiArrayForMaid(StateManager.Instance.PartyGroupList[0].Maid1);
             PartyGroup targetMaidGroup = Util.GetPartyGroupByGUID(StateManager.Instance.YotogiWorkingMaidList[currentMaidIndex - 1].status.guid);
 
-            SetupPreSwapMotionEndTrigger(-1, false);
-
             YotogiExtraCommandCallbacks.PlayPreMovementMotion(false, -1, StateManager.Instance.PartyGroupList[0], targetMaidGroup);
 
+            SetupPreSwapMotionEndTrigger(-1, false);
         }
 
         public static void HaremKing_MoveRight()
@@ -315,10 +314,10 @@ namespace COM3D2.WildParty.Plugin.Core
             int currentMaidIndex = Util.GetIndexPositionInWorkingYotogiArrayForMaid(StateManager.Instance.PartyGroupList[0].Maid1);
             PartyGroup targetMaidGroup = Util.GetPartyGroupByGUID(StateManager.Instance.YotogiWorkingMaidList[currentMaidIndex + 1].status.guid);
 
-            SetupPreSwapMotionEndTrigger(1, true);
-
             //Load movement motion for main group
             YotogiExtraCommandCallbacks.PlayPreMovementMotion(true, 1, StateManager.Instance.PartyGroupList[0], targetMaidGroup);
+
+            SetupPreSwapMotionEndTrigger(1, true);
         }
 
         public static void OrgasmCommandOnClick(string buttonID)
@@ -406,6 +405,9 @@ namespace COM3D2.WildParty.Plugin.Core
 
         private static void SetupPreSwapMotionEndTrigger(int indexOffset, bool isMovingRight)
         {
+            foreach(PartyGroup group in StateManager.Instance.PartyGroupList)
+                group.BlockMotionScriptChange = true;
+
             //Setup trigger to be executed when target animation starts
             int currentMaidIndex = Util.GetIndexPositionInWorkingYotogiArrayForMaid(StateManager.Instance.PartyGroupList[0].Maid1);
             PartyGroup targetMaidGroup = Util.GetPartyGroupByGUID(StateManager.Instance.YotogiWorkingMaidList[currentMaidIndex + indexOffset].status.guid);

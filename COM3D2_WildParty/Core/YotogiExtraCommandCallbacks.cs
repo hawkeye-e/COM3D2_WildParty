@@ -137,6 +137,9 @@ namespace COM3D2.WildParty.Plugin.Core
 
             PartyGroup originalMaidGroup = Util.GetPartyGroupByGUID(originalMaid.status.guid);
 
+            foreach (PartyGroup group in StateManager.Instance.PartyGroupList)
+                group.BlockMotionScriptChange = false;
+
             PlayPostMovementMotion(isMovingRight, StateManager.Instance.PartyGroupList[0], originalMaidGroup);
 
             StateManager.Instance.SpoofActivateMaidObjectFlag = true;

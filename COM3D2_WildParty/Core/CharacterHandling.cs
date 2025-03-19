@@ -62,9 +62,18 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static Maid InitModNPCFemale(string NPCID)
         {
             ModNPCFemale npcData = ModUseData.ModNPCFemaleList[NPCID];
-
+            
             Maid maid = GameMain.Instance.CharacterMgr.AddStockMaid();
-            CharacterMgr.Preset preset = LoadPreset(npcData.PresetFile);
+#if COM3D2_5
+#if UNITY_2022_3
+            CharacterMgr.Preset preset = LoadPreset(npcData.PresetFile.V2_5);
+#endif
+#endif
+
+#if COM3D2
+            CharacterMgr.Preset preset = LoadPreset(npcData.PresetFile.V2);
+#endif
+
             GameMain.Instance.CharacterMgr.PresetSet(maid, preset);
 
             if (maid != null)
@@ -236,6 +245,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             StateManager.Instance.SelectedMaidsList.Add(mainMaid);
             StateManager.Instance.YotogiProgressInfoList.Add(mainMaid.status.guid, new YotogiProgressInfo());
+            mainMaid.status.enabledYotogiStatusLock = isLockParameters;
 
             if (scenario.IsGroupEvent)
             {
@@ -420,12 +430,12 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void AssignPartyGroupingBySetupInfo(string formationID, bool retainMaidZero = false)
         {
             PartyGroupSetup setupInfo = ModUseData.PartyGroupSetupList[formationID];
-
+            
             StateManager.Instance.PartyGroupList.Clear();
 
             //Keep the master list unchanged so that the chosen maid will remain the same in the ADV
             List<Maid> workingMaidList = new List<Maid>(StateManager.Instance.SelectedMaidsList);
-
+            
             if (setupInfo.IsShuffleMaidList)
             {
                 if (retainMaidZero)
@@ -440,18 +450,29 @@ namespace COM3D2.WildParty.Plugin.Core
             }
             if (setupInfo.IsShuffleManList)
                 StateManager.Instance.MenList = ShuffleMaidOrManList(StateManager.Instance.MenList);
-
+            
             StateManager.Instance.YotogiWorkingMaidList = workingMaidList;
             StateManager.Instance.YotogiWorkingManList = StateManager.Instance.MenList;
 
             int maidRunningNumber = 0;
             int manRunningNumber = 0;
             int NPCFemaleRunningNumber = 0;
-
+            
             foreach (var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
             {
-                PartyGroup newGroup = new PartyGroup();
+                if (!groupSetupInfo.MaidFromNPC)
+                {
+                    if (maidRunningNumber >= StateManager.Instance.YotogiWorkingMaidList.Count)
+                        continue;
+                }
+                else
+                {
+                    if (NPCFemaleRunningNumber >= StateManager.Instance.NPCList.Count)
+                        continue;
+                }
 
+                    PartyGroup newGroup = new PartyGroup();
+                
                 for (int i = 0; i < groupSetupInfo.MaidCount; i++)
                 {
                     if (!groupSetupInfo.MaidFromNPC)
@@ -461,19 +482,17 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
                 for (int i = 0; i < groupSetupInfo.ManCount; i++)
                     newGroup.SetManAtIndex(i, StateManager.Instance.MenList[manRunningNumber++]);
-
+                
 
 
                 newGroup.IsAutomatedGroup = groupSetupInfo.IsAutomatedGroup;
                 newGroup.IsVoicelessGroup = groupSetupInfo.IsVoicelessGroup;
-
+                
 
                 StateManager.Instance.PartyGroupList.Add(newGroup);
-
-                if (maidRunningNumber >= StateManager.Instance.YotogiWorkingMaidList.Count && NPCFemaleRunningNumber >= StateManager.Instance.NPCList.Count)
-                    break;
+                
             }
-
+            
             //Shared extra man handling
             PartyGroup.SharedExtraManList = new Dictionary<int, Maid>();
             for (int i = 0; i < setupInfo.ExtraManCount; i++)
@@ -483,7 +502,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 else
                     PartyGroup.SharedExtraManList.Add(i, StateManager.Instance.MenList[manRunningNumber++]);
             }
-
+            
             //Extra man for each group handling
             foreach (var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
             {
@@ -1065,7 +1084,15 @@ namespace COM3D2.WildParty.Plugin.Core
             byte[] presetData = NPCPresetMapping.GetPresetResources(presetFileName);
 
             BinaryReader binaryReader = new BinaryReader(new MemoryStream(presetData));
+#if COM3D2_5
+#if UNITY_2022_3
             CharacterMgr.Preset result = CharacterMgr.PresetLoad(binaryReader, Path.GetFileName(presetFileName));
+#endif
+#endif
+
+#if COM3D2
+            CharacterMgr.Preset result = GameMain.Instance.CharacterMgr.PresetLoad(binaryReader, Path.GetFileName(presetFileName));
+#endif
             binaryReader.Close();
 
             return result;

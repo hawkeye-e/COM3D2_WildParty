@@ -236,6 +236,9 @@ namespace COM3D2.WildParty.Plugin
 
         public static PartyGroup GetPartyGroupByCharacter(Maid chara)
         {
+            if (chara == null)
+                return null;
+
             foreach (var group in StateManager.Instance.PartyGroupList)
             {
                 if (group.Maid1.status.guid == chara.status.guid || group.Man1.status.guid == chara.status.guid
