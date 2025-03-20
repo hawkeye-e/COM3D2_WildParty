@@ -20,7 +20,7 @@ namespace COM3D2.WildParty.Plugin.Core
             if (StateManager.Instance.ClubOwner != null && StateManager.Instance.MenList != null)
                 StateManager.Instance.MenList.Add(StateManager.Instance.ClubOwner);
             UnloadCharacters(StateManager.Instance.MenList, Constant.CharacterType.Man);
-            UnloadCharacters(StateManager.Instance.NPCList, Constant.CharacterType.NPC);
+            UnloadNPC(StateManager.Instance.NPCList);
             UnloadCharacters(StateManager.Instance.NPCManList, Constant.CharacterType.Man);
             
             RemoveAddedObjects();
@@ -185,6 +185,27 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 CharacterHandling.RestoreMaidClothesInfo(maid);
                 maid.ResetAll();
+            }
+        }
+
+        private static void UnloadNPC(List<Maid> maidList)
+        {
+            foreach (Maid maid in maidList)
+                GameMain.Instance.CharacterMgr.BanishmentMaid(maid);
+        }
+
+        //For the maids that are created by the player, there is a thumb icon. Those injected by this mod does not.
+        //Use this difference to remove any injected maids that the mod fail to remove properly in previous version.
+        internal static void RemoveInjectedModNPC()
+        {
+            var stockmaids = GameMain.Instance.CharacterMgr.GetStockMaidList();
+            for (int i = stockmaids.Count - 1; i >= 0; i--)
+            {
+                Maid maid = stockmaids[i];               
+                if (maid.GetThumIcon() == null)
+                {
+                    GameMain.Instance.CharacterMgr.BanishmentMaid(maid);
+                }
             }
         }
     }

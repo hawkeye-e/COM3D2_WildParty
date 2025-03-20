@@ -18,6 +18,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
         [HarmonyPatch(typeof(DailyMgr), nameof(DailyMgr.Init))]
         private static void DailyMgrInitPost(DailyMgr __instance)
         {
+            //Check if there is any mod-injected NPC remains in the game due to a bug in 0.2.0. Remove them if found.
+            Core.ModEventCleanUp.RemoveInjectedModNPC();
+
             Patches.PrepareExtraCommandWindow();
             Patches.InjectScheduleOptions();
         }
