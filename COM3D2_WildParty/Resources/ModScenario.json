@@ -256,5 +256,114 @@
         "Value": 1
       }
     ]
+  },
+
+
+  {
+    "ScenarioID": 9900003,
+    "CategoryID": 99000,
+    "ADVEntryStep": "agbd0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "再び輪姦願望",
+    "Information": "輪姦倶楽部でイベントに参加した後、メイドは倶楽部がもたらす快楽についての言葉を広めた。そこで、他のメイド達がご主人様にその輪姦されたい願望を伝える…",
+    "Icon": "mod_icon_happy_gb_club",
+    "IsNetorare": true,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "SpecialRelationEnumString": [ "Married" ],
+    "ConditionInfoText": [
+      "嫁である",
+      "育成中のメイドではない",
+      "両穴経験済みである",
+      "「快楽輪姦倶楽部」を実行したことがある"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 210, 220 ],
+    "MasterRequireFlag": [ "Mod_快楽輪姦倶楽部_Executed" ],
+
+    "IsGroupEvent": true,
+    "MaidCount": {
+      "Max": 3,
+      "Min": 3
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "poledancestage",
+          "NightMapID": "poledancestage",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Phase1_Default" ],
+          "DefaultFormation": "Phase1_Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition",
+          "OrgasmInternal",
+          "OrgasmExternal",
+          "OrgasmMouth",
+          "OrgasmFace",
+          "OrgasmBukkake",
+          "OrgasmBukkake2",
+          "FetishGangBang"
+        ],
+        "FlexibleManCountInYotogi": true,
+        "ForceChangeManWhenOrgasm": true,
+        "IsMainManOwner": false,
+
+        "SexStateRule": "GangBangNormal"
+      },
+      {
+        "Phase": 2,
+        "DefaultMap": {
+          "DayMapID": "poledancestage",
+          "NightMapID": "poledancestage",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Phase2_Default" ],
+          "DefaultFormation": "Phase2_Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition",
+          "FetishGangBang"
+        ],
+        "FlexibleManCountInYotogi": true,
+        "ForceChangeManWhenOrgasm": true,
+        "IsMainManOwner": true,
+
+        "SexStateRule": "GangBangNormal"
+      },
+
+      {
+        "Phase": 3,
+        "DefaultMap": {
+          "DayMapID": "poledancestage",
+          "NightMapID": "poledancestage",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Phase3_Missionary", "Phase3_Missionary_Anus", "Phase3_Doggy", "Phase3_Doggy_Anus" ],
+          "DefaultFormation": "Phase3_Missionary"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeFormationHappyGBClub",
+          "FetishGangBang"
+        ],
+        "FlexibleManCountInYotogi": true,
+        "ForceChangeManWhenOrgasm": true,
+        "IsMainManOwner": false,
+
+        "SexStateRule": "GangBangQueued"
+      }
+    ],
+
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true
   }
 ]

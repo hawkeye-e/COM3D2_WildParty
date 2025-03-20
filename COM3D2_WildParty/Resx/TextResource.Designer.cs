@@ -247,7 +247,10 @@ namespace ModResources {
         ///    &quot;LastName&quot;: &quot;神川原&quot;,
         ///    &quot;NickName&quot;: &quot;麗華&quot;,
         ///    &quot;WayToCall&quot;: &quot;FirstName&quot;,
-        ///    &quot;PresetFile&quot;: &quot;Kamigawara_Reika&quot;,
+        ///    &quot;PresetFile&quot;: {
+        ///      &quot;V2_5&quot;: &quot;Kamigawara_Reika&quot;,
+        ///      &quot;V2&quot;: &quot;Kamigawara_Reika_v2&quot;
+        ///    },
         ///    &quot;Personality&quot;: 100,
         ///    &quot;VoicePitch&quot;: 25
         ///  },
@@ -257,14 +260,11 @@ namespace ModResources {
         ///    &quot;LastName&quot;: &quot;星光&quot;,
         ///    &quot;NickName&quot;: &quot;はるな&quot;,
         ///    &quot;WayToCall&quot;: &quot;FirstName&quot;,
-        ///    &quot;PresetFile&quot;: &quot;Seikou_Haruna&quot;,
-        ///    &quot;Personality&quot;: 80,
-        ///    &quot;VoicePitch&quot;: 80
-        ///  },
-        ///
-        ///  &quot;Shirohama_Natsumi&quot;: {
-        ///    &quot;FirstName&quot;: &quot;なつみ&quot;,
-        ///    &quot;LastName&quot;: &quot;城浜&quot;,        /// [rest of string was truncated]&quot;;.
+        ///    &quot;PresetFile&quot;: {
+        ///      &quot;V2_5&quot;: &quot;Seikou_Haruna&quot;,
+        ///      &quot;V2&quot;: &quot;Seikou_Haruna_v2&quot;
+        ///    },
+        ///    &quot;Perso [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ModNPCFemale {
             get {
@@ -390,20 +390,51 @@ namespace ModResources {
         ///    &quot;IsShuffleMaidList&quot;: false,
         ///    &quot;IsShuffleManList&quot;: false,
         ///    &quot;ExtraManCount&quot;: 28,
+        ///
+        ///    &quot;CameraSetup&quot;: {
+        ///      &quot;PosString&quot;: &quot;-2.09,1.58,-3.04&quot;,
+        ///      &quot;TargetPosString&quot;: &quot;0.26,0.39,-1.22&quot;,
+        ///      &quot;AroundAngleString&quot;: &quot;52.34,21.78&quot;,
+        ///      &quot;Distance&quot;: 3.2
+        ///    },
+        ///
         ///    &quot;GroupSetup&quot;: [
         ///      {
         ///        &quot;ArrayPosition&quot;: 0,
         ///        &quot;ManCount&quot;: 3,
         ///        &quot;MaidCount&quot;: 1,
-        ///        &quot;IsAutomatedGroup&quot;: false
-        ///      },
+        ///        &quot;IsAutomatedGroup&quot;: false,
+        ///        &quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string PartyGroupSetup_AnotherGBDesire {
+            get {
+                return ResourceManager.GetString("PartyGroupSetup_AnotherGBDesire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;Phase1_Default&quot;: {
+        ///    &quot;DefaultSexPosID&quot;: 1,
+        ///    &quot;IsRandomAssign&quot;: false,
+        ///    &quot;IsShuffleMaidList&quot;: false,
+        ///    &quot;IsShuffleManList&quot;: false,
+        ///    &quot;ExtraManCount&quot;: 28,
+        ///
+        ///    &quot;CameraSetup&quot;: {
+        ///      &quot;PosString&quot;: &quot;-2.09,1.58,-3.04&quot;,
+        ///      &quot;TargetPosString&quot;: &quot;0.26,0.39,-1.22&quot;,
+        ///      &quot;AroundAngleString&quot;: &quot;52.34,21.78&quot;,
+        ///      &quot;Distance&quot;: 3.2
+        ///    },
+        ///
+        ///    &quot;GroupSetup&quot;: [
         ///      {
-        ///        &quot;ArrayPosition&quot;: 1,
+        ///        &quot;ArrayPosition&quot;: 0,
         ///        &quot;ManCount&quot;: 3,
         ///        &quot;MaidCount&quot;: 1,
-        ///        &quot;MaidFromNPC&quot;: true,
-        ///        &quot;IsAutomatedGroup&quot;: true,
-        ///        &quot;IsVoicelessGroup&quot;: false [rest of string was truncated]&quot;;.
+        ///        &quot;IsAutomatedGroup&quot;: false,
+        ///        &quot; [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string PartyGroupSetup_HappyGBClub {
             get {
@@ -546,8 +577,8 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,IsBGGroupUse,Phase,MaidIndex,ManIndex,dummy
-        ///1,寝取らせ輪姦4P奉仕,sex_ran4p_housi_c001.ks,MMMF,TRUE,1,75400,75400,75400,59800,75400,75400,59800,59800,59800,59800,59800,59800,59800,75400,59800,59800,75400,75400,,,75400,75400,,TRUE,TRUE,TRUE,1,0,1;2;3,
-        ///2,寝取らせ輪姦3P両穴駅弁,sex_OM_haimenekiben_c001.ks,MMF,TRUE,2,75410,75410,75410,598 [rest of string was truncated]&quot;;.
+        ///1,輪姦4P奉仕,sex_ran4p_housi_c001.ks,MMMF,TRUE,1,75400,75400,75400,59800,75400,75400,59800,59800,59800,59800,59800,59800,59800,75400,59800,59800,75400,75400,,,75400,75400,,TRUE,TRUE,TRUE,1,0,1;2;3,
+        ///2,輪姦3P両穴駅弁,sex_OM_haimenekiben_c001.ks,MMF,TRUE,2,75410,75410,75410,59810,75410 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosList_HappyGBClub {
             get {
@@ -771,12 +802,9 @@ namespace ModResources {
         ///    &quot;NextStates&quot;: [ &quot;OrgasmEnd&quot; ]
         ///  },
         ///  &quot;OrgasmEnd&quot;: {
-        ///    &quot;NextStates&quot;: [ &quot;ChangeMan&quot; ]
+        ///    &quot;NextStates&quot;: [ &quot;ChangeManFromQueue&quot; ]
         ///  },
-        ///  &quot;ChangeMan&quot;: {
-        ///    &quot;NextStates&quot;: [ &quot;Insert&quot;, &quot;ChangePosition&quot; ]
-        ///  },
-        ///  &quot;ChangePosition&quot;: {
+        ///  &quot;ChangeManFromQueue&quot;: {
         ///    &quot;NextStates&quot;: [ &quot;Insert&quot; ]
         ///  },
         ///  &quot;Insert&quot;: {

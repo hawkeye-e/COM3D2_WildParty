@@ -845,10 +845,11 @@ namespace COM3D2.WildParty.Plugin.Core
         private static void ProcessADVEnd(ADVKagManager instance)
         {
             //Add modded event flag requested by scenario, if any
-            foreach (var flags in Util.GetUndergoingScenario().SetScenarioFlag)
-            {
-                GameMain.Instance.CharacterMgr.status.AddFlag(flags.ID, flags.value);
-            }
+            if (Util.GetUndergoingScenario().SetScenarioFlag != null)
+                foreach (var flags in Util.GetUndergoingScenario().SetScenarioFlag)
+                {
+                    GameMain.Instance.CharacterMgr.status.AddFlag(flags.ID, flags.value);
+                }
 
             //alter the maid status for all participants
             ModEventCleanUp.UpdateMaidStatusForModEvent(StateManager.Instance.SelectedMaidsList);

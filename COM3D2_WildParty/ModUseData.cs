@@ -100,6 +100,8 @@ namespace COM3D2.WildParty.Plugin
                 InitDataForHaremKing();
             else if (scenarioID == ScenarioIDList.HappyGBClubScenarioID)
                 InitDataForHappyGBClub();
+            else if (scenarioID == ScenarioIDList.AnotherGBDesireScenarioID)
+                InitDataForAnotherGBDesire();
         }
 
         private static void ResetModUseData()
@@ -148,6 +150,20 @@ namespace COM3D2.WildParty.Plugin
             MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.HappyGBClubYotogiMapCoordinates);
 
             PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.TextResource.PartyGroupSetup_HappyGBClub);
+        }
+
+        //This is a scenario that reuse some of the resources of Happy GB Club.
+        private static void InitDataForAnotherGBDesire()
+        {
+            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.AnotherGBDesireScenarioID);
+            
+            InitBackgroundMotionDictionary(ModResources.TextResource.SexPosList_HappyGBClub, ModResources.TextResource.SexPosValidLabels_HappyGBClub, ModResources.TextResource.SexPosSpecialLabels_HappyGBClub);
+            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.TextResource.SexPosList_HappyGBClub);
+            
+            InitAllVoiceDataFromCSV();
+            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.HappyGBClubYotogiMapCoordinates);
+
+            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.TextResource.PartyGroupSetup_AnotherGBDesire);
         }
 
         private static void InitAllVoiceDataFromCSV()
