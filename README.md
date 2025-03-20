@@ -10,6 +10,7 @@ For details or screenshots please refer to (https://hawkeye0.blogspot.com/)
 - Add scenarios to the main game
   - Empire Club Thanksgiving Event (NTR)
   - Harem King (Pure Love)
+  - Happy Gang Bang Club (NTR)
  
 
 
