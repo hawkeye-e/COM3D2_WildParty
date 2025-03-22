@@ -312,7 +312,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             //we will keep the man[0] in the same position
             Maid firstMan = StateManager.Instance.YotogiWorkingManList[0];
-            StateManager.Instance.MenList.Remove(firstMan);
+            StateManager.Instance.YotogiWorkingManList.Remove(firstMan);
 
 
             //Shuffle the man list

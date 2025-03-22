@@ -309,7 +309,12 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 {
                     group.StopAudio();
                     group.StopNextReviewTime();
+                    //Remove IK attach so that no weird animation after yotogi
+                    group.ForceIKAttach.Clear();
                 }
+
+                //Some motion script will keep changing character's animation over time. Need to call them to stop so that in the ADV after yotogi will not switch animation suddenly.
+                GameMain.Instance.ScriptMgr.StopMotionScript();
 
                 PartyGroup.SharedExtraManList.Clear();
 

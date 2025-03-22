@@ -35,25 +35,19 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                 __result = icon;
         }
 
-        [HarmonyFinalizer]
+        //Load the modded icon in the schedule selection window
+        [HarmonyPrefix]
         [HarmonyPatch(typeof(ImportCM), nameof(ImportCM.CreateTexture), new Type[] { typeof(string) })]
-        private static Exception CatchCreateTextureErrors(string f_strFileName, Exception __exception, ref Texture2D __result)
+        private static bool CreateTexturePre(string f_strFileName, ref Texture2D __result)
         {
-            if (__exception != null)
+            //Check if the file name to load is the mod icon or not. Stop this function from running if it is a mod icon
+            Texture2D icon = Patches.LoadModScenarioIcon(f_strFileName);
+            if (icon != null)
             {
-                Texture2D icon = Patches.LoadModScenarioIcon(f_strFileName);
-                if (icon != null)
-                {
-                    __result = icon;
-                    return null;
-                }
-                else
-                {
-                    //nothing to do with modding, let the exception thrown
-                    return __exception;
-                }
+                __result = icon;
+                return false;
             }
-            return null;
+            return true;
         }
 
 
