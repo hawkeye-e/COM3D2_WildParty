@@ -96,7 +96,7 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void SetGroupFormation(string formationID)
         {
             MapCoorindates coordsGroup = ModUseData.MapCoordinateList[formationID];
-
+            
             //Pick the one that fit the most group
             MapCoorindates.CoordinateListInfo coords = coordsGroup.CoordinateList.Where(x => x.MaxGroup >= StateManager.Instance.PartyGroupList.Count).OrderBy(x => x.MaxGroup).First();
 
@@ -113,10 +113,12 @@ namespace COM3D2.WildParty.Plugin.Core
                     ValidCoordinates.RemoveAt(rnd);
                 }
                 ValidCoordinates = shuffled;
+                for (int i = 0; i < ValidCoordinates.Count; i++)
+                    ValidCoordinates[i].ArrayPosition = i;
             }
 
             Vector3 positionOffset = Vector3.zero;
-            Quaternion forceRotation = ValidCoordinates[0].Rot;
+            Quaternion forceRotation = ValidCoordinates.Where(x => x.ArrayPosition == 0).First().Rot;
             if (coordsGroup.SpecialSetting != null)
                 if (coordsGroup.SpecialSetting.MainGroupMotionOffset != null)
                 {
@@ -127,12 +129,13 @@ namespace COM3D2.WildParty.Plugin.Core
             for (int i = 0; i < StateManager.Instance.PartyGroupList.Count; i++)
             {
                 var currentGroup = StateManager.Instance.PartyGroupList[i];
+                var coord = ValidCoordinates.Where(x => x.ArrayPosition == i).First();
 
                 //Get a valid position
                 if (i == 0)
-                    currentGroup.SetGroupPosition(ValidCoordinates[i].Pos + positionOffset, forceRotation);
+                    currentGroup.SetGroupPosition(coord.Pos + positionOffset, forceRotation);
                 else
-                    currentGroup.SetGroupPosition(ValidCoordinates[i].Pos, ValidCoordinates[i].Rot);
+                    currentGroup.SetGroupPosition(coord.Pos, coord.Rot);
 
             }
 
@@ -227,18 +230,19 @@ namespace COM3D2.WildParty.Plugin.Core
             SetGroupFormation(PartyGroup.CurrentFormation);
 
             MapCoorindates.CoordinateListInfo coordinateListInfo = coordsGroup.CoordinateList.Where(x => x.MaxGroup >= StateManager.Instance.PartyGroupList.Count).OrderBy(x => x.MaxGroup).First();
-
+            
             for (int i = 0; i < StateManager.Instance.PartyGroupList.Count; i++)
             {
                 var currentGroup = StateManager.Instance.PartyGroupList[i];
+                MapCoorindates.CoordinatesInfo groupCoordinateInfo = coordinateListInfo.GroupCoordinates.Where(x => x.ArrayPosition == i).First();
 
                 if (i > 0)
                 {
-                    currentGroup.IsIndependentExcitement = coordinateListInfo.GroupCoordinates[i].IsIndependentExcitement;
+                    currentGroup.IsIndependentExcitement = groupCoordinateInfo.IsIndependentExcitement;
                     if (!currentGroup.IsAutomatedGroup)
                         currentGroup.StopNextReviewTime();
-
-                    if (coordinateListInfo.GroupCoordinates[i].ForceSexPos == null)
+                    
+                    if (groupCoordinateInfo.ForceSexPos == null)
                     {
                         if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].BackgroundSexPosID < 0)
                         {
@@ -257,41 +261,41 @@ namespace COM3D2.WildParty.Plugin.Core
                     else
                     {
                         currentGroup.ForceSexPos = new ForceSexPosInfo();
-                        currentGroup.ForceSexPos.NormalPlay = coordinateListInfo.GroupCoordinates[i].ForceSexPos.NormalPlay;
-                        currentGroup.ForceSexPos.Waiting = coordinateListInfo.GroupCoordinates[i].ForceSexPos.Waiting;
-                        currentGroup.ForceSexPos.Orgasm = coordinateListInfo.GroupCoordinates[i].ForceSexPos.Orgasm;
+                        currentGroup.ForceSexPos.NormalPlay = groupCoordinateInfo.ForceSexPos.NormalPlay;
+                        currentGroup.ForceSexPos.Waiting = groupCoordinateInfo.ForceSexPos.Waiting;
+                        currentGroup.ForceSexPos.Orgasm = groupCoordinateInfo.ForceSexPos.Orgasm;
 
                         //A SexPosID is assigned to this group
                         ChangeBackgroundGroupSexPosition(currentGroup, currentGroup.ForceSexPos.Waiting, true, playAudio);
                     }
-
+                    
                     CheckYotogiMiscSetup(currentGroup);
-
-                    if (!coordinateListInfo.GroupCoordinates[i].IsManVisible)
+                    
+                    if (!groupCoordinateInfo.IsManVisible)
                     {
                         if (currentGroup.Man1 != null)
                             currentGroup.Man1.transform.localScale = Vector3.zero;
                         if (currentGroup.Man2 != null)
                             currentGroup.Man2.transform.localScale = Vector3.zero;
                     }
-
+                    
 
                 }
 
-                if (coordinateListInfo.GroupCoordinates[i].EyeSight != null)
+                if (groupCoordinateInfo.EyeSight != null)
                 {
                     currentGroup.ForceEyeSight = new List<EyeSightSetting>();
-                    foreach (var eyeSightSetting in coordinateListInfo.GroupCoordinates[i].EyeSight)
+                    foreach (var eyeSightSetting in groupCoordinateInfo.EyeSight)
                     {
                         currentGroup.ForceEyeSight.Add(eyeSightSetting);
                         CustomADVProcessManager.SetCharacterEyeSight(currentGroup, eyeSightSetting);
                     }
                 }
-
-                if (coordinateListInfo.GroupCoordinates[i].IKAttach != null)
+                
+                if (groupCoordinateInfo.IKAttach != null)
                 {
                     currentGroup.ForceIKAttach = new List<IKAttachInfo>();
-                    foreach (var ikInfo in coordinateListInfo.GroupCoordinates[i].IKAttach)
+                    foreach (var ikInfo in groupCoordinateInfo.IKAttach)
                     {
                         currentGroup.ForceIKAttach.Add(ikInfo);
                         CharacterHandling.IKAttachBone(ikInfo);
@@ -300,7 +304,7 @@ namespace COM3D2.WildParty.Plugin.Core
             }
 
             //Set Individual Motion
-
+            
             if (coordinateListInfo.IndividualCoordinates != null)
             {
                 foreach (var item in coordinateListInfo.IndividualCoordinates)
@@ -328,11 +332,9 @@ namespace COM3D2.WildParty.Plugin.Core
                     }
                     else if (item.Type == Constant.IndividualCoordinateType.Owner)
                         targetMaid = StateManager.Instance.ClubOwner;
-
-                    if(targetMaid != null)
+                    
+                    if (targetMaid != null)
                     {
-                        
-
                         CharacterHandling.ApplyMotionInfoToCharacter(targetMaid, item.Motion);
 
                         if (!string.IsNullOrEmpty(item.FaceAnime))
@@ -383,9 +385,10 @@ namespace COM3D2.WildParty.Plugin.Core
             //for some unknown reason the setpos above may not work, try to set it here once more
             Util.ResetAllGroupPosition();
 
-            if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].CameraSetup != null)
+            MapCoorindates.CoordinatesInfo groupZeroCoordinateInfo = coordinateListInfo.GroupCoordinates.Where(x => x.ArrayPosition == 0).First();
+            if (groupZeroCoordinateInfo.CameraSetup != null)
             {
-                CameraHandling.SetCameraLookAtFixedPoint(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].CameraSetup);
+                CameraHandling.SetCameraLookAtFixedPoint(groupZeroCoordinateInfo.CameraSetup);
             }
             else
                 CameraHandling.SetCameraLookAt(StateManager.Instance.PartyGroupList[0].Maid1);
@@ -577,7 +580,7 @@ namespace COM3D2.WildParty.Plugin.Core
         }
 
         internal static void SetupYotogiSceneInitialSkill(int defaultSexPosID)
-        {
+        {            
             PlayableSkill.SkillItem initialSkill;
             initialSkill = GetSkill(StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id, StateManager.Instance.PartyGroupList[0].GroupType, defaultSexPosID);
 
@@ -606,6 +609,12 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 CharacterHandling.SetManClothing(man, true);
             }
+        }
+
+        internal static void InitArrayForYotogiUsed()
+        {
+            StateManager.Instance.YotogiWorkingMaidList = new List<Maid>(StateManager.Instance.SelectedMaidsList);
+            StateManager.Instance.YotogiWorkingManList = new List<Maid>(StateManager.Instance.MenList);
         }
 
         internal static void RandomizeMaidExcitement(List<Maid> maidList, bool isMaidZeroChange = false)
@@ -810,14 +819,12 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             if (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiPlay)
             {
-                //PartyGroup group = Util.GetPartyGroupByGUID(maidGUID);
-
                 if (group != null)
                 {
                     ResetYotogiMiscSetup(group);
-
+                    
                     if (ModUseData.YotogiMiscSetupList.ContainsKey(StateManager.Instance.UndergoingModEventID))
-                    {
+                    {       
                         YotogiMiscSetup miscSetup = ModUseData.YotogiMiscSetupList[StateManager.Instance.UndergoingModEventID].Where(x => x.SexPosIDs.Contains(group.SexPosID)).FirstOrDefault();
                         if (miscSetup != null)
                         {
@@ -855,11 +862,11 @@ namespace COM3D2.WildParty.Plugin.Core
                 group.GroupOffsetVector2 = setupInfo.Offset.Pos;
             if(setupInfo.ExtraObjects != null)
             {
-                foreach(var extraObjectSetup in setupInfo.ExtraObjects)
+                foreach (var extraObjectSetup in setupInfo.ExtraObjects)
                 {
                     string objName = extraObjectSetup.Name + "_" + group.Maid1.status.guid;
                     GameObject addedObject = GameMain.Instance.BgMgr.AddPrefabToBg(extraObjectSetup.Src, objName, extraObjectSetup.Dest, Vector3.zero, Vector3.zero);
-
+                    
                     if (addedObject != null)
                     {
                         MapCoorindates.CoordinatesInfo coordinatesInfo = Util.GetGroupCoordinateInfo(group);
@@ -867,7 +874,7 @@ namespace COM3D2.WildParty.Plugin.Core
                         //we only care about the rotation in y-plane as x plane and z plane rotation makes no sense for yotogi motion.
                         float angle = group.Maid1.transform.rotation.eulerAngles.y;
                         Vector3 offsetRespectToRotation = Quaternion.AngleAxis(angle, Vector3.up) * extraObjectSetup.Offset.Pos;
-
+                        
                         addedObject.transform.position = coordinatesInfo.Pos + offsetRespectToRotation;
                         addedObject.transform.rotation = Quaternion.Euler(coordinatesInfo.Rot.eulerAngles + extraObjectSetup.Offset.Rot);
                         
@@ -910,18 +917,27 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void ChangeManMembersQueueType_MoveQueueMembers(PartyGroup currentGroup, EventDelegate OnChangeManMemberFinish = null)
         {
             //assign the group.Man1 to the end of the queue of a random group
-            int minGroupLength = StateManager.Instance.PartyGroupList.Min(x => x.ExtraManList.Count);
+            int minGroupLength = StateManager.Instance.PartyGroupList.Min(x => x.ExtraManList.Count(y => y.Value != null));
+
             List<PartyGroup> validGroup = StateManager.Instance.PartyGroupList.Where(
-                x => (x.ExtraManList.Count <= minGroupLength + ConfigurableValue.GangBangReQueueMinLengthDiffLimit)
+                x => (x.ExtraManList.Count(y => y.Value != null) <= minGroupLength + ConfigurableValue.GangBangReQueueMinLengthDiffLimit)
                     && (!x.ExtraManList.ContainsKey(x.ExtraManSetupInfo.Max(y => y.ArrayPosition)))
                 ).ToList();
             
             int rnd = RNG.Random.Next(validGroup.Count);
             PartyGroup groupToJoin = validGroup[rnd];
 
-            //int lastPos = groupToJoin.ExtraManSetupInfo.Max(y => y.ArrayPosition);
-            int lastPos = groupToJoin.ExtraManSetupInfo.Where(x => !groupToJoin.ExtraManList.ContainsKey(x.ArrayPosition)).Min(y => y.ArrayPosition);
-            groupToJoin.ExtraManList.Add(lastPos, currentGroup.Man1);
+            List<int> occupiedPos = new List<int>();
+            foreach (var kvp in groupToJoin.ExtraManList)
+                if(kvp.Value != null)
+                    occupiedPos.Add(kvp.Key);
+            
+            int lastPos = groupToJoin.ExtraManSetupInfo.Where(x => !occupiedPos.Contains(x.ArrayPosition) && x.ArrayPosition > 0).Min(y => y.ArrayPosition);
+            
+            if(groupToJoin.ExtraManList.ContainsKey(lastPos))
+                groupToJoin.ExtraManList[lastPos] = currentGroup.Man1;
+            else
+                groupToJoin.ExtraManList.Add(lastPos, currentGroup.Man1);
             groupToJoin.SetExtraManPosition(lastPos);
 
             //connect the first man in queue to the maid
@@ -951,20 +967,23 @@ namespace COM3D2.WildParty.Plugin.Core
             for (int i = 0; i < currentGroupKeyList.Count; i++)
             {
                 Maid man = currentGroup.ExtraManList[currentGroupKeyList[i]];
-                
-                var currentInfo = currentGroup.ExtraManSetupInfo[currentGroupKeyList[i]];                
-                var targetInfo = currentGroup.ExtraManSetupInfo[currentGroupKeyList[i] - 1];
 
-                int originalIndex = currentGroupKeyList[i];
-                int targetIndex = currentGroupKeyList[i] - 1;
+                if (man != null)
+                {
+                    var currentInfo = currentGroup.ExtraManSetupInfo[currentGroupKeyList[i]];
+                    var targetInfo = currentGroup.ExtraManSetupInfo[currentGroupKeyList[i] - 1];
 
-                float distance = Vector3.Distance(currentInfo.Pos, targetInfo.Pos);
-                
-                HardCodeMotion.ManWalkController.MoveForward(man, distance, standingMotionType,
-                    new EventDelegate(() => ChangeManMembersQueueType_UpdateQueueOnMoveFinish(currentGroup, man, originalIndex, targetIndex)) 
-                    );
-                
-                currentGroup.MovingExtraManIndexList.Add(currentGroupKeyList[i]);   
+                    int originalIndex = currentGroupKeyList[i];
+                    int targetIndex = currentGroupKeyList[i] - 1;
+
+                    float distance = Vector3.Distance(currentInfo.Pos, targetInfo.Pos);
+
+                    HardCodeMotion.ManWalkController.MoveForward(man, distance, standingMotionType,
+                        new EventDelegate(() => ChangeManMembersQueueType_UpdateQueueOnMoveFinish(currentGroup, man, originalIndex, targetIndex))
+                        );
+
+                    currentGroup.MovingExtraManIndexList.Add(currentGroupKeyList[i]);
+                }
             }
 
             
@@ -1011,8 +1030,8 @@ namespace COM3D2.WildParty.Plugin.Core
             if (group.ExtraManList.ContainsKey(0))
                 if (group.ExtraManList[0] != null)
                     if (group.ExtraManList[0].status.guid == man.status.guid)
-                        group.ExtraManList.Remove(0);
-            
+                        group.ExtraManList[0] = null;
+
             //Remove all existng IK 
             group.DetachAllIK();
             group.SetManAtIndex(0, man);
@@ -1030,8 +1049,8 @@ namespace COM3D2.WildParty.Plugin.Core
             if (group.ExtraManList.ContainsKey(originalIndex))
                 if (group.ExtraManList[originalIndex] != null)
                     if(group.ExtraManList[originalIndex].status.guid == man.status.guid)
-                        group.ExtraManList.Remove(originalIndex);
-            
+                        group.ExtraManList[originalIndex] = null;
+
             if (group.ExtraManList.ContainsKey(targetIndex))
                 group.ExtraManList[targetIndex] = man;
             else

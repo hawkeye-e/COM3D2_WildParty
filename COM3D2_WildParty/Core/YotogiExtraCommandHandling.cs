@@ -26,7 +26,8 @@ namespace COM3D2.WildParty.Plugin.Core
                 case Constant.ModYotogiCommandButtonID.ChangePartner:
                     return new EventDelegate(Orgy_ShowMaidList);
                 case Constant.ModYotogiCommandButtonID.FetishOrgy:
-                    return new EventDelegate(Orgy_AddFetish_Orgy);
+                case Constant.ModYotogiCommandButtonID.FetishGangBang:
+                    return new EventDelegate((() => AddFetish(buttonID)));
 
                 case Constant.ModYotogiCommandButtonID.ChangeFormationHaremKing:
                 case Constant.ModYotogiCommandButtonID.ChangeFormationHappyGBClub:
@@ -45,6 +46,10 @@ namespace COM3D2.WildParty.Plugin.Core
                 case Constant.ModYotogiCommandButtonID.OrgasmBukkake:
                 case Constant.ModYotogiCommandButtonID.OrgasmBukkake2:
                     return new EventDelegate(() => OrgasmCommandOnClick(buttonID));
+                    
+
+                case Constant.ModYotogiCommandButtonID.ChangeMaidAnotherGBDesire:
+                    return new EventDelegate(GBClub_ShowMaidList);
                 default:
                     return null;
             }
@@ -174,10 +179,10 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
-        public static void Orgy_AddFetish_Orgy()
+        public static void AddFetish(string buttonID)
         {
             Maid maid = StateManager.Instance.PartyGroupList[0].Maid1;
-            int fetishID = Util.GetFetishIDByButtonID(Constant.ModYotogiCommandButtonID.FetishOrgy);
+            int fetishID = Util.GetFetishIDByButtonID(buttonID);
             CharacterHandling.AddFetish(maid, fetishID);
             CheckExtraYotogiCommandCondition(StateManager.Instance.InjectedButtons);
         }
@@ -401,6 +406,40 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.YotogiManager.play_mgr.UpdateCommand();
         }
 
+        public static void GBClub_ShowMaidList()
+        {
+            StateManager.Instance.ExtraCommandWindow.ResetScrollPosition();
+
+            if (CheckRequireExtraCommandWindowPopulate(CustomGameObject.YotogiExtraCommandWindow.Mode.MaidList))
+            {
+                //Load the position list based on the info of maid zero
+
+                List<GameObject> buttons = new List<GameObject>();
+
+                foreach (var maid in StateManager.Instance.SelectedMaidsList)
+                {
+                    if (IsShowButtonPerFormation(PartyGroup.CurrentFormation, maid))
+                    {
+                        bool isManSwap = Util.GetUndergoingScenario().YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First().IsMainManOwner;
+                        var cmd = CloneCommandButton(Util.GetMaidDisplayName(maid),
+                        new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeTargetGroup_Callback(maid.status.guid, isManSwap))
+                        );
+
+                        var btn = cmd.GetComponent<UIButton>();
+                        if (StateManager.Instance.PartyGroupList[0].Maid1 == maid)
+                        {
+                            btn.isEnabled = false;
+                            btn.SetState(UIButtonColor.State.Disabled, true);
+                        }
+
+                        buttons.Add(cmd);
+                    }
+                }
+                StateManager.Instance.ExtraCommandWindow.ShowContent(buttons, CustomGameObject.YotogiExtraCommandWindow.Mode.MaidList);
+
+                StateManager.Instance.ExtraCommandWindow.SetVisible(true);
+            }
+        }
 
 
         private static void SetupPreSwapMotionEndTrigger(int indexOffset, bool isMovingRight)

@@ -104,6 +104,19 @@ namespace COM3D2.WildParty.Plugin
                 InitDataForAnotherGBDesire();
         }
 
+        public static void ReloadCoordinateData(int scenarioID)
+        {
+            MapCoordinateList = new Dictionary<string, MapCoorindates>();
+            if (scenarioID == ScenarioIDList.OrgyPartyScenarioID)
+                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.OrgyYotogiMapCoordinates);
+            else if (scenarioID == ScenarioIDList.HaremKingScenarioID)
+                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.HaremKingYotogiMapCoordinates);
+            else if (scenarioID == ScenarioIDList.HappyGBClubScenarioID)
+                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.HappyGBClubYotogiMapCoordinates);
+            else if (scenarioID == ScenarioIDList.AnotherGBDesireScenarioID) 
+                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.AnotherGBDesireYotogiMapCoordinates);
+        }
+
         private static void ResetModUseData()
         {
             ADVStepData = new Dictionary<int, Dictionary<string, ADVStep>>();
@@ -161,7 +174,7 @@ namespace COM3D2.WildParty.Plugin
             ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.TextResource.SexPosList_HappyGBClub);
             
             InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.HappyGBClubYotogiMapCoordinates);
+            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.AnotherGBDesireYotogiMapCoordinates);
 
             PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.TextResource.PartyGroupSetup_AnotherGBDesire);
         }

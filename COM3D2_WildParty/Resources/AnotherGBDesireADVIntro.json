@@ -1,0 +1,141 @@
+{
+  "agbd0001": {
+    "ID": "agbd0001",
+    "Type": "BG",
+    "Tag": "",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_init_chara"
+  },
+
+  "agbd_init_chara": {
+    "ID": "agbd_init_chara",
+    "Type": "CharaInit",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_init_hide_men",
+    "CharaInitData": {
+      "IsClubOwnerADVMainCharacter": false,
+      "ManRequired": 32,
+      "ValidManType": [
+        "YoungMan",
+        "Yanki",
+        "MiddleAged",
+        "Otaku"
+      ],
+      "ModNPC": [
+        {
+          "Index": 0,
+          "NPCID": "Kamigawara_Takahito",
+          "IsFemale": false
+        },
+        {
+          "Index": 1,
+          "NPCID": "Mob1",
+          "IsFemale": false
+        },
+        {
+          "Index": 2,
+          "NPCID": "Mob2",
+          "IsFemale": false
+        },
+        {
+          "Index": 3,
+          "NPCID": "Mob3",
+          "IsFemale": false
+        },
+        {
+          "Index": 4,
+          "NPCID": "Mob4",
+          "IsFemale": false
+        }
+      ]
+    }
+  },
+
+  "agbd_init_hide_men": {
+    "ID": "agbd_init_hide_men",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "agbd_intro_0001",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": false
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": false
+      }
+    ]
+  },
+
+  "agbd_intro_0001": {
+    "ID": "agbd_intro_0001",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0002"
+  },
+
+  "agbd_intro_0002": {
+    "ID": "agbd_intro_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_Show_Owner",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（『輪姦クラブ』のメンバーになって以来、俺は定期的に訪れている。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+
+
+
+
+
+  "agbd_intro_Show_Owner": {
+    "ID": "agbd_intro_Show_Owner",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "agbd_intro_yotogiplay_phase1_closepanel",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true
+      }
+    ]
+  },
+
+  "agbd_intro_yotogiplay_phase1_closepanel": {
+    "ID": "agbd_intro_yotogiplay_phase1_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_start_yotogiplay_phase1"
+  },
+
+  "agbd_start_yotogiplay_phase1": {
+    "ID": "agbd_start_yotogiplay_phase1",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "HappyGBClub",
+      "Phase": 1,
+      "IsKeepCharacterVisibleAfterYotogi": true,
+      "IsFinalYotogi": false,
+      "IsClubOwnerMainCharacter": false
+    },
+    "NextStepID": "agbd_phase2_init"
+  }
+}

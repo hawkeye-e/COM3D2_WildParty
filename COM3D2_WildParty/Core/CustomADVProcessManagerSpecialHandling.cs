@@ -111,6 +111,10 @@ namespace COM3D2.WildParty.Plugin.Core
 
             GameMain.Instance.MainCamera.FadeOut(f_dg: delegate
             {
+                ModUseData.ReloadCoordinateData(StateManager.Instance.UndergoingModEventID);
+
+                YotogiHandling.InitArrayForYotogiUsed();
+
                 CharacterHandling.SetDefaultGroupFormation();
 
                 CharacterHandling.AssignPartyGroupingRandom();
@@ -133,6 +137,10 @@ namespace COM3D2.WildParty.Plugin.Core
 
             GameMain.Instance.MainCamera.FadeOut(f_dg: delegate
             {
+                ModUseData.ReloadCoordinateData(StateManager.Instance.UndergoingModEventID);
+
+                YotogiHandling.InitArrayForYotogiUsed();
+
                 CharacterHandling.SetDefaultGroupFormation();
 
                 CharacterHandling.AssignPartyGrouping(PartyGroup.CurrentFormation);
@@ -155,6 +163,10 @@ namespace COM3D2.WildParty.Plugin.Core
 
             GameMain.Instance.MainCamera.FadeOut(f_dg: delegate
             {
+                ModUseData.ReloadCoordinateData(StateManager.Instance.UndergoingModEventID);
+
+                YotogiHandling.InitArrayForYotogiUsed();
+
                 CharacterHandling.SetDefaultGroupFormation();
                 
                 CharacterHandling.AssignPartyGrouping(PartyGroup.CurrentFormation);

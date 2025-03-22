@@ -52,26 +52,26 @@ namespace COM3D2.WildParty.Plugin.HardCodeMotion
         internal static void MoveForward(Maid man, float distance, StandingMotionType motionType, EventDelegate postMoveAction = null)
         {
             Core.CharacterHandling.PlayAnimation(man, motionType.AnimationFileName, motionType.AnimationFileName);
-
+            
             DistanceTrigger trigger = new DistanceTrigger();
             trigger.Distance = distance;
-            trigger.ToBeExecuted = new EventDelegate(() => MoveForwardEnd(man, distance, motionType, postMoveAction));
+            trigger.ToBeExecuted = new EventDelegate(() => MoveForwardEnd(man, distance, motionType, postMoveAction));   
             trigger.StartingVector = man.body0.Spine.transform.position;
             trigger.StartTime = DateTime.Now;
-
+            
             //need to change the bone names to female before we apply the walking motion as the motion is female only
             Helper.BoneNameConverter.ConvertManStructureToFemale(man);
-
+            
             //the orientation is different from standing motion and walking motion so we have to rotate it first
             man.transform.rotation = Quaternion.Euler(motionType.RotationOffset + man.transform.rotation.eulerAngles);
-
+            
             //apply offset
             float angle = man.transform.rotation.eulerAngles.y;
             Vector3 offsetRespectToRotation = Quaternion.AngleAxis(angle, Vector3.up) * (-motionType.StandingMotionOffset + motionType.WalkingMotionOffset);
             man.transform.position = man.transform.position + offsetRespectToRotation;
-
+            
             Core.CharacterHandling.PlayAnimation(man, WALKING_MOTION_FILE, WALKING_MOTION_FILE);
-
+            
             ManWalkDistanceTriggerList.Add(man.status.guid, trigger);
         }
 
@@ -116,6 +116,10 @@ namespace COM3D2.WildParty.Plugin.HardCodeMotion
             toBeKilled.Clear();
         }
 
+        internal static void StopAllMovements()
+        {
+            ManWalkDistanceTriggerList.Clear();
+        }
     }
 }
 

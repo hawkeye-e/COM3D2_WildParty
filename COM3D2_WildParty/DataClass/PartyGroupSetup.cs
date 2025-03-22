@@ -19,7 +19,6 @@ namespace COM3D2.WildParty.Plugin
         public List<GroupSetupData> GroupSetup;
         public int ExtraManCount = 0;                       //For Shared list. If the logic of yotogi requires assigning extra man to each group, use the one inside GroupSetup
         public MovingQueueSetupData MovingQueueSetup;       //For gangbang queue type use
-        public CameraDataInJson CameraSetup = null;                //If this is not setup, will use the calculation method
 
         internal class GroupSetupData
         {

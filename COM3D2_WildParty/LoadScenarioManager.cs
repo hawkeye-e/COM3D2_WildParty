@@ -102,6 +102,12 @@ namespace COM3D2.WildParty.Plugin
 
         };
 
+        private static readonly string[] ScenarioAnotherGBDesireResList = {
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADVIntro,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADVPhase2,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADVPhase3,
+        };
+
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)
         {
             Dictionary<int, Dictionary<string, ADVStep>> result = new Dictionary<int, Dictionary<string, ADVStep>>();
@@ -112,6 +118,8 @@ namespace COM3D2.WildParty.Plugin
                 result.Add(ScenarioIDList.HaremKingScenarioID, LoadScenarioFromResources(ScenarioHaremKingResList));
             else if (scenarioID == ScenarioIDList.HappyGBClubScenarioID)
                 result.Add(ScenarioIDList.HappyGBClubScenarioID, LoadScenarioFromResources(ScenarioHappyGBClubResList));
+            else if (scenarioID == ScenarioIDList.AnotherGBDesireScenarioID)
+                result.Add(ScenarioIDList.AnotherGBDesireScenarioID, LoadScenarioFromResources(ScenarioAnotherGBDesireResList));
 
             return result;
         }

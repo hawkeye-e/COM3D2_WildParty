@@ -62,6 +62,31 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;Phase1_Default&quot;: {
+        ///    &quot;DisplayName&quot;: &quot;&quot;,
+        ///    &quot;IsRandom&quot;: false,
+        ///    &quot;CoordinateList&quot;: [
+        ///      {
+        ///        &quot;MaxGroup&quot;: 3,
+        ///        &quot;GroupCoordinates&quot;: [
+        ///          {
+        ///            &quot;ArrayPosition&quot;: 0,
+        ///            &quot;PosString&quot;: &quot;0.19, 0.00, -0.93&quot;,
+        ///            &quot;RotString&quot;: &quot;0.0, 1.0, 0.0, 0.0&quot;,
+        ///            &quot;CameraSetup&quot;: {
+        ///              &quot;PosString&quot;: &quot;-1.91, 2.32, -2.69&quot;,
+        ///              &quot;TargetPosString&quot;: &quot;-0.33, 1.02, -1.42&quot;,
+        ///              &quot;AroundAngleString&quot;: &quot;51.14, 32.65&quot;,
+        ///              &quot;Dista [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string AnotherGBDesireYotogiMapCoordinates {
+            get {
+                return ResourceManager.GetString("AnotherGBDesireYotogiMapCoordinates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;FullNude&quot;: {
         ///    &quot;Slots&quot;: {
         ///      &quot;acchat&quot;: &quot;_I_acchat_del.menu&quot;,
@@ -128,15 +153,12 @@ namespace ModResources {
         ///          {
         ///            &quot;ArrayPosition&quot;: 0,
         ///            &quot;PosString&quot;: &quot;0.19, 0.00, -0.93&quot;,
-        ///            &quot;RotString&quot;: &quot;0.0, 1.0, 0.0, 0.0&quot;
-        ///          },
-        ///          {
-        ///            &quot;ArrayPosition&quot;: 1,
-        ///            &quot;PosString&quot;: &quot;-1.00, 0.00, 0.85&quot;,
-        ///            &quot;RotString&quot;: &quot;0, 0.707, 0, -0.707&quot;
-        ///          },
-        ///          {
-        ///            &quot;ArrayPosition&quot; [rest of string was truncated]&quot;;.
+        ///            &quot;RotString&quot;: &quot;0.0, 1.0, 0.0, 0.0&quot;,
+        ///            &quot;CameraSetup&quot;: {
+        ///              &quot;PosString&quot;: &quot;-1.91, 2.32, -2.69&quot;,
+        ///              &quot;TargetPosString&quot;: &quot;-0.33, 1.02, -1.42&quot;,
+        ///              &quot;AroundAngleString&quot;: &quot;51.14, 32.65&quot;,
+        ///              &quot;Dista [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string HappyGBClubYotogiMapCoordinates {
             get {
@@ -177,6 +199,15 @@ namespace ModResources {
         internal static string MaidCountRequirementWarning {
             get {
                 return ResourceManager.GetString("MaidCountRequirementWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to イベント「[=EventName]」には[=Min]名が必要です。.
+        /// </summary>
+        internal static string MaidCountRequirementWarningExactCount {
+            get {
+                return ResourceManager.GetString("MaidCountRequirementWarningExactCount", resourceCulture);
             }
         }
         
@@ -391,20 +422,20 @@ namespace ModResources {
         ///    &quot;IsShuffleManList&quot;: false,
         ///    &quot;ExtraManCount&quot;: 28,
         ///
-        ///    &quot;CameraSetup&quot;: {
-        ///      &quot;PosString&quot;: &quot;-2.09,1.58,-3.04&quot;,
-        ///      &quot;TargetPosString&quot;: &quot;0.26,0.39,-1.22&quot;,
-        ///      &quot;AroundAngleString&quot;: &quot;52.34,21.78&quot;,
-        ///      &quot;Distance&quot;: 3.2
-        ///    },
-        ///
         ///    &quot;GroupSetup&quot;: [
         ///      {
         ///        &quot;ArrayPosition&quot;: 0,
         ///        &quot;ManCount&quot;: 3,
         ///        &quot;MaidCount&quot;: 1,
         ///        &quot;IsAutomatedGroup&quot;: false,
-        ///        &quot; [rest of string was truncated]&quot;;.
+        ///        &quot;ClothesSet&quot;: &quot;FullNude&quot;
+        ///      },
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 1,
+        ///        &quot;ManCount&quot;: 3,
+        ///        &quot;MaidCount&quot;: 1,
+        ///        &quot;IsAutomatedGroup&quot;: true,
+        ///        &quot;ClothesSet&quot;: &quot;Ful [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string PartyGroupSetup_AnotherGBDesire {
             get {
@@ -421,20 +452,20 @@ namespace ModResources {
         ///    &quot;IsShuffleManList&quot;: false,
         ///    &quot;ExtraManCount&quot;: 28,
         ///
-        ///    &quot;CameraSetup&quot;: {
-        ///      &quot;PosString&quot;: &quot;-2.09,1.58,-3.04&quot;,
-        ///      &quot;TargetPosString&quot;: &quot;0.26,0.39,-1.22&quot;,
-        ///      &quot;AroundAngleString&quot;: &quot;52.34,21.78&quot;,
-        ///      &quot;Distance&quot;: 3.2
-        ///    },
-        ///
         ///    &quot;GroupSetup&quot;: [
         ///      {
         ///        &quot;ArrayPosition&quot;: 0,
         ///        &quot;ManCount&quot;: 3,
         ///        &quot;MaidCount&quot;: 1,
         ///        &quot;IsAutomatedGroup&quot;: false,
-        ///        &quot; [rest of string was truncated]&quot;;.
+        ///        &quot;ClothesSet&quot;: &quot;FullNude&quot;
+        ///      },
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 1,
+        ///        &quot;ManCount&quot;: 3,
+        ///        &quot;MaidCount&quot;: 1,
+        ///        &quot;MaidFromNPC&quot;: true,
+        ///        &quot;IsAutomatedGroup&quot;: tru [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string PartyGroupSetup_HappyGBClub {
             get {
@@ -875,9 +906,12 @@ namespace ModResources {
         ///        }
         ///      ]
         ///    }
-        ///  ]
-        ///}
-        ///.
+        ///  ],
+        ///
+        ///  &quot;9900003&quot;: [
+        ///    {
+        ///      &quot;SexPosIDs&quot;: [ 7, 8 ],
+        ///       [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string YotogiMiscHandling {
             get {

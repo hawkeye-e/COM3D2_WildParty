@@ -160,7 +160,13 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
 
                 if (!IsScenarioMaidCountValid(id, maidCountDay) || !IsScenarioMaidCountValid(id, maidCountNight))
                 {
-                    string warningMessage = ModResources.TextResource.MaidCountRequirementWarning
+                    string warningMessage;
+                    if (moddedScenario.MaidCount.Min == moddedScenario.MaidCount.Max)
+                        warningMessage = ModResources.TextResource.MaidCountRequirementWarningExactCount;
+                    else
+                        warningMessage = ModResources.TextResource.MaidCountRequirementWarning;
+
+                    warningMessage = warningMessage
                         .Replace(Constant.ResourcesTextReplaceLabel.EventName, moddedScenario.DisplayName)
                         .Replace(Constant.ResourcesTextReplaceLabel.MinMaidCount, moddedScenario.MaidCount.Min.ToString())
                         .Replace(Constant.ResourcesTextReplaceLabel.MaxMaidCount, moddedScenario.MaidCount.Max.ToString());

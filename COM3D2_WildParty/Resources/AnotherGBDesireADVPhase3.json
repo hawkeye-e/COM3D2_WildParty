@@ -1,0 +1,127 @@
+{
+  "agbd_phase3_init": {
+    "ID": "agbd_phase3_init",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "SystemFadeOut",
+    "NextStepID": "agbd_phase3_init_a"
+  },
+
+  "agbd_phase3_init_a": {
+    "ID": "agbd_phase3_init_a",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_phase3_init_b"
+  },
+
+  "agbd_phase3_init_b": {
+    "ID": "agbd_phase3_init_b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_phase3_init_c",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.19, 3.61, -2.04",
+        "TargetPosString": "0.12, 0.78, -0.96",
+        "AroundAngleString": "50.36, 59.05",
+        "Distance": 3.3
+      }
+    }
+  },
+
+  "agbd_phase3_init_c": {
+    "ID": "agbd_phase3_init_c",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "agbd_phase3_remove_owner"
+  },
+
+  "agbd_phase3_remove_owner": {
+    "ID": "agbd_phase3_remove_owner",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "agbd_phase3_init_d",
+    "ListUpdateData": {
+      "Remove": [ { "Type": "Owner" } ]
+    }
+  },
+
+  "agbd_phase3_init_d": {
+    "ID": "agbd_phase3_init_d",
+    "Type": "Shuffle",
+    "ShuffleData": {
+      "TargetList": "M_ALL"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_phase3_init_e"
+  },
+
+  "agbd_phase3_init_e": {
+    "ID": "agbd_phase3_init_e",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "agbd_phase3_0001",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-999, -999, -999",
+          "RotString": "0, 1, 0, 0"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      }
+    ]
+  },
+
+
+  "agbd_phase3_0001": {
+    "ID": "agbd_phase3_0001",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_yotogiplay_phase3_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は男たちと[=Name,Maid,0,CallName]を犯し続ける、今まで味わったことのないような快感を覚えている。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+
+  "agbd_yotogiplay_phase3_closepanel": {
+    "ID": "agbd_yotogiplay_phase3_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_start_yotogiplay_phase3"
+  },
+
+
+
+
+
+
+  "agbd_start_yotogiplay_phase3": {
+    "ID": "agbd_start_yotogiplay_phase3",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "HappyGBClub",
+      "Phase": 3,
+      "IsKeepCharacterVisibleAfterYotogi": false,
+      "IsFinalYotogi": true,
+      "IsClubOwnerMainCharacter": false
+    },
+    "NextStepID": "agbd_postyotogi_init"
+  }
+}

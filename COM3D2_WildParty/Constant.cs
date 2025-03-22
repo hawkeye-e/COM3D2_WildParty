@@ -527,7 +527,6 @@ namespace COM3D2.WildParty.Plugin
             internal const string ChangePositionAll = "ChangePositionAll";
             internal const string ChangeFormation = "ChangeFormation";
             internal const string ChangePartner = "ChangePartner";
-            internal const string FetishOrgy = "FetishOrgy";
 
             internal const string ChangeFormationHaremKing = "ChangeFormationHaremKing";
             internal const string ChangeMaidHaremKing = "ChangeMaidHaremKing";
@@ -542,6 +541,11 @@ namespace COM3D2.WildParty.Plugin
             internal const string OrgasmBukkake2 = "OrgasmBukkake2";
 
             internal const string ChangeFormationHappyGBClub = "ChangeFormationHappyGBClub";
+            
+            internal const string ChangeMaidAnotherGBDesire = "ChangeMaidAnotherGBDesire";
+
+            internal const string FetishOrgy = "FetishOrgy";
+            internal const string FetishGangBang = "FetishGangBang";
         }
 
         internal static class CameraEaseType

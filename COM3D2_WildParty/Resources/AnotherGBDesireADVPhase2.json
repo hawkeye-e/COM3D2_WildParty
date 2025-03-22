@@ -1,0 +1,124 @@
+{
+
+  "agbd_phase2_init": {
+    "ID": "agbd_phase2_init",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "SystemFadeOut",
+    "NextStepID": "agbd_phase2_init_a"
+  },
+
+  "agbd_phase2_init_a": {
+    "ID": "agbd_phase2_init_a",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_phase2_init_b"
+  },
+
+  "agbd_phase2_init_b": {
+    "ID": "agbd_phase2_init_b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_phase2_init_c",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "agbd_phase2_init_c": {
+    "ID": "agbd_phase2_init_c",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "agbd_phase2_init_d"
+  },
+
+  "agbd_phase2_init_d": {
+    "ID": "agbd_phase2_init_d",
+    "Type": "Shuffle",
+    "ShuffleData": {
+      "TargetList": "M_ALL"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_phase2_init_e"
+  },
+
+
+
+  "agbd_phase2_init_e": {
+    "ID": "agbd_phase2_init_e",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "agbd_phase2_0001",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-999, -999, -999",
+          "RotString": "0, 1, 0, 0"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "ClothesSetID": "FullNude"
+      }
+    ]
+  },
+
+
+
+
+
+  "agbd_phase2_0001": {
+    "ID": "agbd_phase2_0001",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_yotogiplay_phase2_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ステージでの輪姦は続いている。男たちは休むことなく俺のメイドたちに挿入し、メイドたちはそれを愉しんでいる。彼女たちはあらゆるペニスを歓迎し、楽しませ、そして男の精子を搾り取る。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "agbd_yotogiplay_phase2_closepanel": {
+    "ID": "agbd_yotogiplay_phase2_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_start_yotogiplay_phase2"
+  },
+
+
+
+  "agbd_start_yotogiplay_phase2": {
+    "ID": "agbd_start_yotogiplay_phase2",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "HappyGBClub",
+      "Phase": 2,
+      "IsKeepCharacterVisibleAfterYotogi": false,
+      "IsFinalYotogi": false,
+      "IsClubOwnerMainCharacter": true
+    },
+    "NextStepID": "agbd_phase3_init"
+  }
+}

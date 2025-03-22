@@ -10,11 +10,15 @@ namespace COM3D2.WildParty.Plugin.Helper
     {
         internal static void ConvertManStructureToFemale(Maid man)
         {
+            if (man == null)
+                return;
             RecurConvertManBoneNameToFemale(man.transform);
         }
 
         internal static void RecoverConvertedManStructure(Maid man)
         {
+            if (man == null)
+                return;
             RecurRecoverManBoneName(man.transform);
         }
 

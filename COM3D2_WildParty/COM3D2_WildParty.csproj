@@ -192,6 +192,11 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>PresetResources.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resx\ScenarioAnotherGBDesire.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>ScenarioAnotherGBDesire.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resx\ScenarioHappyGBClub.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -229,6 +234,11 @@
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>PresetResources.Designer.cs</LastGenOutput>
 	    <CustomToolNamespace>ModResources</CustomToolNamespace>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\ScenarioAnotherGBDesire.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>ScenarioAnotherGBDesire.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ScenarioResources</CustomToolNamespace>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resx\ScenarioHappyGBClub.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>

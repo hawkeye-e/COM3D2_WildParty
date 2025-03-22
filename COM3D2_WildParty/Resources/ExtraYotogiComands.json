@@ -76,6 +76,10 @@
       {
         "EventID": 9900002,
         "SexPosIDs": [ 3 ]
+      },
+      {
+        "EventID": 9900003,
+        "SexPosIDs": [ 3 ]
       }
     ],
     "OrgasmSetting": {
@@ -91,6 +95,10 @@
     "Constraint": [
       {
         "EventID": 9900002,
+        "SexPosIDs": [ 3 ]
+      },
+      {
+        "EventID": 9900003,
         "SexPosIDs": [ 3 ]
       }
     ],
@@ -108,6 +116,10 @@
       {
         "EventID": 9900002,
         "SexPosIDs": [ 1 ]
+      },
+      {
+        "EventID": 9900003,
+        "SexPosIDs": [ 1 ]
       }
     ],
     "OrgasmSetting": {
@@ -123,6 +135,10 @@
     "Constraint": [
       {
         "EventID": 9900002,
+        "SexPosIDs": [ 1 ]
+      },
+      {
+        "EventID": 9900003,
         "SexPosIDs": [ 1 ]
       }
     ],
@@ -140,6 +156,10 @@
       {
         "EventID": 9900002,
         "SexPosIDs": [ 1 ]
+      },
+      {
+        "EventID": 9900003,
+        "SexPosIDs": [ 1 ]
       }
     ],
     "OrgasmSetting": {
@@ -155,6 +175,10 @@
     "Constraint": [
       {
         "EventID": 9900002,
+        "SexPosIDs": [ 1 ]
+      },
+      {
+        "EventID": 9900003,
         "SexPosIDs": [ 1 ]
       }
     ],
@@ -180,5 +204,10 @@
         "DisplayText": "[=OrgasmCount]回以上で絶頂する（[=CurrentOrgasmCount]／[=OrgasmCount]）"
       }
     ]
+  },
+
+  "ChangeMaidAnotherGBDesire": {
+    "Name": "メイド変更",
+    "Type": "Common"
   }
 }

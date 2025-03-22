@@ -342,9 +342,12 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 {
                     if (!StateManager.Instance.ForceNoCameraResetAfterFadeIn)
                     {
-                        if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].CameraSetup != null)
+                        var coordinateListInfo = ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].CoordinateList.Where(x => x.MaxGroup >= StateManager.Instance.PartyGroupList.Count).OrderBy(x => x.MaxGroup).First();
+                        MapCoorindates.CoordinatesInfo groupZeroCoordinateInfo = coordinateListInfo.GroupCoordinates.Where(x => x.ArrayPosition == 0).First();
+
+                        if (groupZeroCoordinateInfo.CameraSetup != null)
                         {
-                            Core.CameraHandling.SetCameraLookAtFixedPoint(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].CameraSetup);
+                            Core.CameraHandling.SetCameraLookAtFixedPoint(groupZeroCoordinateInfo.CameraSetup);
                         }
                         else
                         {
@@ -915,8 +918,11 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].CameraSetup != null)
-                    Core.CameraHandling.SetCameraLookAtFixedPoint(ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].CameraSetup);
+                var coordinateListInfo = ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].CoordinateList.Where(x => x.MaxGroup >= StateManager.Instance.PartyGroupList.Count).OrderBy(x => x.MaxGroup).First();
+                MapCoorindates.CoordinatesInfo groupZeroCoordinateInfo = coordinateListInfo.GroupCoordinates.Where(x => x.ArrayPosition == 0).First();
+
+                if (groupZeroCoordinateInfo.CameraSetup != null)
+                    Core.CameraHandling.SetCameraLookAtFixedPoint(groupZeroCoordinateInfo.CameraSetup);
                 else
                     Core.CameraHandling.SetCameraLookAt(GameMain.Instance.CharacterMgr.GetMaid(0));
                 return false;
