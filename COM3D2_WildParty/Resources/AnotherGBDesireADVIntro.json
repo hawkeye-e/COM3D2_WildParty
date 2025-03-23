@@ -82,7 +82,7 @@
     "ID": "agbd_intro_0002",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "agbd_intro_Show_Owner",
+    "NextStepID": "agbd_intro_0003",
     "TalkData": {
       "SpecificSpeaker": "Owner",
       "Text": "（『輪姦クラブ』のメンバーになって以来、俺は定期的に訪れている。）"
@@ -94,28 +94,669 @@
     }
   },
 
+  "agbd_intro_0003": {
+    "ID": "agbd_intro_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（クラブを訪れたメイドが宣伝してくれたおかげで、より多くのメイドが興味を持っている。）"
+    }
+  },
 
+  "agbd_intro_0004": {
+    "ID": "agbd_intro_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0005",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（今日は[=Name,Maid,0,CallName]、[=Name,Maid,1,CallName]、[=Name,Maid,2,CallName]がクラブを訪れる番だ。）"
+    }
+  },
 
+  "agbd_intro_0005": {
+    "ID": "agbd_intro_0005",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0005a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（いつものように、性欲と感度を高めるために刺激を与えるために、最初はまずしばらく見ることを伝える。）"
+    }
+  },
 
+  "agbd_intro_0005a": {
+    "ID": "agbd_intro_0005a",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "agbd_intro_0006",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
 
+  "agbd_intro_0006": {
+    "ID": "agbd_intro_0006",
+    "Type": "BG",
+    "Tag": "poledancestage",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0006a"
+  },
 
-
-  "agbd_intro_Show_Owner": {
-    "ID": "agbd_intro_Show_Owner",
+  "agbd_intro_0006a": {
+    "ID": "agbd_intro_0006a",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "agbd_intro_yotogiplay_phase1_closepanel",
+    "NextStepID": "agbd_intro_0006b",
+    "CharaData": [
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿深々"
+        },
+        "PosRot": {
+          "PosString": "-0.37, -0.28, -7.59",
+          "RotString": "0, -0.14968, 0, -0.98874"
+        }
+      },
+
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿チャラ男"
+        },
+        "PosRot": {
+          "PosString": "1.78, -0.75, -5.09",
+          "RotString": "0, -0.21616, 0, 0.97636"
+        }
+      },
+
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿考える"
+        },
+        "PosRot": {
+          "PosString": "-6.49, -0.28, -3.58",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        }
+      },
+
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組"
+        },
+        "PosRot": {
+          "PosString": "3.88, -0.28, -4.51",
+          "RotString": "0, 0.46012, 0, -0.88786"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0006b": {
+    "ID": "agbd_intro_0006b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "agbd_intro_0006c",
     "CharaData": [
       {
         "Type": "M",
         "IsMaster": true,
         "Visible": true,
         "WaitLoad": true,
-        "IsManNude": true
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組"
+        },
+        "PosRot": {
+          "PosString": "-2.85, -0.28, -11.27",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "turusi_sex_taiki_m.anm",
+          "MotionTag": "turusi_sex_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-5.74, -0.75, -9.06",
+          "RotString": "0, -0.425, 0, 0.905"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "kousoku_irruma2_taiki_m.anm",
+          "MotionTag": "kousoku_irruma2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-6.12, -0.75, -9.67",
+          "RotString": "0, 0.568, 0, -0.823"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "ClothesSetID": "HappyGBClub_NoSex",
+        "FaceAnime": "興奮射精後２",
+        "FaceBlend": "頬３涙０",
+        "MotionInfo": {
+          "ScriptFile": "sex_ositaosi_mode.ks",
+          "ScriptLabel": "*身を振る"
+        },
+        "PosRot": {
+          "PosString": "-2.31, -0.28, -10.97",
+          "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 1
+          }
+        },
+        "Effect": {
+          "Add": [ "Breath" ]
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "ClothesSetID": "HappyGBClub_NoSex",
+        "FaceAnime": "エロ羞恥２",
+        "FaceBlend": "頬３涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaC_001.ks",
+          "ScriptLabel": "*会話座り前傾"
+        },
+        "PosRot": {
+          "PosString": "-1.55, -0.28, -10.96",
+          "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 1
+          }
+        },
+        "Effect": {
+          "Add": [ "Breath" ]
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "ClothesSetID": "HappyGBClub_NoSex",
+        "FaceAnime": "エロ痛み１",
+        "FaceBlend": "頬３涙０",
+        "MotionInfo": {
+          "ScriptFile": "sex_OM_onani.ks",
+          "ScriptLabel": "*激しさ１"
+        },
+        "PosRot": {
+          "PosString": "-3.73, -0.28, -11.02",
+          "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 1
+          }
+        },
+        "Effect": {
+          "Add": [ "Breath", "SexualFluid1", "SexualFluid2", "SexualFluid3" ]
+        }
       }
     ]
   },
+
+  "agbd_intro_0006c": {
+    "ID": "agbd_intro_0006c",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0006d",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-3.70, 0.82, -9.40",
+        "TargetPosString": "-1.98, 0.19, -11.52",
+        "AroundAngleString": "140.78, 13.09",
+        "Distance": 2.8
+      },
+      "LockCamera": { "IsLock": true }
+    }
+  },
+
+  "agbd_intro_0006d": {
+    "ID": "agbd_intro_0006d",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0007",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（もう１時間も見ている、ステージの淫靡なシーンは、明らかにメイドたちをムラムラさせる。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "agbd_intro_0007": {
+    "ID": "agbd_intro_0007",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0008_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]の体はどんどん熱くなり、[=Name,Maid,1,CallName]の吐息はさらにエロかった。）"
+    }
+  },
+
+  "agbd_intro_0008_camerapan": {
+    "ID": "agbd_intro_0008_camerapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "agbd_intro_0009",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-1.92, 0.93, -9.74",
+        "TargetPosString": "-2.98, 0.45, -10.51",
+        "AroundAngleString": "234.19, 19.92",
+        "Distance": 1.4
+      }
+    }
+  },
+
+  "agbd_intro_0009": {
+    "ID": "agbd_intro_0009",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0010_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そして[=Name,Maid,2,CallName]、彼女はもう他人の視線を気にせず、堂々とオナニーを始める。悪い子だね、本当に…）"
+    }
+  },
+
+  "agbd_intro_0010_camerapan": {
+    "ID": "agbd_intro_0010_camerapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "agbd_intro_0011",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-6.44, 1.44, -7.65",
+        "TargetPosString": "-5.21, 0.52, -9.75",
+        "AroundAngleString": "149.46, 20.85",
+        "Distance": 2.6
+      }
+    }
+  },
+
+  "agbd_intro_0011": {
+    "ID": "agbd_intro_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0012",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（その破廉恥な姿のせいで２人の男が集まり、オナニーを静かに眺める。）"
+    }
+  },
+
+  "agbd_intro_0012": {
+    "ID": "agbd_intro_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0013",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（うーん…）"
+    }
+  },
+
+  "agbd_intro_0013": {
+    "ID": "agbd_intro_0013",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0014",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（もう準備オーケーみたいだな…）"
+    }
+  },
+
+  "agbd_intro_0014": {
+    "ID": "agbd_intro_0014",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "agbd_intro_0015",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+
+  "agbd_intro_0015": {
+    "ID": "agbd_intro_0015",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "agbd_intro_0015a",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男ソファーワイン待機L"
+        },
+        "PosRot": {
+          "PosString": "-2.77, -0.28, -4.27",
+          "RotString": "0, -0.478, 0, 0.878"
+        },
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "HandItemR_WineGlass_I_.menu",
+              "Target": "handitem"
+            }
+          ]
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-2.50, -0.75, -10.19",
+          "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-1.99, -0.75, -10.19",
+          "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-3.02, -0.75, -10.19",
+          "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        },
+        "Effect": {
+          "Remove": [ "SexualFluid1", "SexualFluid2", "SexualFluid3" ]
+        }
+      }
+    ]
+  },
+
+
+  "agbd_intro_0015a": {
+    "ID": "agbd_intro_0015a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0015b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-2.60, 0.94, -8.81",
+        "TargetPosString": "-2.50, 0.76, -10.19",
+        "AroundAngleString": "176.11, 7.50",
+        "Distance": 1.4
+      }
+    }
+  },
+
+  "agbd_intro_0015b": {
+    "ID": "agbd_intro_0015b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0016_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "みんな、もう輪姦される準備ができているようだね。さあ、楽しんで行け。俺はここから見ているよ。"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "agbd_intro_0016_Branch": {
+    "ID": "agbd_intro_0016_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "agbd_intro_0020_M_[=PType]"
+  },
+
+  "agbd_intro_0021_Branch": {
+    "ID": "agbd_intro_0021_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "agbd_intro_0030_M_[=PType]"
+  },
+
+  "agbd_intro_0031_Branch": {
+    "ID": "agbd_intro_0031_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "agbd_intro_0040_M_[=PType]"
+  },
+
+
+  "agbd_intro_0041": {
+    "ID": "agbd_intro_0041",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "agbd_intro_0042",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "agbd_intro_0042": {
+    "ID": "agbd_intro_0042",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0043",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      },
+      "LockCamera": { "IsLock": false }
+    }
+  },
+
+
+  "agbd_intro_0043": {
+    "ID": "agbd_intro_0043",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0044",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]、[=Name,Maid,1,CallName]、[=Name,Maid,2,CallName]が興奮気味にステージに上がった。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "agbd_intro_0044": {
+    "ID": "agbd_intro_0044",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0045",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "うん、俺も近くの席に移動して楽しもうかな…"
+    }
+  },
+
+  "agbd_intro_0045": {
+    "ID": "agbd_intro_0045",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "agbd_intro_yotogiplay_phase1_closepanel",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "Effect": {
+          "Remove": [ "Breath" ]
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "Effect": {
+          "Remove": [ "Breath" ]
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "Effect": {
+          "Remove": [ "Breath" ]
+        }
+      }
+    ]
+  },
+
 
   "agbd_intro_yotogiplay_phase1_closepanel": {
     "ID": "agbd_intro_yotogiplay_phase1_closepanel",

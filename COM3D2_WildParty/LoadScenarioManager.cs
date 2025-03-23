@@ -106,6 +106,9 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADVIntro,
             ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADVPhase2,
             ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADVPhase3,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADVPostYotogi,
+
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Muku,
         };
 
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)

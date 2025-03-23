@@ -1,0 +1,444 @@
+{
+  "agbd_postyotogi_init": {
+    "ID": "agbd_postyotogi_init",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "SystemFadeOut",
+    "NextStepID": "agbd_postyotogi_init_a"
+  },
+
+  "agbd_postyotogi_init_a": {
+    "ID": "agbd_postyotogi_init_a",
+    "Type": "BGM",
+    "Tag": "BGM019.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_init_b"
+  },
+
+  "agbd_postyotogi_init_b": {
+    "ID": "agbd_postyotogi_init_b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_init_c",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "agbd_postyotogi_init_c": {
+    "ID": "agbd_postyotogi_init_c",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "agbd_postyotogi_init_d"
+  },
+
+  "agbd_postyotogi_init_d": {
+    "ID": "agbd_postyotogi_init_d",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "agbd_postyotogi_init_e",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": false,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "agbd_postyotogi_init_e": {
+    "ID": "agbd_postyotogi_init_e",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "agbd_postyotogi_0001",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomOh",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-0.13, -0.75, -13.13",
+          "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomOh",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-0.55, -0.75, -12.99",
+          "RotString": "0, 0.276, 0, 0.961"
+        },
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomOh",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "0.29, -0.75, -12.99",
+          "RotString": "0, -0.276, 0, 0.961"
+        },
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        }
+      }
+    ]
+  },
+
+
+  "agbd_postyotogi_0001": {
+    "ID": "agbd_postyotogi_0001",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（この淫蕩な饗宴は終わりそうにない。俺のメイドはこれまで以上に幸せそうだ、本当に輪姦されることにハマっているみたい。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "agbd_postyotogi_0002": {
+    "ID": "agbd_postyotogi_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺もただ見ているだけではなく、男たちに混じって他の有名人女性メンバーを輪姦してきた。）"
+    }
+  },
+
+  "agbd_postyotogi_0003": {
+    "ID": "agbd_postyotogi_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（何か食べようとラウンジに行ったら、もう日没の時間だった。そろそろ戻ろうか…）"
+    }
+  },
+
+  "agbd_postyotogi_0004": {
+    "ID": "agbd_postyotogi_0004",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "agbd_postyotogi_0004a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "agbd_postyotogi_0004a": {
+    "ID": "agbd_postyotogi_0004a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0004b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-0.21, 0.96, -11.85",
+        "TargetPosString": "-0.12, 0.73, -13.12",
+        "AroundAngleString": "176.11, 10.29",
+        "Distance": 1.3
+      },
+      "LockCamera": { "IsLock": true }
+    }
+  },
+
+  "agbd_postyotogi_0004b": {
+    "ID": "agbd_postyotogi_0004b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0005_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "みんな、そろそろ帰る時間だよ。"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "agbd_postyotogi_0005_Branch": {
+    "ID": "agbd_postyotogi_0005_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "agbd_postyotogi_0010_M_[=PType]"
+  },
+
+  "agbd_postyotogi_0011": {
+    "ID": "agbd_postyotogi_0011",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "agbd_postyotogi_0012",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0012": {
+    "ID": "agbd_postyotogi_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0013_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "まあ、もう日が暮れている…まだ輪姦されたいのか？"
+    }
+  },
+
+  "agbd_postyotogi_0013_Branch": {
+    "ID": "agbd_postyotogi_0013_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "agbd_postyotogi_0020_M_[=PType]"
+  },
+
+
+  "agbd_postyotogi_0021": {
+    "ID": "agbd_postyotogi_0021",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "agbd_postyotogi_0022",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0022": {
+    "ID": "agbd_postyotogi_0022",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0023_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "またここに来るから安心して。次回の楽しみを残しておくのはいいことじゃない？"
+    }
+  },
+
+  "agbd_postyotogi_0023_Branch": {
+    "ID": "agbd_postyotogi_0023_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "agbd_postyotogi_0030_M_[=PType]"
+  },
+
+  "agbd_postyotogi_0031": {
+    "ID": "agbd_postyotogi_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0032",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ。"
+    }
+  },
+
+  "agbd_postyotogi_0032": {
+    "ID": "agbd_postyotogi_0032",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "agbd_postyotogi_0033",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+
+  "agbd_postyotogi_0033": {
+    "ID": "agbd_postyotogi_0033",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0034",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "agbd_postyotogi_0034": {
+    "ID": "agbd_postyotogi_0034",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0035",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そして俺たちはエンパイアクラブに戻る。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "agbd_postyotogi_0035": {
+    "ID": "agbd_postyotogi_0035",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_end",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ああ…次回は誰と行こうかな？楽しみだな…）"
+    }
+  },
+
+
+
+  "agbd_end": {
+    "ID": "agbd_end",
+    "Type": "Special",
+    "WaitingType": "FadeOut",
+    "NextStepID": "agbd_end2",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "agbd_end2": {
+    "ID": "agbd_end2",
+    "Type": "ADVEnd",
+    "WaitingType": "End"
+  }
+}

@@ -172,6 +172,7 @@ namespace COM3D2.WildParty.Plugin
             public EyeSightSetting EyeSight;
             public ExtraObjectsSetting ExtraObjectsInfo;
             public string ClothesSetID;                                 //Special ID: "RESET", reset all applied ClothesSetID. Otherwise follows ClothesSet.json
+            public EffectDetail Effect;
         }
 
         internal class ShowGroupMotion
@@ -300,6 +301,12 @@ namespace COM3D2.WildParty.Plugin
             public string Src;
             public string ObjectID;                 //Used for removing the object
             public PosRot PosRot;
+        }
+
+        internal class EffectDetail
+        {
+            public List<string> Add;
+            public List<string> Remove;
         }
 
 #pragma warning restore 0649

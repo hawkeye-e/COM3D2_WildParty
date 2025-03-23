@@ -63,7 +63,7 @@
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "agbd_phase3_0001",
+    "NextStepID": "agbd_phase3_init_f",
     "CharaData": [
       {
         "Type": "M_ALL",
@@ -79,15 +79,418 @@
     ]
   },
 
+  "agbd_phase3_init_f": {
+    "ID": "agbd_phase3_init_f",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "agbd_phase3_init_g",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "0.51, 0.00, -2.12",
+          "RotString": "0, 0.97829, 0, 0.20724"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 8,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "1.94, 0.00, -0.67",
+          "RotString": "0, 0.59126, 0, 0.80648"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 9,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "2.44, 0.00, 1.24",
+          "RotString": "0, 0.52628, 0, 0.85031"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 10,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.97, 0.00, 0.00",
+          "RotString": "0, 0.86307, 0, -0.50508"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 11,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-2.28, 0.00, 0.56",
+          "RotString": "0, 0.75842, 0, -0.65176"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 12,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.98, 0.00, 1.76",
+          "RotString": "0, 0.51509, 0, -0.85713"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 13,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.64, 0.00, -0.57",
+          "RotString": "0, 0.57647, 0, -0.81712"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 14,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.01, 0.00, 2.73",
+          "RotString": "0, 0.01918, 0, 0.99982"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 15,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "1.70, 0.00, -1.36",
+          "RotString": "0, 0.82156, 0, 0.57013"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 16,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.40, 0.00, 3.29",
+          "RotString": "0, 0.16534, 0, 0.98624"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 17,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.62, 0.00, 2.32",
+          "RotString": "0, 0.22750, 0, -0.97378"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 18,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "0.59, 0.00, 2.32",
+          "RotString": "0, 0.32845, 0, -0.94452"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 19,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "1.70, 0.00, 2.34",
+          "RotString": "0, 0.18873, 0, 0.98203"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿深々"
+        },
+        "PosRot": {
+          "PosString": "-0.37, -0.28, -7.59",
+          "RotString": "0, -0.14968, 0, -0.98874"
+        }
+      },
+
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿チャラ男"
+        },
+        "PosRot": {
+          "PosString": "1.78, -0.75, -5.09",
+          "RotString": "0, -0.21616, 0, 0.97636"
+        }
+      },
+
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿考える"
+        },
+        "PosRot": {
+          "PosString": "-6.49, -0.28, -3.58",
+          "RotString": "0, 0.70711, 0, 0.70711"
+        }
+      },
+
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組"
+        },
+        "PosRot": {
+          "PosString": "3.88, -0.28, -4.51",
+          "RotString": "0, 0.46012, 0, -0.88786"
+        }
+      }
+    ]
+  },
+
+  "agbd_phase3_init_g": {
+    "ID": "agbd_phase3_init_g",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_phase3_init_h",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "Owner"
+        },
+        "Man2": {
+          "Type": "M",
+          "ArrayPosition": 0
+        },
+        "Man3": {
+          "Type": "M",
+          "ArrayPosition": 1
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      },
+      {
+        "GroupIndex": 1,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 2
+        },
+        "Man2": {
+          "Type": "M",
+          "ArrayPosition": 3
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 1
+        }
+      },
+      {
+        "GroupIndex": 2,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 4
+        },
+        "Man2": {
+          "Type": "M",
+          "ArrayPosition": 5
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 2
+        }
+      }
+    ]
+  },
+
+  "agbd_phase3_init_h": {
+    "ID": "agbd_phase3_init_h",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "agbd_phase3_init_i",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran4p_dai_seijyoui.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 7,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "Man2": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "Man3": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "0.19, 0.63, -1.24",
+          "RotString": "0.0, 1.0, 0.0, 0.0"
+        }
+      },
+
+      {
+        "ArrayPosition": 1,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*激しさ２キス",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "接吻",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "Man2": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-1.00, 0.00, 0.85",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      },
+
+      {
+        "ArrayPosition": 2,
+        "ScriptFile": "sex_ran3p_ekiben_c002.ks",
+        "ScriptLabel": "*激しさ２胸揉み",
+        "SexPosID": 6,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮３",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "Man2": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "1.20, 0.00, 0.85",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
+      }
+    ]
+  },
+
+  "agbd_phase3_init_i": {
+    "ID": "agbd_phase3_init_i",
+    "Type": "AddObject",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_phase3_0001",
+    "WorldObjectData": [
+      {
+        "Src": "Odogu_SimpleTable",
+        "ObjectID": "mod_phase3_table",
+        "PosRot": {
+          "PosString": "0.19, -0.125, -0.97",
+          "RotString": "0, -0.70711, -0.70711, 0"
+        }
+      }
+    ]
+  },
+
 
   "agbd_phase3_0001": {
     "ID": "agbd_phase3_0001",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "agbd_yotogiplay_phase3_closepanel",
+    "NextStepID": "agbd_phase3_0002",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（俺は男たちと[=Name,Maid,0,CallName]を犯し続ける、今まで味わったことのないような快感を覚えている。）"
+      "Text": "（この背徳の宴は、ますます淫らで荒々しくなっていく。だが、これだけではまだまだ足りないだ。）"
     },
 
     "FadeData": {
@@ -95,6 +498,114 @@
       "IsFadeOut": false
     }
   },
+
+  "agbd_phase3_0002": {
+    "ID": "agbd_phase3_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_phase3_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は知っているよ、俺のメイドはこの程度では満足できない。）"
+    }
+  },
+
+  "agbd_phase3_0004": {
+    "ID": "agbd_phase3_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_phase3_0005",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（彼女たちの目や表情を見ればわかる。それはもっと輪姦され、もっともっとめちゃくちゃにされている顔だ。）"
+    }
+  },
+
+  "agbd_phase3_0005": {
+    "ID": "agbd_phase3_0005",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_phase3_0006",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "みんな、肉便器プレイしようか？俺のメイドはそれ欲しいみたいだ。"
+    }
+  },
+
+  "agbd_phase3_0006": {
+    "ID": "agbd_phase3_0006",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_phase3_0007",
+    "TalkData": {
+      "SpeakerName": "男１",
+      "Text": "おおっ！オーナーさんの提案はいいね！"
+    }
+  },
+
+  "agbd_phase3_0007": {
+    "ID": "agbd_phase3_0007",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_phase3_0008",
+    "TalkData": {
+      "SpeakerName": "男２",
+      "Text": "へへぇ、最初からこれ待っていた！"
+    }
+  },
+
+  "agbd_phase3_0008": {
+    "ID": "agbd_phase3_0008",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "agbd_phase3_0009",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "agbd_phase3_0009": {
+    "ID": "agbd_phase3_0009",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_phase3_0010",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "agbd_phase3_0010": {
+    "ID": "agbd_phase3_0010",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_phase3_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そして男たちが行列を作る。俺はステージを降り、メイドたちが肉便器として扱われるのを楽しんでいる。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "agbd_phase3_0011": {
+    "ID": "agbd_phase3_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_yotogiplay_phase3_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ああ…愉しいことはまだまだ続いて行く…）"
+    }
+  },
+
 
 
 

@@ -87,6 +87,37 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;Breath&quot;: {
+        ///    &quot;Prefab&quot;: &quot;Particle/pToiki&quot;,
+        ///    &quot;Name&quot;: &quot;WildParty_Mod_Breath&quot;,
+        ///    &quot;TargetBone&quot;: &quot;Bip01 Head&quot;,
+        ///    &quot;Offset&quot;: {
+        ///      &quot;PosString&quot;: &quot;0.04, 0.08, 0&quot;,
+        ///      &quot;RotString&quot;: &quot;-90, 90, 0&quot;
+        ///    }
+        ///  },
+        ///
+        ///  &quot;SexualFluid1&quot;: {
+        ///    &quot;Prefab&quot;: &quot;Particle/pPistonEasy_cm3D2&quot;,
+        ///    &quot;Name&quot;: &quot;WildParty_Mod_SexualFluid1&quot;,
+        ///    &quot;TargetBone&quot;: &quot;_IK_vagina&quot;,
+        ///    &quot;Offset&quot;: {
+        ///      &quot;PosString&quot;: &quot;0, 0, 0.01&quot;,
+        ///      &quot;RotString&quot;: &quot;0, -180, 90&quot;
+        ///    }
+        ///  },
+        ///
+        ///  &quot;SexualFluid2&quot;: {
+        ///    &quot;Prefab&quot;: &quot;Particle/p [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string CharacterEffect {
+            get {
+                return ResourceManager.GetString("CharacterEffect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;FullNude&quot;: {
         ///    &quot;Slots&quot;: {
         ///      &quot;acchat&quot;: &quot;_I_acchat_del.menu&quot;,

@@ -62,6 +62,36 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;agbd_intro_0020_M_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;agbd_intro_0020_M_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;agbd_intro_0020_T_Muku&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;疑問&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;agbd_intro_0020_T_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;agbd_intro_0020_T_Muk [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string AnotherGBDesireADV_Muku {
+            get {
+                return ResourceManager.GetString("AnotherGBDesireADV_Muku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;agbd0001&quot;: {
         ///    &quot;ID&quot;: &quot;agbd0001&quot;,
         ///    &quot;Type&quot;: &quot;BG&quot;,
@@ -150,6 +180,35 @@ namespace ScenarioResources {
         internal static string AnotherGBDesireADVPhase3 {
             get {
                 return ResourceManager.GetString("AnotherGBDesireADVPhase3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;hgbc_postyotogi_init&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_postyotogi_init&quot;,
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_postyotogi_init_a&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_postyotogi_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_postyotogi_init_a&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_postyotogi_init_b&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_postyotogi_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_postyotogi_init_b&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStep [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string AnotherGBDesireADVPostYotogi {
+            get {
+                return ResourceManager.GetString("AnotherGBDesireADVPostYotogi", resourceCulture);
             }
         }
     }

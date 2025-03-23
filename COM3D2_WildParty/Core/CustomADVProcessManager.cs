@@ -497,6 +497,12 @@ namespace COM3D2.WildParty.Plugin.Core
                 maid.OpenMouth(charaData.OpenMouth);
 
                 CharacterHandling.SetFemaleClothing(maid, charaData.ClothesSetID);
+
+                if(charaData.Effect != null)
+                {
+                    CharacterHandling.AddCharacterEffect(maid, charaData.Effect.Add);
+                    CharacterHandling.RemoveCharacterEffect(maid, charaData.Effect.Remove);
+                }
             }
             else
             {

@@ -1212,5 +1212,38 @@ namespace COM3D2.WildParty.Plugin.Core
             else
                 StateManager.Instance.BackupMaidClothingList[maid.status.guid] = maidClothesDict;
         }
+
+        internal static void AddCharacterEffect(Maid maid, List<string> effectList)
+        {
+            if (maid == null)
+                return;
+            if (effectList == null)
+                return;
+
+            foreach(string effectID in effectList)
+            {
+                if (!ModUseData.CharacterEffectList.ContainsKey(effectID))
+                    continue;
+
+                CharacterEffect effect = ModUseData.CharacterEffectList[effectID];
+                maid.AddPrefab(effect.Prefab, effect.Name, effect.TargetBone, effect.Offset.Pos, effect.Offset.Rot);
+            }
+        }
+
+        internal static void RemoveCharacterEffect(Maid maid, List<string> effectList)
+        {
+            if (maid == null)
+                return;
+            if (effectList == null)
+                return;
+
+            foreach (string effectID in effectList)
+            {
+                if (!ModUseData.CharacterEffectList.ContainsKey(effectID))
+                    continue;
+                CharacterEffect effect = ModUseData.CharacterEffectList[effectID];
+                maid.DelPrefab(effect.Name);
+            }
+        }
     }
 }

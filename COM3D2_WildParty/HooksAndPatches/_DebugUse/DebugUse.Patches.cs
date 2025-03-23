@@ -198,48 +198,60 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
 
                     if (i == 0)
                     {
-                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_002.ks", "*会話座りがっかり", maid.status.guid, "");
+
+                        Core.CharacterHandling.LoadMotionScript(0, false, "sex_ositaosi_mode.ks", "*身を振る", maid.status.guid, "");
+
+                        maid.AddPrefab("Particle/pToiki", "夜伽_吐息", "Bip01 Head", new Vector3(0.04f, 0.08f, 0.00f), new Vector3(-90.00f, 90.00f, 0.00f));
+                        //Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
+                    }
+                    if (i == 1)
+                    {
+                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り前傾", maid.status.guid, ""); 
                         //Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
                     }
                     if (i == 2)
                     {
-                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り呆れる", maid.status.guid, "");
+                        Core.CharacterHandling.LoadMotionScript(0, false, "sex_OM_onani.ks", "*激しさ１", maid.status.guid, "");
+
+                        maid.AddPrefab("Particle/pPistonEasy_cm3D2", "夜伽_愛液1", "_IK_vagina", new Vector3(0.00f, 0.00f, 0.01f), new Vector3(0.00f, -180.00f, 90.00f));
+                        maid.AddPrefab("Particle/pPistonNormal_cm3D2", "夜伽_愛液2", "_IK_vagina", new Vector3(0.00f, 0.00f, 0.01f), new Vector3(0.00f, -180.00f, 90.00f));
+                        maid.AddPrefab("Particle/pPistonHard_cm3D2", "夜伽_愛液3", "_IK_vagina", new Vector3(0.00f, 0.00f, 0.01f), new Vector3(0.00f, -180.00f, 90.00f));
                         //Core.CharacterHandling.PlayAnimation(maid, "OM_yorisoi_aibu_taiki_f.anm", "om_yorisoi_aibu_taiki_f.anm");
 
                     }
-                    if (i == 3)
-                    {
-                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り口元に手を当てる", maid.status.guid, "");
-                        //Core.CharacterHandling.PlayAnimation(maid, "harem_seijyouiC_3_f.anm", "harem_seijyouic_3_f.anm");
+                    //if (i == 3)
+                    //{
+                    //    Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り口元に手を当てる", maid.status.guid, "");
+                    //    //Core.CharacterHandling.PlayAnimation(maid, "harem_seijyouiC_3_f.anm", "harem_seijyouic_3_f.anm");
 
-                    }
-                    if (i == 4)
-                    {
-                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り腕を組む", maid.status.guid, "");
+                    //}
+                    //if (i == 4)
+                    //{
+                    //    Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り腕を組む", maid.status.guid, "");
 
-                    }
-                    if (i == 5)
-                    {
-                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り前傾", maid.status.guid, "");
-                        //Core.CharacterHandling.PlayAnimation(maid, "harem_seijyoui_3_f2.anm", "harem_seijyoui_3_f2.anm");
-                    }
-                    if (i == 6)
-                    {
-                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り喜ぶ", maid.status.guid, "");
-                    }
-                    if (i == 7)
-                    {
-                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り照れる", maid.status.guid, "");
-                        //Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
-                    }
-                    if (i == 8)
-                    {
-                        Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り照れる", maid.status.guid, "");
-                    }
-                    if (i == 9)
-                    {
-                        //Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
-                    }
+                    //}
+                    //if (i == 5)
+                    //{
+                    //    Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り前傾", maid.status.guid, "");
+                    //    //Core.CharacterHandling.PlayAnimation(maid, "harem_seijyoui_3_f2.anm", "harem_seijyoui_3_f2.anm");
+                    //}
+                    //if (i == 6)
+                    //{
+                    //    Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り喜ぶ", maid.status.guid, "");
+                    //}
+                    //if (i == 7)
+                    //{
+                    //    Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り照れる", maid.status.guid, "");
+                    //    //Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
+                    //}
+                    //if (i == 8)
+                    //{
+                    //    Core.CharacterHandling.LoadMotionScript(0, false, "h_kaiwaC_001.ks", "*会話座り照れる", maid.status.guid, "");
+                    //}
+                    //if (i == 9)
+                    //{
+                    //    //Core.CharacterHandling.PlayAnimation(maid, "pillow_talk_taiki_f.anm", "pillow_talk_taiki_f.anm");
+                    //}
                 }
                 for (int i = 0; i < GameMain.Instance.CharacterMgr.GetManCount(); i++)
                 {
@@ -249,13 +261,19 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
 
                     if (i == 0)
                     {
-                        Core.CharacterHandling.LoadMotionScript(0, false, "h_man_001.ks", "*男ソファーワイン待機L", "", maid.status.guid);
+                        Core.CharacterHandling.LoadMotionScript(0, false, "h_man_001.ks", "*男座り＿腕組", "", maid.status.guid);
                         //Core.CharacterHandling.PlayAnimation(maid, "OM_kyousitu_aibu_taiki_m.anm", "OM_kyousitu_aibu_taiki_m.anm");
                     }
-                    if (i >= 1)
+                    if (i == 1)
                     {
                         //Core.CharacterHandling.LoadMotionScript(0, false, "h_man_001.ks", "*男ソファーワイン待機", "", maid.status.guid);
-                        Core.CharacterHandling.PlayAnimation(maid, "harituke_sex_taiki_m.anm", "harituke_sex_taiki_m.anm");
+                        Core.CharacterHandling.PlayAnimation(maid, "turusi_sex_taiki_m.anm", "turusi_sex_taiki_m.anm");
+
+                    }
+                    if (i == 2)
+                    {
+                        //Core.CharacterHandling.LoadMotionScript(0, false, "h_man_001.ks", "*男ソファーワイン待機", "", maid.status.guid);
+                        Core.CharacterHandling.PlayAnimation(maid, "kousoku_irruma2_taiki_m.anm", "kousoku_irruma2_taiki_m.anm");
 
                     }
                 }

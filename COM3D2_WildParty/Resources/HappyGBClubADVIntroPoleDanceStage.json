@@ -2787,6 +2787,9 @@
         "MotionInfo": {
           "ScriptFile": "h_kaiwaC_002.ks",
           "ScriptLabel": "*âÔòbç¿ÇËÇ™Ç¡Ç©ÇË"
+        },
+        "Effect": {
+          "Add": [ "Breath" ]
         }
       }
     ]
@@ -3113,7 +3116,10 @@
         "ArrayPosition": 0,
         "Visible": true,
         "WaitLoad": true,
-        "ClothesSetID": "FullNude"
+        "ClothesSetID": "FullNude",
+        "Effect": {
+          "Remove": [ "Breath" ]
+        }
       }
     ]
   },
