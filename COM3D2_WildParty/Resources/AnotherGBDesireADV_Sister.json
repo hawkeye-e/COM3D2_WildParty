@@ -1,0 +1,231 @@
+{
+  "agbd_intro_0020_M_Sister": {
+    "ID": "agbd_intro_0020_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0020_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "疑問",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頬掻き"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0020_T_Sister": {
+    "ID": "agbd_intro_0020_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ……はぁ……見るだけ……なの……？",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_X1Kai_56416.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "agbd_intro_0030_M_Sister": {
+    "ID": "agbd_intro_0030_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0030_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0030_T_Sister": {
+    "ID": "agbd_intro_0030_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0031_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "う、うん……でも大丈夫だよ。きっと、それもすけべなお兄ちゃんが求めるものだもん……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_GP01ADD_60107.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "agbd_intro_0040_M_Sister": {
+    "ID": "agbd_intro_0040_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0040_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0040_T_Sister": {
+    "ID": "agbd_intro_0040_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えへへ、ちゃんと見ててね。",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_PMD_13297.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4
+        }
+      }
+    }
+  },
+
+
+
+  "agbd_postyotogi_0010_M_Sister": {
+    "ID": "agbd_postyotogi_0010_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0010_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "悲しみ２",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち口元に手を当てる"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0010_T_Sister": {
+    "ID": "agbd_postyotogi_0010_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えっ……もう帰っちゃうの？",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_X1P_55454.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "agbd_postyotogi_0020_M_Sister": {
+    "ID": "agbd_postyotogi_0020_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0020_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "引きつり笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち指を合わせる"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0020_T_Sister": {
+    "ID": "agbd_postyotogi_0020_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もっとするつもりだったけど……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_Y_12614.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.8
+        }
+      }
+    }
+  },
+
+
+  "agbd_postyotogi_0030_M_Sister": {
+    "ID": "agbd_postyotogi_0030_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0030_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0030_T_Sister": {
+    "ID": "agbd_postyotogi_0030_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うーん……わかった、じゃあ帰る準備をするね。",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_X1P_55455.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

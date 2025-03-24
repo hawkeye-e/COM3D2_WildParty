@@ -1,0 +1,230 @@
+{
+  "agbd_intro_0020_M_Missy": {
+    "ID": "agbd_intro_0020_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0020_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "疑問",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち腕を組む"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0020_T_Missy": {
+    "ID": "agbd_intro_0020_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ……はぁ……ご覧になるだけ……ですか……？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_X1Kai_55863.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "agbd_intro_0030_M_Missy": {
+    "ID": "agbd_intro_0030_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0030_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0030_T_Missy": {
+    "ID": "agbd_intro_0030_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0031_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そ、その、大丈夫ですわよ、きっとそれも変態なご主人様が求めるものなのですから……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_60559.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "agbd_intro_0040_M_Missy": {
+    "ID": "agbd_intro_0040_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0040_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0040_T_Missy": {
+    "ID": "agbd_intro_0040_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ、ちゃんと見ていてくださいね？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_64184.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4
+        }
+      }
+    }
+  },
+
+
+
+  "agbd_postyotogi_0010_M_Missy": {
+    "ID": "agbd_postyotogi_0010_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0010_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "悲しみ２",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち口元に手を当てる"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0010_T_Missy": {
+    "ID": "agbd_postyotogi_0010_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えっ……もう帰るのですか？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_X1P_54441.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "agbd_postyotogi_0020_M_Missy": {
+    "ID": "agbd_postyotogi_0020_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0020_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "疑問",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち考える"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0020_T_Missy": {
+    "ID": "agbd_postyotogi_0020_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ええ、わたくしはそのつもりだったのですけど……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63545.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "agbd_postyotogi_0030_M_Missy": {
+    "ID": "agbd_postyotogi_0030_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0030_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0030_T_Missy": {
+    "ID": "agbd_postyotogi_0030_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うーん……わかりましたわ、では帰る準備をしますわね。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_X1P_54442.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "agbd_intro_0020_M_Curtness": {
+    "ID": "agbd_intro_0020_M_Curtness",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0020_T_Curtness",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "疑問",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち腕を組む"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0020_T_Curtness": {
+    "ID": "agbd_intro_0020_T_Curtness",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ……はぁ……見ているだけ……ですか……？",
+      "VoiceData": {
+        "Curtness": {
+          "VoiceFile": "H8_X1Kai_56660.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "agbd_intro_0030_M_Curtness": {
+    "ID": "agbd_intro_0030_M_Curtness",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0030_T_Curtness",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0030_T_Curtness": {
+    "ID": "agbd_intro_0030_T_Curtness",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0031_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "だ、大丈夫です。それだって変態なご主人様が求めるものなんですから……",
+      "VoiceData": {
+        "Curtness": {
+          "VoiceFile": "H8_GP01ADD_60460.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "agbd_intro_0040_M_Curtness": {
+    "ID": "agbd_intro_0040_M_Curtness",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0040_T_Curtness",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0040_T_Curtness": {
+    "ID": "agbd_intro_0040_T_Curtness",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "本当にしっかり見ていてくださいよ？",
+      "VoiceData": {
+        "Curtness": {
+          "VoiceFile": "H8_X01_55152.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5,
+          "EndTime": 7.5
+        }
+      }
+    }
+  },
+
+
+
+  "agbd_postyotogi_0010_M_Curtness": {
+    "ID": "agbd_postyotogi_0010_M_Curtness",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0010_T_Curtness",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "悲しみ２",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち口元に手を当てる"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0010_T_Curtness": {
+    "ID": "agbd_postyotogi_0010_T_Curtness",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えっ……もう帰るんですか？",
+      "VoiceData": {
+        "Curtness": {
+          "VoiceFile": "H8_X01_54682.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "agbd_postyotogi_0020_M_Curtness": {
+    "ID": "agbd_postyotogi_0020_M_Curtness",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0020_T_Curtness",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "目口閉じ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち考える"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0020_T_Curtness": {
+    "ID": "agbd_postyotogi_0020_T_Curtness",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "まぁ、その……私はそのつもりでしたが……",
+      "VoiceData": {
+        "Curtness": {
+          "VoiceFile": "H8_Y_10894.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.5
+        }
+      }
+    }
+  },
+
+
+  "agbd_postyotogi_0030_M_Curtness": {
+    "ID": "agbd_postyotogi_0030_M_Curtness",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0030_T_Curtness",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0030_T_Curtness": {
+    "ID": "agbd_postyotogi_0030_T_Curtness",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うーん……わかりました、では帰る準備をしますね。",
+      "VoiceData": {
+        "Curtness": {
+          "VoiceFile": "H8_X01_54683.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

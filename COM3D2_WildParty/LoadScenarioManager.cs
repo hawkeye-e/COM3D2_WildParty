@@ -109,6 +109,25 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADVPostYotogi,
 
             ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Muku,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Majime,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Rindere,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Pure,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Cool,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Pride,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Yandere,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Anesan,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Genki,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Sadist,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Silent,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Devilish,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Ladylike,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Secretary,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Sister,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Curtness,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Missy,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Childhood,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Friendly,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Dame,
         };
 
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)

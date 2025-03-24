@@ -1,0 +1,231 @@
+{
+  "agbd_intro_0020_M_Devilish": {
+    "ID": "agbd_intro_0020_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0020_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "疑問",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頬掻き"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0020_T_Devilish": {
+    "ID": "agbd_intro_0020_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ……はぁ……見るだけ……ですかぁ……？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57813.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "agbd_intro_0030_M_Devilish": {
+    "ID": "agbd_intro_0030_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0030_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "目口閉じ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち考える"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0030_T_Devilish": {
+    "ID": "agbd_intro_0030_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0031_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "でも、ご主人様はこれで喜んでくれて……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_tsou_61040.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "agbd_intro_0040_M_Devilish": {
+    "ID": "agbd_intro_0040_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0040_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0040_T_Devilish": {
+    "ID": "agbd_intro_0040_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "見ててくださいね……♪",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09378.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.8
+        }
+      }
+    }
+  },
+
+
+
+  "agbd_postyotogi_0010_M_Devilish": {
+    "ID": "agbd_postyotogi_0010_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0010_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "悲しみ２",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち口元に手を当てる"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0010_T_Devilish": {
+    "ID": "agbd_postyotogi_0010_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "え～っ……もう帰るんですか？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X01_54769.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "agbd_postyotogi_0020_M_Devilish": {
+    "ID": "agbd_postyotogi_0020_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0020_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "引きつり笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち指を合わせる"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0020_T_Devilish": {
+    "ID": "agbd_postyotogi_0020_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そうする……つもりだったんですけど……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_Y_13170.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4
+        }
+      }
+    }
+  },
+
+
+  "agbd_postyotogi_0030_M_Devilish": {
+    "ID": "agbd_postyotogi_0030_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0030_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0030_T_Devilish": {
+    "ID": "agbd_postyotogi_0030_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "う～ん……わかりました、じゃあ帰る準備をしますね。",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X01_54770.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}
