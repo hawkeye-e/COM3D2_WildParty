@@ -81,6 +81,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 foreach (PartyGroup group in StateManager.Instance.PartyGroupList)
                     Core.YotogiHandling.ResetYotogiMiscSetup(group);
 
+                //Stop all triggers
+                StopAllTriggers();
+
                 if (StateManager.Instance.IsFinalYotogi)
                 {
                     StateManager.Instance.ModEventProgress = Constant.EventProgress.YotogiEnd;
@@ -1110,6 +1113,17 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                     }
                 }
             }
+        }
+
+        internal static void StopAllTriggers()
+        {
+            StateManager.Instance.WaitingAnimationTrigger = null;
+            StateManager.Instance.AnimationChangeTrigger = null;
+            StateManager.Instance.VoiceLoopTrigger = null;
+            StateManager.Instance.TimeEndTriggerList.Clear();
+
+            foreach (PartyGroup group in StateManager.Instance.PartyGroupList)
+                group.BlockMotionScriptChange = false;
         }
     }
 }

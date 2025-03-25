@@ -22,7 +22,12 @@ namespace COM3D2.WildParty.Plugin.Core
             UnloadCharacters(StateManager.Instance.MenList, Constant.CharacterType.Man);
             UnloadNPC(StateManager.Instance.NPCList);
             UnloadCharacters(StateManager.Instance.NPCManList, Constant.CharacterType.Man);
-            
+
+            //Just want to destory the the following object so doesnt matter if it is calling BanishmentMaid
+            StateManager.Instance.MenList.Remove(StateManager.Instance.ClubOwner);
+            UnloadNPC(StateManager.Instance.MenList);
+            UnloadNPC(StateManager.Instance.NPCManList);
+
             RemoveAddedObjects();
 
             RestoreBackupData();

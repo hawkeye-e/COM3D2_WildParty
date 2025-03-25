@@ -57,7 +57,7 @@
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "agbd_postyotogi_0001",
+    "NextStepID": "agbd_postyotogi_init_f",
     "CharaData": [
       {
         "Type": "F",
@@ -126,6 +126,19 @@
             "MoveType": "LookAt"
           }
         }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_init_f": {
+    "ID": "agbd_postyotogi_init_f",
+    "Type": "RemoveTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0001",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F_ALL"
       }
     ]
   },
