@@ -12,6 +12,7 @@ namespace COM3D2.WildParty.Plugin
         internal const int SensualRateMaxCap = 300;
         internal const int YotogiExcitementLevelStep = 100;
         internal const string ClothesSetResetCode = "RESET";
+        internal const string ClothesSetStrapOnDildo = "StrapOnDildo";
 
         internal static readonly string[] FellatioLabel = { "Fellatio", "DeepThroat", "PainFellatio", "FellatioExcite", "FellatioDrunk", "FellatioBitch" };
 

@@ -57,6 +57,8 @@ namespace COM3D2.WildParty.Plugin
         //Key: EffectID
         public static Dictionary<string, CharacterEffect> CharacterEffectList;
 
+        public static List<IKRectify> IKRectifyList;
+
         public ModUseData()
         {
         }
@@ -94,6 +96,8 @@ namespace COM3D2.WildParty.Plugin
             ClothesSetList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ClothesSet>>(ModResources.TextResource.ClothesSet);
 
             CharacterEffectList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, CharacterEffect>>(ModResources.TextResource.CharacterEffect);
+
+            IKRectifyList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<IKRectify>>(ModResources.TextResource.IKRectify);
         }
 
         public static void InitDataForScenario(int scenarioID)

@@ -85,10 +85,14 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
         //Since 3.0 body is not supported, force it to stop this process if the game is running a mod event.
         [HarmonyPrefix]
         [HarmonyPatch(typeof(CharacterMgr), nameof(CharacterMgr.SwapNewManBody))]
-        private static void SwapNewManBody(int activeSlot, ref bool toNewBody)
+        private static bool SwapNewManBody(int activeSlot, ref bool toNewBody)
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
                 toNewBody = false;
+
+            if (StateManager.Instance.IsMaidConvertToManScriptMotion)
+                return false;
+            return true;
         }
 #endif
 #endif

@@ -225,6 +225,29 @@ namespace ModResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  {
+        ///    &quot;ScenarioID&quot;: 9901002,
+        ///    &quot;ScriptName&quot;: &quot;&quot;,
+        ///    &quot;LabelName&quot;: &quot;&quot;,
+        ///    &quot;PresetFile&quot;: {
+        ///      &quot;V2_5&quot;: &quot;Kamigawara_Reika&quot;,
+        ///      &quot;V2&quot;: &quot;Kamigawara_Reika_v2&quot;
+        ///    },
+        ///    &quot;Personality&quot;: 100,
+        ///    &quot;VoicePitch&quot;: 25
+        ///  },
+        ///
+        ///}
+        ///.
+        /// </summary>
+        internal static string IKRectify {
+            get {
+                return ResourceManager.GetString("IKRectify", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to イベント「[=EventName]」には最低[=Min]名、最大[=Max]名が必要です。.
         /// </summary>
         internal static string MaidCountRequirementWarning {

@@ -1180,6 +1180,14 @@ namespace COM3D2.WildParty.Plugin.Core
                     maid.SetProp(slotName, fileName, 0, false);
                     maid.AllProcProp();
                 }
+
+                if (targetSet.NonClothesSlots != null)
+                {
+                    foreach(var item in targetSet.NonClothesSlots)
+                        maid.SetProp(item.Key, item.Value, 0, true);
+                    
+                    maid.AllProcProp();
+                }
             }
         }
 
@@ -1244,6 +1252,33 @@ namespace COM3D2.WildParty.Plugin.Core
                 CharacterEffect effect = ModUseData.CharacterEffectList[effectID];
                 maid.DelPrefab(effect.Name);
             }
+        }
+
+        internal static void ConvertMaidToManStructure(Maid maid, Maid dummyMan)
+        {
+            SetFemaleClothing(maid, Constant.ClothesSetStrapOnDildo);
+
+            Helper.BoneNameConverter.ConvertFemaleStructureToMale(maid, dummyMan);
+            maid.boMAN = true;
+
+            maid.SetProp(MPN.DouPer, 50, true);     //leg length
+            maid.SetProp(MPN.sintyou, 50, true);    //height
+            maid.SetProp(MPN.UdeScl, 50, true);     //arm length
+            maid.SetProp(MPN.kata, 50, true);       //shoulder
+
+            maid.AllProcProp();
+        }
+
+        internal static void RecoverMaidFromManStructure(Maid maid)
+        {
+            Helper.BoneNameConverter.RecoverConvertedMaidStructure(maid);
+            maid.boMAN = false;
+            maid.ResetProp(MPN.DouPer);
+            maid.ResetProp(MPN.sintyou);
+            maid.ResetProp(MPN.UdeScl);
+            maid.ResetProp(MPN.kata);
+            maid.ResetProp(MPN.kousoku_lower);
+            maid.AllProcProp();
         }
     }
 }

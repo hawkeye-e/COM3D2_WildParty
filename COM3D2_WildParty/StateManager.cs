@@ -107,5 +107,6 @@ namespace COM3D2.WildParty.Plugin
         internal PartyGroup CurrentMotionKagHandlingGroup = null;
         internal bool IsMotionKagSetPosition = false;
         internal bool IsMainGroupMotionScriptFlag = false;
+        internal bool IsMaidConvertToManScriptMotion = false;
     }
 }

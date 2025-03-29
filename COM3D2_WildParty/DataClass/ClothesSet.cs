@@ -11,6 +11,6 @@ namespace COM3D2.WildParty.Plugin
         public bool RequireNude = false;        //True: Apply FullNude first before applying this clothes set; False: just apply the parts mentioned
 
         public Dictionary<string, string> Slots;
-        
+        public Dictionary<string, string> NonClothesSlots;  //If some of the parts need to apply on the slots that are not used in normal character customization, use this variable instead.
     }
 }

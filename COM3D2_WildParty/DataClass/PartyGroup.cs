@@ -27,6 +27,7 @@ namespace COM3D2.WildParty.Plugin
         public bool IsVoicelessGroup = false;
         public DateTime NextActionReviewTime = DateTime.MaxValue;   //For simulating the scene of the background group. If the current time pass this value, excitement rate will increase, etc...
         public int CurrentLabelGroupID = -1;
+        public string CurrentScriptFileName;    //will be updated whenever loadmotionscript called
         public string CurrentLabelName;         //For group 0 used since setting the label is not in our control so we cant set the label group id defined by the mod directly
         public string CurrentSexState;          //Referencing the SexState class. Doesnt matter for group 0
         public MotionSpecialLabel CurrentOrgasmLabelRecord = null;

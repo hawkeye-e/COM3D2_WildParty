@@ -10,6 +10,20 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
         private static ManualLogSource Log = WildParty.Log;
 
 
+        //Function for finding out the skill id we want for each personality (Assumption: the name displayed is unique)
+        public static void PrintAvailableSkillForMaid(Maid maid)
+        {
+            foreach (var list in Yotogis.Skill.skill_data_list)
+            {
+                foreach (var kvp in list)
+                {
+                    if (kvp.Value.IsExecMaid(maid.status) && kvp.Value.IsExecPersonal(maid.status.personal))
+                    {
+                        Log.LogInfo("id: " + kvp.Value.id + ", name: " + kvp.Value.name);
+                    }
+                }
+            }
+        }
 
         //Function for finding out the skill id we want for each personality (Assumption: the name displayed is unique)
         public static void MapAvailableSkillForMaid(Maid maid)
@@ -199,55 +213,12 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
 
         private static void GetComponentTypes(Transform t)
         {
-            var c1 = t.GetComponent<Renderer>(); if (c1 != null) Log.LogInfo("has Renderer");
-            var c2 = t.GetComponent<MeshFilter>(); if (c2 != null) Log.LogInfo("has MeshFilter");
-            var c3 = t.GetComponent<LODGroup>(); if (c3 != null) Log.LogInfo("has LODGroup");
-            var c4 = t.GetComponent<Behaviour>(); if (c4 != null) Log.LogInfo("has Behaviour");
+            Component[] components = t.gameObject.GetComponents(typeof(Component));
+            foreach (Component component in components)
+            {
+                Log.LogInfo(component.ToString());
+            }
 
-            var c5 = t.GetComponent<Transform>(); if (c5 != null) Log.LogInfo("has Transform");
-            var c28 = t.GetComponent<RectTransform>(); if (c28 != null) Log.LogInfo("has RectTransform");
-            //var c6 = t.GetComponent<CanvasRenderer>(); if (c6 != null) Log.LogInfo("has CanvasRenderer");
-            var c7 = t.GetComponent<Component>(); if (c7 != null) Log.LogInfo("has Component");
-            var c8 = t.GetComponent<RectTransform>(); if (c8 != null) Log.LogInfo("has RectTransform");
-
-            var c9 = t.GetComponent<BillboardRenderer>(); if (c9 != null) Log.LogInfo("has BillboardRenderer");
-            var c10 = t.GetComponent<LineRenderer>(); if (c10 != null) Log.LogInfo("has LineRenderer");
-            var c11 = t.GetComponent<SkinnedMeshRenderer>(); if (c11 != null) Log.LogInfo("has SkinnedMeshRenderer");
-            var c12 = t.GetComponent<MeshRenderer>(); if (c12 != null) Log.LogInfo("has MeshRenderer");
-            var c13 = t.GetComponent<SpriteRenderer>(); if (c13 != null) Log.LogInfo("has SpriteRenderer");
-            var c14 = t.GetComponent<Animator>(); if (c14 != null) Log.LogInfo("has Animator");
-            var c15 = t.GetComponent<MonoBehaviour>(); if (c15 != null) Log.LogInfo("has MonoBehaviour");
-
-            var c17 = t.GetComponent<VerticalLayoutGroup>(); if (c17 != null) Log.LogInfo("has VerticalLayoutGroup");
-            var c18 = t.GetComponent<HorizontalLayoutGroup>(); if (c18 != null) Log.LogInfo("has HorizontalLayoutGroup");
-            var c19 = t.GetComponent<LayoutGroup>(); if (c19 != null) Log.LogInfo("has LayoutGroup");
-            var c20 = t.GetComponent<GridLayoutGroup>(); if (c20 != null) Log.LogInfo("has GridLayoutGroup");
-            var c21 = t.GetComponent<ContentSizeFitter>(); if (c21 != null) Log.LogInfo("has ContentSizeFitter");
-            //var c22 = t.GetComponent<Canvas>(); if (c22 != null) Log.LogInfo("has Canvas");
-            var c23 = t.GetComponent<ContentSizeFitter>(); if (c23 != null) Log.LogInfo("has ContentSizeFitter");
-            
-            var c24 = t.GetComponent<Toggle>(); if (c24 != null) Log.LogInfo("has Toggle");
-            //var c25 = t.GetComponent<UI_ToggleEx>(); if (c25 != null) Log.LogInfo("has UI_ToggleEx");
-            //var c26 = t.GetComponent<UI_ToggleOnOffEx>(); if (c26 != null) Log.LogInfo("has UI_ToggleOnOffEx");
-            var c27 = t.GetComponent<Selectable>(); if (c27 != null) Log.LogInfo("has Selectable");
-            var c29 = t.GetComponent<Button>(); if (c29 != null) Log.LogInfo("has Button");
-            var c30 = t.GetComponent<UnityEngine.EventSystems.EventTrigger>(); if (c30 != null) Log.LogInfo("has EventTrigger");
-            var c31 = t.GetComponent<Image>(); if (c31 != null) Log.LogInfo("has Image");
-            var c32 = t.GetComponent<Text>(); if (c32 != null) Log.LogInfo("has Text");
-
-            var c33 = t.GetComponent<UIButton>(); if (c33 != null) Log.LogInfo("has UIButton");
-            var c34 = t.GetComponent<UILabel>(); if (c34 != null) Log.LogInfo("has UILabel");
-            //var c35 = t.GetComponent<BoxCollider>(); if (c35 != null) Log.LogInfo("has BoxCollider");
-            var c36 = t.GetComponent<UIPanel>(); if (c36 != null) Log.LogInfo("has UIPanel");
-            var c37 = t.GetComponent<UIScrollView>(); if (c37 != null) Log.LogInfo("has UIScrollView");
-            var c38 = t.GetComponent<UIScrollBar>(); if (c38 != null) Log.LogInfo("has UIScrollBar");
-            var c39 = t.GetComponent<UIRect>(); if (c39 != null) Log.LogInfo("has UIRect");
-            var c40 = t.GetComponent<UIWidget>(); if (c40 != null) Log.LogInfo("has UIWidget");
-            var c41 = t.GetComponent<UISprite>(); if (c41 != null) Log.LogInfo("has UISprite");
-            var c42 = t.GetComponent<UITexture>(); if (c42 != null) Log.LogInfo("has UITexture");
-            var c43 = t.GetComponent<UIDrawCall>(); if (c43 != null) Log.LogInfo("has UIDrawCall");
-            var c44 = t.GetComponent<UIEventTrigger>(); if (c44 != null) Log.LogInfo("has UIEventTrigger");
-            var c45 = t.GetComponent<UIEventListener>(); if (c45 != null) Log.LogInfo("has UIEventListener");
         }
 
         internal static void PrintTransformTreeUpward(Transform t, string currentPath = "", string stopAt = null)

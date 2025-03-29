@@ -177,6 +177,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         [HarmonyPatch(typeof(ScriptManager), nameof(ScriptManager.LoadMotionScript))]
         private static bool LoadMotionScriptPre(int sloat, bool is_next, string file_name, string label_name, string maid_guid, string man_guid, bool face_fix, bool valid_pos, bool disable_diff_pos)
         {
+            Patches.UpdateMotionScriptDataForGroup(maid_guid, file_name, label_name);
             if (Patches.CheckBlockLoadMotionScript(maid_guid))
                 return false;
             Patches.StartSpoofingLoadMotionScript(label_name, maid_guid, man_guid);
@@ -410,5 +411,47 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             Patches.SetMainGroupMaidAndManInfoInMotionKagManager(__instance);
         }
 #endif
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachBone))]
+        private static void TagIKAttachBone(BaseKagManager __instance, ref KagTagSupport tag_data)
+        {
+            tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
+        }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachBoneNext))]
+        private static void TagIKAttachBoneNext(BaseKagManager __instance, ref KagTagSupport tag_data)
+        {
+            tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
+        }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachIKBone))]
+        private static void TagIKAttachIKBone(BaseKagManager __instance, ref KagTagSupport tag_data)
+        {
+            tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
+        }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachIKBoneNext))]
+        private static void TagIKAttachIKBoneNext(BaseKagManager __instance, ref KagTagSupport tag_data)
+        {
+            tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
+        }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachPoint))]
+        private static void TagIKAttachPoint(BaseKagManager __instance, ref KagTagSupport tag_data)
+        {
+            tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
+        }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachPointNext))]
+        private static void TagIKAttachPointNext(BaseKagManager __instance, ref KagTagSupport tag_data)
+        {
+            tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
+        }
     }
 }

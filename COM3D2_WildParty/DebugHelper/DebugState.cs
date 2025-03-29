@@ -15,6 +15,7 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
         internal int DebugUseVoiceFileArrayIndex = 0;
         internal int DebugUseCurrentGroupIndex = 0;
         internal bool DebugOneOffResetMarriageFlag = true;
+        internal List<UnityEngine.Transform> transformInQuestion = new List<UnityEngine.Transform>();
 
         internal List<Maid> DebugMaidList = new List<Maid>();
         internal List<Maid> DebugManList = new List<Maid>();

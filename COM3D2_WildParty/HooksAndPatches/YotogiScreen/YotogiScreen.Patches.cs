@@ -94,7 +94,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                     StateManager.Instance.ModEventProgress = Constant.EventProgress.ADV;
                     StateManager.Instance.YotogiManager.null_mgr.SetNextLabel(Constant.NextButtonLabel.YotogiPlayEnd);
                 }
-                
+
                 //To make the result window display the proper fetish added message
                 foreach (int fetish in StateManager.Instance.YotogiProgressInfoList[StateManager.Instance.YotogiManager.maid.status.guid].CustomFetishEarned)
                     StateManager.Instance.YotogiManager.acquired_propensityid_list.Add(fetish);
@@ -106,7 +106,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                if(StateManager.Instance.ExtraCommandWindow != null)
+                if (StateManager.Instance.ExtraCommandWindow != null)
                     StateManager.Instance.ExtraCommandWindow.Destroy();
             }
         }
@@ -179,16 +179,16 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                     foreach (var commandType in Util.GetUndergoingScenario().YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First().ExtraYotogiCommands)
                     {
                         ExtraYotogiCommandData commandInfo = ModUseData.ExtraYotogiCommandDataList[commandType];
-                        
+
                         if (commandInfo.Constraint != null && commandInfo.Constraint.Count > 0)
                         {
                             var constraintInfo = commandInfo.Constraint.Where(x => x.EventID == StateManager.Instance.UndergoingModEventID).FirstOrDefault();
-                            if(constraintInfo != null)
+                            if (constraintInfo != null)
                             {
                                 if (!constraintInfo.SexPosIDs.Contains(StateManager.Instance.PartyGroupList[0].SexPosID))
                                     continue;
                             }
-    
+
                         }
 
                         btn = Core.YotogiExtraCommandHandling.InjectCommandButton(commandInfo.Name, Core.YotogiExtraCommandHandling.GetButtonCallbackFromString(commandType), StateManager.Instance.YotogiCommandFactory.transform);
@@ -208,7 +208,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                
+
                 if (StateManager.Instance.YotogiCommandFactory != null && StateManager.Instance.ExtraCommandWindow.IsRequireInit())
                 {
                     //locate the transform of the Skill Viewer panel, we will attach the extra command window there
@@ -246,12 +246,12 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                     Scenario.YotogiSetupInfo yotogiSetup = scenario.YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First();
 
                     Core.YotogiHandling.YotogiSkillCall(instance, Util.GetCurrentDefaultSexPosID());
-                    
+
                     if (yotogiSetup.AllowMap != null)
                     {
                         Core.YotogiHandling.PlayRoomBGM(instance);
                     }
-                    else if(yotogiSetup.DefaultMap != null)
+                    else if (yotogiSetup.DefaultMap != null)
                     {
                         //Set the dummy stage to prevent crash and also spoof flag to avoid changing bg
                         StateManager.Instance.SpoofChangeBackgroundFlag = true;
@@ -304,7 +304,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         //Process when the player clicks Next button in the yotogi play scene
         internal static void ProcessYotogiPlayEnd(WfScreenChildren instance)
         {
-            if (instance.GetType() == typeof(YotogiPlayManager) && 
+            if (instance.GetType() == typeof(YotogiPlayManager) &&
                 (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiEnd || StateManager.Instance.ModEventProgress == Constant.EventProgress.ADV))
             {
                 //terminate all the automated process of background groups
@@ -431,20 +431,6 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                if (!string.IsNullOrEmpty(man_guid))
-                {
-                    string name = "";
-                    foreach (var man in StateManager.Instance.MenList)
-                        if (man.status.guid == man_guid)
-                            name = man.status.fullNameJpStyle;
-                    foreach (var man in StateManager.Instance.NPCManList)
-                        if (man.status.guid == man_guid)
-                            name = man.status.fullNameJpStyle;
-                    if (StateManager.Instance.ClubOwner != null)
-                        if (StateManager.Instance.ClubOwner.status.guid == man_guid)
-                            name = StateManager.Instance.ClubOwner.status.fullNameJpStyle;
-                    
-                }
 
                 StateManager.Instance.processingMaidGUID = maid_guid;
                 StateManager.Instance.processingManGUID = man_guid;
@@ -452,14 +438,6 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 if (maid_guid == "" && man_guid == "")
                     StateManager.Instance.IsMainGroupMotionScriptFlag = true;
 
-                if (maid_guid == "")
-                {                    
-                    //this is group zero. we try mark down the label name here
-                    if (StateManager.Instance.PartyGroupList != null)
-                        if (StateManager.Instance.PartyGroupList.Count > 0)
-                            StateManager.Instance.PartyGroupList[0].CurrentLabelName = label_name;
-
-                }
             }
         }
 
@@ -553,7 +531,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
                             if (!currentSkill.IsDialogueAllowed)
                             {
-                                
+
                                 //Replace the dialogue that doesnt fit the sitation with moaning (eg For FFM harem, the dialogue is always mentioning the master which doesnt fit for the orgy party)
 
                                 var group0 = StateManager.Instance.PartyGroupList[0];
@@ -579,7 +557,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                                 MotionSpecialLabel spLabel = Util.GetCurrentMotionSpecialLabel(group0, group0.CurrentLabelName);
 
                                 bool isEstrus = Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerEstrusMode).GetValue<bool>();
-                                
+
                                 if (spLabel != null)
                                 {
                                     if (spLabel.Type == MotionSpecialLabel.LabelType.Orgasm)
@@ -588,7 +566,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                                         string voiceType = isMaid1 ? spLabel.VoiceType1 : spLabel.VoiceType2;
 
                                         var voiceList = ModUseData.PersonalityVoiceList[targetMaid.status.personal.id].OrgasmScream.Where(x => x.Type == voiceType && x.Personality == Util.GetPersonalityNameByValue(targetMaid.status.personal.id)).ToList();
-                                        
+
                                         if (voiceList != null && voiceList.Count > 0)
                                         {
                                             //we want to replace it with a chopped audio clip, do not let the system to continue processing in the original way
@@ -856,7 +834,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                         Core.YotogiHandling.BlockAllYotogiCommands();
 
                         EventDelegate toBeExec;
-                        if(StateManager.Instance.PartyGroupList[0].ExtraManList.Count > 0)
+                        if (StateManager.Instance.PartyGroupList[0].ExtraManList.Count > 0)
                             toBeExec = new EventDelegate(() => ForceChangeManQueueTypeTriggerExecution());
                         else
                             toBeExec = new EventDelegate(() => ForceChangeManShareListTypeTriggerExecution(yotogiSetup.IsMainManOwner));
@@ -883,9 +861,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
         internal static void CheckVoiceloopTrigger(AudioSourceMgr audioMgr, bool isLoop)
         {
-            if(StateManager.Instance.UndergoingModEventID > 0)
+            if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                if(StateManager.Instance.VoiceLoopTrigger != null)
+                if (StateManager.Instance.VoiceLoopTrigger != null)
                 {
                     if (isLoop && StateManager.Instance.VoiceLoopTrigger.TargetMaid.AudioMan.GetInstanceID() == audioMgr.GetInstanceID())
                     {
@@ -894,7 +872,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                         dg.Execute();
                     }
                 }
-                
+
             }
         }
 
@@ -905,7 +883,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 bool isExecuted = StateManager.Instance.WaitingAnimationTrigger.CheckTrigger(maid);
                 if (isExecuted)
                     StateManager.Instance.WaitingAnimationTrigger = null;
-               
+
             }
         }
 
@@ -947,8 +925,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 StateManager.Instance.ExtraCommandWindow = new CustomGameObject.YotogiExtraCommandWindow(StateManager.Instance.ExtraCommandWindowMasterCopy.transform.gameObject);
 
                 Core.CustomADVProcessManager.ADVSceneProceedToNextStep();
-                
-                
+
+
                 GameMain.Instance.LoadScene(Constant.SceneType.ADV);
             }
         }
@@ -1035,6 +1013,34 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             }
         }
 
+        internal static void UpdateMotionScriptDataForGroup(string maid_guid, string scriptFileName, string labelName)
+        {
+            //TODO: uncomment the mod event checking
+            //if (StateManager.Instance.UndergoingModEventID > 0)
+            //{
+            if (maid_guid == "")
+            {
+                //this is group zero.
+                if (StateManager.Instance.PartyGroupList != null)
+                    if (StateManager.Instance.PartyGroupList.Count > 0)
+                    {
+                        StateManager.Instance.PartyGroupList[0].CurrentLabelName = labelName;
+                        StateManager.Instance.PartyGroupList[0].CurrentScriptFileName = scriptFileName;
+                    }
+            }
+            else
+            {
+                PartyGroup group = Util.GetPartyGroupByGUID(maid_guid);
+                if (group != null)
+                {
+                    group.CurrentLabelName = labelName;
+                    group.CurrentScriptFileName = scriptFileName;
+                }
+
+            }
+            //}
+        }
+
         //Return true if need to block loading motion script
         internal static bool CheckBlockLoadMotionScript(string maid_guid)
         {
@@ -1042,7 +1048,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             {
                 if (maid_guid == "")
                 {
-                    //this is group zero. we try mark down the label name here
+                    //this is group zero.
                     if (StateManager.Instance.PartyGroupList != null)
                         if (StateManager.Instance.PartyGroupList.Count > 0)
                             return StateManager.Instance.PartyGroupList[0].BlockMotionScriptChange;
@@ -1050,7 +1056,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 else
                 {
                     PartyGroup group = Util.GetPartyGroupByGUID(maid_guid);
-                    if(group != null)
+                    if (group != null)
                         return group.BlockMotionScriptChange;
                 }
             }
@@ -1124,6 +1130,49 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
             foreach (PartyGroup group in StateManager.Instance.PartyGroupList)
                 group.BlockMotionScriptChange = false;
+        }
+
+        internal static KagTagSupport GetRectifiedTagDataForIK(BaseKagManager baseKagManager, KagTagSupport tag_data)
+        {
+            if (baseKagManager is MotionKagManager)
+            {
+                MotionKagManager motionKagManager = baseKagManager as MotionKagManager;
+
+                Maid man = motionKagManager.main_man;
+                Maid maid = motionKagManager.main_maid;
+
+                if (maid == null || man == null)
+                    return tag_data;
+
+                PartyGroup group = Util.GetPartyGroupByCharacter(maid);
+                if (group == null)
+                    return tag_data;
+
+                //try to match the IKRectify List
+                //TODO: include scenario ID checking
+                List<IKRectify> scriptMatches = ModUseData.IKRectifyList.Where(x => x.ScriptName == group.CurrentScriptFileName && x.LabelName == group.CurrentLabelName).ToList();
+                foreach (IKRectify rectifyData in scriptMatches)
+                {
+                    bool isAllMatch = true;
+                    foreach (var condition in rectifyData.MatchingCondition)
+                    {
+                        if (tag_data.GetTagProperty(condition[0]).AsString() != condition[1])
+                        {
+                            isAllMatch = false;
+                            break;
+                        }
+                    }
+
+                    if (isAllMatch)
+                    {
+                        var tag = rectifyData.GetTagDataInKagTagSupportFormat();
+                        return tag;
+                    }
+
+                }
+            }
+
+            return tag_data;
         }
     }
 }
