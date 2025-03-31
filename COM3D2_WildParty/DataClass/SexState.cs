@@ -24,6 +24,7 @@ namespace COM3D2.WildParty.Plugin
 
             internal const string ChangeMan = "ChangeMan";
             internal const string ChangeManFromQueue = "ChangeManFromQueue";
+            internal const string SwapMaids = "SwapMaids";
         }
     }
 }

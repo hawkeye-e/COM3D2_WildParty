@@ -209,5 +209,26 @@
   "ChangeMaidAnotherGBDesire": {
     "Name": "メイド変更",
     "Type": "Common"
+  },
+
+  "FetishLesbianPlay": {
+    "Name": "性癖「レズプレイ大好き」",
+    "Type": "Fetish",
+    "FetishID": 99003,
+    "ConditionCheckTexts": [
+      {
+        "Field": "PositionOrgasmCount",
+        "DisplayText": "[=PositionOrgasmCount]種類以上の体位で絶頂する（[=CurrentPositionOrgasmCount]／[=PositionOrgasmCount]）"
+      },
+      {
+        "Field": "MaidOrgasmCount",
+        "DisplayText": "[=MaidOrgasmCount]回以上で絶頂する（[=CurrentMaidOrgasmCount]／[=MaidOrgasmCount]）"
+      }
+    ]
+  },
+
+  "SwapMaidWithinGroup": {
+    "Name": "交代",
+    "Type": "Common"
   }
 }

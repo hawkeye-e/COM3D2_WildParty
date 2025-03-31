@@ -15,7 +15,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
             {
                 foreach (var group in StateManager.Instance.PartyGroupList)
                 {
-                    if (group.Man1.status.guid == StateManager.Instance.processingManGUID)
+                    if (group.Man1?.status.guid == StateManager.Instance.processingManGUID)
                     {
                         if (group.SexPosID >= 0)
                         {

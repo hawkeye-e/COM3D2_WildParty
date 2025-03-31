@@ -33,6 +33,8 @@ namespace COM3D2.WildParty.Plugin.Core
                     if (StateManager.Instance.PartyGroupList[i].GroupType == groupZero.GroupType)
                     {
                         YotogiHandling.ChangeBackgroundGroupSexPosition(StateManager.Instance.PartyGroupList[i], skillItem.SexPosID, true);
+
+                        YotogiHandling.CheckYotogiMiscSetup(StateManager.Instance.PartyGroupList[i]);
                     }
                 }
                 YotogiHandling.ChangeMainGroupSkill(skillID);
@@ -64,13 +66,24 @@ namespace COM3D2.WildParty.Plugin.Core
                 //Change the maid for maid[0], keep man[0] and shuffle all the remaining
                 Maid selectedMaid = StateManager.Instance.SelectedMaidsList.Where(x => x.status.guid == maid_guid).First();
                 StateManager.Instance.SpoofActivateMaidObjectFlag = true;
-                GameMain.Instance.CharacterMgr.SetActiveMaid(selectedMaid, 0);
+                
+                //For the lesbian case, maid[1] is changed
+                if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].IsLesbianSetup)
+                    GameMain.Instance.CharacterMgr.SetActiveMaid(selectedMaid, 1);
+                else
+                    GameMain.Instance.CharacterMgr.SetActiveMaid(selectedMaid, 0);
+
                 StateManager.Instance.SpoofActivateMaidObjectFlag = false;
                 
                 CharacterHandling.StopCurrentAnimation();
                 
-                if(string.IsNullOrEmpty(formationID))
-                    CharacterHandling.AssignPartyGroupingRandom(true);
+                if (string.IsNullOrEmpty(formationID))
+                {
+                    if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].IsLesbianSetup)
+                        CharacterHandling.AssignPartyGroupingRandomCaseLesbian(true);
+                    else
+                        CharacterHandling.AssignPartyGroupingRandom(true);
+                }
                 else
                     CharacterHandling.AssignPartyGroupingBySetupInfo(formationID, true);
                 

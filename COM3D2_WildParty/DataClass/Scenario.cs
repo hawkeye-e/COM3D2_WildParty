@@ -90,6 +90,7 @@ namespace COM3D2.WildParty.Plugin
         {
             public int Min;
             public int Max;
+            public bool IsEven = false;
         }
 
         internal class ExtraScenarioFlag

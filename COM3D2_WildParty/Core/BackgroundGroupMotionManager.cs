@@ -38,6 +38,8 @@ namespace COM3D2.WildParty.Plugin.Core
                     HandleGroupForStateChangeMan(groupList[i]);
                 else if (groupList[i].CurrentSexState == SexState.StateType.ChangeManFromQueue)
                     HandleGroupForStateChangeManFromQueue(groupList[i]);
+                else if (groupList[i].CurrentSexState == SexState.StateType.SwapMaids)
+                    HandleGroupForStateSwapMaids(groupList[i]);
             }
         }
 
@@ -146,7 +148,7 @@ namespace COM3D2.WildParty.Plugin.Core
             }
 
             //also update the progress info
-            YotogiHandling.AddManOrgasmCountForGroup(group);
+            YotogiHandling.AddOrgasmCountForGroup(group);
 
             group.CurrentSexState = GetNextSexState(group.CurrentSexState);
         }
@@ -329,6 +331,19 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 //The next review time will be resumed after all change man member process finished
                 group.StopNextReviewTime();
+            }
+        }
+
+        private static void HandleGroupForStateSwapMaids(PartyGroup group)
+        {
+            if (DateTime.Now > group.NextActionReviewTime)
+            {
+                CharacterHandling.AssignPartyGrouping_SwapMember(group.Maid1, group.Maid2);
+
+                //play the wait motion
+                YotogiHandling.ChangeBackgroundGroupMotionWithSpecificLabel(group, SexState.StateType.Waiting);
+
+                group.CurrentSexState = GetNextSexState(group.CurrentSexState);
             }
         }
 

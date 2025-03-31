@@ -294,7 +294,10 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             if (ModUseData.PartyGroupSetupList[formationID].IsRandomAssign)
             {
-                AssignPartyGroupingRandom(true);
+                if(ModUseData.PartyGroupSetupList[formationID].IsLesbianSetup)
+                    AssignPartyGroupingRandomCaseLesbian(retainMainZero);
+                else
+                    AssignPartyGroupingRandom(true);
             }
             else
             {
@@ -426,6 +429,49 @@ namespace COM3D2.WildParty.Plugin.Core
 
         }
 
+        //This function is designed for lesbian (Yuri) case only. ***Maid with converted man structure is NOT considered as lesbian case and should go through normal Man+Maid setup.***
+        internal static void AssignPartyGroupingRandomCaseLesbian(bool retainGroupZero = false)
+        {
+            StateManager.Instance.PartyGroupList.Clear();
+
+            //Keep the master list unchanged so that the chosen maid will remain the same in the ADV
+            List<Maid> workingMaidList = new List<Maid>(StateManager.Instance.YotogiWorkingMaidList);
+
+            //Shuffle the maid list
+            if (retainGroupZero)
+            {
+                Maid firstMaid = GameMain.Instance.CharacterMgr.GetMaid(0);
+                Maid secondMaid = GameMain.Instance.CharacterMgr.GetMaid(1);
+
+                workingMaidList.Remove(firstMaid);
+                workingMaidList.Remove(secondMaid);
+
+                if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].IsShuffleMaidList)
+                    workingMaidList = ShuffleMaidOrManList(workingMaidList);
+
+                workingMaidList.Insert(0, firstMaid);
+                workingMaidList.Insert(1, secondMaid);
+            }
+            else
+            {
+                workingMaidList = ShuffleMaidOrManList(workingMaidList);
+            }
+
+            StateManager.Instance.YotogiWorkingMaidList = workingMaidList;
+
+            int numOfFemale = workingMaidList.Count;
+
+
+            //For the case of lesbian, only FF is possible
+            for (int i = 0; i < numOfFemale / 2; i++)
+            {
+                PartyGroup newGroup = new PartyGroup();
+                newGroup.Maid1 = workingMaidList[i*2];
+                newGroup.Maid2 = workingMaidList[i*2+1];
+                StateManager.Instance.PartyGroupList.Add(newGroup);
+            }
+        }
+
         internal static void AssignPartyGroupingBySetupInfo(string formationID, bool retainMaidZero = false)
         {
             PartyGroupSetup setupInfo = ModUseData.PartyGroupSetupList[formationID];
@@ -522,33 +568,27 @@ namespace COM3D2.WildParty.Plugin.Core
 
             PartyGroup group1 = Util.GetPartyGroupByCharacter(maid1);
             PartyGroup group2 = Util.GetPartyGroupByCharacter(maid2);
-
+            
             if (group1 == null || group2 == null)
                 return;
 
+            int group1Index = group1.GetMaidOrManIndex(maid1);
+            int group2Index = group1.GetMaidOrManIndex(maid2);
+
             //do the swapping
-
-            ReplaceTargetMaid(group1, maid1, maid2);
-            ReplaceTargetMaid(group2, maid2, maid1);
-
+            
+            ReplaceTargetMaid(group1, group1Index, maid2);
+            ReplaceTargetMaid(group2, group2Index, maid1);
+            
         }
 
-        private static void ReplaceTargetMaid(PartyGroup group, Maid toBeReplaced, Maid newMaid)
+        private static void ReplaceTargetMaid(PartyGroup group, int index, Maid newMaid)
         {
-            if (!toBeReplaced.boMAN)
-            {
-                if (group.Maid1.status.guid == toBeReplaced.status.guid)
-                    group.Maid1 = newMaid;
-                else if (group.Maid2.status.guid == toBeReplaced.status.guid)
-                    group.Maid2 = newMaid;
-            }
+            if (!newMaid.boMAN)
+                group.SetMaidAtIndex(index, newMaid);
             else
-            {
-                if (group.Man1.status.guid == toBeReplaced.status.guid)
-                    group.Man1 = newMaid;
-                else if (group.Man2.status.guid == toBeReplaced.status.guid)
-                    group.Man2 = newMaid;
-            }
+                group.SetManAtIndex(index, newMaid);
+            
         }
 
         internal static void CleanseCharacterMgrArray()
@@ -585,11 +625,14 @@ namespace COM3D2.WildParty.Plugin.Core
             
             //Set the spoof flag so that the while object doesnt go through the whole initialization process again
             StateManager.Instance.SpoofActivateMaidObjectFlag = true;
-            
+
             //assign the selected maid and man to the system array.
             for (int i = 0; i < skill.MaidIndex.Count; i++)
                 if (group.GetMaidAtIndex(i) != null)
+                {
+                    group.GetMaidAtIndex(i).ActiveSlotNo = skill.MaidIndex[i];
                     GameMain.Instance.CharacterMgr.SetActiveMaid(group.GetMaidAtIndex(i), skill.MaidIndex[i]);
+                }
             
             for (int i = 0; i < skill.ManIndex.Count; i++)
                 if (group.GetManAtIndex(i) != null)
@@ -1127,6 +1170,9 @@ namespace COM3D2.WildParty.Plugin.Core
 
         internal static void AttachObjectToCharacter(Maid maid, List<ExtraItemObject> extraItemObjects)
         {
+            if (maid == null)
+                return;
+
             if (extraItemObjects != null)
             {
                 //the objects dont show up if it is not reset first...

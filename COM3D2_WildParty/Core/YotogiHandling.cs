@@ -55,7 +55,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             CharacterHandling.LoadMotionScript(1, false,
                 motionItem.FileName, label.LabelName,
-                group.Maid1.status.guid, group.Man1.status.guid, false, false, true, false);
+                group.Maid1.status.guid, group.Man1?.status.guid, false, false, true, false);
 
             group.ReloadAnimation();
 
@@ -84,7 +84,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             CharacterHandling.LoadMotionScript(1, false,
                 motionItem.FileName, pickedLabel.Label,
-                group.Maid1.status.guid, group.Man1.status.guid, false, false, true, false);
+                group.Maid1.status.guid, group.Man1?.status.guid, false, false, true, false);
 
             if(type == SexState.StateType.Waiting)
                 CheckYotogiMiscSetup(group);
@@ -649,11 +649,29 @@ namespace COM3D2.WildParty.Plugin.Core
                 info.ManOrgasmInfo[man.status.guid] += 1;
         }
 
-        internal static void AddManOrgasmCountForGroup(PartyGroup group)
+        internal static void AddPositionOrgasmCountToMaid(PartyGroup group, Maid maid)
         {
-            for(int i=0; i<group.MaidCount; i++)
-                for(int j=0; j<group.ManCount; j++)
+            if (!StateManager.Instance.YotogiProgressInfoList.ContainsKey(maid.status.guid))
+                return;
+
+            YotogiProgressInfo info = StateManager.Instance.YotogiProgressInfoList[maid.status.guid];
+            
+            if (!info.SexPositionOrgasmInfo.ContainsKey(group.SexPosID))
+                info.SexPositionOrgasmInfo.Add(group.SexPosID, 1);
+            else
+                info.SexPositionOrgasmInfo[group.SexPosID] += 1;
+
+            info.MaidOrgasmCount += 1;
+        }
+
+        internal static void AddOrgasmCountForGroup(PartyGroup group)
+        {
+            for (int i = 0; i < group.MaidCount; i++)
+            {
+                AddPositionOrgasmCountToMaid(group, group.GetMaidAtIndex(i));
+                for (int j = 0; j < group.ManCount; j++)
                     AddManOrgasmCountToMaid(group.GetMaidAtIndex(i), group.GetManAtIndex(j));
+            }
         }
 
         internal static void ConvertToGroupType(PartyGroup group, string targetGroupType, int sexPosID)
@@ -852,6 +870,14 @@ namespace COM3D2.WildParty.Plugin.Core
                     group.ExtraObjects.Remove(objName);
                     
                 }
+
+                while (group.ExtraCharacterObjects.Count > 0)
+                {
+                    Maid target = group.ExtraCharacterObjects.Keys.First();
+                    CharacterHandling.RemoveObjectFromCharacter(target, group.ExtraCharacterObjects[target]);
+                    
+                    group.ExtraCharacterObjects.Remove(target);
+                }
             }
 
         }
@@ -860,7 +886,7 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             if (setupInfo.Offset != null)
                 group.GroupOffsetVector2 = setupInfo.Offset.Pos;
-            if(setupInfo.ExtraObjects != null)
+            if (setupInfo.ExtraObjects != null)
             {
                 foreach (var extraObjectSetup in setupInfo.ExtraObjects)
                 {
@@ -883,6 +909,22 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
             }
 
+            if (setupInfo.ExtraObjectsOnCharacter != null)
+            {
+                foreach (var extraObjectOnCharSetup in setupInfo.ExtraObjectsOnCharacter)
+                {
+                    Maid target = null;
+                    if (extraObjectOnCharSetup.CharacterType == Constant.CharacterType.Maid)
+                        target = group.GetMaidAtIndex(extraObjectOnCharSetup.ArrayPosition);
+                    else if (extraObjectOnCharSetup.CharacterType == Constant.CharacterType.Man)
+                        target = group.GetManAtIndex(extraObjectOnCharSetup.ArrayPosition);
+                    CharacterHandling.AttachObjectToCharacter(target, new List<ExtraItemObject> { extraObjectOnCharSetup.ItemInfo });
+
+                    if(!group.ExtraCharacterObjects.ContainsKey(target))
+                        group.ExtraCharacterObjects.Add(target, new List<string>());
+                    group.ExtraCharacterObjects[target].Add(extraObjectOnCharSetup.ItemInfo.Target);
+                }
+            }
         }
 
         //Function to set all yotogi command disabled

@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="AnotherGBDesireYotogiMapCoordinates" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AnotherGBDesireYotogiMapCoordinates.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
-  </data>
   <data name="CharacterEffect" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CharacterEffect.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
   </data>
@@ -130,14 +127,11 @@
   <data name="ExtraYotogiComands" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ExtraYotogiComands.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
   </data>
-  <data name="HappyGBClubYotogiMapCoordinates" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HappyGBClubYotogiMapCoordinates.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
-  </data>
-  <data name="HaremKingYotogiMapCoordinates" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HaremKingYotogiMapCoordinates.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
-  </data>
   <data name="IKRectify" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IKRectify.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
+  </data>
+  <data name="MaidCountRequirementEvenNumber" xml:space="preserve">
+    <value>イベント「[=EventName]」にはメイド人数は偶数が必要です。</value>
   </data>
   <data name="MaidCountRequirementWarning" xml:space="preserve">
     <value>イベント「[=EventName]」には最低[=Min]名、最大[=Max]名が必要です。</value>
@@ -169,21 +163,6 @@
   <data name="NudeClothesSetID" xml:space="preserve">
     <value>FullNude</value>
   </data>
-  <data name="OrgyYotogiMapCoordinates" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OrgyYotogiMapCoordinates.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
-  </data>
-  <data name="PartyGroupSetup_AnotherGBDesire" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PartyGroupSetup_AnotherGBDesire.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
-  </data>
-  <data name="PartyGroupSetup_HappyGBClub" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PartyGroupSetup_HappyGBClub.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
-  </data>
-  <data name="PartyGroupSetup_HaremKing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PartyGroupSetup_HaremKing.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="PartyGroupSetup_OrgyParty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PartyGroupSetup_OrgyParty.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
   <data name="RandomizeManSetting" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RandomizeManSetting.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
@@ -193,35 +172,8 @@
   <data name="SexPosFace" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SexPosFace.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="SexPosList_HappyGBClub" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SexPosList_HappyGBClub.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
-  </data>
-  <data name="SexPosList_HaremKing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SexPosList_HaremKing.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
-  </data>
-  <data name="SexPosList_OrgyParty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SexPosList_OrgyParty.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
-  </data>
   <data name="SexPosSE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SexPosSE.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="SexPosSpecialLabels_HappyGBClub" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SexPosSpecialLabels_HappyGBClub.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="SexPosSpecialLabels_HaremKing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SexPosSpecialLabels_HaremKing.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="SexPosSpecialLabels_OrgyParty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SexPosSpecialLabels_OrgyParty.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="SexPosValidLabels_HappyGBClub" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SexPosValidLabels_HappyGBClub.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
-  </data>
-  <data name="SexPosValidLabels_HaremKing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SexPosValidLabels_HaremKing.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="SexPosValidLabels_OrgyParty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SexPosValidLabels_OrgyParty.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="SexStateDescription" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SexStateDescription.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;iso-2022-jp</value>
@@ -231,6 +183,9 @@
   </data>
   <data name="SexStateDescription_GBType" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SexStateDescription_GBType.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
+  </data>
+  <data name="SexStateDescription_LesbianType" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SexStateDescription_LesbianType.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
   </data>
   <data name="YotogiMiscHandling" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\YotogiMiscHandling.json;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>

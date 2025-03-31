@@ -38,11 +38,13 @@ namespace COM3D2.WildParty.Plugin
 
             Dictionary<string, List<MotionItem>> result = new Dictionary<string, List<MotionItem>>();
 
+            List<MotionItem> lstFF = new List<MotionItem>();
             List<MotionItem> lstMF = new List<MotionItem>();
             List<MotionItem> lstMMF = new List<MotionItem>();
             List<MotionItem> lstMMMF = new List<MotionItem>();
             List<MotionItem> lstFFM = new List<MotionItem>();
 
+            result.Add(Constant.GroupType.FF, lstFF);
             result.Add(Constant.GroupType.MF, lstMF);
             result.Add(Constant.GroupType.MMF, lstMMF);
             result.Add(Constant.GroupType.MMMF, lstMMMF);
@@ -77,13 +79,19 @@ namespace COM3D2.WildParty.Plugin
 
                 string[] manIndexSplit = manIndexRaw.Split(';');
                 data.ManIndex = new List<int>();
-                for (int j = 0; j < manIndexSplit.Length; j++)
-                    data.ManIndex.Add(int.Parse(manIndexSplit[j]));
+                if (!string.IsNullOrEmpty(manIndexRaw))
+                {
+                    for (int j = 0; j < manIndexSplit.Length; j++)
+                        data.ManIndex.Add(int.Parse(manIndexSplit[j]));
+                }
 
                 data.ValidLabels = lstMotionLabels.Where(x => x.ID == data.ID).ToList();
 
                 switch (rowData[3].ToUpper())
                 {
+                    case Constant.GroupType.FF:
+                        lstFF.Add(data);
+                        break;
                     case Constant.GroupType.MF:
                         lstMF.Add(data);
                         break;

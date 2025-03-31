@@ -18,10 +18,11 @@ namespace COM3D2.WildParty.Plugin
 
         internal const string MainEventScriptFile = "AllMain.ks";
 
-        internal static readonly string[] ModIconNames = { 
-            ModResources.ImageResources.OrgyPartyIconFileName, 
+        internal static readonly string[] ModIconNames = {
+            ModResources.ImageResources.OrgyPartyIconFileName,
             ModResources.ImageResources.HaremKingIconFileName,
-            ModResources.ImageResources.HappyGBClubIconFileName
+            ModResources.ImageResources.HappyGBClubIconFileName,
+            ModResources.ImageResources.LilyBloomingParadiseFileName,
         };
 
         internal static readonly string[] DressingClothingTagArray = {
@@ -315,6 +316,13 @@ namespace COM3D2.WildParty.Plugin
             internal const string CurrentManCount = "[=CurrentManCount]";
             internal const string CurrentOrgasmCount = "[=CurrentOrgasmCount]";
 
+            internal const string MaidOrgasmCount = "[=MaidOrgasmCount]";
+            internal const string CurrentMaidOrgasmCount = "[=CurrentMaidOrgasmCount]";
+            internal const string PositionOrgasmCount = "[=PositionOrgasmCount]";
+            internal const string CurrentPositionOrgasmCount = "[=CurrentPositionOrgasmCount]";
+
+            
+
             /*Format: [=Name,{Source},{Index},{CallMethod}]
              * {Source} :   "Maid" : From SelectedMaidsList; "NPC_F" : From NPCList;  "NPC_M" : From NPCManList
              * {Index}  :   Index position in the source list
@@ -353,6 +361,7 @@ namespace COM3D2.WildParty.Plugin
         //While there are more different types such as lesbian play or 3M1F etc, they are omitted due to we dont cater them.
         internal static class GroupType
         {
+            internal const string FF = "FF";
             internal const string MF = "MF";
             internal const string MMF = "MMF";
             internal const string FFM = "FFM";
@@ -547,6 +556,9 @@ namespace COM3D2.WildParty.Plugin
 
             internal const string FetishOrgy = "FetishOrgy";
             internal const string FetishGangBang = "FetishGangBang";
+            internal const string FetishLesbianPlay = "FetishLesbianPlay";
+
+            internal const string SwapMaidWithinGroup = "SwapMaidWithinGroup";
         }
 
         internal static class CameraEaseType
@@ -616,6 +628,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string Common = "Common";
             internal const string GangBangNormal = "GangBangNormal";
             internal const string GangBangQueued = "GangBangQueued";
+            internal const string Lesbian = "Lesbian";
         }
 
         internal static class YotogiSceneCode
@@ -623,6 +636,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string OrgyParty = "OrgyParty";
             internal const string HaremKing = "HaremKing";
             internal const string HappyGBClub = "HappyGBClub";
+            internal const string LilyBloomingParadise = "LilyBloomingParadise";
         }
 
         internal static class TexturePattern

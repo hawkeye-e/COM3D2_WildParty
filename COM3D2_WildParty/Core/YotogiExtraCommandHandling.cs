@@ -20,14 +20,15 @@ namespace COM3D2.WildParty.Plugin.Core
                 case Constant.ModYotogiCommandButtonID.ChangePosition:
                     return new EventDelegate(ChangePosition_ShowPositionList);
                 case Constant.ModYotogiCommandButtonID.ChangePositionAll:
-                    return new EventDelegate(Orgy_MassChangePosition_ShowPositionList);
+                    return new EventDelegate(MassChangePosition_ShowPositionList);
                 case Constant.ModYotogiCommandButtonID.ChangeFormation:
                     return new EventDelegate(Orgy_ShowFormationOption);
                 case Constant.ModYotogiCommandButtonID.ChangePartner:
                     return new EventDelegate(Orgy_ShowMaidList);
                 case Constant.ModYotogiCommandButtonID.FetishOrgy:
                 case Constant.ModYotogiCommandButtonID.FetishGangBang:
-                    return new EventDelegate((() => AddFetish(buttonID)));
+                case Constant.ModYotogiCommandButtonID.FetishLesbianPlay:
+                    return new EventDelegate(() => AddFetish(buttonID));
 
                 case Constant.ModYotogiCommandButtonID.ChangeFormationHaremKing:
                 case Constant.ModYotogiCommandButtonID.ChangeFormationHappyGBClub:
@@ -50,6 +51,8 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 case Constant.ModYotogiCommandButtonID.ChangeMaidAnotherGBDesire:
                     return new EventDelegate(GBClub_ShowMaidList);
+                case Constant.ModYotogiCommandButtonID.SwapMaidWithinGroup:
+                    return new EventDelegate(SwapMaidWithinGroup);
                 default:
                     return null;
             }
@@ -95,7 +98,7 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
-        public static void Orgy_MassChangePosition_ShowPositionList()
+        public static void MassChangePosition_ShowPositionList()
         {
             StateManager.Instance.ExtraCommandWindow.ResetScrollPosition();
 
@@ -372,7 +375,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 mainGroup.IsMaid1OrgasmScreamSet = CharacterHandling.SetOrgasmScreamVoice(mainGroup.Maid1, spLabel.VoiceType1);
                 mainGroup.IsMaid2OrgasmScreamSet = CharacterHandling.SetOrgasmScreamVoice(mainGroup.Maid2, spLabel.VoiceType2);
 
-                YotogiHandling.AddManOrgasmCountForGroup(mainGroup);
+                YotogiHandling.AddOrgasmCountForGroup(mainGroup);
                 //
             }
 
@@ -441,6 +444,27 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
+        public static void SwapMaidWithinGroup()
+        {
+            GameMain.Instance.MainCamera.FadeOut(ConfigurableValue.CameraFadeTime, f_dg: delegate
+            {
+                PartyGroup group = StateManager.Instance.PartyGroupList[0];
+
+                CharacterHandling.AssignPartyGrouping_SwapMember(group.Maid1, group.Maid2);
+                CharacterHandling.SetGroupZeroActive();
+                
+                YotogiHandling.UpdateParameterView(group.Maid1);
+                
+                //need to update the main group
+                var initialSkill = YotogiHandling.GetSkill(group.Maid1.status.personal.id, group.GroupType, group.SexPosID);
+                CharacterHandling.CleanseCharacterMgrArray();
+                YotogiHandling.ChangeMainGroupSkill(initialSkill.YotogiSkillID);
+
+                CameraHandling.SetCameraLookAt(group.Maid1);
+            });
+            GameMain.Instance.MainCamera.FadeIn(ConfigurableValue.CameraFadeTime);
+        }
+
 
         private static void SetupPreSwapMotionEndTrigger(int indexOffset, bool isMovingRight)
         {
@@ -507,7 +531,10 @@ namespace COM3D2.WildParty.Plugin.Core
 
                     isAllFulfilled = isAllFulfilled && (progressInfo.ManOrgasmInfo.Count >= fetishInfo.Conditions.ManCount);
                     isAllFulfilled = isAllFulfilled && (progressInfo.ManOrgasmInfo.Sum(x => x.Value) >= fetishInfo.Conditions.OrgasmCount);
-                    
+
+                    isAllFulfilled = isAllFulfilled && (progressInfo.MaidOrgasmCount >= fetishInfo.Conditions.MaidOrgasmCount);
+                    isAllFulfilled = isAllFulfilled && (progressInfo.SexPositionOrgasmInfo.Count >= fetishInfo.Conditions.PositionOrgasmCount);
+
                     UpdateCommandButtonState(button, isAllFulfilled);
                 }
                 else if (commandBtn.Data.Type == ExtraYotogiCommandData.CommandType.Orgasm)
@@ -613,7 +640,11 @@ namespace COM3D2.WildParty.Plugin.Core
             return template.Replace(Constant.JsonReplaceTextLabels.ManCount, fetishInfo.Conditions.ManCount.ToString())
                            .Replace(Constant.JsonReplaceTextLabels.OrgasmCount, fetishInfo.Conditions.OrgasmCount.ToString())
                            .Replace(Constant.JsonReplaceTextLabels.CurrentManCount, progressInfo.ManOrgasmInfo.Count.ToString())
-                           .Replace(Constant.JsonReplaceTextLabels.CurrentOrgasmCount, progressInfo.ManOrgasmInfo.Sum(x => x.Value).ToString());
+                           .Replace(Constant.JsonReplaceTextLabels.CurrentOrgasmCount, progressInfo.ManOrgasmInfo.Sum(x => x.Value).ToString())
+                           .Replace(Constant.JsonReplaceTextLabels.MaidOrgasmCount, fetishInfo.Conditions.MaidOrgasmCount.ToString())
+                           .Replace(Constant.JsonReplaceTextLabels.CurrentMaidOrgasmCount, progressInfo.MaidOrgasmCount.ToString())
+                           .Replace(Constant.JsonReplaceTextLabels.PositionOrgasmCount, fetishInfo.Conditions.PositionOrgasmCount.ToString())
+                           .Replace(Constant.JsonReplaceTextLabels.CurrentPositionOrgasmCount, progressInfo.SexPositionOrgasmInfo.Count.ToString());
         }
 
         internal static bool IsThisConditionFulfilled(string field, Fetish fetishInfo)

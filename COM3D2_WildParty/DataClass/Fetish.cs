@@ -20,7 +20,9 @@ namespace COM3D2.WildParty.Plugin
         public class ConditionInfo
         {
             public int ManCount = 0;
-            public int OrgasmCount = 0;
+            public int OrgasmCount = 0;             //Requirement of how many times the men have orgasm with the maid. If it is a MMF situation, it will count twice each time orgasm occured.
+            public int MaidOrgasmCount = 0;         //Maid version
+            public int PositionOrgasmCount = 0;
         }
     }
 }

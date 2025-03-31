@@ -710,7 +710,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         internal static void AddOrgasmCountForGroup()
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
-                Core.YotogiHandling.AddManOrgasmCountForGroup(StateManager.Instance.PartyGroupList[0]);
+                Core.YotogiHandling.AddOrgasmCountForGroup(StateManager.Instance.PartyGroupList[0]);
         }
 
         internal static void HideDefaultPositionChangeButton(YotogiPlayManager playMgr)

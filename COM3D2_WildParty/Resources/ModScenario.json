@@ -76,72 +76,6 @@
     ]
   },
 
-
-  {
-    "ScenarioID": 9901001,
-    "CategoryID": 99010,
-    "ADVEntryStep": "haremking0001",
-    "YotogiTypeEnumString": "NewSex",
-    "CondSalonGrade": 0,
-    "DisplayName": "ハーレムキング",
-    "Information": "最近、ご主人様はとても忙しい。大好きなご主人様のために、メイドたちはご主人様へのサプライズを企画していた…",
-    "Icon": "mod_icon_harem_king",
-    "IsNetorare": false,
-    "IsCommu": false,
-    "ModeEnumString": "COM3D",
-    "TypeEnumString": "Yotogi",
-    "ContractEnumString": [ "Exclusive", "Free" ],
-    "SexExperienceEnumString": [ "Yes_Yes" ],
-    "RelationEnumString": [ "Lover" ],
-    "ConditionInfoText": [
-      "恋人である",
-      "育成中のメイドではない",
-      "両穴経験済みである"
-    ],
-    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230 ],
-
-
-    "IsGroupEvent": true,
-    "MaidCount": {
-      "Max": 10,
-      "Min": 5
-    },
-
-    "YotogiSetup": [
-      {
-        "Phase": 1,
-        "DefaultMap": {
-          "DayMapID": "privateroom2",
-          "NightMapID": "privateroom2_night",
-          "BGM": "BGM021.ogg",
-          "FormationOption": [ "Houshi", "Houshi_Standing", "Missionary_All", "Missionary_Anus_All", "Doggy_All", "Doggy_Anus_All" ],
-          "DefaultFormation": "Houshi_Standing"
-        },
-
-        "ExtraYotogiCommands": [
-          "ChangeFormationHaremKing",
-          "ChangeMaidHaremKing",
-          "MoveLeftHaremKing",
-          "MoveRightHaremKing"
-        ],
-        "IsMainManOwner": true,
-
-        "SexStateRule": "Common"
-      }
-    ],
-
-    "CanGainSkillExp": false,
-    "LockParameters": true,
-    "UnlimitedMind": true,
-
-    "SetScenarioFlag": [
-      {
-        "ID": "Mod_ハーレムキング_Executed",
-        "Value": 1
-      }
-    ]
-  },
-
   {
     "ScenarioID": 9900002,
     "CategoryID": 99000,
@@ -368,5 +302,138 @@
     "CanGainSkillExp": false,
     "LockParameters": true,
     "UnlimitedMind": true
+  },
+
+  {
+    "ScenarioID": 9901001,
+    "CategoryID": 99010,
+    "ADVEntryStep": "haremking0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "ハーレムキング",
+    "Information": "最近、ご主人様はとても忙しい。大好きなご主人様のために、メイドたちはご主人様へのサプライズを企画していた…",
+    "Icon": "mod_icon_harem_king",
+    "IsNetorare": false,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "ConditionInfoText": [
+      "恋人である",
+      "育成中のメイドではない",
+      "両穴経験済みである"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230 ],
+
+
+    "IsGroupEvent": true,
+    "MaidCount": {
+      "Max": 10,
+      "Min": 5
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "privateroom2",
+          "NightMapID": "privateroom2_night",
+          "BGM": "BGM021.ogg",
+          "FormationOption": [ "Houshi", "Houshi_Standing", "Missionary_All", "Missionary_Anus_All", "Doggy_All", "Doggy_Anus_All" ],
+          "DefaultFormation": "Houshi_Standing"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeFormationHaremKing",
+          "ChangeMaidHaremKing",
+          "MoveLeftHaremKing",
+          "MoveRightHaremKing"
+        ],
+        "IsMainManOwner": true,
+
+        "SexStateRule": "Common"
+      }
+    ],
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_ハーレムキング_Executed",
+        "Value": 1
+      }
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "CategoryID": 99010,
+    "ADVEntryStep": "lbp0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "咲き乱れる百合の楽園",
+    "Information": "最近、メイドたちは仲が良すぎる。この状況を不思議に思ったご主人様は、何が起こったのか調べにした…",
+    "Icon": "mod_icon_lily_blooming_paradise",
+    "IsNetorare": false,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "ConditionInfoText": [
+      "恋人である",
+      "育成中のメイドではない",
+      "両穴経験済みである"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 210, 220 ],
+
+
+    "IsGroupEvent": true,
+    "MaidCount": {
+      "Max": 20,
+      "Min": 4,
+      "IsEven": true
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "Shukuhakubeya_BedRoom",
+          "NightMapID": "Shukuhakubeya_BedRoom_Night",
+          "BGM": "BGM021.ogg",
+          "FormationOption": [ "Phase1_Default" ],
+          "DefaultFormation": "Phase1_Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition",
+          "ChangePositionAll",
+          "SwapMaidWithinGroup",
+          "ChangePartner",
+          "FetishLesbianPlay"
+        ],
+        "IsMainManOwner": true,
+
+        "SexStateRule": "Lesbian"
+      }
+    ],
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_咲き乱れる百合の楽園_Executed",
+        "Value": 1
+      }
+    ]
   }
+
 ]

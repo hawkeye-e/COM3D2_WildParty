@@ -62,31 +62,6 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;Phase1_Default&quot;: {
-        ///    &quot;DisplayName&quot;: &quot;&quot;,
-        ///    &quot;IsRandom&quot;: false,
-        ///    &quot;CoordinateList&quot;: [
-        ///      {
-        ///        &quot;MaxGroup&quot;: 3,
-        ///        &quot;GroupCoordinates&quot;: [
-        ///          {
-        ///            &quot;ArrayPosition&quot;: 0,
-        ///            &quot;PosString&quot;: &quot;0.19, 0.00, -0.93&quot;,
-        ///            &quot;RotString&quot;: &quot;0.0, 1.0, 0.0, 0.0&quot;,
-        ///            &quot;CameraSetup&quot;: {
-        ///              &quot;PosString&quot;: &quot;-1.91, 2.32, -2.69&quot;,
-        ///              &quot;TargetPosString&quot;: &quot;-0.33, 1.02, -1.42&quot;,
-        ///              &quot;AroundAngleString&quot;: &quot;51.14, 32.65&quot;,
-        ///              &quot;Dista [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string AnotherGBDesireYotogiMapCoordinates {
-            get {
-                return ResourceManager.GetString("AnotherGBDesireYotogiMapCoordinates", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {
         ///  &quot;Breath&quot;: {
         ///    &quot;Prefab&quot;: &quot;Particle/pToiki&quot;,
         ///    &quot;Name&quot;: &quot;WildParty_Mod_Breath&quot;,
@@ -173,77 +148,39 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {
-        ///  &quot;Phase1_Default&quot;: {
-        ///    &quot;DisplayName&quot;: &quot;&quot;,
-        ///    &quot;IsRandom&quot;: false,
-        ///    &quot;CoordinateList&quot;: [
-        ///      {
-        ///        &quot;MaxGroup&quot;: 3,
-        ///        &quot;GroupCoordinates&quot;: [
-        ///          {
-        ///            &quot;ArrayPosition&quot;: 0,
-        ///            &quot;PosString&quot;: &quot;0.19, 0.00, -0.93&quot;,
-        ///            &quot;RotString&quot;: &quot;0.0, 1.0, 0.0, 0.0&quot;,
-        ///            &quot;CameraSetup&quot;: {
-        ///              &quot;PosString&quot;: &quot;-1.91, 2.32, -2.69&quot;,
-        ///              &quot;TargetPosString&quot;: &quot;-0.33, 1.02, -1.42&quot;,
-        ///              &quot;AroundAngleString&quot;: &quot;51.14, 32.65&quot;,
-        ///              &quot;Dista [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string HappyGBClubYotogiMapCoordinates {
-            get {
-                return ResourceManager.GetString("HappyGBClubYotogiMapCoordinates", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {
-        ///  &quot;Houshi&quot;: {
-        ///    &quot;DisplayName&quot;: &quot;一緒に奉仕する&quot;,
-        ///    &quot;IsRandom&quot;: false,
-        ///    &quot;CoordinateList&quot;: [
-        ///      {
-        ///        &quot;MaxGroup&quot;: 4,
-        ///        &quot;GroupCoordinates&quot;: [
-        ///          {
-        ///            &quot;ArrayPosition&quot;: 0,
-        ///            &quot;PosString&quot;: &quot;8.45, 0.5, -1.5&quot;,
-        ///            &quot;RotString&quot;: &quot;0.0, 0.0, 0.0, 1.0&quot;,
-        ///            &quot;IKAttach&quot;: [
-        ///              {
-        ///                &quot;PosString&quot;: &quot;0.02, -0.04, -0.1&quot;,
-        ///                &quot;AttachType&quot;: &quot;NewPoint&quot;,
-        ///                &quot;Source&quot;: {
-        ///                  &quot;ArrayIndex&quot;: 0,
-        ///         [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string HaremKingYotogiMapCoordinates {
-            get {
-                return ResourceManager.GetString("HaremKingYotogiMapCoordinates", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {
+        ///   Looks up a localized string similar to [
         ///  {
         ///    &quot;ScenarioID&quot;: 9901002,
-        ///    &quot;ScriptName&quot;: &quot;&quot;,
-        ///    &quot;LabelName&quot;: &quot;&quot;,
-        ///    &quot;PresetFile&quot;: {
-        ///      &quot;V2_5&quot;: &quot;Kamigawara_Reika&quot;,
-        ///      &quot;V2&quot;: &quot;Kamigawara_Reika_v2&quot;
-        ///    },
-        ///    &quot;Personality&quot;: 100,
-        ///    &quot;VoicePitch&quot;: 25
-        ///  },
-        ///
-        ///}
-        ///.
+        ///    &quot;ScriptName&quot;: &quot;sex_OM_seijyoui.ks&quot;,
+        ///    &quot;LabelName&quot;: &quot;*激しさ１胸揉み&quot;,
+        ///    &quot;MatchingCondition&quot;: [
+        ///      [ &quot;tagname&quot;, &quot;ikattachpoint&quot; ],
+        ///      [ &quot;src&quot;, &quot;man:0&quot; ],
+        ///      [ &quot;target&quot;, &quot;maid:0&quot; ],
+        ///      [ &quot;srcbone&quot;, &quot;左手&quot; ],
+        ///      [ &quot;targetpoint&quot;, &quot;乳首右&quot; ],
+        ///      [ &quot;targetobj&quot;, &quot;body&quot; ]
+        ///    ],
+        ///    &quot;TagData&quot;: [
+        ///      [ &quot;tagname&quot;, &quot;ikattachpoint&quot; ],
+        ///      [ &quot;src&quot;, &quot;man:0&quot; ],
+        ///      [ &quot;target&quot;, &quot;maid:0&quot; ],
+        ///      [ &quot;srcbone&quot;, &quot;左手&quot; ],
+        ///      [ &quot;targetpoint&quot;, &quot;乳首右&quot; ],
+        ///     [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string IKRectify {
             get {
                 return ResourceManager.GetString("IKRectify", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to イベント「[=EventName]」にはメイド人数は偶数が必要です。.
+        /// </summary>
+        internal static string MaidCountRequirementEvenNumber {
+            get {
+                return ResourceManager.GetString("MaidCountRequirementEvenNumber", resourceCulture);
             }
         }
         
@@ -315,9 +252,15 @@ namespace ModResources {
         ///    &quot;Conditions&quot;: {
         ///      &quot;OrgasmCount&quot;: 50
         ///    }
-        ///  }
-        ///]
-        ///.
+        ///  },
+        ///  {
+        ///    &quot;ID&quot;: 99003,
+        ///    &quot;DrawName&quot;: &quot;レズプレイ大好き&quot;,
+        ///    &quot;UniqueName&quot;: &quot;レズプレイ大好き&quot;,
+        ///    &quot;ColorType&quot;: &quot;Red&quot;,
+        ///    &quot;Conditions&quot;: {
+        ///      &quot;MaidOrgasmCount&quot;: 10,
+        ///       [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ModFetish {
             get {
@@ -440,157 +383,6 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;Theatre_Scattered&quot;: {
-        ///    &quot;MapID&quot;: 10,
-        ///    &quot;DisplayName&quot;: &quot;バラバラ&quot;,
-        ///    &quot;IsRandom&quot;: true,
-        ///    &quot;CoordinateList&quot;: [
-        ///      {
-        ///        &quot;MaxGroup&quot;: 20,
-        ///        &quot;GroupCoordinates&quot;: [
-        ///          {
-        ///            &quot;ArrayPosition&quot;: 0,
-        ///            &quot;PosString&quot;: &quot;0.0, 0.0, -1.4&quot;,
-        ///            &quot;RotString&quot;: &quot;0.0, -0.4, 0.0, 0.9&quot;
-        ///          },
-        ///          {
-        ///            &quot;ArrayPosition&quot;: 1,
-        ///            &quot;PosString&quot;: &quot;-1.5, 0.0, -3.5&quot;,
-        ///            &quot;RotString&quot;: &quot;0.0, 0.2, 0.0, 1.0&quot;
-        ///          },
-        ///          {
-        ///        [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string OrgyYotogiMapCoordinates {
-            get {
-                return ResourceManager.GetString("OrgyYotogiMapCoordinates", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {
-        ///  &quot;Phase1_Default&quot;: {
-        ///    &quot;DefaultSexPosID&quot;: 1,
-        ///    &quot;IsRandomAssign&quot;: false,
-        ///    &quot;IsShuffleMaidList&quot;: false,
-        ///    &quot;IsShuffleManList&quot;: false,
-        ///    &quot;ExtraManCount&quot;: 28,
-        ///
-        ///    &quot;GroupSetup&quot;: [
-        ///      {
-        ///        &quot;ArrayPosition&quot;: 0,
-        ///        &quot;ManCount&quot;: 3,
-        ///        &quot;MaidCount&quot;: 1,
-        ///        &quot;IsAutomatedGroup&quot;: false,
-        ///        &quot;ClothesSet&quot;: &quot;FullNude&quot;
-        ///      },
-        ///      {
-        ///        &quot;ArrayPosition&quot;: 1,
-        ///        &quot;ManCount&quot;: 3,
-        ///        &quot;MaidCount&quot;: 1,
-        ///        &quot;IsAutomatedGroup&quot;: true,
-        ///        &quot;ClothesSet&quot;: &quot;Ful [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string PartyGroupSetup_AnotherGBDesire {
-            get {
-                return ResourceManager.GetString("PartyGroupSetup_AnotherGBDesire", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {
-        ///  &quot;Phase1_Default&quot;: {
-        ///    &quot;DefaultSexPosID&quot;: 1,
-        ///    &quot;IsRandomAssign&quot;: false,
-        ///    &quot;IsShuffleMaidList&quot;: false,
-        ///    &quot;IsShuffleManList&quot;: false,
-        ///    &quot;ExtraManCount&quot;: 28,
-        ///
-        ///    &quot;GroupSetup&quot;: [
-        ///      {
-        ///        &quot;ArrayPosition&quot;: 0,
-        ///        &quot;ManCount&quot;: 3,
-        ///        &quot;MaidCount&quot;: 1,
-        ///        &quot;IsAutomatedGroup&quot;: false,
-        ///        &quot;ClothesSet&quot;: &quot;FullNude&quot;
-        ///      },
-        ///      {
-        ///        &quot;ArrayPosition&quot;: 1,
-        ///        &quot;ManCount&quot;: 3,
-        ///        &quot;MaidCount&quot;: 1,
-        ///        &quot;MaidFromNPC&quot;: true,
-        ///        &quot;IsAutomatedGroup&quot;: tru [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string PartyGroupSetup_HappyGBClub {
-            get {
-                return ResourceManager.GetString("PartyGroupSetup_HappyGBClub", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {
-        ///  &quot;Houshi&quot;: {
-        ///    &quot;DefaultSexPosID&quot;: 5,
-        ///    &quot;IsRandomAssign&quot;: false,
-        ///    &quot;IsShuffleMaidList&quot;: true,
-        ///    &quot;IsShuffleManList&quot;: false,
-        ///    &quot;ExcludePersonality&quot;: [ 190, 200, 230 ],
-        ///    &quot;GroupSetup&quot;: [
-        ///      {
-        ///        &quot;ArrayPosition&quot;: 0,
-        ///        &quot;ManCount&quot;: 1,
-        ///        &quot;MaidCount&quot;: 2,
-        ///        &quot;IsAutomatedGroup&quot;: false
-        ///      },
-        ///      {
-        ///        &quot;ArrayPosition&quot;: 1,
-        ///        &quot;ManCount&quot;: 1,
-        ///        &quot;MaidCount&quot;: 1,
-        ///        &quot;IsAutomatedGroup&quot;: false
-        ///      },
-        ///      {
-        ///        &quot;ArrayPosition&quot;: 2,
-        ///     [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string PartyGroupSetup_HaremKing {
-            get {
-                return ResourceManager.GetString("PartyGroupSetup_HaremKing", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {
-        ///  &quot;Theatre_Scattered&quot;: {
-        ///    &quot;IsRandomAssign&quot;: true,
-        ///    &quot;IsShuffleMaidList&quot;: true,
-        ///    &quot;IsShuffleManList&quot;: true
-        ///  },
-        ///  &quot;Theatre_2RowsA&quot;: {
-        ///    &quot;IsRandomAssign&quot;: true,
-        ///    &quot;IsShuffleMaidList&quot;: true,
-        ///    &quot;IsShuffleManList&quot;: true
-        ///  },
-        ///  &quot;Theatre_2RowsB&quot;: {
-        ///    &quot;IsRandomAssign&quot;: true,
-        ///    &quot;IsShuffleMaidList&quot;: true,
-        ///    &quot;IsShuffleManList&quot;: true
-        ///  },
-        ///  &quot;Theatre_CircleA&quot;: {
-        ///    &quot;IsRandomAssign&quot;: true,
-        ///    &quot;IsShuffleMaidList&quot;: true,
-        ///    &quot;IsShuffleManList&quot;: true
-        ///  },
-        ///  &quot;Theatre_CircleB&quot;: {
-        ///  [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string PartyGroupSetup_OrgyParty {
-            get {
-                return ResourceManager.GetString("PartyGroupSetup_OrgyParty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {
         ///  &quot;YoungMan&quot;: {
         ///    &quot;Head&quot;: [ &quot;mhead003_i_.menu&quot;, &quot;mhead000_i_.menu&quot;, &quot;mhead002_i_.menu&quot;, &quot;mhead001_i_.menu&quot;, &quot;mhead005_i_.menu&quot; ],
         ///    &quot;Body&quot;: [
@@ -661,39 +453,6 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,IsBGGroupUse,Phase,MaidIndex,ManIndex,dummy
-        ///1,輪姦4P奉仕,sex_ran4p_housi_c001.ks,MMMF,TRUE,1,75400,75400,75400,59800,75400,75400,59800,59800,59800,59800,59800,59800,59800,75400,59800,59800,75400,75400,,,75400,75400,,TRUE,TRUE,TRUE,1,0,1;2;3,
-        ///2,輪姦3P両穴駅弁,sex_OM_haimenekiben_c001.ks,MMF,TRUE,2,75410,75410,75410,59810,75410 [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string SexPosList_HappyGBClub {
-            get {
-                return ResourceManager.GetString("SexPosList_HappyGBClub", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,IsBGGroupUse,Phase,MaidIndex,ManIndex,dummy
-        ///1,並べ正常位,sex_OM_seijyoui.ks,MF,TRUE,50,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,90,18910,20210,90,90,85110,TRUE,TRUE,FALSE,1,0,0,
-        ///2,並べ正常位（アナル）,sex_OM_seijyouiA.ks,MF,TRUE,51,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,18920,20220,110,11 [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string SexPosList_HaremKing {
-            get {
-                return ResourceManager.GetString("SexPosList_HaremKing", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,IsBGGroupUse,Phase,MaidIndex,ManIndex,dummy
-        ///1,愛撫,sex_OM_aibu.ks,MF,TRUE,1,53000,53000,53000,53000,53000,53000,53000,38000,38000,38000,38000,38000,38000,53000,53000,38000,53000,53000,69000,69000,53000,53000,99000,TRUE,TRUE,TRUE,1,0,0,
-        ///2,セックス正常位,sex_OM_seijyoui.ks,MF,TRUE,50,53030,53030,53030,53030,53030,53030,53030,3 [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string SexPosList_OrgyParty {
-            get {
-                return ResourceManager.GetString("SexPosList_OrgyParty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Type,ExcitementLevel,
         ///Piston,0,SE027.ogg
         ///Piston,1,SE027.ogg
@@ -708,141 +467,6 @@ namespace ModResources {
         internal static string SexPosSE {
             get {
                 return ResourceManager.GetString("SexPosSE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
-        ///1,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///1,*顔射,Orgasm,Face,Face,Breast,Maid1,Maid1,Maid1,3PFellatioFace,,OrgasmWaitExcite,,Face,
-        ///1,*口内射精,Orgasm,Mouth,Face,Breast,Maid1,Maid1,Maid1,3PFellatio,,OrgasmWaitExcite,,Mouth,
-        ///1,*ぶっかけ２,Orgasm,Mouth,Face,Breast,Maid1,Maid1,Maid1,3PFellatioFace,,OrgasmWaitExcite,,Bukkake,
-        ///1,*ぶっかけ,Orgasm,Mouth,Face,Breast,Maid1, [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string SexPosSpecialLabels_HappyGBClub {
-            get {
-                return ResourceManager.GetString("SexPosSpecialLabels_HappyGBClub", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,dummy
-        ///1,*待機,Waiting,,,,,,,Waiting,,,,
-        ///2,*待機,Waiting,,,,,,,Waiting,,,,
-        ///3,*待機,Waiting,,,,,,,Waiting,,,,
-        ///4,*待機,Waiting,,,,,,,Waiting,,,,
-        ///5,*待機,Waiting,,,,,,,Waiting,Waiting,,,
-        ///6,*待機,Waiting,,,,,,,Waiting,,,,
-        ///100,*待機,Waiting,,,,,,,Waiting,,,,
-        ///101,*待機,Waiting,,,,,,,Waiting,,,,
-        ///102,*待機,Waiting,,,,,,,Waiting,,,,
-        ///103,*待機,Waiting,,,,,,,Waiting,,,,
-        ///104,*待機,Waiti [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string SexPosSpecialLabels_HaremKing {
-            get {
-                return ResourceManager.GetString("SexPosSpecialLabels_HaremKing", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,dummy
-        ///1,*待機,Waiting,,,,,,,Waiting,,,,
-        ///1,*初々しい秘部弄り絶頂,Orgasm,None,,,,,,Aibu,,OrgasmWait,,
-        ///2,*挿入,Insert,,,,,,,Insert,,,,
-        ///2,*待機,Waiting,,,,,,,Waiting,,,,
-        ///2,*初々しい射精外,Orgasm,Belly,,,Maid1,,,Piston,,OrgasmWait,,
-        ///2,*初々しい射精中,Orgasm,Vagina,,,Maid1,,,Piston,,OrgasmWait,,
-        ///3,*挿入,Insert,,,,,,,Insert,,,,
-        ///3,*待機,Waiting,,,,,,,Waiting,,,,
-        ///3,*初々しい射精外,Orgasm,Belly,,,Maid1,, [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string SexPosSpecialLabels_OrgyParty {
-            get {
-                return ResourceManager.GetString("SexPosSpecialLabels_OrgyParty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SexPosID,ExcitementLevel,LabelName,VoiceType,VoiceType2,LabelGroupID
-        ///1,0,*激しさ１,Fellatio,,1
-        ///1,1,*激しさ１,Fellatio,,1
-        ///1,2,*激しさ２,Fellatio,,1
-        ///1,3,*激しさ３,Fellatio,,1
-        ///1,0,*玉弄り,LickJob,,2
-        ///1,1,*玉弄り,LickJob,,2
-        ///1,2,*玉弄り,LickJob,,2
-        ///1,3,*玉弄り,LickJob,,2
-        ///1,0,*イラマチオ,Fellatio,,3
-        ///1,1,*イラマチオ,Fellatio,,3
-        ///1,2,*イラマチオ,Fellatio,,3
-        ///1,3,*イラマチオ,Fellatio,,3
-        ///2,0,*激しさ１,Piston,,4
-        ///2,1,*激しさ１,Piston,,4
-        ///2,2,*激しさ２,Piston,,4
-        ///2,3,*激しさ３,Piston,,4
-        ///2,0,*激しさ１胸揉み,Piston,,5
-        ///2,1,*激しさ１胸揉み,Piston,,5
-        ///2,2,*激しさ２胸揉み,Piston,,5
-        ///2,3,*激しさ３胸揉み,P [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string SexPosValidLabels_HappyGBClub {
-            get {
-                return ResourceManager.GetString("SexPosValidLabels_HappyGBClub", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SexPosID,ExcitementLevel,LabelName,VoiceType,VoiceType2,LabelGroupID
-        ///100,0,*待機,NoVoiceSmile,,1
-        ///100,1,*待機,NoVoiceSmile,,1
-        ///100,2,*待機,NoVoiceSmile,,1
-        ///100,3,*待機,NoVoiceSmile,,1
-        ///101,0,*待機,Waiting,,2
-        ///101,1,*待機,Waiting,,2
-        ///101,2,*待機,Waiting,,2
-        ///101,3,*待機,Waiting,,2
-        ///102,0,*激しさ１乳首舐め,LickJob,,3
-        ///102,1,*激しさ１乳首舐め,LickJob,,3
-        ///102,2,*激しさ２乳首舐め,LickJob,,3
-        ///102,3,*激しさ３乳首舐め,LickJob,,3
-        ///103,0,*待機,Waiting,,4
-        ///103,1,*待機,Waiting,,4
-        ///103,2,*待機,Waiting,,4
-        ///103,3,*待機,Waiting,,4
-        ///104,0,*靴舐め,LickJob,,5
-        ///104,1,*靴舐め,LickJob,,5
-        /// [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string SexPosValidLabels_HaremKing {
-            get {
-                return ResourceManager.GetString("SexPosValidLabels_HaremKing", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SexPosID,ExcitementLevel,LabelName,VoiceType,VoiceType2,LabelGroupID,,,,
-        ///1,0,*激しさ１秘部弄り,Piston,,1,,,,
-        ///1,1,*激しさ１秘部弄り,Piston,,1,,,,
-        ///1,2,*激しさ２秘部弄り,Piston,,1,,,,
-        ///1,3,*激しさ３秘部弄り,Piston,,1,,,,
-        ///2,0,*激しさ１,Piston,,2,,,,
-        ///2,1,*激しさ１,Piston,,2,,,,
-        ///2,2,*激しさ２,Piston,,2,,,,
-        ///2,3,*激しさ３,Piston,,2,,,,
-        ///2,0,*激しさ１キス,Kiss,,3,,,,
-        ///2,1,*激しさ１キス,Kiss,,3,,,,
-        ///2,2,*激しさ２キス,Kiss,,3,,,,
-        ///2,3,*激しさ３キス,Kiss,,3,,,,
-        ///2,0,*激しさ１胸揉み,Piston,,4,,,,
-        ///2,1,*激しさ１胸揉み,Piston,,4,,,,
-        ///2,2,*激しさ２胸揉み,Piston,,4,,,,
-        ///2,3,*激しさ３胸揉み,Piston,,4,,,,
-        ///3,0,*激しさ１, [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string SexPosValidLabels_OrgyParty {
-            get {
-                return ResourceManager.GetString("SexPosValidLabels_OrgyParty", resourceCulture);
             }
         }
         
@@ -936,6 +560,38 @@ namespace ModResources {
         internal static string SexStateDescription_GBType {
             get {
                 return ResourceManager.GetString("SexStateDescription_GBType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;NormalPlay&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;Orgasm&quot; ]
+        ///  },
+        ///  &quot;Orgasm&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;OrgasmEnd&quot; ]
+        ///  },
+        ///  &quot;OrgasmEnd&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;OrgasmWait&quot; ]
+        ///  },
+        ///  &quot;OrgasmWait&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;SwapMaids&quot;, &quot;SwapMaids&quot;, &quot;SwapMaids&quot;, &quot;SwapMaids&quot;, &quot;SwapMaids&quot; ]
+        ///  },
+        ///  &quot;SwapMaids&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;Insert&quot; ]
+        ///  },
+        ///  &quot;ChangePosition&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;Insert&quot; ]
+        ///  },
+        ///  &quot;Insert&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;InsertEnd&quot; ]
+        ///  },
+        ///  &quot;InsertEnd&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;NormalPlay&quot;  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SexStateDescription_LesbianType {
+            get {
+                return ResourceManager.GetString("SexStateDescription_LesbianType", resourceCulture);
             }
         }
         

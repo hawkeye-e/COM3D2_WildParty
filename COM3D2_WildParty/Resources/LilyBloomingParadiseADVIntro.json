@@ -1,0 +1,85 @@
+{
+  "lbp0001": {
+    "ID": "lbp0001",
+    "Type": "BG",
+    "Tag": "",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_init_chara"
+  },
+
+  "lbp_init_chara": {
+    "ID": "lbp_init_chara",
+    "Type": "CharaInit",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_init_hide_men",
+    "CharaInitData": {
+      "ManRequired": 20,
+      "ValidManType": [
+        "YoungMan"
+      ],
+      "IsClubOwnerADVMainCharacter": false
+    }
+  },
+
+  "lbp_init_hide_men": {
+    "ID": "lbp_init_hide_men",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0001",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": false
+      }
+    ]
+  },
+
+
+  "lbp_intro_0001": {
+    "ID": "lbp_intro_0001",
+    "Type": "BGM",
+    "Tag": "BGM009.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0002"
+  },
+
+  "lbp_intro_0002": {
+    "ID": "lbp_intro_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_yotogiplay_phase1_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（おかしいな…うーん……本当におかしい…）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "lbp_intro_yotogiplay_phase1_closepanel": {
+    "ID": "lbp_intro_yotogiplay_phase1_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_start_yotogiplay_phase1"
+  },
+
+  "lbp_start_yotogiplay_phase1": {
+    "ID": "lbp_start_yotogiplay_phase1",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "LilyBloomingParadise",
+      "Phase": 1,
+      "IsKeepCharacterVisibleAfterYotogi": true,
+      "IsFinalYotogi": false,
+      "IsClubOwnerMainCharacter": false
+    },
+    "NextStepID": "lbp_phase2_init"
+  }
+}

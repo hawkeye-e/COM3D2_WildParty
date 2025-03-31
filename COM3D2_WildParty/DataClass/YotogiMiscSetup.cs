@@ -12,6 +12,7 @@ namespace COM3D2.WildParty.Plugin
         public List<int> SexPosIDs;
         public PosRot Offset;
         public List<ExtraObjectInfo> ExtraObjects;
+        public List<ExtraObjectOnCharacterInfo> ExtraObjectsOnCharacter;
 
         internal class ExtraObjectInfo
         {
@@ -21,5 +22,11 @@ namespace COM3D2.WildParty.Plugin
             public PosRotVectorFormat Offset;
         }
         
+        internal class ExtraObjectOnCharacterInfo
+        {
+            public ExtraItemObject ItemInfo;
+            public Constant.CharacterType CharacterType;        //Maid or Man only
+            public int ArrayPosition;                           //position in the group
+        }
     }
 }

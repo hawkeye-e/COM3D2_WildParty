@@ -115,8 +115,11 @@ namespace COM3D2.WildParty.Plugin
 
                 string[] manIndexSplit = parseItem.ManIndexRaw.Split(';');
                 newItem.ManIndex = new List<int>();
-                for (int i = 0; i < manIndexSplit.Length; i++)
-                    newItem.ManIndex.Add(int.Parse(manIndexSplit[i]));
+                if (!string.IsNullOrEmpty(parseItem.ManIndexRaw))
+                {
+                    for (int i = 0; i < manIndexSplit.Length; i++)
+                        newItem.ManIndex.Add(int.Parse(manIndexSplit[i]));
+                }
 
                 result[parseItem.PersonalityType][parseItem.GroupType].Add(newItem);
             }

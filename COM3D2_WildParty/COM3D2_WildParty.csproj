@@ -187,6 +187,21 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>ImageResources.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resx\ScenarioLilyBloomingParadise.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>ScenarioLilyBloomingParadise.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resx\YotogiMapCoordinatesResources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>YotogiMapCoordinatesResources.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resx\PartyGroupSetupResources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>PartyGroupSetupResources.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resx\PresetResources.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -212,6 +227,21 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>ScenarioOrgyParty.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resx\SexPosListResources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>SexPosListResources.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resx\SexPosSpecialLabelsResources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>SexPosSpecialLabelsResources.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resx\SexPosValidLabelsResources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>SexPosValidLabelsResources.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resx\TextResource.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -229,6 +259,21 @@
 	    <CustomToolNamespace>ModResources</CustomToolNamespace>
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>ImageResources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\ScenarioLilyBloomingParadise.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>ScenarioLilyBloomingParadise.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ScenarioResources</CustomToolNamespace>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\YotogiMapCoordinatesResources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>YotogiMapCoordinatesResources.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ModResources</CustomToolNamespace>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\PartyGroupSetupResources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>PartyGroupSetupResources.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ModResources</CustomToolNamespace>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resx\PresetResources.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
@@ -254,6 +299,21 @@
 	    <CustomToolNamespace>ScenarioResources</CustomToolNamespace>
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>ScenarioOrgyParty.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\SexPosListResources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>SexPosListResources.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ModResources</CustomToolNamespace>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\SexPosSpecialLabelsResources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>SexPosSpecialLabelsResources.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ModResources</CustomToolNamespace>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\SexPosValidLabelsResources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>SexPosValidLabelsResources.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ModResources</CustomToolNamespace>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resx\TextResource.resx">
 	    <CustomToolNamespace>ModResources</CustomToolNamespace>

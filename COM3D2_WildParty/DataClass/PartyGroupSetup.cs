@@ -15,6 +15,7 @@ namespace COM3D2.WildParty.Plugin
         public bool IsRandomAssign;
         public bool IsShuffleMaidList;
         public bool IsShuffleManList;
+        public bool IsLesbianSetup = false;
         public List<int> ExcludePersonality;
         public List<GroupSetupData> GroupSetup;
         public int ExtraManCount = 0;                       //For Shared list. If the logic of yotogi requires assigning extra man to each group, use the one inside GroupSetup

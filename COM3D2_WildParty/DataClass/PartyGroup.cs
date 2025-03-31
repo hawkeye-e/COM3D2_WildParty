@@ -58,6 +58,7 @@ namespace COM3D2.WildParty.Plugin
         public Dictionary<int, Vector3> ManOffsetList = new Dictionary<int, Vector3>();
 
         public Dictionary<string, GameObject> ExtraObjects = new Dictionary<string, GameObject>();
+        public Dictionary<Maid, List<string>> ExtraCharacterObjects = new Dictionary<Maid, List<string>>();
 
         //Key: index
         public Dictionary<int, Maid> ExtraManList = new Dictionary<int, Maid>();
@@ -103,6 +104,7 @@ namespace COM3D2.WildParty.Plugin
                 else if (MaidCount == 1 && ManCount == 2) return Constant.GroupType.MMF;
                 else if (MaidCount == 1 && ManCount == 3) return Constant.GroupType.MMMF;
                 else if (MaidCount == 1 && ManCount == 1) return Constant.GroupType.MF;
+                else if (MaidCount == 2 && ManCount == 0) return Constant.GroupType.FF;
                 else
                     return "";
             }
@@ -417,6 +419,39 @@ namespace COM3D2.WildParty.Plugin
             }
 
             return list;
+        }
+
+        public void ProcAllProp()
+        {
+            ProcProp(Maid1);
+            ProcProp(Maid2);
+            ProcProp(Man1);
+            ProcProp(Man2);
+            ProcProp(Man3);
+        }
+
+        public static void ProcProp(Maid maid)
+        {
+            if (maid != null)
+                maid.AllProcProp();
+        }
+
+        public int GetMaidOrManIndex(Maid maid)
+        {
+            int result = -1;
+            if (maid.boMAN)
+            {
+                for (int i = 0; i < ManCount; i++)
+                    if (GetManAtIndex(i).status.guid == maid.status.guid)
+                        result = i;
+            }
+            else
+            {
+                for (int i = 0; i < MaidCount; i++)
+                    if (GetMaidAtIndex(i).status.guid == maid.status.guid)
+                        result = i;
+            }
+            return result;
         }
 
         //For debug use

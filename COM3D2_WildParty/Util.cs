@@ -241,7 +241,7 @@ namespace COM3D2.WildParty.Plugin
 
             foreach (var group in StateManager.Instance.PartyGroupList)
             {
-                if (group.Maid1.status.guid == chara.status.guid || group.Man1.status.guid == chara.status.guid
+                if (group.Maid1.status.guid == chara.status.guid || group.Man1?.status.guid == chara.status.guid
                     || group.Maid2?.status.guid == chara.status.guid || group.Man2?.status.guid == chara.status.guid
                     || group.Man3?.status.guid == chara.status.guid
                     )
@@ -263,7 +263,7 @@ namespace COM3D2.WildParty.Plugin
 
             foreach (var group in StateManager.Instance.PartyGroupList)
             {
-                if (group.Maid1.status.guid == guid || group.Man1.status.guid == guid
+                if (group.Maid1.status.guid == guid || group.Man1?.status.guid == guid
                     || group.Maid2?.status.guid == guid || group.Man2?.status.guid == guid
                      || group.Man3?.status.guid == guid
                     )

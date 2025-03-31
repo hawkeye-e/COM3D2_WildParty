@@ -95,7 +95,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                     ModResources.ImageResources.icon_harem_king.Save(mStream, ModResources.ImageResources.icon_harem_king.RawFormat);
                 else if (fileName == ModResources.ImageResources.HappyGBClubIconFileName)
                     ModResources.ImageResources.icon_happy_gb_club.Save(mStream, ModResources.ImageResources.icon_happy_gb_club.RawFormat);
-
+                else if (fileName == ModResources.ImageResources.LilyBloomingParadiseFileName)
+                    ModResources.ImageResources.icon_lily_blooming_paradise.Save(mStream, ModResources.ImageResources.icon_lily_blooming_paradise.RawFormat);
+                
                 Texture2D tex = new Texture2D(64, 64);
                 ImageConversion.LoadImage(tex, mStream.ToArray());
 
@@ -120,6 +122,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                     ModResources.ImageResources.icon_harem_king.Save(mStream, ModResources.ImageResources.icon_harem_king.RawFormat);
                 else if (fileName == ModResources.ImageResources.HappyGBClubIconFileName)
                     ModResources.ImageResources.icon_happy_gb_club.Save(mStream, ModResources.ImageResources.icon_happy_gb_club.RawFormat);
+                else if (fileName == ModResources.ImageResources.LilyBloomingParadiseFileName)
+                    ModResources.ImageResources.icon_lily_blooming_paradise.Save(mStream, ModResources.ImageResources.icon_lily_blooming_paradise.RawFormat);
 
                 Texture2D tex = new Texture2D(64, 64);
                 tex.LoadImage(mStream.ToArray());
@@ -173,6 +177,15 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                     GameMain.Instance.SysDlg.Show(warningMessage, SystemDialog.TYPE.OK);
                     return false;
                 }
+                else if(!IsScenarioMaidCountEven(id, maidCountDay) || !IsScenarioMaidCountEven(id, maidCountNight))
+                {
+                    string warningMessage = ModResources.TextResource.MaidCountRequirementEvenNumber;
+                    warningMessage = warningMessage
+                       .Replace(Constant.ResourcesTextReplaceLabel.EventName, moddedScenario.DisplayName);
+
+                    GameMain.Instance.SysDlg.Show(warningMessage, SystemDialog.TYPE.OK);
+                    return false;
+                }
             }
 
             return true;
@@ -193,6 +206,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                         int maidCount = Core.CharacterHandling.GetMaidCountForEventID(moddedScenario.ScenarioID, isDayTime);
 
                         bool isOK = IsScenarioMaidCountValid(yotogiData.id, maidCount);
+                        isOK &= IsScenarioMaidCountEven(yotogiData.id, maidCount);
 
                         icon.WariningFacilty.gameObject.SetActive(!isOK);
                     }
@@ -212,6 +226,20 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                 return true;
 
             return moddedScenario.MaidCount.Max >= maidCount && moddedScenario.MaidCount.Min <= maidCount;
+        }
+
+        private static bool IsScenarioMaidCountEven(int scenarioID, int maidCount)
+        {
+            var moddedScenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == scenarioID).First();
+
+            if (!moddedScenario.MaidCount.IsEven)
+                return true;
+            if (maidCount <= 0)
+                return true;
+            if (!moddedScenario.IsGroupEvent)
+                return true;
+
+            return maidCount % 2 == 0;
         }
     }
 }

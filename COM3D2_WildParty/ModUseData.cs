@@ -111,19 +111,23 @@ namespace COM3D2.WildParty.Plugin
                 InitDataForHappyGBClub();
             else if (scenarioID == ScenarioIDList.AnotherGBDesireScenarioID)
                 InitDataForAnotherGBDesire();
+            else if (scenarioID == ScenarioIDList.LilyBloomingParadiseScenarioID)
+                InitDataForLilyBloomingParadise();
         }
 
         public static void ReloadCoordinateData(int scenarioID)
         {
             MapCoordinateList = new Dictionary<string, MapCoorindates>();
             if (scenarioID == ScenarioIDList.OrgyPartyScenarioID)
-                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.OrgyYotogiMapCoordinates);
+                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_Orgy);
             else if (scenarioID == ScenarioIDList.HaremKingScenarioID)
-                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.HaremKingYotogiMapCoordinates);
+                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_HaremKing);
             else if (scenarioID == ScenarioIDList.HappyGBClubScenarioID)
-                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.HappyGBClubYotogiMapCoordinates);
+                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_HappyGBClub);
             else if (scenarioID == ScenarioIDList.AnotherGBDesireScenarioID) 
-                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.AnotherGBDesireYotogiMapCoordinates);
+                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_AnotherGBDesire);
+            else if (scenarioID == ScenarioIDList.LilyBloomingParadiseScenarioID)
+                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_LilyBloomingParadise);
         }
 
         private static void ResetModUseData()
@@ -139,39 +143,39 @@ namespace COM3D2.WildParty.Plugin
         {
             ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.OrgyPartyScenarioID);
 
-            InitBackgroundMotionDictionary(ModResources.TextResource.SexPosList_OrgyParty, ModResources.TextResource.SexPosValidLabels_OrgyParty, ModResources.TextResource.SexPosSpecialLabels_OrgyParty);
-            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.TextResource.SexPosList_OrgyParty);
+            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_OrgyParty, ModResources.SexPosValidLabelsResources.SexPosValidLabels_OrgyParty, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_OrgyParty);
+            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_OrgyParty);
 
             InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.OrgyYotogiMapCoordinates);
+            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_Orgy);
 
-            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.TextResource.PartyGroupSetup_OrgyParty);
+            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_OrgyParty);
         }
 
         private static void InitDataForHaremKing()
         {
             ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.HaremKingScenarioID);
 
-            InitBackgroundMotionDictionary(ModResources.TextResource.SexPosList_HaremKing, ModResources.TextResource.SexPosValidLabels_HaremKing, ModResources.TextResource.SexPosSpecialLabels_HaremKing);
-            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.TextResource.SexPosList_HaremKing);
+            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_HaremKing, ModResources.SexPosValidLabelsResources.SexPosValidLabels_HaremKing, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_HaremKing);
+            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_HaremKing);
 
             InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.HaremKingYotogiMapCoordinates);
+            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_HaremKing);
 
-            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.TextResource.PartyGroupSetup_HaremKing);
+            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_HaremKing);
         }
 
         private static void InitDataForHappyGBClub()
         {
             ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.HappyGBClubScenarioID);
 
-            InitBackgroundMotionDictionary(ModResources.TextResource.SexPosList_HappyGBClub, ModResources.TextResource.SexPosValidLabels_HappyGBClub, ModResources.TextResource.SexPosSpecialLabels_HappyGBClub);
-            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.TextResource.SexPosList_HappyGBClub);
+            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_HappyGBClub, ModResources.SexPosValidLabelsResources.SexPosValidLabels_HappyGBClub, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_HappyGBClub);
+            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_HappyGBClub);
 
             InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.HappyGBClubYotogiMapCoordinates);
+            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_HappyGBClub);
 
-            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.TextResource.PartyGroupSetup_HappyGBClub);
+            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_HappyGBClub);
         }
 
         //This is a scenario that reuse some of the resources of Happy GB Club.
@@ -179,13 +183,26 @@ namespace COM3D2.WildParty.Plugin
         {
             ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.AnotherGBDesireScenarioID);
             
-            InitBackgroundMotionDictionary(ModResources.TextResource.SexPosList_HappyGBClub, ModResources.TextResource.SexPosValidLabels_HappyGBClub, ModResources.TextResource.SexPosSpecialLabels_HappyGBClub);
-            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.TextResource.SexPosList_HappyGBClub);
+            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_HappyGBClub, ModResources.SexPosValidLabelsResources.SexPosValidLabels_HappyGBClub, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_HappyGBClub);
+            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_HappyGBClub);
             
             InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.TextResource.AnotherGBDesireYotogiMapCoordinates);
+            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_AnotherGBDesire);
 
-            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.TextResource.PartyGroupSetup_AnotherGBDesire);
+            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_AnotherGBDesire);
+        }
+
+        private static void InitDataForLilyBloomingParadise()
+        {
+            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.LilyBloomingParadiseScenarioID);
+
+            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_LilyBloomingParadise, ModResources.SexPosValidLabelsResources.SexPosValidLabels_LilyBloomingParadise, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_LilyBloomingParadise);
+            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_LilyBloomingParadise);
+
+            InitAllVoiceDataFromCSV();
+            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_LilyBloomingParadise);
+
+            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_LilyBloomingParadise);
         }
 
         private static void InitAllVoiceDataFromCSV()
@@ -265,6 +282,8 @@ namespace COM3D2.WildParty.Plugin
                 SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_GBType);
             else if (ruleName == Constant.SexStateRuleDefinition.GangBangQueued)
                 SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_GBQueuedType);
+            else if (ruleName == Constant.SexStateRuleDefinition.Lesbian)
+                SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_LesbianType);
             else
                 SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription);
         }
