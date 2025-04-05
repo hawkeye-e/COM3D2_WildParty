@@ -1,0 +1,86 @@
+{
+
+  "lbp_phase2_init": {
+    "ID": "lbp_phase2_init",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "SystemFadeOut",
+    "NextStepID": "lbp_phase2_init_a"
+  },
+
+  "lbp_phase2_init_a": {
+    "ID": "lbp_phase2_init_a",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_phase2_init_b"
+  },
+
+  "lbp_phase2_init_b": {
+    "ID": "lbp_phase2_init_b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_phase2_init_c",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "lbp_phase2_init_c": {
+    "ID": "lbp_phase2_init_c",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "lbp_phase2_0001"
+  },
+
+
+
+
+
+  "lbp_phase2_0001": {
+    "ID": "lbp_phase2_0001",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_yotogiplay_phase2_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ÅiPhase 2 starting pointÅj"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+
+
+  "lbp_yotogiplay_phase2_closepanel": {
+    "ID": "lbp_yotogiplay_phase2_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_start_yotogiplay_phase2"
+  },
+
+
+
+  "lbp_start_yotogiplay_phase2": {
+    "ID": "lbp_start_yotogiplay_phase2",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "LilyBloomingParadise",
+      "Phase": 2,
+      "IsKeepCharacterVisibleAfterYotogi": false,
+      "IsFinalYotogi": true,
+      "IsClubOwnerMainCharacter": false
+    },
+    "NextStepID": "lbp_postyotogi_init"
+  }
+}

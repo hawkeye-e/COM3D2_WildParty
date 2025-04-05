@@ -575,7 +575,7 @@ namespace ModResources {
         ///    &quot;NextStates&quot;: [ &quot;OrgasmWait&quot; ]
         ///  },
         ///  &quot;OrgasmWait&quot;: {
-        ///    &quot;NextStates&quot;: [ &quot;SwapMaids&quot;, &quot;SwapMaids&quot;, &quot;SwapMaids&quot;, &quot;SwapMaids&quot;, &quot;SwapMaids&quot; ]
+        ///    &quot;NextStates&quot;: [ &quot;ChangePosition&quot;, &quot;ChangePosition&quot;, &quot;SwapMaids&quot;, &quot;SwapMaids&quot;, &quot;Insert&quot; ]
         ///  },
         ///  &quot;SwapMaids&quot;: {
         ///    &quot;NextStates&quot;: [ &quot;Insert&quot; ]
@@ -587,11 +587,40 @@ namespace ModResources {
         ///    &quot;NextStates&quot;: [ &quot;InsertEnd&quot; ]
         ///  },
         ///  &quot;InsertEnd&quot;: {
-        ///    &quot;NextStates&quot;: [ &quot;NormalPlay&quot;  [rest of string was truncated]&quot;;.
+        ///    &quot;NextStates&quot;: [ &quot;Norma [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexStateDescription_LesbianType {
             get {
                 return ResourceManager.GetString("SexStateDescription_LesbianType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [
+        ///  {
+        ///    &quot;ScenarioID&quot;: 9901002,
+        ///    &quot;Override&quot;: [
+        ///      {
+        ///        &quot;SkillID&quot;: 30030,
+        ///        &quot;CommandID&quot;: 13928,
+        ///        &quot;Enabled&quot;: false
+        ///      },
+        ///      {
+        ///        &quot;SkillID&quot;: 30040,
+        ///        &quot;CommandID&quot;: 13937,
+        ///        &quot;Enabled&quot;: false
+        ///      }
+        ///      
+        ///    ]
+        ///  },
+        ///  
+        ///
+        ///
+        ///].
+        /// </summary>
+        internal static string YotogiCommandDataOverride {
+            get {
+                return ResourceManager.GetString("YotogiCommandDataOverride", resourceCulture);
             }
         }
         

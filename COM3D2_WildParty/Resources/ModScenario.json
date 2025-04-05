@@ -421,6 +421,28 @@
         "IsMainManOwner": true,
 
         "SexStateRule": "Lesbian"
+      },
+
+      {
+        "Phase": 2,
+        "DefaultMap": {
+          "DayMapID": "Shukuhakubeya_BedRoom",
+          "NightMapID": "Shukuhakubeya_BedRoom_Night",
+          "BGM": "BGM021.ogg",
+          "FormationOption": [ "Phase2_Default" ],
+          "DefaultFormation": "Phase2_Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition",
+          "ChangePositionAll",
+          "SwapMaidWithinGroup",
+          "ChangePartner",
+          "FetishLesbianPlay"
+        ],
+        "IsMainManOwner": true,
+
+        "SexStateRule": "Common"
       }
     ],
 

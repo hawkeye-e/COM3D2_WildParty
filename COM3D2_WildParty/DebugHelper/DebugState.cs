@@ -28,6 +28,7 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
 
         internal Dictionary<string, List<string>> ScriptInfoCapture = new Dictionary<string, List<string>>();
 
+        internal Maid DummyMan;
 
         internal string[] DebugVoiceFileInQuestion = {
 

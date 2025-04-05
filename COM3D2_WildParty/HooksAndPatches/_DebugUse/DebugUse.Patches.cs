@@ -658,7 +658,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
 
             else if (Input.GetKeyDown(KeyCode.Keypad9))
             {
-                foreach(var g in StateManager.Instance.PartyGroupList)
+                foreach (var g in StateManager.Instance.PartyGroupList)
                 {
                     PrintCharacterPosRot(g.Maid1);
                     PrintCharacterPosRot(g.Maid2);
@@ -672,43 +672,72 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                 float offset = 0.1f;
                 if (DebugHelper.DebugState.Instance.IsCtrlPressed)
                     offset = 0.01f;
+                offset = offset / 10;
                 DebugHelper.DebugState.Instance.DebugX -= offset;
-                
+                WildParty.Log.LogInfo("(x, y, z): " + DebugHelper.DebugState.Instance.DebugX.ToString("#.000")
+                    + "," + DebugHelper.DebugState.Instance.DebugY.ToString("#.000")
+                    + "," + DebugHelper.DebugState.Instance.DebugZ.ToString("#.000")
+                    );
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 float offset = 0.1f;
                 if (DebugHelper.DebugState.Instance.IsCtrlPressed)
                     offset = 0.01f;
+                offset = offset / 10;
                 DebugHelper.DebugState.Instance.DebugX += offset;
+                WildParty.Log.LogInfo("(x, y, z): " + DebugHelper.DebugState.Instance.DebugX.ToString("#.000")
+                    + "," + DebugHelper.DebugState.Instance.DebugY.ToString("#.000")
+                    + "," + DebugHelper.DebugState.Instance.DebugZ.ToString("#.000")
+                    );
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 float offset = 0.1f;
                 if (DebugHelper.DebugState.Instance.IsCtrlPressed)
                     offset = 0.01f;
+                offset = offset / 10;
                 DebugHelper.DebugState.Instance.DebugY -= offset;
+                WildParty.Log.LogInfo("(x, y, z): " + DebugHelper.DebugState.Instance.DebugX.ToString("#.000")
+                    + "," + DebugHelper.DebugState.Instance.DebugY.ToString("#.000")
+                    + "," + DebugHelper.DebugState.Instance.DebugZ.ToString("#.000")
+                    );
             }
             else if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 float offset = 0.1f;
                 if (DebugHelper.DebugState.Instance.IsCtrlPressed)
                     offset = 0.01f;
+                offset = offset / 10;
                 DebugHelper.DebugState.Instance.DebugY += offset;
+                WildParty.Log.LogInfo("(x, y, z): " + DebugHelper.DebugState.Instance.DebugX.ToString("#.000")
+                    + "," + DebugHelper.DebugState.Instance.DebugY.ToString("#.000")
+                    + "," + DebugHelper.DebugState.Instance.DebugZ.ToString("#.000")
+                    );
             }
             else if (Input.GetKeyDown(KeyCode.Alpha5))
             {
                 float offset = 0.1f;
                 if (DebugHelper.DebugState.Instance.IsCtrlPressed)
                     offset = 0.01f;
+                offset = offset / 10;
                 DebugHelper.DebugState.Instance.DebugZ -= offset;
+                WildParty.Log.LogInfo("(x, y, z): " + DebugHelper.DebugState.Instance.DebugX.ToString("#.000")
+                    + "," + DebugHelper.DebugState.Instance.DebugY.ToString("#.000")
+                    + "," + DebugHelper.DebugState.Instance.DebugZ.ToString("#.000")
+                    );
             }
             else if (Input.GetKeyDown(KeyCode.Alpha6))
             {
                 float offset = 0.1f;
                 if (DebugHelper.DebugState.Instance.IsCtrlPressed)
                     offset = 0.01f;
+                offset = offset / 10;
                 DebugHelper.DebugState.Instance.DebugZ += offset;
+                WildParty.Log.LogInfo("(x, y, z): " + DebugHelper.DebugState.Instance.DebugX.ToString("#.000")
+                    + "," + DebugHelper.DebugState.Instance.DebugY.ToString("#.000")
+                    + "," + DebugHelper.DebugState.Instance.DebugZ.ToString("#.000")
+                    );
             }
         }
 
@@ -862,6 +891,112 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
 
                 }
 
+            }
+            else if (Input.GetKeyDown(KeyCode.Keypad5))
+            {
+                //Convert the main maid to man, for testing on lesbian motion and fix the IK
+
+                var maid = GameMain.Instance.CharacterMgr.GetMaid(0);
+                Maid maid2 = GameMain.Instance.CharacterMgr.GetStockMaidList()[2];
+                GameMain.Instance.CharacterMgr.SetActiveMaid(maid2, 1);
+                maid2.Visible = true;
+                //maid2.transform.position = new Vector3(2f, 2f, 2f);
+
+                //maid.transform.localScale = new Vector3(1.10f, 1.06f, 0.87f);
+
+                var man = GameMain.Instance.CharacterMgr.GetMan(0);
+                man.transform.position = new Vector3(2f, 2f, 2f);
+
+                maid.SetProp("kousoku_lower", "kousokuL_omytgc014_peniban_I_.menu", 0, true);
+                maid.AllProcProp();
+
+                Helper.BoneNameConverter.ConvertFemaleStructureToMale(maid, DebugHelper.DebugState.Instance.DummyMan);
+                StateManager.Instance.SpoofActivateMaidObjectFlag = true;
+                maid.boMAN = true;
+                GameMain.Instance.CharacterMgr.SetActiveMan(maid, 0);
+                GameMain.Instance.CharacterMgr.SetActiveMaid(maid2, 0);
+                StateManager.Instance.SpoofActivateMaidObjectFlag = false;
+
+                maid.SetProp(MPN.DouPer, 50, true); //leg length
+                maid.SetProp(MPN.sintyou, 50, true);//height
+                maid.SetProp(MPN.UdeScl, 50, true); //arm length
+                maid.SetProp(MPN.kata, 50, true); //shoulder
+
+                maid.AllProcProp();
+
+                StateManager.Instance.IsMaidConvertToManScriptMotion = true;
+
+                PartyGroup group = new PartyGroup();
+                group.Maid1 = maid2;
+                group.Man1 = maid;
+                StateManager.Instance.PartyGroupList.Add(group);
+            }
+
+            else if (Input.GetKeyDown(KeyCode.Keypad7))
+            {
+                //Generate a man character and put it in DummyMan
+                DebugHelper.DebugState.Instance.DummyMan = Core.CharacterHandling.InitMan(0, new List<string> { "YoungMan" });
+                DebugHelper.DebugState.Instance.DummyMan.transform.position = new Vector3(1f, 1f, 1f);
+            }
+
+            else if (Input.GetKeyDown(KeyCode.Keypad8))
+            {
+                var maid = GameMain.Instance.CharacterMgr.GetMaid(0);
+                var man = GameMain.Instance.CharacterMgr.GetMan(0);
+
+                ScriptManagerFast.KagTagSupportFast tag = new ScriptManagerFast.KagTagSupportFast();
+                tag.AddTagProperty("tagname", "ikattachbone");
+
+                tag.AddTagProperty("offsetx", DebugHelper.DebugState.Instance.DebugX.ToString());
+                tag.AddTagProperty("offsety", DebugHelper.DebugState.Instance.DebugY.ToString());
+                tag.AddTagProperty("offsetz", DebugHelper.DebugState.Instance.DebugZ.ToString());
+                tag.AddTagProperty("srcbone", "左手");
+                tag.AddTagProperty("attach_type", "NewPoint");
+                //tag.AddTagProperty("targetobj", "body");
+                tag.AddTagProperty("targetbone", "_IK_calfR");
+                //tag.AddTagProperty("axisbone", "Mune_R");
+                //tag.AddTagProperty("targetpoint", "乳首右");
+
+                string ik_name = tag.GetTagProperty("srcbone").AsString();
+                kt.ik.IKAttachParam iKAttachParam = kt.ik.IKScriptHelper.GetIKAttachParam(tag, man, maid);
+                //kt.ik.IKAttachParam iKAttachParam = kt.ik.IKScriptHelper.GetIKAttachParam(tag, maid, man);
+                iKAttachParam.targetBoneName = tag.GetTagProperty("targetbone").AsString();
+                //iKAttachParam.slotName = tag.GetTagProperty("targetobj").AsString();
+                //iKAttachParam.attachPointName = tag.GetTagProperty("targetpoint").AsString();
+                //iKAttachParam.axisBoneName = tag.GetTagProperty("axisbone").AsString();
+
+
+                man.body0.fullBodyIK.IKAttach(ik_name, iKAttachParam);
+                //maid.body0.fullBodyIK.IKAttach(ik_name, iKAttachParam);
+            }
+            else if (Input.GetKeyDown(KeyCode.Keypad9))
+            {
+                var man = GameMain.Instance.CharacterMgr.GetMan(0);
+                var maid = GameMain.Instance.CharacterMgr.GetMaid(0);
+
+                ScriptManagerFast.KagTagSupportFast tag = new ScriptManagerFast.KagTagSupportFast();
+                tag.AddTagProperty("tagname", "ikattachbone");
+
+                tag.AddTagProperty("offsetx", DebugHelper.DebugState.Instance.DebugX.ToString());
+                tag.AddTagProperty("offsety", DebugHelper.DebugState.Instance.DebugY.ToString());
+                tag.AddTagProperty("offsetz", DebugHelper.DebugState.Instance.DebugZ.ToString());
+                tag.AddTagProperty("srcbone", "右手");
+                tag.AddTagProperty("attach_type", "NewPoint");
+                //tag.AddTagProperty("targetobj", "body");
+                tag.AddTagProperty("targetbone", "_IK_calfL");
+                //tag.AddTagProperty("axisbone", "Mune_L");
+                //tag.AddTagProperty("targetpoint", "乳首左");
+
+                string ik_name = tag.GetTagProperty("srcbone").AsString();
+                kt.ik.IKAttachParam iKAttachParam = kt.ik.IKScriptHelper.GetIKAttachParam(tag, man, maid);
+                //kt.ik.IKAttachParam iKAttachParam = kt.ik.IKScriptHelper.GetIKAttachParam(tag, maid, man);
+                iKAttachParam.targetBoneName = tag.GetTagProperty("targetbone").AsString();
+                //iKAttachParam.slotName = tag.GetTagProperty("targetobj").AsString();
+                //iKAttachParam.attachPointName = tag.GetTagProperty("targetpoint").AsString();
+                //iKAttachParam.axisBoneName = tag.GetTagProperty("axisbone").AsString();
+                
+                man.body0.fullBodyIK.IKAttach(ik_name, iKAttachParam);
+                //maid.body0.fullBodyIK.IKAttach(ik_name, iKAttachParam);
             }
         }
 

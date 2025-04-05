@@ -1,16 +1,10 @@
 [
   {
     "ScenarioID": 9901002,
-    "ScriptName": "sex_OM_seijyoui.ks",
+    "ScriptName": [ "sex_OM_seijyoui.ks", "sex_OM_seijyouiA.ks" ],
     "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
-    "MatchingCondition": [
-      [ "tagname", "ikattachpoint" ],
-      [ "src", "man:0" ],
-      [ "target", "maid:0" ],
-      [ "srcbone", "ç∂éË" ],
-      [ "targetpoint", "ì˚éÒâE" ],
-      [ "targetobj", "body" ]
-    ],
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
     "TagData": [
       [ "tagname", "ikattachpoint" ],
       [ "src", "man:0" ],
@@ -25,16 +19,10 @@
   },
   {
     "ScenarioID": 9901002,
-    "ScriptName": "sex_OM_seijyoui.ks",
+    "ScriptName": [ "sex_OM_seijyoui.ks", "sex_OM_seijyouiA.ks" ],
     "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
-    "Type": "ikattachpoint",
-    "MatchingCondition": [
-      [ "src", "man:0" ],
-      [ "target", "maid:0" ],
-      [ "srcbone", "âEéË" ],
-      [ "targetpoint", "ì˚éÒç∂" ],
-      [ "targetobj", "body" ]
-    ],
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
     "TagData": [
       [ "tagname", "ikattachpoint" ],
       [ "src", "man:0" ],
@@ -46,7 +34,5717 @@
       [ "offsety", "-0.011" ],
       [ "offsetz", "-0.015" ]
     ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_seijyoui.ks", "sex_OM_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.030" ],
+      [ "offsety", "-0.022" ],
+      [ "offsetz", "-0.030" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_seijyoui.ks", "sex_OM_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.056" ],
+      [ "offsety", "-0.010" ],
+      [ "offsetz", "-0.013" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_seijyoui.ks", "sex_OM_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.051" ],
+      [ "offsety", "-0.009" ],
+      [ "offsetz", "-0.002" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_seijyoui.ks", "sex_OM_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.051" ],
+      [ "offsety", "-0.009" ],
+      [ "offsetz", "0.018" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_seijyoui.ks", "sex_OM_seijyouiA.ks" ],
+    "LabelName": "*ï¯Ç´ïtÇ´åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.08" ],
+      [ "offsety", "-0.08" ],
+      [ "offsetz", "-0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_seijyoui.ks", "sex_OM_seijyouiA.ks" ],
+    "LabelName": "*ï¯Ç´ïtÇ´åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ClavicleL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.04" ],
+      [ "offsety", "0.08" ],
+      [ "offsetz", "-0.19" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_seijyoui.ks", "sex_OM_seijyouiA.ks" ],
+    "LabelName": "*ï¯Ç´ïtÇ´åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.08" ],
+      [ "offsety", "-0.07" ],
+      [ "offsetz", "-0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_seijyoui.ks", "sex_OM_seijyouiA.ks" ],
+    "LabelName": "*ï¯Ç´ïtÇ´åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ClavicleL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "0.065" ],
+      [ "offsetz", "-0.15" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_seijyoui.ks", "sex_OM_seijyouiA.ks" ],
+    "LabelName": "*ï¯Ç´ïtÇ´åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.08" ],
+      [ "offsety", "-0.085" ],
+      [ "offsetz", "-0.02" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_seijyoui.ks", "sex_OM_seijyouiA.ks" ],
+    "LabelName": "*ï¯Ç´ïtÇ´åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ClavicleL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.045" ],
+      [ "offsetz", "-0.18" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.022" ],
+      [ "offsety", "-0.036" ],
+      [ "offsetz", "-0.036" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.012" ],
+      [ "offsety", "0.024" ],
+      [ "offsetz", "-0.036" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.022" ],
+      [ "offsety", "-0.036" ],
+      [ "offsetz", "-0.026" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.012" ],
+      [ "offsety", "0.024" ],
+      [ "offsetz", "-0.046" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.052" ],
+      [ "offsety", "-0.036" ],
+      [ "offsetz", "-0.036" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.032" ],
+      [ "offsety", "0.034" ],
+      [ "offsetz", "-0.066" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.06" ],
+      [ "offsety", "-0.08" ],
+      [ "offsetz", "0.04" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.08" ],
+      [ "offsety", "-0.04" ],
+      [ "offsetz", "0.1" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.05" ],
+      [ "offsety", "-0.09" ],
+      [ "offsetz", "0.04" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.07" ],
+      [ "offsety", "-0.04" ],
+      [ "offsetz", "0.11" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "-0.08" ],
+      [ "offsetz", "0.04" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.05" ],
+      [ "offsety", "-0.04" ],
+      [ "offsetz", "0.11" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPï¯Ç´ïtÇ´",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_hara" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "-0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPï¯Ç´ïtÇ´",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hara" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "-0.04" ],
+      [ "offsetz", "0.02" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQï¯Ç´ïtÇ´",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_hara" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "-0.01" ],
+      [ "offsetz", "0.02" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQï¯Ç´ïtÇ´",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hara" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.02" ],
+      [ "offsety", "-0.03" ],
+      [ "offsetz", "0.05" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRï¯Ç´ïtÇ´",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_hara" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.06" ],
+      [ "offsety", "0" ],
+      [ "offsetz", "-0.01" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kouhaii.ks", "sex_OM_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRï¯Ç´ïtÇ´",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hara" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.02" ],
+      [ "offsety", "-0.03" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+
+
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.04" ],
+      [ "offsety", "-0.01" ],
+      [ "offsetz", "0.02" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.06" ],
+      [ "offsety", "-0.013" ],
+      [ "offsetz", "-0.02" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.05" ],
+      [ "offsety", "-0.015" ],
+      [ "offsetz", "0.012" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.05" ],
+      [ "offsety", "-0.015" ],
+      [ "offsetz", "-0.009" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.050" ],
+      [ "offsety", "-0.015" ],
+      [ "offsetz", "-0.005" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.050" ],
+      [ "offsety", "-0.015" ],
+      [ "offsetz", "-0.005" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "ManBip R Calf" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.09" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "-0.06" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "ManBip L Calf" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.075" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "0.08" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "ManBip R Calf" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.07" ],
+      [ "offsety", "0.05" ],
+      [ "offsetz", "-0.05" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "ManBip L Calf" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.085" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "0.047" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.05" ],
+      [ "offsety", "-0.01" ],
+      [ "offsetz", "-0.01" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.02" ],
+      [ "offsety", "-0.038" ],
+      [ "offsetz", "0.005" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPÉOÉâÉCÉìÉh",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "ManBip R Calf" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.09" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "-0.06" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPÉOÉâÉCÉìÉh",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "ManBip L Calf" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.075" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "0.08" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQÉOÉâÉCÉìÉh",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "ManBip R Calf" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.07" ],
+      [ "offsety", "0.05" ],
+      [ "offsetz", "-0.05" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQÉOÉâÉCÉìÉh",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "ManBip L Calf" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.085" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "0.047" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRÉOÉâÉCÉìÉh",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.05" ],
+      [ "offsety", "-0.01" ],
+      [ "offsetz", "-0.01" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenkijyoui.ks", "sex_OM_taimenkijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRÉOÉâÉCÉìÉh",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.02" ],
+      [ "offsety", "-0.038" ],
+      [ "offsetz", "0.005" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kakae_seijyoui.ks", "sex_OM_kakae_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.02" ],
+      [ "offsety", "0.06" ],
+      [ "offsetz", "-0.035" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kakae_seijyoui.ks", "sex_OM_kakae_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "-0.045" ],
+      [ "offsetz", "-0.035" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kakae_seijyoui.ks", "sex_OM_kakae_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0.052" ],
+      [ "offsetz", "-0.025" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kakae_seijyoui.ks", "sex_OM_kakae_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.006" ],
+      [ "offsety", "-0.045" ],
+      [ "offsetz", "-0.035" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kakae_seijyoui.ks", "sex_OM_kakae_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.015" ],
+      [ "offsety", "0.052" ],
+      [ "offsetz", "-0.025" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kakae_seijyoui.ks", "sex_OM_kakae_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "-0.048" ],
+      [ "offsetz", "-0.015" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kakae_seijyoui.ks", "sex_OM_kakae_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "-0.03" ],
+      [ "offsetz", "-0.1" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kakae_seijyoui.ks", "sex_OM_kakae_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "-0.02" ],
+      [ "offsetz", "0.11" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kakae_seijyoui.ks", "sex_OM_kakae_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.065" ],
+      [ "offsetz", "-0.08" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kakae_seijyoui.ks", "sex_OM_kakae_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.055" ],
+      [ "offsetz", "0.08" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kakae_seijyoui.ks", "sex_OM_kakae_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.03" ],
+      [ "offsety", "0.065" ],
+      [ "offsetz", "-0.09" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_kakae_seijyoui.ks", "sex_OM_kakae_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.03" ],
+      [ "offsety", "0.055" ],
+      [ "offsetz", "0.09" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_yorisoi_sokui.ks", "sex_OM_yorisoi_sokuiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "-0.02" ],
+      [ "offsetz", "-0.05" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_yorisoi_sokui.ks", "sex_OM_yorisoi_sokuiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "-0.06" ],
+      [ "offsetz", "-0.08" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_yorisoi_sokui.ks", "sex_OM_yorisoi_sokuiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "-0.01" ],
+      [ "offsetz", "-0.06" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_yorisoi_sokui.ks", "sex_OM_yorisoi_sokuiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "-0.03" ],
+      [ "offsetz", "-0.08" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_yorisoi_sokui.ks", "sex_OM_yorisoi_sokuiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "-0.01" ],
+      [ "offsetz", "-0.06" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_yorisoi_sokui.ks", "sex_OM_yorisoi_sokuiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "-0.07" ],
+      [ "offsetz", "-0.08" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_yorisoi_sokui.ks", "sex_OM_yorisoi_sokuiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.08" ],
+      [ "offsety", "-0.10" ],
+      [ "offsetz", "-0.011" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_yorisoi_sokui.ks", "sex_OM_yorisoi_sokuiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "-0.06" ],
+      [ "offsetz", "-0.08" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_yorisoi_sokui.ks", "sex_OM_yorisoi_sokuiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.12" ],
+      [ "offsety", "-0.10" ],
+      [ "offsetz", "-0.015" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_yorisoi_sokui.ks", "sex_OM_yorisoi_sokuiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "-0.03" ],
+      [ "offsetz", "-0.08" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_yorisoi_sokui.ks", "sex_OM_yorisoi_sokuiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.12" ],
+      [ "offsety", "-0.10" ],
+      [ "offsetz", "-0.01" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_yorisoi_sokui.ks", "sex_OM_yorisoi_sokuiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "-0.07" ],
+      [ "offsetz", "-0.08" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_udemoti_kouhaii.ks", "sex_OM_udemoti_kouhaiiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_udemoti_kouhaii.ks", "sex_OM_udemoti_kouhaiiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_udemoti_kouhaii.ks", "sex_OM_udemoti_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.025" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_udemoti_kouhaii.ks", "sex_OM_udemoti_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.025" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_udemoti_kouhaii.ks", "sex_OM_udemoti_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.015" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_udemoti_kouhaii.ks", "sex_OM_udemoti_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.015" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_udemoti_kouhaii.ks", "sex_OM_udemoti_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.015" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_udemoti_kouhaii.ks", "sex_OM_udemoti_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.015" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_udemoti_kouhaii.ks", "sex_OM_udemoti_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.025" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_udemoti_kouhaii.ks", "sex_OM_udemoti_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "0.05" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "-0.06" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_udemoti_kouhaii.ks", "sex_OM_udemoti_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.015" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_udemoti_kouhaii.ks", "sex_OM_udemoti_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "0.045" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "-0.075" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_udemoti_kouhaii.ks", "sex_OM_udemoti_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.015" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_udemoti_kouhaii.ks", "sex_OM_udemoti_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0" ],
+      [ "offsetz", "-0.05" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_utubuse_kouhaii.ks", "sex_OM_utubuse_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0" ],
+      [ "offsetz", "-0.05" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_utubuse_kouhaii.ks", "sex_OM_utubuse_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "-0.04" ],
+      [ "offsetz", "-0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_utubuse_kouhaii.ks", "sex_OM_utubuse_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "-0.02" ],
+      [ "offsetz", "-0.03" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_utubuse_kouhaii.ks", "sex_OM_utubuse_kouhaiiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.07" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_utubuse_kouhaii.ks", "sex_OM_utubuse_kouhaiiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.07" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_utubuse_kouhaii.ks", "sex_OM_utubuse_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.07" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_utubuse_kouhaii.ks", "sex_OM_utubuse_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.06" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_manguri2.ks", "sex_OM_manguri2A.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "-0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_manguri2.ks", "sex_OM_manguri2A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.02" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "-0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_manguri2.ks", "sex_OM_manguri2A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0.022" ],
+      [ "offsetz", "-0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_manguri2.ks", "sex_OM_manguri2A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0.018" ],
+      [ "offsetz", "-0.09" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_sokui3.ks", "sex_sokui3A.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.04" ],
+      [ "offsety", "0.08" ],
+      [ "offsetz", "-0.08" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_sokui3.ks", "sex_sokui3A.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0.01" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_sokui3.ks", "sex_sokui3A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.120" ],
+      [ "offsety", "0.09" ],
+      [ "offsetz", "-0.03" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_sokui3.ks", "sex_sokui3A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0.01" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_sokui3.ks", "sex_sokui3A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_sokui3.ks", "sex_sokui3A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0.01" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_sokui3.ks", "sex_sokui3A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.025" ],
+      [ "offsety", "0" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_sokui3.ks", "sex_sokui3A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0.01" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_sokui3.ks", "sex_sokui3A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "0.03" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_sokui3.ks", "sex_sokui3A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0.01" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_sokui3.ks", "sex_sokui3A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "0.03" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_sokui3.ks", "sex_sokui3A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0.01" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_sokui3.ks", "sex_sokui3A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "0.03" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_sokui3.ks", "sex_sokui3A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0.01" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_ritui2.ks", "sex_ritui2A.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0" ],
+      [ "offsetz", "-0.09" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_ritui2.ks", "sex_ritui2A.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "-0.02" ],
+      [ "offsetz", "0.07" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_ritui2.ks", "sex_ritui2A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.09" ],
+      [ "offsety", "-0.092" ],
+      [ "offsetz", "0.05" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_ritui2.ks", "sex_ritui2A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.09" ],
+      [ "offsety", "-0.06" ],
+      [ "offsetz", "0.065" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_ritui2.ks", "sex_ritui2A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.09" ],
+      [ "offsety", "-0.09" ],
+      [ "offsetz", "0.065" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_ritui2.ks", "sex_ritui2A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.09" ],
+      [ "offsety", "-0.07" ],
+      [ "offsetz", "0.055" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_ritui2.ks", "sex_ritui2A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.09" ],
+      [ "offsety", "-0.09" ],
+      [ "offsetz", "0.065" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_ritui2.ks", "sex_ritui2A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.09" ],
+      [ "offsety", "-0.05" ],
+      [ "offsetz", "0.055" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_ritui2.ks", "sex_ritui2A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "-0.026" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0.005" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_ritui2.ks", "sex_ritui2A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.09" ],
+      [ "offsety", "-0.06" ],
+      [ "offsetz", "0.065" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_ritui2.ks", "sex_ritui2A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_ritui2.ks", "sex_ritui2A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.09" ],
+      [ "offsety", "-0.07" ],
+      [ "offsetz", "0.055" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_ritui2.ks", "sex_ritui2A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "-0.02" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_ritui2.ks", "sex_ritui2A.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.09" ],
+      [ "offsety", "-0.05" ],
+      [ "offsetz", "0.055" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ClavicleR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "-0.03" ],
+      [ "offsetz", "0.24" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ClavicleL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "0.06" ],
+      [ "offsetz", "-0.16" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine1_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.02" ],
+      [ "offsety", "-0.03" ],
+      [ "offsetz", "-0.10" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine1_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.02" ],
+      [ "offsety", "-0.07" ],
+      [ "offsetz", "0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "ManBip R Clavicle" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.15" ],
+      [ "offsety", "-0.01" ],
+      [ "offsetz", "-0.03" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine1_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.02" ],
+      [ "offsety", "-0.04" ],
+      [ "offsetz", "-0.10" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine1_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.02" ],
+      [ "offsety", "-0.075" ],
+      [ "offsetz", "0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "ManBip R Clavicle" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.15" ],
+      [ "offsety", "-0.015" ],
+      [ "offsetz", "-0.03" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "ManBip L Clavicle" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.15" ],
+      [ "offsety", "0.025" ],
+      [ "offsetz", "0.03" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine1_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.02" ],
+      [ "offsety", "-0.06" ],
+      [ "offsetz", "-0.08" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine1_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "-0.08" ],
+      [ "offsetz", "0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "ManBip Head" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.09" ],
+      [ "offsety", "-0.15" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "ManBip Head" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.08" ],
+      [ "offsety", "-0.13" ],
+      [ "offsetz", "0.04" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "-0.02" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine1_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "-0.066" ],
+      [ "offsetz", "0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ClavicleR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.09" ],
+      [ "offsety", "-0.05" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "-0.024" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "-0.03" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine1_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "-0.055" ],
+      [ "offsetz", "0.08" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ClavicleR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.09" ],
+      [ "offsety", "-0.05" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "0.01" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine1_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "-0.05" ],
+      [ "offsetz", "0.08" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_taimenzai.ks", "sex_OM_taimenzaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ClavicleR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.08" ],
+      [ "offsety", "-0.05" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_kijyoui.ks", "sex_tetunagi_kijyouiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_handR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.03" ],
+      [ "offsety", "0.025" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_kijyoui.ks", "sex_tetunagi_kijyouiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_handL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.03" ],
+      [ "offsety", "0.025" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_kijyoui.ks", "sex_tetunagi_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_handR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.03" ],
+      [ "offsety", "0.025" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_kijyoui.ks", "sex_tetunagi_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_handL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.03" ],
+      [ "offsety", "0.025" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_kijyoui.ks", "sex_tetunagi_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_handR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.03" ],
+      [ "offsety", "0.025" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_kijyoui.ks", "sex_tetunagi_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_handL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.03" ],
+      [ "offsety", "0.025" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_kijyoui.ks", "sex_tetunagi_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_handR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.03" ],
+      [ "offsety", "0.025" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_kijyoui.ks", "sex_tetunagi_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_handL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.03" ],
+      [ "offsety", "0.025" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_hizadati_sex_kouhaii.ks", "sex_hizadati_sex_kouhaiiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_hizadati_sex_kouhaii.ks", "sex_hizadati_sex_kouhaiiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_hizadati_sex_kouhaii.ks", "sex_hizadati_sex_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0.01" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_hizadati_sex_kouhaii.ks", "sex_hizadati_sex_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_hizadati_sex_kouhaii.ks", "sex_hizadati_sex_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.021" ],
+      [ "offsety", "0.002" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_hizadati_sex_kouhaii.ks", "sex_hizadati_sex_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.027" ],
+      [ "offsety", "0.001" ],
+      [ "offsetz", "0.01" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_hizadati_sex_kouhaii.ks", "sex_hizadati_sex_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_hizadati_sex_kouhaii.ks", "sex_hizadati_sex_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_hizadati_sex_kouhaii.ks", "sex_hizadati_sex_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_hizadati_sex_kouhaii.ks", "sex_hizadati_sex_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "axisbone", "Mune_R" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "-0.035" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_hizadati_sex_kouhaii.ks", "sex_hizadati_sex_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_hizadati_sex_kouhaii.ks", "sex_hizadati_sex_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "axisbone", "Mune_R" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.005" ],
+      [ "offsety", "0" ],
+      [ "offsetz", "-0.05" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_hizadati_sex_kouhaii.ks", "sex_hizadati_sex_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_hizadati_sex_kouhaii.ks", "sex_hizadati_sex_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "axisbone", "Mune_R" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "0.02" ],
+      [ "offsety", "0" ],
+      [ "offsetz", "-0.05" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.03" ],
+      [ "offsety", "0.024" ],
+      [ "offsetz", "0.04" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0.034" ],
+      [ "offsetz", "-0.03" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.025" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "0.04" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.02" ],
+      [ "offsety", "0.025" ],
+      [ "offsetz", "-0.03" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.03" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "0.04" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.02" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "-0.03" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.035" ],
+      [ "offsety", "-0.05" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.035" ],
+      [ "offsety", "-0.07" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "axisbone", "Mune_R" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "-0.01" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "axisbone", "Mune_L" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "-0.015" ],
+      [ "offsetz", "-0.01" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.025" ],
+      [ "offsety", "-0.06" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.025" ],
+      [ "offsety", "-0.06" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "axisbone", "Mune_R" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "-0.015" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "axisbone", "Mune_L" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "-0.015" ],
+      [ "offsetz", "0.015" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.045" ],
+      [ "offsety", "-0.06" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.055" ],
+      [ "offsety", "-0.05" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "axisbone", "Mune_R" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "-0.015" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_deep_seijyoui.ks", "sex_deep_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "axisbone", "Mune_L" ],
+      [ "targetobj", "body" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "-0.02" ],
+      [ "offsetz", "-0.015" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_misetuke_haimenritui.ks", "sex_misetuke_haimenrituiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine0a_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_misetuke_haimenritui.ks", "sex_misetuke_haimenrituiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "-0.02" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_misetuke_haimenritui.ks", "sex_misetuke_haimenrituiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine0a_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_misetuke_haimenritui.ks", "sex_misetuke_haimenrituiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0.04" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_misetuke_haimenritui.ks", "sex_misetuke_haimenrituiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine0a_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_misetuke_haimenritui.ks", "sex_misetuke_haimenrituiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.025" ],
+      [ "offsetz", "0.04" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_misetuke_haimenritui.ks", "sex_misetuke_haimenrituiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine0a_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_misetuke_haimenritui.ks", "sex_misetuke_haimenrituiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "0.04" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_misetuke_haimenritui.ks", "sex_misetuke_haimenrituiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "0.02" ],
+      [ "offsety", "-0.01" ],
+      [ "offsetz", "-0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_misetuke_haimenritui.ks", "sex_misetuke_haimenrituiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_misetuke_haimenritui.ks", "sex_misetuke_haimenrituiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "-0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_misetuke_haimenritui.ks", "sex_misetuke_haimenrituiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_misetuke_haimenritui.ks", "sex_misetuke_haimenrituiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0" ],
+      [ "offsetz", "-0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_misetuke_haimenritui.ks", "sex_misetuke_haimenrituiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_seijyoui.ks", "sex_tetunagi_seijyouiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_handR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "-0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_seijyoui.ks", "sex_tetunagi_seijyouiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_handL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "-0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_seijyoui.ks", "sex_tetunagi_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_handR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "-0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_seijyoui.ks", "sex_tetunagi_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_handL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "-0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_seijyoui.ks", "sex_tetunagi_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_handR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "-0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_seijyoui.ks", "sex_tetunagi_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_handL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "-0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_seijyoui.ks", "sex_tetunagi_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_handR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "-0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_tetunagi_seijyoui.ks", "sex_tetunagi_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_handL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "-0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_haimenekiben.ks", "sex_OM_haimenekibenA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.03" ],
+      [ "offsety", "-0.07" ],
+      [ "offsetz", "-0.06" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_haimenekiben.ks", "sex_OM_haimenekibenA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.03" ],
+      [ "offsety", "-0.05" ],
+      [ "offsetz", "0.04" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_haimenekiben.ks", "sex_OM_haimenekibenA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.03" ],
+      [ "offsety", "-0.09" ],
+      [ "offsetz", "-0.05" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_haimenekiben.ks", "sex_OM_haimenekibenA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.07" ],
+      [ "offsety", "-0.08" ],
+      [ "offsetz", "0.09" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_haimenekiben.ks", "sex_OM_haimenekibenA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.11" ],
+      [ "offsety", "-0.09" ],
+      [ "offsetz", "-0.05" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_haimenekiben.ks", "sex_OM_haimenekibenA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.12" ],
+      [ "offsety", "-0.062" ],
+      [ "offsetz", "0.09" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_haimenekiben.ks", "sex_OM_haimenekibenA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.11" ],
+      [ "offsety", "-0.09" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_OM_haimenekiben.ks", "sex_OM_haimenekibenA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.12" ],
+      [ "offsety", "-0.09" ],
+      [ "offsetz", "0.06" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_kakaekomizai.ks", "sex_kakaekomizaiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.09" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0.09" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_kakaekomizai.ks", "sex_kakaekomizaiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.09" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "-0.09" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_kakaekomizai.ks", "sex_kakaekomizaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.09" ],
+      [ "offsety", "0" ],
+      [ "offsetz", "0.09" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_kakaekomizai.ks", "sex_kakaekomizaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.09" ],
+      [ "offsety", "0" ],
+      [ "offsetz", "-0.09" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_kakaekomizai.ks", "sex_kakaekomizaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0.11" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_kakaekomizai.ks", "sex_kakaekomizaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "-0.09" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_kakaekomizai.ks", "sex_kakaekomizaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0.09" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_kakaekomizai.ks", "sex_kakaekomizaiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "-0.09" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_bg_seijyoui.ks", "sex_bg_seijyouiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_bg_seijyoui.ks", "sex_bg_seijyouiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Add",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_bg_seijyoui.ks", "sex_bg_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_bg_seijyoui.ks", "sex_bg_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_bg_seijyoui.ks", "sex_bg_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_bg_seijyoui.ks", "sex_bg_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_bg_seijyoui.ks", "sex_bg_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_bg_seijyoui.ks", "sex_bg_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_bg_seijyoui.ks", "sex_bg_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0.045" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_bg_seijyoui.ks", "sex_bg_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "0.009" ],
+      [ "offsety", "-0.045" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_bg_seijyoui.ks", "sex_bg_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0.045" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_bg_seijyoui.ks", "sex_bg_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "0.009" ],
+      [ "offsety", "-0.045" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_bg_seijyoui.ks", "sex_bg_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0.045" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_bg_seijyoui.ks", "sex_bg_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "0.009" ],
+      [ "offsety", "-0.045" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_inu_kouhaii.ks", "sex_inu_kouhaiiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine0a_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.04" ],
+      [ "offsetz", "0.03" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_inu_kouhaii.ks", "sex_inu_kouhaiiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_inu_kouhaii.ks", "sex_inu_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine1a_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.09" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "0.03" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_inu_kouhaii.ks", "sex_inu_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_inu_kouhaii.ks", "sex_inu_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine1a_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.07" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "0.03" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_inu_kouhaii.ks", "sex_inu_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_inu_kouhaii.ks", "sex_inu_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine1a_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.07" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "0.03" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_inu_kouhaii.ks", "sex_inu_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_inu_kouhaii.ks", "sex_inu_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "0.025" ],
+      [ "offsety", "-0.01" ],
+      [ "offsetz", "-0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_inu_kouhaii.ks", "sex_inu_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_inu_kouhaii.ks", "sex_inu_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "0.025" ],
+      [ "offsety", "-0.01" ],
+      [ "offsetz", "-0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_inu_kouhaii.ks", "sex_inu_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_inu_kouhaii.ks", "sex_inu_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "-0.01" ],
+      [ "offsetz", "-0.07" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_inu_kouhaii.ks", "sex_inu_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_thighR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine1_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0.01" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.05" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine1_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0.01" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "-0.02" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_hipR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "0.025" ],
+      [ "offsetz", "-0.05" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_hipL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0.02" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_Spine_2" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_Spine1_1" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "-0.02" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "-0.005" ],
+      [ "offsetz", "-0.03" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "-0.04" ],
+      [ "offsetz", "0.03" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "-0.02" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "-0.005" ],
+      [ "offsetz", "-0.02" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "0.015" ],
+      [ "offsetz", "-0.02" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "-0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_mittyaku_kijyoui.ks", "sex_mittyaku_kijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "maid:0" ],
+      [ "target", "man:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "-0.015" ],
+      [ "offsetz", "0.06" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_udemoti_tati_kouhaii.ks", "sex_udemoti_tati_kouhaiiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.013" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_udemoti_tati_kouhaii.ks", "sex_udemoti_tati_kouhaiiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "0.013" ],
+      [ "offsetz", "-0.01" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_udemoti_tati_kouhaii.ks", "sex_udemoti_tati_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "0.013" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_udemoti_tati_kouhaii.ks", "sex_udemoti_tati_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.013" ],
+      [ "offsetz", "-0.01" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_udemoti_tati_kouhaii.ks", "sex_udemoti_tati_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "0.008" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_udemoti_tati_kouhaii.ks", "sex_udemoti_tati_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "0.008" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_udemoti_tati_kouhaii.ks", "sex_udemoti_tati_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "0.008" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_udemoti_tati_kouhaii.ks", "sex_udemoti_tati_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_ForeArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "0.008" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_udemoti_tati_kouhaii.ks", "sex_udemoti_tati_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.036" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_udemoti_tati_kouhaii.ks", "sex_udemoti_tati_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "0" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "-0.06" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_udemoti_tati_kouhaii.ks", "sex_udemoti_tati_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.036" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_udemoti_tati_kouhaii.ks", "sex_udemoti_tati_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0" ],
+      [ "offsetz", "-0.06" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_udemoti_tati_kouhaii.ks", "sex_udemoti_tati_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_ForeArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.036" ],
+      [ "offsety", "0.01" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_udemoti_tati_kouhaii.ks", "sex_udemoti_tati_kouhaiiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒâE" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_R" ],
+      [ "offsetx", "0.01" ],
+      [ "offsety", "0" ],
+      [ "offsetz", "-0.06" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_osaetuke_seijyoui.ks", "sex_osaetuke_seijyouiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_UpperArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_osaetuke_seijyoui.ks", "sex_osaetuke_seijyouiA.ks" ],
+    "LabelName": "*ë“ã@",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_UpperArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_osaetuke_seijyoui.ks", "sex_osaetuke_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_UpperArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_osaetuke_seijyoui.ks", "sex_osaetuke_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_UpperArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_osaetuke_seijyoui.ks", "sex_osaetuke_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_UpperArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.015" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_osaetuke_seijyoui.ks", "sex_osaetuke_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_UpperArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.015" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_osaetuke_seijyoui.ks", "sex_osaetuke_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_UpperArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_osaetuke_seijyoui.ks", "sex_osaetuke_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_UpperArmL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.025" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_osaetuke_seijyoui.ks", "sex_osaetuke_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_UpperArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_osaetuke_seijyoui.ks", "sex_osaetuke_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇPãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "-0.015" ],
+      [ "offsety", "-0.035" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_osaetuke_seijyoui.ks", "sex_osaetuke_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_UpperArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_osaetuke_seijyoui.ks", "sex_osaetuke_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "-0.01" ],
+      [ "offsety", "-0.035" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_osaetuke_seijyoui.ks", "sex_osaetuke_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_UpperArmR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.03" ],
+      [ "offsety", "0.005" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_osaetuke_seijyoui.ks", "sex_osaetuke_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇRãπùÜÇ›",
+    "Type": "Replace",
+    "IKType": "ikattachpoint",
+    "TagData": [
+      [ "tagname", "ikattachpoint" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetpoint", "ì˚éÒç∂" ],
+      [ "attach_type", "NewPoint" ],
+      [ "targetobj", "body" ],
+      [ "axisbone", "Mune_L" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "-0.035" ],
+      [ "offsetz", "-0.04" ]
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_kaikyaku_seijyoui.ks", "sex_kaikyaku_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_calfR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_kaikyaku_seijyoui.ks", "sex_kaikyaku_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇP",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_calfL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_kaikyaku_seijyoui.ks", "sex_kaikyaku_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_calfR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_kaikyaku_seijyoui.ks", "sex_kaikyaku_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇQ",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_calfL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_kaikyaku_seijyoui.ks", "sex_kaikyaku_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "ç∂éË" ],
+      [ "targetbone", "_IK_calfR" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.04" ],
+      [ "offsety", "0.03" ],
+      [ "offsetz", "0" ]
+    ]
+  },
+  {
+    "ScenarioID": 9901002,
+    "ScriptName": [ "sex_kaikyaku_seijyoui.ks", "sex_kaikyaku_seijyouiA.ks" ],
+    "LabelName": "*åÉÇµÇ≥ÇR",
+    "Type": "Replace",
+    "IKType": "ikattachbone",
+    "TagData": [
+      [ "tagname", "ikattachbone" ],
+      [ "src", "man:0" ],
+      [ "target", "maid:0" ],
+      [ "srcbone", "âEéË" ],
+      [ "targetbone", "_IK_calfL" ],
+      [ "attach_type", "NewPoint" ],
+      [ "offsetx", "-0.02" ],
+      [ "offsety", "0.02" ],
+      [ "offsetz", "0" ]
+    ]
   }
-
-
 ]

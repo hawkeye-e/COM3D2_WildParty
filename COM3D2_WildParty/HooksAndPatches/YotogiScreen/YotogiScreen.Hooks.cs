@@ -74,6 +74,13 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             Patches.InitExtraCommandButtons();
         }
 
+        //Check if there is any command override setting from this mod
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(YotogiCommandFactory), nameof(YotogiCommandFactory.AddCommand))]
+        private static bool YotogiCommandFactoryAddCommandPre(Yotogis.Skill.Data.Command.Data command_data)
+        {
+            return Patches.IsEnableCommand(command_data);
+        }
 
         [HarmonyPostfix]
         [HarmonyPatch(typeof(YotogiCommandFactory), nameof(YotogiCommandFactory.AddCommand))]
@@ -187,8 +194,10 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
         [HarmonyPostfix]
         [HarmonyPatch(typeof(ScriptManager), nameof(ScriptManager.LoadMotionScript))]
-        private static void LoadMotionScriptPost(int sloat, bool is_next, string file_name, string label_name, string maid_guid, string man_guid, bool face_fix, bool valid_pos, bool disable_diff_pos)
+        private static void LoadMotionScriptPost(ScriptManager __instance, int sloat, bool is_next, string file_name, string label_name, string maid_guid, string man_guid, bool face_fix, bool valid_pos, bool disable_diff_pos)
         {
+            Patches.ApplyIKRectify(__instance, file_name, label_name);
+
             Patches.EndSpoofingLoadMotionScript();
             //When this function is called the system will always try to set the main group to its default position of the map which is not what we want. Apply the position setting again.
             if (StateManager.Instance.UndergoingModEventID > 0 && StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiPlay)
@@ -412,46 +421,53 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         }
 #endif
 
-        [HarmonyPrefix]
-        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachBone))]
-        private static void TagIKAttachBone(BaseKagManager __instance, ref KagTagSupport tag_data)
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(YotogiCommandFactory), "GetCommandName")]
+        private static void YotogiCommandFactoryGetCommandNamePost(Yotogis.Skill.Data.Command.Data.Basic commandDataBasic, ref string __result)
         {
-            tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
+            __result = Patches.GetOverrideCommandName(commandDataBasic, __result);
         }
 
-        [HarmonyPrefix]
-        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachBoneNext))]
-        private static void TagIKAttachBoneNext(BaseKagManager __instance, ref KagTagSupport tag_data)
-        {
-            tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
-        }
+        //[HarmonyPrefix]
+        //[HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachBone))]
+        //private static void TagIKAttachBone(BaseKagManager __instance, ref KagTagSupport tag_data)
+        //{
+        //    tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
+        //}
 
-        [HarmonyPrefix]
-        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachIKBone))]
-        private static void TagIKAttachIKBone(BaseKagManager __instance, ref KagTagSupport tag_data)
-        {
-            tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
-        }
+        //[HarmonyPrefix]
+        //[HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachBoneNext))]
+        //private static void TagIKAttachBoneNext(BaseKagManager __instance, ref KagTagSupport tag_data)
+        //{
+        //    tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
+        //}
 
-        [HarmonyPrefix]
-        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachIKBoneNext))]
-        private static void TagIKAttachIKBoneNext(BaseKagManager __instance, ref KagTagSupport tag_data)
-        {
-            tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
-        }
+        //[HarmonyPrefix]
+        //[HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachIKBone))]
+        //private static void TagIKAttachIKBone(BaseKagManager __instance, ref KagTagSupport tag_data)
+        //{
+        //    tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
+        //}
 
-        [HarmonyPrefix]
-        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachPoint))]
-        private static void TagIKAttachPoint(BaseKagManager __instance, ref KagTagSupport tag_data)
-        {
-            tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
-        }
+        //[HarmonyPrefix]
+        //[HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachIKBoneNext))]
+        //private static void TagIKAttachIKBoneNext(BaseKagManager __instance, ref KagTagSupport tag_data)
+        //{
+        //    tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
+        //}
 
-        [HarmonyPrefix]
-        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachPointNext))]
-        private static void TagIKAttachPointNext(BaseKagManager __instance, ref KagTagSupport tag_data)
-        {
-            tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
-        }
+        //[HarmonyPrefix]
+        //[HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachPoint))]
+        //private static void TagIKAttachPoint(BaseKagManager __instance, ref KagTagSupport tag_data)
+        //{
+        //    tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
+        //}
+
+        //[HarmonyPrefix]
+        //[HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachPointNext))]
+        //private static void TagIKAttachPointNext(BaseKagManager __instance, ref KagTagSupport tag_data)
+        //{
+        //    tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
+        //}
     }
 }

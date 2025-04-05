@@ -59,6 +59,8 @@ namespace COM3D2.WildParty.Plugin
 
         public static List<IKRectify> IKRectifyList;
 
+        public static List<YotogiCommandDataOverride> YotogiCommandDataOverrideList;
+
         public ModUseData()
         {
         }
@@ -98,6 +100,8 @@ namespace COM3D2.WildParty.Plugin
             CharacterEffectList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, CharacterEffect>>(ModResources.TextResource.CharacterEffect);
 
             IKRectifyList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<IKRectify>>(ModResources.TextResource.IKRectify);
+            
+            YotogiCommandDataOverrideList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<YotogiCommandDataOverride>>(ModResources.TextResource.YotogiCommandDataOverride);
         }
 
         public static void InitDataForScenario(int scenarioID)

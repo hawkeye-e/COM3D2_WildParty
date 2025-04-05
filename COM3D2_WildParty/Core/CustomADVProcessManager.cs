@@ -221,7 +221,6 @@ namespace COM3D2.WildParty.Plugin.Core
                     }
                     else
                     {
-                        //TODO: Male NPC
                         npc = CharacterHandling.InitModNPCMale(modNPCRequest.NPCID);
                         StateManager.Instance.NPCManList.Insert(modNPCRequest.Index, npc);
                     }

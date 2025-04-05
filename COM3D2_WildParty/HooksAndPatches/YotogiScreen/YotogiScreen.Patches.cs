@@ -1015,30 +1015,29 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
         internal static void UpdateMotionScriptDataForGroup(string maid_guid, string scriptFileName, string labelName)
         {
-            //TODO: uncomment the mod event checking
-            //if (StateManager.Instance.UndergoingModEventID > 0)
-            //{
-            if (maid_guid == "")
+            if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                //this is group zero.
-                if (StateManager.Instance.PartyGroupList != null)
-                    if (StateManager.Instance.PartyGroupList.Count > 0)
-                    {
-                        StateManager.Instance.PartyGroupList[0].CurrentLabelName = labelName;
-                        StateManager.Instance.PartyGroupList[0].CurrentScriptFileName = scriptFileName;
-                    }
-            }
-            else
-            {
-                PartyGroup group = Util.GetPartyGroupByGUID(maid_guid);
-                if (group != null)
+                if (maid_guid == "")
                 {
-                    group.CurrentLabelName = labelName;
-                    group.CurrentScriptFileName = scriptFileName;
+                    //this is group zero.
+                    if (StateManager.Instance.PartyGroupList != null)
+                        if (StateManager.Instance.PartyGroupList.Count > 0)
+                        {
+                            StateManager.Instance.PartyGroupList[0].CurrentLabelName = labelName;
+                            StateManager.Instance.PartyGroupList[0].CurrentScriptFileName = scriptFileName;
+                        }
                 }
+                else
+                {
+                    PartyGroup group = Util.GetPartyGroupByGUID(maid_guid);
+                    if (group != null)
+                    {
+                        group.CurrentLabelName = labelName;
+                        group.CurrentScriptFileName = scriptFileName;
+                    }
 
+                }
             }
-            //}
         }
 
         //Return true if need to block loading motion script
@@ -1132,47 +1131,126 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 group.BlockMotionScriptChange = false;
         }
 
-        internal static KagTagSupport GetRectifiedTagDataForIK(BaseKagManager baseKagManager, KagTagSupport tag_data)
+        internal static void ApplyIKRectify(ScriptManager scriptManager, string scriptFileName, string labelName)
         {
-            if (baseKagManager is MotionKagManager)
+            if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                MotionKagManager motionKagManager = baseKagManager as MotionKagManager;
-
-                Maid man = motionKagManager.main_man;
-                Maid maid = motionKagManager.main_maid;
-
-                if (maid == null || man == null)
-                    return tag_data;
-
-                PartyGroup group = Util.GetPartyGroupByCharacter(maid);
-                if (group == null)
-                    return tag_data;
-
-                //try to match the IKRectify List
-                //TODO: include scenario ID checking
-                List<IKRectify> scriptMatches = ModUseData.IKRectifyList.Where(x => x.ScriptName == group.CurrentScriptFileName && x.LabelName == group.CurrentLabelName).ToList();
-                foreach (IKRectify rectifyData in scriptMatches)
+                PartyGroup group = Util.GetPartyGroupByGUID(StateManager.Instance.processingMaidGUID);
+                if (group != null)
                 {
-                    bool isAllMatch = true;
-                    foreach (var condition in rectifyData.MatchingCondition)
+                    List<IKRectify> rectifyList = ModUseData.IKRectifyList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID.ToString() && x.ScriptName.Contains(scriptFileName) && x.LabelName == labelName).ToList();
+                    foreach (var rectifyItem in rectifyList)
                     {
-                        if (tag_data.GetTagProperty(condition[0]).AsString() != condition[1])
+                        ScriptManagerFast.KagTagSupportFast tag = rectifyItem.GetTagDataInKagTagSupportFormat();
+
+                        if (rectifyItem.IKType == IKRectify.IKRectifyType.IKAttachBone)
                         {
-                            isAllMatch = false;
-                            break;
+                            scriptManager.tmp_kag.TagIKAttachBone(tag);
+                        }
+                        else if (rectifyItem.IKType == IKRectify.IKRectifyType.IKAttachPoint)
+                        {
+                            scriptManager.tmp_kag.TagIKAttachPoint(tag);
                         }
                     }
+                }
+            }
+        }
 
-                    if (isAllMatch)
+        internal static bool IsEnableCommand(Yotogis.Skill.Data.Command.Data commandData)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                YotogiCommandDataOverride overrideInfo = ModUseData.YotogiCommandDataOverrideList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).FirstOrDefault();
+                if (overrideInfo == null)
+                    return true;
+
+                int cmdSkillID = commandData.basic.skill_id;
+                int cmdCommandID = commandData.basic.id;
+
+                YotogiCommandDataOverride.OverrideData info = overrideInfo.Override.Where(x => x.SkillID == cmdSkillID && x.CommandID == cmdCommandID).FirstOrDefault();
+                if (info != null)
+                {
+                    return info.Enabled;
+                }
+            }
+
+            return true;
+        }
+
+        internal static string GetOverrideCommandName(Yotogis.Skill.Data.Command.Data.Basic commandDataBasic, string originalResult)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                YotogiCommandDataOverride overrideInfo = ModUseData.YotogiCommandDataOverrideList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).FirstOrDefault();
+                if (overrideInfo == null)
+                    return originalResult;
+
+                int cmdSkillID = commandDataBasic.skill_id;
+                int cmdCommandID = commandDataBasic.id;
+
+                YotogiCommandDataOverride.OverrideData info = overrideInfo.Override.Where(x => x.SkillID == cmdSkillID && x.CommandID == cmdCommandID).FirstOrDefault();
+
+                if (info != null)
+                {
+                    if (!Product.supportMultiLanguage)
                     {
-                        var tag = rectifyData.GetTagDataInKagTagSupportFormat();
-                        return tag;
+                        return info.DisplayName;
+                    }
+                    else
+                    {
+                        return "YotogiSkillCommand/" + info.DisplayName;
                     }
 
                 }
             }
 
-            return tag_data;
+            return originalResult;
         }
+
+        //internal static KagTagSupport GetRectifiedTagDataForIK(BaseKagManager baseKagManager, KagTagSupport tag_data)
+        //{
+        //    if (baseKagManager is MotionKagManager)
+        //    {
+        //        MotionKagManager motionKagManager = baseKagManager as MotionKagManager;
+
+        //        Maid man = motionKagManager.main_man;
+        //        Maid maid = motionKagManager.main_maid;
+
+        //        if (maid == null || man == null)
+        //            return tag_data;
+
+        //        PartyGroup group = Util.GetPartyGroupByCharacter(maid);
+        //        if (group == null)
+        //            return tag_data;
+
+        //        //try to match the IKRectify List
+        //        //TODO: include scenario ID checking
+        //        List<IKRectify> scriptMatches = ModUseData.IKRectifyList.Where(
+        //            x => x.ScriptName.Contains(group.CurrentScriptFileName) && x.LabelName == group.CurrentLabelName
+        //                && x.Type == IKRectify.RectifyType.Replace
+        //            ).ToList();
+        //        foreach (IKRectify rectifyData in scriptMatches)
+        //        {
+        //            bool isAllMatch = true;
+        //            foreach (var condition in rectifyData.MatchingCondition)
+        //            {
+        //                if (tag_data.GetTagProperty(condition[0]).AsString() != condition[1])
+        //                {
+        //                    isAllMatch = false;
+        //                    break;
+        //                }
+        //            }
+
+        //            if (isAllMatch)
+        //            {
+        //                var tag = rectifyData.GetTagDataInKagTagSupportFormat();
+        //                return tag;
+        //            }
+
+        //        }
+        //    }
+
+        //    return tag_data;
+        //}
     }
 }

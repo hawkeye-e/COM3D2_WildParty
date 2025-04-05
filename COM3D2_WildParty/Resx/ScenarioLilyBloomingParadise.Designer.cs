@@ -74,23 +74,53 @@ namespace ScenarioResources {
         ///    &quot;ID&quot;: &quot;lbp_init_chara&quot;,
         ///    &quot;Type&quot;: &quot;CharaInit&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0001&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_init_hide_men&quot;,
         ///    &quot;CharaInitData&quot;: {
+        ///      &quot;ManRequired&quot;: 20,
+        ///      &quot;ValidManType&quot;: [
+        ///        &quot;YoungMan&quot;
+        ///      ],
         ///      &quot;IsClubOwnerADVMainCharacter&quot;: false
         ///    }
         ///  },
         ///
-        ///
-        ///  &quot;lbp_intro_0001&quot;: {
-        ///    &quot;ID&quot;: &quot;lbp_intro_0001&quot;,
-        ///    &quot;Type&quot;: &quot;BGM&quot;,
-        ///    &quot;Tag&quot;: &quot;BGM009.ogg&quot;,
-        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextS [rest of string was truncated]&quot;;.
+        ///  &quot;lbp_init_hide_men&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_init_hide_men [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADVIntro {
             get {
                 return ResourceManager.GetString("LilyBloomingParadiseADVIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///
+        ///  &quot;agbd_phase2_init&quot;: {
+        ///    &quot;ID&quot;: &quot;agbd_phase2_init&quot;,
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
+        ///    &quot;NextStepID&quot;: &quot;agbd_phase2_init_a&quot;
+        ///  },
+        ///
+        ///  &quot;agbd_phase2_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;agbd_phase2_init_a&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;agbd_phase2_init_b&quot;
+        ///  },
+        ///
+        ///  &quot;agbd_phase2_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;agbd_phase2_init_b&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;agbd_phase2_init_c&quot;,
+        ///   [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADVPhase2 {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADVPhase2", resourceCulture);
             }
         }
     }
