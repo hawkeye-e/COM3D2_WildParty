@@ -189,6 +189,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 return false;
             Patches.StartSpoofingLoadMotionScript(label_name, maid_guid, man_guid);
 
+            Patches.ResetGroupIK();
+
             return true;
         }
 
@@ -197,6 +199,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         private static void LoadMotionScriptPost(ScriptManager __instance, int sloat, bool is_next, string file_name, string label_name, string maid_guid, string man_guid, bool face_fix, bool valid_pos, bool disable_diff_pos)
         {
             Patches.ApplyIKRectify(__instance, file_name, label_name);
+
+            Patches.SetupDelayOrgasmMotion(label_name);
+            Patches.RandomizeMaidConvertedManFaceAnime();
 
             Patches.EndSpoofingLoadMotionScript();
             //When this function is called the system will always try to set the main group to its default position of the map which is not what we want. Apply the position setting again.
@@ -370,10 +375,19 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             Patches.ForceChangeManUponCommandClicked(command_data);
         }
 
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(Maid), "Update")]
+        private static void MaidUpdatePre(Maid __instance)
+        {
+            Patches.SpoofSexFlagForMaidUpdate(__instance);
+        }
+
         [HarmonyPostfix]
         [HarmonyPatch(typeof(Maid), "Update")]
         private static void MaidUpdatePost(Maid __instance)
         {
+            Patches.EndSpoofSexFlagForMaidUpdate(__instance);
+
             Patches.CheckMaidAnimationTrigger(__instance);
             Patches.CheckAnimationChangeTrigger(__instance);
             Core.YotogiHandling.CheckManWalkTrigger(__instance);
@@ -403,12 +417,35 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
         }
 
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(YotogiManager), nameof(YotogiManager.ResetWorld))]
+        private static void ResetWorldPre()
+        {
+            Patches.PrepareIgnoreResetPropList();
+        }
+
         [HarmonyPostfix]
         [HarmonyPatch(typeof(YotogiManager), nameof(YotogiManager.ResetWorld))]
-        private static void ResetWorld()
+        private static void ResetWorldPost()
         {
             //In the yotogi scene, the clothes will be reset at the beginning. Apply the clothing setting if it is defined in the json file.
             Patches.ApplyClothesSetting();
+            Patches.CleanUpIgnoreResetPropList();
+        }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(Maid), nameof(Maid.ResetProp), new Type[] { typeof(string), typeof(bool) })]
+        private static bool ResetProp(Maid __instance, string mpn, bool force_reset)
+        {
+            return Patches.IsResetProp(__instance);
+
+        }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagTexMulAdd))]
+        private static bool TagTexMulAdd(BaseKagManager __instance, KagTagSupport tag_data)
+        {
+            return Patches.IsAddTexture(__instance, tag_data);
         }
 
 #if COM3D2
@@ -428,46 +465,5 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             __result = Patches.GetOverrideCommandName(commandDataBasic, __result);
         }
 
-        //[HarmonyPrefix]
-        //[HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachBone))]
-        //private static void TagIKAttachBone(BaseKagManager __instance, ref KagTagSupport tag_data)
-        //{
-        //    tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
-        //}
-
-        //[HarmonyPrefix]
-        //[HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachBoneNext))]
-        //private static void TagIKAttachBoneNext(BaseKagManager __instance, ref KagTagSupport tag_data)
-        //{
-        //    tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
-        //}
-
-        //[HarmonyPrefix]
-        //[HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachIKBone))]
-        //private static void TagIKAttachIKBone(BaseKagManager __instance, ref KagTagSupport tag_data)
-        //{
-        //    tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
-        //}
-
-        //[HarmonyPrefix]
-        //[HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachIKBoneNext))]
-        //private static void TagIKAttachIKBoneNext(BaseKagManager __instance, ref KagTagSupport tag_data)
-        //{
-        //    tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
-        //}
-
-        //[HarmonyPrefix]
-        //[HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachPoint))]
-        //private static void TagIKAttachPoint(BaseKagManager __instance, ref KagTagSupport tag_data)
-        //{
-        //    tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
-        //}
-
-        //[HarmonyPrefix]
-        //[HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagIKAttachPointNext))]
-        //private static void TagIKAttachPointNext(BaseKagManager __instance, ref KagTagSupport tag_data)
-        //{
-        //    tag_data = Patches.GetRectifiedTagDataForIK(__instance, tag_data);
-        //}
     }
 }

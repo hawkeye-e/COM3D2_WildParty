@@ -27,6 +27,7 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             StateManager.Instance.YotogiPhase = step.YotogiSetup.Phase;
             StateManager.Instance.IsFinalYotogi = step.YotogiSetup.IsFinalYotogi;
+            StateManager.Instance.IsYotogiUseModSemenPattern = step.YotogiSetup.UseModSemenPattern;
 
             if (!step.YotogiSetup.IsClubOwnerMainCharacter)
             {
@@ -194,11 +195,14 @@ namespace COM3D2.WildParty.Plugin.Core
             GameMain.Instance.MainCamera.FadeOut(f_dg: delegate
             {
                 ModUseData.ReloadCoordinateData(StateManager.Instance.UndergoingModEventID);
-
-                YotogiHandling.InitArrayForYotogiUsed();
-
+                
+                if (step.YotogiSetup.MaidConvertToMan != null)
+                    YotogiHandling.InitArrayForYotogiUsed(step.YotogiSetup.MaidConvertToMan.RatioPercent);
+                else
+                    YotogiHandling.InitArrayForYotogiUsed();
+                
                 CharacterHandling.SetDefaultGroupFormation();
-
+                
                 CharacterHandling.AssignPartyGrouping(PartyGroup.CurrentFormation);
 
                 YotogiHandling.SetupYotogiSceneInitialSkill(Util.GetCurrentDefaultSexPosID());

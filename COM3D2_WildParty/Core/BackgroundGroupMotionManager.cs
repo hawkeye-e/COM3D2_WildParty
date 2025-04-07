@@ -177,21 +177,24 @@ namespace COM3D2.WildParty.Plugin.Core
 
         internal static void ProcessSemenForGroup(PartyGroup group)
         {
-            BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemOfGroup(group);
+            ProcessSemenForGroup(group, group.CurrentOrgasmLabelRecord);
+        }
 
-            if (ModUseData.SemenPatternList.ContainsKey(group.CurrentOrgasmLabelRecord.SemenType1))
-                CharacterHandling.AddSemenTexture(Util.GetSemenTarget(group, group.CurrentOrgasmLabelRecord.SemenTarget1), ModUseData.SemenPatternList[group.CurrentOrgasmLabelRecord.SemenType1]);
+        internal static void ProcessSemenForGroup(PartyGroup group, MotionSpecialLabel motionSpecialLabel)
+        {
+            if (ModUseData.SemenPatternList.ContainsKey(motionSpecialLabel.SemenType1))
+                CharacterHandling.AddSemenTexture(Util.GetSemenTarget(group, motionSpecialLabel.SemenTarget1), ModUseData.SemenPatternList[motionSpecialLabel.SemenType1]);
 
-            if (!string.IsNullOrEmpty(group.CurrentOrgasmLabelRecord.SemenType2))
+            if (!string.IsNullOrEmpty(motionSpecialLabel.SemenType2))
             {
-                if (ModUseData.SemenPatternList.ContainsKey(group.CurrentOrgasmLabelRecord.SemenType2))
-                    CharacterHandling.AddSemenTexture(Util.GetSemenTarget(group, group.CurrentOrgasmLabelRecord.SemenTarget2), ModUseData.SemenPatternList[group.CurrentOrgasmLabelRecord.SemenType2]);
+                if (ModUseData.SemenPatternList.ContainsKey(motionSpecialLabel.SemenType2))
+                    CharacterHandling.AddSemenTexture(Util.GetSemenTarget(group, motionSpecialLabel.SemenTarget2), ModUseData.SemenPatternList[motionSpecialLabel.SemenType2]);
             }
 
-            if (!string.IsNullOrEmpty(group.CurrentOrgasmLabelRecord.SemenType3))
+            if (!string.IsNullOrEmpty(motionSpecialLabel.SemenType3))
             {
-                if (ModUseData.SemenPatternList.ContainsKey(group.CurrentOrgasmLabelRecord.SemenType3))
-                    CharacterHandling.AddSemenTexture(Util.GetSemenTarget(group, group.CurrentOrgasmLabelRecord.SemenTarget3), ModUseData.SemenPatternList[group.CurrentOrgasmLabelRecord.SemenType3]);
+                if (ModUseData.SemenPatternList.ContainsKey(motionSpecialLabel.SemenType3))
+                    CharacterHandling.AddSemenTexture(Util.GetSemenTarget(group, motionSpecialLabel.SemenTarget3), ModUseData.SemenPatternList[motionSpecialLabel.SemenType3]);
             }
         }
 

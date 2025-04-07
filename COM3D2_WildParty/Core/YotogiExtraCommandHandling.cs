@@ -24,7 +24,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 case Constant.ModYotogiCommandButtonID.ChangeFormation:
                     return new EventDelegate(Orgy_ShowFormationOption);
                 case Constant.ModYotogiCommandButtonID.ChangePartner:
-                    return new EventDelegate(Orgy_ShowMaidList);
+                    return new EventDelegate(ChangePartner_ShowMaidList);
                 case Constant.ModYotogiCommandButtonID.FetishOrgy:
                 case Constant.ModYotogiCommandButtonID.FetishGangBang:
                 case Constant.ModYotogiCommandButtonID.FetishLesbianPlay:
@@ -47,12 +47,18 @@ namespace COM3D2.WildParty.Plugin.Core
                 case Constant.ModYotogiCommandButtonID.OrgasmBukkake:
                 case Constant.ModYotogiCommandButtonID.OrgasmBukkake2:
                     return new EventDelegate(() => OrgasmCommandOnClick(buttonID));
-                    
+
 
                 case Constant.ModYotogiCommandButtonID.ChangeMaidAnotherGBDesire:
                     return new EventDelegate(GBClub_ShowMaidList);
                 case Constant.ModYotogiCommandButtonID.SwapMaidWithinGroup:
                     return new EventDelegate(SwapMaidWithinGroup);
+
+                case Constant.ModYotogiCommandButtonID.ChangeControllingMaid:
+                    return new EventDelegate(ChangeControllingMaid_ShowMaidList);
+                case Constant.ModYotogiCommandButtonID.ShuffleMaidYuri:
+                    return new EventDelegate(ShuffleMaidYuri);
+
                 default:
                     return null;
             }
@@ -78,7 +84,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     if (!ModUseData.ValidSkillList[personality].ContainsKey(groupType))
                         continue;
                     var skillList = ModUseData.ValidSkillList[personality][groupType].Where(x => x.Phase == StateManager.Instance.YotogiPhase);
-                    
+
                     foreach (var skill in skillList)
                     {
                         var cmd = CloneCommandButton(skill.DisplayName, new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeMainGroupSkill_Callback(skill.YotogiSkillID)));
@@ -160,7 +166,7 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
-        public static void Orgy_ShowMaidList()
+        public static void ChangePartner_ShowMaidList()
         {
             StateManager.Instance.ExtraCommandWindow.ResetScrollPosition();
 
@@ -170,7 +176,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 List<GameObject> buttons = new List<GameObject>();
 
-                foreach (var maid in StateManager.Instance.SelectedMaidsList)
+                foreach (var maid in StateManager.Instance.YotogiWorkingMaidList)
                 {
 
                     var cmd = CloneCommandButton(Util.GetMaidDisplayName(maid), new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeTargetMaid_Callback(maid.status.guid)));
@@ -259,7 +265,7 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
-        
+
         private static void ResetMotionToWaiting(PartyGroup group, bool isMovingRight)
         {
             if (ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].SpecialSetting != null)
@@ -388,7 +394,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             //Get the next sex state
             string nextState = ModUseData.SexStateList[SexState.StateType.OrgasmEnd].NextStates[0];
-            
+
             PartyGroup mainGroup = StateManager.Instance.PartyGroupList[0];
             BackgroundGroupMotionManager.ProcessSemenForGroup(mainGroup);
 
@@ -401,7 +407,7 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 //Gangbang rule
                 //randomly pick up the man from extra man list and swap with the main group
-                
+
                 YotogiHandling.ChangeManMembersShareListType(mainGroup);
 
             }
@@ -425,7 +431,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     {
                         bool isManSwap = Util.GetUndergoingScenario().YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First().IsMainManOwner;
                         var cmd = CloneCommandButton(Util.GetMaidDisplayName(maid),
-                        new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeTargetGroup_Callback(maid.status.guid, isManSwap))
+                        new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeTargetGroup_Callback(maid.status.guid, isManSwap, true))
                         );
 
                         var btn = cmd.GetComponent<UIButton>();
@@ -452,9 +458,9 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 CharacterHandling.AssignPartyGrouping_SwapMember(group.Maid1, group.Maid2);
                 CharacterHandling.SetGroupZeroActive();
-                
+
                 YotogiHandling.UpdateParameterView(group.Maid1);
-                
+
                 //need to update the main group
                 var initialSkill = YotogiHandling.GetSkill(group.Maid1.status.personal.id, group.GroupType, group.SexPosID);
                 CharacterHandling.CleanseCharacterMgrArray();
@@ -465,10 +471,78 @@ namespace COM3D2.WildParty.Plugin.Core
             GameMain.Instance.MainCamera.FadeIn(ConfigurableValue.CameraFadeTime);
         }
 
+        public static void ChangeControllingMaid_ShowMaidList()
+        {
+            StateManager.Instance.ExtraCommandWindow.ResetScrollPosition();
+
+            if (CheckRequireExtraCommandWindowPopulate(CustomGameObject.YotogiExtraCommandWindow.Mode.MaidAsManList))
+            {
+                //Load the position list based on the info of maid zero
+                List<GameObject> buttons = new List<GameObject>();
+
+                foreach (var maid in StateManager.Instance.YotogiWorkingManList)
+                {
+                    var cmd = CloneCommandButton(Util.GetMaidDisplayName(maid), new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeTargetGroup_Callback(maid.status.guid, false, false)));
+                    buttons.Add(cmd);
+                }
+                StateManager.Instance.ExtraCommandWindow.ShowContent(buttons, CustomGameObject.YotogiExtraCommandWindow.Mode.MaidAsManList);
+
+                StateManager.Instance.ExtraCommandWindow.SetVisible(true);
+            }
+        }
+
+        public static void ShuffleMaidYuri()
+        {
+            GameMain.Instance.MainCamera.FadeOut(ConfigurableValue.CameraFadeTime, f_dg: delegate
+            {
+                //stop all maid motion
+                foreach (PartyGroup group in StateManager.Instance.PartyGroupList)
+                    group.StopNextReviewTime();
+                
+                CharacterHandling.StopCurrentAnimation();
+                GameMain.Instance.ScriptMgr.StopMotionScript();
+
+                //restore all maid back to female structure
+                foreach (PartyGroup group in StateManager.Instance.PartyGroupList)
+                {
+                    group.DetachAllIK();
+                    for (int i = 0; i < group.ManCount; i++)
+                        if (group.GetManAtIndex(i) != null)
+                            CharacterHandling.RecoverMaidFromManStructure(group.GetManAtIndex(i));
+                }
+
+                //shuffle and convert maid to man
+                ADVStep currentStep = ModUseData.ADVStepData[StateManager.Instance.UndergoingModEventID][StateManager.Instance.CurrentADVStepID];
+                YotogiHandling.InitArrayForYotogiUsed(currentStep.YotogiSetup.MaidConvertToMan.RatioPercent);
+
+                CharacterHandling.AssignPartyGroupingRandom();
+
+                YotogiHandling.SetupYotogiSceneInitialSkill(Util.GetCurrentDefaultSexPosID());
+                CharacterHandling.SetGroupZeroActive();
+
+                BackgroundGroupMotionManager.InitNextReviewTimer();
+                YotogiHandling.UpdateParameterView(StateManager.Instance.PartyGroupList[0].Maid1);
+
+                //need to update the main group
+                var initialSkill = YotogiHandling.GetSkill(StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id, StateManager.Instance.PartyGroupList[0].GroupType);
+                CharacterHandling.CleanseCharacterMgrArray();
+                YotogiHandling.ChangeMainGroupSkill(initialSkill.YotogiSkillID);
+
+                YotogiHandling.SetGroupToScene();
+
+                Util.ResetAllGroupPosition();
+
+                CameraHandling.SetCameraLookAt(StateManager.Instance.PartyGroupList[0].Maid1);
+
+                StateManager.Instance.ExtraCommandWindow.SetVisible(false);
+
+                GameMain.Instance.MainCamera.FadeIn(ConfigurableValue.CameraFadeTime);
+            });
+        }
 
         private static void SetupPreSwapMotionEndTrigger(int indexOffset, bool isMovingRight)
         {
-            foreach(PartyGroup group in StateManager.Instance.PartyGroupList)
+            foreach (PartyGroup group in StateManager.Instance.PartyGroupList)
                 group.BlockMotionScriptChange = true;
 
             //Setup trigger to be executed when target animation starts
@@ -509,10 +583,10 @@ namespace COM3D2.WildParty.Plugin.Core
                 if (commandBtn.Data.Type == ExtraYotogiCommandData.CommandType.Fetish)
                 {
                     Fetish fetishInfo = ModUseData.FetishList.Where(x => x.ID == commandBtn.Data.FetishID).First();
-                    
+
                     YotogiProgressInfo progressInfo = StateManager.Instance.YotogiProgressInfoList[maid.status.guid];
                     var button = commandBtn.Button.GetComponent<UIButton>();
-                    
+
                     //Check if it should be displayed
                     if (maid.status.propensitys.ContainsKey(fetishInfo.ID))
                     {
@@ -524,7 +598,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     {
                         commandBtn.Button.transform.localScale = Vector3.one;
                     }
-                    
+
 
                     //check if it should be enabled
                     bool isAllFulfilled = true;

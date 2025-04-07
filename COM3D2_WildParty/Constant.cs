@@ -13,6 +13,7 @@ namespace COM3D2.WildParty.Plugin
         internal const int YotogiExcitementLevelStep = 100;
         internal const string ClothesSetResetCode = "RESET";
         internal const string ClothesSetStrapOnDildo = "StrapOnDildo";
+        internal const int OrgasmMotionEjaculationTime = 3;
 
         internal static readonly string[] FellatioLabel = { "Fellatio", "DeepThroat", "PainFellatio", "FellatioExcite", "FellatioDrunk", "FellatioBitch" };
 
@@ -226,6 +227,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string EroticDisgust2 = "エロ嫌悪２";
             internal const string EroticLikeable1 = "エロ好感１";
             internal const string EroticLikeable2 = "エロ好感２";
+            internal const string EroticLikeable3 = "エロ好感３";
             internal const string Estrus = "発情";
             internal const string Aftertaste = "余韻弱";
 
@@ -236,6 +238,14 @@ namespace COM3D2.WildParty.Plugin
 
             
 
+        }
+
+        internal static class FaceBlendCode
+        {
+            internal const string ExciteLevel1 = "頬０涙０";
+            internal const string ExciteLevel2 = "頬１涙０";
+            internal const string ExciteLevel3 = "頬２涙０";
+            internal const string ExciteLevel4 = "頬３涙０";
         }
 
 
@@ -379,6 +389,8 @@ namespace COM3D2.WildParty.Plugin
             internal const string NPCMale = "NPC_M";
             internal const string AllNPCFemale = "NPC_F_ALL";
             internal const string AllNPCMale = "NPC_M_ALL";
+
+            internal const string PairedMan = "PairedMan";
         }
 
         internal static class EventProgress
@@ -458,6 +470,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string MaidStatusNickName = "nickName_";
 
             internal const string TBodyAnimCache = "m_AnimCache";
+            internal const string CharacterMgrStockManList = "m_listStockMan";
         }
 
         internal static class DefinedSearchPath
@@ -559,6 +572,8 @@ namespace COM3D2.WildParty.Plugin
             internal const string FetishLesbianPlay = "FetishLesbianPlay";
 
             internal const string SwapMaidWithinGroup = "SwapMaidWithinGroup";
+            internal const string ChangeControllingMaid = "ChangeControllingMaid";
+            internal const string ShuffleMaidYuri = "ShuffleMaidYuri";
         }
 
         internal static class CameraEaseType

@@ -70,28 +70,6 @@ namespace COM3D2.WildParty.Plugin.Helper
             }
         }
 
-        //private static void SetManTransparent(Maid man)
-        //{
-        //    //Code to Force the man character to invisible (require the man character not included in stockman array)
-        //    for (int i = 0; i < man.body0.goSlot.Count; i++)
-        //    {
-        //        var slot = man.body0.goSlot[i];
-        //        if (slot != null)
-        //        {
-        //            var m_listManAlphaMat = HarmonyLib.Traverse.Create(slot).Field("m_listManAlphaMat").GetValue<List<Material>>();
-        //            for (int j = 0; j < m_listManAlphaMat.Count; j++)
-        //            {
-        //                Material material = m_listManAlphaMat[j];
-        //                var f = material.GetFloat("_FloatValue2");
-        //                WildParty.Log.LogInfo(material.name + " float: " + f);
-        //                material.SetFloat("_FloatValue2", 0f);
-        //                material.SetColor("_Color", man.ManColor);
-        //            }
-        //        }
-
-        //    }
-        //}
-
         private static void AddPenis(Maid maid, Maid dummyMan)
         {
             if (dummyMan != null)
@@ -128,7 +106,9 @@ namespace COM3D2.WildParty.Plugin.Helper
 
             srcBoneTransform.SetParent(chinkoCenter.transform);
             srcBoneTransform.localPosition = new Vector3(-0.05f, -0.03f, 0f);
-            
+            srcBoneTransform.localScale = Vector3.one;
+
+
             return srcBoneTransform.transform;
         }
 

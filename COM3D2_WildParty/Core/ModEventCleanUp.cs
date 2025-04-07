@@ -11,8 +11,12 @@ namespace COM3D2.WildParty.Plugin.Core
     {
         internal static void ResetModEvent()
         {
+            //It could happen that some of the maids are converted to man when the mod event end (eg. terminate in the middle of mod event). Do a check and recover all back to maid structure.
+            RecoverMaidStructure();
+
             RemoveAddedStockMan(StateManager.Instance.MenList);
             RemoveAddedStockMan(StateManager.Instance.NPCManList);
+            RemoveMaidPairMan(StateManager.Instance.PairedManForMaidList);
 
             ResetAllMaid();
 
@@ -65,6 +69,24 @@ namespace COM3D2.WildParty.Plugin.Core
                 var m_listStockMan = Traverse.Create(GameMain.Instance.CharacterMgr).Field("m_listStockMan").GetValue<List<Maid>>();
                 if (m_listStockMan != null)
                     m_listStockMan.Remove(chara);
+            }
+        }
+
+        private static void RecoverMaidStructure()
+        {
+            foreach(Maid maid in StateManager.Instance.SelectedMaidsList)
+                CharacterHandling.RecoverMaidFromManStructure(maid);
+        }
+        
+        private static void RemoveMaidPairMan(Dictionary<Maid, Maid> list)
+        {
+            if(list != null)
+            {
+                foreach(var kvp in list)
+                {
+                    //These objects do not belong to any in game array. Can just destroy the object
+                    UnityEngine.Object.DestroyImmediate(kvp.Value.gameObject);
+                }
             }
         }
 
@@ -144,7 +166,10 @@ namespace COM3D2.WildParty.Plugin.Core
             Util.ClearGenericCollection(StateManager.Instance.AddedGameObjectList);
 
             Util.ClearGenericCollection(StateManager.Instance.BackupMaidClothingList);
-
+            Util.ClearGenericCollection(StateManager.Instance.IgnoreResetPropMaidList);
+            Util.ClearGenericCollection(StateManager.Instance.MaidAsManFaceAnimeChangeList);
+            Util.ClearGenericCollection(StateManager.Instance.PairedManForMaidList);
+            
             StateManager.Instance.RequireCheckModdedSceneFlag = false;
             StateManager.Instance.WaitForCharactersFullLoadFlag = false;
             StateManager.Instance.RequireInjectCommandButtons = false;
@@ -152,6 +177,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             StateManager.Instance.IsMotionKagSetPosition = false;
             StateManager.Instance.IsMainGroupMotionScriptFlag = false;
+            StateManager.Instance.IsYotogiUseModSemenPattern = false;
 
             StateManager.Instance.YotogiManager = null;
             StateManager.Instance.YotogiCommandFactory = null;

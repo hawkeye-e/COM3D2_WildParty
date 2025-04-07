@@ -924,7 +924,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
 
                 maid.AllProcProp();
 
-                StateManager.Instance.IsMaidConvertToManScriptMotion = true;
+                //StateManager.Instance.IsMaidConvertToManScriptMotion = true;
 
                 PartyGroup group = new PartyGroup();
                 group.Maid1 = maid2;

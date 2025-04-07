@@ -317,7 +317,7 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
-        private static void SwapPartyGroup(PartyGroup groupZero, PartyGroup targetGroup)
+        private static void SwapPartyGroup(PartyGroup groupZero, PartyGroup targetGroup, bool IsSwapCoordinates)
         {
             //swap the yotogiworkingmaid list
             int workingIndex0 = -1;
@@ -338,7 +338,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 StateManager.Instance.YotogiWorkingMaidList.Insert(workingIndex0, targetGroup.Maid1);
                 StateManager.Instance.YotogiWorkingMaidList.Insert(workingIndexTarget, groupZero.Maid1);
             }
-
+            
             //swap the group
             int targetGroupIndex = -1;
             for (int i = 0; i < StateManager.Instance.PartyGroupList.Count; i++)
@@ -347,7 +347,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     targetGroupIndex = i;
                     break;
                 }
-
+            
             if (targetGroupIndex < 0)
                 return;
 
@@ -361,26 +361,29 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.PartyGroupList.Insert(targetGroupIndex, groupZero);
 
             
-            foreach(var mapCoorindateInfo in ModUseData.MapCoordinateList.Values)
+            if (IsSwapCoordinates)
             {
-                MapCoorindates.CoordinateListInfo currentFormationCoorindateInfoList = mapCoorindateInfo.CoordinateList.Where(x => x.MaxGroup >= StateManager.Instance.PartyGroupList.Count).OrderBy(x => x.MaxGroup).First();
-                MapCoorindates.CoordinatesInfo positionZeroInfo = currentFormationCoorindateInfoList.GroupCoordinates.Where(x => x.ArrayPosition == 0).First();
-                MapCoorindates.CoordinatesInfo targetPositionInfo = currentFormationCoorindateInfoList.GroupCoordinates.Where(x => x.ArrayPosition == targetGroupIndex).First();
+                foreach (var mapCoorindateInfo in ModUseData.MapCoordinateList.Values)
+                {
+                    MapCoorindates.CoordinateListInfo currentFormationCoorindateInfoList = mapCoorindateInfo.CoordinateList.Where(x => x.MaxGroup >= StateManager.Instance.PartyGroupList.Count).OrderBy(x => x.MaxGroup).First();
+                    MapCoorindates.CoordinatesInfo positionZeroInfo = currentFormationCoorindateInfoList.GroupCoordinates.Where(x => x.ArrayPosition == 0).First();
+                    MapCoorindates.CoordinatesInfo targetPositionInfo = currentFormationCoorindateInfoList.GroupCoordinates.Where(x => x.ArrayPosition == targetGroupIndex).First();
+                    
+                    //swap the pos rot info in modusedata
+                    targetPositionInfo.ArrayPosition = 0;
+                    positionZeroInfo.ArrayPosition = targetGroupIndex;
 
-                //swap the pos rot info in modusedata
-                targetPositionInfo.ArrayPosition = 0;
-                positionZeroInfo.ArrayPosition = targetGroupIndex;
-
-                //swap the extra man info in modusedata
-                List<MapCoorindates.ExtraManCoordinatesInfo> positionZeroExtraManInfoList = currentFormationCoorindateInfoList.ExtraManInfo.Where(x => x.GroupIndex == 0).ToList();
-                List<MapCoorindates.ExtraManCoordinatesInfo> targetPositionExtraManInfoList = currentFormationCoorindateInfoList.ExtraManInfo.Where(x => x.GroupIndex == targetGroupIndex).ToList();
-
-                foreach (var info in positionZeroExtraManInfoList)
-                    info.GroupIndex = targetGroupIndex;
-                foreach (var info in targetPositionExtraManInfoList)
-                    info.GroupIndex = 0;
+                    //swap the extra man info in modusedata
+                    List<MapCoorindates.ExtraManCoordinatesInfo> positionZeroExtraManInfoList = currentFormationCoorindateInfoList.ExtraManInfo.Where(x => x.GroupIndex == 0).ToList();
+                    List<MapCoorindates.ExtraManCoordinatesInfo> targetPositionExtraManInfoList = currentFormationCoorindateInfoList.ExtraManInfo.Where(x => x.GroupIndex == targetGroupIndex).ToList();
+                    
+                    foreach (var info in positionZeroExtraManInfoList)
+                        info.GroupIndex = targetGroupIndex;
+                    foreach (var info in targetPositionExtraManInfoList)
+                        info.GroupIndex = 0;
+                }
             }
-
+            
 
         }
 
@@ -417,7 +420,7 @@ namespace COM3D2.WildParty.Plugin.Core
         }
 
         //The formation etc is kept but the main group is changed to group of the selected maid
-        internal static void ChangeTargetGroup_Callback(string maid_guid, bool isManSwap)
+        internal static void ChangeTargetGroup_Callback(string maid_guid, bool isManSwap, bool IsSwapCoordinates)
         {
             GameMain.Instance.MainCamera.FadeOut(ConfigurableValue.CameraFadeTime, f_dg: delegate
             {
@@ -435,36 +438,36 @@ namespace COM3D2.WildParty.Plugin.Core
                 if (isManSwap)
                     CharacterHandling.AssignPartyGrouping_SwapMember(originalGroup.Man1, targetGroup.Man1);
                 
-                SwapPartyGroup(originalGroup, targetGroup);
-
+                SwapPartyGroup(originalGroup, targetGroup, IsSwapCoordinates);
+                
                 //the sexposid of the target group may not be a valid playable skill, update it if necessary
                 if (!ModUseData.ValidSkillList[targetGroup.Maid1.status.personal.id][targetGroup.GroupType].Any(x => x.SexPosID == targetGroup.SexPosID))
                 {
                     var newSkill = YotogiHandling.GetSkill(targetGroup.Maid1.status.personal.id, targetGroup.GroupType);
                     targetGroup.SexPosID = newSkill.SexPosID;
                 }
-
+                
 
                 //make change to the character array in the KISS system
                 CharacterHandling.SetGroupZeroActive();
                 //Prepare the change of yotogi skill for the scene
-
+                
                 int initialSexPosID = targetGroup.SexPosID;
                 YotogiHandling.SetupYotogiSceneInitialSkill(initialSexPosID);
                 
                 BackgroundGroupMotionManager.InitNextReviewTimer();
                 YotogiHandling.UpdateParameterView(StateManager.Instance.PartyGroupList[0].Maid1);
-
+                
                 //need to update the main group
                 //var initialSkill = YotogiHandling.GetRandomSkill(StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id, StateManager.Instance.PartyGroupList[0].GroupType);
                 var initialSkill = YotogiHandling.GetSkill(StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id, StateManager.Instance.PartyGroupList[0].GroupType, initialSexPosID);
                 CharacterHandling.CleanseCharacterMgrArray();
                 YotogiHandling.ChangeMainGroupSkill(initialSkill.YotogiSkillID);
-
+                
                 YotogiHandling.SetGroupToScene();
                 
                 Util.ResetAllGroupPosition();
-
+                
                 StateManager.Instance.ExtraCommandWindow.SetVisible(false);
             });
             GameMain.Instance.MainCamera.FadeIn(ConfigurableValue.CameraFadeTime);

@@ -11,14 +11,31 @@
     "ID": "lbp_init_chara",
     "Type": "CharaInit",
     "WaitingType": "Auto",
-    "NextStepID": "lbp_init_hide_men",
+    "NextStepID": "lbp_init_hide_pairedmen",
     "CharaInitData": {
-      "ManRequired": 20,
-      "ValidManType": [
-        "YoungMan"
-      ],
-      "IsClubOwnerADVMainCharacter": false
+      "ManRequired": 0,
+      "RequiresMaidPairMan": true,
+      "IsClubOwnerADVMainCharacter": true
     }
+  },
+
+  "lbp_init_hide_pairedmen": {
+    "ID": "lbp_init_hide_pairedmen",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_init_hide_men",
+    "CharaData": [
+      {
+        "Type": "PairedMan",
+        "Visible": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-999, -999, -999",
+          "RotString": "0, 1, 0, 0"
+        }
+      }
+    ]
   },
 
   "lbp_init_hide_men": {

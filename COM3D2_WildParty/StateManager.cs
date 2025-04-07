@@ -28,6 +28,9 @@ namespace COM3D2.WildParty.Plugin
         internal List<Maid> NPCList = new List<Maid>();                         //For female NPC (both in-game or mod added) only
         internal List<Maid> NPCManList = new List<Maid>();                      //For male NPC only
 
+        //Key: Maid, Value: Paired Man
+        internal Dictionary<Maid, Maid> PairedManForMaidList = new Dictionary<Maid, Maid>();    //For maid to convert man use
+
         internal List<Maid> DummyManList = new List<Maid>();                    //This is for filling the null place in the man array of the system.
         //Key: Maid GUID
         internal Dictionary<string, ManClothingInfo> ManClothingList = new Dictionary<string, ManClothingInfo>();   //For storing the info of clothed and nude body of a man
@@ -55,6 +58,8 @@ namespace COM3D2.WildParty.Plugin
 
         internal bool WaitForCharactersFullLoadFlag = false;                //flag for waiting the scene to load all required characters etc.
         internal List<Maid> WaitForFullLoadList = new List<Maid>();                //flag for waiting the scene to load the required characters etc.
+        internal List<Maid> IgnoreResetPropMaidList = new List<Maid>();
+        internal List<Maid> MaidAsManFaceAnimeChangeList = new List<Maid>();
 
         internal UILabel CommandLabel = null;
         internal YotogiManager YotogiManager = null;
@@ -107,6 +112,7 @@ namespace COM3D2.WildParty.Plugin
         internal PartyGroup CurrentMotionKagHandlingGroup = null;
         internal bool IsMotionKagSetPosition = false;
         internal bool IsMainGroupMotionScriptFlag = false;
-        internal bool IsMaidConvertToManScriptMotion = false;
+        
+        internal bool IsYotogiUseModSemenPattern = false;
     }
 }

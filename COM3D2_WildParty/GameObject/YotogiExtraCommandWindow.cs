@@ -63,7 +63,8 @@ namespace COM3D2.WildParty.Plugin.CustomGameObject
             PositionList,
             MassPositionList,
             FormationList,
-            MaidList
+            MaidList,
+            MaidAsManList,
         }
 
         public Transform transform;

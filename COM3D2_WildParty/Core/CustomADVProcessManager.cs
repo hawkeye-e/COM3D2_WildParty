@@ -165,6 +165,10 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             CharacterHandling.InitSelectedMaids();
             CharacterHandling.BackupManOrder();
+            
+            //Init paired man for maid
+            if (step.CharaInitData.RequiresMaidPairMan)
+                InitMaidPairMan();
 
             if (step.CharaInitData.ManRequired >= 0)
                 StateManager.Instance.MaxManUsed = step.CharaInitData.ManRequired;
@@ -196,7 +200,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 GameMain.Instance.CharacterMgr.SetActiveMan(StateManager.Instance.ClubOwner, 0);
             }
             StateManager.Instance.SpoofActivateMaidObjectFlag = false;
-
+            
             //init NPC
             StateManager.Instance.NPCList = new List<Maid>();
             if (step.CharaInitData.NPC != null)
@@ -355,7 +359,7 @@ namespace COM3D2.WildParty.Plugin.Core
                         targetList = StateManager.Instance.NPCManList;
                     else
                         targetList = StateManager.Instance.SelectedMaidsList;
-
+                    
                     if (step.CharaData[i].Type == Constant.TargetType.AllMaids)
                     {
                         foreach (var maid in StateManager.Instance.SelectedMaidsList)
@@ -384,6 +388,13 @@ namespace COM3D2.WildParty.Plugin.Core
                     else if (step.CharaData[i].Type == Constant.TargetType.AllNPCMale)
                     {
                         foreach (var man in StateManager.Instance.NPCManList)
+                        {
+                            SetADVCharaDataToCharacter(man, step.CharaData[i], true);
+                        }
+                    }
+                    else if (step.CharaData[i].Type == Constant.TargetType.PairedMan)
+                    {
+                        foreach (var man in StateManager.Instance.PairedManForMaidList.Values.ToList())
                         {
                             SetADVCharaDataToCharacter(man, step.CharaData[i], true);
                         }
@@ -593,6 +604,11 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 int rnd = RNG.Random.Next(RandomList.FaceAnime.RestList.Length);
                 maid.FaceAnime(RandomList.FaceAnime.RestList[rnd]);
+            }
+            else if (faceAnime == RandomList.FaceAnime.FaceAnimeCode.RandomMaidAsManHorny)
+            {
+                int rnd = RNG.Random.Next(RandomList.FaceAnime.MaidAsManHornyList.Length);
+                maid.FaceAnime(RandomList.FaceAnime.MaidAsManHornyList[rnd]);
             }
             else
             {
@@ -1221,7 +1237,19 @@ namespace COM3D2.WildParty.Plugin.Core
 
         }
 
-
+        private static void InitMaidPairMan()
+        {
+            StateManager.Instance.PairedManForMaidList = new Dictionary<Maid, Maid>();
+            int counter = 100;
+            List<Maid> m_listStockMan = Traverse.Create(GameMain.Instance.CharacterMgr).Field(Constant.DefinedClassFieldNames.CharacterMgrStockManList).GetValue<List<Maid>>();
+            foreach (Maid maid in StateManager.Instance.SelectedMaidsList)
+            {
+                Maid man = CharacterHandling.InitMan(counter, ModUseData.ManBodyInfoList.Keys.ToList());
+                StateManager.Instance.PairedManForMaidList.Add(maid, man);
+                m_listStockMan.Remove(man);
+                counter += 1;
+            }   
+        }
 
 
 

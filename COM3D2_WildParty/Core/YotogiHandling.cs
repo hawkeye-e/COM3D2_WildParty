@@ -617,6 +617,62 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.YotogiWorkingManList = new List<Maid>(StateManager.Instance.MenList);
         }
 
+        //This function is for yotogi scene that maid will act as a man
+        internal static void InitArrayForYotogiUsed(int maidConvertToManRatioInPercentage)
+        {
+            if(maidConvertToManRatioInPercentage > 0)
+            {
+                StateManager.Instance.YotogiWorkingMaidList = new List<Maid>();
+                StateManager.Instance.YotogiWorkingManList = new List<Maid>();
+
+                List<Maid> shuffleList = new List<Maid>(StateManager.Instance.SelectedMaidsList);
+                shuffleList = CharacterHandling.ShuffleMaidOrManList(shuffleList);
+                int convertedMaidCount = shuffleList.Count * maidConvertToManRatioInPercentage / 100;
+                
+                for (int i = 0; i < convertedMaidCount; i++)
+                {
+                    CharacterHandling.ConvertMaidToManStructure(shuffleList[i], StateManager.Instance.PairedManForMaidList[shuffleList[i]]);
+                    StateManager.Instance.YotogiWorkingManList.Add(shuffleList[i]);
+
+                    RemoveMaidFromMaidArray(shuffleList[i]);
+                }
+
+                for (int i = convertedMaidCount; i < shuffleList.Count; i++)
+                {
+                    StateManager.Instance.YotogiWorkingMaidList.Add(shuffleList[i]);
+                    RemoveMaidFromMaidArray(shuffleList[i]);
+                }
+            }
+            else
+            {
+                InitArrayForYotogiUsed();
+            }
+        }
+
+        //Having the maid in the maid array while it is not in main group may result in wrong animation. This function aims to resolve this issue.
+        private static void RemoveMaidFromMaidArray(Maid maid)
+        {
+            for (int j = 0; j < GameMain.Instance.CharacterMgr.GetMaidCount(); j++)
+            {
+                Maid arrayMaid = GameMain.Instance.CharacterMgr.GetMaid(j);
+
+                if (arrayMaid != null)
+                {
+
+                    if (arrayMaid.GetInstanceID() == maid.GetInstanceID())
+                    {
+                        //this maid has converted to man structure, need to replace it in the array or else error will be thrown in YotogiPlayManager.OnCall
+
+                        Maid dummyMaid = GameMain.Instance.CharacterMgr.GetStockNpcMaid(0);
+                        StateManager.Instance.SpoofActivateMaidObjectFlag = true;
+                        GameMain.Instance.CharacterMgr.SetActiveMaid(dummyMaid, j);
+                        StateManager.Instance.SpoofActivateMaidObjectFlag = false;
+
+                    }
+                }
+            }
+        }
+
         internal static void RandomizeMaidExcitement(List<Maid> maidList, bool isMaidZeroChange = false)
         {
             string maid_0_guid = GameMain.Instance.CharacterMgr.GetMaid(0).status.guid;

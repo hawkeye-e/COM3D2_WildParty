@@ -297,7 +297,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 if(ModUseData.PartyGroupSetupList[formationID].IsLesbianSetup)
                     AssignPartyGroupingRandomCaseLesbian(retainMainZero);
                 else
-                    AssignPartyGroupingRandom(true);
+                    AssignPartyGroupingRandom(retainMainZero);
             }
             else
             {
@@ -309,21 +309,21 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             StateManager.Instance.PartyGroupList.Clear();
             PartyGroup.UnassignedMaid = null;
-
+            
             //Keep the master list unchanged so that the chosen maid will remain the same in the ADV
             List<Maid> workingMaidList = new List<Maid>(StateManager.Instance.YotogiWorkingMaidList);
-
+            
             //we will keep the man[0] in the same position
             Maid firstMan = StateManager.Instance.YotogiWorkingManList[0];
             StateManager.Instance.YotogiWorkingManList.Remove(firstMan);
 
-
+            
             //Shuffle the man list
             if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].IsShuffleManList)
                 StateManager.Instance.YotogiWorkingManList = ShuffleMaidOrManList(StateManager.Instance.YotogiWorkingManList);
             StateManager.Instance.YotogiWorkingManList.Insert(0, firstMan);
 
-
+            
             //Shuffle the maid list
             if (retainMaidZero)
             {
@@ -339,13 +339,13 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 workingMaidList = ShuffleMaidOrManList(workingMaidList);
             }
-
+            
             StateManager.Instance.YotogiWorkingMaidList = workingMaidList;
 
-            int numOfMale = StateManager.Instance.MaxManUsed;
+            int numOfMale = StateManager.Instance.YotogiWorkingManList.Count;
             int numOfFemale = workingMaidList.Count;
 
-
+            
             //First we assign each group 1 man and 1 maid
             for (int i = 0; i < Math.Min(numOfMale, numOfFemale); i++)
             {
@@ -354,10 +354,10 @@ namespace COM3D2.WildParty.Plugin.Core
                 newGroup.Maid1 = workingMaidList[i];
                 StateManager.Instance.PartyGroupList.Add(newGroup);
             }
-
+            
             bool isMoreMan = true;
             if (numOfFemale > numOfMale) isMoreMan = false;
-
+            
             for (int i = Math.Min(numOfFemale, numOfMale); i < Math.Max(numOfFemale, numOfMale); i++)
             {
                 //randomly pick a group and assign extra man or maid there
@@ -1303,6 +1303,7 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void ConvertMaidToManStructure(Maid maid, Maid dummyMan)
         {
             SetFemaleClothing(maid, Constant.ClothesSetStrapOnDildo);
+            maid.AllProcProp();
 
             Helper.BoneNameConverter.ConvertFemaleStructureToMale(maid, dummyMan);
             maid.boMAN = true;
@@ -1325,6 +1326,8 @@ namespace COM3D2.WildParty.Plugin.Core
             maid.ResetProp(MPN.kata);
             maid.ResetProp(MPN.kousoku_lower);
             maid.AllProcProp();
+
+            RestoreMaidClothesInfo(maid);
         }
     }
 }

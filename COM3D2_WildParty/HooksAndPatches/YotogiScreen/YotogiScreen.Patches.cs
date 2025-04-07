@@ -79,7 +79,14 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             {
                 //Remove any extra objects generated in yotogi
                 foreach (PartyGroup group in StateManager.Instance.PartyGroupList)
+                {
                     Core.YotogiHandling.ResetYotogiMiscSetup(group);
+                    //The mod cannot register the extra objects for the case of the main group starts with extra object and ends immediately. Explicitly remove all the handitem
+                    for(int i=0; i<group.ManCount; i++)
+                        group.GetManAtIndex(i).ResetProp(MPN.handitem, true);
+                    for (int i = 0; i < group.MaidCount; i++)
+                        group.GetMaidAtIndex(i).ResetProp(MPN.handitem, true);
+                }
 
                 //Stop all triggers
                 StopAllTriggers();
@@ -1207,50 +1214,149 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             return originalResult;
         }
 
-        //internal static KagTagSupport GetRectifiedTagDataForIK(BaseKagManager baseKagManager, KagTagSupport tag_data)
-        //{
-        //    if (baseKagManager is MotionKagManager)
-        //    {
-        //        MotionKagManager motionKagManager = baseKagManager as MotionKagManager;
+        internal static void ResetGroupIK()
+        {
+            //Reset IK
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                PartyGroup group = Util.GetPartyGroupByGUID(StateManager.Instance.processingMaidGUID);
+                if (group != null)
+                {
+                    group.DetachAllIK();
+                }
+            }
+        }
 
-        //        Maid man = motionKagManager.main_man;
-        //        Maid maid = motionKagManager.main_maid;
+        internal static void SetupDelayOrgasmMotion(string labelName)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (StateManager.Instance.IsMainGroupMotionScriptFlag && StateManager.Instance.IsYotogiUseModSemenPattern)
+                {
+                    PartyGroup group = StateManager.Instance.PartyGroupList[0];
 
-        //        if (maid == null || man == null)
-        //            return tag_data;
+                    BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
 
-        //        PartyGroup group = Util.GetPartyGroupByCharacter(maid);
-        //        if (group == null)
-        //            return tag_data;
+                    MotionSpecialLabel specialLabel = motionItem.SpecialLabels.Where(x => x.Label == labelName).FirstOrDefault();
+                    if (specialLabel != null)
+                    {
+                        TimeEndTrigger trigger = new TimeEndTrigger();
+                        trigger.DueTime = DateTime.Now.AddSeconds(Constant.OrgasmMotionEjaculationTime);
+                        trigger.ToBeExecuted = new EventDelegate(() =>
+                        {
+                            Core.BackgroundGroupMotionManager.ProcessSemenForGroup(group, specialLabel);
+                        });
+                        StateManager.Instance.TimeEndTriggerList.Add(trigger);
+                    }
+                }
+            }
+        }
 
-        //        //try to match the IKRectify List
-        //        //TODO: include scenario ID checking
-        //        List<IKRectify> scriptMatches = ModUseData.IKRectifyList.Where(
-        //            x => x.ScriptName.Contains(group.CurrentScriptFileName) && x.LabelName == group.CurrentLabelName
-        //                && x.Type == IKRectify.RectifyType.Replace
-        //            ).ToList();
-        //        foreach (IKRectify rectifyData in scriptMatches)
-        //        {
-        //            bool isAllMatch = true;
-        //            foreach (var condition in rectifyData.MatchingCondition)
-        //            {
-        //                if (tag_data.GetTagProperty(condition[0]).AsString() != condition[1])
-        //                {
-        //                    isAllMatch = false;
-        //                    break;
-        //                }
-        //            }
+        //Try to load face anime on maid as man characters so that they dont look that dull
+        internal static void RandomizeMaidConvertedManFaceAnime()
+        {
+            
+            if (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiPlay)
+            {
+                PartyGroup group;
+                if (StateManager.Instance.IsMainGroupMotionScriptFlag)
+                    group = StateManager.Instance.PartyGroupList[0];
+                else
+                    group = Util.GetPartyGroupByGUID(StateManager.Instance.processingMaidGUID);
 
-        //            if (isAllMatch)
-        //            {
-        //                var tag = rectifyData.GetTagDataInKagTagSupportFormat();
-        //                return tag;
-        //            }
+                if (group != null)
+                {
+                    for (int i = 0; i < group.ManCount; i++)
+                    {
+                        Maid man = group.GetManAtIndex(i);
+                        if (StateManager.Instance.SelectedMaidsList.Contains(man))
+                        {
+                            Core.CustomADVProcessManager.SetFaceAnimeToMaid(man, RandomList.FaceAnime.FaceAnimeCode.RandomMaidAsManHorny);
+                            man.FaceBlend(RandomList.FaceAnime.GetFaceBlendString(group.ExcitementRate));
+                            StateManager.Instance.MaidAsManFaceAnimeChangeList.Add(man);
+                        }
+                    }
+                }
+            }
+        }
 
-        //        }
-        //    }
+        
+        internal static void SpoofSexFlagForMaidUpdate(Maid man)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (StateManager.Instance.MaidAsManFaceAnimeChangeList.Contains(man))
+                {
+                    //Temporarily set it back to female to allow face anime update
+                    man.boMAN = false;
+                }
+            }
+        }
 
-        //    return tag_data;
-        //}
+        internal static void EndSpoofSexFlagForMaidUpdate(Maid man)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (StateManager.Instance.MaidAsManFaceAnimeChangeList.Contains(man))
+                {
+                    //Set it back to man
+                    man.boMAN = true;
+                    StateManager.Instance.MaidAsManFaceAnimeChangeList.Remove(man);
+                }
+            }
+        }
+
+        internal static void PrepareIgnoreResetPropList()
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                foreach (Maid maid in StateManager.Instance.SelectedMaidsList)
+                {
+                    if (maid.boMAN)
+                        StateManager.Instance.IgnoreResetPropMaidList.Add(maid);
+                }
+            }
+        }
+
+        internal static void CleanUpIgnoreResetPropList()
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+                StateManager.Instance.IgnoreResetPropMaidList.Clear();
+        }
+
+        internal static bool IsResetProp(Maid maid)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (StateManager.Instance.IgnoreResetPropMaidList.Contains(maid))
+                    return false;
+            }
+
+            return true;
+        }
+
+        internal static bool IsAddTexture(BaseKagManager baseKagManager, KagTagSupport tag_data)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (baseKagManager is MotionKagManager)
+                {
+                    MotionKagManager motionKagManager = (MotionKagManager)baseKagManager;
+
+                    PartyGroup group = Util.GetPartyGroupByCharacter(motionKagManager.main_maid);
+                    if (group == StateManager.Instance.PartyGroupList[0])
+                    {
+                        if (tag_data.GetTagProperty("res").AsString().Contains("Seieki"))
+                        {
+                            if (StateManager.Instance.IsYotogiUseModSemenPattern)
+                                return false;
+                        }
+                    }
+                }
+
+            }
+
+            return true;
+        }
     }
 }

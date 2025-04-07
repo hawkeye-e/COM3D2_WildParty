@@ -133,6 +133,7 @@ namespace COM3D2.WildParty.Plugin
             public List<NPCData> NPC;
             public List<ModNPCData> ModNPC;
             public bool IsClubOwnerADVMainCharacter = true;    //True: Man[0] will be the owner; False: Man[0] will be replaced with other man character and owner is accessible from StateManager.Instance.ClubOwner
+            public bool RequiresMaidPairMan = false;            //For the use of converting maid to man
 
             internal class NPCData
             {
@@ -216,6 +217,13 @@ namespace COM3D2.WildParty.Plugin
             public bool IsKeepCharacterVisibleAfterYotogi = true;              //The system will automatically hide all the characters when display the yotogi result. Set it to true to prevent from hiding them.
             public bool IsFinalYotogi = true;
             public bool IsClubOwnerMainCharacter = true;    //True: Man[0] will be the owner; False: Man[0] will be replaced with other man character and owner is accessible from StateManager.Instance.ClubOwner
+            public MaidConvertToManSetting MaidConvertToMan = null;
+            public bool UseModSemenPattern = false;
+
+            public class MaidConvertToManSetting
+            {
+                public int RatioPercent;
+            }
         }
 
         

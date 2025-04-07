@@ -198,5 +198,13 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
                 }
             }
         }
+
+        internal static bool IsSwapNewBodyNeeded(CharacterMgr characterMgr, int slot)
+        {
+            Maid man = characterMgr.GetMan(slot);
+            if (StateManager.Instance.SelectedMaidsList.Contains(man))
+                return false;
+            return true;
+        }
     }
 }

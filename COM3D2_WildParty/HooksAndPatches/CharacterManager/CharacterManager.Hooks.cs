@@ -13,6 +13,16 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
     {
         internal static string GUID = WildParty.GUID + ".CharacterManager";
 
+        //This function will access an array of active man directly, so the parameter cannot be negative.
+        //For some reasons the mod makes it passing a negative number due to negative value of activeslotno. This is trying to patch this error by fixing it to zero if negative.
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(CharacterMgr), nameof(CharacterMgr.GetMan))]
+        private static void GetManPost(ref int nManNo)
+        {
+            if (nManNo < 0)
+                nManNo = 0;
+        }
+
         //Use the GUID stored in state instead of the man no to return the correct man object to make animation etc works
         [HarmonyPostfix]
         [HarmonyPatch(typeof(CharacterMgr), nameof(CharacterMgr.GetMan))]
@@ -85,14 +95,13 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
         //Since 3.0 body is not supported, force it to stop this process if the game is running a mod event.
         [HarmonyPrefix]
         [HarmonyPatch(typeof(CharacterMgr), nameof(CharacterMgr.SwapNewManBody))]
-        private static bool SwapNewManBody(int activeSlot, ref bool toNewBody)
+        private static bool SwapNewManBody(CharacterMgr __instance, int activeSlot, ref bool toNewBody)
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
                 toNewBody = false;
 
-            if (StateManager.Instance.IsMaidConvertToManScriptMotion)
-                return false;
-            return true;
+            //For the man characters that converted from maid, it will cause error if continue to run this function. Skip it if it is the case
+            return Patches.IsSwapNewBodyNeeded(__instance, activeSlot);
         }
 #endif
 #endif
