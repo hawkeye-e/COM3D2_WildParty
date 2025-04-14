@@ -46,6 +46,11 @@ namespace COM3D2.WildParty.Plugin
             ClothingTag.accshippo,
         };
 
+        internal static readonly string[] EjaculateSEFileArray =
+        {
+            SE.Ejaculate,
+        };
+
 
         internal enum CharacterType
         {
@@ -160,6 +165,7 @@ namespace COM3D2.WildParty.Plugin
 
         internal static class SE
         {
+            internal const string Ejaculate = "SE016.ogg";
             internal const string Beep = "SE024.ogg";
             internal const string PhoneRing = "SE023.ogg";
             internal const string TakePhoto = "SE022.ogg";
@@ -188,6 +194,7 @@ namespace COM3D2.WildParty.Plugin
         internal static class FaceAnimeType
         {
             internal const string Angry = "怒り";
+            internal const string LittleAngry = "少し怒り";
             internal const string CloseEye = "閉じ目";
             internal const string CloseMouthAndEye = "目口閉じ";
             internal const string Normal = "通常";
@@ -286,6 +293,8 @@ namespace COM3D2.WildParty.Plugin
             internal const string AddObject = "AddObject";
             internal const string RemoveObject = "RemoveObject";
 
+            internal const string ConvertSex = "ConvertSex";
+
             internal const string ADVEnd = "ADVEnd";    //End the scenario and return to normal flow
         }
 
@@ -376,6 +385,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string MMF = "MMF";
             internal const string FFM = "FFM";
             internal const string MMMF = "MMMF";
+            internal const string Invalid = "";
         }
 
         internal static class TargetType
@@ -391,6 +401,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string AllNPCMale = "NPC_M_ALL";
 
             internal const string PairedMan = "PairedMan";
+            internal const string ConvertedMaid = "ConvertedMaid";
         }
 
         internal static class EventProgress

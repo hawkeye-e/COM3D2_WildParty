@@ -59,7 +59,6 @@ namespace COM3D2.WildParty.Plugin
         internal bool WaitForCharactersFullLoadFlag = false;                //flag for waiting the scene to load all required characters etc.
         internal List<Maid> WaitForFullLoadList = new List<Maid>();                //flag for waiting the scene to load the required characters etc.
         internal List<Maid> IgnoreResetPropMaidList = new List<Maid>();
-        internal List<Maid> MaidAsManFaceAnimeChangeList = new List<Maid>();
 
         internal UILabel CommandLabel = null;
         internal YotogiManager YotogiManager = null;

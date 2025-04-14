@@ -182,6 +182,11 @@
 	</Choose>
 
 	<ItemGroup>
+	  <Compile Update="Resx\CustomAnimResources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>CustomAnimResources.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resx\ImageResources.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -255,6 +260,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <EmbeddedResource Update="Resx\CustomAnimResources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>CustomAnimResources.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ModResources</CustomToolNamespace>
+	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resx\ImageResources.resx">
 	    <CustomToolNamespace>ModResources</CustomToolNamespace>
 	    <Generator>ResXFileCodeGenerator</Generator>

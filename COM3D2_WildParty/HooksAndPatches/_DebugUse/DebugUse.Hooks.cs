@@ -125,5 +125,27 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
         {
             //WildParty.Log.LogInfo("SoundMgr.PlaySe f_strFileName: " + f_strFileName + ", f_bLoop:" + f_bLoop);
         }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(BgMgr), nameof(BgMgr.AddPrefabToBg))]
+        private static void AddPrefabToBg(string f_strSrc, string f_strName, string f_strDest, Vector3 f_vPos, Vector3 f_vRot)
+        {
+            //WildParty.Log.LogInfo("AddPrefabToBg f_strSrc: " + f_strSrc
+            //    + ", f_strName: " + f_strName
+            //    + ", f_strDest: " + f_strDest
+            //    );
+
+        }
+
+        //For getting prefab name in studio mode
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(PhotoBGObjectData), nameof(PhotoBGObjectData.Instantiate))]
+        private static void PhotoBGObjectDataInstantiate(PhotoBGObjectData __instance, string name)
+        {
+            //WildParty.Log.LogInfo("PhotoBGObjectData.Instantiate name: " + name
+            //    + ", prefab: " + __instance.create_prefab_name
+            //    + ", assetbundle: " + __instance.create_asset_bundle_name
+            //    );
+        }
     }
 }

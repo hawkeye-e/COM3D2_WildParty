@@ -38,6 +38,7 @@ namespace COM3D2.WildParty.Plugin
 
         public RandomPick PickData;             //This is for ordering to randomly pick some characters for later adv processing
         public List<MakeGroupFormat> GroupFormat;     //Assign group to perform group motion in ADV scene etc
+        public ConvertSex ConvertSexData;
 
         internal class Fade
         {
@@ -61,6 +62,7 @@ namespace COM3D2.WildParty.Plugin
                 public bool IsChoppingAudio = false;    //Some audio files is chopped in mod to fit the situation. Set this field to true for those cases.
                 public float StartTime = 0f;            //Require IsChoppingAudio = true
                 public float EndTime = 0f;              //Require IsChoppingAudio = true
+                public float Volume = 1f;
             }
 
         }
@@ -73,10 +75,16 @@ namespace COM3D2.WildParty.Plugin
             public CameraMoveType MoveType = CameraMoveType.Instant;
             public float AnimationTime = 2f;            //For Camera pan use only
             public LockCameraInfo LockCamera;
+            public BlurCameraInfo BlurCamera;
 
             internal class LockCameraInfo
             {
                 public bool IsLock = false;
+            }
+
+            internal class BlurCameraInfo
+            {
+                public bool IsBlur = false;
             }
 
             internal enum CameraType
@@ -164,6 +172,7 @@ namespace COM3D2.WildParty.Plugin
             public bool WaitLoad = false;
             public bool IsManNude = false;
             public bool OpenMouth = false;                              //True: open mouth for fella motion etc; False: default
+            public SmoothMovementSetup SmoothMovement = null;
 
             public MotionInfo MotionInfo;
             public string FaceAnime;
@@ -174,6 +183,11 @@ namespace COM3D2.WildParty.Plugin
             public ExtraObjectsSetting ExtraObjectsInfo;
             public string ClothesSetID;                                 //Special ID: "RESET", reset all applied ClothesSetID. Otherwise follows ClothesSet.json
             public EffectDetail Effect;
+
+            public class SmoothMovementSetup
+            {
+                public float Time;
+            }
         }
 
         internal class ShowGroupMotion
@@ -277,6 +291,7 @@ namespace COM3D2.WildParty.Plugin
         {
             public string FileName;
             public bool IsLoop = false;
+            public bool Stop = false;
         }
 
         internal class Shuffle
@@ -309,12 +324,27 @@ namespace COM3D2.WildParty.Plugin
             public string Src;
             public string ObjectID;                 //Used for removing the object
             public PosRot PosRot;
+            public float Scale = 1;
         }
 
         internal class EffectDetail
         {
             public List<string> Add;
             public List<string> Remove;
+        }
+
+        internal class ConvertSex
+        {
+            public List<ConvertSexDetail> ToMale;           //Convert a maid to male structure 
+            public List<ConvertSexDetail> ToFemale;         //Convert a man to female structure
+            public List<ConvertSexDetail> BackToMale;       //Revert a converted structure character back to male
+            public List<ConvertSexDetail> BackToFemale;     //Revert a converted structure character back to female
+
+            public class ConvertSexDetail
+            {
+                public string Type;                         //Use Constant.TargetType
+                public int ArrayPosition;
+            }
         }
 
 #pragma warning restore 0649

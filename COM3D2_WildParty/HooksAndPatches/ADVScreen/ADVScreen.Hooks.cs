@@ -131,5 +131,13 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.ADVScreen
         {
             Patches.EndIndividualOffsetHandling();
         }
+
+        //Stop certain SE from playing depend on the scenario setting
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(SoundMgr), nameof(SoundMgr.PlaySe))]
+        private static bool PlaySe(string f_strFileName)
+        {
+            return Patches.IsPlaySE(f_strFileName);
+        }
     }
 }

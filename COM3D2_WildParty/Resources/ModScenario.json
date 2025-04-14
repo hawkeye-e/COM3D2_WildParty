@@ -376,7 +376,7 @@
     "YotogiTypeEnumString": "NewSex",
     "CondSalonGrade": 0,
     "DisplayName": "咲き乱れる百合の楽園",
-    "Information": "最近、メイドたちは仲が良すぎる。この状況を不思議に思ったご主人様は、何が起こったのか調べにした…",
+    "Information": "最近、メイドの様子がおかしい。この状況を心配するご主人様は、何が起こったのか調べにした…",
     "Icon": "mod_icon_lily_blooming_paradise",
     "IsNetorare": false,
     "IsCommu": false,
@@ -404,7 +404,7 @@
       {
         "Phase": 1,
         "DefaultMap": {
-          "DayMapID": "Shukuhakubeya_BedRoom",
+          "DayMapID": "Shukuhakubeya_BedRoom_Night",
           "NightMapID": "Shukuhakubeya_BedRoom_Night",
           "BGM": "BGM021.ogg",
           "FormationOption": [ "Phase1_Default" ],
@@ -426,7 +426,7 @@
       {
         "Phase": 2,
         "DefaultMap": {
-          "DayMapID": "Shukuhakubeya_BedRoom",
+          "DayMapID": "Shukuhakubeya_BedRoom_Night",
           "NightMapID": "Shukuhakubeya_BedRoom_Night",
           "BGM": "BGM021.ogg",
           "FormationOption": [ "Phase2_Default" ],
@@ -450,6 +450,7 @@
     "CanGainSkillExp": false,
     "LockParameters": true,
     "UnlimitedMind": true,
+    "IgnoreEjaculationSE": true,
 
     "SetScenarioFlag": [
       {

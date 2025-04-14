@@ -114,13 +114,28 @@ namespace COM3D2.WildParty.Plugin
             return maid.status.charaName.GetFullName().Trim();
         }
 
-        internal static void SmoothMoveMaidPosition(Maid maid, Vector3 targetPosition, Quaternion targetRotation)
+        internal static void SmoothMoveMaidPosition(Maid maid, Vector3 targetPosition, Quaternion targetRotation, float time = -1)
         {
             System.Collections.Hashtable args = new System.Collections.Hashtable();
             args.Add("position", targetPosition);
-            args.Add("rotation", targetRotation);
+            args.Add("rotation", targetRotation.eulerAngles);
             args.Add("scale", maid.transform.localScale);
+            if(time > 0)
+                args.Add("time", time);
             iTween.MoveTo(maid.gameObject, args);
+
+            System.Collections.Hashtable argsRotate = new System.Collections.Hashtable();
+            argsRotate.Add("position", targetPosition);
+            argsRotate.Add("rotation", targetRotation.eulerAngles);
+            argsRotate.Add("scale", maid.transform.localScale);
+            if (time > 0)
+                argsRotate.Add("time", time);
+            iTween.RotateTo(maid.gameObject, argsRotate);
+        }
+
+        internal static void StopSmoothMove(Maid maid)
+        {
+            iTween.Stop(maid.gameObject);
         }
 
         public static void ResetAllGroupPosition()
@@ -360,6 +375,26 @@ namespace COM3D2.WildParty.Plugin
                     }
 
             return null;
+        }
+
+        //Use Constant.TargetType
+        internal static List<Maid> GetTargetList(string targetType)
+        {
+            if (targetType == Constant.TargetType.SingleMaid)
+                return StateManager.Instance.SelectedMaidsList;
+            else if (targetType == Constant.TargetType.SingleMan)
+                return StateManager.Instance.MenList;
+            else if (targetType == Constant.TargetType.NPCFemale)
+                return StateManager.Instance.NPCList;
+            else if (targetType == Constant.TargetType.NPCMale)
+                return StateManager.Instance.NPCManList;
+
+            return null;
+        }
+
+        internal static bool IsManAConvertedMaid(Maid man)
+        {
+            return Helper.BoneNameConverter.IsMaidConvertedMan(man);
         }
 
         internal static bool IsExPackPersonality(Maid maid)

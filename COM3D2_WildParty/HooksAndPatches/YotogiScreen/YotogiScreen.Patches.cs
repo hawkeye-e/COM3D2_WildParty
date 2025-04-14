@@ -704,7 +704,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 {
                     foreach (var group in StateManager.Instance.PartyGroupList)
                     {
-                        if (group.Maid1.status.guid == tbody.maid.status.guid)
+                        if (group.Maid1?.status.guid == tbody.maid.status.guid)
                         {
                             group.CurrentMaid1AnimationClipName = tag;
                         }
@@ -1273,19 +1273,17 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                         {
                             Core.CustomADVProcessManager.SetFaceAnimeToMaid(man, RandomList.FaceAnime.FaceAnimeCode.RandomMaidAsManHorny);
                             man.FaceBlend(RandomList.FaceAnime.GetFaceBlendString(group.ExcitementRate));
-                            StateManager.Instance.MaidAsManFaceAnimeChangeList.Add(man);
                         }
                     }
                 }
             }
         }
 
-        
         internal static void SpoofSexFlagForMaidUpdate(Maid man)
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                if (StateManager.Instance.MaidAsManFaceAnimeChangeList.Contains(man))
+                if (Util.IsManAConvertedMaid(man))
                 {
                     //Temporarily set it back to female to allow face anime update
                     man.boMAN = false;
@@ -1297,15 +1295,14 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                if (StateManager.Instance.MaidAsManFaceAnimeChangeList.Contains(man))
+                if (Util.IsManAConvertedMaid(man))
                 {
                     //Set it back to man
                     man.boMAN = true;
-                    StateManager.Instance.MaidAsManFaceAnimeChangeList.Remove(man);
                 }
             }
         }
-
+        
         internal static void PrepareIgnoreResetPropList()
         {
             if (StateManager.Instance.UndergoingModEventID > 0)

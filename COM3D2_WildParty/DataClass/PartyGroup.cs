@@ -287,11 +287,12 @@ namespace COM3D2.WildParty.Plugin
                 }
                 else
                 {
+                    Util.StopSmoothMove(maid);
                     maid.transform.localPosition = Vector3.zero;
                     maid.transform.position = GroupPosition + GroupOffsetVector + GroupOffsetVector2 + individualOffset;
                     maid.transform.localRotation = new Quaternion(0, 0, 0, 0);
                     maid.transform.rotation = GroupRotation;
-                    maid.body0.SetBoneHitHeightY(maid.transform.position.y);
+                    maid.body0.SetBoneHitHeightY(GroupPosition.y);
                 }
 
                 if(ForceCharacterVisibleOnPositionChange)

@@ -132,7 +132,12 @@ namespace COM3D2.WildParty.Plugin
 
         private static readonly string[] ScenarioLilyBloomingParadiseResList = {
             ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADVIntro,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADVPhase1Hotel,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADVPhase1Bedroom,
             ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADVPhase2,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADVPostYotogi,
+
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Muku,
         };
 
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)

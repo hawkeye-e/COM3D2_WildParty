@@ -182,5 +182,18 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.ADVScreen
                 StateManager.Instance.CurrentMotionKagHandlingGroup = null;
             }
         }
+
+        internal static bool IsPlaySE(string fileName)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (Util.GetUndergoingScenario().IgnoreEjaculationSE)
+                {
+                    if (Constant.EjaculateSEFileArray.Contains(fileName))
+                        return false;
+                }
+            }
+            return true;
+        }
     }
 }

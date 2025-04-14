@@ -70,6 +70,11 @@ namespace COM3D2.WildParty.Plugin.Helper
             }
         }
 
+        internal static bool IsMaidConvertedMan(Maid maid)
+        {
+            return _pairedMan.ContainsKey(maid.status.guid);
+        }
+
         private static void AddPenis(Maid maid, Maid dummyMan)
         {
             if (dummyMan != null)

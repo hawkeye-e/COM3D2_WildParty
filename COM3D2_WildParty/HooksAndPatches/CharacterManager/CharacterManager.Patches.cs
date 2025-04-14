@@ -61,7 +61,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
 
                     foreach (var group in StateManager.Instance.PartyGroupList)
                     {
-                        if (group.Maid1.status.guid == StateManager.Instance.processingMaidGUID)
+                        if (group.Maid1?.status.guid == StateManager.Instance.processingMaidGUID)
                         {
                             //If it is a hit, determine which maid in the group is returned
                             if (maidNo == 0)

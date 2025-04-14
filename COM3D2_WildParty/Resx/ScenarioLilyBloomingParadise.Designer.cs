@@ -62,10 +62,40 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Muku&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lbp_hotel_0020 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Muku {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Muku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;lbp0001&quot;: {
         ///    &quot;ID&quot;: &quot;lbp0001&quot;,
         ///    &quot;Type&quot;: &quot;BG&quot;,
-        ///    &quot;Tag&quot;: &quot;&quot;,
+        ///    &quot;Tag&quot;: &quot;ShinShitsumu&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
         ///    &quot;NextStepID&quot;: &quot;lbp_init_chara&quot;
         ///  },
@@ -74,18 +104,15 @@ namespace ScenarioResources {
         ///    &quot;ID&quot;: &quot;lbp_init_chara&quot;,
         ///    &quot;Type&quot;: &quot;CharaInit&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;lbp_init_hide_men&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_init_hide_pairedmen&quot;,
         ///    &quot;CharaInitData&quot;: {
-        ///      &quot;ManRequired&quot;: 20,
-        ///      &quot;ValidManType&quot;: [
-        ///        &quot;YoungMan&quot;
-        ///      ],
-        ///      &quot;IsClubOwnerADVMainCharacter&quot;: false
-        ///    }
-        ///  },
-        ///
-        ///  &quot;lbp_init_hide_men&quot;: {
-        ///    &quot;ID&quot;: &quot;lbp_init_hide_men [rest of string was truncated]&quot;;.
+        ///      &quot;ManRequired&quot;: 0,
+        ///      &quot;RequiresMaidPairMan&quot;: true,
+        ///      &quot;IsClubOwnerADVMainCharacter&quot;: true,
+        ///      &quot;NPC&quot;: [
+        ///        {
+        ///          &quot;Index&quot;: 0,
+        ///          &quot;Preset&quot;: &quot; [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADVIntro {
             get {
@@ -95,32 +122,121 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///
-        ///  &quot;agbd_phase2_init&quot;: {
-        ///    &quot;ID&quot;: &quot;agbd_phase2_init&quot;,
-        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
-        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
-        ///    &quot;NextStepID&quot;: &quot;agbd_phase2_init_a&quot;
+        ///  &quot;lbp_bedroom_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_bedroom_0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;Shukuhakubeya_BedRoom_Night&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_bedroom_0001a&quot;
         ///  },
         ///
-        ///  &quot;agbd_phase2_init_a&quot;: {
-        ///    &quot;ID&quot;: &quot;agbd_phase2_init_a&quot;,
+        ///  &quot;lbp_bedroom_0001a&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_bedroom_0001a&quot;,
+        ///    &quot;Type&quot;: &quot;MakeGroup&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_bedroom_0001b&quot;,
+        ///    &quot;GroupFormat&quot;: [
+        ///      {
+        ///        &quot;GroupIndex&quot;: 0,
+        ///        &quot;Maid1&quot;: {
+        ///          &quot;Type&quot;: &quot;Maid&quot;,
+        ///          &quot;ArrayPosition&quot;: 1
+        ///        },
+        ///        &quot;Maid2&quot;: { [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADVPhase1Bedroom {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADVPhase1Bedroom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_hotel_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_hotel_0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;Shukuhakubeya_Living&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_hotel_0001a&quot;
+        ///  },
+        ///
+        ///  &quot;lbp_hotel_0001a&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_hotel_0001a&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_hotel_0001b&quot;,
+        ///    &quot;CameraData&quot;: {
+        ///      &quot;FixedPointData&quot;: {
+        ///        &quot;PosString&quot;: &quot;999,999,999&quot;,
+        ///        &quot;TargetPosString&quot;: &quot;1000,1000,1000&quot;,
+        ///        &quot;AroundAngleString&quot;: &quot;0,0&quot;,
+        ///        &quot;Distance&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADVPhase1Hotel {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADVPhase1Hotel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///
+        ///  &quot;lbp_phase2_init&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_phase2_init&quot;,
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_phase2_init_a&quot;
+        ///  },
+        ///
+        ///  &quot;lbp_phase2_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_phase2_init_a&quot;,
         ///    &quot;Type&quot;: &quot;BGM&quot;,
         ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;agbd_phase2_init_b&quot;
+        ///    &quot;NextStepID&quot;: &quot;lbp_phase2_init_b&quot;
         ///  },
         ///
-        ///  &quot;agbd_phase2_init_b&quot;: {
-        ///    &quot;ID&quot;: &quot;agbd_phase2_init_b&quot;,
+        ///  &quot;lbp_phase2_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_phase2_init_b&quot;,
         ///    &quot;Type&quot;: &quot;Camera&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;agbd_phase2_init_c&quot;,
-        ///   [rest of string was truncated]&quot;;.
+        ///    &quot;NextStepID&quot;: &quot;lbp_phase2_init_c&quot;,
+        ///    &quot;Camera [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADVPhase2 {
             get {
                 return ResourceManager.GetString("LilyBloomingParadiseADVPhase2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///
+        ///  &quot;lbp_phase2_init&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_phase2_init&quot;,
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_phase2_init_a&quot;
+        ///  },
+        ///
+        ///  &quot;lbp_phase2_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_phase2_init_a&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_phase2_init_b&quot;
+        ///  },
+        ///
+        ///  &quot;lbp_phase2_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_phase2_init_b&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_phase2_init_c&quot;,
+        ///    &quot;Camera [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADVPostYotogi {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADVPostYotogi", resourceCulture);
             }
         }
     }

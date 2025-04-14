@@ -1075,6 +1075,23 @@ namespace COM3D2.WildParty.Plugin.Core
             maid.body0.CrossFade(maid.body0.LastAnimeFN, GameUty.FileSystem, additive: false, loop: isLoop, boAddQue: isQueued, fade: fade);
         }
 
+        internal static void PlayCustomAnimation(Maid maid, string fileName, string tag, bool isLoop = true, bool isBlend = false, bool isQueued = false)
+        {
+            if (maid == null)
+                return;
+
+            float fade = 0f;
+            if (isBlend)
+                fade = ConfigurableValue.AnimationBlendTime;
+            else
+                maid.body0.StopAnime();
+
+            byte[] anim = Helper.CustomAnimLoader.GetAnimData(fileName);
+
+            maid.body0.LoadAnime(tag, anim, false, isLoop);
+            maid.body0.CrossFade(maid.body0.LastAnimeFN, anim, additive: false, loop: isLoop, boAddQue: isQueued, fade: fade);
+        }
+
         //function definition copied from KISS code. All load motion script call from the mod should call here so that there is no need to handle the V2 compatible version everywhere
         internal static void LoadMotionScript(int sloat, bool is_next, string file_name, string label_name = "", string maid_guid = "", string man_guid = "", bool face_fix = false, bool valid_pos = true, bool disable_diff_pos = false, bool body_mix_ok = false)
         {
@@ -1094,27 +1111,35 @@ namespace COM3D2.WildParty.Plugin.Core
             if (motionInfo == null || maid == null)
                 return;
 
-            if (!string.IsNullOrEmpty(motionInfo.RandomMotion))
+            if (!string.IsNullOrEmpty(motionInfo.CustomMotionFile))
             {
-                //Replace the variable if random motion is set
-                motionInfo = RandomList.Motion.GetRandomMotionByCode(motionInfo.RandomMotion, maid.boMAN);
-            }
-
-            if (!string.IsNullOrEmpty(motionInfo.ScriptFile))
-            {
-                string maidGUID = "";
-                string manGUID = "";
-
-                if (maid.boMAN)
-                    manGUID = maid.status.guid;
-                else
-                    maidGUID = maid.status.guid;
-
-                LoadMotionScript(0, false, motionInfo.ScriptFile, motionInfo.ScriptLabel, maidGUID, manGUID, false, false, false, false);
+                PlayCustomAnimation(maid, motionInfo.CustomMotionFile, motionInfo.MotionTag, motionInfo.IsLoopMotion, motionInfo.IsBlend, motionInfo.IsQueued);
             }
             else
             {
-                PlayAnimation(maid, motionInfo.MotionFile, motionInfo.MotionTag, motionInfo.IsLoopMotion, motionInfo.IsBlend, motionInfo.IsQueued);
+
+                if (!string.IsNullOrEmpty(motionInfo.RandomMotion))
+                {
+                    //Replace the variable if random motion is set
+                    motionInfo = RandomList.Motion.GetRandomMotionByCode(motionInfo.RandomMotion, maid.boMAN);
+                }
+
+                if (!string.IsNullOrEmpty(motionInfo.ScriptFile))
+                {
+                    string maidGUID = "";
+                    string manGUID = "";
+
+                    if (maid.boMAN)
+                        manGUID = maid.status.guid;
+                    else
+                        maidGUID = maid.status.guid;
+
+                    LoadMotionScript(0, false, motionInfo.ScriptFile, motionInfo.ScriptLabel, maidGUID, manGUID, false, false, false, false);
+                }
+                else
+                {
+                    PlayAnimation(maid, motionInfo.MotionFile, motionInfo.MotionTag, motionInfo.IsLoopMotion, motionInfo.IsBlend, motionInfo.IsQueued);
+                }
             }
         }
 
@@ -1142,6 +1167,9 @@ namespace COM3D2.WildParty.Plugin.Core
             if (man == null)
                 return;
             if (!man.boMAN)
+                return;
+            //ignore for converted maid 
+            if (Util.IsManAConvertedMaid(man))
                 return;
 
             //Penis
@@ -1328,6 +1356,16 @@ namespace COM3D2.WildParty.Plugin.Core
             maid.AllProcProp();
 
             RestoreMaidClothesInfo(maid);
+        }
+
+        internal static void ConvertManToFemaleStructure(Maid man)
+        {
+            Helper.BoneNameConverter.ConvertManStructureToFemale(man);
+        }
+
+        internal static void RecoverManFromFemaleStructure(Maid man)
+        {
+            Helper.BoneNameConverter.RecoverConvertedManStructure(man);
         }
     }
 }

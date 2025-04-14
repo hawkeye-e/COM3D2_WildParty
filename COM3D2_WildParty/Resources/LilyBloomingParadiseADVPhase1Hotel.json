@@ -1,0 +1,1642 @@
+{
+  "lbp_hotel_0001": {
+    "ID": "lbp_hotel_0001",
+    "Type": "BG",
+    "Tag": "Shukuhakubeya_Living",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0001a"
+  },
+
+  "lbp_hotel_0001a": {
+    "ID": "lbp_hotel_0001a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0001b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "lbp_hotel_0001b": {
+    "ID": "lbp_hotel_0001b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（夕暮れ時、俺はあの予約した部屋に行く。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_hotel_0002": {
+    "ID": "lbp_hotel_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（まだ誰もいないみたいので、中に入って少し調べてみて。）"
+    }
+  },
+
+  "lbp_hotel_0003": {
+    "ID": "lbp_hotel_0003",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_hotel_0004a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_hotel_0004a": {
+    "ID": "lbp_hotel_0004a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_hotel_0004b",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "5.13, 0.00, -4.51",
+          "RotString": "0, -0.958, 0, 0.287"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0004b": {
+    "ID": "lbp_hotel_0004b",
+    "Type": "AddObject",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0004c",
+    "WorldObjectData": [
+      {
+        "Src": "gp002_sushi",
+        "ObjectID": "mod_phase1_sushi1",
+        "PosRot": {
+          "PosString": "2.40, 0.47, -6.83",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Src": "gp002_sushi",
+        "ObjectID": "mod_phase1_sushi2",
+        "PosRot": {
+          "PosString": "1.86, 0.47, -6.77",
+          "RotString": "0, 0.674, 0, 0.739"
+        }
+      },
+      {
+        "Src": "Odogu_BirthdayCake",
+        "ObjectID": "mod_phase1_cake",
+        "PosRot": {
+          "PosString": "2.17, 0.438612938, -6.43",
+          "RotString": "-0.707, 0, 0, 0.707"
+        },
+        "Scale": 3
+      },
+      {
+        "Src": "Odogu_WineBottle(cap_on)",
+        "ObjectID": "mod_phase1_wine1",
+        "PosRot": {
+          "PosString": "2.52, 0.47, -7.26",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "Odogu_WineBottle(cap_on)",
+        "ObjectID": "mod_phase1_wine2",
+        "PosRot": {
+          "PosString": "2.40, 0.47, -7.34",
+          "RotString": "-0.501, 0.499, 0.499, 0.501"
+        }
+      },
+      {
+        "Src": "Odogu_WineBottle(cap_on)",
+        "ObjectID": "mod_phase1_wine3",
+        "PosRot": {
+          "PosString": "2.37, 0.47, -7.23",
+          "RotString": "-0.624, -0.332, -0.332, 0.624"
+        }
+      },
+      {
+        "Src": "Odogu_Sandwich",
+        "ObjectID": "mod_phase1_sandwiches",
+        "PosRot": {
+          "PosString": "2.12, 0.47, -7.09",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "odogu_ocv23_macaron",
+        "ObjectID": "mod_phase1_macaron",
+        "PosRot": {
+          "PosString": "2.51, 0.47, -6.45",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "odogu_white_2",
+        "ObjectID": "mod_phase1_cookie1",
+        "PosRot": {
+          "PosString": "1.86, 0.47, -6.44",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "odogu_white_2",
+        "ObjectID": "mod_phase1_cookie2",
+        "PosRot": {
+          "PosString": "2.72, 0.47, -6.68",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "Odogu_WineGlass",
+        "ObjectID": "mod_phase1_wineglass1",
+        "PosRot": {
+          "PosString": "2.68, 0.47, -7.23",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "Odogu_WineGlass",
+        "ObjectID": "mod_phase1_wineglass2",
+        "PosRot": {
+          "PosString": "2.62, 0.47, -7.34",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "Odogu_WineGlass",
+        "ObjectID": "mod_phase1_wineglass3",
+        "PosRot": {
+          "PosString": "2.71, 0.47, -7.35",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "Odogu_WineGlass",
+        "ObjectID": "mod_phase1_wineglass4",
+        "PosRot": {
+          "PosString": "2.78, 0.47, -7.23",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "WaterCottage_LiquorA",
+        "ObjectID": "mod_phase1_wine_type2",
+        "PosRot": {
+          "PosString": "2.19, 0.47, -7.37",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "WaterCottage_Drink",
+        "ObjectID": "mod_phase1_drink",
+        "PosRot": {
+          "PosString": "2.18, 0.47, -7.26",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "JapaneseModernHotel_Sofa",
+        "ObjectID": "mod_phase1_sofa",
+        "PosRot": {
+          "PosString": "0.39, 0, -6.81",
+          "RotString": "0.5, -0.5, -0.5, -0.5"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0004c": {
+    "ID": "lbp_hotel_0004c",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0005",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "5.83, 2.18, -3.40",
+        "TargetPosString": "2.71, 0.65, -6.57",
+        "AroundAngleString": "224.49, 18.99",
+        "Distance": 4.7
+      }
+    }
+  },
+
+  "lbp_hotel_0005": {
+    "ID": "lbp_hotel_0005",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0006",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "うーん…これはパーティーの準備か？何のパーティーかな？"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_hotel_0006": {
+    "ID": "lbp_hotel_0006",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0007",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "誕生日パーティー？…うーん…誰か最近誕生日の人いる？"
+    }
+  },
+
+  "lbp_hotel_0007": {
+    "ID": "lbp_hotel_0007",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0008",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "……まさか、知らない男とのパーティーか？本当に浮気したか？……うそだろ…[=Name,Maid,0,CallName]…"
+    }
+  },
+
+  "lbp_hotel_0008": {
+    "ID": "lbp_hotel_0008",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE054.ogg"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0008a"
+  },
+
+  "lbp_hotel_0008a": {
+    "ID": "lbp_hotel_0008a",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE054.ogg"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0008b"
+  },
+
+  "lbp_hotel_0008b": {
+    "ID": "lbp_hotel_0008b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0009",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "……待って！足音が聞こえる。早く隠れしないと！"
+    }
+  },
+
+  "lbp_hotel_0009": {
+    "ID": "lbp_hotel_0009",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_hotel_0009a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_hotel_0009a": {
+    "ID": "lbp_hotel_0009a",
+    "Type": "SE",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0009b",
+    "SEData": {
+      "Stop": true
+    }
+  },
+
+  "lbp_hotel_0009b": {
+    "ID": "lbp_hotel_0009b",
+    "Type": "RemoveObject",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0009c",
+    "WorldObjectData": [
+      {
+        "ObjectID": "mod_phase1_wineglass1"
+      },
+      {
+        "ObjectID": "mod_phase1_wineglass2"
+      },
+      {
+        "ObjectID": "mod_phase1_wineglass3"
+      },
+      {
+        "ObjectID": "mod_phase1_wineglass4"
+      },
+      {
+        "ObjectID": "mod_phase1_wine1"
+      }
+    ]
+  },
+
+  "lbp_hotel_0009c": {
+    "ID": "lbp_hotel_0009c",
+    "Type": "AddObject",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0009d",
+    "WorldObjectData": [
+      {
+        "Src": "Odogu_WineBottle(cap_off)",
+        "ObjectID": "mod_phase1_wine4",
+        "PosRot": {
+          "PosString": "2.52, 0.47, -7.26",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "Odogu_WineGlass",
+        "ObjectID": "mod_phase1_wineglass5",
+        "PosRot": {
+          "PosString": "1.47, 0.47, -6.80",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "Odogu_WineGlass",
+        "ObjectID": "mod_phase1_wineglass6",
+        "PosRot": {
+          "PosString": "2.78, 0.47, -6.95",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "Odogu_Smoothie_Green",
+        "ObjectID": "mod_phase1_smoothie1",
+        "PosRot": {
+          "PosString": "2.74, 0.47, -6.47",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "Odogu_Smoothie_Red",
+        "ObjectID": "mod_phase1_smoothie2",
+        "PosRot": {
+          "PosString": "1.47, 0.47, -6.38",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0009d": {
+    "ID": "lbp_hotel_0009d",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_hotel_0009e",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": false,
+        "WaitLoad": true
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "work_001.ks",
+          "ScriptLabel": "*ワイン待機L"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 1
+          }
+        },
+        "PosRot": {
+          "PosString": "2.87, 0.44, -5.48",
+          "RotString": "0, 1, 0, 0"
+        },
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "HandItemR_WineGlass_I_.menu",
+              "Target": "handitem"
+            }
+          ]
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "work_001.ks",
+          "ScriptLabel": "*ワイン待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "2.18, 0.44, -5.42",
+          "RotString": "0, 1, 0, 0"
+        },
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "HandItemR_WineGlass_I_.menu",
+              "Target": "handitem"
+            }
+          ]
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで推理"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 3
+          }
+        },
+        "PosRot": {
+          "PosString": "3.62, 0.44, -6.32",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "照れ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで照れるL"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 2
+          }
+        },
+        "PosRot": {
+          "PosString": "3.57, 0.44, -7.04",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで会話"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 5
+          }
+        },
+        "PosRot": {
+          "PosString": "0.74, 0.44, -7.11",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "照れ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで手を合わせるL"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 4
+          }
+        },
+        "PosRot": {
+          "PosString": "0.69, 0.44, -6.46",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで乗り出す１"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 5
+          }
+        },
+        "PosRot": {
+          "PosString": "0.92, 0.44, -7.62",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaC_001.ks",
+          "ScriptLabel": "*会話座り照れる"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 8
+          }
+        },
+        "PosRot": {
+          "PosString": "1.51, 0.44, -5.42",
+          "RotString": "0, 1, 0, 0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 8,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaC_001.ks",
+          "ScriptLabel": "*会話座り口元に手を当てる"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 7
+          }
+        },
+        "PosRot": {
+          "PosString": "0.68, 0.44, -5.64",
+          "RotString": "0, -0.436, 0, -0.900"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 9,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 10
+          }
+        },
+        "PosRot": {
+          "PosString": "-0.85, 0.00, -4.93",
+          "RotString": "0, 0.176, 0, 0.984"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 10,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 9
+          }
+        },
+        "PosRot": {
+          "PosString": "-0.16, 0.00, -4.31",
+          "RotString": "0, 0.937, 0, -0.350"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 11,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "MotionInfo": {
+          "MotionFile": "maid_comehome1_ONCE_.anm",
+          "MotionTag": "maid_comehome1_ONCE_.anm"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 10
+          }
+        },
+        "PosRot": {
+          "PosString": "-1.02, 0.00, -4.26",
+          "RotString": "0, 0.899, 0, 0.438"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 12,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 11
+          }
+        },
+        "PosRot": {
+          "PosString": "-0.38, 0.00, -4.80",
+          "RotString": "0, 0.490, 0, -0.872"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 13,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "疑問",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち口元に手を当てる"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 9
+          }
+        },
+        "PosRot": {
+          "PosString": "-0.55, 0.00, -3.98",
+          "RotString": "0, 0.988, 0, 0.152"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 14,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "閉じ目",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち考える"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 15
+          }
+        },
+        "PosRot": {
+          "PosString": "1.68, 0.00, -3.98",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 15,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ドヤ顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち腕を組む"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 14
+          }
+        },
+        "PosRot": {
+          "PosString": "2.43, 0.00, -3.98",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 16,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "困った",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち呆れる"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 17
+          }
+        },
+        "PosRot": {
+          "PosString": "-0.85, 0.00, -7.16",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 17,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ドヤ顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち指を立てる"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 16
+          }
+        },
+        "PosRot": {
+          "PosString": "-0.85, 0.00, -6.51",
+          "RotString": "0, 1, 0, 0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 18,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 19
+          }
+        },
+        "PosRot": {
+          "PosString": "-2.45, 0.00, -5.79",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 19,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頬掻き"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 18
+          }
+        },
+        "PosRot": {
+          "PosString": "-2.59, 0.00, -4.95",
+          "RotString": "0, 1, 0, 0"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0009e": {
+    "ID": "lbp_hotel_0009e",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0009f",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "8.57, 1.57, -3.90",
+        "TargetPosString": "1.91, 0.34, -6.03",
+        "AroundAngleString": "252.28, 9.98",
+        "Distance": 7.1
+      }
+    }
+  },
+
+  "lbp_hotel_0009f": {
+    "ID": "lbp_hotel_0009f",
+    "Type": "BGM",
+    "Tag": "BGM015.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0010"
+  },
+
+  "lbp_hotel_0010": {
+    "ID": "lbp_hotel_0010",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は寝室に入り、息を潜める。すると数人の女が部屋に入った。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_hotel_0011": {
+    "ID": "lbp_hotel_0011",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0011a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "5.67, 1.69, -9.37",
+        "TargetPosString": "3.25, 1.06, -7.07",
+        "AroundAngleString": "313.65, 10.60",
+        "Distance": 3.4
+      }
+    }
+  },
+
+  "lbp_hotel_0011a": {
+    "ID": "lbp_hotel_0011a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0012",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（あ、俺のメイドたちか。じゃあ浮気じゃないか……ふぅ、ちょっと安心した。）"
+    }
+  },
+
+  "lbp_hotel_0012": {
+    "ID": "lbp_hotel_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0013",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]、[=Name,Maid,1,CallName]、[=Name,Maid,2,CallName]、[=Name,Maid,3,CallName]……こんなにたくさんいるか。このパーティーはいったい何なんだ？）"
+    }
+  },
+
+  "lbp_hotel_0013": {
+    "ID": "lbp_hotel_0013",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_hotel_0013a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_hotel_0013a": {
+    "ID": "lbp_hotel_0013a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0014",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "lbp_hotel_0014": {
+    "ID": "lbp_hotel_0014",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0015",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "１時間後…"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_hotel_0015": {
+    "ID": "lbp_hotel_0015",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_hotel_0015a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_hotel_0015a": {
+    "ID": "lbp_hotel_0015a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_hotel_0015b",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで会話L"
+        },
+        "ExtraObjectsInfo": {
+          "RemoveObjects": [ "handitem" ]
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "引きつり笑顔",
+        "MotionInfo": {
+          "ScriptFile": "vr_event_001.ks",
+          "ScriptLabel": "*パフェ待機"
+        },
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "HandItemR_Spoon_Pafe_I_.menu",
+              "Target": "handitem"
+            }
+          ]
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで会話"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで会話L"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "MotionInfo": {
+          "ScriptFile": "event_002.ks",
+          "ScriptLabel": "*女子会２スマホ"
+        },
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "Ignore"
+          }
+        },
+        "PosRot": {
+          "PosString": "0.74, 0.44, -7.01",
+          "RotString": "0, 0.707, 0, 0.707"
+        },
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "handitemr_smartphone_i_.menu",
+              "Target": "handitem"
+            }
+          ]
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "照れ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで会話L"
+        },
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "Ignore"
+          }
+        },
+        "PosRot": {
+          "PosString": "0.83, 0.44, -6.46",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0015b": {
+    "ID": "lbp_hotel_0015b",
+    "Type": "RemoveObject",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0015c",
+    "WorldObjectData": [
+      {
+        "ObjectID": "mod_phase1_macaron"
+      },
+      {
+        "ObjectID": "mod_phase1_cookie1"
+      },
+      {
+        "ObjectID": "mod_phase1_cookie2"
+      },
+      {
+        "ObjectID": "mod_phase1_sandwiches"
+      },
+      {
+        "ObjectID": "mod_phase1_cake"
+      },
+      {
+        "ObjectID": "mod_phase1_sushi1"
+      },
+      {
+        "ObjectID": "mod_phase1_sushi2"
+      }
+    ]
+  },
+
+  "lbp_hotel_0015c": {
+    "ID": "lbp_hotel_0015c",
+    "Type": "AddObject",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0015d",
+    "WorldObjectData": [
+      {
+        "Src": "Odogu_Pafe",
+        "ObjectID": "mod_phase1_pafe",
+        "PosRot": {
+          "PosString": "2.12, 0.47, -6.28",
+          "RotString": "-0.707, 0, 0, 0.707"
+        }
+      },
+      {
+        "Src": "odogu_gp002_paperbag",
+        "ObjectID": "mod_phase1_shoppingbag",
+        "PosRot": {
+          "PosString": "2.79, 0.47, -6.75",
+          "RotString": "0, -0.417, 0, 0.909"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0015d": {
+    "ID": "lbp_hotel_0015d",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0016_Branch",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "2.53, 1.16, -8.16",
+        "TargetPosString": "2.50, 0.93, -5.17",
+        "AroundAngleString": "359.34, 4.39",
+        "Distance": 3
+      }
+    }
+  },
+
+  "lbp_hotel_0016_Branch": {
+    "ID": "lbp_hotel_0016_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_hotel_0020_T_[=PType]",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_hotel_0021_Branch": {
+    "ID": "lbp_hotel_0021_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_hotel_0030_M_[=PType]"
+  },
+
+  "lbp_hotel_0031_Branch": {
+    "ID": "lbp_hotel_0031_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_hotel_0040_M_[=PType]"
+  },
+
+  "lbp_hotel_0041_camerapan": {
+    "ID": "lbp_hotel_0041_camerapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "lbp_hotel_0042_Branch",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "1.31, 1.09, -6.65",
+        "TargetPosString": "3.49, 0.82, -6.59",
+        "AroundAngleString": "88.38, 6.87",
+        "Distance": 2.2
+      }
+    }
+  },
+
+  "lbp_hotel_0042_Branch": {
+    "ID": "lbp_hotel_0042_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_hotel_0050_M_[=PType]"
+  },
+
+  "lbp_hotel_0051_Branch": {
+    "ID": "lbp_hotel_0051_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_hotel_0060_M_[=PType]"
+  },
+
+  "lbp_hotel_0061_camerapan": {
+    "ID": "lbp_hotel_0061_camerapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "lbp_hotel_0062_Branch",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "2.92, 1.19, -6.77",
+        "TargetPosString": "0.64, 0.93, -6.90",
+        "AroundAngleString": "266.83, 6.56",
+        "Distance": 2.3
+      }
+    }
+  },
+
+  "lbp_hotel_0062_Branch": {
+    "ID": "lbp_hotel_0062_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_hotel_0070_M_[=PType]"
+  },
+
+  "lbp_hotel_0071_Branch": {
+    "ID": "lbp_hotel_0071_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_hotel_0080_M_[=PType]"
+  },
+
+  "lbp_hotel_0081": {
+    "ID": "lbp_hotel_0081",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0082",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（うーん…ただの女子会かな？どうせ出られないのだから、もうちょっと見ようか。）"
+    }
+  },
+
+  "lbp_hotel_0082": {
+    "ID": "lbp_hotel_0082",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_hotel_0083",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_hotel_0083": {
+    "ID": "lbp_hotel_0083",
+    "Type": "RemoveObject",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0083a",
+    "WorldObjectData": [
+      {
+        "ObjectID": "mod_phase1_pafe"
+      },
+      {
+        "ObjectID": "mod_phase1_shoppingbag"
+      }
+    ]
+  },
+
+
+  "lbp_hotel_0083a": {
+    "ID": "lbp_hotel_0083a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_hotel_0083c",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaC_001.ks",
+          "ScriptLabel": "*会話座り待機"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaC_001.ks",
+          "ScriptLabel": "*会話座り待機"
+        },
+        "ExtraObjectsInfo": {
+          "RemoveObjects": [ "handitem" ]
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaC_001.ks",
+          "ScriptLabel": "*会話座り待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaC_001.ks",
+          "ScriptLabel": "*会話座り待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaC_001.ks",
+          "ScriptLabel": "*会話座り待機"
+        },
+        "ExtraObjectsInfo": {
+          "RemoveObjects": [ "handitem" ]
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaC_001.ks",
+          "ScriptLabel": "*会話座り待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0083c": {
+    "ID": "lbp_hotel_0083c",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0083d",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "7.08, 2.64, -7.25",
+        "TargetPosString": "2.39, 0.98, -6.13",
+        "AroundAngleString": "283.41, 18.99",
+        "Distance": 5.1
+      }
+    }
+  },
+
+  "lbp_hotel_0083d": {
+    "ID": "lbp_hotel_0083d",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0084_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "さらに３０分後…"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_hotel_0084_Branch": {
+    "ID": "lbp_hotel_0084_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_hotel_0090_M_[=PType]"
+  },
+
+  "lbp_hotel_0091_Branch": {
+    "ID": "lbp_hotel_0091_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_hotel_0100_M_[=PType]"
+  },
+
+  "lbp_hotel_0101": {
+    "ID": "lbp_hotel_0101",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0102",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（…ヤバイ！こっちに向かってる！……どうしよう？あっ、クローゼット！そこに入ろう！）"
+    }
+  },
+
+  "lbp_hotel_0102": {
+    "ID": "lbp_hotel_0102",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_hotel_0103",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_hotel_0103": {
+    "ID": "lbp_hotel_0103",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0103a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "lbp_hotel_0103a": {
+    "ID": "lbp_hotel_0103a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0104",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（メイドたちが寝室に入る前に、俺は素早く隠れた。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_hotel_0104": {
+    "ID": "lbp_hotel_0104",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0105",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ふぅ…危なかった…バレたらまずいだろ…）"
+    }
+  },
+
+
+  "lbp_hotel_0105": {
+    "ID": "lbp_hotel_0105",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_hotel_0106",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_hotel_0106": {
+    "ID": "lbp_hotel_0106",
+    "Type": "RemoveObject",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_bedroom_0001",
+    "WorldObjectData": [
+      {
+        "ObjectID": "mod_phase1_wine2"
+      },
+      {
+        "ObjectID": "mod_phase1_wine3"
+      },
+      {
+        "ObjectID": "mod_phase1_wine_type2"
+      },
+      {
+        "ObjectID": "mod_phase1_drink"
+      },
+      {
+        "ObjectID": "mod_phase1_sofa"
+      },
+      {
+        "ObjectID": "mod_phase1_wine4"
+      },
+      {
+        "ObjectID": "mod_phase1_wineglass5"
+      },
+      {
+        "ObjectID": "mod_phase1_wineglass6"
+      },
+      {
+        "ObjectID": "mod_phase1_smoothie1"
+      },
+      {
+        "ObjectID": "mod_phase1_smoothie2"
+      }
+    ]
+  }
+
+
+}

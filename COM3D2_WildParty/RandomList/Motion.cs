@@ -14,6 +14,13 @@ namespace COM3D2.WildParty.Plugin.RandomList
             new MotionInfo("ero_scene_001.ks", "*ピロトーク_一人", "pillow_talk_f.anm", "pillow_talk_f.anm")
         };
 
+        internal static readonly MotionInfo[] FemaleStandingAngryList =
+{
+            new MotionInfo("h_kaiwa_tati_001.ks", "*会話立ちどやる", "", ""),
+            new MotionInfo("h_kaiwa_tati_001.ks", "*会話立ち腕を組む", "", ""),
+            new MotionInfo("h_kaiwa_tati_001.ks", "*会話立ち考える", "", "")
+        };
+
         internal static readonly MotionInfo[] MaleRestList =
         {
             new MotionInfo("", "", "mp_arai_taiki_m.anm", "mp_arai_taiki_m.anm"),
@@ -40,6 +47,7 @@ namespace COM3D2.WildParty.Plugin.RandomList
         internal static class RandomMotionCode
         {
             internal const string RandomRest = "RandomRest";
+            internal const string RandomStandingAngry = "RandomStandingAngry";
             internal const string RandomStanding = "RandomStanding";
             internal const string RandomStandingErect = "RandomStandingErect";
         }
@@ -61,6 +69,8 @@ namespace COM3D2.WildParty.Plugin.RandomList
                 targetList = MaleStandingList;
             else if (code == RandomMotionCode.RandomStandingErect)
                 targetList = MaleStandingErectList;
+            else if(code == RandomMotionCode.RandomStandingAngry)
+                targetList = FemaleStandingAngryList;
 
             if (targetList != null)
             {

@@ -39,17 +39,1311 @@
   },
 
 
-
-
-
   "lbp_phase2_0001": {
     "ID": "lbp_phase2_0001",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（メイドたちは、互いの体に触れ続け、悦ばせ合っている。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_phase2_0002": {
+    "ID": "lbp_phase2_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（その美艶な体が絡み合うのを見ながら、俺は頭が真っ白になり、ただ手でチンポを擦り続ける。）"
+    }
+  },
+
+
+  "lbp_phase2_0004": {
+    "ID": "lbp_phase2_0004",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_phase2_0004a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_phase2_0004a": {
+    "ID": "lbp_phase2_0004a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_phase2_0004b",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ好感３",
+        "MotionInfo": {
+          "CustomMotionFile": "wp_mod_motion_female_seductive.anm",
+          "MotionTag": "wp_mod_motion_female_seductive.anm"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 1
+          }
+        },
+        "PosRot": {
+          "PosString": "-1.42, 0.00, 1.52",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮３",
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "-0.81, 0.52, 1.56",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "-0.62, 0.52, 2.99",
+          "RotString": "0, 0.958, 0, -0.287"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "1.50, 0.00, 2.73",
+          "RotString": "0, 0.933, 0, -0.360"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで会話L"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "-1.32, 0.52, 0.49",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿照れる"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "0.36, 0.52, 0.17",
+          "RotString": "0, -0.547, 0, 0.837"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "-1.24, 0.00, -0.87",
+          "RotString": "0, -0.355, 0, 0.935"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "0.81, 0.00, -1.06",
+          "RotString": "0, -0.457, 0, 0.889"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 8,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "2.06, 0.00, 1.87",
+          "RotString": "0, -0.753, 0, 0.658"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 9,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "-2.25, 0.00, -1.38",
+          "RotString": "0, -0.131, 0, 0.991"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 10,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿手合わせ"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "0.00, 0.00, -1.61",
+          "RotString": "0, -0.528, 0, 0.849"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 11,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "-2.17, 0.00, 3.01",
+          "RotString": "0, 0.995, 0, 0.103"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 12,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "2.00, 0.00, 0.88",
+          "RotString": "0, -0.754, 0, 0.656"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 13,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "2.52, 0.00, 0.00",
+          "RotString": "0, -0.445, 0, 0.895"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 14,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "-1.53, 0.00, -1.93",
+          "RotString": "0, -0.192, 0, 0.981"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 15,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち腕を組む"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "1.95, -0.24, -1.21",
+          "RotString": "0, -0.317, 0, 0.948"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 16,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "2.35, 0.00, 3.17",
+          "RotString": "0, -0.875, 0, 0.485"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 17,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち腕を組む"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "2.64, 0.00, 1.53",
+          "RotString": "0, -0.705, 0, 0.710"
+        }
+      },
+
+
+
+      {
+        "Type": "F",
+        "ArrayPosition": 18,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "1.23, 0.00, -2.12",
+          "RotString": "0, -0.208, 0, 0.978"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 19,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "-0.43, 0.00, -2.29",
+          "RotString": "0, -0.322, 0, 0.947"
+        }
+      }
+    ]
+  },
+
+  "lbp_phase2_0004b": {
+    "ID": "lbp_phase2_0004b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_phase2_0005_Branch",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.30, 1.99, 3.95",
+        "TargetPosString": "-1.18, 0.81, 1.30",
+        "AroundAngleString": "177.31, 23.95",
+        "Distance": 2.9
+      }
+    }
+  },
+
+  "lbp_phase2_0005_Branch": {
+    "ID": "lbp_phase2_0005_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0010_T_[=PType]",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_phase2_0011_Branch": {
+    "ID": "lbp_phase2_0011_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0020_T_[=PType]"
+  },
+
+  "lbp_phase2_0021": {
+    "ID": "lbp_phase2_0021",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_phase2_0022_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "lbp_phase2_0022_Branch": {
+    "ID": "lbp_phase2_0022_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0030_T_[=PType]"
+  },
+
+  "lbp_phase2_0031": {
+    "ID": "lbp_phase2_0031",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_phase2_0031a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_phase2_0031a": {
+    "ID": "lbp_phase2_0031a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_phase2_0032",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "lbp_phase2_0032": {
+    "ID": "lbp_phase2_0032",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_phase2_0033",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ドヤ顔",
+        "ClothesSetID": "StrapOnDildo",
+        "MotionInfo": {
+          "MotionFile": "m_anal_seijyoui_taiki_f.anm",
+          "MotionTag": "m_anal_seijyoui_taiki_f.anm",
+          "IsBlend": false
+        },
+        "PosRot": {
+          "PosString": "-2.60, 0.00, 1.39",
+          "RotString": "0, 0.707, 0, 0.707"
+        },
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "HandItemH_omytgc014_peniban_I_.menu",
+              "Target": "handitem"
+            }
+          ]
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "event_006.ks",
+          "MotionTag": "*床座り＿照れる"
+        },
+        "PosRot": {
+          "PosString": "-0.22, 0.52, 1.57",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaC_001.ks",
+          "ScriptLabel": "*会話座り待機"
+        }
+      }
+    ]
+  },
+
+  "lbp_phase2_0033": {
+    "ID": "lbp_phase2_0033",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0034",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そして、[=Name,Maid,0,CallName]は買い物袋から何かを取り出す。あっ！それは彼女が先週買ったものだ！）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_phase2_0034": {
+    "ID": "lbp_phase2_0034",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_phase2_0035",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_phase2_0035": {
+    "ID": "lbp_phase2_0035",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_phase2_0035a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ドヤ顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちどやる"
+        }
+      }
+    ]
+  },
+
+  "lbp_phase2_0035a": {
+    "ID": "lbp_phase2_0035a",
+    "Type": "TimeWait",
+    "Tag": "1",
+    "WaitingType": "TimeWait",
+    "NextStepID": "lbp_phase2_0036"
+  },
+
+  "lbp_phase2_0036": {
+    "ID": "lbp_phase2_0036",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_phase2_0036a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-2.15, 1.08, 0.73",
+        "TargetPosString": "-2.44, 0.88, 1.34",
+        "AroundAngleString": "334.79, 15.88",
+        "Distance": 0.7
+      }
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_phase2_0036a": {
+    "ID": "lbp_phase2_0036a",
+    "Type": "TimeWait",
+    "Tag": "1",
+    "WaitingType": "TimeWait",
+    "NextStepID": "lbp_phase2_0037"
+  },
+
+  "lbp_phase2_0037": {
+    "ID": "lbp_phase2_0037",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_phase2_0037a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-2.44, 0.88, 1.34",
+        "TargetPosString": "-2.44, 0.88, 1.34",
+        "AroundAngleString": "201.56, 9.05",
+        "Distance": 1.5
+      }
+    }
+  },
+
+  "lbp_phase2_0037a": {
+    "ID": "lbp_phase2_0037a",
+    "Type": "TimeWait",
+    "Tag": "1",
+    "WaitingType": "TimeWait",
+    "NextStepID": "lbp_phase2_0038"
+  },
+
+  "lbp_phase2_0038": {
+    "ID": "lbp_phase2_0038",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_phase2_0039_Branch",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-0.36, 1.56, 1.33",
+        "TargetPosString": "-2.51, 1.12, 1.38",
+        "AroundAngleString": "271.32, 11.53",
+        "Distance": 2.2
+      }
+    }
+  },
+
+  "lbp_phase2_0039_Branch": {
+    "ID": "lbp_phase2_0039_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0040_T_[=PType]"
+  },
+
+  "lbp_phase2_0041": {
+    "ID": "lbp_phase2_0041",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0042",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（買ったものはペニスバンドか。しかもまるで本物のチンポみたいだし、クオリティ高くない？）"
+    }
+  },
+
+  "lbp_phase2_0042": {
+    "ID": "lbp_phase2_0042",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_phase2_0043",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_phase2_0043": {
+    "ID": "lbp_phase2_0043",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_phase2_0043a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "ExtraObjectsInfo": {
+          "RemoveObjects": [ "handitem" ]
+        }
+      }
+    ]
+  },
+
+  "lbp_phase2_0043a": {
+    "ID": "lbp_phase2_0043a",
+    "Type": "ConvertSex",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_phase2_0043b_add_converted_maid",
+    "ConvertSexData": {
+      "ToMale": [
+        {
+          "Type": "F",
+          "ArrayPosition": 0
+        }
+      ]
+    }
+  },
+
+  "lbp_phase2_0043b_add_converted_maid": {
+    "ID": "lbp_phase2_0043b_add_converted_maid",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_phase2_0043b",
+    "ListUpdateData": {
+      "Add": [
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 0,
+          "PositionToInsert": 0
+        }
+      ]
+    }
+  },
+
+  "lbp_phase2_0043b": {
+    "ID": "lbp_phase2_0043b",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_phase2_0043c",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 0
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 1
+        }
+      }
+
+    ]
+  },
+
+  "lbp_phase2_0043c": {
+    "ID": "lbp_phase2_0043c",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_phase2_0043d",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Man1": {
+          "Visible": true,
+          "FaceAnime": "エロ好感３",
+          "FaceBlend": "頬２涙０"
+        },
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ期待",
+          "FaceBlend": "頬２涙０"
+        },
+        "PosRot": {
+          "PosString": "-0.22, 0.52, 1.57",
+          "RotString": "0, -0.663, 0, 0.748"
+        }
+      }
+
+    ]
+  },
+
+  "lbp_phase2_0043d": {
+    "ID": "lbp_phase2_0043d",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_phase2_0044_Branch",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.15, 2.54, -0.05",
+        "TargetPosString": "-0.28, 0.95, 1.37",
+        "AroundAngleString": "31.20, 43.52",
+        "Distance": 2.3
+      }
+    }
+  },
+
+  "lbp_phase2_0044_Branch": {
+    "ID": "lbp_phase2_0044_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0050_T_[=PType]",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_phase2_0051": {
+    "ID": "lbp_phase2_0051",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_phase2_0052_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "まぶたギュ",
+          "FaceBlend": "頬２涙０"
+        }
+      }
+
+    ]
+  },
+
+  "lbp_phase2_0052_Branch": {
+    "ID": "lbp_phase2_0052_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0060_T_[=PType]"
+  },
+
+  "lbp_phase2_0061_Branch": {
+    "ID": "lbp_phase2_0061_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0070_T_[=PType]"
+  },
+
+  "lbp_phase2_0071_Branch": {
+    "ID": "lbp_phase2_0071_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0080_T_[=PType]"
+  },
+
+
+
+  "lbp_phase2_0081": {
+    "ID": "lbp_phase2_0081",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_phase2_0082_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬２涙０"
+        }
+      }
+
+    ]
+  },
+
+  "lbp_phase2_0082_Branch": {
+    "ID": "lbp_phase2_0082_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0090_T_[=PType]"
+  },
+
+  "lbp_phase2_0092_Branch": {
+    "ID": "lbp_phase2_0092_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0100_T_[=PType]"
+  },
+
+  "lbp_phase2_0101": {
+    "ID": "lbp_phase2_0101",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_phase2_0102_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮３",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+
+    ]
+  },
+
+  "lbp_phase2_0102_Branch": {
+    "ID": "lbp_phase2_0102_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0110_T_[=PType]"
+  },
+
+  "lbp_phase2_0111_Branch": {
+    "ID": "lbp_phase2_0111_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0120_T_[=PType]"
+  },
+
+  "lbp_phase2_0121_Branch": {
+    "ID": "lbp_phase2_0121_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0130_T_[=PType]"
+  },
+
+  "lbp_phase2_0131": {
+    "ID": "lbp_phase2_0131",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_phase2_0132_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*抱き付き激しさ３",
+        "SexPosID": 107,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮３",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+
+    ]
+  },
+
+  "lbp_phase2_0132_Branch": {
+    "ID": "lbp_phase2_0132_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0140_T_[=PType]"
+  },
+
+  "lbp_phase2_0141_Branch": {
+    "ID": "lbp_phase2_0141_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0150_T_[=PType]"
+  },
+
+  "lbp_phase2_0151": {
+    "ID": "lbp_phase2_0151",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_phase2_0152_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*抱き付き射精中",
+        "SexPosID": 107,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "まぶたギュ",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+
+    ]
+  },
+
+  "lbp_phase2_0152_Branch": {
+    "ID": "lbp_phase2_0152_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0160_T_[=PType]"
+  },
+
+  "lbp_phase2_0162": {
+    "ID": "lbp_phase2_0162",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0163",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（くっ…）"
+    }
+  },
+
+  "lbp_phase2_0163": {
+    "ID": "lbp_phase2_0163",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0164",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺がペニバン付けるメイドに負けるだと！？…なんどいう屈辱だ…）"
+    }
+  },
+
+  "lbp_phase2_0164": {
+    "ID": "lbp_phase2_0164",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0165",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（てもなんていうか…そう聞くと俺はますます興奮してくる…チンポはさらに硬く、大きくなる！）"
+    }
+  },
+
+  "lbp_phase2_0165": {
+    "ID": "lbp_phase2_0165",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_phase2_0166_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 107,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "絶頂射精後２",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+
+    ]
+  },
+
+  "lbp_phase2_0166_Branch": {
+    "ID": "lbp_phase2_0166_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0170_T_[=PType]"
+  },
+
+  "lbp_phase2_0171_Branch": {
+    "ID": "lbp_phase2_0171_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_phase2_0180_T_[=PType]"
+  },
+
+  "lbp_phase2_0181": {
+    "ID": "lbp_phase2_0181",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_phase2_0182",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_phase2_0182": {
+    "ID": "lbp_phase2_0182",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_phase2_0183",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "lbp_phase2_0183": {
+    "ID": "lbp_phase2_0183",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_yotogiplay_phase2_closepanel",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（Phase 2 starting point）"
+      "Text": "（いいよ、いいよぉ！みんな続けて！俺の手はもう止まらないよ！）"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -58,16 +1352,51 @@
   },
 
 
-
-
   "lbp_yotogiplay_phase2_closepanel": {
     "ID": "lbp_yotogiplay_phase2_closepanel",
     "Type": "CloseMsgPanel",
     "WaitingType": "Auto",
-    "NextStepID": "lbp_start_yotogiplay_phase2"
+    "NextStepID": "lbp_start_yotogiplay_phase2_dismiss_group"
   },
 
+  "lbp_start_yotogiplay_phase2_dismiss_group": {
+    "ID": "lbp_start_yotogiplay_phase2_dismiss_group",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "lbp_start_yotogiplay_phase2_remove_maid"
+  },
 
+  "lbp_start_yotogiplay_phase2_remove_maid": {
+    "ID": "lbp_start_yotogiplay_phase2_remove_maid",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_start_yotogiplay_phase2_revert_maid",
+    "ListUpdateData": {
+      "Remove": [
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 0
+        }
+      ]
+    }
+  },
+
+  "lbp_start_yotogiplay_phase2_revert_maid": {
+    "ID": "lbp_start_yotogiplay_phase2_revert_maid",
+    "Type": "ConvertSex",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_start_yotogiplay_phase2",
+    "ConvertSexData": {
+      "BackToFemale": [
+        {
+          "Type": "F",
+          "ArrayPosition": 0
+        }
+      ]
+    }
+  },
 
   "lbp_start_yotogiplay_phase2": {
     "ID": "lbp_start_yotogiplay_phase2",

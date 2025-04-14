@@ -167,7 +167,6 @@ namespace COM3D2.WildParty.Plugin.Core
 
             Util.ClearGenericCollection(StateManager.Instance.BackupMaidClothingList);
             Util.ClearGenericCollection(StateManager.Instance.IgnoreResetPropMaidList);
-            Util.ClearGenericCollection(StateManager.Instance.MaidAsManFaceAnimeChangeList);
             Util.ClearGenericCollection(StateManager.Instance.PairedManForMaidList);
             
             StateManager.Instance.RequireCheckModdedSceneFlag = false;

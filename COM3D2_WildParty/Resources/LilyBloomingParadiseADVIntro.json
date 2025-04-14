@@ -2,7 +2,7 @@
   "lbp0001": {
     "ID": "lbp0001",
     "Type": "BG",
-    "Tag": "",
+    "Tag": "ShinShitsumu",
     "WaitingType": "Auto",
     "NextStepID": "lbp_init_chara"
   },
@@ -15,7 +15,15 @@
     "CharaInitData": {
       "ManRequired": 0,
       "RequiresMaidPairMan": true,
-      "IsClubOwnerADVMainCharacter": true
+      "IsClubOwnerADVMainCharacter": true,
+      "NPC": [
+        {
+          "Index": 0,
+          "Preset": "pre_maid_secretary",
+          "EmptyLastName": false,
+          "Name": "エマ"
+        }
+      ]
     }
   },
 
@@ -58,17 +66,251 @@
     "Type": "BGM",
     "Tag": "BGM009.ogg",
     "WaitingType": "Auto",
-    "NextStepID": "lbp_intro_0002"
+    "NextStepID": "lbp_intro_0001a"
+  },
+
+  "lbp_intro_0001a": {
+    "ID": "lbp_intro_0001a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0001b",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組"
+        },
+        "PosRot": {
+          "PosString": "0.0, 0.5, -3.4",
+          "RotString": "0.0, 0.0, 0.0, 1.0"
+        }
+      }
+    ]
+  },
+
+  "lbp_intro_0001b": {
+    "ID": "lbp_intro_0001b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0002",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "0,1.6,0.9",
+        "TargetPosString": "-0.1,1.5,-0.1",
+        "AroundAngleString": "-179.6,5.3",
+        "Distance": 1
+      }
+    }
   },
 
   "lbp_intro_0002": {
     "ID": "lbp_intro_0002",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "lbp_intro_yotogiplay_phase1_closepanel",
+    "NextStepID": "lbp_intro_0003",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（おかしいな…うーん……本当におかしい…）"
+      "Text": "（……おかしい…）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_intro_0003": {
+    "ID": "lbp_intro_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（……最近[=Name,Maid,0,CallName]の様子がおかしい…）"
+    }
+  },
+
+  "lbp_intro_0004": {
+    "ID": "lbp_intro_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0005",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（……俺に何か隠してるみたいだ…この違和感は気のせいじゃない……）"
+    }
+  },
+
+  "lbp_intro_0005": {
+    "ID": "lbp_intro_0005",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_intro_0005a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_intro_0005a": {
+    "ID": "lbp_intro_0005a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0005b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "lbp_intro_0005b": {
+    "ID": "lbp_intro_0005b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0006",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "\n証拠１"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_intro_0006": {
+    "ID": "lbp_intro_0006",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_intro_0006a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_intro_0006a": {
+    "ID": "lbp_intro_0006a",
+    "Type": "BG",
+    "Tag": "outletpark",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0006b"
+  },
+
+  "lbp_intro_0006b": {
+    "ID": "lbp_intro_0006b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0006c",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "1.20, 2.65, -19.49",
+          "RotString": "0, -0.390, 0, 0.921"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちスマホ"
+        },
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "Ignore"
+          }
+        },
+        "PosRot": {
+          "PosString": "-6.71, 0.00, -15.85",
+          "RotString": "0, 0.976, 0, 0.220"
+        },
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "handitemr_smartphone_i_.menu",
+              "Target": "handitem"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "lbp_intro_0006c": {
+    "ID": "lbp_intro_0006c",
+    "Type": "AddObject",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0006d",
+    "WorldObjectData": [
+      {
+        "Src": "odogu_gp002_paperbag",
+        "ObjectID": "mod_phase1_shopping_bag1",
+        "PosRot": {
+          "PosString": "-6.59, 0.63, -15.65",
+          "RotString": "0, 0.188, 0, 0.982"
+        }
+      },
+      {
+        "Src": "odogu_gp002_paperbag",
+        "ObjectID": "mod_phase1_shopping_bag2",
+        "PosRot": {
+          "PosString": "-6.55, 0.61, -15.59",
+          "RotString": "-0.052, 0.184, -0.010, 0.982"
+        }
+      }
+    ]
+  },
+
+  "lbp_intro_0006d": {
+    "ID": "lbp_intro_0006d",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0006e",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "3.30, 4.72, -19.86",
+        "TargetPosString": "1.60, 4.19, -19.21",
+        "AroundAngleString": "290.78, 16.19",
+        "Distance": 1.9
+      }
+    }
+  },
+
+  "lbp_intro_0006e": {
+    "ID": "lbp_intro_0006e",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0007",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（先週、新規客に会うためにショッピングモールに行った。）"
     },
 
     "FadeData": {
@@ -78,25 +320,1300 @@
   },
 
 
-  "lbp_intro_yotogiplay_phase1_closepanel": {
-    "ID": "lbp_intro_yotogiplay_phase1_closepanel",
-    "Type": "CloseMsgPanel",
-    "WaitingType": "Auto",
-    "NextStepID": "lbp_start_yotogiplay_phase1"
+
+  "lbp_intro_0007": {
+    "ID": "lbp_intro_0007",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0008",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そこのセックストイショップから[=Name,Maid,0,CallName]が出てくるのを見た。彼女はバッグをいくつか持っていたので、たくさんのオモチャを買ったのだろう。）"
+    }
   },
 
-  "lbp_start_yotogiplay_phase1": {
-    "ID": "lbp_start_yotogiplay_phase1",
-    "Type": "LoadYotogi",
-    "Tag": "SceneYotogi",
-    "WaitingType": "LoadScene",
-    "YotogiSetup": {
-      "YotogiCode": "LilyBloomingParadise",
-      "Phase": 1,
-      "IsKeepCharacterVisibleAfterYotogi": true,
-      "IsFinalYotogi": false,
-      "IsClubOwnerMainCharacter": false
+  "lbp_intro_0008": {
+    "ID": "lbp_intro_0008",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0009",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（でも、あの日以来、俺とセックスのときに[=Name,Maid,0,CallName]がオモチャを使っているのを見たことがない。）"
+    }
+  },
+
+  "lbp_intro_0009": {
+    "ID": "lbp_intro_0009",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0010",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（じゃあ、一体何を買った？誰のために？）"
+    }
+  },
+
+  "lbp_intro_0010": {
+    "ID": "lbp_intro_0010",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_intro_0010a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_intro_0010a": {
+    "ID": "lbp_intro_0010a",
+    "Type": "RemoveObject",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0011",
+    "WorldObjectData": [
+      {
+        "ObjectID": "mod_phase1_shopping_bag1"
+      },
+      {
+        "ObjectID": "mod_phase1_shopping_bag2"
+      }
+    ]
+  },
+
+  "lbp_intro_0011": {
+    "ID": "lbp_intro_0011",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0011a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "lbp_intro_0011a": {
+    "ID": "lbp_intro_0011a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0012",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "\n証拠２"
     },
-    "NextStepID": "lbp_phase2_init"
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "lbp_intro_0012": {
+    "ID": "lbp_intro_0012",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_intro_0012a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_intro_0012a": {
+    "ID": "lbp_intro_0012a",
+    "Type": "BG",
+    "Tag": "EmpireClub_Entrance",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0012b"
+  },
+
+  "lbp_intro_0012b": {
+    "ID": "lbp_intro_0012b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0012c",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "11.29, 3.77, 6.79",
+          "RotString": "0, -0.970, 0, 0.245"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮２",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "MotionFile": "maid_comehome3_ONCE_.anm",
+          "MotionTag": "maid_comehome3_ONCE_.anm"
+        },
+        "PosRot": {
+          "PosString": "2.61, 0.00, -6.43",
+          "RotString": "0, 0.707, 0, 0.707"
+        },
+        "ExtraObjectsInfo": {
+          "RemoveObjects": [ "handitem" ]
+        }
+      }
+    ]
+  },
+
+  "lbp_intro_0012c": {
+    "ID": "lbp_intro_0012c",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0013",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "11.90, 5.73, 8.30",
+        "TargetPosString": "11.34, 5.36, 6.85",
+        "AroundAngleString": "200.96, 13.40",
+        "Distance": 1.6
+      }
+    }
+  },
+
+  "lbp_intro_0013": {
+    "ID": "lbp_intro_0013",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0014",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（今週の月曜日、[=Name,Maid,0,CallName]がエントランスで誰かと話しているのを見た。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_intro_0014": {
+    "ID": "lbp_intro_0014",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0014_camerapan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "接吻",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "MotionFile": "mukaiai_tati_kiss_loop_f.anm",
+          "MotionTag": "mukaiai_tati_kiss_loop_f.anm"
+        }
+      }
+    ]
+  },
+
+  "lbp_intro_0014_camerapan": {
+    "ID": "lbp_intro_0014_camerapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "lbp_intro_0014b",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "6.46, 2.87, -0.58",
+        "TargetPosString": "2.61, 1.87, -6.46",
+        "AroundAngleString": "213.23, 8.12",
+        "Distance": 7.1
+      }
+    }
+  },
+
+
+
+  "lbp_intro_0014b": {
+    "ID": "lbp_intro_0014b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0015",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（…そして、誰かとキスをしているように見えた。その時は急いでいたので確認しなかったけど…）"
+    }
+  },
+
+  "lbp_intro_0015": {
+    "ID": "lbp_intro_0015",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0016",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（…まぁ、この角度からはっきりと見ていなかったことは認めるが、本当にそう見えるんだ。）"
+    }
+  },
+
+  "lbp_intro_0016": {
+    "ID": "lbp_intro_0016",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_intro_0016a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_intro_0016a": {
+    "ID": "lbp_intro_0016a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0017",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "lbp_intro_0017": {
+    "ID": "lbp_intro_0017",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0018",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "\n証拠３"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "lbp_intro_0018": {
+    "ID": "lbp_intro_0018",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_intro_0018a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_intro_0018a": {
+    "ID": "lbp_intro_0018a",
+    "Type": "BG",
+    "Tag": "Spa_Night",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0018b"
+  },
+
+  "lbp_intro_0018b": {
+    "ID": "lbp_intro_0018b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0018c",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "MotionFile": "massage_m.anm",
+          "MotionTag": "massage_m.anm"
+        },
+        "PosRot": {
+          "PosString": "0.87, 0.57, 0.00",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "FaceBlend": "頬０涙０",
+        "MotionInfo": {
+          "MotionFile": "massage_f.anm",
+          "MotionTag": "massage_f.anm"
+        },
+        "PosRot": {
+          "PosString": "0.89, 0.59, 0.05",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+    ]
+  },
+
+  "lbp_intro_0018c": {
+    "ID": "lbp_intro_0018c",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0019",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "0.60, 0.53, -1.69",
+        "TargetPosString": "0.88, 1.09, -0.22",
+        "AroundAngleString": "10.72, -20.77",
+        "Distance": 1.6
+      }
+    }
+  },
+
+  "lbp_intro_0019": {
+    "ID": "lbp_intro_0019",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0020",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（昨日、マッサージを受けにリフレに行った。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_intro_0020": {
+    "ID": "lbp_intro_0020",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（リフレの当番は[=Name,Maid,0,CallName]だ。彼女の腕前はとても素晴らしく、とても心地よい。そのせいで俺は眠ってしまった。）"
+    }
+  },
+
+  "lbp_intro_0021": {
+    "ID": "lbp_intro_0021",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_intro_0021a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_intro_0021a": {
+    "ID": "lbp_intro_0021a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0021b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "0.89, 0.90, -1.22",
+        "TargetPosString": "0.87, 0.90, -0.62",
+        "AroundAngleString": "358.14, 0.35",
+        "Distance": 0.6
+      },
+      "BlurCamera": { "IsBlur": true }
+    }
+  },
+
+  "lbp_intro_0021b": {
+    "ID": "lbp_intro_0021b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0022",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "OM_yorisoi_aibu_taiki_f.anm",
+          "MotionTag": "OM_yorisoi_aibu_taiki_f.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.78, 0.59, 0.06",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "midasinami_esthe_f2.anm",
+          "MotionTag": "midasinami_esthe_f2.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.77, 0.60, 0.07",
+          "RotString": "0, 1, 0, 0"
+        }
+      }
+    ]
+  },
+
+  "lbp_intro_0022": {
+    "ID": "lbp_intro_0022",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0023_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（その時……）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_intro_0023_camerapan": {
+    "ID": "lbp_intro_0023_camerapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "lbp_intro_0024",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "AnimationTime": 5,
+      "FixedPointData": {
+        "PosString": "1.17, 0.91, -0.66",
+        "TargetPosString": "0.87, 0.90, -0.62",
+        "AroundAngleString": "276.41, 2.53",
+        "Distance": 0.3
+      }
+    }
+  },
+
+  "lbp_intro_0024": {
+    "ID": "lbp_intro_0024",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0025_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（……[=Name,Maid,0,CallName]が誰かといちゃつき、俺の隣のベッドでスキンシップをしているのを見たようだ。）"
+    }
+  },
+
+  "lbp_intro_0025_Branch": {
+    "ID": "lbp_intro_0025_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_intro_0030_T_[=PType]"
+  },
+
+  "lbp_intro_0031": {
+    "ID": "lbp_intro_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0032",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（…まぁ、寝ぼけてるかもしれないが、本当に何かを見た気がする……）"
+    }
+  },
+
+  "lbp_intro_0032": {
+    "ID": "lbp_intro_0032",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_intro_0032a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_intro_0032a": {
+    "ID": "lbp_intro_0032a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0033",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "lbp_intro_0033": {
+    "ID": "lbp_intro_0033",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0034",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "\n証拠４"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "lbp_intro_0034": {
+    "ID": "lbp_intro_0034",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_intro_0034a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_intro_0034a": {
+    "ID": "lbp_intro_0034a",
+    "Type": "BG",
+    "Tag": "ShinShitsumu",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0034b"
+  },
+
+  "lbp_intro_0034b": {
+    "ID": "lbp_intro_0034b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0034c",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組"
+        },
+        "PosRot": {
+          "PosString": "0.0, 0.5, -3.4",
+          "RotString": "0.0, 0.0, 0.0, 1.0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": false,
+        "WaitLoad": true
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": false,
+        "WaitLoad": true
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ダンス真剣",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": { "Type": "ClubOwner" }
+        },
+        "PosRot": {
+          "PosString": "0.0, 0.0, -1.5",
+          "RotString": "0.0, 1.0, 0.0, 0.0"
+        }
+      }
+    ]
+  },
+
+  "lbp_intro_0034c": {
+    "ID": "lbp_intro_0034c",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0035",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "0,1.5,-4.3",
+        "TargetPosString": "0,0.9,-0.9",
+        "AroundAngleString": "-360.7,10.3",
+        "Distance": 3.4
+      },
+      "BlurCamera": { "IsBlur": false }
+    }
+  },
+
+  "lbp_intro_0035": {
+    "ID": "lbp_intro_0035",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0036",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（今朝、[=Name,NPC_F,0,FirstName]が日々の仕事を報告したとき、俺は[=Name,Maid,0,CallName]のことを聞いてみた。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_intro_0036": {
+    "ID": "lbp_intro_0036",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0037",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 0,
+      "Text": "……以上です。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "E0_00155.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        }
+      }
+    }
+  },
+
+  "lbp_intro_0037": {
+    "ID": "lbp_intro_0037",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0038",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ありがとう、[=Name,NPC_F,0,FirstName]。"
+    }
+  },
+
+  "lbp_intro_0038": {
+    "ID": "lbp_intro_0038",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0038a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "閉じ目",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちお辞儀＿普通"
+        }
+      }
+    ]
+  },
+
+  "lbp_intro_0038a": {
+    "ID": "lbp_intro_0038a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0039",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 0,
+      "Text": "……それでは、私はこれで失礼いたします。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "ema_buaisou_00174.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_intro_0039": {
+    "ID": "lbp_intro_0039",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0039a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "通常",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "0.0, 0.0, -1.5",
+          "RotString": "0, 0.831, 0, 0.556"
+        },
+        "SmoothMovement": { "Time": 1 }
+      }
+    ]
+  },
+
+  "lbp_intro_0039a": {
+    "ID": "lbp_intro_0039a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0040",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "………あ、ところで…"
+    }
+  },
+
+  "lbp_intro_0040": {
+    "ID": "lbp_intro_0040",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0040a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "通常",
+        "PosRot": {
+          "PosString": "0.0, 0.0, -1.5",
+          "RotString": "0.0, 1.0, 0.0, 0.0"
+        },
+        "SmoothMovement": { "Time": 1 }
+      }
+    ]
+  },
+
+  "lbp_intro_0040a": {
+    "ID": "lbp_intro_0040a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "……最近[=Name,Maid,0,CallName]について何か気づいたことはある？"
+    }
+  },
+
+  "lbp_intro_0041": {
+    "ID": "lbp_intro_0041",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0041a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "拗ね"
+      }
+    ]
+  },
+
+  "lbp_intro_0041a": {
+    "ID": "lbp_intro_0041a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0042",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 0,
+      "Text": "何がとは？",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "E0_00434.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_intro_0042": {
+    "ID": "lbp_intro_0042",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0043",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "なんか最近彼女の言動が少しおかしいと思わない？"
+    }
+  },
+
+  "lbp_intro_0043": {
+    "ID": "lbp_intro_0043",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0043a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "閉じ目",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち考える"
+        }
+      }
+    ]
+  },
+
+  "lbp_intro_0043a": {
+    "ID": "lbp_intro_0043a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0044",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 0,
+      "Text": "……………………",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "ema_hisyo_00134.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_intro_0044": {
+    "ID": "lbp_intro_0044",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0044a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ダンス真剣",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち腕を組む"
+        }
+      }
+    ]
+  },
+
+  "lbp_intro_0044a": {
+    "ID": "lbp_intro_0044a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0045",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 0,
+      "Text": "……申し訳ありません。ただまあ、彼女のプライベートですから。簡単に明かすわけにもいきません。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "ema_buaisou_00148.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_intro_0045": {
+    "ID": "lbp_intro_0045",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0045a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ダンス真剣",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      }
+    ]
+  },
+
+  "lbp_intro_0045a": {
+    "ID": "lbp_intro_0045a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0046",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "え？"
+    }
+  },
+
+  "lbp_intro_0046": {
+    "ID": "lbp_intro_0046",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0046a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "閉じ目",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちお辞儀＿普通"
+        }
+      }
+    ]
+  },
+
+  "lbp_intro_0046a": {
+    "ID": "lbp_intro_0046a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0047",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 0,
+      "Text": "それでは……",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "E0_00171.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3
+        }
+      }
+    }
+  },
+
+  "lbp_intro_0047": {
+    "ID": "lbp_intro_0047",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_intro_0048",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_intro_0048": {
+    "ID": "lbp_intro_0048",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0048a",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿考える"
+        },
+        "PosRot": {
+          "PosString": "-1.30, 0.60, 1.74",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": false,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "lbp_intro_0048a": {
+    "ID": "lbp_intro_0048a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0048b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "1.18, 1.39, 4.46",
+        "TargetPosString": "-1.64, 0.74, 1.57",
+        "AroundAngleString": "224.31, 9.07",
+        "Distance": 4.1
+      }
+    }
+  },
+
+  "lbp_intro_0048b": {
+    "ID": "lbp_intro_0048b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0049",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（うーん…一体どうなってるかな…？）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_intro_0049": {
+    "ID": "lbp_intro_0049",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0049a",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組"
+        }
+      }
+    ]
+  },
+
+  "lbp_intro_0049a": {
+    "ID": "lbp_intro_0049a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0050",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（浮気か？……いや違うな。浮気しているなら[=Name,NPC_F,0,FirstName]が俺に直接言うはずだ。でも「彼女のプライベート」で…）"
+    }
+  },
+
+  "lbp_intro_0050": {
+    "ID": "lbp_intro_0050",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0050a",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-0.72, 0.00, 1.74",
+          "RotString": "0, 0.707, 0, 0.707"
+        },
+        "SmoothMovement": { "Time": 2 }
+      }
+    ]
+  },
+
+  "lbp_intro_0050a": {
+    "ID": "lbp_intro_0050a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あーわかんねぇ！本人から聞くか？……頭がおかしくなりそう！"
+    }
+  },
+
+  "lbp_intro_0051": {
+    "ID": "lbp_intro_0051",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE024.ogg"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0051a"
+  },
+
+  "lbp_intro_0051a": {
+    "ID": "lbp_intro_0051a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0052",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "ビープ"
+    }
+  },
+
+  "lbp_intro_0052": {
+    "ID": "lbp_intro_0052",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0053",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ん？"
+    }
+  },
+
+  "lbp_intro_0053": {
+    "ID": "lbp_intro_0053",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_intro_0053a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_intro_0053a": {
+    "ID": "lbp_intro_0053a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_intro_0053b",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "-0.78, 0.00, -2.97",
+          "RotString": "0, -0.363, 0, 0.932"
+        }
+      }
+    ]
+  },
+
+  "lbp_intro_0053b": {
+    "ID": "lbp_intro_0053b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_intro_0054",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.02, 1.86, 1.01",
+        "TargetPosString": "-0.88, 1.12, -2.72",
+        "AroundAngleString": "177.90, 11.22",
+        "Distance": 3.8
+      }
+    }
+  },
+
+  "lbp_intro_0054": {
+    "ID": "lbp_intro_0054",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0055",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（あっ、これは……今、[=Name,Maid,0,CallName]が今夜のホテルを予約した！）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_intro_0055": {
+    "ID": "lbp_intro_0055",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0056",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（どういうことだ？今夜は彼女の夜伽じゃない、ホテルは必要ないだろ？）"
+    }
+  },
+
+  "lbp_intro_0056": {
+    "ID": "lbp_intro_0056",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0057",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "いったい何を隠しているんだ？……あー！イライラする！"
+    }
+  },
+
+  "lbp_intro_0057": {
+    "ID": "lbp_intro_0057",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0058",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（うーん…仕方ない、ちょっと調査が必要だ。よし、今夜ホテルに忍び込んで、[=Name,Maid,0,CallName]がそこで何をしているか確かめろ！）"
+    }
+  },
+
+  "lbp_intro_0058": {
+    "ID": "lbp_intro_0058",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_hotel_0001",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
   }
 }

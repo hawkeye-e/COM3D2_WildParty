@@ -1,0 +1,772 @@
+{
+  "lbp_bedroom_0001": {
+    "ID": "lbp_bedroom_0001",
+    "Type": "BG",
+    "Tag": "Shukuhakubeya_BedRoom_Night",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_bedroom_0001a"
+  },
+
+  "lbp_bedroom_0001a": {
+    "ID": "lbp_bedroom_0001a",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_bedroom_0001b",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 1
+        },
+        "Maid2": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      },
+
+      {
+        "GroupIndex": 1,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 3
+        },
+        "Maid2": {
+          "Type": "Maid",
+          "ArrayPosition": 2
+        }
+      },
+
+      {
+        "GroupIndex": 2,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 4
+        },
+        "Maid2": {
+          "Type": "Maid",
+          "ArrayPosition": 5
+        }
+      },
+
+      {
+        "GroupIndex": 3,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 6
+        },
+        "Maid2": {
+          "Type": "Maid",
+          "ArrayPosition": 7
+        }
+      },
+
+      {
+        "GroupIndex": 4,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 8
+        },
+        "Maid2": {
+          "Type": "Maid",
+          "ArrayPosition": 9
+        }
+      },
+
+      {
+        "GroupIndex": 5,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 10
+        },
+        "Maid2": {
+          "Type": "Maid",
+          "ArrayPosition": 11
+        }
+      },
+
+      {
+        "GroupIndex": 6,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 12
+        },
+        "Maid2": {
+          "Type": "Maid",
+          "ArrayPosition": 13
+        }
+      },
+
+      {
+        "GroupIndex": 7,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 14
+        },
+        "Maid2": {
+          "Type": "Maid",
+          "ArrayPosition": 15
+        }
+      },
+
+      {
+        "GroupIndex": 8,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 16
+        },
+        "Maid2": {
+          "Type": "Maid",
+          "ArrayPosition": 17
+        }
+      },
+
+      {
+        "GroupIndex": 9,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 18
+        },
+        "Maid2": {
+          "Type": "Maid",
+          "ArrayPosition": 19
+        }
+      }
+    ]
+  },
+
+  "lbp_bedroom_0001b": {
+    "ID": "lbp_bedroom_0001b",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_bedroom_0001c",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_yuri_kunni2.ks",
+        "ScriptLabel": "*åÉÇµÇ≥ÇP",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "ÉGÉççDä¥ÇR",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "ÉGÉç‰rÇﬂà§èÓ",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "PosRot": {
+          "PosString": "-0.20, 0.52, 2.66",
+          "RotString": "0, 0.912, 0, 0.408"
+        }
+      },
+
+      {
+        "ArrayPosition": 1,
+        "ScriptFile": "sex_x_yuri_aibu2.ks",
+        "ScriptLabel": "*åÉÇµÇ≥ÇP",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "ÉGÉç„µípÇR",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "óUòf",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "PosRot": {
+          "PosString": "0.23, 0.52, 0.74",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "ArrayPosition": 2,
+        "ScriptFile": "sex_x_yuri_aibu2.ks",
+        "ScriptLabel": "*åÉÇµÇ≥ÇQ",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "PosRot": {
+          "PosString": "-2.39, 0.00, 1.78",
+          "RotString": "0, 0.958, 0, 0.288"
+        }
+      },
+
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_x_yuri_aibu2.ks",
+        "ScriptLabel": "*åÉÇµÇ≥ÇQå©Ç¬ÇﬂçáÇ§",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "PosRot": {
+          "PosString": "2.51, 0.00, 1.92",
+          "RotString": "0, 0.933, 0, -0.360"
+        }
+      },
+
+      {
+        "ArrayPosition": 4,
+        "ScriptFile": "sex_yuri_kunni2.ks",
+        "ScriptLabel": "*åÉÇµÇ≥ÇQ",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "ÉGÉç‰rÇﬂâıäy",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "PosRot": {
+          "PosString": "-3.31, 0.00, 0.23",
+          "RotString": "0, 0.708, 0, 0.706"
+        }
+      },
+
+      {
+        "ArrayPosition": 5,
+        "ScriptFile": "sex_yuri_kunni2.ks",
+        "ScriptLabel": "*åÉÇµÇ≥ÇR",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "ÉGÉç‰rÇﬂâıäy",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "PosRot": {
+          "PosString": "3.34, 0.00, 0.00",
+          "RotString": "0, -0.704, 0, 0.710"
+        }
+      },
+
+      {
+        "ArrayPosition": 6,
+        "ScriptFile": "sex_x_yuri_aibu2.ks",
+        "ScriptLabel": "*åÉÇµÇ≥ÇR",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "PosRot": {
+          "PosString": "1.86, 0.00, -1.74",
+          "RotString": "0, -0.355, 0, 0.935"
+        }
+      },
+
+      {
+        "ArrayPosition": 7,
+        "ScriptFile": "sex_x_yuri_aibu2.ks",
+        "ScriptLabel": "*åÉÇµÇ≥ÇPå©Ç¬ÇﬂçáÇ§",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "PosRot": {
+          "PosString": "-1.84, 0.00, -1.82",
+          "RotString": "0, 0.415, 0, 0.910"
+        }
+      },
+
+      {
+        "ArrayPosition": 8,
+        "ScriptFile": "sex_x_yuri_aibu2.ks",
+        "ScriptLabel": "*åÉÇµÇ≥ÇQ",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "PosRot": {
+          "PosString": "0.00, 0.00, -1.90",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "ArrayPosition": 9,
+        "ScriptFile": "sex_yuri_kunni2.ks",
+        "ScriptLabel": "*åÉÇµÇ≥ÇQ",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "ÉGÉç‰rÇﬂâıäy",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "PosRot": {
+          "PosString": "-3.45, 0.00, -1.38",
+          "RotString": "0, 0.483, 0, 0.876"
+        }
+      }
+    ]
+  },
+
+  "lbp_bedroom_0001c": {
+    "ID": "lbp_bedroom_0001c",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_bedroom_0001d",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "3.36, 1.94, -4.08",
+        "TargetPosString": "-1.26, 0.11, 1.81",
+        "AroundAngleString": "321.92, 13.71",
+        "Distance": 7.7
+      }
+    }
+  },
+
+  "lbp_bedroom_0001d": {
+    "ID": "lbp_bedroom_0001d",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_bedroom_0002"
+  },
+
+  "lbp_bedroom_0002": {
+    "ID": "lbp_bedroom_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ÅiÇ¶ÅcÅHÅ@ÅcÅcÇ»Ç…ÅcÇ±ÇÍÅcÅHÅj"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_bedroom_0003": {
+    "ID": "lbp_bedroom_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ÅiÉÅÉCÉhÇΩÇøÇÕï¯Ç´çáÇ¢ÅAÉZÉbÉNÉXÇÇµénÇﬂÇΩÅIÅj"
+    }
+  },
+
+  "lbp_bedroom_0004": {
+    "ID": "lbp_bedroom_0004",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_bedroom_0005_Branch",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-0.59, 1.97, 1.55",
+        "TargetPosString": "-0.30, 0.70, 2.93",
+        "AroundAngleString": "11.62, 41.97",
+        "Distance": 1.9
+      }
+    }
+  },
+
+  "lbp_bedroom_0005_Branch": {
+    "ID": "lbp_bedroom_0005_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_bedroom_0010_T_[=PType]"
+  },
+
+  "lbp_bedroom_0011_Branch": {
+    "ID": "lbp_bedroom_0011_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_bedroom_0020_T_[=PType]"
+  },
+
+
+  "lbp_bedroom_0021": {
+    "ID": "lbp_bedroom_0021",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_bedroom_0022_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_yuri_kunni2.ks",
+        "ScriptLabel": "*ë“ã@",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "ê‚í∏éÀê∏å„ÇQ",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "óUòf",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        }
+      }
+    ]
+  },
+
+  "lbp_bedroom_0022_Branch": {
+    "ID": "lbp_bedroom_0022_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_bedroom_0030_T_[=PType]"
+  },
+
+  "lbp_bedroom_0031_Branch": {
+    "ID": "lbp_bedroom_0031_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_bedroom_0040_T_[=PType]"
+  },
+
+  "lbp_bedroom_0041_Branch": {
+    "ID": "lbp_bedroom_0041_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_bedroom_0050_T_[=PType]"
+  },
+
+  "lbp_bedroom_0051": {
+    "ID": "lbp_bedroom_0051",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_bedroom_0052_camerapan",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_yuri_kunni2.ks",
+        "ScriptLabel": "*åÉÇµÇ≥ÇP",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "ÉGÉççDä¥ÇR",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "ÉGÉç‰rÇﬂà§èÓ",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        }
+      }
+    ]
+  },
+
+  "lbp_bedroom_0052_camerapan": {
+    "ID": "lbp_bedroom_0052_camerapan",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_bedroom_0053_Branch",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-0.05, 1.61, 2.51",
+        "TargetPosString": "0.35, 0.72, 0.42",
+        "AroundAngleString": "169.11, 22.72",
+        "Distance": 2.3
+      }
+    }
+  },
+
+  "lbp_bedroom_0053_Branch": {
+    "ID": "lbp_bedroom_0053_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_bedroom_0060_T_[=PType]"
+  },
+
+  "lbp_bedroom_0061_Branch": {
+    "ID": "lbp_bedroom_0061_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_bedroom_0070_T_[=PType]"
+  },
+
+  "lbp_bedroom_0071": {
+    "ID": "lbp_bedroom_0071",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_bedroom_0072_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 1,
+        "ScriptFile": "sex_x_yuri_aibu2.ks",
+        "ScriptLabel": "*åÉÇµÇ≥ÇPå©Ç¬ÇﬂçáÇ§",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "ÉGÉççDä¥ÇR",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "óUòf",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        }
+      }
+    ]
+  },
+
+  "lbp_bedroom_0072_Branch": {
+    "ID": "lbp_bedroom_0072_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_bedroom_0080_T_[=PType]"
+  },
+
+  "lbp_bedroom_0081_Branch": {
+    "ID": "lbp_bedroom_0081_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_bedroom_0090_T_[=PType]"
+  },
+
+  "lbp_bedroom_0091": {
+    "ID": "lbp_bedroom_0091",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_bedroom_0092_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 1,
+        "ScriptFile": "sex_x_yuri_aibu2.ks",
+        "ScriptLabel": "*åÉÇµÇ≥ÇQå©Ç¬ÇﬂçáÇ§",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "î≠èÓ",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "óUòf",
+          "FaceBlend": "ñjÇQó‹ÇO"
+        }
+      }
+    ]
+  },
+
+  "lbp_bedroom_0092_Branch": {
+    "ID": "lbp_bedroom_0092_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_bedroom_0100_T_[=PType]"
+  },
+
+  "lbp_bedroom_0101_Branch": {
+    "ID": "lbp_bedroom_0101_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_bedroom_0110_T_[=PType]"
+  },
+
+  "lbp_bedroom_0111_Branch": {
+    "ID": "lbp_bedroom_0111_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_bedroom_0120_T_[=PType]"
+  },
+
+  "lbp_bedroom_0121_camerapan": {
+    "ID": "lbp_bedroom_0121_camerapan",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_bedroom_0122",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "3.36, 1.94, -4.08",
+        "TargetPosString": "-1.26, 0.11, 1.81",
+        "AroundAngleString": "321.92, 13.71",
+        "Distance": 7.7
+      }
+    }
+  },
+
+  "lbp_bedroom_0122": {
+    "ID": "lbp_bedroom_0122",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0123",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ÅiÉåÉYÉvÉåÉCÇ©ÅIÇµÇ©Ç‡óêåÅIÇ±ÇÒÇ»ÇÃå©ÇΩÇ±Ç∆Ç»Ç¢ÅIÅj"
+    }
+  },
+
+  "lbp_bedroom_0123": {
+    "ID": "lbp_bedroom_0123",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_yotogiplay_phase1_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ÅiÇªÇÍÇå©Ç»Ç™ÇÁâ¥ÇÕÉ`ÉìÉ|ÇéÊÇËèoÇµÅAévÇÌÇ∏ÉIÉiÉjÅ[énÇﬂÇæÅcÅj"
+    }
+  },
+
+
+
+
+  "lbp_yotogiplay_phase1_closepanel": {
+    "ID": "lbp_yotogiplay_phase1_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_start_yotogiplay_phase1"
+  },
+
+  "lbp_start_yotogiplay_phase1_dismiss_group": {
+    "ID": "lbp_start_yotogiplay_phase1_dismiss_group",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "lbp_start_yotogiplay_phase1"
+  },
+
+  "lbp_start_yotogiplay_phase1": {
+    "ID": "lbp_start_yotogiplay_phase1",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "LilyBloomingParadise",
+      "Phase": 1,
+      "IsKeepCharacterVisibleAfterYotogi": true,
+      "IsFinalYotogi": false,
+      "IsClubOwnerMainCharacter": false
+    },
+    "NextStepID": "lbp_phase2_init"
+  }
+}

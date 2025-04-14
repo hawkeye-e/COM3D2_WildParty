@@ -1,0 +1,2253 @@
+{
+
+  "lbp_postyotogi_init": {
+    "ID": "lbp_postyotogi_init",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "SystemFadeOut",
+    "NextStepID": "hgbc_postyotogi_remove_owner"
+  },
+
+  "hgbc_postyotogi_remove_owner": {
+    "ID": "hgbc_postyotogi_remove_owner",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_postyotogi_init_a",
+    "ListUpdateData": {
+      "Remove": [
+        {
+          "Type": "Owner",
+          "SrcPosition": 0
+        }
+      ]
+    }
+  },
+
+  "lbp_postyotogi_init_a": {
+    "ID": "lbp_postyotogi_init_a",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_init_b"
+  },
+
+  "lbp_postyotogi_init_b": {
+    "ID": "lbp_postyotogi_init_b",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "lbp_postyotogi_init_c"
+  },
+
+  "lbp_postyotogi_init_c": {
+    "ID": "lbp_postyotogi_init_c",
+    "Type": "ConvertSex",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_init_d",
+    "ConvertSexData": {
+      "BackToFemale": [
+        {
+          "Type": "F",
+          "ArrayPosition": 0
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 1
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 2
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 3
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 4
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 5
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 6
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 7
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 8
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 9
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 10
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 11
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 12
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 13
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 14
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 15
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 16
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 17
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 18
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 19
+        }
+      ]
+    }
+  },
+
+  "lbp_postyotogi_init_d": {
+    "ID": "lbp_postyotogi_init_d",
+    "Type": "ConvertSex",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_init_e",
+    "ConvertSexData": {
+      "ToMale": [
+        {
+          "Type": "F",
+          "ArrayPosition": 2
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 4
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 6
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 8
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 10
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 12
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 14
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 16
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 18
+        }
+      ]
+    }
+  },
+
+  "lbp_postyotogi_init_e": {
+    "ID": "lbp_postyotogi_init_e",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_postyotogi_init_f",
+    "ListUpdateData": {
+      "Add": [
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 2,
+          "PositionToInsert": 0
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 4,
+          "PositionToInsert": 1
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 6,
+          "PositionToInsert": 2
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 8,
+          "PositionToInsert": 3
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 10,
+          "PositionToInsert": 4
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 12,
+          "PositionToInsert": 5
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 14,
+          "PositionToInsert": 6
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 16,
+          "PositionToInsert": 7
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 18,
+          "PositionToInsert": 8
+        }
+      ]
+    }
+  },
+
+  "lbp_postyotogi_init_f": {
+    "ID": "lbp_postyotogi_init_f",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_init_g",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 1
+        },
+        "Maid2": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      },
+
+      {
+        "GroupIndex": 1,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 3
+        },
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 0
+        }
+      },
+
+      {
+        "GroupIndex": 2,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 5
+        },
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 1
+        }
+      },
+
+      {
+        "GroupIndex": 3,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 6
+        },
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 2
+        }
+      },
+
+      {
+        "GroupIndex": 4,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 8
+        },
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 3
+        }
+      },
+
+      {
+        "GroupIndex": 5,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 10
+        },
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 4
+        }
+      },
+
+      {
+        "GroupIndex": 6,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 12
+        },
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 5
+        }
+      },
+
+      {
+        "GroupIndex": 7,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 14
+        },
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 6
+        }
+      },
+
+      {
+        "GroupIndex": 8,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 16
+        },
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 7
+        }
+      },
+
+      {
+        "GroupIndex": 9,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 18
+        },
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 8
+        }
+      }
+    ]
+  },
+
+  "lbp_postyotogi_init_g": {
+    "ID": "lbp_postyotogi_init_g",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_postyotogi_init_h",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_yuri_kunni2.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ好感３",
+          "FaceBlend": "頬２涙０"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "エロ舐め愛情",
+          "FaceBlend": "頬２涙０"
+        },
+        "PosRot": {
+          "PosString": "-0.20, 0.52, 2.66",
+          "RotString": "0, 0.912, 0, 0.408"
+        }
+      },
+
+      {
+        "ArrayPosition": 1,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ羞恥３",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "FaceAnime": "誘惑",
+          "FaceBlend": "頬２涙０"
+        },
+        "PosRot": {
+          "PosString": "0.23, 0.52, 0.74",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "ArrayPosition": 2,
+        "ScriptFile": "sex_OM_taimenzai.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 129,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "頬２涙０"
+        },
+        "PosRot": {
+          "PosString": "-2.39, 0.00, 1.78",
+          "RotString": "0, 0.958, 0, 0.288"
+        }
+      },
+
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_tetunagi_kijyoui.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 131,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "頬２涙０"
+        },
+        "PosRot": {
+          "PosString": "2.51, 0.00, 1.92",
+          "RotString": "0, 0.933, 0, -0.360"
+        }
+      },
+
+      {
+        "ArrayPosition": 4,
+        "ScriptFile": "sex_OM_utubuse_kouhaii.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 121,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "FaceAnime": "エロ舐め快楽",
+          "FaceBlend": "頬２涙０"
+        },
+        "PosRot": {
+          "PosString": "-3.31, 0.00, 0.23",
+          "RotString": "0, 0.708, 0, 0.706"
+        }
+      },
+
+      {
+        "ArrayPosition": 5,
+        "ScriptFile": "sex_OM_udemoti_kouhaii.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 117,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "FaceAnime": "エロ舐め快楽",
+          "FaceBlend": "頬２涙０"
+        },
+        "PosRot": {
+          "PosString": "3.34, 0.00, 0.00",
+          "RotString": "0, -0.704, 0, 0.710"
+        }
+      },
+
+      {
+        "ArrayPosition": 6,
+        "ScriptFile": "sex_OM_yorisoi_sokui.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 115,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "頬２涙０"
+        },
+        "PosRot": {
+          "PosString": "1.86, 0.00, -1.74",
+          "RotString": "0, -0.355, 0, 0.935"
+        }
+      },
+
+      {
+        "ArrayPosition": 7,
+        "ScriptFile": "sex_OM_kouhaii.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 103,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "頬２涙０"
+        },
+        "PosRot": {
+          "PosString": "-1.84, 0.00, -1.82",
+          "RotString": "0, 0.415, 0, 0.910"
+        }
+      },
+
+      {
+        "ArrayPosition": 8,
+        "ScriptFile": "sex_tetunagi_seijyoui.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 139,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "頬２涙０"
+        },
+        "PosRot": {
+          "PosString": "0.00, 0.00, -1.90",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "ArrayPosition": 9,
+        "ScriptFile": "sex_kaikyaku_seijyoui.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 157,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "FaceAnime": "エロ舐め快楽",
+          "FaceBlend": "頬２涙０"
+        },
+        "PosRot": {
+          "PosString": "-3.45, 0.00, -1.38",
+          "RotString": "0, 0.483, 0, 0.876"
+        }
+      }
+    ]
+  },
+
+  "lbp_postyotogi_init_h": {
+    "ID": "lbp_postyotogi_init_h",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0001",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "3.36, 1.94, -4.08",
+        "TargetPosString": "-1.26, 0.11, 1.81",
+        "AroundAngleString": "321.92, 13.71",
+        "Distance": 7.7
+      }
+    }
+  },
+
+  "lbp_postyotogi_0001": {
+    "ID": "lbp_postyotogi_0001",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（メイドたちはセックスを続ける。彼女たちは交互にペニバンを使い、お互いの膣を責める。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_postyotogi_0002": {
+    "ID": "lbp_postyotogi_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（クローゼットから見てだけでも、その快楽が伝わってくる）"
+    }
+  },
+
+  "lbp_postyotogi_0003": {
+    "ID": "lbp_postyotogi_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺はこの隅で静かに彼女たちの悦楽を分かち合ってい、リズムに合わせてシコシコオナニーする。）"
+    }
+  },
+
+  "lbp_postyotogi_0004": {
+    "ID": "lbp_postyotogi_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0005",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（もはや俺が何をしようとしているのか、なぜここにいるのか、そんなことはもうどうでもいい。）"
+    }
+  },
+
+  "lbp_postyotogi_0005": {
+    "ID": "lbp_postyotogi_0005",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0006",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ご主人様として、恋人として、これはやってはいけないことは分かっている……自分のチンポを使って彼女たちを満足させるべきだとわかっている……）"
+    }
+  },
+
+  "lbp_postyotogi_0006": {
+    "ID": "lbp_postyotogi_0006",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0007",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（けどよ……この楽園のような光景に、男は抗えないだろう？）"
+    }
+  },
+
+  "lbp_postyotogi_0007": {
+    "ID": "lbp_postyotogi_0007",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0008",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ごめんな…みんな。俺のオカズになれぇ……うっ！）"
+    }
+  },
+
+  "lbp_postyotogi_0008": {
+    "ID": "lbp_postyotogi_0008",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_postyotogi_0009",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_postyotogi_0009": {
+    "ID": "lbp_postyotogi_0009",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_postyotogi_0009a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_yuri_kunni2.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 3,
+        "WaitLoad": true
+      },
+
+      {
+        "ArrayPosition": 1,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 101,
+        "WaitLoad": true
+      },
+
+      {
+        "ArrayPosition": 2,
+        "ScriptFile": "sex_OM_taimenzai.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 129,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "lbp_postyotogi_0009a": {
+    "ID": "lbp_postyotogi_0009a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0010_Branch",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-0.59, 1.97, 1.55",
+        "TargetPosString": "-0.30, 0.70, 2.93",
+        "AroundAngleString": "11.62, 41.97",
+        "Distance": 1.9
+      }
+    }
+  },
+
+  "lbp_postyotogi_0010_Branch": {
+    "ID": "lbp_postyotogi_0010_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0020_T_[=PType]",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_postyotogi_0021_Branch": {
+    "ID": "lbp_postyotogi_0021_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0030_T_[=PType]"
+  },
+
+  "lbp_postyotogi_0031_camerapan": {
+    "ID": "lbp_postyotogi_0031_camerapan",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0032_Branch",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-1.77, 1.44, 0.98",
+        "TargetPosString": "0.41, 0.83, 0.58",
+        "AroundAngleString": "100.25, 15.27",
+        "Distance": 2.3
+      }
+    }
+  },
+
+  "lbp_postyotogi_0032_Branch": {
+    "ID": "lbp_postyotogi_0032_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0040_T_[=PType]"
+  },
+
+  "lbp_postyotogi_0041_Branch": {
+    "ID": "lbp_postyotogi_0041_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0050_T_[=PType]"
+  },
+
+  "lbp_postyotogi_0051_camerapan": {
+    "ID": "lbp_postyotogi_0051_camerapan",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0052_Branch",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-4.38, 1.32, 0.51",
+        "TargetPosString": "-2.45, 0.34, 1.96",
+        "AroundAngleString": "53.23, 22.09",
+        "Distance": 2.6
+      }
+    }
+  },
+
+  "lbp_postyotogi_0052_Branch": {
+    "ID": "lbp_postyotogi_0052_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0060_T_[=PType]"
+  },
+
+  "lbp_postyotogi_0061_Branch": {
+    "ID": "lbp_postyotogi_0061_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0070_T_[=PType]"
+  },
+
+
+  "lbp_postyotogi_0071": {
+    "ID": "lbp_postyotogi_0071",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_postyotogi_0072",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_postyotogi_0072": {
+    "ID": "lbp_postyotogi_0072",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0073",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "lbp_postyotogi_0073": {
+    "ID": "lbp_postyotogi_0073",
+    "Type": "BGM",
+    "Tag": "BGM019.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0073a"
+  },
+
+  "lbp_postyotogi_0073a": {
+    "ID": "lbp_postyotogi_0073a",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "lbp_postyotogi_0073b"
+  },
+
+  "lbp_postyotogi_0073b": {
+    "ID": "lbp_postyotogi_0073b",
+    "Type": "ConvertSex",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0073c",
+    "ConvertSexData": {
+      "BackToFemale": [
+        {
+          "Type": "F",
+          "ArrayPosition": 0
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 1
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 2
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 3
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 4
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 5
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 6
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 7
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 8
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 9
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 10
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 11
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 12
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 13
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 14
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 15
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 16
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 17
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 18
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 19
+        }
+      ]
+    }
+  },
+
+  "lbp_postyotogi_0073c": {
+    "ID": "lbp_postyotogi_0073c",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_postyotogi_0073d",
+    "ListUpdateData": {
+      "Remove": [
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 2
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 4
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 6
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 8
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 10
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 12
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 14
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 16
+        },
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 18
+        }
+      ]
+    }
+  },
+
+  "lbp_postyotogi_0073d": {
+    "ID": "lbp_postyotogi_0073d",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_postyotogi_0073e",
+    "CharaData": [
+      {
+        "Type": "F_ALL",
+        "Visible": true,
+        "WaitLoad": true,
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        },
+        "PosRot": {
+          "PosString": "500, 500, 500",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
+      }
+    ]
+  },
+
+  "lbp_postyotogi_0073e": {
+    "ID": "lbp_postyotogi_0073e",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_postyotogi_0074",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomAngry",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "1.25, 0.00, -2.69",
+          "RotString": "0, 1, 0, 0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "びっくり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちがっかり"
+        },
+        "PosRot": {
+          "PosString": "2.44, 0.00, 0.81",
+          "RotString": "0, -0.983, 0, 0.183"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomAngry",
+        "MotionInfo": {
+          "ScriptFile": "event_006.ks",
+          "ScriptLabel": "*床座り＿ぷんぷん"
+        },
+        "PosRot": {
+          "PosString": "-0.19, 0.52, 1.12",
+          "RotString": "0, 1, 0, 0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomAngry",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち腕を組む"
+        },
+        "PosRot": {
+          "PosString": "0.00, 0.00, -0.61",
+          "RotString": "0, 0.840, 0, 0.543"
+        }
+      }
+    ]
+  },
+
+  "lbp_postyotogi_0074": {
+    "ID": "lbp_postyotogi_0074",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0075",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（レズ乱交が何時間も続いた後、メイトたちはようやく休憩に入る。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_postyotogi_0075": {
+    "ID": "lbp_postyotogi_0075",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0076",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺もオナニーしすぎて疲れた。）"
+    }
+  },
+
+  "lbp_postyotogi_0076": {
+    "ID": "lbp_postyotogi_0076",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0077",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（なんか夜伽より疲れたような気がする……まぁ、ちょっと休め、彼女たちが部屋を出るのを待つか。）"
+    }
+  },
+
+  "lbp_postyotogi_0077": {
+    "ID": "lbp_postyotogi_0077",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0078",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ふぅ………）"
+    }
+  },
+
+  "lbp_postyotogi_0078": {
+    "ID": "lbp_postyotogi_0078",
+    "Type": "BGM",
+    "Tag": "",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0079_Branch"
+  },
+
+  "lbp_postyotogi_0079_Branch": {
+    "ID": "lbp_postyotogi_0079_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0080_T_[=PType]"
+  },
+
+  "lbp_postyotogi_0081": {
+    "ID": "lbp_postyotogi_0081",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0081a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "え？"
+    }
+  },
+
+  "lbp_postyotogi_0081a": {
+    "ID": "lbp_postyotogi_0081a",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "mmlSE_065.ogg"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0081b"
+  },
+
+  "lbp_postyotogi_0081b": {
+    "ID": "lbp_postyotogi_0081b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0082",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "カチャ"
+    }
+  },
+
+  "lbp_postyotogi_0082": {
+    "ID": "lbp_postyotogi_0082",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0083",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（あっ、おわった……[=Name,Maid,0,CallName]がクローゼットの扉を開いた…）"
+    }
+  },
+
+  "lbp_postyotogi_0083": {
+    "ID": "lbp_postyotogi_0083",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_postyotogi_0084",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_postyotogi_0084": {
+    "ID": "lbp_postyotogi_0084",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0084a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "1.27, 1.67, -3.26",
+        "TargetPosString": "1.27, 1.58, -2.67",
+        "AroundAngleString": "0.24, 8.74",
+        "Distance": 0.6
+      },
+      "LockCamera": { "IsLock": true }
+    }
+  },
+
+  "lbp_postyotogi_0084a": {
+    "ID": "lbp_postyotogi_0084a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_postyotogi_0085_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomAngry",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち秘部を隠す"
+        }
+      }
+    ],
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_postyotogi_0085_Branch": {
+    "ID": "lbp_postyotogi_0085_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0090_T_[=PType]"
+  },
+
+  "lbp_postyotogi_0091_Branch": {
+    "ID": "lbp_postyotogi_0091_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0100_T_[=PType]"
+  },
+
+  "lbp_postyotogi_0101": {
+    "ID": "lbp_postyotogi_0101",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0102",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あっ…ハハ…、みなさんこんばんは。あっあれー？なんで俺はここで寝ているんだー？おかしいなー。"
+    }
+  },
+
+  "lbp_postyotogi_0102": {
+    "ID": "lbp_postyotogi_0102",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0103_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "えっと、みんなどうした？あっ、すまんな、邪魔しちゃったみたいだなー。じゃあ俺は自分の部屋帰るね…ハハー"
+    }
+  },
+
+  "lbp_postyotogi_0103_Branch": {
+    "ID": "lbp_postyotogi_0103_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0110_T_[=PType]"
+  },
+
+  "lbp_postyotogi_0111_Branch": {
+    "ID": "lbp_postyotogi_0111_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0120_T_[=PType]"
+  },
+
+  "lbp_postyotogi_0121": {
+    "ID": "lbp_postyotogi_0121",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0122",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "は…はい…"
+    }
+  },
+
+  "lbp_postyotogi_0122": {
+    "ID": "lbp_postyotogi_0122",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_postyotogi_0123",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_postyotogi_0123": {
+    "ID": "lbp_postyotogi_0123",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_postyotogi_0123a",
+    "CharaData": [
+      {
+        "Type": "F_ALL",
+        "Visible": true,
+        "WaitLoad": true,
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        },
+        "FaceAnime": "RandomAngry",
+        "MotionInfo": { "RandomMotion": "RandomStandingAngry" }
+      }
+    ]
+  },
+
+  "lbp_postyotogi_0123a": {
+    "ID": "lbp_postyotogi_0123a",
+    "Type": "BGM",
+    "Tag": "BGM012.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0123b"
+  },
+
+  "lbp_postyotogi_0123b": {
+    "ID": "lbp_postyotogi_0123b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_postyotogi_0123c",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "1.07, 0.46, -1.75",
+          "RotString": "0, -1, 0, 0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "怒り",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち威張る"
+        },
+        "PosRot": {
+          "PosString": "1.09, 0.00, -1.36",
+          "RotString": "0, 1, 0, 0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "0.27, 0.00, -1.73",
+          "RotString": "0, 0.929, 0, 0.369"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "1.79, 0.00, -1.45",
+          "RotString": "0, 0.932, 0, -0.362"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "0.00, 0.00, -2.32",
+          "RotString": "0, 0.625, 0, 0.780"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "2.05, 0.00, -2.03",
+          "RotString": "0, -0.753, 0, 0.658"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "2.07, 0.00, -2.62",
+          "RotString": "0, -0.463, 0, 0.887"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "0.00, 0.00, -1.11",
+          "RotString": "0, 0.869, 0, 0.494"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "0.61, 0.00, -0.82",
+          "RotString": "0, 0.959, 0, 0.284"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 8,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "1.45, 0.00, -0.79",
+          "RotString": "0, -0.974, 0, 0.225"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 9,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "2.34, 0.00, -1.24",
+          "RotString": "0, -0.889, 0, 0.458"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 10,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "-0.44, 0.00, -1.51",
+          "RotString": "0, 0.864, 0, 0.503"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 11,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "2.59, 0.00, -2.24",
+          "RotString": "0, -0.750, 0, 0.662"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 12,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "-0.69, 0.00, -2.11",
+          "RotString": "0, 0.689, 0, 0.725"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 13,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "-0.61, 0.00, -0.89",
+          "RotString": "0, 0.964, 0, 0.264"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 14,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "2.08, 0.00, -0.66",
+          "RotString": "0, -0.922, 0, 0.387"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 15,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "2.80, 0.00, -1.57",
+          "RotString": "0, -0.899, 0, 0.439"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 16,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "-1.30, 0.00, -1.49",
+          "RotString": "0, 0.860, 0, 0.511"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 17,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "2.80, 0.00, -0.52",
+          "RotString": "0, 0.910, 0, -0.414"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 18,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "-1.45, 0.00, -2.57",
+          "RotString": "0, 0.585, 0, 0.811"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 19,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "-1.82, 0.00, -1.91",
+          "RotString": "0, 0.659, 0, 0.752"
+        }
+      }
+    ]
+  },
+
+  "lbp_postyotogi_0123c": {
+    "ID": "lbp_postyotogi_0123c",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0124",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "2.84, 5.36, 1.65",
+        "TargetPosString": "1.38, 0.32, -2.52",
+        "AroundAngleString": "199.29, 48.80",
+        "Distance": 6.7
+      },
+      "LockCamera": { "IsLock": false }
+    }
+  },
+
+  "lbp_postyotogi_0124": {
+    "ID": "lbp_postyotogi_0124",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0125",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は引きずり出され、みんなに説教された…）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_postyotogi_0125": {
+    "ID": "lbp_postyotogi_0125",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0126",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は謝り続けているが、彼女たちはまだ頭に血がのぼってる。）"
+    }
+  },
+
+  "lbp_postyotogi_0126": {
+    "ID": "lbp_postyotogi_0126",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0127",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（…ところで、レズプレイの後、彼女たちの体はまだエロい匂いがプンプンされたる。あっ、まずい…またチンポが反応してる……）"
+    }
+  },
+
+  "lbp_postyotogi_0127": {
+    "ID": "lbp_postyotogi_0127",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0128_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あの…俺悪かった…ごめん…"
+    }
+  },
+
+  "lbp_postyotogi_0128_Branch": {
+    "ID": "lbp_postyotogi_0128_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0130_T_[=PType]"
+  },
+
+  "lbp_postyotogi_0131_Branch": {
+    "ID": "lbp_postyotogi_0131_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0140_T_[=PType]"
+  },
+
+  "lbp_postyotogi_0141_Branch": {
+    "ID": "lbp_postyotogi_0141_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0150_T_[=PType]"
+  },
+
+  "lbp_postyotogi_0151": {
+    "ID": "lbp_postyotogi_0151",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_postyotogi_0152",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_postyotogi_0152": {
+    "ID": "lbp_postyotogi_0152",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0153",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "lbp_postyotogi_0153": {
+    "ID": "lbp_postyotogi_0153",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0154",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "え？ちょっ…"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_postyotogi_0154": {
+    "ID": "lbp_postyotogi_0154",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_postyotogi_0155",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_postyotogi_0155": {
+    "ID": "lbp_postyotogi_0155",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_postyotogi_0155a",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "wasikoki_3_m.anm",
+          "MotionTag": "wasikoki_3_m.anm"
+        },
+        "PosRot": {
+          "PosString": "0.91, -0.02, -1.97",
+          "RotString": "0, -0.997, 0, 0.071"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "怒り",
+        "MotionInfo": {
+          "MotionFile": "wasikoki_3_f.anm",
+          "MotionTag": "wasikoki_3_f.anm"
+        },
+        "PosRot": {
+          "PosString": "0.91, -0.02, -1.97",
+          "RotString": "0, -0.997, 0, 0.071"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "wasikoki_taiki_f2.anm",
+          "MotionTag": "wasikoki_taiki_f2.anm"
+        },
+        "PosRot": {
+          "PosString": "0.91, -0.02, -1.97",
+          "RotString": "0, -0.997, 0, 0.071"
+        }
+      }
+    ]
+  },
+
+  "lbp_postyotogi_0155a": {
+    "ID": "lbp_postyotogi_0155a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0156",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "1.19, 0.03, -3.55",
+        "TargetPosString": "1.10, 0.43, -2.53",
+        "AroundAngleString": "355.27, 338.92",
+        "Distance": 1.1
+      }
+    }
+  },
+
+  "lbp_postyotogi_0156": {
+    "ID": "lbp_postyotogi_0156",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0157",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]は俺を床に押し倒し、俺のチンポを踏んだ。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_postyotogi_0157": {
+    "ID": "lbp_postyotogi_0157",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0158_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "待て待て！痛てぇ！[=Name,Maid,0,CallName]、やめろ！本当に痛いからやめろ！"
+    }
+  },
+
+  "lbp_postyotogi_0158_Branch": {
+    "ID": "lbp_postyotogi_0158_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0160_T_[=PType]"
+  },
+
+  "lbp_postyotogi_0161": {
+    "ID": "lbp_postyotogi_0161",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0162",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "違う違う、嘘じゃないよ！信じてくれ！あーッ…うーーッ…！"
+    }
+  },
+
+  "lbp_postyotogi_0162": {
+    "ID": "lbp_postyotogi_0162",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_postyotogi_0163_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "wasikoki_3_f2.anm",
+          "MotionTag": "wasikoki_3_f2.anm"
+        }
+      }
+    ]
+  },
+
+  "lbp_postyotogi_0163_Branch": {
+    "ID": "lbp_postyotogi_0163_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0170_T_[=PType]"
+  },
+
+  "lbp_postyotogi_0171": {
+    "ID": "lbp_postyotogi_0171",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0172_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あーッ…ご、ごめん…あーーッ…"
+    }
+  },
+
+  "lbp_postyotogi_0172_Branch": {
+    "ID": "lbp_postyotogi_0172_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lbp_postyotogi_0180_T_[=PType]"
+  },
+
+  "lbp_postyotogi_0181": {
+    "ID": "lbp_postyotogi_0181",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0182",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "も、申し訳ございませんでした！許してくれませんか？　あーッ、あーッ、あーッ、いいィィーーッ！"
+    }
+  },
+
+  "lbp_postyotogi_0182": {
+    "ID": "lbp_postyotogi_0182",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_postyotogi_0183",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_postyotogi_0183": {
+    "ID": "lbp_postyotogi_0183",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0183a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "lbp_postyotogi_0183a": {
+    "ID": "lbp_postyotogi_0183a",
+    "Type": "BGM",
+    "Tag": "",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0184"
+  },
+
+  "lbp_postyotogi_0184": {
+    "ID": "lbp_postyotogi_0184",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0185",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "………"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_postyotogi_0185": {
+    "ID": "lbp_postyotogi_0185",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0186",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……"
+    }
+  },
+
+  "lbp_postyotogi_0186": {
+    "ID": "lbp_postyotogi_0186",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0187",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "…"
+    }
+  },
+
+  "lbp_postyotogi_0187": {
+    "ID": "lbp_postyotogi_0187",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_postyotogi_0188",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_postyotogi_0188": {
+    "ID": "lbp_postyotogi_0188",
+    "Type": "BGM",
+    "Tag": "BGM017.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0189"
+  },
+
+  "lbp_postyotogi_0189": {
+    "ID": "lbp_postyotogi_0189",
+    "Type": "BG",
+    "Tag": "EmpireClub_Rotary_Night",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0190"
+  },
+
+  "lbp_postyotogi_0190": {
+    "ID": "lbp_postyotogi_0190",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_postyotogi_0191",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "0.29, -0.03, -1.32",
+        "TargetPosString": "0.15, 1.72, -0.37",
+        "AroundAngleString": "351.56, 298.88",
+        "Distance": 2
+      },
+      "LockCamera": { "IsLock": true }
+    }
+  },
+
+  "lbp_postyotogi_0191": {
+    "ID": "lbp_postyotogi_0191",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lbp_postyotogi_0192",
+    "CharaData": [
+      {
+        "Type": "F_ALL",
+        "Visible": false,
+        "WaitLoad": true
+      },
+      {
+        "Type": "M_ALL",
+        "Visible": false,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "lbp_postyotogi_0192": {
+    "ID": "lbp_postyotogi_0192",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0193",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺の情けない声が彼女たちのスイッチを入れたようだ…）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_postyotogi_0193": {
+    "ID": "lbp_postyotogi_0193",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0194",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（あれから数時間、彼女たちが満足するまで、俺に搾り取られ続けた。）"
+    }
+  },
+
+  "lbp_postyotogi_0194": {
+    "ID": "lbp_postyotogi_0194",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0195",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（オナニーのしすぎで、本当に大変たっだ。）"
+    }
+  },
+
+  "lbp_postyotogi_0195": {
+    "ID": "lbp_postyotogi_0195",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0196",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そして俺はもう一度謝り、ようやく受け入れた。）"
+    }
+  },
+
+  "lbp_postyotogi_0196": {
+    "ID": "lbp_postyotogi_0196",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0197",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]は、彼女たちはご主人様が愛する人を愛し始めると言った。そして愛が深まり、互いの肉体を求め始めた。）"
+    }
+  },
+
+  "lbp_postyotogi_0197": {
+    "ID": "lbp_postyotogi_0197",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0198",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（レズセックスを何度か試した後、彼女たちはこのようなレズ乱交パーティーを試し、ついにハマった。）"
+    }
+  },
+
+  "lbp_postyotogi_0198": {
+    "ID": "lbp_postyotogi_0198",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0199",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺が嫌がるかもしれないので、こっそりやってたんだ。）"
+    }
+  },
+
+  "lbp_postyotogi_0199": {
+    "ID": "lbp_postyotogi_0199",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0200",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（まあ、大したことではないので、もちろん反対はしません。むしろ、やったほうがいいと思う。）"
+    }
+  },
+
+  "lbp_postyotogi_0200": {
+    "ID": "lbp_postyotogi_0200",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0201",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（もし彼女たちがまたやるなら見てみたいって言ったんだ。これは本当にとても美しいからだ。）"
+    }
+  },
+
+  "lbp_postyotogi_0201": {
+    "ID": "lbp_postyotogi_0201",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_end",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ああ、新しい楽しみを見つけた…何か新しいプレイが見つかるかも…）"
+    }
+  },
+
+
+  "lbp_end": {
+    "ID": "lbp_end",
+    "Type": "Special",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lbp_end2",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lbp_end2": {
+    "ID": "lbp_end2",
+    "Type": "ADVEnd",
+    "WaitingType": "End"
+  }
+}

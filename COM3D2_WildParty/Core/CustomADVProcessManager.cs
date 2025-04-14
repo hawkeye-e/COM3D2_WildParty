@@ -103,6 +103,9 @@ namespace COM3D2.WildParty.Plugin.Core
                         case Constant.ADVType.TimeWait:
                             ProcessADVTimeWait(instance, thisStep);
                             break;
+                        case Constant.ADVType.ConvertSex:
+                            ProcessADVConvertSex(instance, thisStep);
+                            break;
                         case Constant.ADVType.Special:
                             ProcessADVSpecial(instance, thisStep);
                             break;
@@ -239,7 +242,10 @@ namespace COM3D2.WildParty.Plugin.Core
 
         private static void ProcessADVPlaySE(ADVKagManager instance, ADVStep step)
         {
-            GameMain.Instance.SoundMgr.PlaySe(step.SEData.FileName, step.SEData.IsLoop);
+            if (step.SEData.Stop)
+                GameMain.Instance.SoundMgr.StopSe();
+            if(!string.IsNullOrEmpty(step.SEData.FileName))
+                GameMain.Instance.SoundMgr.PlaySe(step.SEData.FileName, step.SEData.IsLoop);
         }
 
         private static void ProcessADVChangeBackground(ADVKagManager instance, ADVStep step)
@@ -320,6 +326,10 @@ namespace COM3D2.WildParty.Plugin.Core
             if(step.CameraData.LockCamera != null)
             {
                 GameMain.Instance.MainCamera.SetControl(!step.CameraData.LockCamera.IsLock);
+            }
+            if(step.CameraData.BlurCamera != null)
+            {
+                GameMain.Instance.MainCamera.Blur(step.CameraData.BlurCamera.IsBlur);
             }
         }
 
@@ -525,10 +535,18 @@ namespace COM3D2.WildParty.Plugin.Core
 
             if (charaData.PosRot != null)
             {
-                maid.transform.localPosition = Vector3.zero;
-                maid.transform.position = charaData.PosRot.Pos;
-                maid.transform.localRotation = new Quaternion(0, 0, 0, 0);
-                maid.transform.rotation = charaData.PosRot.Rot;
+                Util.StopSmoothMove(maid);
+                if (charaData.SmoothMovement != null)
+                {
+                    Util.SmoothMoveMaidPosition(maid, charaData.PosRot.Pos, charaData.PosRot.Rot, charaData.SmoothMovement.Time );
+                }
+                else
+                {
+                    maid.transform.localPosition = Vector3.zero;
+                    maid.transform.position = charaData.PosRot.Pos;
+                    maid.transform.localRotation = new Quaternion(0, 0, 0, 0);
+                    maid.transform.rotation = charaData.PosRot.Rot;
+                }
                 //Need to call the following to fix the gravity
                 maid.body0.SetBoneHitHeightY(charaData.PosRot.Pos.y);
             }
@@ -610,6 +628,11 @@ namespace COM3D2.WildParty.Plugin.Core
                 int rnd = RNG.Random.Next(RandomList.FaceAnime.MaidAsManHornyList.Length);
                 maid.FaceAnime(RandomList.FaceAnime.MaidAsManHornyList[rnd]);
             }
+            else if (faceAnime == RandomList.FaceAnime.FaceAnimeCode.RandomAngry)
+            {
+                int rnd = RNG.Random.Next(RandomList.FaceAnime.AngryList.Length);
+                maid.FaceAnime(RandomList.FaceAnime.AngryList[rnd]);   
+            }
             else
             {
                 maid.FaceAnime(faceAnime);
@@ -626,55 +649,58 @@ namespace COM3D2.WildParty.Plugin.Core
                     if (step.GroupData[i].UseRandomPick)
                         targetGroupIndex = StateManager.Instance.RandomPickIndexList[step.GroupData[i].ArrayPosition];
 
-
+                    
                     PartyGroup group = StateManager.Instance.PartyGroupList[targetGroupIndex];
-
-                    if (!string.IsNullOrEmpty(step.GroupData[i].ScriptFile) && !string.IsNullOrEmpty(step.GroupData[i].ScriptLabel))
+                    
+                    //could be a empty group due to not enough character selected
+                    if (group.GroupType != Constant.GroupType.Invalid)
                     {
-                        string manID = "";
-                        if (group.Man1 != null)
-                            manID = group.Man1.status.guid;
-
-                        if (step.GroupData[i].SexPosID >= 0)
+                        if (!string.IsNullOrEmpty(step.GroupData[i].ScriptFile) && !string.IsNullOrEmpty(step.GroupData[i].ScriptLabel))
                         {
-                            group.SexPosID = step.GroupData[i].SexPosID;
+                            string manID = "";
+                            if (group.Man1 != null)
+                                manID = group.Man1.status.guid;
+                            
+                            if (step.GroupData[i].SexPosID >= 0)
+                            {
+                                group.SexPosID = step.GroupData[i].SexPosID;
+                            }
+                            
+                            CharacterHandling.LoadMotionScript(0, false, step.GroupData[i].ScriptFile, step.GroupData[i].ScriptLabel, group.Maid1.status.guid, manID,
+                                false, true, false, false);
+
                         }
-
-                        CharacterHandling.LoadMotionScript(0, false, step.GroupData[i].ScriptFile, step.GroupData[i].ScriptLabel, group.Maid1.status.guid, manID,
-                            false, true, false, false);
-
-                    }
-
-                    ProcessADVGroupIndividual(group.Maid1, step.GroupData[i].Maid1);
-                    ProcessADVGroupIndividual(group.Maid2, step.GroupData[i].Maid2);
-                    ProcessADVGroupIndividual(group.Man1, step.GroupData[i].Man1);
-                    ProcessADVGroupIndividual(group.Man2, step.GroupData[i].Man2);
-                    ProcessADVGroupIndividual(group.Man3, step.GroupData[i].Man3);
-
-                    if (step.GroupData[i].WaitLoad)
-                    {
-                        StateManager.Instance.WaitForFullLoadList.Add(group.Maid1);
-                        if (group.Maid2 != null)
-                            StateManager.Instance.WaitForFullLoadList.Add(group.Maid2);
-                        if (group.Man1 != null)
-                            StateManager.Instance.WaitForFullLoadList.Add(group.Man1);
-                        if (group.Man2 != null)
-                            StateManager.Instance.WaitForFullLoadList.Add(group.Man2);
-                        if (group.Man3 != null)
-                            StateManager.Instance.WaitForFullLoadList.Add(group.Man3);
-                    }
-
-                    group.GroupOffsetVector = Vector3.zero;
-                    if (step.GroupData[i].PosRot != null)
-                        group.SetGroupPosition(step.GroupData[i].PosRot.Pos, step.GroupData[i].PosRot.Rot);
-
-                    group.SetGroupPosition();
-
-                    if (step.GroupData[i].BlockInputUntilMotionChange)
-                    {
-                        StateManager.Instance.WaitForMotionChange = true;
-                        AnimationEndTrigger trigger = new AnimationEndTrigger(group.Maid1, new EventDelegate(ADVMotionChangeComplete));
-                        StateManager.Instance.AnimationChangeTrigger = trigger;
+                        
+                        ProcessADVGroupIndividual(group.Maid1, step.GroupData[i].Maid1);
+                        ProcessADVGroupIndividual(group.Maid2, step.GroupData[i].Maid2);
+                        ProcessADVGroupIndividual(group.Man1, step.GroupData[i].Man1);
+                        ProcessADVGroupIndividual(group.Man2, step.GroupData[i].Man2);
+                        ProcessADVGroupIndividual(group.Man3, step.GroupData[i].Man3);
+                        
+                        if (step.GroupData[i].WaitLoad)
+                        {
+                            StateManager.Instance.WaitForFullLoadList.Add(group.Maid1);
+                            if (group.Maid2 != null)
+                                StateManager.Instance.WaitForFullLoadList.Add(group.Maid2);
+                            if (group.Man1 != null)
+                                StateManager.Instance.WaitForFullLoadList.Add(group.Man1);
+                            if (group.Man2 != null)
+                                StateManager.Instance.WaitForFullLoadList.Add(group.Man2);
+                            if (group.Man3 != null)
+                                StateManager.Instance.WaitForFullLoadList.Add(group.Man3);
+                        }
+                        
+                        if (step.GroupData[i].PosRot != null)
+                            group.SetGroupPosition(step.GroupData[i].PosRot.Pos, step.GroupData[i].PosRot.Rot);
+                        
+                        group.SetGroupPosition();
+                        
+                        if (step.GroupData[i].BlockInputUntilMotionChange)
+                        {
+                            StateManager.Instance.WaitForMotionChange = true;
+                            AnimationEndTrigger trigger = new AnimationEndTrigger(group.Maid1, new EventDelegate(ADVMotionChangeComplete));
+                            StateManager.Instance.AnimationChangeTrigger = trigger;
+                        }
                     }
                 }
             }
@@ -752,7 +778,7 @@ namespace COM3D2.WildParty.Plugin.Core
                         if (step.TalkData.VoiceData.ContainsKey(Util.GetPersonalityNameByValue(maid.status.personal.id)))
                             voiceInfo = step.TalkData.VoiceData[Util.GetPersonalityNameByValue(maid.status.personal.id)];
                     }
-
+                    
                     if (voiceInfo != null)
                     {
                         if (voiceInfo.IsChoppingAudio)
@@ -765,6 +791,7 @@ namespace COM3D2.WildParty.Plugin.Core
                         {
                             maid.AudioMan.LoadPlay(voiceInfo.VoiceFile, 0f, false);
                         }
+                        maid.AudioMan.audiosource.volume = voiceInfo.Volume;
                     }
                 }
 
@@ -973,7 +1000,8 @@ namespace COM3D2.WildParty.Plugin.Core
                     group.Man3 = GetMaidForMakeGroupFormatRequest(groupInfo.Man3, true);
 
                     group.GroupOffsetVector = Vector3.zero;
-                    group.SetGroupPosition(group.Maid1.transform.position, group.Maid1.transform.rotation);
+                    if(group.Maid1 != null)
+                        group.SetGroupPosition(group.Maid1.transform.position, group.Maid1.transform.rotation);
 
                 }
             }
@@ -989,18 +1017,28 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 if (requestInfo.Type == ADVStep.MakeGroupFormat.MemberType.Owner)
                     return StateManager.Instance.ClubOwner;
-                else if (requestInfo.Type == ADVStep.MakeGroupFormat.MemberType.NPC)
-                    return StateManager.Instance.NPCManList[requestInfo.ArrayPosition];
+                List<Maid> targetList;
+                if (requestInfo.Type == ADVStep.MakeGroupFormat.MemberType.NPC)
+                    targetList = StateManager.Instance.NPCManList;
                 else
-                    return StateManager.Instance.MenList[requestInfo.ArrayPosition];
+                    targetList = StateManager.Instance.MenList;
+
+                if (targetList.Count > requestInfo.ArrayPosition)
+                    return targetList[requestInfo.ArrayPosition];
             }
             else
             {
+                List<Maid> targetList;
                 if (requestInfo.Type == ADVStep.MakeGroupFormat.MemberType.NPC)
-                    return StateManager.Instance.NPCList[requestInfo.ArrayPosition];
+                    targetList = StateManager.Instance.NPCList;
                 else
-                    return StateManager.Instance.SelectedMaidsList[requestInfo.ArrayPosition];
+                    targetList = StateManager.Instance.SelectedMaidsList;
+
+                if (targetList.Count > requestInfo.ArrayPosition)
+                    return targetList[requestInfo.ArrayPosition];
             }
+
+            return null;
         }
 
         private static void ProcessADVDismissGroup(ADVKagManager instance, ADVStep step)
@@ -1096,7 +1134,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     {
                         addedObject.transform.position = objData.PosRot.Pos;
                         addedObject.transform.rotation = objData.PosRot.Rot;
-
+                        addedObject.transform.localScale = new Vector3(objData.Scale, objData.Scale, objData.Scale);
                         StateManager.Instance.AddedGameObjectList.Add(objData.ObjectID, addedObject);
                     }
                 }
@@ -1162,8 +1200,9 @@ namespace COM3D2.WildParty.Plugin.Core
                 {
                     foreach (var addData in step.ListUpdateData.Add)
                     {
-                        Maid maid;
+                        Maid maid = null;
                         List<Maid> targetList;
+                        List<Maid> sourceList = null;
                         if (addData.Type == Constant.TargetType.ClubOwner)
                         {
                             maid = StateManager.Instance.ClubOwner;
@@ -1171,14 +1210,29 @@ namespace COM3D2.WildParty.Plugin.Core
                         }
                         else if (addData.Type == Constant.TargetType.NPCMale)
                         {
-                            maid = StateManager.Instance.NPCManList[addData.SrcPosition];
+                            sourceList = StateManager.Instance.NPCManList;
+                            targetList = StateManager.Instance.MenList;
+                        }
+                        else if (addData.Type == Constant.TargetType.ConvertedMaid)
+                        {
+                            sourceList = StateManager.Instance.SelectedMaidsList;
                             targetList = StateManager.Instance.MenList;
                         }
                         else
                         {
-                            maid = StateManager.Instance.NPCList[addData.SrcPosition];
+                            sourceList = StateManager.Instance.NPCList;
                             targetList = StateManager.Instance.SelectedMaidsList;
                         }
+
+                        if (sourceList != null)
+                        {
+                            if (sourceList.Count <= addData.SrcPosition)
+                                continue;
+                            maid = sourceList[addData.SrcPosition];
+                        }
+
+                        if (maid == null)
+                            continue;
 
                         if (targetList.Contains(maid))
                             targetList.Remove(maid);
@@ -1190,8 +1244,9 @@ namespace COM3D2.WildParty.Plugin.Core
                 {
                     foreach (var removeData in step.ListUpdateData.Remove)
                     {
-                        Maid maid;
+                        Maid maid = null;
                         List<Maid> targetList;
+                        List<Maid> sourceList = null;
                         if (removeData.Type == Constant.TargetType.ClubOwner)
                         {
                             maid = StateManager.Instance.ClubOwner;
@@ -1199,14 +1254,29 @@ namespace COM3D2.WildParty.Plugin.Core
                         }
                         else if (removeData.Type == Constant.TargetType.NPCMale)
                         {
-                            maid = StateManager.Instance.NPCManList[removeData.SrcPosition];
+                            sourceList = StateManager.Instance.NPCManList;
+                            targetList = StateManager.Instance.MenList;
+                        }
+                        else if (removeData.Type == Constant.TargetType.ConvertedMaid)
+                        {
+                            sourceList = StateManager.Instance.SelectedMaidsList;
                             targetList = StateManager.Instance.MenList;
                         }
                         else
                         {
-                            maid = StateManager.Instance.NPCList[removeData.SrcPosition];
+                            sourceList = StateManager.Instance.NPCList;
                             targetList = StateManager.Instance.SelectedMaidsList;
                         }
+
+                        if (sourceList != null)
+                        {
+                            if (sourceList.Count <= removeData.SrcPosition)
+                                continue;
+                            maid = sourceList[removeData.SrcPosition];
+                        }
+
+                        if (maid == null)
+                            continue;
 
                         targetList.Remove(maid);
                     }
@@ -1218,6 +1288,54 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             int secondToWait = int.Parse(step.Tag);
             StateManager.Instance.ADVResumeTime = DateTime.Now.AddSeconds(secondToWait);
+        }
+
+        internal static void ProcessADVConvertSex(ADVKagManager instance, ADVStep step)
+        {
+            if (step.ConvertSexData == null)
+                return;
+            ConvertSex(step.ConvertSexData.ToMale, true);
+            ConvertSex(step.ConvertSexData.ToFemale, false);
+            RevertSexConversion(step.ConvertSexData.BackToMale, true);
+            RevertSexConversion(step.ConvertSexData.BackToFemale, false);
+        }
+
+        private static void ConvertSex(List<ADVStep.ConvertSex.ConvertSexDetail> convertList, bool toMan)
+        {
+            if (convertList == null)
+                return;
+
+            foreach (ADVStep.ConvertSex.ConvertSexDetail info in convertList)
+            {
+                List<Maid> targetList = Util.GetTargetList(info.Type);
+                if (targetList.Count > info.ArrayPosition)
+                {
+                    Maid target = targetList[info.ArrayPosition];
+                    if (toMan)
+                        CharacterHandling.ConvertMaidToManStructure(target, StateManager.Instance.PairedManForMaidList[target]);
+                    else
+                        CharacterHandling.ConvertManToFemaleStructure(target);
+                }
+            }
+        }
+
+        private static void RevertSexConversion(List<ADVStep.ConvertSex.ConvertSexDetail> convertList, bool revertToMan)
+        {
+            if (convertList == null)
+                return;
+
+            foreach (ADVStep.ConvertSex.ConvertSexDetail info in convertList)
+            {
+                List<Maid> targetList = Util.GetTargetList(info.Type);
+                if (targetList.Count > info.ArrayPosition)
+                {
+                    Maid target = targetList[info.ArrayPosition];
+                    if (revertToMan)
+                        CharacterHandling.RecoverManFromFemaleStructure(target);
+                    else
+                        CharacterHandling.RecoverMaidFromManStructure(target);
+                }
+            }
         }
 
 
