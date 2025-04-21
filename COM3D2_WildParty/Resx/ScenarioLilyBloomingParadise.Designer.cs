@@ -62,6 +62,336 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Anesan&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Anesan&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Anesan&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lbp_hote [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Anesan {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Anesan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Childhood&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Childhood&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Childhood&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///   [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Childhood {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Childhood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Cool&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Cool&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Cool&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lbp_hotel_0020 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Cool {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Cool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Curtness&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Curtness&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Curtness&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lb [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Curtness {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Curtness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Dame&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Dame&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Dame&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lbp_hotel_0020 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Dame {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Dame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Devilish&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Devilish&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Devilish&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lb [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Devilish {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Devilish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Friendly&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Friendly&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Friendly&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lb [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Friendly {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Friendly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Genki&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Genki&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Genki&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lbp_hotel_0 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Genki {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Genki", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Ladylike&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Ladylike&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Ladylike&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lb [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Ladylike {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Ladylike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Majime&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Majime&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Majime&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lbp_hote [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Majime {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Majime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Missy&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Missy&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Missy&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lbp_hotel_0 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Missy {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Missy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;lbp_intro_0030_T_Muku&quot;: {
         ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Muku&quot;,
         ///    &quot;Type&quot;: &quot;Talk&quot;,
@@ -87,6 +417,246 @@ namespace ScenarioResources {
         internal static string LilyBloomingParadiseADV_Muku {
             get {
                 return ResourceManager.GetString("LilyBloomingParadiseADV_Muku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Pride&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Pride&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Pride&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lbp_hotel_0 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Pride {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Pride", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Pure&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Pure&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Pure&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lbp_hotel_0020 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Pure {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Pure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Rindere&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Rindere&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Rindere&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lbp_h [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Rindere {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Rindere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Sadist&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Sadist&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Sadist&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lbp_hote [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Sadist {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Sadist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Secretary&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Secretary&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Secretary&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///   [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Secretary {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Secretary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Silent&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Silent&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Silent&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lbp_hote [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Silent {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Silent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Sister&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Sister&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Sister&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lbp_hote [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Sister {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Sister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_intro_0030_T_Yandere&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_intro_0030_T_Yandere&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_intro_0031&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Yandere&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: true,
+        ///          &quot;StartTime&quot;: 9,
+        ///          &quot;Volume&quot;: 0.1
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;lbp_h [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADV_Yandere {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADV_Yandere", resourceCulture);
             }
         }
         
@@ -212,27 +782,25 @@ namespace ScenarioResources {
         /// <summary>
         ///   Looks up a localized string similar to {
         ///
-        ///  &quot;lbp_phase2_init&quot;: {
-        ///    &quot;ID&quot;: &quot;lbp_phase2_init&quot;,
+        ///  &quot;lbp_postyotogi_init&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_postyotogi_init&quot;,
         ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
         ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
-        ///    &quot;NextStepID&quot;: &quot;lbp_phase2_init_a&quot;
+        ///    &quot;NextStepID&quot;: &quot;hgbc_postyotogi_remove_owner&quot;
         ///  },
         ///
-        ///  &quot;lbp_phase2_init_a&quot;: {
-        ///    &quot;ID&quot;: &quot;lbp_phase2_init_a&quot;,
-        ///    &quot;Type&quot;: &quot;BGM&quot;,
-        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///  &quot;hgbc_postyotogi_remove_owner&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_postyotogi_remove_owner&quot;,
+        ///    &quot;Type&quot;: &quot;ListUpdate&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;lbp_phase2_init_b&quot;
-        ///  },
-        ///
-        ///  &quot;lbp_phase2_init_b&quot;: {
-        ///    &quot;ID&quot;: &quot;lbp_phase2_init_b&quot;,
-        ///    &quot;Type&quot;: &quot;Camera&quot;,
-        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;lbp_phase2_init_c&quot;,
-        ///    &quot;Camera [rest of string was truncated]&quot;;.
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lbp_postyotogi_init_a&quot;,
+        ///    &quot;ListUpdateData&quot;: {
+        ///      &quot;Remove&quot;: [
+        ///        {
+        ///          &quot;Type&quot;: &quot;Owner&quot;,
+        ///          &quot;SrcPosition&quot;: 0
+        ///    [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADVPostYotogi {
             get {

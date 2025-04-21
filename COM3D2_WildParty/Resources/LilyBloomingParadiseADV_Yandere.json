@@ -1,47 +1,48 @@
 {
-  "lbp_intro_0030_T_Muku": {
-    "ID": "lbp_intro_0030_T_Muku",
+  "lbp_intro_0030_T_Yandere": {
+    "ID": "lbp_intro_0030_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0031",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "……はぁ、はぁ……もっといっぱい触ってほしいです……",
+      "Text": "……焦らずゆっくりいたしましょう？　私は逃げたりしませんから……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24725.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_107675.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 9,
+          "StartTime": 6.5,
           "Volume": 0.3
         }
       }
     }
   },
 
-  "lbp_hotel_0020_T_Muku": {
-    "ID": "lbp_hotel_0020_T_Muku",
+  "lbp_hotel_0020_T_Yandere": {
+    "ID": "lbp_hotel_0020_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0021_Branch",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はーい、デザートです！　まだ食べられますか？",
+      "Text": "デザートを作ってみました。一緒に食べませんか？　　きっとお口に合うと思いますよ。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24869.ogg",
-          "IsChoppingAudio": false
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_108046.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
         }
       }
     }
   },
 
-  "lbp_hotel_0030_M_Muku": {
-    "ID": "lbp_hotel_0030_M_Muku",
+  "lbp_hotel_0030_M_Yandere": {
+    "ID": "lbp_hotel_0030_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "lbp_hotel_0030_T_Muku",
+    "NextStepID": "lbp_hotel_0030_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -52,31 +53,32 @@
     ]
   },
 
-  "lbp_hotel_0030_T_Muku": {
-    "ID": "lbp_hotel_0030_T_Muku",
+  "lbp_hotel_0030_T_Yandere": {
+    "ID": "lbp_hotel_0030_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0031_Branch",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "うまーですー☆",
+      "Text": "ああっ……美味しいです！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02_23348.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_YNDR_55544.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 1.3
+          "StartTime": 1,
+          "EndTime": 3.8
         }
       }
     }
   },
 
 
-  "lbp_hotel_0040_M_Muku": {
-    "ID": "lbp_hotel_0040_M_Muku",
+  "lbp_hotel_0040_M_Yandere": {
+    "ID": "lbp_hotel_0040_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "lbp_hotel_0040_T_Muku",
+    "NextStepID": "lbp_hotel_0040_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -91,29 +93,29 @@
     ]
   },
 
-  "lbp_hotel_0040_T_Muku": {
-    "ID": "lbp_hotel_0040_T_Muku",
+  "lbp_hotel_0040_T_Yandere": {
+    "ID": "lbp_hotel_0040_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0041_camerapan",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "そう言って貰えて、良かったです……！",
+      "Text": "ありがとうございます。そういっていただけて、一安心です。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_order_52041.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_order_52030.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "lbp_hotel_0050_M_Muku": {
-    "ID": "lbp_hotel_0050_M_Muku",
+  "lbp_hotel_0050_M_Yandere": {
+    "ID": "lbp_hotel_0050_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "lbp_hotel_0050_T_Muku",
+    "NextStepID": "lbp_hotel_0050_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -128,29 +130,30 @@
     ]
   },
 
-  "lbp_hotel_0050_T_Muku": {
-    "ID": "lbp_hotel_0050_T_Muku",
+  "lbp_hotel_0050_T_Yandere": {
+    "ID": "lbp_hotel_0050_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0051_Branch",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "いいなぁ。あのお客様用のスキンケアクリーム、とーってもお肌がスベスベになるんですよー。",
+      "Text": "ここの道具は本当にたくさんありますよね。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02_23482.ogg",
-          "IsChoppingAudio": false
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_107894.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.5
         }
       }
     }
   },
 
-  "lbp_hotel_0060_M_Muku": {
-    "ID": "lbp_hotel_0060_M_Muku",
+  "lbp_hotel_0060_M_Yandere": {
+    "ID": "lbp_hotel_0060_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "lbp_hotel_0060_T_Muku",
+    "NextStepID": "lbp_hotel_0060_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -165,30 +168,31 @@
     ]
   },
 
-  "lbp_hotel_0060_T_Muku": {
-    "ID": "lbp_hotel_0060_T_Muku",
+  "lbp_hotel_0060_T_Yandere": {
+    "ID": "lbp_hotel_0060_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0061_camerapan",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "じゃあ、まずはどれからやってみます？　あなたが好きなの選んでいいですよ？",
+      "Text": "それじゃあどれから試して見ましょうか。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62328.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53103.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 2.5
+          "StartTime": 3.5,
+          "EndTime": 7
         }
       }
     }
   },
 
-  "lbp_hotel_0070_M_Muku": {
-    "ID": "lbp_hotel_0070_M_Muku",
+  "lbp_hotel_0070_M_Yandere": {
+    "ID": "lbp_hotel_0070_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "lbp_hotel_0070_T_Muku",
+    "NextStepID": "lbp_hotel_0070_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -199,18 +203,18 @@
     ]
   },
 
-  "lbp_hotel_0070_T_Muku": {
-    "ID": "lbp_hotel_0070_T_Muku",
+  "lbp_hotel_0070_T_Yandere": {
+    "ID": "lbp_hotel_0070_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "lbp_hotel_0071_Branch",
+    "NextStepID": "lbp_hotel_0070a_T_Yandere",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あっ……あれもいいなぁ♪",
+      "Text": "まぁっ、これはこれは……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_VV4_69607.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_VV4_57887.ogg",
           "IsChoppingAudio": true,
           "EndTime": 3
         }
@@ -218,11 +222,30 @@
     }
   },
 
-  "lbp_hotel_0080_M_Muku": {
-    "ID": "lbp_hotel_0080_M_Muku",
+  "lbp_hotel_0070a_T_Yandere": {
+    "ID": "lbp_hotel_0070a_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "とても可愛らしいですね！",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_VV4_57887.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0080_M_Yandere": {
+    "ID": "lbp_hotel_0080_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "lbp_hotel_0080_T_Muku",
+    "NextStepID": "lbp_hotel_0080_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -237,30 +260,31 @@
     ]
   },
 
-  "lbp_hotel_0080_T_Muku": {
-    "ID": "lbp_hotel_0080_T_Muku",
+  "lbp_hotel_0080_T_Yandere": {
+    "ID": "lbp_hotel_0080_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0081",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あ、それあたしも気になってたやつですっ！",
+      "Text": "私もそれが一番気になっていました。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62329.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53104.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 3.5
+          "StartTime": 4,
+          "EndTime": 8
         }
       }
     }
   },
 
-  "lbp_hotel_0090_M_Muku": {
-    "ID": "lbp_hotel_0090_M_Muku",
+  "lbp_hotel_0090_M_Yandere": {
+    "ID": "lbp_hotel_0090_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "lbp_hotel_0090_T_Muku",
+    "NextStepID": "lbp_hotel_0090_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -280,30 +304,30 @@
     ]
   },
 
-  "lbp_hotel_0090_T_Muku": {
-    "ID": "lbp_hotel_0090_T_Muku",
+  "lbp_hotel_0090_T_Yandere": {
+    "ID": "lbp_hotel_0090_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0091_Branch",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "そろそろ、あたしたちも……しませんか？",
+      "Text": "早く始めてくれませんか……？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24607.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02A_107237.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 3
+          "StartTime": 5.5
         }
       }
     }
   },
 
-  "lbp_hotel_0100_M_Muku": {
-    "ID": "lbp_hotel_0100_M_Muku",
+  "lbp_hotel_0100_M_Yandere": {
+    "ID": "lbp_hotel_0100_M_Yandere",
     "Type": "Chara",
     "WaitingType": "Auto",
-    "NextStepID": "lbp_hotel_0100_T_Muku",
+    "NextStepID": "lbp_hotel_0100_T_Yandere",
     "CharaData": [
       {
         "Type": "F",
@@ -318,18 +342,18 @@
     ]
   },
 
-  "lbp_hotel_0100_T_Muku": {
-    "ID": "lbp_hotel_0100_T_Muku",
+  "lbp_hotel_0100_T_Yandere": {
+    "ID": "lbp_hotel_0100_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0101",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はい！　じゃあ行きましょうか。",
+      "Text": "はい。では行きましょうか。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62129.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_52904.ogg",
           "IsChoppingAudio": true,
           "EndTime": 3
         }
@@ -337,26 +361,26 @@
     }
   },
 
-  "lbp_bedroom_0010_T_Muku": {
-    "ID": "lbp_bedroom_0010_T_Muku",
+  "lbp_bedroom_0010_T_Yandere": {
+    "ID": "lbp_bedroom_0010_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_bedroom_0011_Branch",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ちゅぅぅ……ちゅむっ、んんっ……ちろ、ちる……ちゅむっ……はぁ、んふぅ……ちゅ、んちゅむっ……ちゅぷ……ちゅむっ……ちろっ……",
+      "Text": "ちゅっ……ちゅむっ、んんっ……ちる……ちろ、ちゅむ……はぁ、んぶっ……ちゅっ、んちゅくっ……ちろ、ぴちゅ……ぺろ、んちゅっ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62227.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53002.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "lbp_bedroom_0020_T_Muku": {
-    "ID": "lbp_bedroom_0020_T_Muku",
+  "lbp_bedroom_0020_T_Yandere": {
+    "ID": "lbp_bedroom_0020_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_bedroom_0021",
@@ -365,575 +389,135 @@
       "UseBranchIndex": true,
       "Text": "くふっ、んんっ……はぁ、はぁ……あんっ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_order_52052.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_order_52041.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "lbp_bedroom_0030_T_Muku": {
-    "ID": "lbp_bedroom_0030_T_Muku",
+  "lbp_bedroom_0030_T_Yandere": {
+    "ID": "lbp_bedroom_0030_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_bedroom_0031_Branch",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あたし、もっとあなたとエッチしたい。だってあなたのこと……大好きだから。",
+      "Text": "私は貴方ともっと続けたい……貴方のことが、好きだから……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27140.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_Y_108339.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 11
+          "StartTime": 1.5
         }
       }
     }
   },
 
-  "lbp_bedroom_0040_T_Muku": {
-    "ID": "lbp_bedroom_0040_T_Muku",
+  "lbp_bedroom_0040_T_Yandere": {
+    "ID": "lbp_bedroom_0040_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_bedroom_0041_Branch",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "そ、そんなにあたしと……したいんですか……？",
+      "Text": "そ、そんなに私と……したいんですか……？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62682.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53457.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "lbp_bedroom_0050_T_Muku": {
-    "ID": "lbp_bedroom_0050_T_Muku",
+  "lbp_bedroom_0050_T_Yandere": {
+    "ID": "lbp_bedroom_0050_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_bedroom_0051",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "だってあたし、もっとあなたと仲良くしたいし……気持ちよくなりたいから♪",
+      "Text": "私、貴方ともっと仲を深めて、思う存分気持ちよくなりたい……そう思ってしまっているんです……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27227.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_Y_108426.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "lbp_bedroom_0060_T_Muku": {
-    "ID": "lbp_bedroom_0060_T_Muku",
+  "lbp_bedroom_0060_T_Yandere": {
+    "ID": "lbp_bedroom_0060_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_bedroom_0061_Branch",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "なんだか頭がフワフワしてきちゃうね……？　やっぱり女の子同士だと、そういうのも違うのかも……えへへっ。",
+      "Text": "なんだか、陶然として来てしまいます……女性同士だと、こんな感じになってしまうのでしょうか……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27214.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_Y_108413.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "lbp_bedroom_0070_T_Muku": {
-    "ID": "lbp_bedroom_0070_T_Muku",
+  "lbp_bedroom_0070_T_Yandere": {
+    "ID": "lbp_bedroom_0070_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_bedroom_0071",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "んっ……ふにゃあ……こんなに幸せそうな声、もしご主人様が聞いたらどんな気持ちなんでしょう……？",
+      "Text": "んっ……ふぁ……ふふ、こんなに幸せな声が漏れてしまうなんて……誰かに聞かれたら、驚かれるでしょうね……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27449.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_PMD_109098.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "lbp_bedroom_0080_T_Muku": {
-    "ID": "lbp_bedroom_0080_T_Muku",
+  "lbp_bedroom_0080_T_Yandere": {
+    "ID": "lbp_bedroom_0080_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_bedroom_0081_Branch",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はふぅ……♪　うふふっ、とっても可愛かったね。女の子同士っていうのも結構良かったでしょ？",
+      "Text": "はぁ、んっ……ふふっ、している最中の貴方、とても可愛かったです……女性同士というのも、良いものですね？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27146.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_Y_108345.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "lbp_bedroom_0090_T_Muku": {
-    "ID": "lbp_bedroom_0090_T_Muku",
+  "lbp_bedroom_0090_T_Yandere": {
+    "ID": "lbp_bedroom_0090_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_bedroom_0091",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "すごく嬉しいです……ご主人様の手より、優しいかも……♪",
+      "Text": "ふふ、嬉しいです……ご主人様よりも、優しく感じます……♪",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27448.ogg",
-          "IsChoppingAudio": true,
-          "StartTime": 4.5
-        }
-      }
-    }
-  },
-
-  "lbp_bedroom_0100_T_Muku": {
-    "ID": "lbp_bedroom_0100_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_bedroom_0101_Branch",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "えへへっ♪　それって、これからもエッチをしてくれるってことでいいんだよねっ？",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27147.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_bedroom_0110_T_Muku": {
-    "ID": "lbp_bedroom_0110_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_bedroom_0111_Branch",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "ふ、触られたところから熱くなってる気がします……",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27458.ogg",
-          "IsChoppingAudio": true,
-          "StartTime": 5
-        }
-      }
-    }
-  },
-
-  "lbp_bedroom_0120_T_Muku": {
-    "ID": "lbp_bedroom_0120_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_bedroom_0121_camerapan",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "えへへっ♪　そういうことだったら、今度は指じゃなくて別のところでしてもいい？",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27131.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-
-  "lbp_phase2_0010_T_Muku": {
-    "ID": "lbp_phase2_0010_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0011_Branch",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "ほら、もっとあたしとしたいですよね……？",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_18854.ogg",
-          "IsChoppingAudio": true,
-          "StartTime": 1.5,
-          "EndTime": 6
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0020_T_Muku": {
-    "ID": "lbp_phase2_0020_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0021",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "あ、あたりまえですっ！　欲しいですっ！",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62380.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0030_T_Muku": {
-    "ID": "lbp_phase2_0030_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0031",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "ちょっと待っててくださいね！",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02-5_29635.ogg",
-          "IsChoppingAudio": true,
-          "StartTime": 4.5
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0040_T_Muku": {
-    "ID": "lbp_phase2_0040_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0041",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "うわぁ……すごいっ……なにこれ……！",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62222.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0050_T_Muku": {
-    "ID": "lbp_phase2_0050_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0051",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "はぁはぁ、ご主人様と形が違うゴリゴリチンポをっ……くぅううんっ……入れてください～っ……！",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_17820.ogg",
-          "IsChoppingAudio": true,
-          "StartTime": 3
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0060_T_Muku": {
-    "ID": "lbp_phase2_0060_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0061_Branch",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "えへへっ、どうだった？　女の子にオモチャで弄られれるのって、どういう気分だったか教えてくれると嬉しいな～。",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27230.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0070_T_Muku": {
-    "ID": "lbp_phase2_0070_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0071_Branch",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "きゃっ、んっ、んううっ！　そ、そこ……ひうっ、感じ過ぎちゃいますから……はあっ、あ……んうう……",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27208.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0080_T_Muku": {
-    "ID": "lbp_phase2_0080_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0081",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "だったら、続きをしてもいいよね？",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27217.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0090_T_Muku": {
-    "ID": "lbp_phase2_0090_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0091_T_Muku",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "んっ……んぁぁぁ……ああんっ！　あんっ！　あんっ！　お、大きい……んふぅ……あっ……はぁ……あっ！　あっ！　んはっ……",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16921.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0091_T_Muku": {
-    "ID": "lbp_phase2_0091_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0092_Branch",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "んっ、くあああああっ！　あっ、ああっ！　すっ、すごいですっ！　ご主人様じゃ届かないところに届いちゃってますっ！　んぶっ！　んんんんっ！",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27315.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0100_T_Muku": {
-    "ID": "lbp_phase2_0100_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0101",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "だったら……いいよね？　さっきよりもっともっと気持ちよくしてあげるから……！",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27141.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0110_T_Muku": {
-    "ID": "lbp_phase2_0110_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0111_Branch",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "はひっ、んっ、くあああっ！　こんなのっ、無理ですぅっ！　まんこあなっ、悦んじゃいますからっ！　ひあっ、あああああ！",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27322.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0120_T_Muku": {
-    "ID": "lbp_phase2_0120_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0121_Branch",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "もう我慢できないってことだね♪　それじゃ、二人で気持ちよく……なろうね？　あ……なにか希望があったりする？",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27246.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0130_T_Muku": {
-    "ID": "lbp_phase2_0130_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0131",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "もっと激しいのぉぉっ！　ああんっ、あんっ！　いいっ、いいのっ！",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_17458.ogg",
-          "IsChoppingAudio": true,
-          "StartTime": 3.7
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0140_T_Muku": {
-    "ID": "lbp_phase2_0140_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0141_Branch",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "えへへっ、そんなにエッチなことして欲しいんだね。あなたってそんなにいやらしい子だったんだ～♪",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27242.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0150_T_Muku": {
-    "ID": "lbp_phase2_0150_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0151",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "ひゃっ、あぁぁっ！　イクっ、きゃぁぁっ！　これ、ホントにイっちゃうやつだから、あひぃっ、あぁっ、もう無理ですっ、ホントにイクっ、イっちゃうぅぅぅぅっ！",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62614.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0160_T_Muku": {
-    "ID": "lbp_phase2_0160_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0161_T_Muku",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "くううっ！　んあっ！　イクぅっ！　んっ、ううううううっ！　はあっ、あっ、あああああーーーーっ！",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27124.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0161_T_Muku": {
-    "ID": "lbp_phase2_0161_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0162",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "は、ぁあっ……あうっ……んぅん……はぁ、ご主人様と全然、違うのっ……はぁ、はぁ、ご主人様よりも、あうっ、太くてっ……",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02_23266.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0170_T_Muku": {
-    "ID": "lbp_phase2_0170_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0171_Branch",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "ふえっ……どうしてチンポ抜いちゃうんですか……？　はぁ、んんっ……やだぁ、んっ……まだいっぱいえっちしたいのにっ……",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_18083.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_phase2_0180_T_Muku": {
-    "ID": "lbp_phase2_0180_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_phase2_0181",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "安心して。今度はもっとスゴいことをしてあげるから……ふふっ、うふふふっ！",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27241.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "lbp_postyotogi_0020_T_Muku": {
-    "ID": "lbp_postyotogi_0020_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lbp_postyotogi_0021_Branch",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "もうこんなにドロドロになってるし！　女の子の舌でこんなになるなら、もう男の人なんていらないよねっ！？",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27253.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_PMD_109097.ogg",
           "IsChoppingAudio": true,
           "StartTime": 4.2
         }
@@ -941,294 +525,740 @@
     }
   },
 
-  "lbp_postyotogi_0030_T_Muku": {
-    "ID": "lbp_postyotogi_0030_T_Muku",
+  "lbp_bedroom_0100_T_Yandere": {
+    "ID": "lbp_bedroom_0100_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0101_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ……それは、これからも私と付き合ってくださるということですよね？",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_Y_108346.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0110_T_Yandere": {
+    "ID": "lbp_bedroom_0110_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0111_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私は、触られるだけで身体が熱くなって……興奮してしまいます……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_PMD_109125.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.5
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0120_T_Yandere": {
+    "ID": "lbp_bedroom_0120_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0121_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "気持ちよかったのなら、私も嬉しいです……今度は指でなく、別のところでご奉仕してもよろしいでしょうか？",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_Y_108330.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "lbp_phase2_0010_T_Yandere": {
+    "ID": "lbp_phase2_0010_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、このままでいいのですか？　んっ、本当はもっと、激しくして欲しいのでは？",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_order_51197.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0020_T_Yandere": {
+    "ID": "lbp_phase2_0020_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "絶対に欲しいです……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53155.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.9
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0030_T_Yandere": {
+    "ID": "lbp_phase2_0030_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "少しだけ待っていてください。",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_107955.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6.5,
+          "EndTime": 8.5
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0040_T_Yandere": {
+    "ID": "lbp_phase2_0040_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "わぁっ……これは……凄いですねっ……！",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_X1P_52997.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0050_T_Yandere": {
+    "ID": "lbp_phase2_0050_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "立派なおちんちんを……私のおまんこに、挿れて欲しいんです……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP5_109245.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0060_T_Yandere": {
+    "ID": "lbp_phase2_0060_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、どうでした？　女性からオモチャで苛められて……どんな気分になってしまいました？",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_Y_108429.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0070_T_Yandere": {
+    "ID": "lbp_phase2_0070_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "く……んうううっ！　はあっ、ああっ、そ……そんなところばかり、ダメです……はあっ、あっ、感じすぎてしまいますから……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_PMD_108857.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0080_T_Yandere": {
+    "ID": "lbp_phase2_0080_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "嫌でないのなら、続けても平気ですよね？",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_Y_108417.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0090_T_Yandere": {
+    "ID": "lbp_phase2_0090_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0091_T_Yandere",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "くっ……ぁ、ぁああ……！　あっ、ぁああっ！　はげ、しいっ、ぅっ、あっ、はぁあっ！　あっ、ぅううっ！",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105710.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0091_T_Yandere": {
+    "ID": "lbp_phase2_0091_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0092_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "きゃふっ！　んっ、ふあああっ！　あっ、ああんっ、い、いいです、ご主人様では届かなかったところまで、くうんっ、届いて、あっ、ああああっ！",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_PMD_108964.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0100_T_Yandere": {
+    "ID": "lbp_phase2_0100_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……だったら、していただけますか……？　頑張って、気持ちよくして差し上げますから……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_Y_108425.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0110_T_Yandere": {
+    "ID": "lbp_phase2_0110_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0111_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ひうんっ！　はあっ、あっ、あくううっ！　無理、ですっ、！　私のいやらしい……おまんこ穴っ！　悦んでしまって、ひっ、ううううっ！",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_PMD_108971.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0120_T_Yandere": {
+    "ID": "lbp_phase2_0120_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0121_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もう我慢出来ないとでも言いたげですね……それではそんなえっちな貴方からは、何か希望などあるでしょうか？",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_Y_108445.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0130_T_Yandere": {
+    "ID": "lbp_phase2_0130_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0131",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もっと、激しくてもいいですからっ！　はぁ、あふっ、んんんんんっ！",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105927.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.5
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0140_T_Yandere": {
+    "ID": "lbp_phase2_0140_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0141_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ……そんなにいやらしいことをして欲しいのですね……貴方がそんなに欲張りだなんて、知らなかったです……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_Y_108441.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0150_T_Yandere": {
+    "ID": "lbp_phase2_0150_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ、あぁっ！　イ、イキますっ！　そ、それ、だめなところです、んひぃっ、あぁっ、イっちゃうっ！　あひっ、あぁっ、ダメッ、もうイクっ！　イクイク、イクぅぅぅぅっ！",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53387.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0160_T_Yandere": {
+    "ID": "lbp_phase2_0160_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0161_T_Yandere",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "くっ、んううっ！　ふああっ！　イクっ！　私っ、もうっ、イキますぅぅっ！　ふあああああーーーーっ！！",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_PMD_108773.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0161_T_Yandere": {
+    "ID": "lbp_phase2_0161_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0162",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、くっ、うう……中にはいって、ゴリゴリってされて……私の中で、ご主人様と違うおちんちんが、暴れて……太い、です……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_107460.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0170_T_Yandere": {
+    "ID": "lbp_phase2_0170_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0171_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……抜けてしまいましたよ……？　はぁ、はぁ、んっ……こんな状態で抜くだなんて……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105612.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.7,
+          "EndTime": 8.9
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0180_T_Yandere": {
+    "ID": "lbp_phase2_0180_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "安心してください……次は、今回以上に貴方を感じさせてあげますから……うふふ……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_Y_108440.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0020_T_Yandere": {
+    "ID": "lbp_postyotogi_0020_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んぢゅっ、ちゅっ、んじゅる……ふふ、その方が気分が盛り上がるでしょう？　ほら、愛液の量が増えて来ました……ちゅっ、んんぅ……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_Y_108450.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0030_T_Yandere": {
+    "ID": "lbp_postyotogi_0030_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0031_camerapan",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ぁふっ、んんっ……！　好きって気持ち、止まらないんですっ、んぁっ、はあぁ……！　あなた、好きっ、気持ちいいっ……！",
+      "Text": "もう、この気持ちが、止まらないんです！　ああ、好き、好き！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP5_29158.ogg",
-          "IsChoppingAudio": false
+        "Yandere": {
+          "VoiceFile": "S3_GP5_109274.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 7.5
         }
       }
     }
   },
 
-  "lbp_postyotogi_0040_T_Muku": {
-    "ID": "lbp_postyotogi_0040_T_Muku",
+  "lbp_postyotogi_0040_T_Yandere": {
+    "ID": "lbp_postyotogi_0040_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0041_Branch",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "どうです気持ちいいですか？",
+      "Text": "うふふ、気持ちいいですか？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_17434.ogg",
-          "IsChoppingAudio": false
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105903.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
         }
       }
     }
   },
 
-  "lbp_postyotogi_0050_T_Muku": {
-    "ID": "lbp_postyotogi_0050_T_Muku",
+  "lbp_postyotogi_0050_T_Yandere": {
+    "ID": "lbp_postyotogi_0050_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0051_camerapan",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あたし、こんなのはじめてで……すごくしあわせをかんじちゃいましたぁ……",
+      "Text": "こんなに幸せになるのですね……私……こんなに幸せになったのは初めてです……ふああ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27332.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_PMD_108981.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 5
+          "StartTime": 5.9
         }
       }
     }
   },
 
-  "lbp_postyotogi_0060_T_Muku": {
-    "ID": "lbp_postyotogi_0060_T_Muku",
+  "lbp_postyotogi_0060_T_Yandere": {
+    "ID": "lbp_postyotogi_0060_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0061_Branch",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ふふっ、あたしたちってお似合いのカップルなのかもしれないね。あなたもそう思わない……？",
+      "Text": "うふふ……私たちって、もしかしたらお似合いのカップルというものなのかも……貴方もそう思いませんか？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27244.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_Y_108443.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "lbp_postyotogi_0070_T_Muku": {
-    "ID": "lbp_postyotogi_0070_T_Muku",
+  "lbp_postyotogi_0070_T_Yandere": {
+    "ID": "lbp_postyotogi_0070_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0071",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はふ……あなたがいない生活なんて考えられないです……",
+      "Text": "あなたがいない人生なんて考えられません……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27343.ogg",
-          "IsChoppingAudio": false
+        "Yandere": {
+          "VoiceFile": "S3_PMD_108992.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 14
         }
       }
     }
   },
 
-  "lbp_postyotogi_0080_T_Muku": {
-    "ID": "lbp_postyotogi_0080_T_Muku",
+  "lbp_postyotogi_0080_T_Yandere": {
+    "ID": "lbp_postyotogi_0080_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0081",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あたしが気づいてないって思ってたんですか？",
+      "Text": "私が気がついていないとでも思ったのですか。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62362.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53137.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 2.8
+          "EndTime": 4
         }
       }
     }
   },
 
-  "lbp_postyotogi_0090_T_Muku": {
-    "ID": "lbp_postyotogi_0090_T_Muku",
+  "lbp_postyotogi_0090_T_Yandere": {
+    "ID": "lbp_postyotogi_0090_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0091_Branch",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "きゃっ！　なっ、なに見てるんですか！　プライバシーの侵害ですよっ！",
+      "Text": "な……なにをしているんですか！？　勝手に覗き込まないでください！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_PMD_27060.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_PMD_108709.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "lbp_postyotogi_0100_T_Muku": {
-    "ID": "lbp_postyotogi_0100_T_Muku",
+  "lbp_postyotogi_0100_T_Yandere": {
+    "ID": "lbp_postyotogi_0100_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0101",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "最低ですぅぅ！",
+      "Text": "最低ですね。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_17390.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02A_107250.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 9.5
+          "StartTime": 10.5
         }
       }
     }
   },
 
-  "lbp_postyotogi_0110_T_Muku": {
-    "ID": "lbp_postyotogi_0110_T_Muku",
+  "lbp_postyotogi_0110_T_Yandere": {
+    "ID": "lbp_postyotogi_0110_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0111_Branch",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ご主人様？　笑ってごまかそうとしてもあたしはごまかせませんからね？",
+      "Text": "冗談を言って誤魔化そうとしてもダメですよ？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24593.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_107886.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 6
+          "StartTime": 5,
+          "EndTime": 8.5
         }
       }
     }
   },
 
-  "lbp_postyotogi_0120_T_Muku": {
-    "ID": "lbp_postyotogi_0120_T_Muku",
+  "lbp_postyotogi_0120_T_Yandere": {
+    "ID": "lbp_postyotogi_0120_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0121",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "さすがのあたしもカチンときちゃいましたっ！　ちょっとこっちにきてくださいっ！",
+      "Text": "流石に看過できません。ちょっとこちらに来てください。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62361.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53136.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "lbp_postyotogi_0130_T_Muku": {
-    "ID": "lbp_postyotogi_0130_T_Muku",
+  "lbp_postyotogi_0130_T_Yandere": {
+    "ID": "lbp_postyotogi_0130_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0131_Branch",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あたしは怒ってるんですよっ！　それなのに、勝手に大きくして……ほんとに反省してるんですかっ！",
+      "Text": "私は怒っているのです。それなのに、勝手にこんなに大きくさせて……貴方様はちゃんと反省しているんですか……？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62370.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53145.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "lbp_postyotogi_0140_T_Muku": {
-    "ID": "lbp_postyotogi_0140_T_Muku",
+  "lbp_postyotogi_0140_T_Yandere": {
+    "ID": "lbp_postyotogi_0140_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0141_Branch",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "これはいっぱいお仕置きしなきゃだめみたいですね……",
+      "Text": "もっとたくさんお仕置きしてあげます。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62372.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_X1P_53147.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 4.5
+          "EndTime": 4
         }
       }
     }
   },
 
-  "lbp_postyotogi_0150_T_Muku": {
-    "ID": "lbp_postyotogi_0150_T_Muku",
+  "lbp_postyotogi_0150_T_Yandere": {
+    "ID": "lbp_postyotogi_0150_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0151",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ご主人様、ちょっとそこ、横になってくれますか？",
+      "Text": "ご主人様。そこへ横になっていただけますか？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24554.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02A_107328.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "lbp_postyotogi_0160_T_Muku": {
-    "ID": "lbp_postyotogi_0160_T_Muku",
+  "lbp_postyotogi_0160_T_Yandere": {
+    "ID": "lbp_postyotogi_0160_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0161",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "嘘ばっかりっ！　何されても感じるじゃないですか、このおちんちん！　痛いのになんでちっちゃくならないんですかっ！？　ねえ、なんでですかっ！",
+      "Text": "ご主人様の嘘つき！　何をされても感じて、気持ちよくなって、痛いって言いながら、感じているじゃないですか！　どういうことなんですか？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24565.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02A_107339.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "lbp_postyotogi_0170_T_Muku": {
-    "ID": "lbp_postyotogi_0170_T_Muku",
+  "lbp_postyotogi_0170_T_Yandere": {
+    "ID": "lbp_postyotogi_0170_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0171",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "二人でいっぱいお仕置きしちゃいますー♪　ちゃんと反省してくださいね？　ご主人様っ……！",
+      "Text": "むぅぅ……絶対許せません。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24596.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_107814.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 0.8
+          "EndTime": 4
         }
       }
     }
   },
 
-  "lbp_postyotogi_0180_T_Muku": {
-    "ID": "lbp_postyotogi_0180_T_Muku",
+  "lbp_postyotogi_0180_T_Yandere": {
+    "ID": "lbp_postyotogi_0180_T_Yandere",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0181",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "声が小さくで聞こえないですぅ。",
+      "Text": "声が小さいですよ？　ほら、はっきり言いなさい。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_17378.ogg",
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105847.ogg",
           "IsChoppingAudio": false
         }
       }

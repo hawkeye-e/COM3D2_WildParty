@@ -138,6 +138,25 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADVPostYotogi,
 
             ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Muku,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Majime,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Rindere,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Pure,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Cool,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Pride,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Yandere,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Anesan,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Genki,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Sadist,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Silent,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Devilish,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Ladylike,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Secretary,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Sister,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Curtness,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Missy,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Childhood,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Friendly,
+            ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Dame,
         };
 
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)

@@ -567,7 +567,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "lbp_phase2_0020_T_[=PType]"
@@ -817,7 +817,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "lbp_phase2_0040_T_[=PType]"
@@ -960,7 +960,8 @@
         "TargetPosString": "-0.28, 0.95, 1.37",
         "AroundAngleString": "31.20, 43.52",
         "Distance": 2.3
-      }
+      },
+      "LockCamera": { "IsLock": true }
     }
   },
 
@@ -970,7 +971,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "lbp_phase2_0050_T_[=PType]",
@@ -1021,7 +1022,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "lbp_phase2_0070_T_[=PType]"
@@ -1070,7 +1071,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "lbp_phase2_0090_T_[=PType]"
@@ -1117,7 +1118,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "lbp_phase2_0110_T_[=PType]"
@@ -1141,7 +1142,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "lbp_phase2_0130_T_[=PType]"
@@ -1188,7 +1189,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "lbp_phase2_0150_T_[=PType]"
@@ -1224,7 +1225,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "lbp_phase2_0160_T_[=PType]"
@@ -1292,7 +1293,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "lbp_phase2_0170_T_[=PType]"
@@ -1332,7 +1333,8 @@
         "TargetPosString": "1000,1000,1000",
         "AroundAngleString": "0,0",
         "Distance": 0
-      }
+      },
+      "LockCamera": { "IsLock": false }
     }
   },
 

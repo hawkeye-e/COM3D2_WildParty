@@ -768,7 +768,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "lbp_postyotogi_0030_T_[=PType]"
@@ -796,7 +796,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 2
       }
     ],
     "NextStepID": "lbp_postyotogi_0040_T_[=PType]"
@@ -808,7 +808,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 3
       }
     ],
     "NextStepID": "lbp_postyotogi_0050_T_[=PType]"
@@ -836,7 +836,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 4
       }
     ],
     "NextStepID": "lbp_postyotogi_0060_T_[=PType]"
@@ -848,7 +848,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 5
       }
     ],
     "NextStepID": "lbp_postyotogi_0070_T_[=PType]"
@@ -1300,7 +1300,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "lbp_postyotogi_0090_T_[=PType]"
@@ -1312,7 +1312,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 2
       }
     ],
     "NextStepID": "lbp_postyotogi_0100_T_[=PType]"
@@ -1346,7 +1346,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 3
       }
     ],
     "NextStepID": "lbp_postyotogi_0110_T_[=PType]"
@@ -1697,7 +1697,7 @@
     "NextStepID": "lbp_postyotogi_0127",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（…ところで、レズプレイの後、彼女たちの体はまだエロい匂いがプンプンされたる。あっ、まずい…またチンポが反応してる……）"
+      "Text": "（…ところで、レズプレイの後、彼女たちの体はまだいやらしいフェロモンがプンプン漂っている。あっ、まずい…またチンポが反応してる……）"
     }
   },
 
@@ -1730,7 +1730,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "lbp_postyotogi_0140_T_[=PType]"
@@ -1742,7 +1742,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 2
       }
     ],
     "NextStepID": "lbp_postyotogi_0150_T_[=PType]"
@@ -1945,7 +1945,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "lbp_postyotogi_0170_T_[=PType]"
@@ -1968,7 +1968,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 2
       }
     ],
     "NextStepID": "lbp_postyotogi_0180_T_[=PType]"
@@ -2000,7 +2000,7 @@
     "ID": "lbp_postyotogi_0183",
     "Type": "Camera",
     "WaitingType": "Auto",
-    "NextStepID": "lbp_postyotogi_0183a",
+    "NextStepID": "lbp_postyotogi_0184",
     "CameraData": {
       "FixedPointData": {
         "PosString": "999,999,999",
@@ -2011,26 +2011,48 @@
     }
   },
 
-  "lbp_postyotogi_0183a": {
-    "ID": "lbp_postyotogi_0183a",
+  "lbp_postyotogi_0184": {
+    "ID": "lbp_postyotogi_0184",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0184a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺の情けない声が彼女たちのスイッチを入れたようだ…）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lbp_postyotogi_0184a": {
+    "ID": "lbp_postyotogi_0184a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0184a2",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（耐えられるか……？俺は……）"
+    }
+  },
+
+  "lbp_postyotogi_0184a2": {
+    "ID": "lbp_postyotogi_0184a2",
     "Type": "BGM",
     "Tag": "",
     "WaitingType": "Auto",
-    "NextStepID": "lbp_postyotogi_0184"
+    "NextStepID": "lbp_postyotogi_0184b"
   },
 
-  "lbp_postyotogi_0184": {
-    "ID": "lbp_postyotogi_0184",
+  "lbp_postyotogi_0184b": {
+    "ID": "lbp_postyotogi_0184b",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0185",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
       "Text": "………"
-    },
-    "FadeData": {
-      "IsFadeIn": true,
-      "IsFadeOut": false
     }
   },
 
@@ -2123,25 +2145,14 @@
     "ID": "lbp_postyotogi_0192",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "lbp_postyotogi_0193",
-    "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺の情けない声が彼女たちのスイッチを入れたようだ…）"
-    },
-    "FadeData": {
-      "IsFadeIn": true,
-      "IsFadeOut": false
-    }
-  },
-
-  "lbp_postyotogi_0193": {
-    "ID": "lbp_postyotogi_0193",
-    "Type": "Talk",
-    "WaitingType": "Click",
     "NextStepID": "lbp_postyotogi_0194",
     "TalkData": {
       "SpecificSpeaker": "Owner",
       "Text": "（あれから数時間、彼女たちが満足するまで、俺に搾り取られ続けた。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
     }
   },
 
@@ -2152,7 +2163,7 @@
     "NextStepID": "lbp_postyotogi_0195",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（オナニーのしすぎで、本当に大変たっだ。）"
+      "Text": "（オナニーのしすぎで、本当に大変たっだ。…死ぬと思った。）"
     }
   },
 
