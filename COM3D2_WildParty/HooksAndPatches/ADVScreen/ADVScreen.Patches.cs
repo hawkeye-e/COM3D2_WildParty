@@ -47,6 +47,15 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.ADVScreen
         {
             if (StateManager.Instance.RequireCheckModdedSceneFlag)
             {
+                //Prevent selecting a sub chara with mod schedule causing the game to enter the mod scenario flow
+                if (instance.parent_mgr is SceneCharacterSelect)
+                {
+                    if (((SceneCharacterSelect)instance.parent_mgr).select_type != SceneCharacterSelect.SelectType.NewYotogi)
+                        return;
+                }
+                else
+                    return;
+
                 //After the player select a maid for some schedule, check if the maid is assigned with schedule task added by mod
 
                 Maid selectedMaid = Traverse.Create(instance).Field(Constant.DefinedClassFieldNames.CharacterSelectMainSelectedMaid).GetValue<Maid>();
