@@ -28,6 +28,8 @@ namespace COM3D2.WildParty.Plugin
         internal List<Maid> NPCList = new List<Maid>();                         //For female NPC (both in-game or mod added) only
         internal List<Maid> NPCManList = new List<Maid>();                      //For male NPC only
 
+        internal Dictionary<Maid, bool> ConvertedMaidFacialUpdateControlList = new Dictionary<Maid, bool>();        //For handling facial update and IK Update of a maid that converted to man structure
+
         //Key: Maid, Value: Paired Man
         internal Dictionary<Maid, Maid> PairedManForMaidList = new Dictionary<Maid, Maid>();    //For maid to convert man use
 

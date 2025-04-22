@@ -29,6 +29,7 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void ChangeBackgroundGroupSexPosition(PartyGroup group, int sexPosID, bool isRandomizeMotionLabelGroup, bool playAudio = true)
         {
             //Reset some of the data
+            group.DetachAllIK();
             group.GroupOffsetVector = Vector3.zero;
             group.CurrentSexState = SexState.StateType.NormalPlay;
 
@@ -429,6 +430,8 @@ namespace COM3D2.WildParty.Plugin.Core
          */
         internal static void ChangeMainGroupSkill(string skillID, bool loadMotionScript = true, bool resetEstrus = false)
         {
+            StateManager.Instance.PartyGroupList[0].DetachAllIK();
+
             //We dont want the game to deactivate any maid object
             StateManager.Instance.SpoofActivateMaidObjectFlag = true;
             

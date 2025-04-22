@@ -177,7 +177,8 @@ namespace COM3D2.WildParty.Plugin.Core
 
         internal static void ProcessSemenForGroup(PartyGroup group)
         {
-            ProcessSemenForGroup(group, group.CurrentOrgasmLabelRecord);
+            if(!StateManager.Instance.IsYotogiUseModSemenPattern)
+                ProcessSemenForGroup(group, group.CurrentOrgasmLabelRecord);
         }
 
         internal static void ProcessSemenForGroup(PartyGroup group, MotionSpecialLabel motionSpecialLabel)

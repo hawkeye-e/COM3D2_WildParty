@@ -63,16 +63,31 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             GameMain.Instance.MainCamera.FadeOut(ConfigurableValue.CameraFadeTime, f_dg: delegate
             {
+                foreach (PartyGroup group in StateManager.Instance.PartyGroupList)
+                    YotogiHandling.ResetYotogiMiscSetup(group);
+
                 //Change the maid for maid[0], keep man[0] and shuffle all the remaining
                 Maid selectedMaid = StateManager.Instance.SelectedMaidsList.Where(x => x.status.guid == maid_guid).First();
                 StateManager.Instance.SpoofActivateMaidObjectFlag = true;
                 
                 //For the lesbian case, maid[1] is changed
                 if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].IsLesbianSetup)
+                {
+                    if (selectedMaid.status.guid == StateManager.Instance.PartyGroupList[0].Maid1.status.guid)
+                    {
+                        //Special case: the selected maid is the main maid, randomly pick a maid and fill in the empty spot left by the main maid
+                        List<Maid> tempRandom = new List<Maid>(StateManager.Instance.SelectedMaidsList);
+                        tempRandom.Remove(selectedMaid);
+                        int index = RNG.Random.Next(tempRandom.Count);
+                        Maid replacement = tempRandom[index];
+                        GameMain.Instance.CharacterMgr.SetActiveMaid(replacement, 0);
+                    }
+
                     GameMain.Instance.CharacterMgr.SetActiveMaid(selectedMaid, 1);
+                }
                 else
                     GameMain.Instance.CharacterMgr.SetActiveMaid(selectedMaid, 0);
-
+                
                 StateManager.Instance.SpoofActivateMaidObjectFlag = false;
                 
                 CharacterHandling.StopCurrentAnimation();
@@ -149,14 +164,14 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             Maid originalMaid = StateManager.Instance.YotogiWorkingMaidList[originalMaidIndex];
             Maid selectedMaid = StateManager.Instance.YotogiWorkingMaidList[workingMaidIndex];
-
+            
             PartyGroup originalMaidGroup = Util.GetPartyGroupByGUID(originalMaid.status.guid);
-
+            
             foreach (PartyGroup group in StateManager.Instance.PartyGroupList)
                 group.BlockMotionScriptChange = false;
 
             PlayPostMovementMotion(isMovingRight, StateManager.Instance.PartyGroupList[0], originalMaidGroup);
-
+            
             StateManager.Instance.SpoofActivateMaidObjectFlag = true;
             GameMain.Instance.CharacterMgr.SetActiveMaid(selectedMaid, 0);
             StateManager.Instance.SpoofActivateMaidObjectFlag = false;
@@ -165,7 +180,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             //Update the group variable after swap
             originalMaidGroup = Util.GetPartyGroupByGUID(originalMaid.status.guid);
-
+            
             //Update the coordinates of the groups
             Vector3 positionOffset = Vector3.zero;
             Quaternion originalRotation = selectedMaid.transform.rotation;
@@ -178,25 +193,25 @@ namespace COM3D2.WildParty.Plugin.Core
                     positionOffset = coorindateInfo.SpecialSetting.MainGroupMotionOffset.Pos;
                     forceRotation = coorindateInfo.SpecialSetting.MainGroupMotionOffset.Rot;
                 }
-
+            
             MapCoorindates.CoordinateListInfo currentFormationCoorindateInfo = coorindateInfo.CoordinateList.Where(x => x.MaxGroup >= StateManager.Instance.PartyGroupList.Count).OrderBy(x => x.MaxGroup).First();
             MapCoorindates.CoordinatesInfo originalMaidGroupCoordinateInfo = currentFormationCoorindateInfo.GroupCoordinates.Where(x => x.ArrayPosition == originalMaidIndex).First();
             MapCoorindates.CoordinatesInfo selectedMaidGroupCoordinateInfo = currentFormationCoorindateInfo.GroupCoordinates.Where(x => x.ArrayPosition == workingMaidIndex).First();
-
+            
             StateManager.Instance.PartyGroupList[0].SetGroupPosition(selectedMaidGroupCoordinateInfo.Pos + positionOffset, forceRotation);
-
+            
             originalMaidGroup.SetGroupPosition(originalMaidGroupCoordinateInfo.Pos, originalMaidGroupCoordinateInfo.Rot);
-
+            
             int mainGroupSexPosID = Util.GetCurrentDefaultSexPosID();
             int bgSexPosID = ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].BackgroundSexPosID;
-
+            
             PlayableSkill.SkillItem newMainGroupSkill = Util.GetGroupSkillIDBySexPosID(StateManager.Instance.PartyGroupList[0], mainGroupSexPosID);
-
+            
             //original maid motion
             YotogiHandling.ChangeBackgroundGroupSexPosition(originalMaidGroup, bgSexPosID, true);
             
             YotogiHandling.UpdateParameterView(StateManager.Instance.PartyGroupList[0].Maid1);
-
+            
             //need to update the main group
             CharacterHandling.CleanseCharacterMgrArray();
             YotogiHandling.ChangeMainGroupSkill(newMainGroupSkill.YotogiSkillID, false, true);

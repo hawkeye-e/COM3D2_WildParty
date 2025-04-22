@@ -168,7 +168,8 @@ namespace COM3D2.WildParty.Plugin.Core
             Util.ClearGenericCollection(StateManager.Instance.BackupMaidClothingList);
             Util.ClearGenericCollection(StateManager.Instance.IgnoreResetPropMaidList);
             Util.ClearGenericCollection(StateManager.Instance.PairedManForMaidList);
-            
+            Util.ClearGenericCollection(StateManager.Instance.ConvertedMaidFacialUpdateControlList);            
+
             StateManager.Instance.RequireCheckModdedSceneFlag = false;
             StateManager.Instance.WaitForCharactersFullLoadFlag = false;
             StateManager.Instance.RequireInjectCommandButtons = false;
@@ -177,6 +178,7 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.IsMotionKagSetPosition = false;
             StateManager.Instance.IsMainGroupMotionScriptFlag = false;
             StateManager.Instance.IsYotogiUseModSemenPattern = false;
+            StateManager.Instance.WaitForMotionChange = false;
 
             StateManager.Instance.YotogiManager = null;
             StateManager.Instance.YotogiCommandFactory = null;

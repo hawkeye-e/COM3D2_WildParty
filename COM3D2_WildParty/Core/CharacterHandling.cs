@@ -436,19 +436,19 @@ namespace COM3D2.WildParty.Plugin.Core
 
             //Keep the master list unchanged so that the chosen maid will remain the same in the ADV
             List<Maid> workingMaidList = new List<Maid>(StateManager.Instance.YotogiWorkingMaidList);
-
+            
             //Shuffle the maid list
             if (retainGroupZero)
             {
                 Maid firstMaid = GameMain.Instance.CharacterMgr.GetMaid(0);
                 Maid secondMaid = GameMain.Instance.CharacterMgr.GetMaid(1);
-
+             
                 workingMaidList.Remove(firstMaid);
                 workingMaidList.Remove(secondMaid);
-
+             
                 if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].IsShuffleMaidList)
                     workingMaidList = ShuffleMaidOrManList(workingMaidList);
-
+             
                 workingMaidList.Insert(0, firstMaid);
                 workingMaidList.Insert(1, secondMaid);
             }
@@ -568,12 +568,12 @@ namespace COM3D2.WildParty.Plugin.Core
 
             PartyGroup group1 = Util.GetPartyGroupByCharacter(maid1);
             PartyGroup group2 = Util.GetPartyGroupByCharacter(maid2);
-            
+
             if (group1 == null || group2 == null)
                 return;
 
             int group1Index = group1.GetMaidOrManIndex(maid1);
-            int group2Index = group1.GetMaidOrManIndex(maid2);
+            int group2Index = group2.GetMaidOrManIndex(maid2);
 
             //do the swapping
             
@@ -1334,6 +1334,8 @@ namespace COM3D2.WildParty.Plugin.Core
             maid.AllProcProp();
 
             Helper.BoneNameConverter.ConvertFemaleStructureToMale(maid, dummyMan);
+            if(!StateManager.Instance.ConvertedMaidFacialUpdateControlList.ContainsKey(maid))
+                StateManager.Instance.ConvertedMaidFacialUpdateControlList.Add(maid, false);
             maid.boMAN = true;
 
             maid.SetProp(MPN.DouPer, 50, true);     //leg length

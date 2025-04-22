@@ -1285,8 +1285,11 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             {
                 if (Util.IsManAConvertedMaid(man))
                 {
-                    //Temporarily set it back to female to allow face anime update
-                    man.boMAN = false;
+                    //To allow face anime update, boMan has to be set to false; To make IK update working properly, boMan needs to be true
+                    //Use the ConvertedMaidFacialUpdateControlList which continuously changing the boolean value so that the Update function will go through both cases within short time.
+                    //TODO: Any better way to handle this (boMan update facial and IK problem)?
+                    man.boMAN = StateManager.Instance.ConvertedMaidFacialUpdateControlList[man];
+                    StateManager.Instance.ConvertedMaidFacialUpdateControlList[man] = !StateManager.Instance.ConvertedMaidFacialUpdateControlList[man];
                 }
             }
         }
