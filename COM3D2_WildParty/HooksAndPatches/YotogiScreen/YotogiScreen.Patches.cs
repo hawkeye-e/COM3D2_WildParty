@@ -400,6 +400,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
         internal static bool CheckJumpLabelStageSelected(string labelName)
         {
+            if (StateManager.Instance.ModEventProgress == Constant.EventProgress.None)
+                return true;
+
             //Connect the scene after stage selected 
             if (labelName == Constant.OrgySceneLabel.StageSelected)
             {
@@ -412,6 +415,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
         internal static bool CheckJumpLabelSessionResultEnd(BaseKagManager instance, string labelName)
         {
+            if (StateManager.Instance.ModEventProgress == Constant.EventProgress.None)
+                return true;
+
             if (labelName == Constant.GameSceneLabel.NoonResultEnd || labelName == Constant.GameSceneLabel.NightResultEnd)
             {
                 //No idea when the external dll change to point to another .ks file. Load the correct script file once again to make sure the game jump back to the main flow correctly.
