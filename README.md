@@ -12,6 +12,7 @@ For details or screenshots please refer to (https://hawkeye0.blogspot.com/)
   - Harem King (Pure Love)
   - Happy Gang Bang Club (NTR)
   - Another Gang Bang Wish (NTR)
+  - Lily Blooming Paradise (Yuri)
  
 
 
