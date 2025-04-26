@@ -1158,11 +1158,11 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
                         if (rectifyItem.IKType == IKRectify.IKRectifyType.IKAttachBone)
                         {
-                            scriptManager.tmp_kag.TagIKAttachBone(tag);
+                            Core.CharacterHandling.IKAttachBone(tag, group);
                         }
                         else if (rectifyItem.IKType == IKRectify.IKRectifyType.IKAttachPoint)
                         {
-                            scriptManager.tmp_kag.TagIKAttachPoint(tag);
+                            Core.CharacterHandling.IKAttachPoint(tag, group);
                         }
                     }
                 }

@@ -32,7 +32,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 //We dont want to process this over and over again if we are waiting for user input
                 if (StateManager.Instance.ProcessedADVStepID != StateManager.Instance.CurrentADVStepID)
                 {
-                    
+
                     //ADVStep thisStep = StateManager.Instance.dicADVSceneSteps[StateManager.Instance.CurrentADVStepID];
                     ADVStep thisStep = ModUseData.ADVStepData[StateManager.Instance.UndergoingModEventID][StateManager.Instance.CurrentADVStepID];
                     switch (thisStep.Type)
@@ -1315,6 +1315,8 @@ namespace COM3D2.WildParty.Plugin.Core
                         CharacterHandling.ConvertMaidToManStructure(target, StateManager.Instance.PairedManForMaidList[target]);
                     else
                         CharacterHandling.ConvertManToFemaleStructure(target);
+
+                    StateManager.Instance.WaitForFullLoadList.Add(target);
                 }
             }
         }
@@ -1334,6 +1336,8 @@ namespace COM3D2.WildParty.Plugin.Core
                         CharacterHandling.RecoverManFromFemaleStructure(target);
                     else
                         CharacterHandling.RecoverMaidFromManStructure(target);
+
+                    StateManager.Instance.WaitForFullLoadList.Add(target);
                 }
             }
         }

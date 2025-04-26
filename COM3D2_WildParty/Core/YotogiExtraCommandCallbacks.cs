@@ -109,7 +109,6 @@ namespace COM3D2.WildParty.Plugin.Core
                 YotogiHandling.UpdateParameterView(StateManager.Instance.PartyGroupList[0].Maid1);
                 
                 //need to update the main group
-                //var initialSkill = YotogiHandling.GetRandomSkill(StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id, StateManager.Instance.PartyGroupList[0].GroupType);
                 var initialSkill = YotogiHandling.GetSkill(StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id, StateManager.Instance.PartyGroupList[0].GroupType, initialSexPosID);
                 CharacterHandling.CleanseCharacterMgrArray();
                 YotogiHandling.ChangeMainGroupSkill(initialSkill.YotogiSkillID);
@@ -454,7 +453,11 @@ namespace COM3D2.WildParty.Plugin.Core
                     CharacterHandling.AssignPartyGrouping_SwapMember(originalGroup.Man1, targetGroup.Man1);
                 
                 SwapPartyGroup(originalGroup, targetGroup, IsSwapCoordinates);
-                
+
+                //Put the target group man1 to the front of YotogiWorkingManList to fix the issue of clicking Change Partner will switch to another man issue
+                StateManager.Instance.YotogiWorkingManList.Remove(targetGroup.Man1);
+                StateManager.Instance.YotogiWorkingManList.Insert(0, targetGroup.Man1);
+
                 //the sexposid of the target group may not be a valid playable skill, update it if necessary
                 if (!ModUseData.ValidSkillList[targetGroup.Maid1.status.personal.id][targetGroup.GroupType].Any(x => x.SexPosID == targetGroup.SexPosID))
                 {

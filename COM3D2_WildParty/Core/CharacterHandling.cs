@@ -312,7 +312,7 @@ namespace COM3D2.WildParty.Plugin.Core
             
             //Keep the master list unchanged so that the chosen maid will remain the same in the ADV
             List<Maid> workingMaidList = new List<Maid>(StateManager.Instance.YotogiWorkingMaidList);
-            
+
             //we will keep the man[0] in the same position
             Maid firstMan = StateManager.Instance.YotogiWorkingManList[0];
             StateManager.Instance.YotogiWorkingManList.Remove(firstMan);
@@ -957,6 +957,28 @@ namespace COM3D2.WildParty.Plugin.Core
             );
         }
 
+        internal static void IKAttachBone(KagTagSupport tag_data, PartyGroup group)
+        {
+            string srcInfo = tag_data.GetTagProperty("src").AsString();
+            string targetInfo = tag_data.GetTagProperty("target").AsString();
+
+            Maid srcMaid = Util.GetMaidRequestedByTagInfo(group, srcInfo);
+            Maid targetMaid = Util.GetMaidRequestedByTagInfo(group, targetInfo);
+            IKAttachBone(tag_data, srcMaid, targetMaid);
+        }
+
+        internal static void IKAttachPoint(KagTagSupport tag_data, PartyGroup group)
+        {
+            string srcInfo = tag_data.GetTagProperty("src").AsString();
+            string targetInfo = tag_data.GetTagProperty("target").AsString();
+
+            Maid srcMaid = Util.GetMaidRequestedByTagInfo(group, srcInfo);
+            Maid targetMaid = Util.GetMaidRequestedByTagInfo(group, targetInfo);
+            IKAttachPoint(tag_data, srcMaid, targetMaid);
+        }
+
+        
+
         private static Maid GetMaidForIKCharaInfo(IKAttachInfo.IKCharaInfo charaInfo)
         {
             if (charaInfo.ListType == IKAttachInfo.ArrayListType.Group)
@@ -990,6 +1012,20 @@ namespace COM3D2.WildParty.Plugin.Core
             string ik_name = tag_data.GetTagProperty("srcbone").AsString();
             kt.ik.IKAttachParam iKAttachParam = kt.ik.IKScriptHelper.GetIKAttachParam(tag_data, source, target);
             iKAttachParam.targetBoneName = tag_data.GetTagProperty("targetbone").AsString();
+            source.body0.fullBodyIK.IKAttach(ik_name, iKAttachParam);
+        }
+
+        internal static void IKAttachPoint(KagTagSupport tag_data, Maid source, Maid target)
+        {
+            string ik_name = tag_data.GetTagProperty("srcbone").AsString();
+            kt.ik.IKAttachParam iKAttachParam = kt.ik.IKScriptHelper.GetIKAttachParam(tag_data, source, target);
+
+            iKAttachParam.slotName = tag_data.GetTagProperty("targetobj").AsString();
+            iKAttachParam.attachPointName = tag_data.GetTagProperty("targetpoint").AsString();
+            if (tag_data.IsValid("axisbone"))
+            {
+                iKAttachParam.axisBoneName = tag_data.GetTagProperty("axisbone").AsString();
+            }
             source.body0.fullBodyIK.IKAttach(ik_name, iKAttachParam);
         }
 #endif
@@ -1043,6 +1079,61 @@ namespace COM3D2.WildParty.Plugin.Core
 
             source.IKTargetToBone(ik_name, target, targetBoneName, offset, iKAttachType, false, false);
 
+        }
+
+        //Code copied from Kiss to evade the GetMaidAndMan
+        internal static void IKAttachPoint(KagTagSupport tag_data, Maid source, Maid target)
+        {
+            string ik_name = tag_data.GetTagProperty("srcbone").AsString();
+            string attachpoint_name = tag_data.GetTagProperty("targetpoint").AsString();
+            string tgt_name = tag_data.GetTagProperty("targetobj").AsString();
+
+            IKCtrlData iKData = source.IKCtrl.GetIKData(ik_name);
+
+            Vector3 offset = Vector3.zero;
+            if (tag_data.IsValid("offsetx"))
+            {
+                offset.x = tag_data.GetTagProperty("offsetx").AsReal();
+            }
+            if (tag_data.IsValid("offsety"))
+            {
+                offset.y = tag_data.GetTagProperty("offsety").AsReal();
+            }
+            if (tag_data.IsValid("offsetz"))
+            {
+                offset.z = tag_data.GetTagProperty("offsetz").AsReal();
+            }
+
+            IKCtrlData.IKAttachType iKAttachType = IKCtrlData.IKAttachType.Point;
+            if (tag_data.IsValid("attach_type"))
+            {
+                iKAttachType = (IKCtrlData.IKAttachType)Enum.Parse(typeof(IKCtrlData.IKAttachType), tag_data.GetTagProperty("attach_type").AsString());
+            }
+            if (iKAttachType == IKCtrlData.IKAttachType.NewPoint)
+            {
+                if (tag_data.IsValid("offset_world"))
+                {
+                    iKData.posOffsetType = IKCtrlData.PosOffsetType.OffsetWorld;
+                }
+                else if (tag_data.IsValid("offset_bone"))
+                {
+                    iKData.posOffsetType = IKCtrlData.PosOffsetType.OffsetBone;
+                }
+            }
+            iKData.GetIKEnable(iKAttachType).Recet();
+
+            string axisbone = string.Empty;
+            if (tag_data.IsValid("axisbone"))
+            {
+                axisbone = tag_data.GetTagProperty("axisbone").AsString();
+            }
+            if (iKAttachType == IKCtrlData.IKAttachType.NewPoint && iKData is HandFootIKData)
+            {
+                HandFootIKData handFootIKData = iKData as HandFootIKData;
+                handFootIKData.SetPullState(!tag_data.IsValid("pull_off"));
+            }
+
+            source.IKTargetToAttachPoint(ik_name, target, tgt_name, attachpoint_name, offset, iKAttachType, axisbone, false);
         }
 #endif
 
@@ -1350,11 +1441,11 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             Helper.BoneNameConverter.RecoverConvertedMaidStructure(maid);
             maid.boMAN = false;
-            maid.ResetProp(MPN.DouPer);
-            maid.ResetProp(MPN.sintyou);
-            maid.ResetProp(MPN.UdeScl);
-            maid.ResetProp(MPN.kata);
-            maid.ResetProp(MPN.kousoku_lower);
+            maid.ResetProp(MPN.DouPer, true);
+            maid.ResetProp(MPN.sintyou, true);
+            maid.ResetProp(MPN.UdeScl, true);
+            maid.ResetProp(MPN.kata, true);
+            maid.ResetProp(MPN.kousoku_lower, true);
             maid.AllProcProp();
 
             RestoreMaidClothesInfo(maid);

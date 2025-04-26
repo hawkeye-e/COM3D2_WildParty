@@ -392,6 +392,29 @@ namespace COM3D2.WildParty.Plugin
             return null;
         }
 
+        internal static Maid GetMaidRequestedByTagInfo(PartyGroup group, string requestInfo)
+        {
+            PlayableSkill.SkillItem skill = Util.GetGroupCurrentSkill(group);
+            Maid result = null;
+
+            string[] requestSplit = requestInfo.Split(':');
+            int lookupIndex = int.Parse(requestSplit[1]);
+            //List<int> lookupList = null;
+
+            if (requestSplit[0].ToLower() == "man")
+            {
+                int targetIndex = skill.ManIndex.IndexOf(lookupIndex);
+                result = group.GetManAtIndex(targetIndex);
+            }
+            else if (requestSplit[0].ToLower() == "maid")
+            {
+                int targetIndex = skill.MaidIndex.IndexOf(lookupIndex);
+                result = group.GetMaidAtIndex(targetIndex);
+            }
+
+            return result;
+        }
+
         internal static bool IsManAConvertedMaid(Maid man)
         {
             return Helper.BoneNameConverter.IsMaidConvertedMan(man);

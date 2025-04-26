@@ -989,7 +989,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                 DebugHelper.DebugState.Instance.DummyMan = Core.CharacterHandling.InitMan(0, new List<string> { "YoungMan" });
                 DebugHelper.DebugState.Instance.DummyMan.transform.position = new Vector3(1f, 1f, 1f);
             }
-
+#if COM3D2_5
+#if UNITY_2022_3
             else if (Input.GetKeyDown(KeyCode.Keypad8))
             {
                 var maid = GameMain.Instance.CharacterMgr.GetMaid(0);
@@ -1049,6 +1050,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                 man.body0.fullBodyIK.IKAttach(ik_name, iKAttachParam);
                 //maid.body0.fullBodyIK.IKAttach(ik_name, iKAttachParam);
             }
+#endif
+#endif
         }
 
 

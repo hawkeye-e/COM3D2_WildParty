@@ -57,6 +57,7 @@ namespace COM3D2.WildParty.Plugin.Helper
 
             ReturnPenis(maid, _pairedMan[maid.status.guid].Man);
             RecurRecoverFemaleBoneName(maid, maid.transform);
+            RecurRecoverFemaleBoneStructure(maid, maid.transform);
             _convertedFemaleDisplacedBones.Remove(maid.status.guid);
             _pairedMan.Remove(maid.status.guid);
         }
@@ -64,7 +65,7 @@ namespace COM3D2.WildParty.Plugin.Helper
         internal static void RecoverAllMaid()
         {
             List<string> convertedMaids = _pairedMan.Keys.ToList();
-            foreach(string guid in convertedMaids)
+            foreach (string guid in convertedMaids)
             {
                 RecoverConvertedMaidStructure(_pairedMan[guid].Maid);
             }
@@ -99,7 +100,7 @@ namespace COM3D2.WildParty.Plugin.Helper
             chinkoCenter.SetActive(true);
 
             //We only need the cloned chinkoCenter object, the cloned children is not needed as we will use the one we are going to transplant
-            for(int i= chinkoCenter.transform.childCount - 1; i>=0; i--)
+            for (int i = chinkoCenter.transform.childCount - 1; i >= 0; i--)
             {
                 var t = chinkoCenter.transform.GetChild(i);
                 t.SetParent(null);
@@ -150,7 +151,7 @@ namespace COM3D2.WildParty.Plugin.Helper
                 if (transform.name == "Bip01 Spine0a")
                 {
                     List<Transform> lstChild = new List<Transform>();
-                    for (int i = transform.childCount - 1; i >=0 ; i--)
+                    for (int i = transform.childCount - 1; i >= 0; i--)
                     {
                         Transform t = transform.GetChild(i);
                         lstChild.Add(t);
@@ -171,7 +172,7 @@ namespace COM3D2.WildParty.Plugin.Helper
                 }
                 else
                 {
-
+                    
                     transform.name = transform.name.Replace("Bip01", "ManBip");
                     transform.name = transform.name.Replace("body001", "mbody");
                     transform.name = transform.name.Replace("Spine1a", "Spine2");
@@ -186,6 +187,22 @@ namespace COM3D2.WildParty.Plugin.Helper
         }
 
         private static void RecurRecoverFemaleBoneName(Maid maid, Transform transform)
+        {
+            if (transform != null)
+            {
+                transform.name = transform.name.Replace("ManBip", "Bip01");
+                transform.name = transform.name.Replace("mbody", "body001");
+                transform.name = transform.name.Replace("Spine2", "Spine1a");
+
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    Transform t = transform.GetChild(i);
+                    RecurRecoverFemaleBoneName(maid, t);
+                }
+            }
+        }
+
+        private static void RecurRecoverFemaleBoneStructure(Maid maid, Transform transform)
         {
             if (transform != null)
             {
@@ -208,20 +225,15 @@ namespace COM3D2.WildParty.Plugin.Helper
                     for (int i = 0; i < transform.childCount; i++)
                     {
                         Transform t = transform.GetChild(i);
-                        RecurRecoverFemaleBoneName(maid, t);
+                        RecurRecoverFemaleBoneStructure(maid, t);
                     }
                 }
                 else
                 {
-
-                    transform.name = transform.name.Replace("ManBip", "Bip01");
-                    transform.name = transform.name.Replace("mbody", "body001");
-                    transform.name = transform.name.Replace("Spine2", "Spine1a");
-
                     for (int i = 0; i < transform.childCount; i++)
                     {
                         Transform t = transform.GetChild(i);
-                        RecurRecoverFemaleBoneName(maid, t);
+                        RecurRecoverFemaleBoneStructure(maid, t);
                     }
                 }
             }
