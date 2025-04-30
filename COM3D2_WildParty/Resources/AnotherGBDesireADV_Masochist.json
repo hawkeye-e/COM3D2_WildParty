@@ -1,0 +1,236 @@
+{
+  "agbd_intro_0020_M_Masochist": {
+    "ID": "agbd_intro_0020_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0020_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "疑問",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頬掻き"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0020_T_Masochist": {
+    "ID": "agbd_intro_0020_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うんん……これでよろしいでしょうか？",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04384.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.5
+        }
+      }
+    }
+  },
+
+
+  "agbd_intro_0030_M_Masochist": {
+    "ID": "agbd_intro_0030_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0030_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0030_T_Masochist": {
+    "ID": "agbd_intro_0030_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0031_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "大丈夫ですよ。ご主人様が望むのなら、いつどんな時でも受け入れる準備は出来てますからぁ……",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_CREV_05360.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 0.5
+        }
+      }
+    }
+  },
+
+
+  "agbd_intro_0040_M_Masochist": {
+    "ID": "agbd_intro_0040_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_intro_0040_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "agbd_intro_0040_T_Masochist": {
+    "ID": "agbd_intro_0040_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ご主人様、そこで見ていてくださいね。",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04992.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.6,
+          "EndTime": 8
+        }
+      }
+    }
+  },
+
+
+
+  "agbd_postyotogi_0010_M_Masochist": {
+    "ID": "agbd_postyotogi_0010_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0010_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "悲しみ２",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち口元に手を当てる"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0010_T_Masochist": {
+    "ID": "agbd_postyotogi_0010_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もうお帰りになられるんですか？",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_04573.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.3
+        }
+      }
+    }
+  },
+
+
+  "agbd_postyotogi_0020_M_Masochist": {
+    "ID": "agbd_postyotogi_0020_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0020_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "引きつり笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち指を合わせる"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0020_T_Masochist": {
+    "ID": "agbd_postyotogi_0020_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……ダメですか？",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_01434.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.5
+        }
+      }
+    }
+  },
+
+
+  "agbd_postyotogi_0030_M_Masochist": {
+    "ID": "agbd_postyotogi_0030_M_Masochist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_postyotogi_0030_T_Masochist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "agbd_postyotogi_0030_T_Masochist": {
+    "ID": "agbd_postyotogi_0030_T_Masochist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "agbd_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はい、わかりました。",
+      "VoiceData": {
+        "Masochist": {
+          "VoiceFile": "H11_02982.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.4
+        }
+      }
+    }
+  }
+}

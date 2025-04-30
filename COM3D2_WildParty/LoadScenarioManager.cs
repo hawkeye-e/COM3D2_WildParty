@@ -128,6 +128,9 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Childhood,
             ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Friendly,
             ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Dame,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Masochist,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Cunning,
+            ScenarioResources.ScenarioAnotherGBDesire.AnotherGBDesireADV_Gyaru,
         };
 
         private static readonly string[] ScenarioLilyBloomingParadiseResList = {

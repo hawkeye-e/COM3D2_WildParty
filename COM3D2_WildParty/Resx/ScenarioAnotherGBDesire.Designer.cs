@@ -75,7 +75,7 @@ namespace ScenarioResources {
         ///        &quot;FaceAnime&quot;: &quot;疑問&quot;,
         ///        &quot;MotionInfo&quot;: {
         ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
-        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち普通１&quot;
         ///        }
         ///      }
         ///    ]
@@ -135,18 +135,48 @@ namespace ScenarioResources {
         ///        &quot;FaceAnime&quot;: &quot;疑問&quot;,
         ///        &quot;MotionInfo&quot;: {
         ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
-        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち腕を組む&quot;
         ///        }
         ///      }
         ///    ]
         ///  },
         ///
         ///  &quot;agbd_intro_0020_T_Cool&quot;: {
-        ///    &quot;ID&quot;: &quot;agbd_intro_0020_T_Coo [rest of string was truncated]&quot;;.
+        ///    &quot;ID&quot;: &quot;agbd_intro_0020_T_Co [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string AnotherGBDesireADV_Cool {
             get {
                 return ResourceManager.GetString("AnotherGBDesireADV_Cool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;agbd_intro_0020_M_Cunning&quot;: {
+        ///    &quot;ID&quot;: &quot;agbd_intro_0020_M_Cunning&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;agbd_intro_0020_T_Cunning&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;疑問&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;agbd_intro_0020_T_Cunning&quot;: {
+        ///    &quot;ID&quot;: &quot;agbd_intr [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string AnotherGBDesireADV_Cunning {
+            get {
+                return ResourceManager.GetString("AnotherGBDesireADV_Cunning", resourceCulture);
             }
         }
         
@@ -165,14 +195,14 @@ namespace ScenarioResources {
         ///        &quot;FaceAnime&quot;: &quot;疑問&quot;,
         ///        &quot;MotionInfo&quot;: {
         ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
-        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち腕を組む&quot;
         ///        }
         ///      }
         ///    ]
         ///  },
         ///
         ///  &quot;agbd_intro_0020_T_Curtness&quot;: {
-        ///    &quot;ID&quot;: &quot;agbd_ [rest of string was truncated]&quot;;.
+        ///    &quot;ID&quot;: &quot;agbd [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string AnotherGBDesireADV_Curtness {
             get {
@@ -195,14 +225,14 @@ namespace ScenarioResources {
         ///        &quot;FaceAnime&quot;: &quot;疑問&quot;,
         ///        &quot;MotionInfo&quot;: {
         ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
-        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち腕を組む&quot;
         ///        }
         ///      }
         ///    ]
         ///  },
         ///
         ///  &quot;agbd_intro_0020_T_Dame&quot;: {
-        ///    &quot;ID&quot;: &quot;agbd_intro_0020_T_Dam [rest of string was truncated]&quot;;.
+        ///    &quot;ID&quot;: &quot;agbd_intro_0020_T_Da [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string AnotherGBDesireADV_Dame {
             get {
@@ -255,14 +285,14 @@ namespace ScenarioResources {
         ///        &quot;FaceAnime&quot;: &quot;疑問&quot;,
         ///        &quot;MotionInfo&quot;: {
         ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
-        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち口元に手を当てる&quot;
         ///        }
         ///      }
         ///    ]
         ///  },
         ///
         ///  &quot;agbd_intro_0020_T_Friendly&quot;: {
-        ///    &quot;ID&quot;: &quot;agbd_ [rest of string was truncated]&quot;;.
+        ///    &quot;ID&quot;: &quot; [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string AnotherGBDesireADV_Friendly {
             get {
@@ -297,6 +327,36 @@ namespace ScenarioResources {
         internal static string AnotherGBDesireADV_Genki {
             get {
                 return ResourceManager.GetString("AnotherGBDesireADV_Genki", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;agbd_intro_0020_M_Gyaru&quot;: {
+        ///    &quot;ID&quot;: &quot;agbd_intro_0020_M_Gyaru&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;agbd_intro_0020_T_Gyaru&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;疑問&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;agbd_intro_0020_T_Gyaru&quot;: {
+        ///    &quot;ID&quot;: &quot;agbd_intro_0020_T [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string AnotherGBDesireADV_Gyaru {
+            get {
+                return ResourceManager.GetString("AnotherGBDesireADV_Gyaru", resourceCulture);
             }
         }
         
@@ -362,11 +422,11 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;agbd_intro_0020_M_Missy&quot;: {
-        ///    &quot;ID&quot;: &quot;agbd_intro_0020_M_Missy&quot;,
+        ///  &quot;agbd_intro_0020_M_Masochist&quot;: {
+        ///    &quot;ID&quot;: &quot;agbd_intro_0020_M_Masochist&quot;,
         ///    &quot;Type&quot;: &quot;Chara&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;agbd_intro_0020_T_Missy&quot;,
+        ///    &quot;NextStepID&quot;: &quot;agbd_intro_0020_T_Masochist&quot;,
         ///    &quot;CharaData&quot;: [
         ///      {
         ///        &quot;Type&quot;: &quot;F&quot;,
@@ -381,8 +441,38 @@ namespace ScenarioResources {
         ///    ]
         ///  },
         ///
+        ///  &quot;agbd_intro_0020_T_Masochist&quot;: {
+        ///    &quot;ID&quot;: &quot;a [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string AnotherGBDesireADV_Masochist {
+            get {
+                return ResourceManager.GetString("AnotherGBDesireADV_Masochist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;agbd_intro_0020_M_Missy&quot;: {
+        ///    &quot;ID&quot;: &quot;agbd_intro_0020_M_Missy&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;agbd_intro_0020_T_Missy&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;疑問&quot;,
+        ///        &quot;MotionInfo&quot;: {
+        ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち腕を組む&quot;
+        ///        }
+        ///      }
+        ///    ]
+        ///  },
+        ///
         ///  &quot;agbd_intro_0020_T_Missy&quot;: {
-        ///    &quot;ID&quot;: &quot;agbd_intro_0020_T [rest of string was truncated]&quot;;.
+        ///    &quot;ID&quot;: &quot;agbd_intro_0020_ [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string AnotherGBDesireADV_Missy {
             get {
@@ -435,14 +525,14 @@ namespace ScenarioResources {
         ///        &quot;FaceAnime&quot;: &quot;疑問&quot;,
         ///        &quot;MotionInfo&quot;: {
         ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
-        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち腕を組む&quot;
         ///        }
         ///      }
         ///    ]
         ///  },
         ///
         ///  &quot;agbd_intro_0020_T_Pride&quot;: {
-        ///    &quot;ID&quot;: &quot;agbd_intro_0020_T [rest of string was truncated]&quot;;.
+        ///    &quot;ID&quot;: &quot;agbd_intro_0020_ [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string AnotherGBDesireADV_Pride {
             get {
@@ -495,14 +585,14 @@ namespace ScenarioResources {
         ///        &quot;FaceAnime&quot;: &quot;疑問&quot;,
         ///        &quot;MotionInfo&quot;: {
         ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
-        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち腕を組む&quot;
         ///        }
         ///      }
         ///    ]
         ///  },
         ///
         ///  &quot;agbd_intro_0020_T_Rindere&quot;: {
-        ///    &quot;ID&quot;: &quot;agbd_intr [rest of string was truncated]&quot;;.
+        ///    &quot;ID&quot;: &quot;agbd_int [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string AnotherGBDesireADV_Rindere {
             get {
@@ -525,7 +615,7 @@ namespace ScenarioResources {
         ///        &quot;FaceAnime&quot;: &quot;疑問&quot;,
         ///        &quot;MotionInfo&quot;: {
         ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
-        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち考える&quot;
         ///        }
         ///      }
         ///    ]
@@ -555,14 +645,14 @@ namespace ScenarioResources {
         ///        &quot;FaceAnime&quot;: &quot;疑問&quot;,
         ///        &quot;MotionInfo&quot;: {
         ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
-        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち腕を組む&quot;
         ///        }
         ///      }
         ///    ]
         ///  },
         ///
         ///  &quot;agbd_intro_0020_T_Secretary&quot;: {
-        ///    &quot;ID&quot;: &quot;a [rest of string was truncated]&quot;;.
+        ///    &quot;ID&quot;: &quot; [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string AnotherGBDesireADV_Secretary {
             get {
@@ -642,17 +732,17 @@ namespace ScenarioResources {
         ///        &quot;Type&quot;: &quot;F&quot;,
         ///        &quot;UseBranchIndex&quot;: true,
         ///        &quot;Visible&quot;: true,
-        ///        &quot;FaceAnime&quot;: &quot;疑問&quot;,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;,
         ///        &quot;MotionInfo&quot;: {
         ///          &quot;ScriptFile&quot;: &quot;h_kaiwa_tati_001.ks&quot;,
-        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち頬掻き&quot;
+        ///          &quot;ScriptLabel&quot;: &quot;*会話立ち普通１&quot;
         ///        }
         ///      }
         ///    ]
         ///  },
         ///
         ///  &quot;agbd_intro_0020_T_Yandere&quot;: {
-        ///    &quot;ID&quot;: &quot;agbd_intr [rest of string was truncated]&quot;;.
+        ///    &quot;ID&quot;: &quot;agbd_in [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string AnotherGBDesireADV_Yandere {
             get {
