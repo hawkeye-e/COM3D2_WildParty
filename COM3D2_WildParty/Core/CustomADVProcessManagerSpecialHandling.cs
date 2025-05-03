@@ -61,6 +61,10 @@ namespace COM3D2.WildParty.Plugin.Core
                 case Constant.YotogiSceneCode.LilyBloomingParadise:
                     ProcessADV_Step_LilyBloomingParadise_YotogiPlay(instance, step);
                     break;
+                case Constant.YotogiSceneCode.ImmoralVillage:
+                    ProcessADV_Step_ImmoralVillage_YotogiPlay(instance, step);
+                    break;
+                    
             }
         }
 
@@ -217,7 +221,31 @@ namespace COM3D2.WildParty.Plugin.Core
 
         }
 
+        private static void ProcessADV_Step_ImmoralVillage_YotogiPlay(ADVKagManager instance, ADVStep step)
+        {
+            StateManager.Instance.ModEventProgress = Constant.EventProgress.YotogiInit;
+
+            GameMain.Instance.MainCamera.FadeOut(f_dg: delegate
+            {
+                ModUseData.ReloadCoordinateData(StateManager.Instance.UndergoingModEventID);
+
+                YotogiHandling.InitArrayForYotogiUsed();
+
+                CharacterHandling.SetDefaultGroupFormation();
+
+                CharacterHandling.AssignPartyGrouping(PartyGroup.CurrentFormation);
+
+                YotogiHandling.SetupYotogiSceneInitialSkill(Util.GetCurrentDefaultSexPosID());
+
+                CharacterHandling.SetGroupZeroActive();
+
+                YotogiHandling.InitYotogiData();
 
 
+                GameMain.Instance.LoadScene(step.Tag);
+            });
+
+        }
+        
     }
 }

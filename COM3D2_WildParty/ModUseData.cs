@@ -117,6 +117,8 @@ namespace COM3D2.WildParty.Plugin
                 InitDataForAnotherGBDesire();
             else if (scenarioID == ScenarioIDList.LilyBloomingParadiseScenarioID)
                 InitDataForLilyBloomingParadise();
+            else if (scenarioID == ScenarioIDList.ImmoralVillageScenarioID)
+                InitDataForImmoralVillage();
         }
 
         public static void ReloadCoordinateData(int scenarioID)
@@ -132,6 +134,8 @@ namespace COM3D2.WildParty.Plugin
                 MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_AnotherGBDesire);
             else if (scenarioID == ScenarioIDList.LilyBloomingParadiseScenarioID)
                 MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_LilyBloomingParadise);
+            else if (scenarioID == ScenarioIDList.ImmoralVillageScenarioID)
+                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ImmoralVillage);
         }
 
         private static void ResetModUseData()
@@ -207,6 +211,19 @@ namespace COM3D2.WildParty.Plugin
             MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_LilyBloomingParadise);
 
             PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_LilyBloomingParadise);
+        }
+
+        private static void InitDataForImmoralVillage()
+        {
+            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.ImmoralVillageScenarioID);
+
+            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_ImmoralVillage, ModResources.SexPosValidLabelsResources.SexPosValidLabels_ImmoralVillage, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_ImmoralVillage);
+            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_ImmoralVillage);
+
+            InitAllVoiceDataFromCSV();
+            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ImmoralVillage);
+
+            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_ImmoralVillage);
         }
 
         private static void InitAllVoiceDataFromCSV()

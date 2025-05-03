@@ -1,0 +1,86 @@
+{
+  "imvi0001": {
+    "ID": "imvi0001",
+    "Type": "BG",
+    "Tag": "ShinShitsumu",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_init_chara"
+  },
+
+  "imvi_init_chara": {
+    "ID": "imvi_init_chara",
+    "Type": "CharaInit",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_init_hide_men",
+    "CharaInitData": {
+      "IsClubOwnerADVMainCharacter": false,
+      "ManRequired": 8,
+      "ValidManType": [
+        "Shota"
+      ]
+    }
+  },
+
+  "imvi_init_hide_men": {
+    "ID": "imvi_init_hide_men",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0001",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": false
+      }
+    ]
+  },
+
+
+  "imvi_intro_0001": {
+    "ID": "imvi_intro_0001",
+    "Type": "BGM",
+    "Tag": "BGM013.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_0002"
+  },
+
+  "imvi_intro_0002": {
+    "ID": "imvi_intro_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_yotogiplay_phase1_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（……おかしい…）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+
+  "imvi_intro_yotogiplay_phase1_closepanel": {
+    "ID": "imvi_intro_yotogiplay_phase1_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_start_yotogiplay_phase1"
+  },
+
+  "imvi_start_yotogiplay_phase1": {
+    "ID": "imvi_start_yotogiplay_phase1",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "ImmoralVillage",
+      "Phase": 1,
+      "IsKeepCharacterVisibleAfterYotogi": true,
+      "IsFinalYotogi": false,
+      "IsClubOwnerMainCharacter": false
+    },
+    "NextStepID": "imvi_phase2_init"
+  }
+}

@@ -84,6 +84,17 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,IsBGGroupUse,Phase,MaidIndex,ManIndex,dummy
+        ///1,甘やかし手コキ,sex_amayakasi_tekoki.ks,MF,TRUE,,16270,16270,16270,25800,25800,25800,25800,16200,16200,16200,75500,43700,77300,79700,80600,74100,79300,80300,,,82000,82400,,TRUE,TRUE,FALSE,1,0,0,
+        ///2,甘やかし対面セックス,sex_amayakasi_taimen_sex.ks,MF,TRUE,,16280,16280,16280,25810,25810,2581 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SexPosList_ImmoralVillage {
+            get {
+                return ResourceManager.GetString("SexPosList_ImmoralVillage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,IsBGGroupUse,Phase,MaidIndex,ManIndex,dummy
         ///1,百合愛撫,sex_x_yuri_aibu2.ks,FF,TRUE,1,16150,16150,16150,16150,16150,16150,16150,16150,16150,16150,16150,16150,16150,16150,16150,16150,76570,78570,,,88570,104870,,TRUE,TRUE,TRUE,1,0;1,,
         ///2,百合バイブ,sex_x_yuri_vibe.ks,FF,TRUE,2,16160,16160,16160,16160,16160,16160,16160,16160,1616 [rest of string was truncated]&quot;;.
         /// </summary>

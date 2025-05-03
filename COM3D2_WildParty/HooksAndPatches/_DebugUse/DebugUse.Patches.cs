@@ -211,7 +211,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                         //Core.CharacterHandling.AttachObjectToCharacter(maid, addobj.AddObjects);
 
                         //maid.AddPrefab("Particle/pToiki", "夜伽_吐息", "Bip01 Head", new Vector3(0.04f, 0.08f, 0.00f), new Vector3(-90.00f, 90.00f, 0.00f));
-                        Core.CharacterHandling.PlayAnimation(maid, "wasikoki_3_f.anm", "wasikoki_3_f.anm");
+                        //Core.CharacterHandling.PlayAnimation(maid, "wasikoki_3_f.anm", "wasikoki_3_f.anm");
                     }
                     if (i == 1)
                     {
@@ -228,7 +228,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
 
                         //Core.CharacterHandling.AttachObjectToCharacter(maid, addobj.AddObjects);
 
-                        Core.CharacterHandling.PlayAnimation(maid, "wasikoki_3_f2.anm", "wasikoki_3_f2.anm");
+                        //Core.CharacterHandling.PlayAnimation(maid, "wasikoki_3_f2.anm", "wasikoki_3_f2.anm");
                     }
                     //if (i == 2)
                     //{
@@ -312,8 +312,16 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                     if (i == 0)
                     {
                         //Core.CharacterHandling.LoadMotionScript(0, false, "h_man_001.ks", "*男座り＿腕組", "", maid.status.guid);
-                        Core.CharacterHandling.PlayAnimation(maid, "wasikoki_3_m.anm", "wasikoki_3_m.anm");
+                        //Core.CharacterHandling.PlayAnimation(maid, "wasikoki_3_m.anm", "wasikoki_3_m.anm");
                     }
+                    if(i > 0)
+                    {
+                        if(maid != null)
+                        {
+                            Core.CharacterHandling.PlayAnimation(maid, "asikoki2_taiki_m.anm", "asikoki2_taiki_m.anm");
+                        }
+                    }
+
                     //if (i == 1)
                     //{
                     //    //Core.CharacterHandling.LoadMotionScript(0, false, "h_man_001.ks", "*男ソファーワイン待機", "", maid.status.guid);
@@ -350,6 +358,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                     foreach(var kvp2 in kvp.Value)
                         WildParty.Log.LogInfo("script file: " + kvp.Key + ", label: " + kvp2);
                 }
+
+                foreach(var s in DebugHelper.DebugState.Instance.SelectOptions)
+                    WildParty.Log.LogInfo(s);
             }
             else if (Input.GetKeyDown(KeyCode.Keypad6))
             {

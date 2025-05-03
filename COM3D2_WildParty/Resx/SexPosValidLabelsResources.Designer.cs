@@ -135,6 +135,30 @@ namespace ModResources {
         ///2,1,*奥を責める,Piston,Waiting,4
         ///2,2,*奥を責める,Piston,Waiting,4        /// [rest of string was truncated]&quot;;.
         /// </summary>
+        internal static string SexPosValidLabels_ImmoralVillage {
+            get {
+                return ResourceManager.GetString("SexPosValidLabels_ImmoralVillage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SexPosID,ExcitementLevel,LabelName,VoiceType,VoiceType2,LabelGroupID
+        ///1,0,*激しさ１,Piston,Waiting,1
+        ///1,1,*激しさ１,Piston,Waiting,1
+        ///1,2,*激しさ２,Piston,Waiting,1
+        ///1,3,*激しさ３,Piston,Waiting,1
+        ///1,0,*激しさ１見つめ合う,Piston,Waiting,2
+        ///1,1,*激しさ１見つめ合う,Piston,Waiting,2
+        ///1,2,*激しさ２見つめ合う,Piston,Waiting,2
+        ///1,3,*激しさ３見つめ合う,Piston,Waiting,2
+        ///2,0,*激しさ１,Piston,Waiting,3
+        ///2,1,*激しさ１,Piston,Waiting,3
+        ///2,2,*激しさ２,Piston,Waiting,3
+        ///2,3,*激しさ３,Piston,Waiting,3
+        ///2,0,*奥を責める,Piston,Waiting,4
+        ///2,1,*奥を責める,Piston,Waiting,4
+        ///2,2,*奥を責める,Piston,Waiting,4        /// [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string SexPosValidLabels_LilyBloomingParadise {
             get {
                 return ResourceManager.GetString("SexPosValidLabels_LilyBloomingParadise", resourceCulture);

@@ -97,7 +97,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                     ModResources.ImageResources.icon_happy_gb_club.Save(mStream, ModResources.ImageResources.icon_happy_gb_club.RawFormat);
                 else if (fileName == ModResources.ImageResources.LilyBloomingParadiseFileName)
                     ModResources.ImageResources.icon_lily_blooming_paradise.Save(mStream, ModResources.ImageResources.icon_lily_blooming_paradise.RawFormat);
-                
+                else if (fileName == ModResources.ImageResources.ImmoralVillageIconFileName)
+                    ModResources.ImageResources.icon_immoral_village.Save(mStream, ModResources.ImageResources.icon_immoral_village.RawFormat);
+
                 Texture2D tex = new Texture2D(64, 64);
                 ImageConversion.LoadImage(tex, mStream.ToArray());
 
@@ -124,6 +126,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                     ModResources.ImageResources.icon_happy_gb_club.Save(mStream, ModResources.ImageResources.icon_happy_gb_club.RawFormat);
                 else if (fileName == ModResources.ImageResources.LilyBloomingParadiseFileName)
                     ModResources.ImageResources.icon_lily_blooming_paradise.Save(mStream, ModResources.ImageResources.icon_lily_blooming_paradise.RawFormat);
+                else if (fileName == ModResources.ImageResources.ImmoralVillageIconFileName)
+                    ModResources.ImageResources.icon_immoral_village.Save(mStream, ModResources.ImageResources.icon_immoral_village.RawFormat);
 
                 Texture2D tex = new Texture2D(64, 64);
                 tex.LoadImage(mStream.ToArray());
@@ -148,6 +152,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
             {
                 //Flag for checking if this maid has performed any swapping or orgy category yotogi
                 result = Math.Max(status.GetFlag(Constant.GameDefinedFlag.Maid.YotogiCategorySwappingExecuteTimes), status.GetFlag(Constant.GameDefinedFlag.Maid.YotogiCategoryOrgyExecuteTimes));
+            }else if(flagName  == Constant.ModUsedFlag.Maid.RequireFetishFlagOrgyLover)
+            {
+                result = status.propensitys.ContainsKey(Constant.ModFetishID.OrgyLover) ? 1 : 0;
             }
         }
 

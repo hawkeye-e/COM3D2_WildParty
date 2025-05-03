@@ -305,6 +305,72 @@
   },
 
   {
+    "ScenarioID": 9900004,
+    "CategoryID": 99000,
+    "ADVEntryStep": "imvi0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "淫習村の夏祭り",
+    "Information": "ご主人様とメイドは、仕事終わりの短い休暇にある村を訪れた。そこで、とんでもない祭りが始まった…",
+    "Icon": "mod_icon_immoral_village",
+    "IsNetorare": true,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "SpecialRelationEnumString": [ "Married" ],
+    "ConditionInfoText": [
+      "嫁である",
+      "育成中のメイドではない",
+      "両穴経験済みである",
+      "性癖「乱交大好き」を取得している"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 210, 220 ],
+    "MaidRequireFlag": [ "MOD_Require_Fetish_Flag_Orgy_Lover" ],
+
+    "IsGroupEvent": false,
+    "MaidCount": {
+      "Max": 1,
+      "Min": 1
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "yashiki",
+          "NightMapID": "yashiki",
+          "BGM": "BGM011.ogg",
+          "FormationOption": [ "Phase1_Default" ],
+          "DefaultFormation": "Phase1_Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition"
+        ],
+        "IsMainManOwner": false,
+
+        "SexStateRule": "Common"
+      }
+    ],
+
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_淫習村の夏祭り_Executed",
+        "Value": 1
+      }
+    ]
+  },
+
+  {
     "ScenarioID": 9901001,
     "CategoryID": 99010,
     "ADVEntryStep": "haremking0001",

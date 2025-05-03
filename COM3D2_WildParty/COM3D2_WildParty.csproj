@@ -192,6 +192,11 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>ImageResources.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resx\ScenarioImmoralVillage.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>ScenarioImmoralVillage.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resx\ScenarioLilyBloomingParadise.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -269,6 +274,11 @@
 	    <CustomToolNamespace>ModResources</CustomToolNamespace>
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>ImageResources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\ScenarioImmoralVillage.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>ScenarioImmoralVillage.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ScenarioResources</CustomToolNamespace>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resx\ScenarioLilyBloomingParadise.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>

@@ -162,6 +162,10 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioLilyBloomingParadise.LilyBloomingParadiseADV_Dame,
         };
 
+        private static readonly string[] ScenarioImmoralVillageResList = {
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADVIntro
+        };
+
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)
         {
             Dictionary<int, Dictionary<string, ADVStep>> result = new Dictionary<int, Dictionary<string, ADVStep>>();
@@ -176,6 +180,8 @@ namespace COM3D2.WildParty.Plugin
                 result.Add(ScenarioIDList.AnotherGBDesireScenarioID, LoadScenarioFromResources(ScenarioAnotherGBDesireResList));
             else if (scenarioID == ScenarioIDList.LilyBloomingParadiseScenarioID)
                 result.Add(ScenarioIDList.LilyBloomingParadiseScenarioID, LoadScenarioFromResources(ScenarioLilyBloomingParadiseResList));
+            else if (scenarioID == ScenarioIDList.ImmoralVillageScenarioID)
+                result.Add(ScenarioIDList.ImmoralVillageScenarioID, LoadScenarioFromResources(ScenarioImmoralVillageResList));
 
             return result;
         }

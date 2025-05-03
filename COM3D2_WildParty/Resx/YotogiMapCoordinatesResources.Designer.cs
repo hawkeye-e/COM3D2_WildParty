@@ -156,6 +156,35 @@ namespace ModResources {
         ///              &quot;AroundAngleString&quot;: &quot;51.14, 32.65&quot;,
         ///              &quot;Dista [rest of string was truncated]&quot;;.
         /// </summary>
+        internal static string MapCoordinates_ImmoralVillage {
+            get {
+                return ResourceManager.GetString("MapCoordinates_ImmoralVillage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;Phase1_Default&quot;: {
+        ///    &quot;DisplayName&quot;: &quot;バラバラ&quot;,
+        ///    &quot;IsRandom&quot;: true,
+        ///    &quot;CoordinateList&quot;: [
+        ///      {
+        ///        &quot;MaxGroup&quot;: 10,
+        ///        &quot;GroupCoordinates&quot;: [
+        ///          {
+        ///            &quot;ArrayPosition&quot;: 0,
+        ///            &quot;PosString&quot;: &quot;-0.20, 0.52, 2.29&quot;,
+        ///            &quot;RotString&quot;: &quot;0, 0.912, 0, 0.408&quot;
+        ///          },
+        ///          {
+        ///            &quot;ArrayPosition&quot;: 1,
+        ///            &quot;PosString&quot;: &quot;0.23, 0.52, 0.74&quot;,
+        ///            &quot;RotString&quot;: &quot;0, 0, 0, 1&quot;
+        ///          },
+        ///          {
+        ///            &quot;ArrayPosition&quot;: 2,
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string MapCoordinates_LilyBloomingParadise {
             get {
                 return ResourceManager.GetString("MapCoordinates_LilyBloomingParadise", resourceCulture);

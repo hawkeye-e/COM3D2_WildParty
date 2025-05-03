@@ -104,6 +104,23 @@ namespace ModResources {
         ///3,*挿入,Insert,,,,,,,Insert,,,,,
         ///3,*待機,Waiting,,,,,,,Waiting,Wai [rest of string was truncated]&quot;;.
         /// </summary>
+        internal static string SexPosSpecialLabels_ImmoralVillage {
+            get {
+                return ResourceManager.GetString("SexPosSpecialLabels_ImmoralVillage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
+        ///1,*挿入,Insert,,,,,,,Insert,,,,,
+        ///1,*待機,Waiting,,,,,,,Waiting,Waiting,,,,
+        ///1,*絶頂,Orgasm,,,,,,,Piston,,OrgasmWaitYuriBottom,OrgasmWaitYuriTop,,
+        ///2,*挿入,Insert,,,,,,,Insert,,,,,
+        ///2,*待機,Waiting,,,,,,,Waiting,Waiting,,,,
+        ///2,*絶頂,Orgasm,,,,,,,Piston,,OrgasmWaitYuriBottom,OrgasmWaitYuriTop,,
+        ///3,*挿入,Insert,,,,,,,Insert,,,,,
+        ///3,*待機,Waiting,,,,,,,Waiting,Wai [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string SexPosSpecialLabels_LilyBloomingParadise {
             get {
                 return ResourceManager.GetString("SexPosSpecialLabels_LilyBloomingParadise", resourceCulture);

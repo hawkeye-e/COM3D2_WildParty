@@ -147,5 +147,17 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
             //    + ", assetbundle: " + __instance.create_asset_bundle_name
             //    );
         }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(MessageWindowMgr), nameof(MessageWindowMgr.CreateSelectButtons))]
+        private static void CreateSelectButtons(List<KeyValuePair<string, KeyValuePair<string, bool>>> dicSelectButton, Action<string, string> onClickCallBack)
+        {
+            foreach (var kvp in dicSelectButton)
+            {
+                if (!DebugHelper.DebugState.Instance.SelectOptions.Contains(kvp.Key))
+                    DebugHelper.DebugState.Instance.SelectOptions.Add(kvp.Key);
+                WildParty.Log.LogInfo(kvp.Key);
+            }
+        }
     }
 }

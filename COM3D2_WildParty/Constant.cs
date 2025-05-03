@@ -24,6 +24,7 @@ namespace COM3D2.WildParty.Plugin
             ModResources.ImageResources.HaremKingIconFileName,
             ModResources.ImageResources.HappyGBClubIconFileName,
             ModResources.ImageResources.LilyBloomingParadiseFileName,
+            ModResources.ImageResources.ImmoralVillageIconFileName,
         };
 
         internal static readonly string[] DressingClothingTagArray = {
@@ -508,12 +509,19 @@ namespace COM3D2.WildParty.Plugin
             internal static class Maid
             {
                 internal const string RequireCategorySwappingOrOrgy = "MOD_Require_Category_Swapping_Or_Orgy";
+                internal const string RequireFetishFlagOrgyLover = "MOD_Require_Fetish_Flag_Orgy_Lover";
             }
 
             internal static class Master
             {
 
             }
+        }
+
+        //This class is for condition checking use only. Should use or update ModFetish.json if adding new fetish
+        internal static class ModFetishID
+        {
+            internal const int OrgyLover = 99001;
         }
 
         internal static class MotionLabelType
@@ -663,6 +671,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string HaremKing = "HaremKing";
             internal const string HappyGBClub = "HappyGBClub";
             internal const string LilyBloomingParadise = "LilyBloomingParadise";
+            internal const string ImmoralVillage = "ImmoralVillage";
         }
 
         internal static class TexturePattern

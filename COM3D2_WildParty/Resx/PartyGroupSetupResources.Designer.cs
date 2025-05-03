@@ -63,7 +63,13 @@ namespace ModResources {
         /// <summary>
         ///   Looks up a localized string similar to {
         ///  &quot;Phase1_Default&quot;: {
-        ///    &quot;DefaultSexPosID&quot;: 1,
+        ///    &quot;DefaultSexPosID&quot;: 3,
+        ///    &quot;SpecialCaseDefaultSexPosIDList&quot;: [
+        ///      {
+        ///        &quot;Personality&quot;: [ 190, 200, 230 ],
+        ///        &quot;DefaultSexPosID&quot;: 21
+        ///      }
+        ///    ],
         ///    &quot;IsRandomAssign&quot;: false,
         ///    &quot;IsShuffleMaidList&quot;: false,
         ///    &quot;IsShuffleManList&quot;: false,
@@ -72,17 +78,12 @@ namespace ModResources {
         ///    &quot;GroupSetup&quot;: [
         ///      {
         ///        &quot;ArrayPosition&quot;: 0,
-        ///        &quot;ManCount&quot;: 3,
+        ///        &quot;ManCount&quot;: 2,
         ///        &quot;MaidCount&quot;: 1,
         ///        &quot;IsAutomatedGroup&quot;: false,
         ///        &quot;ClothesSet&quot;: &quot;FullNude&quot;
         ///      },
-        ///      {
-        ///        &quot;ArrayPosition&quot;: 1,
-        ///        &quot;ManCount&quot;: 3,
-        ///        &quot;MaidCount&quot;: 1,
-        ///        &quot;IsAutomatedGroup&quot;: true,
-        ///        &quot;ClothesSet&quot;: &quot;Ful [rest of string was truncated]&quot;;.
+        ///      { [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string PartyGroupSetup_AnotherGBDesire {
             get {
@@ -172,8 +173,27 @@ namespace ModResources {
         ///        &quot;ArrayPosition&quot;: 1,
         ///        &quot;ManCount&quot;: 3,
         ///        &quot;MaidCount&quot;: 1,
-        ///        &quot;IsAutomatedGroup&quot;: true,
-        ///        &quot;ClothesSet&quot;: &quot;Ful [rest of string was truncated]&quot;;.
+        ///        &quot;MaidFromNPC&quot;: true,
+        ///        &quot;IsAutomatedGroup&quot;: tru [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string PartyGroupSetup_ImmoralVillage {
+            get {
+                return ResourceManager.GetString("PartyGroupSetup_ImmoralVillage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;Phase1_Default&quot;: {
+        ///    &quot;IsRandomAssign&quot;: true,
+        ///    &quot;IsShuffleMaidList&quot;: true,
+        ///    &quot;IsLesbianSetup&quot;: true
+        ///  },
+        ///  &quot;Phase2_Default&quot;: {
+        ///    &quot;IsRandomAssign&quot;: true,
+        ///    &quot;IsShuffleMaidList&quot;: true
+        ///  }
+        ///}.
         /// </summary>
         internal static string PartyGroupSetup_LilyBloomingParadise {
             get {
