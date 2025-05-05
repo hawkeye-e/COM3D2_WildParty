@@ -51,8 +51,15 @@ namespace COM3D2.WildParty.Plugin
         {
             get
             {
-                var splitRot = RotString.Split(',');
-                return new Vector3(float.Parse(splitRot[0].Trim()), float.Parse(splitRot[1].Trim()), float.Parse(splitRot[2].Trim()));
+                if (!string.IsNullOrEmpty(RotString))
+                {
+                    var splitRot = RotString.Split(',');
+                    return new Vector3(float.Parse(splitRot[0].Trim()), float.Parse(splitRot[1].Trim()), float.Parse(splitRot[2].Trim()));
+                }
+                else
+                {
+                    return Vector3.zero;
+                }
             }
         }
 

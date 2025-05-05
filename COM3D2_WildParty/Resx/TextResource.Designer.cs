@@ -116,30 +116,56 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;Amayakasi_Tekoki_ChangeMan&quot;: {
+        ///    &quot;FirstStep&quot;: &quot;step1&quot;,
+        ///    &quot;Remarks&quot;: &quot;Target 0: New man that will be used in yotogi&quot;,
+        ///    &quot;Steps&quot;: [
+        ///      {
+        ///        &quot;StepID&quot;: &quot;step1&quot;,
+        ///        &quot;ActionType&quot;: &quot;ResetMotionToWaiting&quot;,
+        ///        &quot;Target&quot;: &quot;Group&quot;,
+        ///        &quot;TargetGroupPosition&quot;: 0,
+        ///        &quot;NextStep&quot;: &quot;step2&quot;
+        ///      },
+        ///      {
+        ///        &quot;StepID&quot;: &quot;step2&quot;,
+        ///        &quot;ActionType&quot;: &quot;LoadMotion&quot;,
+        ///        &quot;Target&quot;: &quot;Maid&quot;,
+        ///        &quot;TargetGroupPosition&quot;: 0,
+        ///        &quot;TargetMaidPosition&quot;: 0,
+        ///        &quot;M [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string CommandChainedAction {
+            get {
+                return ResourceManager.GetString("CommandChainedAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;ChangePosition&quot;: {
+        ///    &quot;CommandCode&quot;: &quot;ChangePosition&quot;,
         ///    &quot;Name&quot;: &quot;体位変更&quot;,
         ///    &quot;Type&quot;: &quot;Common&quot;
         ///  },
         ///  &quot;ChangePositionAll&quot;: {
+        ///    &quot;CommandCode&quot;: &quot;ChangePositionAll&quot;,
         ///    &quot;Name&quot;: &quot;一緒に体位変更&quot;,
         ///    &quot;Type&quot;: &quot;Common&quot;
         ///  },
         ///  &quot;ChangeFormation&quot;: {
+        ///    &quot;CommandCode&quot;: &quot;ChangeFormation&quot;,
         ///    &quot;Name&quot;: &quot;一緒に位置変更&quot;,
         ///    &quot;Type&quot;: &quot;Common&quot;
         ///  },
         ///  &quot;ChangePartner&quot;: {
+        ///    &quot;CommandCode&quot;: &quot;ChangePartner&quot;,
         ///    &quot;Name&quot;: &quot;パートナー交換&quot;,
         ///    &quot;Type&quot;: &quot;Common&quot;
         ///  },
         ///  &quot;FetishOrgy&quot;: {
-        ///    &quot;Name&quot;: &quot;性癖「乱交大好き」&quot;,
-        ///    &quot;Type&quot;: &quot;Fetish&quot;,
-        ///    &quot;FetishID&quot;: 99001,
-        ///    &quot;ConditionCheckTexts&quot;: [
-        ///      {
-        ///        &quot;Field&quot;: &quot;ManCount&quot;,
-        ///        &quot;DisplayText&quot;: &quot;[=ManCount]人以上とセックスする（[= [rest of string was truncated]&quot;;.
+        ///    &quot;CommandCode&quot;: &quot;AddFetish&quot;,
+        ///   [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ExtraYotogiComands {
             get {
@@ -151,23 +177,25 @@ namespace ModResources {
         ///   Looks up a localized string similar to [
         ///  {
         ///    &quot;ScenarioID&quot;: 9901002,
-        ///    &quot;ScriptName&quot;: &quot;sex_OM_seijyoui.ks&quot;,
-        ///    &quot;LabelName&quot;: &quot;*激しさ１胸揉み&quot;,
-        ///    &quot;MatchingCondition&quot;: [
-        ///      [ &quot;tagname&quot;, &quot;ikattachpoint&quot; ],
-        ///      [ &quot;src&quot;, &quot;man:0&quot; ],
-        ///      [ &quot;target&quot;, &quot;maid:0&quot; ],
-        ///      [ &quot;srcbone&quot;, &quot;左手&quot; ],
-        ///      [ &quot;targetpoint&quot;, &quot;乳首右&quot; ],
-        ///      [ &quot;targetobj&quot;, &quot;body&quot; ]
-        ///    ],
+        ///    &quot;ScriptName&quot;: [ &quot;sex_OM_seijyoui.ks&quot;, &quot;sex_OM_seijyouiA.ks&quot; ],
+        ///    &quot;LabelName&quot;: &quot;*待機&quot;,
+        ///    &quot;Type&quot;: &quot;Add&quot;,
+        ///    &quot;IKType&quot;: &quot;ikattachbone&quot;,
         ///    &quot;TagData&quot;: [
-        ///      [ &quot;tagname&quot;, &quot;ikattachpoint&quot; ],
+        ///      [ &quot;tagname&quot;, &quot;ikattachbone&quot; ],
         ///      [ &quot;src&quot;, &quot;man:0&quot; ],
         ///      [ &quot;target&quot;, &quot;maid:0&quot; ],
         ///      [ &quot;srcbone&quot;, &quot;左手&quot; ],
-        ///      [ &quot;targetpoint&quot;, &quot;乳首右&quot; ],
-        ///     [rest of string was truncated]&quot;;.
+        ///      [ &quot;targetbone&quot;, &quot;_IK_thighR&quot; ],
+        ///      [ &quot;attach_type&quot;, &quot;NewPoint&quot; ],
+        ///      [ &quot;offsetx&quot;, &quot;0.07&quot; ],
+        ///      [ &quot;offsety&quot;, &quot;-0.061&quot; ],
+        ///      [ &quot;offsetz&quot;, &quot;-0.150&quot; ]
+        ///    ]
+        ///  },
+        ///
+        ///  {
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string IKRectify {
             get {
@@ -602,21 +630,27 @@ namespace ModResources {
         ///    &quot;Override&quot;: [
         ///      {
         ///        &quot;SkillID&quot;: 30030,
+        ///        &quot;CommandID&quot;: 13926,
+        ///        &quot;DisplayName&quot;: &quot;絶頂&quot;
+        ///      },
+        ///      {
+        ///        &quot;SkillID&quot;: 30030,
+        ///        &quot;CommandID&quot;: 13927,
+        ///        &quot;Enabled&quot;: false
+        ///      },
+        ///      {
+        ///        &quot;SkillID&quot;: 30030,
         ///        &quot;CommandID&quot;: 13928,
         ///        &quot;Enabled&quot;: false
         ///      },
         ///      {
         ///        &quot;SkillID&quot;: 30040,
-        ///        &quot;CommandID&quot;: 13937,
-        ///        &quot;Enabled&quot;: false
-        ///      }
-        ///      
-        ///    ]
-        ///  },
-        ///  
-        ///
-        ///
-        ///].
+        ///        &quot;CommandID&quot;: 13935,
+        ///        &quot;DisplayName&quot;: &quot;絶頂&quot;
+        ///      },
+        ///      {
+        ///        &quot;SkillID&quot;: 30040,
+        ///        &quot;Co [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string YotogiCommandDataOverride {
             get {

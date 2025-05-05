@@ -18,6 +18,7 @@ namespace COM3D2.WildParty.Plugin
         public Vector3 GroupPosition = Vector3.zero;
         public Vector3 GroupOffsetVector = Vector3.zero;            //from CharaAllOfsetPosPre
         public Vector3 GroupOffsetVector2 = Vector3.zero;           //from TagAllPos
+        public Vector3 GroupRotationOffset = Vector3.zero;
         public Quaternion GroupRotation = Quaternion.identity;
 
         public int SexPosID = -1;
@@ -70,6 +71,8 @@ namespace COM3D2.WildParty.Plugin
         public static Dictionary<int, Maid> SharedExtraManList = new Dictionary<int, Maid>();
         public static List<MapCoorindates.CoordinatesInfo> SharedExtraManSetupInfo = new List<MapCoorindates.CoordinatesInfo>();
         public static ForceSexPosInfo.Type CurrentMainGroupMotionType = ForceSexPosInfo.Type.Waiting;
+
+        public int CurrentExtraManIndex = 0;
 
         public PartyGroup() { }
 
@@ -281,9 +284,11 @@ namespace COM3D2.WildParty.Plugin
 
                 Vector3 individualOffset = GetIndividualOffset(maid.boMAN, indexPosition);
 
+                Quaternion finalRotation = GroupRotation * Quaternion.Euler(Vector3.up * GroupRotationOffset.y);
+
                 if (RequireSmoothPositionChange)
                 {
-                    Util.SmoothMoveMaidPosition(maid, GroupPosition + GroupOffsetVector + GroupOffsetVector2 + individualOffset, GroupRotation);
+                    Util.SmoothMoveMaidPosition(maid, GroupPosition + GroupOffsetVector + GroupOffsetVector2 + individualOffset, finalRotation);
                 }
                 else
                 {
@@ -291,7 +296,7 @@ namespace COM3D2.WildParty.Plugin
                     maid.transform.localPosition = Vector3.zero;
                     maid.transform.position = GroupPosition + GroupOffsetVector + GroupOffsetVector2 + individualOffset;
                     maid.transform.localRotation = new Quaternion(0, 0, 0, 0);
-                    maid.transform.rotation = GroupRotation;
+                    maid.transform.rotation = finalRotation;
                     maid.body0.SetBoneHitHeightY(GroupPosition.y);
                 }
 

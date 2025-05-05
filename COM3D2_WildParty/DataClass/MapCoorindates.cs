@@ -15,6 +15,7 @@ namespace COM3D2.WildParty.Plugin
         public List<CoordinateListInfo> CoordinateList;
         public List<CoordinatesInfo> SpecialCoordinates;
         public SpecialSettingInfo SpecialSetting;
+        public List<SpecialDefinedPoint> SpecialDefinedPoints;
 
         internal class CoordinateListInfo
         {
@@ -77,6 +78,12 @@ namespace COM3D2.WildParty.Plugin
                 public PosRot Offset;
                 public PosRot TweenOffset;                      
             }
+        }
+
+        internal class SpecialDefinedPoint
+        {
+            public string Name;
+            public PosRot Location;
         }
     }
 }

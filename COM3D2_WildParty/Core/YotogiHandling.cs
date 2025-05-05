@@ -915,6 +915,7 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void ResetYotogiMiscSetup(PartyGroup group)
         {
             group.GroupOffsetVector2 = Vector3.zero;
+            group.GroupRotationOffset = Vector3.zero;
             if (group.ExtraObjects != null)
             {
                 while (group.ExtraObjects.Count > 0)
@@ -944,7 +945,10 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void ApplyYotogiMiscSetup(PartyGroup group, YotogiMiscSetup setupInfo)
         {
             if (setupInfo.Offset != null)
+            {
                 group.GroupOffsetVector2 = setupInfo.Offset.Pos;
+                group.GroupRotationOffset = setupInfo.Offset.Rot;
+            }
             if (setupInfo.ExtraObjects != null)
             {
                 foreach (var extraObjectSetup in setupInfo.ExtraObjects)
@@ -1162,6 +1166,5 @@ namespace COM3D2.WildParty.Plugin.Core
             group.MovingExtraManIndexList.Remove(originalIndex);
 
         }
-
     }
 }

@@ -63,9 +63,39 @@ namespace ModResources {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] wp_mod_motion_female_long_sitting {
+            get {
+                object obj = ResourceManager.GetObject("wp_mod_motion_female_long_sitting", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] wp_mod_motion_female_seductive {
             get {
                 object obj = ResourceManager.GetObject("wp_mod_motion_female_seductive", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] wp_mod_motion_female_stand {
+            get {
+                object obj = ResourceManager.GetObject("wp_mod_motion_female_stand", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] wp_mod_motion_female_stand_inverse {
+            get {
+                object obj = ResourceManager.GetObject("wp_mod_motion_female_stand_inverse", resourceCulture);
                 return ((byte[])(obj));
             }
         }

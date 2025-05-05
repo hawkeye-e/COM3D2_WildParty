@@ -61,6 +61,9 @@ namespace COM3D2.WildParty.Plugin
 
         public static List<YotogiCommandDataOverride> YotogiCommandDataOverrideList;
 
+        //Key: Chained Action Code
+        public static Dictionary<string, CommandChainedAction> CommandChainedActionList;
+
         public ModUseData()
         {
         }
@@ -102,6 +105,8 @@ namespace COM3D2.WildParty.Plugin
             IKRectifyList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<IKRectify>>(ModResources.TextResource.IKRectify);
             
             YotogiCommandDataOverrideList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<YotogiCommandDataOverride>>(ModResources.TextResource.YotogiCommandDataOverride);
+
+            CommandChainedActionList = Newtonsoft.Json.JsonConvert.DeserializeObject< Dictionary<string, CommandChainedAction>> (ModResources.TextResource.CommandChainedAction);
         }
 
         public static void InitDataForScenario(int scenarioID)

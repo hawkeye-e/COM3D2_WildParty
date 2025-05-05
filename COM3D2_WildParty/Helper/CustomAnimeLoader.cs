@@ -13,6 +13,12 @@ namespace COM3D2.WildParty.Plugin.Helper
             byte[] result = null;
             if (fileName.ToLower() == "wp_mod_motion_female_seductive.anm")
                 result = ModResources.CustomAnimResources.wp_mod_motion_female_seductive;
+            else if (fileName.ToLower() == "wp_mod_motion_female_long_sitting.anm")
+                result = ModResources.CustomAnimResources.wp_mod_motion_female_long_sitting;
+            else if (fileName.ToLower() == "wp_mod_motion_female_stand.anm")
+                result = ModResources.CustomAnimResources.wp_mod_motion_female_stand;
+            else if (fileName.ToLower() == "wp_mod_motion_female_stand_inverse.anm")
+                result = ModResources.CustomAnimResources.wp_mod_motion_female_stand_inverse;
 
             return result;
         }

@@ -15,49 +15,46 @@ namespace COM3D2.WildParty.Plugin.Core
         //Need to update this function if a new type of yotogi button is added.
         internal static EventDelegate GetButtonCallbackFromString(string buttonID)
         {
-            switch (buttonID)
+            string cmdCode = ModUseData.ExtraYotogiCommandDataList[buttonID].CommandCode;
+
+            switch (cmdCode)
             {
-                case Constant.ModYotogiCommandButtonID.ChangePosition:
+                case Constant.ModYotogiCommandButtonCode.ChangePosition:
                     return new EventDelegate(ChangePosition_ShowPositionList);
-                case Constant.ModYotogiCommandButtonID.ChangePositionAll:
+                case Constant.ModYotogiCommandButtonCode.ChangePositionAll:
                     return new EventDelegate(MassChangePosition_ShowPositionList);
-                case Constant.ModYotogiCommandButtonID.ChangeFormation:
+                case Constant.ModYotogiCommandButtonCode.ChangeFormation:
                     return new EventDelegate(Orgy_ShowFormationOption);
-                case Constant.ModYotogiCommandButtonID.ChangePartner:
+                case Constant.ModYotogiCommandButtonCode.ChangePartner:
                     return new EventDelegate(ChangePartner_ShowMaidList);
-                case Constant.ModYotogiCommandButtonID.FetishOrgy:
-                case Constant.ModYotogiCommandButtonID.FetishGangBang:
-                case Constant.ModYotogiCommandButtonID.FetishLesbianPlay:
+
+                case Constant.ModYotogiCommandButtonCode.AddFetish:
                     return new EventDelegate(() => AddFetish(buttonID));
 
-                case Constant.ModYotogiCommandButtonID.ChangeFormationHaremKing:
-                case Constant.ModYotogiCommandButtonID.ChangeFormationHappyGBClub:
+                case Constant.ModYotogiCommandButtonCode.ChangeFormationAsPositionChange:
                     return new EventDelegate(ShowFormationOption_AsChangePositionCommand);
-                case Constant.ModYotogiCommandButtonID.ChangeMaidHaremKing:
+                case Constant.ModYotogiCommandButtonCode.ChangeMaidHaremKing:
                     return new EventDelegate(HaremKing_ShowMaidList);
-                case Constant.ModYotogiCommandButtonID.MoveLeftHaremKing:
+                case Constant.ModYotogiCommandButtonCode.MoveLeftHaremKing:
                     return new EventDelegate(HaremKing_MoveLeft);
-                case Constant.ModYotogiCommandButtonID.MoveRightHaremKing:
+                case Constant.ModYotogiCommandButtonCode.MoveRightHaremKing:
                     return new EventDelegate(HaremKing_MoveRight);
 
-                case Constant.ModYotogiCommandButtonID.OrgasmInternal:
-                case Constant.ModYotogiCommandButtonID.OrgasmExternal:
-                case Constant.ModYotogiCommandButtonID.OrgasmFace:
-                case Constant.ModYotogiCommandButtonID.OrgasmMouth:
-                case Constant.ModYotogiCommandButtonID.OrgasmBukkake:
-                case Constant.ModYotogiCommandButtonID.OrgasmBukkake2:
+                case Constant.ModYotogiCommandButtonCode.OrgasmMotion:
                     return new EventDelegate(() => OrgasmCommandOnClick(buttonID));
 
-
-                case Constant.ModYotogiCommandButtonID.ChangeMaidAnotherGBDesire:
+                case Constant.ModYotogiCommandButtonCode.ChangeMaidAnotherGBDesire:
                     return new EventDelegate(GBClub_ShowMaidList);
-                case Constant.ModYotogiCommandButtonID.SwapMaidWithinGroup:
+                case Constant.ModYotogiCommandButtonCode.SwapMaidWithinGroup:
                     return new EventDelegate(SwapMaidWithinGroup);
 
-                case Constant.ModYotogiCommandButtonID.ChangeControllingMaid:
+                case Constant.ModYotogiCommandButtonCode.ChangeControllingMaid:
                     return new EventDelegate(ChangeControllingMaid_ShowMaidList);
-                case Constant.ModYotogiCommandButtonID.ShuffleMaidYuri:
+                case Constant.ModYotogiCommandButtonCode.ShuffleMaidYuri:
                     return new EventDelegate(ShuffleMaidYuri);
+
+                case Constant.ModYotogiCommandButtonCode.ChainedAction:
+                    return new EventDelegate(() => ProcessChainedAction(buttonID));
 
                 default:
                     return null;
@@ -551,6 +548,23 @@ namespace COM3D2.WildParty.Plugin.Core
 
             Trigger.AnimationEndTrigger trigger = new Trigger.AnimationEndTrigger(StateManager.Instance.PartyGroupList[0].Man1, new EventDelegate(() => YotogiExtraCommandCallbacks.HaremKing_SwapMainGroupMaid(currentMaidIndex, currentMaidIndex + indexOffset, isMovingRight)));
             StateManager.Instance.WaitingAnimationTrigger = trigger;
+        }
+
+        private static void ProcessChainedAction(string buttonID)
+        {
+            string chainedActionCode = ModUseData.ExtraYotogiCommandDataList[buttonID].ChainedActionCode;
+
+            StateManager.Instance.ExtraCommandWindow.SetVisible(false);
+
+            //We dont want the user to be able to click any command when moving which will mess up animation and the logic flow
+            YotogiHandling.BlockAllYotogiCommands();
+
+            CommandChainedActionManager.ProcessChainedMotion(chainedActionCode, new EventDelegate(FinishProcessChainedAction));
+        }
+
+        private static void FinishProcessChainedAction()
+        {
+            StateManager.Instance.YotogiManager.play_mgr.UpdateCommand();
         }
 
 

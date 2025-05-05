@@ -1,21 +1,26 @@
 {
   "ChangePosition": {
+    "CommandCode": "ChangePosition",
     "Name": "体位変更",
     "Type": "Common"
   },
   "ChangePositionAll": {
+    "CommandCode": "ChangePositionAll",
     "Name": "一緒に体位変更",
     "Type": "Common"
   },
   "ChangeFormation": {
+    "CommandCode": "ChangeFormation",
     "Name": "一緒に位置変更",
     "Type": "Common"
   },
   "ChangePartner": {
+    "CommandCode": "ChangePartner",
     "Name": "パートナー交換",
     "Type": "Common"
   },
   "FetishOrgy": {
+    "CommandCode": "AddFetish",
     "Name": "性癖「乱交大好き」",
     "Type": "Fetish",
     "FetishID": 99001,
@@ -32,11 +37,13 @@
   },
 
   "ChangeFormationHaremKing": {
+    "CommandCode": "ChangeFormationAsPositionChange",
     "Name": "体位変更",
     "Type": "Common"
   },
 
   "ChangeMaidHaremKing": {
+    "CommandCode": "ChangeMaidHaremKing",
     "Name": "チェンジ",
     "Type": "Common",
     "Constraint": [
@@ -48,6 +55,7 @@
   },
 
   "MoveLeftHaremKing": {
+    "CommandCode": "MoveLeftHaremKing",
     "Name": "左に移動",
     "Type": "Common",
     "Constraint": [
@@ -59,6 +67,7 @@
   },
 
   "MoveRightHaremKing": {
+    "CommandCode": "MoveRightHaremKing",
     "Name": "右に移動",
     "Type": "Common",
     "Constraint": [
@@ -70,6 +79,7 @@
   },
 
   "OrgasmInternal": {
+    "CommandCode": "OrgasmMotion",
     "Name": "中出しする",
     "Type": "Orgasm",
     "Constraint": [
@@ -90,6 +100,7 @@
   },
 
   "OrgasmExternal": {
+    "CommandCode": "OrgasmMotion",
     "Name": "外出しする",
     "Type": "Orgasm",
     "Constraint": [
@@ -110,6 +121,7 @@
   },
 
   "OrgasmMouth": {
+    "CommandCode": "OrgasmMotion",
     "Name": "口内射精",
     "Type": "Orgasm",
     "Constraint": [
@@ -130,6 +142,7 @@
   },
 
   "OrgasmFace": {
+    "CommandCode": "OrgasmMotion",
     "Name": "顔射",
     "Type": "Orgasm",
     "Constraint": [
@@ -150,6 +163,7 @@
   },
 
   "OrgasmBukkake": {
+    "CommandCode": "OrgasmMotion",
     "Name": "ぶっかけ",
     "Type": "Orgasm",
     "Constraint": [
@@ -170,6 +184,7 @@
   },
 
   "OrgasmBukkake2": {
+    "CommandCode": "OrgasmMotion",
     "Name": "ぶっかけ２",
     "Type": "Orgasm",
     "Constraint": [
@@ -190,11 +205,13 @@
   },
 
   "ChangeFormationHappyGBClub": {
+    "CommandCode": "ChangeFormationAsPositionChange",
     "Name": "一緒に体位変更",
     "Type": "Common"
   },
 
   "FetishGangBang": {
+    "CommandCode": "AddFetish",
     "Name": "性癖「輪姦大好き」",
     "Type": "Fetish",
     "FetishID": 99002,
@@ -207,11 +224,13 @@
   },
 
   "ChangeMaidAnotherGBDesire": {
+    "CommandCode": "ChangeMaidAnotherGBDesire",
     "Name": "メイド変更",
     "Type": "Common"
   },
 
   "FetishLesbianPlay": {
+    "CommandCode": "AddFetish",
     "Name": "性癖「レズプレイ大好き」",
     "Type": "Fetish",
     "FetishID": 99003,
@@ -228,17 +247,73 @@
   },
 
   "SwapMaidWithinGroup": {
+    "CommandCode": "SwapMaidWithinGroup",
     "Name": "交代",
     "Type": "Common"
   },
 
   "ChangeControllingMaid": {
+    "CommandCode": "ChangeControllingMaid",
     "Name": "操作メイド変更",
     "Type": "Common"
   },
 
   "ShuffleMaidYuri": {
+    "CommandCode": "ShuffleMaidYuri",
     "Name": "ペニスバンド交換",
     "Type": "Common"
+  },
+
+  "ChangeMan_Amayakasi_Tekoki": {
+    "CommandCode": "ChainedAction",
+    "Name": "次の男と交代する",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900004,
+        "SexPosIDs": [ 1 ]
+      }
+    ],
+    "ChainedActionCode": "Amayakasi_Tekoki_ChangeMan"
+  },
+
+  "ChangeMan_Amayakasi_Taimen": {
+    "CommandCode": "ChainedAction",
+    "Name": "次の男と交代する",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900004,
+        "SexPosIDs": [ 2, 3 ]
+      }
+    ],
+    "ChainedActionCode": "Amayakasi_Taimen_ChangeMan"
+  },
+
+  "ChangeMan_Hasamikomi_Kijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "次の男と交代する",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900004,
+        "SexPosIDs": [ 4, 5 ]
+      }
+    ],
+    "ChainedActionCode": "Hasamikomi_Kijyoui_ChangeMan"
+  },
+
+  "ChangeMan_Isutaimenzai": {
+    "CommandCode": "ChainedAction",
+    "Name": "次の男と交代する",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900004,
+        "SexPosIDs": [ 6, 7 ]
+      }
+    ],
+    "ChainedActionCode": "Isutaimenzai_ChangeMan"
   }
+
 }

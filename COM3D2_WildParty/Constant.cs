@@ -15,6 +15,8 @@ namespace COM3D2.WildParty.Plugin
         internal const string ClothesSetStrapOnDildo = "StrapOnDildo";
         internal const int OrgasmMotionEjaculationTime = 3;
 
+        internal const float DefaultTweenMoveTime = 1f;
+
         internal static readonly string[] FellatioLabel = { "Fellatio", "DeepThroat", "PainFellatio", "FellatioExcite", "FellatioDrunk", "FellatioBitch" };
 
         internal const string MainEventScriptFile = "AllMain.ks";
@@ -563,36 +565,33 @@ namespace COM3D2.WildParty.Plugin
             internal const string NightResultEnd = "*夜リザルト終了";
         }
 
-        internal static class ModYotogiCommandButtonID
+        internal static class ModYotogiCommandButtonCode
         {
             internal const string ChangePosition = "ChangePosition";
             internal const string ChangePositionAll = "ChangePositionAll";
             internal const string ChangeFormation = "ChangeFormation";
             internal const string ChangePartner = "ChangePartner";
 
-            internal const string ChangeFormationHaremKing = "ChangeFormationHaremKing";
+            internal const string AddFetish = "AddFetish";
+            internal const string ChangeFormationAsPositionChange = "ChangeFormationAsPositionChange";
+
             internal const string ChangeMaidHaremKing = "ChangeMaidHaremKing";
             internal const string MoveLeftHaremKing = "MoveLeftHaremKing";
             internal const string MoveRightHaremKing = "MoveRightHaremKing";
 
-            internal const string OrgasmExternal = "OrgasmExternal";
-            internal const string OrgasmInternal = "OrgasmInternal";
-            internal const string OrgasmMouth = "OrgasmMouth";
-            internal const string OrgasmFace = "OrgasmFace";
-            internal const string OrgasmBukkake = "OrgasmBukkake";
-            internal const string OrgasmBukkake2 = "OrgasmBukkake2";
+            internal const string OrgasmMotion = "OrgasmMotion";
+
 
             internal const string ChangeFormationHappyGBClub = "ChangeFormationHappyGBClub";
             
             internal const string ChangeMaidAnotherGBDesire = "ChangeMaidAnotherGBDesire";
 
-            internal const string FetishOrgy = "FetishOrgy";
-            internal const string FetishGangBang = "FetishGangBang";
-            internal const string FetishLesbianPlay = "FetishLesbianPlay";
 
             internal const string SwapMaidWithinGroup = "SwapMaidWithinGroup";
             internal const string ChangeControllingMaid = "ChangeControllingMaid";
             internal const string ShuffleMaidYuri = "ShuffleMaidYuri";
+
+            internal const string ChainedAction = "ChainedAction";
         }
 
         internal static class CameraEaseType

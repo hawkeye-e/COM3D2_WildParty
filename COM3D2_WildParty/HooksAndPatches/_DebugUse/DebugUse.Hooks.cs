@@ -133,6 +133,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
             //WildParty.Log.LogInfo("AddPrefabToBg f_strSrc: " + f_strSrc
             //    + ", f_strName: " + f_strName
             //    + ", f_strDest: " + f_strDest
+            //    + ", f_vPos: " + f_vPos
+            //    + ", f_vRot: " + f_vRot
             //    );
 
         }

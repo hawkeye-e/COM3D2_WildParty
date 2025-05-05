@@ -10,7 +10,7 @@ namespace COM3D2.WildParty.Plugin
     internal class YotogiMiscSetup
     {
         public List<int> SexPosIDs;
-        public PosRot Offset;
+        public PosRotVectorFormat Offset;
         public List<ExtraObjectInfo> ExtraObjects;
         public List<ExtraObjectOnCharacterInfo> ExtraObjectsOnCharacter;
 

@@ -27,7 +27,7 @@
             "Motion": {
               "MotionFile": "asikoki2_taiki_m.anm",
               "MotionTag": "asikoki2_taiki_m.anm",
-              "IsBlend": false
+              "IsBlend": true
             }
           },
           {
@@ -38,7 +38,7 @@
             "Motion": {
               "MotionFile": "asikoki2_taiki_m.anm",
               "MotionTag": "asikoki2_taiki_m.anm",
-              "IsBlend": false
+              "IsBlend": true
             }
           },
           {
@@ -49,7 +49,7 @@
             "Motion": {
               "MotionFile": "asikoki2_taiki_m.anm",
               "MotionTag": "asikoki2_taiki_m.anm",
-              "IsBlend": false
+              "IsBlend": true
             }
           },
           {
@@ -60,7 +60,7 @@
             "Motion": {
               "MotionFile": "asikoki2_taiki_m.anm",
               "MotionTag": "asikoki2_taiki_m.anm",
-              "IsBlend": false
+              "IsBlend": true
             }
           },
           {
@@ -71,7 +71,7 @@
             "Motion": {
               "MotionFile": "asikoki2_taiki_m.anm",
               "MotionTag": "asikoki2_taiki_m.anm",
-              "IsBlend": false
+              "IsBlend": true
             }
           },
           {
@@ -82,7 +82,7 @@
             "Motion": {
               "MotionFile": "asikoki2_taiki_m.anm",
               "MotionTag": "asikoki2_taiki_m.anm",
-              "IsBlend": false
+              "IsBlend": true
             }
           },
           {
@@ -93,7 +93,18 @@
             "Motion": {
               "MotionFile": "asikoki2_taiki_m.anm",
               "MotionTag": "asikoki2_taiki_m.anm",
-              "IsBlend": false
+              "IsBlend": true
+            }
+          },
+          {
+            "GroupIndex": 0,
+            "ArrayPosition": 7,
+            "PosString": "0.71, 0.50, 0.54",
+            "RotString": "0, 0.450, 0, 0.893",
+            "Motion": {
+              "MotionFile": "asikoki2_taiki_m.anm",
+              "MotionTag": "asikoki2_taiki_m.anm",
+              "IsBlend": true
             }
           }
         ],
@@ -109,7 +120,22 @@
             }
           }
         ]
-
+      }
+    ],
+    "SpecialDefinedPoints": [
+      {
+        "Name": "NextManStartPoint",
+        "Location": {
+          "PosString": "-0.43, 0.10, 0.77",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Name": "NextManStartPointLeft",
+        "Location": {
+          "PosString": "0.30, 0.10, -1.12",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
       }
     ]
   }
