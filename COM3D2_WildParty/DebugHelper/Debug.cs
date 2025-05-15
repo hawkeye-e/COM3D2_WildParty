@@ -64,8 +64,16 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
             mylist.Add("乱交3P両穴駅弁", -1);
             mylist.Add("【輪姦】乱交3P2穴抱え正常位", -1);
             mylist.Add("【輪姦】乱交3P腕持ち2穴セックス", -1);
-
-
+            mylist.Add("【二人きり】膝立ちセックス後背位", -1);
+            mylist.Add("愛撫", -1);
+            mylist.Add("【二人きり】立ち愛撫", -1);
+            mylist.Add("【二人きり】拘束背面騎乗位B", -1);
+            mylist.Add("【ナイトプール】立ちクンニ", -1);
+            mylist.Add("寝取らせ四つん這いフェラ+バイブ", -1);
+            mylist.Add("【二人きり】セックス寄り添い側位", -1);
+            mylist.Add("【二人きり】抱え込み座位", -1);
+            mylist.Add("【二人きり】ブリッジセックス正常位", -1);
+            
 
 
 

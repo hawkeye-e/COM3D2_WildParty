@@ -559,7 +559,39 @@ namespace COM3D2.WildParty.Plugin.Core
             //We dont want the user to be able to click any command when moving which will mess up animation and the logic flow
             YotogiHandling.BlockAllYotogiCommands();
 
-            CommandChainedActionManager.ProcessChainedMotion(chainedActionCode, new EventDelegate(FinishProcessChainedAction));
+            Dictionary<string, object> parameters = PrepareChainedActionParameters(buttonID);
+
+            CommandChainedActionManager.ProcessChainedMotion(chainedActionCode, parameters, new EventDelegate(FinishProcessChainedAction));
+        }
+
+        private static Dictionary<string, object> PrepareChainedActionParameters(string buttonID)
+        {
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+
+            if(ModUseData.ExtraYotogiCommandDataList[buttonID].Parameters != null)
+            {
+                foreach(ExtraYotogiCommandData.CommandParameters paramSetting in ModUseData.ExtraYotogiCommandDataList[buttonID].Parameters)
+                {
+                    if(paramSetting.Name == ExtraYotogiCommandData.SpecialParameterNames.PrimaryGroup)
+                    {
+                        parameters.Add(paramSetting.Name, StateManager.Instance.PartyGroupList[Convert.ToInt32(paramSetting.Value)]);
+                    }
+                    else if (paramSetting.Name == ExtraYotogiCommandData.SpecialParameterNames.NextExtraMan_Group)
+                    {
+                        Maid man = StateManager.Instance.PartyGroupList[Convert.ToInt32(paramSetting.Value)].GetCurrentExtraMaid();
+                        parameters.Add(paramSetting.Name, man);
+                    }
+                    else
+                    {
+                        //default handling
+                        parameters.Add(paramSetting.Name, paramSetting.Value);
+                    }
+                }
+            }
+
+            
+
+            return parameters;
         }
 
         private static void FinishProcessChainedAction()
@@ -632,7 +664,49 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
                 else
                 {
-                    UpdateCommandButtonState(commandBtn.Button.GetComponent<UIButton>(), true);
+                    if (commandBtn.Data.TriggerConditions != null)
+                    {
+                        bool isAllFulfilled = true;
+                        YotogiProgressInfo progressInfo = StateManager.Instance.YotogiProgressInfoList[maid.status.guid];
+                        
+                        if (commandBtn.Data.TriggerConditions.CurrentCommandIDs != null)
+                        {
+                            bool isOK = false;
+                            if (commandBtn.Data.TriggerConditions.CurrentCommandIDs.Contains(progressInfo.CurrentCommandID))
+                                isOK = true;
+                            
+                            isAllFulfilled = isAllFulfilled && isOK;
+                        }
+                        
+                        if (commandBtn.Data.TriggerConditions.RequireCommandClicks != null)
+                        {
+                            bool isOK = true;
+                            
+                            foreach (var clickRequirement in commandBtn.Data.TriggerConditions.RequireCommandClicks)
+                            {
+                                bool hasMatch = false;
+                                foreach(var commandID in clickRequirement.CommandIDs)
+                                {
+                                    if (progressInfo.CommandClicked.ContainsKey(commandID))
+                                        if (progressInfo.CommandClicked[commandID] >= clickRequirement.Count)
+                                            hasMatch = true;
+                                }
+                                isOK = isOK && hasMatch;
+                            }
+
+                            isAllFulfilled = isAllFulfilled && isOK;
+                        }
+
+                        if (commandBtn.Data.TriggerConditions.ExciteSetting != null)
+                        {
+                            if (maid.status.currentExcite < commandBtn.Data.TriggerConditions.ExciteSetting.MinExcite || maid.status.currentExcite > commandBtn.Data.TriggerConditions.ExciteSetting.MaxExcite)
+                                isAllFulfilled = false;
+                        }
+
+                        UpdateCommandButtonState(commandBtn.Button.GetComponent<UIButton>(), isAllFulfilled);
+                    }
+                    else
+                        UpdateCommandButtonState(commandBtn.Button.GetComponent<UIButton>(), true);
                 }
             }
         }

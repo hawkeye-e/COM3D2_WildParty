@@ -14,13 +14,19 @@ namespace COM3D2.WildParty.Plugin
         public Dictionary<int, int> SexPositionOrgasmInfo;                  //Key stored: SexPosID, Value: orgasm count
         public List<int> CustomFetishEarned;
 
+        public int CurrentCommandID;
+        //Key: CommandID, Value: Click Count
+        public Dictionary<int, int> CommandClicked;
+
         public YotogiProgressInfo()
         {
             ManOrgasmInfo = new Dictionary<string, int>();
             SexPositionOrgasmInfo = new Dictionary<int, int>();
             CustomFetishEarned = new List<int>();
+            CommandClicked = new Dictionary<int, int>();
 
             MaidOrgasmCount = 0;
+            CurrentCommandID = -1;
         }
     }
 }

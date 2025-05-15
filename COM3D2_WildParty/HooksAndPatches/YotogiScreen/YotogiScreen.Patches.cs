@@ -153,6 +153,24 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
                                 Core.YotogiExtraCommandHandling.ShowExecConditionPanel(btn.Button, displayConditions);
                             }
+                            else
+                            {
+                                if(btn.Data.TriggerConditions != null)
+                                {
+                                    if(btn.Data.TriggerConditions.Texts != null)
+                                    {
+                                        List<KeyValuePair<string[], Color>> displayConditions = new List<KeyValuePair<string[], Color>>();
+                                        foreach (var text in btn.Data.TriggerConditions.Texts)
+                                        {
+                                            string[] displayText = new string[1];
+                                            displayText[0] = text;
+                                            displayConditions.Add(new KeyValuePair<string[], Color>(displayText, Color.white));
+                                        }
+
+                                        Core.YotogiExtraCommandHandling.ShowExecConditionPanel(btn.Button, displayConditions);
+                                    }
+                                }
+                            }
                         }
                         else
                         {
@@ -772,6 +790,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
         internal static void RecordCommandTypeClicked(Yotogis.Skill.Data.Command.Data command_data)
         {
+            if (StateManager.Instance.UndergoingModEventID <= 0)
+                return;
+
             switch (command_data.basic.command_type)
             {
                 case Yotogi.SkillCommandType.挿入:
@@ -786,7 +807,20 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 case Yotogi.SkillCommandType.止める:
                     PartyGroup.CurrentMainGroupMotionType = ForceSexPosInfo.Type.Waiting;
                     break;
-            }
+            }   
+        }
+
+        internal static void UpdateYotogiProgressInfoCommandClick(Yotogis.Skill.Data.Command.Data command_data)
+        {
+            if (StateManager.Instance.UndergoingModEventID <= 0)
+                return;
+
+            //Update ProgressInfo
+            YotogiProgressInfo progressInfo = StateManager.Instance.YotogiProgressInfoList[StateManager.Instance.PartyGroupList[0].Maid1.status.guid];
+            progressInfo.CurrentCommandID = command_data.basic.id;
+            if (!progressInfo.CommandClicked.ContainsKey(command_data.basic.id))
+                progressInfo.CommandClicked.Add(command_data.basic.id, 0);
+            progressInfo.CommandClicked[command_data.basic.id]++;
         }
 
         internal static void ApplyLinkedGroupMotionUponCommandClicked(Yotogis.Skill.Data.Command.Data command_data)

@@ -303,6 +303,17 @@ namespace COM3D2.WildParty.Plugin
             return coordinatesInfo;
         }
 
+        internal static int GetPartyGroupIndex(PartyGroup group)
+        {
+            //locate the group index
+            int groupIndex = -1;
+            for (int i = 0; i < StateManager.Instance.PartyGroupList.Count; i++)
+                if (StateManager.Instance.PartyGroupList[i] == group)
+                    groupIndex = i;
+
+            return groupIndex;
+        }
+
         internal static int GetIndexPositionInWorkingYotogiArrayForMaid(Maid maid)
         {
             if (maid == null)
@@ -586,6 +597,16 @@ namespace COM3D2.WildParty.Plugin
             return ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
         }
 
+        internal static void ParseRawOffsetString(string offsetString, out Vector3 pos, out Vector3 rot)
+        {
+            string[] split = offsetString.Split('|');
+
+            var splitPos = split[0].Split(',');
+            pos = new Vector3(float.Parse(splitPos[0].Trim()), float.Parse(splitPos[1].Trim()), float.Parse(splitPos[2].Trim()));
+            var splitRot = split[1].Split(',');
+            rot = new Vector3(float.Parse(splitRot[0].Trim()), float.Parse(splitRot[1].Trim()), float.Parse(splitRot[2].Trim()));
+        }
+
         //From WfCameraMoveSupport class
         internal static float RoundDegree(float degres)
         {
@@ -629,12 +650,18 @@ namespace COM3D2.WildParty.Plugin
 
         public static Vector2 ParseVector2RawString(string vectorInString)
         {
+            if (string.IsNullOrEmpty(vectorInString))
+                return Vector3.zero;
+
             var split = vectorInString.Split(',');
             return new Vector2(float.Parse(split[0].Trim()), float.Parse(split[1].Trim()));
         }
 
         public static Vector3 ParseVector3RawString(string vectorInString)
         {
+            if (string.IsNullOrEmpty(vectorInString))
+                return Vector3.zero;
+
             var split = vectorInString.Split(',');
             return new Vector3(float.Parse(split[0].Trim()), float.Parse(split[1].Trim()), float.Parse(split[2].Trim()));
         }

@@ -118,22 +118,24 @@ namespace ModResources {
         ///   Looks up a localized string similar to {
         ///  &quot;Amayakasi_Tekoki_ChangeMan&quot;: {
         ///    &quot;FirstStep&quot;: &quot;step1&quot;,
-        ///    &quot;Remarks&quot;: &quot;Target 0: New man that will be used in yotogi&quot;,
         ///    &quot;Steps&quot;: [
         ///      {
         ///        &quot;StepID&quot;: &quot;step1&quot;,
         ///        &quot;ActionType&quot;: &quot;ResetMotionToWaiting&quot;,
-        ///        &quot;Target&quot;: &quot;Group&quot;,
-        ///        &quot;TargetGroupPosition&quot;: 0,
-        ///        &quot;NextStep&quot;: &quot;step2&quot;
+        ///        &quot;Target&quot;: {
+        ///          &quot;Type&quot;: &quot;Group&quot;,
+        ///          &quot;TargetGroupPosition&quot;: 0
+        ///        },
+        ///        &quot;NextStep&quot;: &quot;step1_resetik&quot;
         ///      },
         ///      {
-        ///        &quot;StepID&quot;: &quot;step2&quot;,
-        ///        &quot;ActionType&quot;: &quot;LoadMotion&quot;,
-        ///        &quot;Target&quot;: &quot;Maid&quot;,
-        ///        &quot;TargetGroupPosition&quot;: 0,
-        ///        &quot;TargetMaidPosition&quot;: 0,
-        ///        &quot;M [rest of string was truncated]&quot;;.
+        ///        &quot;StepID&quot;: &quot;step1_resetik&quot;,
+        ///        &quot;ActionType&quot;: &quot;ResetIK&quot;,
+        ///        &quot;Target&quot;: {
+        ///          &quot;Type&quot;: &quot;Group&quot;,
+        ///          &quot;TargetGroupPosition&quot;: 0
+        ///        },
+        ///        &quot;NextStep&quot;: &quot;step2&quot; [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string CommandChainedAction {
             get {
@@ -170,6 +172,28 @@ namespace ModResources {
         internal static string ExtraYotogiComands {
             get {
                 return ResourceManager.GetString("ExtraYotogiComands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [
+        ///  {
+        ///    &quot;ID&quot;: &quot;Man2_Join_3PSexSeijouyi&quot;,
+        ///    &quot;Type&quot;: &quot;Walk&quot;,
+        ///    &quot;ManWalkSetting&quot;: {
+        ///      &quot;StandingAnimationFile&quot;: &quot;turusi_sex_taiki_m.anm&quot;,
+        ///      &quot;StandingMotionOffsetString&quot;: &quot;0, 0, 0.346&quot;,
+        ///      &quot;WalkingMotionOffsetString&quot;: &quot;0, 0.1, 0&quot;,
+        ///      &quot;RotationOffsetString&quot;: &quot;0, 180, 0&quot;,
+        ///      &quot;MaidMotionOffsetString&quot;: &quot;0,0,0.3&quot;
+        ///    }
+        ///  }
+        ///]
+        ///.
+        /// </summary>
+        internal static string HardCodeMotionSetup {
+            get {
+                return ResourceManager.GetString("HardCodeMotionSetup", resourceCulture);
             }
         }
         
@@ -665,7 +689,7 @@ namespace ModResources {
         ///      &quot;SexPosIDs&quot;: [ 7, 8 ],
         ///      &quot;Offset&quot;: {
         ///        &quot;PosString&quot;: &quot;0.00, 0.63, 0.00&quot;,
-        ///        &quot;RotString&quot;: &quot;0.0, 0.0, 0.0, 0.0&quot;
+        ///        &quot;RotString&quot;: &quot;0, 0, 0&quot;
         ///      },
         ///      &quot;ExtraObjects&quot;: [
         ///        {
@@ -684,7 +708,7 @@ namespace ModResources {
         ///  &quot;9900003&quot;: [
         ///    {
         ///      &quot;SexPosIDs&quot;: [ 7, 8 ],
-        ///       [rest of string was truncated]&quot;;.
+        ///      &quot;Offset&quot;: { [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string YotogiMiscHandling {
             get {

@@ -111,7 +111,7 @@ namespace COM3D2.WildParty.Plugin
                 else
                     return "";
             }
-            
+
         }
 
         //This function takes the extra man into consideration. If there is no extra man defined in the scenario do not use this function.
@@ -120,7 +120,7 @@ namespace COM3D2.WildParty.Plugin
             List<string> result = new List<string>();
             if (MaidCount == 2)
                 result.Add(Constant.GroupType.FFM);
-            else if(MaidCount == 1)
+            else if (MaidCount == 1)
             {
                 result.Add(Constant.GroupType.MF);
                 result.Add(Constant.GroupType.MMF);
@@ -300,7 +300,7 @@ namespace COM3D2.WildParty.Plugin
                     maid.body0.SetBoneHitHeightY(GroupPosition.y);
                 }
 
-                if(ForceCharacterVisibleOnPositionChange)
+                if (ForceCharacterVisibleOnPositionChange)
                     maid.Visible = true;
             }
         }
@@ -314,7 +314,7 @@ namespace COM3D2.WildParty.Plugin
             else
                 targetDict = MaidOffsetList;
 
-            if(targetDict.ContainsKey(indexPosition))
+            if (targetDict.ContainsKey(indexPosition))
                 individualOffset = targetDict[indexPosition];
 
             return individualOffset;
@@ -327,7 +327,7 @@ namespace COM3D2.WildParty.Plugin
                 Maid2.AudioMan.Stop();
         }
 
-        public  void GenerateNextReviewTime()
+        public void GenerateNextReviewTime()
         {
             NextActionReviewTime = DateTime.Now.AddSeconds(
                         //RNG.Random.Next(ConfigurableValue.YotogiSimulation.MinBackgroundGroupReviewTimeInSeconds, ConfigurableValue.YotogiSimulation.MaxBackgroundGroupReviewTimeInSeconds)
@@ -350,13 +350,13 @@ namespace COM3D2.WildParty.Plugin
             NextActionReviewTime = DateTime.Now.AddMilliseconds(second * 1000);
         }
 
-        public void ReloadAnimation()
+        public void ReloadAnimation(bool IsSmooth = true)
         {
-            ReloadAnimationForMaid(Maid1);
-            ReloadAnimationForMaid(Maid2);
-            ReloadAnimationForMaid(Man1);
-            ReloadAnimationForMaid(Man2);
-            ReloadAnimationForMaid(Man3);
+            ReloadAnimationForMaid(Maid1, IsSmooth);
+            ReloadAnimationForMaid(Maid2, IsSmooth);
+            ReloadAnimationForMaid(Man1, IsSmooth);
+            ReloadAnimationForMaid(Man2, IsSmooth);
+            ReloadAnimationForMaid(Man3, IsSmooth);
         }
 
         public bool IsChangeMotionLabel()
@@ -374,15 +374,16 @@ namespace COM3D2.WildParty.Plugin
         {
             isRequireLabelChange = true;
         }
-        
 
-        private void ReloadAnimationForMaid(Maid maid)
+
+        private void ReloadAnimationForMaid(Maid maid, bool IsSmooth)
         {
             if (maid != null)
             {
                 if (!string.IsNullOrEmpty(maid.body0.LastAnimeFN))
                 {
-                    maid.body0.CrossFade(maid.body0.LastAnimeFN, GameUty.FileSystem, additive: false, loop: true, boAddQue: false, 0f);
+                    float blendTime = IsSmooth ? 0.5f : 0f;
+                    maid.body0.CrossFade(maid.body0.LastAnimeFN, GameUty.FileSystem, additive: false, loop: true, boAddQue: false, blendTime);
                 }
             }
         }
@@ -418,7 +419,7 @@ namespace COM3D2.WildParty.Plugin
         {
             List<int> list = new List<int>();
 
-            foreach(var kvp in SharedExtraManList)
+            foreach (var kvp in SharedExtraManList)
             {
                 if (kvp.Value == null)
                     list.Add(kvp.Key);
@@ -460,6 +461,28 @@ namespace COM3D2.WildParty.Plugin
             return result;
         }
 
+        public Maid GetCurrentExtraMaid(bool isIncrementIndexAfterDone = true)
+        {
+            Maid result;
+            while (true)
+            {
+                if (!ExtraManList.ContainsKey(CurrentExtraManIndex))
+                    CurrentExtraManIndex = 0;
+
+                if (ExtraManList[CurrentExtraManIndex] != null)
+                {
+                    result = ExtraManList[CurrentExtraManIndex];
+                    if (isIncrementIndexAfterDone)
+                        CurrentExtraManIndex++;
+                    break;
+                }
+
+                CurrentExtraManIndex++;
+            }
+
+            return result;
+        }
+
         //For debug use
         public override string ToString()
         {
@@ -472,7 +495,7 @@ namespace COM3D2.WildParty.Plugin
             return output;
         }
 
-        
+
 
     }
 }

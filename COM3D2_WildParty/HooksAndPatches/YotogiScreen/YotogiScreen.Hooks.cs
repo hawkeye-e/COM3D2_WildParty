@@ -363,6 +363,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             //Record down the type of command clicked
             Patches.RecordCommandTypeClicked(command_data);
+            //Update progress info
+            Patches.UpdateYotogiProgressInfoCommandClick(command_data);
         }
 
         [HarmonyPostfix]

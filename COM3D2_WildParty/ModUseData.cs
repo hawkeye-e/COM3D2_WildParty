@@ -64,6 +64,9 @@ namespace COM3D2.WildParty.Plugin
         //Key: Chained Action Code
         public static Dictionary<string, CommandChainedAction> CommandChainedActionList;
 
+        //Key: HardCode Motion Code
+        public static Dictionary<string, HardCodeMotionSetup> HardCodeMotionSetupList;
+
         public ModUseData()
         {
         }
@@ -74,11 +77,11 @@ namespace COM3D2.WildParty.Plugin
             ManBodyInfoList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ManBodyInfo>>(ModResources.TextResource.RandomizeManSetting);
 
             ScenarioCategoryList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ScenarioCategory>>(ModResources.TextResource.ModScenarioCategory);
-
+            
             ScenarioList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Scenario>>(ModResources.TextResource.ModScenario);
             foreach (var item in ScenarioList)
                 item.PostLoadProcess();
-
+            
             MasturbationMotionList = MasturbationMotion.ReadCSVFile(ModResources.TextResource.MasturbationMotion);
 
             VoiceFaceList = VoiceFace.ReadCSVFile(ModResources.TextResource.SexPosFace);
@@ -90,9 +93,9 @@ namespace COM3D2.WildParty.Plugin
             }
 
             FetishList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Fetish>>(ModResources.TextResource.ModFetish);
-
+            
             ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.TextResource.ExtraYotogiComands);
-
+            
             ModNPCFemaleList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ModNPCFemale>>(ModResources.TextResource.ModNPCFemale);
             ModNPCMaleList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ModNPCMale>>(ModResources.TextResource.ModNPCMale);
 
@@ -105,8 +108,10 @@ namespace COM3D2.WildParty.Plugin
             IKRectifyList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<IKRectify>>(ModResources.TextResource.IKRectify);
             
             YotogiCommandDataOverrideList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<YotogiCommandDataOverride>>(ModResources.TextResource.YotogiCommandDataOverride);
-
+            
             CommandChainedActionList = Newtonsoft.Json.JsonConvert.DeserializeObject< Dictionary<string, CommandChainedAction>> (ModResources.TextResource.CommandChainedAction);
+
+            HardCodeMotionSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, HardCodeMotionSetup>>(ModResources.TextResource.HardCodeMotionSetup);
         }
 
         public static void InitDataForScenario(int scenarioID)

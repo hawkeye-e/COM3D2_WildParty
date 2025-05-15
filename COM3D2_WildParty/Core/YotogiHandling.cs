@@ -26,7 +26,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
 
         //Function for setting the common sex motion
-        internal static void ChangeBackgroundGroupSexPosition(PartyGroup group, int sexPosID, bool isRandomizeMotionLabelGroup, bool playAudio = true)
+        internal static void ChangeBackgroundGroupSexPosition(PartyGroup group, int sexPosID, bool isRandomizeMotionLabelGroup, bool playAudio = true, bool isSmoothAnimation = true)
         {
             //Reset some of the data
             group.DetachAllIK();
@@ -54,11 +54,11 @@ namespace COM3D2.WildParty.Plugin.Core
 
             group.SexPosID = motionItem.ID;
 
-            CharacterHandling.LoadMotionScript(1, false,
+            CharacterHandling.LoadMotionScript(Util.GetPartyGroupIndex(group), false,
                 motionItem.FileName, label.LabelName,
                 group.Maid1.status.guid, group.Man1?.status.guid, false, false, true, false);
-
-            group.ReloadAnimation();
+            
+            group.ReloadAnimation(isSmoothAnimation);
 
             
 
@@ -83,7 +83,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             MotionSpecialLabel pickedLabel = lstSpecialLabel[RNG.Random.Next(lstSpecialLabel.Count)];
 
-            CharacterHandling.LoadMotionScript(1, false,
+            CharacterHandling.LoadMotionScript(Util.GetPartyGroupIndex(group), false,
                 motionItem.FileName, pickedLabel.Label,
                 group.Maid1.status.guid, group.Man1?.status.guid, false, false, true, false);
 
@@ -412,7 +412,7 @@ namespace COM3D2.WildParty.Plugin.Core
             else
             {
 
-                CharacterHandling.LoadMotionScript(1, false,
+                CharacterHandling.LoadMotionScript(0, false,
                 mMotionData.MotionFileName, mMotionData.Label,
                 maid.status.guid, "", false, false, false, false);
 
@@ -478,6 +478,10 @@ namespace COM3D2.WildParty.Plugin.Core
             //refresh the command
             StateManager.Instance.YotogiManager.play_mgr.NextSkill();
 
+            //Reset the Current Command Click in ProgressInfo
+            foreach (var progressInfo in StateManager.Instance.YotogiProgressInfoList)
+                progressInfo.Value.CurrentCommandID = -1;
+
             StateManager.Instance.SpoofActivateMaidObjectFlag = false;
 
             //Load the motion for the main group
@@ -524,7 +528,7 @@ namespace COM3D2.WildParty.Plugin.Core
             }
             
             if (loadMotionScript)
-                CharacterHandling.LoadMotionScript(0, false,
+                CharacterHandling.LoadMotionScript(Util.GetPartyGroupIndex(group), false,
                 motionItem.FileName, waitingLabel.Label,
                 maidGUID, manGUID, false, false, false, false);
             

@@ -1006,6 +1006,1656 @@
         }
       }
     ]
-  }
+  },
 
+
+  "Common_Change_SexPos_With_Insert_Label": {
+    "FirstStep": "step1",
+    "RequiredParams": [
+      "PrimaryGroup",
+      "NewSexPosID",
+      "NewMotionLabelGroupID"
+    ],
+    "Steps": [
+      {
+        "StepID": "step1",
+        "ActionType": "UpdateSexPos",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "UpdateSexPosInfo": {
+          "Value": {
+            "ParamValue": "NewSexPosID"
+          },
+          "PlayerState": "Insert"
+        },
+        "NextStep": "step2_MotionUpdate"
+      },
+      {
+        "StepID": "step2_MotionUpdate",
+        "ActionType": "LoadMotionLabelGroup",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "LoadMotionLabelGroupInfo": {
+          "Value": {
+            "ParamValue": "NewMotionLabelGroupID"
+          },
+          "IsSmoothAnimationParamName": "IsSmoothAnimation"
+        },
+        "NextStep": ""
+      }
+    ]
+  },
+
+
+  "Common_Change_SexPos": {
+    "FirstStep": "step1",
+    "RequiredParams": [
+      "PrimaryGroup",
+      "NewSexPosID"
+    ],
+    "Steps": [
+      {
+        "StepID": "step1",
+        "ActionType": "UpdateSexPos",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "UpdateSexPosInfo": {
+          "Value": {
+            "ParamValue": "NewSexPosID"
+          }
+        },
+        "NextStep": ""
+      }
+    ]
+  },
+
+
+  "Common_Change_SexPos_NonSmooth": {
+    "FirstStep": "step1",
+    "RequiredParams": [
+      "PrimaryGroup",
+      "NewSexPosID"
+    ],
+    "Steps": [
+      {
+        "StepID": "step1",
+        "ActionType": "UpdateSexPos",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "UpdateSexPosInfo": {
+          "Value": {
+            "ParamValue": "NewSexPosID"
+          },
+          "IsSmoothAnimation": false
+        },
+        "NextStep": ""
+      }
+
+    ]
+  },
+
+  "Common_Change_SexPos_With_Connecting_Motion": {
+    "FirstStep": "step1",
+    "RequiredParams": [
+      "PrimaryGroup",
+      "NewSexPosID",
+      "Man1Motion",
+      "Maid1Motion",
+      "Man1MotionOffset",
+      "Maid1MotionOffset"
+    ],
+    "Steps": [
+      {
+        "StepID": "step1",
+        "ActionType": "ResetIK",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "NextStep": "step2_Man1Motion"
+      },
+      {
+        "StepID": "step2_Man1Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man1Motion"
+        },
+        "NextStep": "step2_Man1Offset"
+      },
+      {
+        "StepID": "step2_Man1Offset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
+        },
+        "OffsetInfo": {
+          "Param": "Man1MotionOffset"
+        },
+        "NextStep": "step3_Maid1Motion"
+      },
+      {
+        "StepID": "step3_Maid1Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Maid1Motion"
+        },
+        "NextStep": "step3_Maid1Offset"
+      },
+      {
+        "StepID": "step3_Maid1Offset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
+        },
+        "OffsetInfo": {
+          "Param": "Maid1MotionOffset"
+        },
+        "NextStep": "step4_trigger"
+      },
+      {
+        "StepID": "step4_trigger",
+        "ActionType": "Trigger",
+        "TriggerSetting": {
+          "TriggerType": "TimeEnd",
+          "TimeToWaitType": "DefaultTweenMoveTime"
+        },
+        "NextStep": "step4"
+      },
+      {
+        "StepID": "step4",
+        "ActionType": "UpdateSexPos",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "UpdateSexPosInfo": {
+          "Value": {
+            "ParamValue": "NewSexPosID"
+          },
+          "IsSmoothAnimationParamName": "IsSmoothAnimation"
+        },
+        "NextStep": ""
+      }
+    ]
+  },
+
+
+  "Change_SexPos_MF_To_MMF_Add_Man2": {
+    "FirstStep": "step1",
+    "RequiredParams": [
+      "PrimaryGroup",
+      "NextExtraMan_Group",
+      "NewSexPosID",
+      "Man2StandingMotion",
+      "StandingMotionOffset",
+      "Man2PreWalkingPosition",
+      "WalkingSetup",
+      "Man2ReadyMotion",
+      "NewMotionLabelGroupID",
+      "Man2StandingMotionAfterWalk",
+      "Man2OffsetAfterWalk",
+
+      "Man2ReadyMotionOffset",
+      "Man1Motion",
+      "Man1MotionOffset",
+      "Maid1Motion",
+      "Maid1MotionOffset"
+    ],
+    "Steps": [
+      {
+        "StepID": "step1",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "OffsetInfo": {
+          "Param": "StandingMotionOffset"
+        },
+        "NextStep": "step1_Motion"
+      },
+      {
+        "StepID": "step1_Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man2StandingMotion"
+        },
+        "NextStep": "step2_trigger"
+      },
+
+      {
+        "StepID": "step2_trigger",
+        "ActionType": "Trigger",
+        "TriggerSetting": {
+          "TriggerType": "TimeEnd",
+          "TimeToWaitType": "DefaultTweenMoveTime"
+        },
+        "NextStep": "step3"
+      },
+      {
+        "StepID": "step3",
+        "ActionType": "SetPosition",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "PositionInfo": {
+          "DefinedPointParamName": "Man2PreWalkingPosition",
+          "IsSmoothAnimation": false
+        },
+        "NextStep": "step4_walk"
+      },
+
+      {
+        "StepID": "step4_walk",
+        "ActionType": "ManWalk",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "ManWalkSetupInfo": {
+          "Destination": {
+            "Type": "Param",
+            "ParamName": "PrimaryGroup"
+          },
+          "SetupParam": "WalkingSetup"
+        },
+        "NextStep": "step5_Man2MotionAfterWalk"
+      },
+
+
+      {
+        "StepID": "step5_Man2MotionAfterWalk",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man2StandingMotionAfterWalk",
+          "IsBlend": false
+        },
+        "NextStep": "step5_Man2OffsetAfterWalk"
+      },
+      {
+        "StepID": "step5_Man2OffsetAfterWalk",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "OffsetInfo": {
+          "Param": "Man2OffsetAfterWalk",
+          "IsSmoothAnimation": false
+        },
+        "NextStep": "step6_Man2MotionOffset"
+      },
+
+      {
+        "StepID": "step6_Man2MotionOffset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "OffsetInfo": {
+          "Param": "Man2ReadyMotionOffset"
+        },
+        "NextStep": "step6_Man2Motion"
+      },
+
+      {
+        "StepID": "step6_Man2Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man2ReadyMotion"
+        },
+        "NextStep": "step7_resetik"
+      },
+
+      {
+        "StepID": "step7_resetik",
+        "ActionType": "ResetIK",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "NextStep": "step8_Man1MotionOffset"
+      },
+
+      {
+        "StepID": "step8_Man1MotionOffset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
+        },
+        "OffsetInfo": {
+          "Param": "Man1MotionOffset"
+        },
+        "NextStep": "step8_Man1Motion"
+      },
+
+      {
+        "StepID": "step8_Man1Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man1Motion"
+        },
+        "NextStep": "step9_Maid1MotionOffset"
+      },
+
+      {
+        "StepID": "step9_Maid1MotionOffset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
+        },
+        "OffsetInfo": {
+          "Param": "Maid1MotionOffset"
+        },
+        "NextStep": "step9_Maid1Motion"
+      },
+
+      {
+        "StepID": "step9_Maid1Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Maid1Motion"
+        },
+        "NextStep": "step10_trigger"
+      },
+
+      {
+        "StepID": "step10_trigger",
+        "ActionType": "Trigger",
+        "TriggerSetting": {
+          "TriggerType": "TimeEnd",
+          "TimeToWaitType": "DefaultTweenMoveTime"
+        },
+        "NextStep": "step11_RemoveExtraMan"
+      },
+
+      {
+        "StepID": "step11_RemoveExtraMan",
+        "ActionType": "RemoveExtraMan",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "RemoveExtraManInfo": {
+          "GroupParamName": "PrimaryGroup"
+        },
+        "NextStep": "step12_SetGroupMember"
+      },
+
+      {
+        "StepID": "step12_SetGroupMember",
+        "ActionType": "SetGroupMember",
+        "SetGroupMemberInfo": {
+          "TargetParam": "PrimaryGroup",
+          "Man2": {
+            "Type": "Param",
+            "ParamName": "NextExtraMan_Group"
+          },
+          "NewSexPos": {
+            "ParamValue": "NewSexPosID"
+          },
+          "PlayerState": "Insert"
+        },
+        "NextStep": "step13_MotionUpdate"
+      },
+
+      {
+        "StepID": "step13_MotionUpdate",
+        "ActionType": "LoadMotionLabelGroup",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "LoadMotionLabelGroupInfo": {
+          "Value": {
+            "ParamValue": "NewMotionLabelGroupID"
+          },
+          "IsSmoothAnimationParamName": "IsSmoothAnimation"
+        },
+        "NextStep": ""
+      }
+    ]
+  },
+
+  "Change_SexPos_MF_To_MMF_Add_Man2_NonSmooth": {
+    "FirstStep": "step1",
+    "RequiredParams": [
+      "PrimaryGroup",
+      "NextExtraMan_Group",
+      "NewSexPosID",
+      "Man2StandingMotion",
+      "StandingMotionOffset",
+      "Man2PreWalkingPosition",
+      "WalkingSetup",
+      "Man2ReadyMotion",
+      "NewMotionLabelGroupID",
+      "Man2StandingMotionAfterWalk",
+      "Man2OffsetAfterWalk"
+    ],
+    "Steps": [
+      {
+        "StepID": "step1",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "OffsetInfo": {
+          "Param": "StandingMotionOffset"
+        },
+        "NextStep": "step1_Motion"
+      },
+      {
+        "StepID": "step1_Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man2StandingMotion"
+        },
+        "NextStep": "step2_trigger"
+      },
+
+      {
+        "StepID": "step2_trigger",
+        "ActionType": "Trigger",
+        "TriggerSetting": {
+          "TriggerType": "TimeEnd",
+          "TimeToWaitType": "DefaultTweenMoveTime"
+        },
+        "NextStep": "step3"
+      },
+      {
+        "StepID": "step3",
+        "ActionType": "SetPosition",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "PositionInfo": {
+          "DefinedPointParamName": "Man2PreWalkingPosition",
+          "IsSmoothAnimation": false
+        },
+        "NextStep": "step4_walk"
+      },
+
+      {
+        "StepID": "step4_walk",
+        "ActionType": "ManWalk",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "ManWalkSetupInfo": {
+          "Destination": {
+            "Type": "Param",
+            "ParamName": "PrimaryGroup"
+          },
+          "SetupParam": "WalkingSetup"
+        },
+        "NextStep": "step5_Man2MotionAfterWalk"
+      },
+
+
+      {
+        "StepID": "step5_Man2MotionAfterWalk",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man2StandingMotionAfterWalk",
+          "IsBlend": false
+        },
+        "NextStep": "step5_Man2OffsetAfterWalk"
+      },
+      {
+        "StepID": "step5_Man2OffsetAfterWalk",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "OffsetInfo": {
+          "Param": "Man2OffsetAfterWalk",
+          "IsSmoothAnimation": false
+        },
+        "NextStep": "step6_Man2Motion"
+      },
+
+      {
+        "StepID": "step6_Man2Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man2ReadyMotion"
+        },
+        "NextStep": "step6_trigger"
+      },
+
+      {
+        "StepID": "step6_trigger",
+        "ActionType": "Trigger",
+        "TriggerSetting": {
+          "TriggerType": "TimeEnd",
+          "TimeToWaitType": "DefaultTweenMoveTime"
+        },
+        "NextStep": "step7_RemoveExtraMan"
+      },
+
+      {
+        "StepID": "step7_RemoveExtraMan",
+        "ActionType": "RemoveExtraMan",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "RemoveExtraManInfo": {
+          "GroupParamName": "PrimaryGroup"
+        },
+        "NextStep": "step8_SetGroupMember"
+      },
+
+      {
+        "StepID": "step8_SetGroupMember",
+        "ActionType": "SetGroupMember",
+        "SetGroupMemberInfo": {
+          "TargetParam": "PrimaryGroup",
+          "Man2": {
+            "Type": "Param",
+            "ParamName": "NextExtraMan_Group"
+          },
+          "NewSexPos": {
+            "ParamValue": "NewSexPosID"
+          },
+          "PlayerState": "Insert"
+        },
+        "NextStep": "step9_MotionUpdate"
+      },
+
+      {
+        "StepID": "step9_MotionUpdate",
+        "ActionType": "LoadMotionLabelGroup",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "LoadMotionLabelGroupInfo": {
+          "Value": {
+            "ParamValue": "NewMotionLabelGroupID"
+          },
+          "IsSmoothAnimation": false
+        },
+        "NextStep": ""
+      }
+
+    ]
+  },
+
+  "Change_SexPos_MF_To_MMF_Add_Man1": {
+    "FirstStep": "step1",
+    "RequiredParams": [
+      "PrimaryGroup",
+      "NextExtraMan_Group",
+      "NewSexPosID",
+      "Man1StandingMotion",
+      "StandingMotionOffset",
+      "Man1PreWalkingPosition",
+      "WalkingSetup",
+      "Man1ReadyMotion",
+      "Man1ReadyMotionOffset",
+      "NewMotionLabelGroupID",
+      "Man1StandingMotionAfterWalk",
+      "Man1OffsetAfterWalk",
+
+      "Man2Motion",
+      "Maid1Motion",
+      "Man2MotionOffset",
+      "Maid1MotionOffset"
+    ],
+    "Steps": [
+      {
+        "StepID": "step1",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "OffsetInfo": {
+          "Param": "StandingMotionOffset"
+        },
+        "NextStep": "step1_Motion"
+      },
+      {
+        "StepID": "step1_Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man1StandingMotion"
+        },
+        "NextStep": "step2_trigger"
+      },
+
+      {
+        "StepID": "step2_trigger",
+        "ActionType": "Trigger",
+        "TriggerSetting": {
+          "TriggerType": "TimeEnd",
+          "TimeToWaitType": "DefaultTweenMoveTime"
+        },
+        "NextStep": "step3"
+      },
+      {
+        "StepID": "step3",
+        "ActionType": "SetPosition",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "PositionInfo": {
+          "DefinedPointParamName": "Man1PreWalkingPosition",
+          "IsSmoothAnimation": false
+        },
+        "NextStep": "step4_walk"
+      },
+
+      {
+        "StepID": "step4_walk",
+        "ActionType": "ManWalk",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "ManWalkSetupInfo": {
+          "Destination": {
+            "Type": "Param",
+            "ParamName": "PrimaryGroup"
+          },
+          "SetupParam": "WalkingSetup"
+        },
+        "NextStep": "step5_Man1MotionAfterWalk"
+      },
+
+
+      {
+        "StepID": "step5_Man1MotionAfterWalk",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man1StandingMotionAfterWalk",
+          "IsBlend": false
+        },
+        "NextStep": "step5_Man1OffsetAfterWalk"
+      },
+      {
+        "StepID": "step5_Man1OffsetAfterWalk",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "OffsetInfo": {
+          "Param": "Man1OffsetAfterWalk",
+          "IsSmoothAnimation": false
+        },
+        "NextStep": "step6_Man1MotionOffset"
+      },
+
+      {
+        "StepID": "step6_Man1MotionOffset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "OffsetInfo": {
+          "Param": "Man1ReadyMotionOffset"
+        },
+        "NextStep": "step6_Man1Motion"
+      },
+
+      {
+        "StepID": "step6_Man1Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man1ReadyMotion"
+        },
+        "NextStep": "step7_resetik"
+      },
+
+      {
+        "StepID": "step7_resetik",
+        "ActionType": "ResetIK",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "NextStep": "step8_Man2MotionOffset"
+      },
+
+      {
+        "StepID": "step8_Man2MotionOffset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
+        },
+        "OffsetInfo": {
+          "Param": "Man2MotionOffset"
+        },
+        "NextStep": "step8_Man2Motion"
+      },
+
+      {
+        "StepID": "step8_Man2Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man2Motion"
+        },
+        "NextStep": "step9_Maid1MotionOffset"
+      },
+
+      {
+        "StepID": "step9_Maid1MotionOffset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
+        },
+        "OffsetInfo": {
+          "Param": "Maid1MotionOffset"
+        },
+        "NextStep": "step9_Maid1Motion"
+      },
+
+      {
+        "StepID": "step9_Maid1Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Maid1Motion"
+        },
+        "NextStep": "step10_trigger"
+      },
+
+
+      {
+        "StepID": "step10_trigger",
+        "ActionType": "Trigger",
+        "TriggerSetting": {
+          "TriggerType": "TimeEnd",
+          "TimeToWaitType": "DefaultTweenMoveTime"
+        },
+        "NextStep": "step11_RemoveExtraMan"
+      },
+
+      {
+        "StepID": "step11_RemoveExtraMan",
+        "ActionType": "RemoveExtraMan",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "RemoveExtraManInfo": {
+          "GroupParamName": "PrimaryGroup"
+        },
+        "NextStep": "step12_SetGroupMember"
+      },
+
+      {
+        "StepID": "step12_SetGroupMember",
+        "ActionType": "SetGroupMember",
+        "SetGroupMemberInfo": {
+          "TargetParam": "PrimaryGroup",
+          "Man2": {
+            "Type": "Param",
+            "ParamName": "PrimaryGroup",
+            "ParamGroupMember": "Man1"
+          }
+        },
+        "NextStep": "step12_SetGroupMember_Part2"
+      },
+
+      {
+        "StepID": "step12_SetGroupMember_Part2",
+        "ActionType": "SetGroupMember",
+        "SetGroupMemberInfo": {
+          "TargetParam": "PrimaryGroup",
+          "Man1": {
+            "Type": "Param",
+            "ParamName": "NextExtraMan_Group"
+          },
+          "NewSexPos": {
+            "ParamValue": "NewSexPosID"
+          },
+          "PlayerState": "Insert"
+        },
+        "NextStep": "step13_MotionUpdate"
+      },
+
+      {
+        "StepID": "step13_MotionUpdate",
+        "ActionType": "LoadMotionLabelGroup",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "LoadMotionLabelGroupInfo": {
+          "Value": {
+            "ParamValue": "NewMotionLabelGroupID"
+          },
+          "IsSmoothAnimationParamName": "IsSmoothAnimation"
+        },
+        "NextStep": ""
+      }
+    ]
+  },
+
+  "Change_SexPos_MMF_To_MF_Remove_Man2": {
+    "FirstStep": "step1",
+    "RequiredParams": [
+      "PrimaryGroup",
+      "NewSexPosID",
+      "Man2StandingMotion",
+      "StandingMotionOffset"
+    ],
+    "Steps": [
+      {
+        "StepID": "step1",
+        "ActionType": "ResetMotionToWaiting",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "NextStep": "step1_resetik"
+      },
+      {
+        "StepID": "step1_resetik",
+        "ActionType": "ResetIK",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "NextStep": "step2_Man2Offset",
+        "Remarks": "Make the Man1 stand up and disconnect the IK of Maid1"
+      },
+      {
+        "StepID": "step2_Man2Offset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man2"
+        },
+        "OffsetInfo": {
+          "Param": "StandingMotionOffset"
+        },
+        "NextStep": "step2_Motion"
+      },
+      {
+        "StepID": "step2_Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man2"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man2StandingMotion"
+        },
+        "NextStep": "step2_trigger"
+      },
+      {
+        "StepID": "step2_trigger",
+        "ActionType": "Trigger",
+        "TriggerSetting": {
+          "TriggerType": "TimeEnd",
+          "TimeToWaitType": "DefaultTweenMoveTime"
+        },
+        "NextStep": "step3_MoveMan2ToExtraMan"
+      },
+
+      {
+        "StepID": "step3_MoveMan2ToExtraMan",
+        "ActionType": "SetMaidToExtraMan",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man2"
+        },
+        "SetExtraManInfo": {
+          "Type": "Group",
+          "GroupParamName": "PrimaryGroup",
+          "IsSmoothPositionChange": false,
+          "IsSmoothAnimationChange": true
+        },
+        "NextStep": "step4_SetGroupMember"
+      },
+
+      {
+        "StepID": "step4_SetGroupMember",
+        "ActionType": "SetGroupMember",
+        "SetGroupMemberInfo": {
+          "TargetParam": "PrimaryGroup",
+          "Man2": {
+            "Type": "Null"
+          },
+          "NewSexPos": {
+            "ParamValue": "NewSexPosID"
+          }
+        },
+        "NextStep": ""
+      }
+    ]
+  },
+
+
+  "Change_SexPos_MMF_To_MF_RemoveMan2_WithMotionLabel": {
+    "FirstStep": "step1",
+    "RequiredParams": [
+      "PrimaryGroup",
+      "NewSexPosID",
+      "Man2StandingMotion",
+      "StandingMotionOffset",
+      "NewMotionLabelGroupID"
+    ],
+    "Steps": [
+      {
+        "StepID": "step1",
+        "ActionType": "ResetMotionToWaiting",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "NextStep": "step1_resetik"
+      },
+      {
+        "StepID": "step1_resetik",
+        "ActionType": "ResetIK",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "NextStep": "step2_Man2Offset",
+        "Remarks": "Make the Man1 stand up and disconnect the IK of Maid1"
+      },
+      {
+        "StepID": "step2_Man2Offset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man2"
+        },
+        "OffsetInfo": {
+          "Param": "StandingMotionOffset"
+        },
+        "NextStep": "step2_Motion"
+      },
+      {
+        "StepID": "step2_Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man2"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man2StandingMotion"
+        },
+        "NextStep": "step2_trigger"
+      },
+      {
+        "StepID": "step2_trigger",
+        "ActionType": "Trigger",
+        "TriggerSetting": {
+          "TriggerType": "TimeEnd",
+          "TimeToWaitType": "DefaultTweenMoveTime"
+        },
+        "NextStep": "step3_MoveMan2ToExtraMan"
+      },
+
+      {
+        "StepID": "step3_MoveMan2ToExtraMan",
+        "ActionType": "SetMaidToExtraMan",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man2"
+        },
+        "SetExtraManInfo": {
+          "Type": "Group",
+          "GroupParamName": "PrimaryGroup",
+          "IsSmoothPositionChange": false,
+          "IsSmoothAnimationChange": true
+        },
+        "NextStep": "step4_SetGroupMember"
+      },
+      {
+        "StepID": "step4_SetGroupMember",
+        "ActionType": "SetGroupMember",
+        "SetGroupMemberInfo": {
+          "TargetParam": "PrimaryGroup",
+          "Man2": {
+            "Type": "Null"
+          },
+          "NewSexPos": {
+            "ParamValue": "NewSexPosID"
+          },
+          "PlayerState": "Insert"
+        },
+        "NextStep": "step5_MotionUpdate"
+      },
+
+      {
+        "StepID": "step5_MotionUpdate",
+        "ActionType": "LoadMotionLabelGroup",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "LoadMotionLabelGroupInfo": {
+          "Value": {
+            "ParamValue": "NewMotionLabelGroupID"
+          },
+          "IsSmoothAnimationParamName": "IsSmoothAnimation"
+        },
+        "NextStep": ""
+      }
+
+    ]
+  },
+
+  "Change_SexPos_MMF_To_MF_RemoveMan1_WithMotionLabel": {
+    "FirstStep": "step1",
+    "RequiredParams": [
+      "PrimaryGroup",
+      "NewSexPosID",
+      "NewMotionLabelGroupID",
+      "Man1Motion",
+      "Man2Motion",
+      "Maid1Motion",
+      "Man1MotionOffset",
+      "Man2MotionOffset",
+      "Maid1MotionOffset"
+    ],
+    "Steps": [
+      {
+        "StepID": "step1",
+        "ActionType": "ResetMotionToWaiting",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "NextStep": "step1_resetik"
+      },
+      {
+        "StepID": "step1_resetik",
+        "ActionType": "ResetIK",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "NextStep": "step2_Man1Offset"
+      },
+      {
+        "StepID": "step2_Man1Offset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
+        },
+        "OffsetInfo": {
+          "Param": "Man1MotionOffset"
+        },
+        "NextStep": "step2_Man1Motion"
+      },
+      {
+        "StepID": "step2_Man1Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man1Motion"
+        },
+        "NextStep": "step3_Man2Offset"
+      },
+
+      {
+        "StepID": "step3_Man2Offset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man2"
+        },
+        "OffsetInfo": {
+          "Param": "Man2MotionOffset"
+        },
+        "NextStep": "step3_Man2Motion"
+      },
+      {
+        "StepID": "step3_Man2Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man2"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man2Motion"
+        },
+        "NextStep": "step4_Maid1Offset"
+      },
+
+      {
+        "StepID": "step4_Maid1Offset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
+        },
+        "OffsetInfo": {
+          "Param": "Maid1MotionOffset"
+        },
+        "NextStep": "step4_Maid1Motion"
+      },
+      {
+        "StepID": "step4_Maid1Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Maid1Motion"
+        },
+        "NextStep": "step5_trigger"
+      },
+
+      {
+        "StepID": "step5_trigger",
+        "ActionType": "Trigger",
+        "TriggerSetting": {
+          "TriggerType": "TimeEnd",
+          "TimeToWaitType": "DefaultTweenMoveTime"
+        },
+        "NextStep": "step6_MoveMan1ToExtraMan"
+      },
+
+      {
+        "StepID": "step6_MoveMan1ToExtraMan",
+        "ActionType": "SetMaidToExtraMan",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
+        },
+        "SetExtraManInfo": {
+          "Type": "Group",
+          "GroupParamName": "PrimaryGroup",
+          "IsSmoothPositionChange": false,
+          "IsSmoothAnimationChange": true
+        },
+        "NextStep": "step7_SetGroupMember"
+      },
+
+      {
+        "StepID": "step7_SetGroupMember",
+        "ActionType": "SetGroupMember",
+        "SetGroupMemberInfo": {
+          "TargetParam": "PrimaryGroup",
+          "Man1": {
+            "Type": "Param",
+            "ParamName": "PrimaryGroup",
+            "ParamGroupMember": "Man2"
+          },
+          "Man2": {
+            "Type": "Null"
+          },
+          "NewSexPos": {
+            "ParamValue": "NewSexPosID"
+          },
+          "PlayerState": "Insert"
+        },
+        "NextStep": "step8_MotionUpdate"
+      },
+
+      {
+        "StepID": "step8_MotionUpdate",
+        "ActionType": "LoadMotionLabelGroup",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "LoadMotionLabelGroupInfo": {
+          "Value": {
+            "ParamValue": "NewMotionLabelGroupID"
+          },
+          "IsSmoothAnimationParamName": "IsSmoothAnimation"
+        },
+        "NextStep": ""
+      }
+    ]
+  },
+
+
+  "Common_Change_SexPos_SwapMan_With_Insert_Label": {
+    "FirstStep": "step1",
+    "RequiredParams": [
+      "PrimaryGroup",
+      "NextExtraMan_Group",
+      "NewSexPosID",
+      "Man2StandingMotion",
+      "StandingMotionOffset",
+      "Man2PreWalkingPosition",
+      "WalkingSetup",
+      "Man2ReadyMotion",
+      "NewMotionLabelGroupID",
+      "Man2StandingMotionAfterWalk",
+      "Man2OffsetAfterWalk",
+      "Man1ExitingMotion",
+      "Man1ExitingOffset",
+      "Maid1ReadyMotion",
+      "Maid1ReadyOffset"
+    ],
+    "Steps": [
+      {
+        "StepID": "step1",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "OffsetInfo": {
+          "Param": "StandingMotionOffset"
+        },
+        "NextStep": "step1_Motion"
+      },
+      {
+        "StepID": "step1_Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man2StandingMotion"
+        },
+        "NextStep": "step2_trigger"
+      },
+
+      {
+        "StepID": "step2_trigger",
+        "ActionType": "Trigger",
+        "TriggerSetting": {
+          "TriggerType": "TimeEnd",
+          "TimeToWaitType": "DefaultTweenMoveTime"
+        },
+        "NextStep": "step3"
+      },
+      {
+        "StepID": "step3",
+        "ActionType": "SetPosition",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "PositionInfo": {
+          "DefinedPointParamName": "Man2PreWalkingPosition",
+          "IsSmoothAnimation": false
+        },
+        "NextStep": "step4_walk"
+      },
+
+      {
+        "StepID": "step4_walk",
+        "ActionType": "ManWalk",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "ManWalkSetupInfo": {
+          "Destination": {
+            "Type": "Param",
+            "ParamName": "PrimaryGroup"
+          },
+          "SetupParam": "WalkingSetup"
+        },
+        "NextStep": "step5_Man2MotionAfterWalk"
+      },
+
+
+      {
+        "StepID": "step5_Man2MotionAfterWalk",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man2StandingMotionAfterWalk",
+          "IsBlend": false
+        },
+        "NextStep": "step5_Man2OffsetAfterWalk"
+      },
+      {
+        "StepID": "step5_Man2OffsetAfterWalk",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "OffsetInfo": {
+          "Param": "Man2OffsetAfterWalk",
+          "IsSmoothAnimation": false
+        },
+        "NextStep": "step6_Man2Motion"
+      },
+
+      {
+        "StepID": "step6_Man2Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man2ReadyMotion"
+        },
+        "NextStep": "step6_resetik"
+      },
+
+      {
+        "StepID": "step6_resetik",
+        "ActionType": "ResetIK",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "NextStep": "step6_Man1Motion"
+      },
+
+      {
+        "StepID": "step6_Man1Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man1ExitingMotion"
+        },
+        "NextStep": "step6_Man1Offset"
+      },
+      {
+        "StepID": "step6_Man1Offset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
+        },
+        "OffsetInfo": {
+          "Param": "Man1ExitingOffset"
+        },
+        "NextStep": "step6_Maid1Motion"
+      },
+
+      {
+        "StepID": "step6_Maid1Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Maid1ReadyMotion"
+        },
+        "NextStep": "step6_Maid1Offset"
+      },
+      {
+        "StepID": "step6_Maid1Offset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
+        },
+        "OffsetInfo": {
+          "Param": "Maid1ReadyOffset"
+        },
+        "NextStep": "step6_trigger"
+      },
+
+      {
+        "StepID": "step6_trigger",
+        "ActionType": "Trigger",
+        "TriggerSetting": {
+          "TriggerType": "TimeEnd",
+          "TimeToWaitType": "DefaultTweenMoveTime"
+        },
+        "NextStep": "step7_RemoveExtraMan"
+      },
+
+      {
+        "StepID": "step7_RemoveExtraMan",
+        "ActionType": "RemoveExtraMan",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "RemoveExtraManInfo": {
+          "GroupParamName": "PrimaryGroup"
+        },
+        "NextStep": "step8_SetExtraMan"
+      },
+
+      {
+        "StepID": "step8_SetExtraMan",
+        "ActionType": "SetMaidToExtraMan",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
+        },
+        "SetExtraManInfo": {
+          "Type": "Group",
+          "GroupParamName": "PrimaryGroup",
+          "IsSmoothPositionChange": false,
+          "IsSmoothAnimationChange": true
+        },
+        "NextStep": "step9_SetGroupMember"
+      },
+
+      {
+        "StepID": "step9_SetGroupMember",
+        "ActionType": "SetGroupMember",
+        "SetGroupMemberInfo": {
+          "TargetParam": "PrimaryGroup",
+          "Man1": {
+            "Type": "Param",
+            "ParamName": "NextExtraMan_Group"
+          },
+          "NewSexPos": {
+            "ParamValue": "NewSexPosID"
+          },
+          "PlayerState": "Insert"
+        },
+        "NextStep": "step10_MotionUpdate"
+      },
+
+      {
+        "StepID": "step10_MotionUpdate",
+        "ActionType": "LoadMotionLabelGroup",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "LoadMotionLabelGroupInfo": {
+          "Value": {
+            "ParamValue": "NewMotionLabelGroupID"
+          },
+          "IsSmoothAnimationParamName": "IsSmoothAnimation"
+        },
+        "NextStep": ""
+      }
+    ]
+  },
+
+  "Common_Change_3PSexPos_With_Man_Swap": {
+    "FirstStep": "step1",
+    "RequiredParams": [
+      "PrimaryGroup",
+      "NewSexPosID",
+      "NewMotionLabelGroupID"
+    ],
+    "Steps": [
+      {
+        "StepID": "step1",
+        "ActionType": "ResetIK",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "NextStep": "step2_swap"
+      },
+      {
+        "StepID": "step2_swap",
+        "ActionType": "SwapGroupMember",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "SwapGroupMemberInfo": {
+          "Target1": {
+            "Type": "Param",
+            "ParamName": "PrimaryGroup",
+            "ParamGroupMember": "Man1"
+          },
+          "Target2": {
+            "Type": "Param",
+            "ParamName": "PrimaryGroup",
+            "ParamGroupMember": "Man2"
+          }
+        },
+        "NextStep": "step3_UpdateSexPos"
+      },
+      {
+        "StepID": "step3_UpdateSexPos",
+        "ActionType": "UpdateSexPos",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "UpdateSexPosInfo": {
+          "Value": {
+            "ParamValue": "NewSexPosID"
+          },
+          "PlayerState": "Insert"
+        },
+        "NextStep": "step4_MotionUpdate"
+      },
+      {
+        "StepID": "step4_MotionUpdate",
+        "ActionType": "LoadMotionLabelGroup",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "LoadMotionLabelGroupInfo": {
+          "Value": {
+            "ParamValue": "NewMotionLabelGroupID"
+          },
+          "IsSmoothAnimationParamName": "IsSmoothAnimation"
+        },
+        "NextStep": ""
+      }
+    ]
+  }
 }

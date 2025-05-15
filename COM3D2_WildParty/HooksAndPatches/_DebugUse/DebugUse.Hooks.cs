@@ -161,5 +161,15 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                 WildParty.Log.LogInfo(kvp.Key);
             }
         }
+
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(YotogiCommandFactory), nameof(YotogiCommandFactory.AddCommand))]
+        private static void YotogiCommandFactoryAddCommandPost(YotogiCommandFactory __instance, Yotogis.Skill.Data.Command.Data command_data)
+        {
+            //WildParty.Log.LogInfo("==========");
+            //DebugHelper.Debug.PrintDetail(command_data.basic);
+            //WildParty.Log.LogInfo("==========");
+        }
     }
 }

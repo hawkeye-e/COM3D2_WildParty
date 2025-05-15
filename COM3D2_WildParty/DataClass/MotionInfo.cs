@@ -28,5 +28,16 @@ namespace COM3D2.WildParty.Plugin
             IsBlend = isBlend;
             IsQueued = isQueued;
         }
+
+        public MotionInfo(MotionInfo clone)
+        {
+            ScriptFile = clone.ScriptFile;
+            ScriptLabel = clone.ScriptLabel;
+            MotionFile = clone.MotionFile;
+            MotionTag = clone.MotionTag;
+            IsLoopMotion = clone.IsLoopMotion;
+            IsBlend = clone.IsBlend;
+            IsQueued = clone.IsQueued;
+        }
     }
 }
