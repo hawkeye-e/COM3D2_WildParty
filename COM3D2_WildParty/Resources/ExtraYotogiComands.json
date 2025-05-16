@@ -266,7 +266,7 @@
 
   "ChangeMan_Amayakasi_Tekoki": {
     "CommandCode": "ChainedAction",
-    "Name": "次の男と交代する",
+    "Name": "次の男の子と交代する",
     "Type": "Common",
     "Constraint": [
       {
@@ -274,12 +274,87 @@
         "SexPosIDs": [ 1 ]
       }
     ],
-    "ChainedActionCode": "Amayakasi_Tekoki_ChangeMan"
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man1ExitingMotionOffset",
+        "Value": "0, -0.1, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Man1ExitingMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": "wp_mod_motion_female_long_sitting.anm"
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, -0.5, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "NewManPreWalkingPosition",
+        "Value": "NextManStartPoint"
+      },
+      {
+        "Name": "WalkingSetup",
+        "Value": "Man2_Join_3PSexSeijouyi"
+      },
+
+      {
+        "Name": "NewManOffsetAfterWalk",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionAfterWalk",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "0, 0.1, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "amayakasi_tekoki_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": "amayakasi_tekoki_taiki_f.anm"
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MF_Detail"
   },
 
   "ChangeMan_Amayakasi_Taimen": {
     "CommandCode": "ChainedAction",
-    "Name": "次の男と交代する",
+    "Name": "次の男の子と交代する",
     "Type": "Common",
     "Constraint": [
       {
@@ -287,12 +362,87 @@
         "SexPosIDs": [ 2, 3 ]
       }
     ],
-    "ChainedActionCode": "Amayakasi_Taimen_ChangeMan"
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Man1ExitingMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": "wp_mod_motion_female_stand.anm"
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, -0.5, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "NewManPreWalkingPosition",
+        "Value": "NextManStartPoint"
+      },
+      {
+        "Name": "WalkingSetup",
+        "Value": "Man2_Join_3PSexSeijouyi"
+      },
+
+      {
+        "Name": "NewManOffsetAfterWalk",
+        "Value": "0, 0, 0.5| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionAfterWalk",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "0, 0, -0.5| 0, 0, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "amayakasi_taimen_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": "amayakasi_taimen_sex_taiki_f.anm"
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MF_Detail"
   },
 
   "ChangeMan_Hasamikomi_Kijyoui": {
     "CommandCode": "ChainedAction",
-    "Name": "次の男と交代する",
+    "Name": "次の男の子と交代する",
     "Type": "Common",
     "Constraint": [
       {
@@ -300,12 +450,88 @@
         "SexPosIDs": [ 4, 5 ]
       }
     ],
-    "ChainedActionCode": "Hasamikomi_Kijyoui_ChangeMan"
+
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man1ExitingMotionOffset",
+        "Value": "0, -0.1, 0.5| 0, 0, 0"
+      },
+      {
+        "Name": "Man1ExitingMotion",
+        "Value": "siriname_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, -0.1, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": "wp_mod_motion_female_stand_inverse.anm"
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, -0.5, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "NewManPreWalkingPosition",
+        "Value": "NextManStartPoint"
+      },
+      {
+        "Name": "WalkingSetup",
+        "Value": "Man2_Join_3PSexSeijouyi"
+      },
+
+      {
+        "Name": "NewManOffsetAfterWalk",
+        "Value": "0, 0, 0.5| 0, 180, 0"
+      },
+      {
+        "Name": "NewManStandingMotionAfterWalk",
+        "Value": "siriname_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "0, 0.1, -0.5| 0, 0, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "hasamikomi_kijyoui2_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0.1, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": "hasamikomi_kijyoui2_taiki_f.anm"
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MF_Detail"
   },
 
   "ChangeMan_Isutaimenzai": {
     "CommandCode": "ChainedAction",
-    "Name": "次の男と交代する",
+    "Name": "次の男の子と交代する",
     "Type": "Common",
     "Constraint": [
       {
@@ -313,8 +539,86 @@
         "SexPosIDs": [ 6, 7 ]
       }
     ],
-    "ChainedActionCode": "Isutaimenzai_ChangeMan"
+
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man1ExitingMotionOffset",
+        "Value": "0.5, -0.1, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Man1ExitingMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, 0, -0.5| 0, 90, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": "wp_mod_motion_female_stand.anm"
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, -0.5, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "NewManPreWalkingPosition",
+        "Value": "NextManStartPointLeft"
+      },
+      {
+        "Name": "WalkingSetup",
+        "Value": "Man2_Join_3PSexSeijouyi"
+      },
+
+      {
+        "Name": "NewManOffsetAfterWalk",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionAfterWalk",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "0, 0, 0| 0, -90, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "isutaimenzai_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0, 0.5| 0, -90, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": "isutaimenzai_taiki_f.anm"
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MF_Detail"
   },
+
+
 
   "Seijyoui_To_DaisukiHold": {
     "CommandCode": "ChainedAction",
@@ -2447,7 +2751,7 @@
       }
     ],
     "TriggerConditions": {
-      "CurrentCommandIDs": [　754 ],
+      "CurrentCommandIDs": [ 754 ],
       "Texts": [ "絶頂すれば…？" ]
     },
     "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
@@ -4913,5 +5217,308 @@
       "Texts": [ "絶頂すれば…？" ]
     },
     "ChainedActionCode": "Common_Change_SexPos_With_Connecting_Motion"
+  },
+
+
+  "ChangeMan_South": {
+    "CommandCode": "ChainedAction",
+    "Name": "次の男の子と交代する",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900004,
+        "SexPosIDs": [ 101, 102, 107, 136 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man1ExitingMotionOffset",
+        "Value": "0, -0.1, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Man1ExitingMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, -0.5, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "NewManPreWalkingPosition",
+        "Value": "NextManStartPoint"
+      },
+      {
+        "Name": "WalkingSetup",
+        "Value": "Man2_Join_3PSexSeijouyi"
+      },
+
+      {
+        "Name": "NewManOffsetAfterWalk",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionAfterWalk",
+        "Value": "turusi_sex_taiki_m.anm"
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MF_Simple"
+  },
+
+  "ChangeMan_South_Inserved_Motion": {
+    "CommandCode": "ChainedAction",
+    "Name": "次の男の子と交代する",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900004,
+        "SexPosIDs": [ 108 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man1ExitingMotionOffset",
+        "Value": "0, -0.1, 0.4| 0, 0, 0"
+      },
+      {
+        "Name": "Man1ExitingMotion",
+        "Value": "siriname_taiki_m.anm"
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, -0.5, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "NewManPreWalkingPosition",
+        "Value": "NextManStartPoint"
+      },
+      {
+        "Name": "WalkingSetup",
+        "Value": "Man2_Join_3PSexSeijouyi"
+      },
+
+      {
+        "Name": "NewManOffsetAfterWalk",
+        "Value": "0, 0, 0| 0, 180, 0"
+      },
+      {
+        "Name": "NewManStandingMotionAfterWalk",
+        "Value": "siriname_taiki_m.anm"
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MF_Simple"
+  },
+
+  "ChangeMan_North": {
+    "CommandCode": "ChainedAction",
+    "Name": "次の男の子と交代する",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900004,
+        "SexPosIDs": [ 133 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Man1ExitingMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, -0.5, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "NewManPreWalkingPosition",
+        "Value": "3PSex2Ana_Man2EntryPoint"
+      },
+      {
+        "Name": "WalkingSetup",
+        "Value": "Man2_Join_3PSexSeijouyi"
+      },
+
+      {
+        "Name": "NewManOffsetAfterWalk",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionAfterWalk",
+        "Value": "turusi_sex_taiki_m.anm"
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MF_Simple"
+  },
+
+  "ChangeMan_North_Inserved_Motion": {
+    "CommandCode": "ChainedAction",
+    "Name": "次の男の子と交代する",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900004,
+        "SexPosIDs": [ 129 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man1ExitingMotionOffset",
+        "Value": "0, -0.3, -0.4| 0, 0, 0"
+      },
+      {
+        "Name": "Man1ExitingMotion",
+        "Value": "siriname_taiki_m.anm"
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, -0.5, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "NewManPreWalkingPosition",
+        "Value": "3PSex2Ana_Man2EntryPoint"
+      },
+      {
+        "Name": "WalkingSetup",
+        "Value": "Man2_Join_3PSexSeijouyi"
+      },
+
+      {
+        "Name": "NewManOffsetAfterWalk",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionAfterWalk",
+        "Value": "siriname_taiki_m.anm"
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MF_Simple"
+  },
+
+  "ChangeMan_East": {
+    "CommandCode": "ChainedAction",
+    "Name": "次の男の子と交代する",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900004,
+        "SexPosIDs": [ 115, 116, 117, 118, 119, 120 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man1ExitingMotionOffset",
+        "Value": "0.2, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Man1ExitingMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, -0.5, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "NewManPreWalkingPosition",
+        "Value": "BlowJob_Man1EntryPoint"
+      },
+      {
+        "Name": "WalkingSetup",
+        "Value": "Man2_Join_3PSexSeijouyi"
+      },
+
+      {
+        "Name": "NewManOffsetAfterWalk",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionAfterWalk",
+        "Value": "turusi_sex_taiki_m.anm"
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MF_Simple"
   }
+
+
 }

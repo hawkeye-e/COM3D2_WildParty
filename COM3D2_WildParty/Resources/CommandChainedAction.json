@@ -1,13 +1,24 @@
 {
-  "Amayakasi_Tekoki_ChangeMan": {
+  "Common_ChangeMan_MF_Simple": {
     "FirstStep": "step1",
+    "RequiredParams": [
+      "PrimaryGroup",
+      "NextExtraMan_Group",
+      "Man1ExitingMotionOffset",
+      "Man1ExitingMotion",
+      "NewManBeforeJoinMotionOffset",
+      "NewManBeforeJoinMotion",
+
+      "NewManPreWalkingPosition",
+      "WalkingSetup"
+    ],
     "Steps": [
       {
         "StepID": "step1",
         "ActionType": "ResetMotionToWaiting",
         "Target": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
         },
         "NextStep": "step1_resetik"
       },
@@ -15,89 +26,61 @@
         "StepID": "step1_resetik",
         "ActionType": "ResetIK",
         "Target": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
         },
-        "NextStep": "step2",
+        "NextStep": "step2_Offset",
         "Remarks": "Make the Man1 stand up and disconnect the IK of Maid1"
       },
+
       {
-        "StepID": "step2",
-        "ActionType": "LoadMotion",
-        "Target": {
-          "Type": "GroupMaid",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
-        },
-        "MotionInfo": {
-          "CustomMotionFile": "wp_mod_motion_female_long_sitting.anm",
-          "MotionTag": "wp_mod_motion_female_long_sitting.anm"
-        },
-        "NextStep": "step3_Offset"
-      },
-      {
-        "StepID": "step3_Offset",
+        "StepID": "step2_Offset",
         "ActionType": "PositionOffset",
         "Target": {
-          "Type": "GroupMan",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
         },
         "OffsetInfo": {
-          "Offset": {
-            "PosString": "0, -0.1, 0"
-          }
+          "Param": "Man1ExitingMotionOffset"
         },
-        "NextStep": "step3"
+        "NextStep": "step3_Motion"
       },
       {
-        "StepID": "step3",
+        "StepID": "step3_Motion",
         "ActionType": "LoadMotion",
         "Target": {
-          "Type": "GroupMan",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
         },
         "MotionInfo": {
-          "MotionFile": "turusi_sex_taiki_m.anm",
-          "MotionTag": "turusi_sex_taiki_m.anm"
+          "ParamMotion": "Man1ExitingMotion"
         },
-        "NextStep": "step4_LocateExtraMan"
+        "NextStep": "step4_NewManBeforeJoinMotionOffset"
       },
+
       {
-        "StepID": "step4_LocateExtraMan",
-        "ActionType": "GetNextExtraMan",
-        "Target": {
-          "TargetGroupPosition": 0
-        },
-        "ExtraManInfo": {
-          "Type": "Group",
-          "GetNextMethod": "Increment"
-        },
-        "NextStep": "step4_Offset"
-      },
-      {
-        "StepID": "step4_Offset",
+        "StepID": "step4_NewManBeforeJoinMotionOffset",
         "ActionType": "PositionOffset",
         "Target": {
-          "Type": "TargetMaid"
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
         },
         "OffsetInfo": {
-          "Offset": {
-            "PosString": "0, -0.5, 0"
-          }
+          "Param": "NewManBeforeJoinMotionOffset"
         },
-        "NextStep": "step4"
+        "NextStep": "step4_NewManBeforeJoinMotion"
       },
       {
-        "StepID": "step4",
+        "StepID": "step4_NewManBeforeJoinMotion",
         "ActionType": "LoadMotion",
         "Target": {
-          "Type": "TargetMaid"
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
         },
         "MotionInfo": {
-          "MotionFile": "turusi_sex_taiki_m.anm",
-          "MotionTag": "turusi_sex_taiki_m.anm"
+          "ParamMotion": "NewManBeforeJoinMotion"
         },
         "NextStep": "step5_trigger"
       },
@@ -108,151 +91,154 @@
           "TriggerType": "TimeEnd",
           "TimeToWaitType": "DefaultTweenMoveTime"
         },
-        "NextStep": "step5"
+        "NextStep": "step6_MoveMan1ToExtraMan"
       },
+
       {
-        "StepID": "step5",
+        "StepID": "step6_MoveMan1ToExtraMan",
         "ActionType": "SetMaidToExtraMan",
         "Target": {
-          "Type": "GroupMan",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
         },
         "SetExtraManInfo": {
           "Type": "Group",
-          "TargetGroupPosition": 0,
+          "GroupParamName": "PrimaryGroup",
           "IsSmoothPositionChange": false,
           "IsSmoothAnimationChange": true
         },
-        "NextStep": "step6"
+        "NextStep": "step7_NewManPreWalkPosition"
       },
+
+
       {
-        "StepID": "step6",
+        "StepID": "step7_NewManPreWalkPosition",
         "ActionType": "SetPosition",
         "Target": {
-          "Type": "TargetMaid"
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
         },
         "PositionInfo": {
-          "DefinedPointName": "NextManStartPoint",
+          "DefinedPointParamName": "NewManPreWalkingPosition",
           "IsSmoothAnimation": false
         },
-        "NextStep": "step7_walk"
+        "NextStep": "step8_walk"
       },
+
       {
-        "StepID": "step7_walk",
+        "StepID": "step8_walk",
         "ActionType": "ManWalk",
         "Target": {
-          "Type": "TargetMaid"
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
         },
         "ManWalkSetupInfo": {
           "Destination": {
-            "Target": "GroupMaid",
-            "TargetGroupPosition": 0,
-            "TargetMaidPosition": 0
+            "Type": "Param",
+            "ParamName": "PrimaryGroup"
           },
-          "StandingAnimationFile": "turusi_sex_taiki_m.anm",
-          "StandingMotionOffsetString": "0, 0, 0.346",
-          "WalkingMotionOffsetString": "0, 0.1, 0",
-          "RotationOffsetString": "0, 180, 0",
-          "MaidMotionOffsetString": "0,0,0"
+          "SetupParam": "WalkingSetup"
         },
-        "NextStep": "step8_ManMotion"
+        "NextStep": "step9_ManMotionAfterWalk"
       },
+
       {
-        "StepID": "step8_ManMotion",
+        "StepID": "step9_ManMotionAfterWalk",
         "ActionType": "LoadMotion",
         "Target": {
-          "Type": "TargetMaid"
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
         },
         "MotionInfo": {
-          "MotionFile": "amayakasi_tekoki_taiki_m.anm",
-          "MotionTag": "amayakasi_tekoki_taiki_m.anm"
+          "ParamMotion": "NewManStandingMotionAfterWalk",
+          "IsBlend": false
         },
-        "NextStep": "step9_MaidMotion"
+        "NextStep": "step9_ManOffsetAfterWalk"
       },
       {
-        "StepID": "step9_MaidMotion",
-        "ActionType": "LoadMotion",
+        "StepID": "step9_ManOffsetAfterWalk",
+        "ActionType": "PositionOffset",
         "Target": {
-          "Type": "GroupMaid",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
         },
-        "MotionInfo": {
-          "MotionFile": "amayakasi_tekoki_taiki_f.anm",
-          "MotionTag": "amayakasi_tekoki_taiki_f.anm"
+        "OffsetInfo": {
+          "Param": "NewManOffsetAfterWalk",
+          "IsSmoothAnimation": false
         },
-        "NextStep": "step10_ManPosition"
+        "NextStep": "step9_RemoveExtraMan"
       },
+
+
       {
-        "StepID": "step10_ManPosition",
-        "ActionType": "SetPosition",
-        "Target": {
-          "Type": "TargetMaid"
-        },
-        "PositionInfo": {
-          "Target": {
-            "Type": "GroupMaid",
-            "TargetGroupPosition": 0,
-            "TargetMaidPosition": 0
-          },
-          "IsSmoothAnimation": true
-        },
-        "NextStep": "step11_TimeEndTrigger"
-      },
-      {
-        "StepID": "step11_TimeEndTrigger",
-        "ActionType": "Trigger",
-        "TriggerSetting": {
-          "TriggerType": "TimeEnd",
-          "TimeToWaitType": "DefaultTweenMoveTime"
-        },
-        "NextStep": "step11_RemoveExtraMan"
-      },
-      {
-        "StepID": "step11_RemoveExtraMan",
+        "StepID": "step9_RemoveExtraMan",
         "ActionType": "RemoveExtraMan",
         "Target": {
-          "Type": "TargetMaid"
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
         },
         "RemoveExtraManInfo": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
+          "GroupParamName": "PrimaryGroup"
         },
-        "NextStep": "step12_SetGroupMember"
+        "NextStep": "step10_SetGroupMember"
       },
+
       {
-        "StepID": "step12_SetGroupMember",
+        "StepID": "step10_SetGroupMember",
         "ActionType": "SetGroupMember",
         "SetGroupMemberInfo": {
-          "TargetGroupPosition": 0,
+          "TargetParam": "PrimaryGroup",
           "Man1": {
-            "Type": "TargetMaid"
+            "Type": "Param",
+            "ParamName": "NextExtraMan_Group"
           }
         },
-        "NextStep": "step13_ResetMotion"
+        "NextStep": "step11_ResetMotion"
       },
+
       {
-        "StepID": "step13_ResetMotion",
+        "StepID": "step11_ResetMotion",
         "ActionType": "ResetMotionToWaiting",
         "Target": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
-        }
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "NextStep": ""
       }
     ]
   },
 
 
-  "Amayakasi_Taimen_ChangeMan": {
+  "Common_ChangeMan_MF_Detail": {
     "FirstStep": "step1",
+    "RequiredParams": [
+      "PrimaryGroup",
+      "NextExtraMan_Group",
+      "Man1ExitingMotionOffset",
+      "Man1ExitingMotion",
+      "Maid1ExitingMotionOffset",
+      "Maid1ExitingMotion",
+      "NewManBeforeJoinMotionOffset",
+      "NewManBeforeJoinMotion",
+
+      "NewManPreWalkingPosition",
+      "WalkingSetup",
+      "NewManStandingMotionAfterWalk",
+      "NewManOffsetAfterWalk",
+
+      "NewManReadyMotion",
+      "NewManReadyMotionOffset",
+      "Maid1ReadyMotion",
+      "Maid1ReadyMotionOffset"
+    ],
     "Steps": [
       {
         "StepID": "step1",
         "ActionType": "ResetMotionToWaiting",
         "Target": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
         },
         "NextStep": "step1_resetik"
       },
@@ -260,38 +246,49 @@
         "StepID": "step1_resetik",
         "ActionType": "ResetIK",
         "Target": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
         },
-        "NextStep": "step2",
+        "NextStep": "step2_Offset",
         "Remarks": "Make the Man1 stand up and disconnect the IK of Maid1"
       },
       {
-        "StepID": "step2",
+        "StepID": "step2_Offset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
+        },
+        "OffsetInfo": {
+          "Param": "Maid1ExitingMotionOffset"
+        },
+        "NextStep": "step2_Motion"
+      },
+      {
+        "StepID": "step2_Motion",
         "ActionType": "LoadMotion",
         "Target": {
-          "Type": "GroupMaid",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
         },
         "MotionInfo": {
-          "CustomMotionFile": "wp_mod_motion_female_stand.anm",
-          "MotionTag": "wp_mod_motion_female_stand.anm"
+          "ParamMotion": "Maid1ExitingMotion"
         },
         "NextStep": "step3_Offset"
       },
+
       {
         "StepID": "step3_Offset",
         "ActionType": "PositionOffset",
         "Target": {
-          "Type": "GroupMan",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
         },
         "OffsetInfo": {
-          "Offset": {
-            "PosString": "0, -0.1, 0"
-          }
+          "Param": "Man1ExitingMotionOffset"
         },
         "NextStep": "step3"
       },
@@ -299,50 +296,37 @@
         "StepID": "step3",
         "ActionType": "LoadMotion",
         "Target": {
-          "Type": "GroupMan",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
         },
         "MotionInfo": {
-          "MotionFile": "turusi_sex_taiki_m.anm",
-          "MotionTag": "turusi_sex_taiki_m.anm"
+          "ParamMotion": "Man1ExitingMotion"
         },
-        "NextStep": "step4_LocateExtraMan"
+        "NextStep": "step4_NewManBeforeJoinMotionOffset"
       },
+
       {
-        "StepID": "step4_LocateExtraMan",
-        "ActionType": "GetNextExtraMan",
-        "Target": {
-          "TargetGroupPosition": 0
-        },
-        "ExtraManInfo": {
-          "Type": "Group",
-          "GetNextMethod": "Increment"
-        },
-        "NextStep": "step4_Offset"
-      },
-      {
-        "StepID": "step4_Offset",
+        "StepID": "step4_NewManBeforeJoinMotionOffset",
         "ActionType": "PositionOffset",
         "Target": {
-          "Type": "TargetMaid"
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
         },
         "OffsetInfo": {
-          "Offset": {
-            "PosString": "0, -0.5, 0"
-          }
+          "Param": "NewManBeforeJoinMotionOffset"
         },
-        "NextStep": "step4"
+        "NextStep": "step4_NewManBeforeJoinMotion"
       },
       {
-        "StepID": "step4",
+        "StepID": "step4_NewManBeforeJoinMotion",
         "ActionType": "LoadMotion",
         "Target": {
-          "Type": "TargetMaid"
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
         },
         "MotionInfo": {
-          "MotionFile": "turusi_sex_taiki_m.anm",
-          "MotionTag": "turusi_sex_taiki_m.anm"
+          "ParamMotion": "NewManBeforeJoinMotion"
         },
         "NextStep": "step5_trigger"
       },
@@ -353,657 +337,183 @@
           "TriggerType": "TimeEnd",
           "TimeToWaitType": "DefaultTweenMoveTime"
         },
-        "NextStep": "step5"
+        "NextStep": "step6_MoveMan1ToExtraMan"
       },
+
       {
-        "StepID": "step5",
+        "StepID": "step6_MoveMan1ToExtraMan",
         "ActionType": "SetMaidToExtraMan",
         "Target": {
-          "Type": "GroupMan",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
         },
         "SetExtraManInfo": {
           "Type": "Group",
-          "TargetGroupPosition": 0,
+          "GroupParamName": "PrimaryGroup",
           "IsSmoothPositionChange": false,
           "IsSmoothAnimationChange": true
         },
-        "NextStep": "step6"
+        "NextStep": "step7_NewManPreWalkPosition"
       },
+
+
       {
-        "StepID": "step6",
+        "StepID": "step7_NewManPreWalkPosition",
         "ActionType": "SetPosition",
         "Target": {
-          "Type": "TargetMaid"
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
         },
         "PositionInfo": {
-          "DefinedPointName": "NextManStartPoint",
+          "DefinedPointParamName": "NewManPreWalkingPosition",
           "IsSmoothAnimation": false
         },
-        "NextStep": "step7_walk"
+        "NextStep": "step8_walk"
       },
+
       {
-        "StepID": "step7_walk",
+        "StepID": "step8_walk",
         "ActionType": "ManWalk",
         "Target": {
-          "Type": "TargetMaid"
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
         },
         "ManWalkSetupInfo": {
           "Destination": {
-            "Target": "GroupMaid",
-            "TargetGroupPosition": 0,
-            "TargetMaidPosition": 0
+            "Type": "Param",
+            "ParamName": "PrimaryGroup"
           },
-          "StandingAnimationFile": "turusi_sex_taiki_m.anm",
-          "StandingMotionOffsetString": "0, 0, 0.346",
-          "WalkingMotionOffsetString": "0, 0.1, 0",
-          "RotationOffsetString": "0, 180, 0",
-          "MaidMotionOffsetString": "0,0,0"
+          "SetupParam": "WalkingSetup"
         },
-        "NextStep": "step8_ManMotion"
+        "NextStep": "step9_ManMotionAfterWalk"
       },
-      {
-        "StepID": "step8_ManMotion",
-        "ActionType": "LoadMotion",
-        "Target": {
-          "Type": "TargetMaid"
-        },
-        "MotionInfo": {
-          "MotionFile": "amayakasi_taimen_sex_taiki_m.anm",
-          "MotionTag": "amayakasi_taimen_sex_taiki_m.anm"
-        },
-        "NextStep": "step9_MaidMotion"
-      },
-      {
-        "StepID": "step9_MaidMotion",
-        "ActionType": "LoadMotion",
-        "Target": {
-          "Type": "GroupMaid",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
-        },
-        "MotionInfo": {
-          "MotionFile": "amayakasi_taimen_sex_taiki_f.anm",
-          "MotionTag": "amayakasi_taimen_sex_taiki_f.anm"
-        },
-        "NextStep": "step10_ManPosition"
-      },
-      {
-        "StepID": "step10_ManPosition",
-        "ActionType": "SetPosition",
-        "Target": {
-          "Type": "TargetMaid"
-        },
-        "PositionInfo": {
-          "Target": {
-            "Type": "GroupMaid",
-            "TargetGroupPosition": 0,
-            "TargetMaidPosition": 0
-          },
-          "IsSmoothAnimation": true
-        },
-        "NextStep": "step11_TimeEndTrigger"
-      },
-      {
-        "StepID": "step11_TimeEndTrigger",
-        "ActionType": "Trigger",
-        "TriggerSetting": {
-          "TriggerType": "TimeEnd",
-          "TimeToWaitType": "DefaultTweenMoveTime"
-        },
-        "NextStep": "step11_RemoveExtraMan"
-      },
-      {
-        "StepID": "step11_RemoveExtraMan",
-        "ActionType": "RemoveExtraMan",
-        "Target": {
-          "Type": "TargetMaid"
-        },
-        "RemoveExtraManInfo": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
-        },
-        "NextStep": "step12_SetGroupMember"
-      },
-      {
-        "StepID": "step12_SetGroupMember",
-        "ActionType": "SetGroupMember",
-        "SetGroupMemberInfo": {
-          "TargetGroupPosition": 0,
-          "Man1": {
-            "Type": "TargetMaid"
-          }
-        },
-        "NextStep": "step13_ResetMotion"
-      },
-      {
-        "StepID": "step13_ResetMotion",
-        "ActionType": "ResetMotionToWaiting",
-        "Target": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
-        }
-      }
-    ]
-  },
 
-
-  "Hasamikomi_Kijyoui_ChangeMan": {
-    "FirstStep": "step1",
-    "Steps": [
       {
-        "StepID": "step1",
-        "ActionType": "ResetMotionToWaiting",
-        "Target": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
-        },
-        "NextStep": "step1_resetik"
-      },
-      {
-        "StepID": "step1_resetik",
-        "ActionType": "ResetIK",
-        "Target": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
-        },
-        "NextStep": "step2",
-        "Remarks": "Make the Man1 stand up and disconnect the IK of Maid1"
-      },
-      {
-        "StepID": "step2",
+        "StepID": "step9_ManMotionAfterWalk",
         "ActionType": "LoadMotion",
         "Target": {
-          "Type": "GroupMaid",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
         },
         "MotionInfo": {
-          "CustomMotionFile": "wp_mod_motion_female_stand_inverse.anm",
-          "MotionTag": "wp_mod_motion_female_stand_inverse.anm"
+          "ParamMotion": "NewManStandingMotionAfterWalk",
+          "IsBlend": false
         },
-        "NextStep": "step3_Offset"
+        "NextStep": "step9_ManOffsetAfterWalk"
       },
       {
-        "StepID": "step3_Offset",
+        "StepID": "step9_ManOffsetAfterWalk",
         "ActionType": "PositionOffset",
         "Target": {
-          "Type": "GroupMan",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
         },
         "OffsetInfo": {
-          "Offset": {
-            "PosString": "0, -0.1, 0.5"
-          }
-        },
-        "NextStep": "step3"
-      },
-      {
-        "StepID": "step3",
-        "ActionType": "LoadMotion",
-        "Target": {
-          "Type": "GroupMan",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
-        },
-        "MotionInfo": {
-          "MotionFile": "siriname_taiki_m.anm",
-          "MotionTag": "siriname_taiki_m.anm"
-        },
-        "NextStep": "step4_LocateExtraMan"
-      },
-      {
-        "StepID": "step4_LocateExtraMan",
-        "ActionType": "GetNextExtraMan",
-        "Target": {
-          "TargetGroupPosition": 0
-        },
-        "ExtraManInfo": {
-          "Type": "Group",
-          "GetNextMethod": "Increment"
-        },
-        "NextStep": "step4_Offset"
-      },
-      {
-        "StepID": "step4_Offset",
-        "ActionType": "PositionOffset",
-        "Target": {
-          "Type": "TargetMaid"
-        },
-        "OffsetInfo": {
-          "Offset": {
-            "PosString": "0, -0.5, 0"
-          }
-        },
-        "NextStep": "step4"
-      },
-      {
-        "StepID": "step4",
-        "ActionType": "LoadMotion",
-        "Target": {
-          "Type": "TargetMaid"
-        },
-        "MotionInfo": {
-          "MotionFile": "turusi_sex_taiki_m.anm",
-          "MotionTag": "turusi_sex_taiki_m.anm"
-        },
-        "NextStep": "step5_trigger"
-      },
-      {
-        "StepID": "step5_trigger",
-        "ActionType": "Trigger",
-        "TriggerSetting": {
-          "TriggerType": "TimeEnd",
-          "TimeToWaitType": "DefaultTweenMoveTime"
-        },
-        "NextStep": "step5"
-      },
-      {
-        "StepID": "step5",
-        "ActionType": "SetMaidToExtraMan",
-        "Target": {
-          "Type": "GroupMan",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
-        },
-        "SetExtraManInfo": {
-          "Type": "Group",
-          "TargetGroupPosition": 0,
-          "IsSmoothPositionChange": false,
-          "IsSmoothAnimationChange": true
-        },
-        "NextStep": "step6"
-      },
-      {
-        "StepID": "step6",
-        "ActionType": "SetPosition",
-        "Target": {
-          "Type": "TargetMaid"
-        },
-        "PositionInfo": {
-          "DefinedPointName": "NextManStartPoint",
+          "Param": "NewManOffsetAfterWalk",
           "IsSmoothAnimation": false
         },
-        "NextStep": "step7_walk"
+        "NextStep": "step10_NewManReadyMotion"
       },
+
       {
-        "StepID": "step7_walk",
-        "ActionType": "ManWalk",
-        "Target": {
-          "Type": "TargetMaid"
-        },
-        "ManWalkSetupInfo": {
-          "Destination": {
-            "Target": "GroupMaid",
-            "TargetGroupPosition": 0,
-            "TargetMaidPosition": 0
-          },
-          "StandingAnimationFile": "turusi_sex_taiki_m.anm",
-          "StandingMotionOffsetString": "0, 0, 0.346",
-          "WalkingMotionOffsetString": "0, 0.1, 0",
-          "RotationOffsetString": "0, 180, 0",
-          "MaidMotionOffsetString": "0,0,0"
-        },
-        "NextStep": "step8_ManMotion"
-      },
-      {
-        "StepID": "step8_ManMotion",
+        "StepID": "step10_NewManReadyMotion",
         "ActionType": "LoadMotion",
         "Target": {
-          "Type": "TargetMaid"
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
         },
         "MotionInfo": {
-          "MotionFile": "hasamikomi_kijyoui2_taiki_m.anm",
-          "MotionTag": "hasamikomi_kijyoui2_taiki_m.anm"
+          "ParamMotion": "NewManReadyMotion"
         },
-        "NextStep": "step9_MaidMotion"
+        "NextStep": "step10_NewManReadyMotionOffset"
       },
+
       {
-        "StepID": "step9_MaidMotion",
+        "StepID": "step10_NewManReadyMotionOffset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
+        },
+        "OffsetInfo": {
+          "Param": "NewManReadyMotionOffset"
+        },
+        "NextStep": "step11_MaidReadyMotion"
+      },
+
+      {
+        "StepID": "step11_MaidReadyMotion",
         "ActionType": "LoadMotion",
         "Target": {
-          "Type": "GroupMaid",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
         },
         "MotionInfo": {
-          "MotionFile": "hasamikomi_kijyoui2_taiki_f.anm",
-          "MotionTag": "hasamikomi_kijyoui2_taiki_f.anm"
+          "ParamMotion": "Maid1ReadyMotion"
         },
-        "NextStep": "step10_ManPosition"
+        "NextStep": "step11_MaidReadyMotionOffset"
       },
       {
-        "StepID": "step10_ManPosition",
-        "ActionType": "SetPosition",
+        "StepID": "step11_MaidReadyMotionOffset",
+        "ActionType": "PositionOffset",
         "Target": {
-          "Type": "TargetMaid"
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
         },
-        "PositionInfo": {
-          "Target": {
-            "Type": "GroupMaid",
-            "TargetGroupPosition": 0,
-            "TargetMaidPosition": 0
-          },
-          "IsSmoothAnimation": true
+        "OffsetInfo": {
+          "Param": "Maid1ReadyMotionOffset"
         },
-        "NextStep": "step11_TimeEndTrigger"
+        "NextStep": "step12_TimeEndTrigger"
       },
+
       {
-        "StepID": "step11_TimeEndTrigger",
+        "StepID": "step12_TimeEndTrigger",
         "ActionType": "Trigger",
         "TriggerSetting": {
           "TriggerType": "TimeEnd",
           "TimeToWaitType": "DefaultTweenMoveTime"
         },
-        "NextStep": "step11_RemoveExtraMan"
+        "NextStep": "step13_RemoveExtraMan"
       },
-      {
-        "StepID": "step11_RemoveExtraMan",
-        "ActionType": "RemoveExtraMan",
-        "Target": {
-          "Type": "TargetMaid"
-        },
-        "RemoveExtraManInfo": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
-        },
-        "NextStep": "step12_SetGroupMember"
-      },
-      {
-        "StepID": "step12_SetGroupMember",
-        "ActionType": "SetGroupMember",
-        "SetGroupMemberInfo": {
-          "TargetGroupPosition": 0,
-          "Man1": {
-            "Type": "TargetMaid"
-          }
-        },
-        "NextStep": "step13_ResetMotion"
-      },
-      {
-        "StepID": "step13_ResetMotion",
-        "ActionType": "ResetMotionToWaiting",
-        "Target": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
-        }
-      }
-    ]
-  },
 
 
-  "Isutaimenzai_ChangeMan": {
-    "FirstStep": "step1",
-    "Steps": [
       {
-        "StepID": "step1",
-        "ActionType": "ResetMotionToWaiting",
-        "Target": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
-        },
-        "NextStep": "step1_resetik"
-      },
-      {
-        "StepID": "step1_resetik",
-        "ActionType": "ResetIK",
-        "Target": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
-        },
-        "NextStep": "step2_MaidOffset",
-        "Remarks": "Make the Man1 stand up and disconnect the IK of Maid1"
-      },
-      {
-        "StepID": "step2_MaidOffset",
-        "ActionType": "PositionOffset",
-        "Target": {
-          "Type": "GroupMaid",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
-        },
-        "OffsetInfo": {
-          "Offset": {
-            "PosString": "0, 0, -0.5"
-          }
-        },
-        "NextStep": "step2"
-      },
-      {
-        "StepID": "step2",
-        "ActionType": "LoadMotion",
-        "Target": {
-          "Type": "GroupMaid",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
-        },
-        "MotionInfo": {
-          "CustomMotionFile": "wp_mod_motion_female_stand.anm",
-          "MotionTag": "wp_mod_motion_female_stand.anm"
-        },
-        "NextStep": "step3_Offset"
-      },
-      {
-        "StepID": "step3_Offset",
-        "ActionType": "PositionOffset",
-        "Target": {
-          "Type": "GroupMan",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
-        },
-        "OffsetInfo": {
-          "Offset": {
-            "PosString": "0.5, -0.1, 0",
-            "RotString": "0, 90, 0"
-          }
-        },
-        "NextStep": "step3"
-      },
-      {
-        "StepID": "step3",
-        "ActionType": "LoadMotion",
-        "Target": {
-          "Type": "GroupMan",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
-        },
-        "MotionInfo": {
-          "MotionFile": "turusi_sex_taiki_m.anm",
-          "MotionTag": "turusi_sex_taiki_m.anm"
-        },
-        "NextStep": "step4_LocateExtraMan"
-      },
-      {
-        "StepID": "step4_LocateExtraMan",
-        "ActionType": "GetNextExtraMan",
-        "Target": {
-          "TargetGroupPosition": 0
-        },
-        "ExtraManInfo": {
-          "Type": "Group",
-          "GetNextMethod": "Increment"
-        },
-        "NextStep": "step4_Offset"
-      },
-      {
-        "StepID": "step4_Offset",
-        "ActionType": "PositionOffset",
-        "Target": {
-          "Type": "TargetMaid"
-        },
-        "OffsetInfo": {
-          "Offset": {
-            "PosString": "0, -0.5, 0"
-          }
-        },
-        "NextStep": "step4"
-      },
-      {
-        "StepID": "step4",
-        "ActionType": "LoadMotion",
-        "Target": {
-          "Type": "TargetMaid"
-        },
-        "MotionInfo": {
-          "MotionFile": "turusi_sex_taiki_m.anm",
-          "MotionTag": "turusi_sex_taiki_m.anm"
-        },
-        "NextStep": "step5_trigger"
-      },
-      {
-        "StepID": "step5_trigger",
-        "ActionType": "Trigger",
-        "TriggerSetting": {
-          "TriggerType": "TimeEnd",
-          "TimeToWaitType": "DefaultTweenMoveTime"
-        },
-        "NextStep": "step5"
-      },
-      {
-        "StepID": "step5",
-        "ActionType": "SetMaidToExtraMan",
-        "Target": {
-          "Type": "GroupMan",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
-        },
-        "SetExtraManInfo": {
-          "Type": "Group",
-          "TargetGroupPosition": 0,
-          "IsSmoothPositionChange": false,
-          "IsSmoothAnimationChange": true
-        },
-        "NextStep": "step6"
-      },
-      {
-        "StepID": "step6",
-        "ActionType": "SetPosition",
-        "Target": {
-          "Type": "TargetMaid"
-        },
-        "PositionInfo": {
-          "DefinedPointName": "NextManStartPointLeft",
-          "IsSmoothAnimation": false
-        },
-        "NextStep": "step7_walk"
-      },
-      {
-        "StepID": "step7_walk",
-        "ActionType": "ManWalk",
-        "Target": {
-          "Type": "TargetMaid"
-        },
-        "ManWalkSetupInfo": {
-          "Destination": {
-            "Target": "GroupMaid",
-            "TargetGroupPosition": 0,
-            "TargetMaidPosition": 0
-          },
-          "StandingAnimationFile": "turusi_sex_taiki_m.anm",
-          "StandingMotionOffsetString": "0, 0, 0.346",
-          "WalkingMotionOffsetString": "0, 0.1, 0",
-          "RotationOffsetString": "0, 180, 0",
-          "MaidMotionOffsetString": "0,0,0"
-        },
-        "NextStep": "step8_ManMotion"
-      },
-      {
-        "StepID": "step8_ManMotion",
-        "ActionType": "LoadMotion",
-        "Target": {
-          "Type": "TargetMaid"
-        },
-        "MotionInfo": {
-          "MotionFile": "isutaimenzai_taiki_m.anm",
-          "MotionTag": "isutaimenzai_taiki_m.anm"
-        },
-        "NextStep": "step9_MaidMotion"
-      },
-      {
-        "StepID": "step9_MaidMotion",
-        "ActionType": "LoadMotion",
-        "Target": {
-          "Type": "GroupMaid",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
-        },
-        "MotionInfo": {
-          "MotionFile": "isutaimenzai_taiki_f.anm",
-          "MotionTag": "isutaimenzai_taiki_f.anm"
-        },
-        "NextStep": "step9_Offset"
-      },
-      {
-        "StepID": "step9_Offset",
-        "ActionType": "PositionOffset",
-        "Target": {
-          "Type": "GroupMaid",
-          "TargetGroupPosition": 0,
-          "TargetMaidPosition": 0
-        },
-        "OffsetInfo": {
-          "Offset": {
-            "PosString": "0, 0, 0.5"
-          }
-        },
-        "NextStep": "step10_ManPosition"
-      },
-      {
-        "StepID": "step10_ManPosition",
-        "ActionType": "SetPosition",
-        "Target": {
-          "Type": "TargetMaid"
-        },
-        "PositionInfo": {
-          "Target": {
-            "Type": "Group",
-            "TargetGroupPosition": 0
-          },
-          "IsSmoothAnimation": true
-        },
-        "NextStep": "step11_TimeEndTrigger"
-      },
-      {
-        "StepID": "step11_TimeEndTrigger",
-        "ActionType": "Trigger",
-        "TriggerSetting": {
-          "TriggerType": "TimeEnd",
-          "TimeToWaitType": "DefaultTweenMoveTime"
-        },
-        "NextStep": "step11_RemoveExtraMan"
-      },
-      {
-        "StepID": "step11_RemoveExtraMan",
+        "StepID": "step13_RemoveExtraMan",
         "ActionType": "RemoveExtraMan",
         "Target": {
-          "Type": "TargetMaid"
+          "Type": "Param",
+          "ParamName": "NextExtraMan_Group"
         },
         "RemoveExtraManInfo": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
+          "GroupParamName": "PrimaryGroup"
         },
-        "NextStep": "step12_SetGroupMember"
+        "NextStep": "step14_SetGroupMember"
       },
+
       {
-        "StepID": "step12_SetGroupMember",
+        "StepID": "step14_SetGroupMember",
         "ActionType": "SetGroupMember",
         "SetGroupMemberInfo": {
-          "TargetGroupPosition": 0,
+          "TargetParam": "PrimaryGroup",
           "Man1": {
-            "Type": "TargetMaid"
+            "Type": "Param",
+            "ParamName": "NextExtraMan_Group"
           }
         },
-        "NextStep": "step13_ResetMotion"
+        "NextStep": "step15_ResetMotion"
       },
+
       {
-        "StepID": "step13_ResetMotion",
+        "StepID": "step15_ResetMotion",
         "ActionType": "ResetMotionToWaiting",
         "Target": {
-          "Type": "Group",
-          "TargetGroupPosition": 0
-        }
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "NextStep": ""
       }
     ]
   },
@@ -1888,7 +1398,8 @@
             "Type": "Param",
             "ParamName": "PrimaryGroup",
             "ParamGroupMember": "Man1"
-          }
+          },
+          "IsFinalizedGroupUpdateStep": false
         },
         "NextStep": "step12_SetGroupMember_Part2"
       },

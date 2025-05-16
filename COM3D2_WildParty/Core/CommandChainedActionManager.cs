@@ -126,10 +126,20 @@ namespace COM3D2.WildParty.Plugin.Core
                 MotionInfo motionInfo = new MotionInfo(stepInfo.MotionInfo);
                 if (!string.IsNullOrEmpty(stepInfo.MotionInfo.ParamMotion)) 
                 {
-                    motionInfo.MotionFile = ProcessingDict[guid].Parameters[stepInfo.MotionInfo.ParamMotion].ToString();
-                    motionInfo.MotionTag = ProcessingDict[guid].Parameters[stepInfo.MotionInfo.ParamMotion].ToString().ToLower();
+                    string fileName = ProcessingDict[guid].Parameters[stepInfo.MotionInfo.ParamMotion].ToString();
+                    
+                    if (Helper.CustomAnimLoader.IsAnimFileNameCustom(fileName))
+                    {
+                        motionInfo.CustomMotionFile = fileName;
+                        motionInfo.MotionTag = fileName.ToLower();
+                    }
+                    else
+                    {
+                        motionInfo.MotionFile = fileName;
+                        motionInfo.MotionTag = fileName.ToLower();
+                    }
                 }
-                
+                                    
                 CharacterHandling.ApplyMotionInfoToCharacter(targetMaid, motionInfo);
             }
 
@@ -481,7 +491,7 @@ namespace COM3D2.WildParty.Plugin.Core
             ProcessSetGroupMemberRequest(guid, group, true, 2, stepInfo.SetGroupMemberInfo.Man3);
             ProcessSetGroupMemberRequest(guid, group, false, 0, stepInfo.SetGroupMemberInfo.Maid1);
             ProcessSetGroupMemberRequest(guid, group, false, 1, stepInfo.SetGroupMemberInfo.Maid2);
-
+    
             if (stepInfo.SetGroupMemberInfo.NewSexPos != null)
             {
                 group.SexPosID = Convert.ToInt32(GetValueData(guid, stepInfo.SetGroupMemberInfo.NewSexPos));
@@ -497,7 +507,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     //need to update the main group
                     var initialSkill = YotogiHandling.GetSkill(group.Maid1.status.personal.id, group.GroupType, group.SexPosID);
                     CharacterHandling.CleanseCharacterMgrArray();
-                    YotogiHandling.ChangeMainGroupSkill(initialSkill.YotogiSkillID);
+                    YotogiHandling.ChangeMainGroupSkill(initialSkill.YotogiSkillID); 
 
                     if (stepInfo.SetGroupMemberInfo.NewSexPos != null)
                     {
@@ -505,8 +515,21 @@ namespace COM3D2.WildParty.Plugin.Core
                     }
                 }
             }
+            else if (stepInfo.SetGroupMemberInfo.IsFinalizedGroupUpdateStep)
+            {
+                if (group == StateManager.Instance.PartyGroupList[0])
+                {
+                    //need update some info if it is main group
+                    CharacterHandling.SetGroupZeroActive();
 
-            
+                    YotogiHandling.UpdateParameterView(group.Maid1);
+
+                    CharacterHandling.CleanseCharacterMgrArray();
+                }
+
+            }
+
+
             AdvanceToNextActionStep(guid, stepInfo);
         }
 

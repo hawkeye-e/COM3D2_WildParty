@@ -216,6 +216,7 @@ namespace COM3D2.WildParty.Plugin
             public TargetInfo Maid2;
             public ValueData NewSexPos;
             public YotogiPlay.PlayerState PlayerState = YotogiPlay.PlayerState.Normal;
+            public bool IsFinalizedGroupUpdateStep = true;          //Set it to true if the step is not a finalized group update
         }
 
         public class UpdateSexPosInfo
