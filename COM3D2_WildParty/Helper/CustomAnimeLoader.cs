@@ -13,7 +13,9 @@ namespace COM3D2.WildParty.Plugin.Helper
             "wp_mod_motion_female_seductive.anm",
             "wp_mod_motion_female_long_sitting.anm",
             "wp_mod_motion_female_stand.anm",
-            "wp_mod_motion_female_stand_inverse.anm"
+            "wp_mod_motion_female_stand_inverse.anm",
+            
+            "wp_mod_motion_male_stand_holding_camera.anm"
         };
 
         public static byte[] GetAnimData(string fileName)
@@ -27,6 +29,9 @@ namespace COM3D2.WildParty.Plugin.Helper
                 result = ModResources.CustomAnimResources.wp_mod_motion_female_stand;
             else if (fileName.ToLower() == "wp_mod_motion_female_stand_inverse.anm")
                 result = ModResources.CustomAnimResources.wp_mod_motion_female_stand_inverse;
+
+            else if (fileName.ToLower() == "wp_mod_motion_male_stand_holding_camera.anm")
+                result = ModResources.CustomAnimResources.wp_mod_motion_male_stand_holding_camera;
 
             return result;
         }

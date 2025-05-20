@@ -99,5 +99,15 @@ namespace ModResources {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] wp_mod_motion_male_stand_holding_camera {
+            get {
+                object obj = ResourceManager.GetObject("wp_mod_motion_male_stand_holding_camera", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

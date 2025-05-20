@@ -48,7 +48,7 @@
     "ID": "imvi_intro_0002",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "imvi_intro_yotogiplay_phase1_closepanel",
+    "NextStepID": "imvi_init_show_owner",
     "TalkData": {
       "SpecificSpeaker": "Owner",
       "Text": "（……おかしい…）"
@@ -58,6 +58,21 @@
       "IsFadeIn": true,
       "IsFadeOut": false
     }
+  },
+
+  "imvi_init_show_owner": {
+    "ID": "imvi_init_show_owner",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_yotogiplay_phase1_closepanel",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true
+      }
+    ]
   },
 
 

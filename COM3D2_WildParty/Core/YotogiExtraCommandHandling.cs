@@ -655,6 +655,12 @@ namespace COM3D2.WildParty.Plugin.Core
                     isAllFulfilled = isAllFulfilled && (progressInfo.MaidOrgasmCount >= fetishInfo.Conditions.MaidOrgasmCount);
                     isAllFulfilled = isAllFulfilled && (progressInfo.SexPositionOrgasmInfo.Count >= fetishInfo.Conditions.PositionOrgasmCount);
 
+                    if (fetishInfo.Conditions.SexPosRequired != null)
+                    {
+                        int matchCount = fetishInfo.Conditions.SexPosRequired.Intersect(progressInfo.SexPositionOrgasmInfo.Keys).Count();
+                        isAllFulfilled = isAllFulfilled && matchCount == fetishInfo.Conditions.SexPosRequired.Count;
+                    }
+
                     UpdateCommandButtonState(button, isAllFulfilled);
                 }
                 else if (commandBtn.Data.Type == ExtraYotogiCommandData.CommandType.Orgasm)
@@ -799,6 +805,14 @@ namespace COM3D2.WildParty.Plugin.Core
             Maid maid = StateManager.Instance.PartyGroupList[0].Maid1;
             YotogiProgressInfo progressInfo = StateManager.Instance.YotogiProgressInfoList[maid.status.guid];
 
+            int sexPosRequired = 0;
+            int currentSexPosCount = 0;
+            if (fetishInfo.Conditions.SexPosRequired != null)
+            {
+                sexPosRequired = fetishInfo.Conditions.SexPosRequired.Count;
+                currentSexPosCount = fetishInfo.Conditions.SexPosRequired.Intersect(progressInfo.SexPositionOrgasmInfo.Keys).Count();
+            }
+
             return template.Replace(Constant.JsonReplaceTextLabels.ManCount, fetishInfo.Conditions.ManCount.ToString())
                            .Replace(Constant.JsonReplaceTextLabels.OrgasmCount, fetishInfo.Conditions.OrgasmCount.ToString())
                            .Replace(Constant.JsonReplaceTextLabels.CurrentManCount, progressInfo.ManOrgasmInfo.Count.ToString())
@@ -806,7 +820,9 @@ namespace COM3D2.WildParty.Plugin.Core
                            .Replace(Constant.JsonReplaceTextLabels.MaidOrgasmCount, fetishInfo.Conditions.MaidOrgasmCount.ToString())
                            .Replace(Constant.JsonReplaceTextLabels.CurrentMaidOrgasmCount, progressInfo.MaidOrgasmCount.ToString())
                            .Replace(Constant.JsonReplaceTextLabels.PositionOrgasmCount, fetishInfo.Conditions.PositionOrgasmCount.ToString())
-                           .Replace(Constant.JsonReplaceTextLabels.CurrentPositionOrgasmCount, progressInfo.SexPositionOrgasmInfo.Count.ToString());
+                           .Replace(Constant.JsonReplaceTextLabels.CurrentPositionOrgasmCount, progressInfo.SexPositionOrgasmInfo.Count.ToString())
+                           .Replace(Constant.JsonReplaceTextLabels.SexPosRequired, sexPosRequired.ToString())
+                           .Replace(Constant.JsonReplaceTextLabels.CurrentSexPosCount, currentSexPosCount.ToString());
         }
 
         internal static bool IsThisConditionFulfilled(string field, Fetish fetishInfo)

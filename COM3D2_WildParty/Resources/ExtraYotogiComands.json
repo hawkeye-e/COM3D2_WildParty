@@ -264,6 +264,19 @@
     "Type": "Common"
   },
 
+  "FetishVirginEater": {
+    "CommandCode": "AddFetish",
+    "Name": "性癖「童貞喰い」",
+    "Type": "Fetish",
+    "FetishID": 99004,
+    "ConditionCheckTexts": [
+      {
+        "Field": "SexPosRequired",
+        "DisplayText": "男の子たちに全ての乱交体位を教える（[=CurrentSexPosCount]／[=SexPosRequired]）"
+      }
+    ]
+  },
+
   "ChangeMan_Amayakasi_Tekoki": {
     "CommandCode": "ChainedAction",
     "Name": "次の男の子と交代する",

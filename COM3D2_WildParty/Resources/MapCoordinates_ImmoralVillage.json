@@ -255,13 +255,19 @@
         "IndividualCoordinates": [
           {
             "Type": "Owner",
-            "PosString": "2.84, 0.00, -2.59",
-            "RotString": "0, -0.507, 0, 0.862",
+            "PosString": "2.84, 0.10, -2.59",
+            "RotString": "0, 0.810, 0, 0.586",
             "IsMasturbation": false,
             "Motion": {
-              "MotionFile": "asikoki2_taiki_m.anm",
-              "MotionTag": "asikoki2_taiki_m.anm"
-            }
+              "CustomMotionFile": "wp_mod_motion_male_stand_holding_camera.anm",
+              "MotionTag": "wp_mod_motion_male_stand_holding_camera.anm"
+            },
+            "ExtraItemObjects": [
+              {
+                "ItemFile": "HandItemR_HandyCam_I_.menu",
+                "Target": "handitem"
+              }
+            ]
           }
         ]
       }

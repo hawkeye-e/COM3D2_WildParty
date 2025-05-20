@@ -343,7 +343,11 @@ namespace COM3D2.WildParty.Plugin
             internal const string PositionOrgasmCount = "[=PositionOrgasmCount]";
             internal const string CurrentPositionOrgasmCount = "[=CurrentPositionOrgasmCount]";
 
+            internal const string SexPosRequired = "[=SexPosRequired]";
+            internal const string CurrentSexPosCount = "[=CurrentSexPosCount]";
             
+
+
 
             /*Format: [=Name,{Source},{Index},{CallMethod}]
              * {Source} :   "Maid" : From SelectedMaidsList; "NPC_F" : From NPCList;  "NPC_M" : From NPCManList
