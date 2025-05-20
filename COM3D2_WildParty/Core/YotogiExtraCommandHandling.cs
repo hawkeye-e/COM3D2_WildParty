@@ -670,7 +670,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
                 else
                 {
-                    if (commandBtn.Data.TriggerConditions != null)
+                    if (commandBtn.Data.TriggerConditions != null && Config.IsTriggerConditionOn)
                     {
                         bool isAllFulfilled = true;
                         YotogiProgressInfo progressInfo = StateManager.Instance.YotogiProgressInfoList[maid.status.guid];

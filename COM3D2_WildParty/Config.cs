@@ -11,7 +11,8 @@ namespace COM3D2.WildParty.Plugin
     {
         private const string GENERAL = "1. General";
         private const string MOTIONSETTING = "2. H Motion Settings";
-        private const string DEVELOPER = "3. Developer Used";
+        private const string YOTOGISETTING = "3. Yotogi Related Setting";
+        private const string DEVELOPER = "4. Developer Used";
 
         internal static bool Enabled { get { return _enabled.Value; } }
         private static ConfigEntry<bool> _enabled;
@@ -76,16 +77,24 @@ namespace COM3D2.WildParty.Plugin
         internal static int MaxTimeToResumeSexAfterOrgasm { get { return _maxTimeToResumeSexAfterOrgasm.Value; } }
         private static ConfigEntry<int> _maxTimeToResumeSexAfterOrgasm;
 
+        internal static bool IsTriggerConditionOn { get { return _isTriggerConditionOn.Value; } }
+        private static ConfigEntry<bool> _isTriggerConditionOn;
+
         internal static void Init(BaseUnityPlugin plugin)
         {
+            AddGeneralConfigs(plugin);
+            AddMotionSettingConfigs(plugin);
+            AddYotogiSettingConfigs(plugin);
+            AddDeveloperRelatedConfigs(plugin);
+        }
+
+        private static void AddGeneralConfigs(BaseUnityPlugin plugin)
+        {
             _enabled = plugin.Config.Bind(GENERAL, "Enable this plugin", true, "If false, this plugin will do nothing (requires game restart)");
+        }
 
-            _developerMode = plugin.Config.Bind(DEVELOPER, "Developer Mode", false, "Leave this unchecked if you have no idea what it is (requires game restart)");
-
-            _debugLogMotionData = plugin.Config.Bind(DEVELOPER, "Log Motion Data", false, "Leave this unchecked if you have no idea what it is");
-
-            _debugCaptureDialogues = plugin.Config.Bind(DEVELOPER, "Log All Dialogues", false, "Leave this unchecked if you have no idea what it is");
-
+        private static void AddMotionSettingConfigs(BaseUnityPlugin plugin)
+        {
             _maxInitialRandomExciteValue = plugin.Config.Bind(MOTIONSETTING, "Initial Excite Value Upper Limit", ConfigurableValue.YotogiSimulation.MaxInitialRandomExciteValue,
             new ConfigDescription("The upper limit value of initial excite value for a group.\n\n Initial excite value is a random number assigned when the group is newly created or the group has just reached orgasm.\n\n Must be larger than the corresponding Lower Limit value.", new AcceptableValueRange<int>(-100, 300))
             );
@@ -151,6 +160,20 @@ namespace COM3D2.WildParty.Plugin
             _maxTimeToResumeSexAfterOrgasm = plugin.Config.Bind(MOTIONSETTING, "Maximum time in second to resume Sex after orgasm", ConfigurableValue.YotogiSimulation.MaxTimeToResumeSexAfterOrgasm,
             new ConfigDescription("Number of second that a group could have to rest after reaching orgasm.", new AcceptableValueRange<int>(0, 60))
             );
+        }
+
+        private static void AddDeveloperRelatedConfigs(BaseUnityPlugin plugin)
+        {
+            _developerMode = plugin.Config.Bind(DEVELOPER, "Developer Mode", false, "Leave this unchecked if you have no idea what it is (requires game restart)");
+
+            _debugLogMotionData = plugin.Config.Bind(DEVELOPER, "Log Motion Data", false, "Leave this unchecked if you have no idea what it is");
+
+            _debugCaptureDialogues = plugin.Config.Bind(DEVELOPER, "Log All Dialogues", false, "Leave this unchecked if you have no idea what it is");
+        }
+
+        private static void AddYotogiSettingConfigs(BaseUnityPlugin plugin)
+        {
+            _isTriggerConditionOn = plugin.Config.Bind(YOTOGISETTING, "Command Trigger Condition", true, "On: The player is required to do achieve some small goals in order to click certain command buttons in the yotogi scene. \n Off: The trigger conditions are ignored and the player can click the command buttons freely.");
         }
     }
 }
