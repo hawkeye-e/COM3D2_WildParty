@@ -171,5 +171,26 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
             //DebugHelper.Debug.PrintDetail(command_data.basic);
             //WildParty.Log.LogInfo("==========");
         }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagPlayBgm))]
+        private static void TagPlayBgm(KagTagSupport tag_data)
+        {
+            DebugHelper.DebugViewData.ViewTagData(tag_data);
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(SoundMgr), nameof(SoundMgr.PlayBGM))]
+        private static void PlayBGM(string f_strFileName, float f_fTime, bool f_fLoop)
+        {
+            WildParty.Log.LogInfo("PlayBGM: " + f_strFileName);
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(SoundMgr), nameof(SoundMgr.PlayBGMLegacy))]
+        private static void PlayBGMLegacy(string f_strFileName, float f_fTime, bool f_fLoop)
+        {
+            WildParty.Log.LogInfo("PlayBGMLegacy: " + f_strFileName);
+        }
     }
 }

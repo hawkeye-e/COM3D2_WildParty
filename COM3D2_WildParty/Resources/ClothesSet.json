@@ -39,9 +39,32 @@
   },
 
   "StrapOnDildo": {
-    "Slots": { },
+    "Slots": {},
     "NonClothesSlots": {
       "kousoku_lower": "kousokuL_omytgc014_peniban_I_.menu"
+    },
+    "RequireNude": true
+  },
+
+  "ImmoralVillage_HideBoobs": {
+    "Slots": {
+      "wear": "dress810_wear_i_.menu",
+      "panz": "dress403_pants_i_.menu"
+    },
+    "RequireNude": true
+  },
+
+  "ImmoralVillage_ShowBoobs": {
+    "Slots": {
+      "wear": "dress519_wear_i_.menu",
+      "panz": "dress403_pants_i_.menu"
+    },
+    "RequireNude": true
+  },
+
+  "ImmoralVillage_ShowBoobsNoUnderwear": {
+    "Slots": {
+      "wear": "dress519_wear_i_.menu"
     },
     "RequireNude": true
   }

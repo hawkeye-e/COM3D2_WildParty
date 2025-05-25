@@ -539,24 +539,25 @@ namespace COM3D2.WildParty.Plugin.Core
             
             //Shared extra man handling
             PartyGroup.SharedExtraManList = new Dictionary<int, Maid>();
+            int extraManSlotCount = setupInfo.ExtraManSlotCount;
+            if (extraManSlotCount < 0)
+                extraManSlotCount = setupInfo.ExtraManCount;
+            for (int i = 0; i < extraManSlotCount; i++)
+                PartyGroup.SharedExtraManList.Add(i, null);
             for (int i = 0; i < setupInfo.ExtraManCount; i++)
-            {
-                if (manRunningNumber >= StateManager.Instance.YotogiWorkingManList.Count)
-                    PartyGroup.SharedExtraManList.Add(i, null);
-                else
-                    PartyGroup.SharedExtraManList.Add(i, StateManager.Instance.YotogiWorkingManList[manRunningNumber++]);
-            }
-            
-            //Extra man for each group handling
+                PartyGroup.SharedExtraManList[i] = StateManager.Instance.YotogiWorkingManList[manRunningNumber++];
+
+                //Extra man for each group handling
             foreach (var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
             {
+                int groupExtraManSlotCount = groupSetupInfo.ExtraManSlotCount;
+                if (groupExtraManSlotCount < 0)
+                    groupExtraManSlotCount = groupSetupInfo.ExtraManCount;
+
+                for (int i = 0; i < groupExtraManSlotCount; i++)
+                    StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].ExtraManList.Add(i, null);
                 for (int i = 0; i < groupSetupInfo.ExtraManCount; i++)
-                {
-                    if (manRunningNumber >= StateManager.Instance.YotogiWorkingManList.Count)
-                        StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].ExtraManList.Add(i, null);
-                    else
-                        StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].ExtraManList.Add(i, StateManager.Instance.YotogiWorkingManList[manRunningNumber++]);
-                }
+                    StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].ExtraManList[i] = StateManager.Instance.YotogiWorkingManList[manRunningNumber++];
             }
         }
 
@@ -1000,6 +1001,18 @@ namespace COM3D2.WildParty.Plugin.Core
             else if (charaInfo.ListType == IKAttachInfo.ArrayListType.Man)
             {
                 return StateManager.Instance.YotogiWorkingManList[charaInfo.ArrayIndex];
+            }
+            else if (charaInfo.ListType == IKAttachInfo.ArrayListType.ADVMaid)
+            {
+                return StateManager.Instance.SelectedMaidsList[charaInfo.ArrayIndex];
+            }
+            else if (charaInfo.ListType == IKAttachInfo.ArrayListType.ADVMan)
+            {
+                return StateManager.Instance.MenList[charaInfo.ArrayIndex];
+            }
+            else if (charaInfo.ListType == IKAttachInfo.ArrayListType.ADVClubOwner)
+            {
+                return StateManager.Instance.ClubOwner;
             }
 
             return null;

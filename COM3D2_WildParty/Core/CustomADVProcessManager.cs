@@ -1,11 +1,11 @@
-﻿using System;
+﻿using BepInEx.Logging;
+using COM3D2.WildParty.Plugin.Trigger;
+using HarmonyLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using BepInEx.Logging;
 using UnityEngine;
-using HarmonyLib;
-using COM3D2.WildParty.Plugin.Trigger;
 
 namespace COM3D2.WildParty.Plugin.Core
 {
@@ -121,7 +121,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     if (thisStep.FadeData != null)
                     {
                         if (thisStep.FadeData.IsFadeIn)
-                            GameMain.Instance.MainCamera.FadeIn();
+                            GameMain.Instance.MainCamera.FadeIn(f_fTime: thisStep.FadeData.Time);
                         else if (thisStep.FadeData.IsFadeOut)
                         {
                             CameraMain.dgOnCompleteFade dg = null;
@@ -133,7 +133,7 @@ namespace COM3D2.WildParty.Plugin.Core
                                 };
                             }
                             CharacterHandling.StopAllMaidSound();
-                            GameMain.Instance.MainCamera.FadeOut(f_dg: dg);
+                            GameMain.Instance.MainCamera.FadeOut(f_dg: dg, f_fTime: thisStep.FadeData.Time , f_color: thisStep.FadeData.Color);
                         }
                     }
 
@@ -533,6 +533,20 @@ namespace COM3D2.WildParty.Plugin.Core
 
             CharacterHandling.ApplyMotionInfoToCharacter(maid, charaData.MotionInfo);
 
+            if (charaData.ResetIK)
+#if COM3D2_5
+#if UNITY_2022_3   
+                maid.body0.fullBodyIK.AllIKDetach();          
+#endif
+#endif
+#if COM3D2
+                maid.AllIKDetach();
+#endif
+
+            if (charaData.IKAttach != null)
+                foreach (IKAttachInfo info in charaData.IKAttach)
+                    CharacterHandling.IKAttachBone(info);
+
             if (charaData.PosRot != null)
             {
                 Util.StopSmoothMove(maid);
@@ -695,7 +709,7 @@ namespace COM3D2.WildParty.Plugin.Core
                         
                         group.SetGroupPosition();
                         
-                        if (step.GroupData[i].BlockInputUntilMotionChange)
+                        if (step.GroupData[i].BlockInputUntilMotionChange && !Config.DebugIgnoreADVForceTimeWait)
                         {
                             StateManager.Instance.WaitForMotionChange = true;
                             AnimationEndTrigger trigger = new AnimationEndTrigger(group.Maid1, new EventDelegate(ADVMotionChangeComplete));
@@ -1208,6 +1222,11 @@ namespace COM3D2.WildParty.Plugin.Core
                             maid = StateManager.Instance.ClubOwner;
                             targetList = StateManager.Instance.MenList;
                         }
+                        else if (addData.Type == Constant.TargetType.SingleMan)
+                        {
+                            sourceList = StateManager.Instance.MenList;
+                            targetList = StateManager.Instance.MenList;
+                        }
                         else if (addData.Type == Constant.TargetType.NPCMale)
                         {
                             sourceList = StateManager.Instance.NPCManList;
@@ -1252,6 +1271,11 @@ namespace COM3D2.WildParty.Plugin.Core
                             maid = StateManager.Instance.ClubOwner;
                             targetList = StateManager.Instance.MenList;
                         }
+                        else if (removeData.Type == Constant.TargetType.SingleMan)
+                        {
+                            sourceList = StateManager.Instance.MenList;
+                            targetList = StateManager.Instance.MenList;
+                        }
                         else if (removeData.Type == Constant.TargetType.NPCMale)
                         {
                             sourceList = StateManager.Instance.NPCManList;
@@ -1286,7 +1310,10 @@ namespace COM3D2.WildParty.Plugin.Core
 
         internal static void ProcessADVTimeWait(ADVKagManager instance, ADVStep step)
         {
-            int secondToWait = int.Parse(step.Tag);
+            Double secondToWait = Double.Parse(step.Tag);
+            if (Config.DebugIgnoreADVForceTimeWait)
+                secondToWait = 0;
+
             StateManager.Instance.ADVResumeTime = DateTime.Now.AddSeconds(secondToWait);
         }
 
@@ -1416,7 +1443,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
         private static void CheckTimeWaitFinish()
         {
-            if (DateTime.Now > StateManager.Instance.ADVResumeTime && StateManager.Instance.ADVResumeTime != DateTime.MinValue)
+            if ((DateTime.Now > StateManager.Instance.ADVResumeTime && StateManager.Instance.ADVResumeTime != DateTime.MinValue))
             {
                 StateManager.Instance.ADVResumeTime = DateTime.MinValue;
                 ADVSceneProceedToNextStep();

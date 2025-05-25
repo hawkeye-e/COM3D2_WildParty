@@ -19,6 +19,7 @@ namespace COM3D2.WildParty.Plugin
         public List<int> ExcludePersonality;
         public List<GroupSetupData> GroupSetup;
         public int ExtraManCount = 0;                       //For Shared list. If the logic of yotogi requires assigning extra man to each group, use the one inside GroupSetup
+        public int ExtraManSlotCount = -1;
         public MovingQueueSetupData MovingQueueSetup;       //For gangbang queue type use
 
         internal class GroupSetupData
@@ -27,6 +28,7 @@ namespace COM3D2.WildParty.Plugin
             public int MaidCount;
             public int ManCount;
             public int ExtraManCount = 0;
+            public int ExtraManSlotCount = -1;
             public bool IsAutomatedGroup = true;            //True: Use the BackgroundGroupMotionManager logic; False: Static motion
             public bool MaidFromNPC = false;                //True: Get the maid from NPCList; False: Get the maid from YotogiWorkingMaidList
             public bool IsVoicelessGroup = false;           //True: No Voice in yotogi scene; False: Play Voice according to personality id in yotogi scene

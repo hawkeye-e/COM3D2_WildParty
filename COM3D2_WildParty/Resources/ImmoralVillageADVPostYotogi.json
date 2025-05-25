@@ -1,0 +1,1667 @@
+{
+  "imvi_postyotogi_init": {
+    "ID": "imvi_postyotogi_init",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "SystemFadeOut",
+    "NextStepID": "imvi_postyotogi_init_a"
+  },
+
+  "imvi_postyotogi_init_a": {
+    "ID": "imvi_postyotogi_init_a",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_postyotogi_init_b"
+  },
+
+  "imvi_postyotogi_init_b": {
+    "ID": "imvi_postyotogi_init_b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_postyotogi_init_c",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-4.76, 1.50, 0.58",
+        "TargetPosString": "2.39, -0.12, -2.36",
+        "AroundAngleString": "112.34, 11.84",
+        "Distance": 7.9
+      }
+    }
+  },
+
+  "imvi_postyotogi_init_c": {
+    "ID": "imvi_postyotogi_init_c",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "imvi_postyotogi_init_d"
+  },
+
+  "imvi_postyotogi_init_d": {
+    "ID": "imvi_postyotogi_init_d",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_init_e",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "PosRot": {
+          "PosString": "-0.43, 0.10, -1.17",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 8,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.43, 0.10, -1.17",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 9,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.43, 0.10, -1.17",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "1.10, 0.50, -1.55",
+          "RotString": "0.00000, 0.69323, 0.00000, 0.72071"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "0.91, 0.50, -2.56",
+          "RotString": "0, 0.908, 0, 0.419"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.83, 0.50, -0.94",
+          "RotString": "0, 0.642, 0, -0.766"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.75, 0.50, -1.89",
+          "RotString": "0, 0.825, 0, -0.565"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "0.86, 0.50, -0.59",
+          "RotString": "0, 0.467, 0, 0.884"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.66, 0.50, -2.74",
+          "RotString": "0, 0.914, 0, -0.406"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.82, 0.50, 0.00",
+          "RotString": "0, 0.440, 0, -0.898"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "0.71, 0.50, 0.54",
+          "RotString": "0, 0.450, 0, 0.893"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 10,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-0.97, 0.00, -4.09",
+          "RotString": "0, 0.084, 0, 0.996"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 11,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "0.33, 0.00, -4.10",
+          "RotString": "0, -0.123, 0, 0.992"
+        }
+      },
+
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち口元に手を当てる"
+        },
+        "PosRot": {
+          "PosString": "3.05, 0.00, -2.02",
+          "RotString": "0, -0.666, 0, 0.746"
+        }
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち考える"
+        },
+        "PosRot": {
+          "PosString": "2.37, 0.00, -3.12",
+          "RotString": "0, -0.424, 0, 0.906"
+        }
+      }
+
+
+    ]
+  },
+
+
+  "imvi_postyotogi_init_e": {
+    "ID": "imvi_postyotogi_init_e",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_postyotogi_init_f",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 8
+        },
+        "Man2": {
+          "Type": "M",
+          "ArrayPosition": 9
+        },
+        "Maid1": {
+          "Type": "F",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "imvi_postyotogi_init_f": {
+    "ID": "imvi_postyotogi_init_f",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0001",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana_kakae_sex.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 127,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮３",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "Man2": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-0.43, 0.10, -1.17",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0001": {
+    "ID": "imvi_postyotogi_0001",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]は男の子たちに性交を教え続けている。彼女は心をこめて教え、いろんな体位を経験させる。男の子たちに、奉仕や乱交など、さまざまなセックスプレイを試させた。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_postyotogi_0002": {
+    "ID": "imvi_postyotogi_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（男の子たちに最高の快感を覚えさせ、そして将来はいろんな女と交尾を続け、女を悦ばせ、孕ませやすくになるだろう。）"
+    }
+  },
+
+  "imvi_postyotogi_0003": {
+    "ID": "imvi_postyotogi_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（別室の指導は終わったみたい。そこの女や男の子たちがこの部屋にきて、一緒に[=Name,Maid,0,CallName]の指導を見ている。）"
+    }
+  },
+
+  "imvi_postyotogi_0004": {
+    "ID": "imvi_postyotogi_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0005",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（玉を空っぽにしたばかりの男の子たちは、目の前の光景を見て再び興奮し、[=Name,Maid,0,CallName]との交尾に加わった。）"
+    }
+  },
+
+  "imvi_postyotogi_0005": {
+    "ID": "imvi_postyotogi_0005",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0006",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（さっきまで女の裸を知らなかった男の子たちは、次第に女性の体に順応し、早漏ではなくなった。）"
+    }
+  },
+
+  "imvi_postyotogi_0006": {
+    "ID": "imvi_postyotogi_0006",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0007_camperapan",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そんな子たちのチンポは、[=Name,Maid,0,CallName]をますます感じさせ、ついに発情し、ただのメスになった。）"
+    }
+  },
+
+  "imvi_postyotogi_0007_camperapan": {
+    "ID": "imvi_postyotogi_0007_camperapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "imvi_postyotogi_0008",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-1.79, 1.58, -0.38",
+        "TargetPosString": "1.42, -0.66, -2.79",
+        "AroundAngleString": "127.01, 29.23",
+        "Distance": 4.6
+      },
+      "AnimationTime": 0.5
+    }
+  },
+
+  "imvi_postyotogi_0008": {
+    "ID": "imvi_postyotogi_0008",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0009_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子８",
+      "Text": "[=Name,Maid,0,CallName]お姉ちゃん、どう？僕の腰使いは？"
+    }
+  },
+
+  "imvi_postyotogi_0009_Branch": {
+    "ID": "imvi_postyotogi_0009_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_postyotogi_0010_M_[=PType]"
+  },
+
+  "imvi_postyotogi_0011": {
+    "ID": "imvi_postyotogi_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0012_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子９",
+      "Text": "[=Name,Maid,0,CallName]ねーちゃん、僕たちのおちんちん、すごく感じるでしょ？ねぇ？ねえ？"
+    }
+  },
+
+  "imvi_postyotogi_0012_Branch": {
+    "ID": "imvi_postyotogi_0012_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_postyotogi_0020_M_[=PType]"
+  },
+
+  "imvi_postyotogi_0021": {
+    "ID": "imvi_postyotogi_0021",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0022",
+    "TalkData": {
+      "SpeakerName": "男の子８",
+      "Text": "さっきよりキツイ…！お姉ちゃん…お姉ちゃん…！僕の精子…受け取ってぇー！"
+    }
+  },
+
+  "imvi_postyotogi_0022": {
+    "ID": "imvi_postyotogi_0022",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0023",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana_kakae_sex.ks",
+        "ScriptLabel": "*射精中",
+        "SexPosID": 127,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0023": {
+    "ID": "imvi_postyotogi_0023",
+    "Type": "AddTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_postyotogi_0024_Branch",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F",
+        "IndexPosition": 0,
+        "BodyTarget": [ "Vagina", "Vagina" ]
+      }
+    ]
+  },
+
+
+  "imvi_postyotogi_0024_Branch": {
+    "ID": "imvi_postyotogi_0024_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_postyotogi_0030_M_[=PType]"
+  },
+
+  "imvi_postyotogi_0031": {
+    "ID": "imvi_postyotogi_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0032",
+    "TalkData": {
+      "SpeakerName": "男の子１０",
+      "Text": "おい、次だ次だ。僕たちの番だ。"
+    }
+  },
+
+  "imvi_postyotogi_0032": {
+    "ID": "imvi_postyotogi_0032",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_postyotogi_0033",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_postyotogi_0033": {
+    "ID": "imvi_postyotogi_0033",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "imvi_postyotogi_0033a"
+  },
+
+
+  "imvi_postyotogi_0033a": {
+    "ID": "imvi_postyotogi_0033a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0033b",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 10,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.43, 0.10, -1.17",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 11,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.43, 0.10, -1.17",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 8,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-0.97, 0.00, -4.09",
+          "RotString": "0, 0.084, 0, 0.996"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 9,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "0.33, 0.00, -4.10",
+          "RotString": "0, -0.123, 0, 0.992"
+        }
+      }
+
+    ]
+  },
+
+
+  "imvi_postyotogi_0033b": {
+    "ID": "imvi_postyotogi_0033b",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_postyotogi_0033c",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 10
+        },
+        "Man2": {
+          "Type": "M",
+          "ArrayPosition": 11
+        },
+        "Maid1": {
+          "Type": "F",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0033c": {
+    "ID": "imvi_postyotogi_0033c",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0034",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 124,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "絶頂射精後２",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "Man2": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-0.43, 0.10, -1.17",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0034": {
+    "ID": "imvi_postyotogi_0034",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0035_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子１１",
+      "Text": "[=Name,Maid,0,CallName]お姉ちゃん、僕まだ射精したい！"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_postyotogi_0035_Branch": {
+    "ID": "imvi_postyotogi_0035_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_postyotogi_0040_M_[=PType]"
+  },
+
+  "imvi_postyotogi_0041": {
+    "ID": "imvi_postyotogi_0041",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0042",
+    "TalkData": {
+      "SpeakerName": "男の子１０",
+      "Text": "よし、拓馬！力合わせて、お姉ちゃんをめちゃくちゃにしよー。"
+    }
+  },
+
+  "imvi_postyotogi_0042": {
+    "ID": "imvi_postyotogi_0042",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0043_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子１１",
+      "Text": "おー！"
+    }
+  },
+
+  "imvi_postyotogi_0043_Branch": {
+    "ID": "imvi_postyotogi_0043_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_postyotogi_0050_M_[=PType]"
+  },
+
+  "imvi_postyotogi_0051": {
+    "ID": "imvi_postyotogi_0051",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_postyotogi_0052",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_postyotogi_0052": {
+    "ID": "imvi_postyotogi_0052",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0053",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 124,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮３",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0053": {
+    "ID": "imvi_postyotogi_0053",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0054",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "FaceAnime": "優しさ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*歩き１登場"
+        },
+        "PosRot": {
+          "PosString": "3.18, 0.00, -1.46",
+          "RotString": "0, -0.760, 0, 0.650"
+        }
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "FaceAnime": "エロ好感２",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち腕を組む"
+        }
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0054": {
+    "ID": "imvi_postyotogi_0054",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_postyotogi_0055",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "3.00, 3.28, 2.10",
+        "TargetPosString": "2.07, 1.17, -1.77",
+        "AroundAngleString": "193.47, 27.99",
+        "Distance": 4.5
+      }
+    }
+  },
+
+  "imvi_postyotogi_0055": {
+    "ID": "imvi_postyotogi_0055",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0056_camperapan",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "お疲れ様ー、どうだった？",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_GP02_00006.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_postyotogi_0056_camperapan": {
+    "ID": "imvi_postyotogi_0056_camperapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "imvi_postyotogi_0056",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-1.09, 1.91, 0.74",
+        "TargetPosString": "1.90, 1.04, -1.93",
+        "AroundAngleString": "131.79, 12.15",
+        "Distance": 2.9
+      },
+      "AnimationTime": 0.5
+    }
+  },
+
+  "imvi_postyotogi_0056": {
+    "ID": "imvi_postyotogi_0056",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0057",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 0,
+      "Text": "ふふーん、夢中になってますなぁ。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U1_00240.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0057": {
+    "ID": "imvi_postyotogi_0057",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0058",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 1,
+      "Text": "そうね。こんなにすごいの初めてだったんだものね。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U7_pen2_00368.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0058": {
+    "ID": "imvi_postyotogi_0058",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0059",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "はは、妻はこういう乱交が得意なんだ。"
+    }
+  },
+
+  "imvi_postyotogi_0059": {
+    "ID": "imvi_postyotogi_0059",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0060",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "まぁ、こんなたくさんの男の子とヤるのは初めてかも。"
+    }
+  },
+
+  "imvi_postyotogi_0060": {
+    "ID": "imvi_postyotogi_0060",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0061",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 1,
+      "Text": "ふうん。なら、素質があるのかも。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U7_pen2_00242.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0061": {
+    "ID": "imvi_postyotogi_0061",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0062",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "かもな。童貞たちを筆おろしできると知ってる時、彼女はとても興奮した。"
+    }
+  },
+
+  "imvi_postyotogi_0062": {
+    "ID": "imvi_postyotogi_0062",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0063",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0063": {
+    "ID": "imvi_postyotogi_0063",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0064",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 0,
+      "Text": "やっぱりわかる人にはわかるんだな～！",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U1_00056.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0064": {
+    "ID": "imvi_postyotogi_0064",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0065",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頷く"
+        }
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0065": {
+    "ID": "imvi_postyotogi_0065",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0066",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "そこがあの子の良い所ですね。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00248.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0066": {
+    "ID": "imvi_postyotogi_0066",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_postyotogi_0066a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_postyotogi_0066a": {
+    "ID": "imvi_postyotogi_0066a",
+    "Type": "BGM",
+    "Tag": "BGM019.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_postyotogi_0067"
+  },
+
+  "imvi_postyotogi_0067": {
+    "ID": "imvi_postyotogi_0067",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "imvi_postyotogi_0068"
+  },
+
+  "imvi_postyotogi_0068": {
+    "ID": "imvi_postyotogi_0068",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0069",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": false
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": false
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 1,
+        "Visible": false
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": false
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0069": {
+    "ID": "imvi_postyotogi_0069",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0070",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.57, 0.00, 3.78",
+          "RotString": "0, 0.999, 0, 0.01"
+        },
+        "MotionInfo": {
+          "MotionFile": "man_ohayo.anm",
+          "MotionTag": "man_ohayo.anm"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "ExtraObjectsInfo": {
+          "RemoveObjects": [ "handitem" ]
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "PosRot": {
+          "PosString": "-0.76, 0.03, 3.49",
+          "RotString": "0, -0.039, 0, 0.999"
+        },
+        "MotionInfo": {
+          "MotionFile": "sit_tukue.anm",
+          "MotionTag": "sit_tukue.anm"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "mp_arai_taiki_m.anm",
+          "MotionTag": "mp_arai_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "1.69, 0.00, 0.00",
+          "RotString": "0, -0.290, 0, 0.957"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "mp_arai_taiki_m.anm",
+          "MotionTag": "mp_arai_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-0.17, 0.13, -1.04",
+          "RotString": "0, 0.338, 0, 0.941"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "mp_arai_taiki_m.anm",
+          "MotionTag": "mp_arai_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-2.08, 0.00, -0.90",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "mp_arai_taiki_m.anm",
+          "MotionTag": "mp_arai_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "0.00, 0.00, 1.69",
+          "RotString": "0, -0.640, 0, 0.769"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "mp_arai_taiki_m.anm",
+          "MotionTag": "mp_arai_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-3.29, 0.00, 0.97",
+          "RotString": "0, 0.925, 0, 0.380"
+        }
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0070": {
+    "ID": "imvi_postyotogi_0070",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_postyotogi_0071",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-3.98, 1.68, 6.39",
+        "TargetPosString": "-1.05, 0.37, 2.95",
+        "AroundAngleString": "139.58, 16.19",
+        "Distance": 4.7
+      }
+    }
+  },
+
+  "imvi_postyotogi_0071": {
+    "ID": "imvi_postyotogi_0071",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0072",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（数時間後、男の子たちはようやく疲れ果ててやめた。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_postyotogi_0072": {
+    "ID": "imvi_postyotogi_0072",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0073",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（みんな幸せそうな笑顔で横になっている。）"
+    }
+  },
+
+  "imvi_postyotogi_0073": {
+    "ID": "imvi_postyotogi_0073",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0074",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は[=Name,Maid,0,CallName]の近くに行き、話しかける。）"
+    }
+  },
+
+  "imvi_postyotogi_0074": {
+    "ID": "imvi_postyotogi_0074",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0075_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,Maid,0,CallName]、お疲れ。"
+    }
+  },
+
+  "imvi_postyotogi_0075_Branch": {
+    "ID": "imvi_postyotogi_0075_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_postyotogi_0080_M_[=PType]"
+  },
+
+  "imvi_postyotogi_0081": {
+    "ID": "imvi_postyotogi_0081",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0082",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "よくやってね。見ているだけでもとても気持ちがいい。"
+    }
+  },
+
+  "imvi_postyotogi_0082": {
+    "ID": "imvi_postyotogi_0082",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0083_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "風呂に入りたい？準備しておくよ。"
+    }
+  },
+
+  "imvi_postyotogi_0083_Branch": {
+    "ID": "imvi_postyotogi_0083_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_postyotogi_0090_M_[=PType]"
+  },
+
+  "imvi_postyotogi_0091": {
+    "ID": "imvi_postyotogi_0091",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0092",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "そうか。"
+    }
+  },
+
+  "imvi_postyotogi_0092": {
+    "ID": "imvi_postyotogi_0092",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_postyotogi_0093",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_postyotogi_0093": {
+    "ID": "imvi_postyotogi_0093",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0094",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.57, 0.00, 3.57",
+          "RotString": "0, 0, 0, 1"
+        },
+        "MotionInfo": {
+          "MotionFile": "man_suwarimati1.anm",
+          "MotionTag": "man_suwarimati1.anm"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 7
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 7
+          }
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "man_tati_seigan_m.anm",
+          "MotionTag": "man_tati_seigan_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-0.52, -0.49, 5.13",
+          "RotString": "0, 0.986, 0, -0.168"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "man_tati_seigan_m.anm",
+          "MotionTag": "man_tati_seigan_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-2.25, -0.49, 5.13",
+          "RotString": "0, 0.968, 0, 0.252"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "man_tati_seigan_m.anm",
+          "MotionTag": "man_tati_seigan_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.33, -0.49, 5.13",
+          "RotString": "0, -0.997, 0, -0.076"
+        }
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0094": {
+    "ID": "imvi_postyotogi_0094",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_postyotogi_0095",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.52, 2.54, 7.49",
+        "TargetPosString": "-0.67, -0.12, 3.47",
+        "AroundAngleString": "168.02, 32.96",
+        "Distance": 4.9
+      }
+    }
+  },
+
+  "imvi_postyotogi_0095": {
+    "ID": "imvi_postyotogi_0095",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0096",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "お姉ちゃん！"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_postyotogi_0096": {
+    "ID": "imvi_postyotogi_0096",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0097",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "僕いい子にするから、また来てね！"
+    }
+  },
+
+  "imvi_postyotogi_0097": {
+    "ID": "imvi_postyotogi_0097",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0098_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "お姉ちゃんがここに戻ってきたら、僕はきっともっとうまくなるよ。その時までにまだ一緒にヤろうよ。"
+    }
+  },
+
+  "imvi_postyotogi_0098_Branch": {
+    "ID": "imvi_postyotogi_0098_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_postyotogi_0100_M_[=PType]"
+  },
+
+  "imvi_postyotogi_0101": {
+    "ID": "imvi_postyotogi_0101",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0102",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "まったく…お前ら、人の奥さんに何を言っているんだ？"
+    }
+  },
+
+  "imvi_postyotogi_0102": {
+    "ID": "imvi_postyotogi_0102",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0103",
+    "TalkData": {
+      "SpeakerName": "男の子２",
+      "Text": "[=ClubOwnerName]さん、もし今度来るときに僕が彼女ができたら、一緒にしようよ。"
+    }
+  },
+
+  "imvi_postyotogi_0103": {
+    "ID": "imvi_postyotogi_0103",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0104_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ふーん。面白い提案じゃないか。よし、乗った。"
+    }
+  },
+
+  "imvi_postyotogi_0104_Branch": {
+    "ID": "imvi_postyotogi_0104_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_postyotogi_0110_M_[=PType]"
+  },
+
+  "imvi_postyotogi_0111": {
+    "ID": "imvi_postyotogi_0111",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_postyotogi_0112",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_postyotogi_0112": {
+    "ID": "imvi_postyotogi_0112",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_postyotogi_0113",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.38, 2.65, 4.77",
+        "TargetPosString": "-1.02, 2.98, 5.12",
+        "AroundAngleString": "44.55, -33.19",
+        "Distance": 0.6
+      },
+      "LockCamera": { "IsLock": true }
+    }
+  },
+
+  "imvi_postyotogi_0113": {
+    "ID": "imvi_postyotogi_0113",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0114",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（こうして旅行２日目が終わった。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_postyotogi_0114": {
+    "ID": "imvi_postyotogi_0114",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0115",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（本当に楽しい祭りだった。俺と[=Name,Maid,0,CallName]は満足げな笑顔で宿屋に戻った。）"
+    }
+  },
+
+  "imvi_postyotogi_0115": {
+    "ID": "imvi_postyotogi_0115",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_end",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（エンパイアクラブ戻る前に、もっと楽しいことがあるならいいなー。そう思ったらぐっすり眠った。）"
+    }
+  },
+
+
+
+
+  "imvi_end": {
+    "ID": "imvi_end",
+    "Type": "Special",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_end_reset_camera",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_end_reset_camera": {
+    "ID": "imvi_end_reset_camera",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_end2",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.38, 2.65, 4.77",
+        "TargetPosString": "-1.02, 2.98, 5.12",
+        "AroundAngleString": "44.55, -33.19",
+        "Distance": 0.6
+      },
+      "LockCamera": { "IsLock": false }
+    }
+  },
+
+  "imvi_end2": {
+    "ID": "imvi_end2",
+    "Type": "ADVEnd",
+    "WaitingType": "End"
+  }
+}

@@ -26,6 +26,9 @@ namespace COM3D2.WildParty.Plugin
         internal static bool DebugCaptureDialogues { get { return _debugCaptureDialogues.Value; } }
         private static ConfigEntry<bool> _debugCaptureDialogues;
 
+        internal static bool DebugIgnoreADVForceTimeWait { get { return _debugIgnoreADVForceTimeWait.Value; } }
+        private static ConfigEntry<bool> _debugIgnoreADVForceTimeWait;
+
         internal static int MaxInitialRandomExciteValue { get { return _maxInitialRandomExciteValue.Value; } }
         private static ConfigEntry<int> _maxInitialRandomExciteValue;
 
@@ -169,6 +172,8 @@ namespace COM3D2.WildParty.Plugin
             _debugLogMotionData = plugin.Config.Bind(DEVELOPER, "Log Motion Data", false, "Leave this unchecked if you have no idea what it is");
 
             _debugCaptureDialogues = plugin.Config.Bind(DEVELOPER, "Log All Dialogues", false, "Leave this unchecked if you have no idea what it is");
+
+            _debugIgnoreADVForceTimeWait = plugin.Config.Bind(DEVELOPER, "Ingore ADV Time Wait Setting", false, "Skip all those time wait setting in ADV to speed up the debug process. Leave this unchecked if you have no idea what it is");
         }
 
         private static void AddYotogiSettingConfigs(BaseUnityPlugin plugin)

@@ -156,6 +156,16 @@ namespace COM3D2.WildParty.Plugin.Core
                         if (StateManager.Instance.YotogiWorkingMaidList.Count > item.ArrayPosition)
                             targetMaid = StateManager.Instance.YotogiWorkingManList[item.ArrayPosition];
                     }
+                    else if (item.Type == Constant.IndividualCoordinateType.ADVMaid)
+                    {
+                        if (StateManager.Instance.SelectedMaidsList.Count > item.ArrayPosition)
+                            targetMaid = StateManager.Instance.SelectedMaidsList[item.ArrayPosition];
+                    }
+                    else if (item.Type == Constant.IndividualCoordinateType.ADVMan)
+                    {
+                        if (StateManager.Instance.MenList.Count > item.ArrayPosition)
+                            targetMaid = StateManager.Instance.MenList[item.ArrayPosition];
+                    }
                     else if (item.Type == Constant.IndividualCoordinateType.NPCMale)
                     {
                         if (StateManager.Instance.NPCManList.Count > item.ArrayPosition)
@@ -168,7 +178,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     }
                     else if (item.Type == Constant.IndividualCoordinateType.Owner)
                         targetMaid = StateManager.Instance.ClubOwner;
-                    
+
 
                     if(targetMaid != null)
                     {
@@ -320,6 +330,16 @@ namespace COM3D2.WildParty.Plugin.Core
                     {
                         if (StateManager.Instance.YotogiWorkingMaidList.Count > item.ArrayPosition)
                             targetMaid = StateManager.Instance.YotogiWorkingManList[item.ArrayPosition];
+                    }
+                    else if (item.Type == Constant.IndividualCoordinateType.ADVMaid)
+                    {
+                        if (StateManager.Instance.SelectedMaidsList.Count > item.ArrayPosition)
+                            targetMaid = StateManager.Instance.SelectedMaidsList[item.ArrayPosition];
+                    }
+                    else if (item.Type == Constant.IndividualCoordinateType.ADVMan)
+                    {
+                        if (StateManager.Instance.MenList.Count > item.ArrayPosition)
+                            targetMaid = StateManager.Instance.MenList[item.ArrayPosition];
                     }
                     else if (item.Type == Constant.IndividualCoordinateType.NPCMale)
                     {

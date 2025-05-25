@@ -1,0 +1,1871 @@
+{
+  "imvi_phase2_init": {
+    "ID": "imvi_phase2_init",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "SystemFadeOut",
+    "NextStepID": "imvi_phase2_init_a"
+  },
+
+  "imvi_phase2_init_a": {
+    "ID": "imvi_phase2_init_a",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase2_init_b"
+  },
+
+  "imvi_phase2_init_b": {
+    "ID": "imvi_phase2_init_b",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "imvi_phase2_init_c"
+  },
+
+  "imvi_phase2_init_c": {
+    "ID": "imvi_phase2_init_c",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_init_d",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "PosRot": {
+          "PosString": "-0.43, 0.10, -1.17",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.43, 0.10, -1.17",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "0.91, 0.50, -2.56",
+          "RotString": "0, 0.908, 0, 0.419"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.83, 0.50, -0.94",
+          "RotString": "0, 0.642, 0, -0.766"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.75, 0.50, -1.89",
+          "RotString": "0, 0.825, 0, -0.565"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "0.86, 0.50, -0.59",
+          "RotString": "0, 0.467, 0, 0.884"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.66, 0.50, -2.74",
+          "RotString": "0, 0.914, 0, -0.406"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.82, 0.50, 0.00",
+          "RotString": "0, 0.440, 0, -0.898"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "0.98, 0.50, 1.95",
+          "RotString": "0, 0.901, 0, 0.434"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase2_init_d": {
+    "ID": "imvi_phase2_init_d",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase2_init_e",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 0
+        },
+        "Maid1": {
+          "Type": "F",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "imvi_phase2_init_e": {
+    "ID": "imvi_phase2_init_e",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_init_f",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_amayakasi_taimen_sex.ks",
+        "ScriptLabel": "*激しさ２キス",
+        "SexPosID": 2,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "接吻",
+          "FaceBlend": "頬１涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-0.43, 0.10, -1.17",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase2_init_f": {
+    "ID": "imvi_phase2_init_f",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase2_0001",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-5.48, 2.15, 0.19",
+        "TargetPosString": "-0.33, 0.73, -1.13",
+        "AroundAngleString": "104.37, 14.95",
+        "Distance": 5.5
+      }
+    }
+  },
+
+
+  "imvi_phase2_0001": {
+    "ID": "imvi_phase2_0001",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0002_camperapan",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]は男の子たちに奉仕し、性行為のやり方を教え続ける。彼女と男の子たちは仲良くなり始め、そして男の子たちは交尾に徐々に慣れていく。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_phase2_0002_camperapan": {
+    "ID": "imvi_phase2_0002_camperapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "imvi_phase2_0003",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-1.29, 1.22, 0.20",
+        "TargetPosString": "0.39, 0.83, 1.00",
+        "AroundAngleString": "64.25, 11.84",
+        "Distance": 1.9
+      }
+    }
+  },
+
+  "imvi_phase2_0003": {
+    "ID": "imvi_phase2_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（でも、１人だけずっと座っている男の子がいる。恥ずかしがり屋なのかもしれない。）"
+    }
+  },
+
+  "imvi_phase2_0004": {
+    "ID": "imvi_phase2_0004",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_phase2_0005",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_phase2_0005": {
+    "ID": "imvi_phase2_0005",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0005a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "苦笑い",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち考える"
+        },
+        "PosRot": {
+          "PosString": "0.84, 0.00, 2.03",
+          "RotString": "0, 0.972, 0, 0.233"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 7
+          }
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "1.10, 0.50, -1.55",
+          "RotString": "0, 0.693, 0, 0.721"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase2_0005a": {
+    "ID": "imvi_phase2_0005a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase2_0006",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "0.81, 1.08, -0.96",
+        "TargetPosString": "1.02, 0.77, 1.72",
+        "AroundAngleString": "4.37, 6.56",
+        "Distance": 2.7
+      }
+    }
+  },
+
+  "imvi_phase2_0006": {
+    "ID": "imvi_phase2_0006",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0007_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]はその内気な男の子の前に歩いていく。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_phase2_0007_Branch": {
+    "ID": "imvi_phase2_0007_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0010_T_[=PType]"
+  },
+
+  "imvi_phase2_0012": {
+    "ID": "imvi_phase2_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0013_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子７",
+      "Text": "ほっ…ほっといてくれ！"
+    }
+  },
+
+  "imvi_phase2_0013_Branch": {
+    "ID": "imvi_phase2_0013_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0020_M_[=PType]"
+  },
+
+  "imvi_phase2_0021": {
+    "ID": "imvi_phase2_0021",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0022_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子７",
+      "Text": "し…知るか！こんな事は愛する二人だけでやるべきことだ！だからダメなんだ！"
+    }
+  },
+
+  "imvi_phase2_0022_Branch": {
+    "ID": "imvi_phase2_0022_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0030_M_[=PType]"
+  },
+
+  "imvi_phase2_0031": {
+    "ID": "imvi_phase2_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0032",
+    "TalkData": {
+      "SpeakerName": "男の子７",
+      "Text": "俺とお前は恋人じゃない！そんなことをするのは間違っている！そもそも興味はない！"
+    }
+  },
+
+  "imvi_phase2_0032": {
+    "ID": "imvi_phase2_0032",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0033",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "引きつり笑顔",
+        "MotionInfo": {
+          "CustomMotionFile": "wp_mod_maid_knee_stare_penis.anm",
+          "MotionTag": "wp_mod_maid_knee_stare_penis.anm"
+        },
+        "PosRot": {
+          "PosString": "0.84, 0.10, 2.03",
+          "RotString": "0, 0.972, 0, 0.233"
+        },
+        "SmoothMovement": { "Time": 0.3 }
+      }
+    ]
+  },
+
+  "imvi_phase2_0033": {
+    "ID": "imvi_phase2_0033",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0034_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]はその男の子のチンポを見つめる。）"
+    }
+  },
+
+  "imvi_phase2_0034_Branch": {
+    "ID": "imvi_phase2_0034_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0040_T_[=PType]"
+  },
+
+  "imvi_phase2_0041": {
+    "ID": "imvi_phase2_0041",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0042",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "CustomMotionFile": "wp_mod_motion_man_seiza_hide_penis.anm",
+          "MotionTag": "wp_mod_motion_man_seiza_hide_penis.anm",
+          "IsBlend": false
+        },
+        "PosRot": {
+          "PosString": "1.47, 0.10, 1.46",
+          "RotString": "0, 0.939, 0, 0.342"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase2_0042": {
+    "ID": "imvi_phase2_0042",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0043",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（その子は慌ててチンポを手で隠そうとする。）"
+    }
+  },
+
+  "imvi_phase2_0043": {
+    "ID": "imvi_phase2_0043",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0044_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子７",
+      "Text": "ちがうちがう…！これは……"
+    }
+  },
+
+  "imvi_phase2_0044_Branch": {
+    "ID": "imvi_phase2_0044_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0050_M_[=PType]"
+  },
+
+
+
+  "imvi_phase2_0051": {
+    "ID": "imvi_phase2_0051",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0051a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "PosRot": {
+          "PosString": "1.11, 0.10, 1.54",
+          "RotString": "0, 0.866, 0, 0.500"
+        },
+        "SmoothMovement": { "Time": 0.3 },
+        "MotionInfo": {
+          "MotionFile": "OM_tekoki_taiki_f.anm",
+          "MotionTag": "om_tekoki_taiki_f.anm"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "OM_tekoki_taiki_m.anm",
+          "MotionTag": "om_tekoki_taiki_m.anm",
+          "IsBlend": false
+        },
+        "PosRot": {
+          "PosString": "1.11, 0.10, 1.54",
+          "RotString": "0, 0.866, 0, 0.500"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase2_0051a": {
+    "ID": "imvi_phase2_0051a",
+    "Type": "TimeWait",
+    "Tag": "0.3",
+    "WaitingType": "TimeWait",
+    "NextStepID": "imvi_phase2_0051b_camperapan"
+  },
+
+  "imvi_phase2_0051b_camperapan": {
+    "ID": "imvi_phase2_0051b_camperapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "imvi_phase2_0051b",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-0.12, 1.57, -1.19",
+        "TargetPosString": "1.08, 1.00, 1.73",
+        "AroundAngleString": "22.33, 10.29",
+        "Distance": 3.2
+      },
+      "AnimationTime": 0.5
+    }
+  },
+
+
+
+  "imvi_phase2_0051b": {
+    "ID": "imvi_phase2_0051b",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase2_0051c",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 7
+        },
+        "Maid1": {
+          "Type": "F",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "imvi_phase2_0051c": {
+    "ID": "imvi_phase2_0051c",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0052",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_tekoki.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 119,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "優しさ",
+          "FaceBlend": "頬１涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "1.11, 0.10, 1.54",
+          "RotString": "0, 0.866, 0, 0.500"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase2_0052": {
+    "ID": "imvi_phase2_0052",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0053",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（その子は立ち上がって離れようとするが、[=Name,Maid,0,CallName]は彼のチンポを優しく握り、こすり始める。）"
+    }
+  },
+
+  "imvi_phase2_0053": {
+    "ID": "imvi_phase2_0053",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0054_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子７",
+      "Text": "離れせ！……あっ…はぅ…あ…あ…あっ…"
+    }
+  },
+
+  "imvi_phase2_0054_Branch": {
+    "ID": "imvi_phase2_0054_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0060_M_[=PType]"
+  },
+
+  "imvi_phase2_0061": {
+    "ID": "imvi_phase2_0061",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0062",
+    "TalkData": {
+      "SpeakerName": "男の子７",
+      "Text": "はぁ……な…なんでもォ……ないィ……はぅ…あうッ！"
+    }
+  },
+
+  "imvi_phase2_0062": {
+    "ID": "imvi_phase2_0062",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0063_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_tekoki.ks",
+        "ScriptLabel": "*玉弄り",
+        "SexPosID": 119,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase2_0063_Branch": {
+    "ID": "imvi_phase2_0063_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0070_M_[=PType]"
+  },
+
+  "imvi_phase2_0071": {
+    "ID": "imvi_phase2_0071",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0072",
+    "TalkData": {
+      "SpeakerName": "男の子７",
+      "Text": "はぁ……はぁ……もうやめろ！これは…結婚した女性が……すべきことじゃない……！"
+    }
+  },
+
+  "imvi_phase2_0072": {
+    "ID": "imvi_phase2_0072",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0073_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_tekoki.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 119,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase2_0073_Branch": {
+    "ID": "imvi_phase2_0073_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0080_M_[=PType]"
+  },
+
+  "imvi_phase2_0081": {
+    "ID": "imvi_phase2_0081",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0082_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_paizuri.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 117,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase2_0082_Branch": {
+    "ID": "imvi_phase2_0082_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0090_M_[=PType]"
+  },
+
+  "imvi_phase2_0091": {
+    "ID": "imvi_phase2_0091",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0092",
+    "TalkData": {
+      "SpeakerName": "男の子７",
+      "Text": "うッ……あっ……こんなことを…するのは……だめだ……"
+    }
+  },
+
+  "imvi_phase2_0092": {
+    "ID": "imvi_phase2_0092",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0093_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_paizuri.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 117,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase2_0093_Branch": {
+    "ID": "imvi_phase2_0093_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0100_M_[=PType]"
+  },
+
+  "imvi_phase2_0101": {
+    "ID": "imvi_phase2_0101",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0102_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子７",
+      "Text": "あッ……はッ……ううッ…！"
+    }
+  },
+
+  "imvi_phase2_0102_Branch": {
+    "ID": "imvi_phase2_0102_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0110_M_[=PType]"
+  },
+
+  "imvi_phase2_0111": {
+    "ID": "imvi_phase2_0111",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0112",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_paizuri_fera.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 118,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロフェラ快楽",
+          "FaceBlend": "頬１涙０"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase2_0112": {
+    "ID": "imvi_phase2_0112",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0113",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "もう認めろよ、翔太。[=Name,Maid,0,CallName]お姉ちゃんはキレイだし、君もめっちゃ気持ちいいだろう！"
+    }
+  },
+
+  "imvi_phase2_0113": {
+    "ID": "imvi_phase2_0113",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0114",
+    "TalkData": {
+      "SpeakerName": "男の子３",
+      "Text": "なんでこんな必死に抵抗するのよ、馬鹿かお前。"
+    }
+  },
+
+  "imvi_phase2_0114": {
+    "ID": "imvi_phase2_0114",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0115",
+    "TalkData": {
+      "SpeakerName": "男の子２",
+      "Text": "そうだそうだ！[=Name,Maid,0,CallName]お姉ちゃんを悲しませるな！"
+    }
+  },
+
+  "imvi_phase2_0115": {
+    "ID": "imvi_phase2_0115",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0116",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（周りの男の子たちが翔太くんに責め始める）"
+    }
+  },
+
+  "imvi_phase2_0116": {
+    "ID": "imvi_phase2_0116",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0117_Branch",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "俺は……あッ……あああッ……だめ……あたまが……なにも…考えられない……お…おかしくなっちゃう！"
+    }
+  },
+
+  "imvi_phase2_0117_Branch": {
+    "ID": "imvi_phase2_0117_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0120_M_[=PType]"
+  },
+
+  "imvi_phase2_0121": {
+    "ID": "imvi_phase2_0121",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0122",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "おれは……おれは……あッ……ああぁぁぁぁァァァッーー！"
+    }
+  },
+
+  "imvi_phase2_0122": {
+    "ID": "imvi_phase2_0122",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0123_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_paizuri.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 117,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase2_0123_Branch": {
+    "ID": "imvi_phase2_0123_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0130_M_[=PType]"
+  },
+
+  "imvi_phase2_0131": {
+    "ID": "imvi_phase2_0131",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0132",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_paizuri.ks",
+        "ScriptLabel": "*顔射",
+        "SexPosID": 117,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "にっこり",
+          "FaceBlend": "頬１涙０"
+        },
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "imvi_phase2_0132": {
+    "ID": "imvi_phase2_0132",
+    "Type": "AddTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase2_0133",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F",
+        "IndexPosition": 0,
+        "BodyTarget": [ "Face", "Breast" ]
+      }
+    ]
+  },
+
+  "imvi_phase2_0133": {
+    "ID": "imvi_phase2_0133",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0134_Branch",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "いけない、いけない、イケナイぃぃぃィィィーー！おしっこでちゃうからぁぁーーーっっ！"
+    }
+  },
+
+  "imvi_phase2_0134_Branch": {
+    "ID": "imvi_phase2_0134_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0140_M_[=PType]"
+  },
+
+  "imvi_phase2_0141": {
+    "ID": "imvi_phase2_0141",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0142",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_tekoki.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 119,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "優しさ",
+          "FaceBlend": "頬１涙０"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase2_0142": {
+    "ID": "imvi_phase2_0142",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0143",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "はぁ……はぁ……なんだ…これ……こんな…気持ちいいのは……初めて……"
+    }
+  },
+
+  "imvi_phase2_0143": {
+    "ID": "imvi_phase2_0143",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0144a",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "お…お姉ちゃん……"
+    }
+  },
+
+  "imvi_phase2_0144a": {
+    "ID": "imvi_phase2_0144a",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0144",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_tekoki.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 119,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "微笑み",
+          "FaceBlend": "頬１涙０"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase2_0144": {
+    "ID": "imvi_phase2_0144",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0145",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "ごめんなさい！[=Name,Maid,0,CallName]お姉ちゃん！僕…嘘つきました！"
+    }
+  },
+
+  "imvi_phase2_0145": {
+    "ID": "imvi_phase2_0145",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0146",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "お姉ちゃんのおっぱいが好き、お姉ちゃんのおまんこが好き、お姉ちゃんの体が大好き！お姉ちゃんが部屋に入ってきたとき、僕はすでにお姉ちゃんのすべてが大好きになった！"
+    }
+  },
+
+  "imvi_phase2_0146": {
+    "ID": "imvi_phase2_0146",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0147_Branch",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "ごめん！[=Name,Maid,0,CallName]お姉ちゃん！僕を……許して！"
+    }
+  },
+
+  "imvi_phase2_0147_Branch": {
+    "ID": "imvi_phase2_0147_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0150_M_[=PType]"
+  },
+
+  "imvi_phase2_0151": {
+    "ID": "imvi_phase2_0151",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0152",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "お姉ちゃん、僕はもっとお姉ちゃんに触れたい……お願い…！"
+    }
+  },
+
+  "imvi_phase2_0152": {
+    "ID": "imvi_phase2_0152",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0153",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "僕はあれを考えるのを止められない。みんなと同じように、お姉ちゃんとセックスしたいんだ！お姉ちゃんを見るとおちんちんがもう抑えられない！"
+    }
+  },
+
+  "imvi_phase2_0153": {
+    "ID": "imvi_phase2_0153",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0154_Branch",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "ねぇ…ねぇ…[=Name,Maid,0,CallName]お姉ちゃん…お願い！…僕と交尾して欲しい！"
+    }
+  },
+
+  "imvi_phase2_0154_Branch": {
+    "ID": "imvi_phase2_0154_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0160_M_[=PType]"
+  },
+
+  "imvi_phase2_0161": {
+    "ID": "imvi_phase2_0161",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0162",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "は…はい！お姉ちゃん、ありがとう！僕いい子だよ、めっちゃいい子だよ！"
+    }
+  },
+
+  "imvi_phase2_0162": {
+    "ID": "imvi_phase2_0162",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_phase2_0163",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_phase2_0163": {
+    "ID": "imvi_phase2_0163",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0164",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "優しさ",
+          "FaceBlend": "頬１涙０"
+        },
+        "PosRot": {
+          "PosString": "-0.43, 0.10, -1.17",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase2_0164": {
+    "ID": "imvi_phase2_0164",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase2_0165",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "0.82, 2.07, -0.06",
+        "TargetPosString": "0.05, 0.82, -0.92",
+        "AroundAngleString": "221.74, 47.56",
+        "Distance": 1.7
+      }
+    }
+  },
+
+  "imvi_phase2_0165": {
+    "ID": "imvi_phase2_0165",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0166_Branch",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "お姉ちゃん…"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_phase2_0166_Branch": {
+    "ID": "imvi_phase2_0166_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0170_M_[=PType]"
+  },
+
+  "imvi_phase2_0171": {
+    "ID": "imvi_phase2_0171",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0172",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "お姉ちゃん…[=Name,Maid,0,CallName]お姉ちゃん！"
+    }
+  },
+
+  "imvi_phase2_0172": {
+    "ID": "imvi_phase2_0172",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0173",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*挿入",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ好感２",
+          "FaceBlend": "頬１涙０"
+        },
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "imvi_phase2_0173": {
+    "ID": "imvi_phase2_0173",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0174",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "は…入ってる…！僕は大好きな[=Name,Maid,0,CallName]お姉ちゃんの体の中にいる！"
+    }
+  },
+
+  "imvi_phase2_0174": {
+    "ID": "imvi_phase2_0174",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0175_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 101,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase2_0175_Branch": {
+    "ID": "imvi_phase2_0175_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0180_M_[=PType]"
+  },
+
+  "imvi_phase2_0181": {
+    "ID": "imvi_phase2_0181",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0182_Branch",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "す…すごい…あっ…あっ…ヌルヌルが…ヌルヌルが……すき…すきぃ…！"
+    }
+  },
+
+  "imvi_phase2_0182_Branch": {
+    "ID": "imvi_phase2_0182_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0190_M_[=PType]"
+  },
+
+  "imvi_phase2_0191": {
+    "ID": "imvi_phase2_0191",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0192",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "う…うん！僕は…[=Name,Maid,0,CallName]お姉ちゃんの…いい子だから……お姉ちゃんの…言うことは……なんでも聞くよ！"
+    }
+  },
+
+  "imvi_phase2_0192": {
+    "ID": "imvi_phase2_0192",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0193_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 101,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase2_0193_Branch": {
+    "ID": "imvi_phase2_0193_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0200_M_[=PType]"
+  },
+
+  "imvi_phase2_0201": {
+    "ID": "imvi_phase2_0201",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0202",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 101,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase2_0202": {
+    "ID": "imvi_phase2_0202",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0203",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "わ…わかった、お姉ちゃん！…こう？…こう？お姉ちゃんのため…僕…なんでもする…！"
+    }
+  },
+
+  "imvi_phase2_0203": {
+    "ID": "imvi_phase2_0203",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0204_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*抱き付き激しさ３",
+        "SexPosID": 102,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase2_0204_Branch": {
+    "ID": "imvi_phase2_0204_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0210_M_[=PType]"
+  },
+
+  "imvi_phase2_0211": {
+    "ID": "imvi_phase2_0211",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0212_Branch",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "お姉ちゃん！お姉ちゃんのおまんこは…すごい！腰が…止められない！あっ…！あああっ…！"
+    }
+  },
+
+  "imvi_phase2_0212_Branch": {
+    "ID": "imvi_phase2_0212_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0220_M_[=PType]"
+  },
+
+  "imvi_phase2_0221": {
+    "ID": "imvi_phase2_0221",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0222_Branch",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "うっ…お姉ちゃん…僕…もう我慢…はっ…あっ…！"
+    }
+  },
+
+  "imvi_phase2_0222_Branch": {
+    "ID": "imvi_phase2_0222_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0230_M_[=PType]"
+  },
+
+  "imvi_phase2_0231": {
+    "ID": "imvi_phase2_0231",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0232",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*抱き付き射精中",
+        "SexPosID": 102,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "imvi_phase2_0232": {
+    "ID": "imvi_phase2_0232",
+    "Type": "AddTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase2_0233",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F",
+        "IndexPosition": 0,
+        "BodyTarget": [ "Vagina" ]
+      }
+    ]
+  },
+
+  "imvi_phase2_0233": {
+    "ID": "imvi_phase2_0233",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0234",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "出るぅぅぅーー！"
+    }
+  },
+
+  "imvi_phase2_0234": {
+    "ID": "imvi_phase2_0234",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0235",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "ごめん、お姉ちゃん……僕…もっと頑張れば…"
+    }
+  },
+
+  "imvi_phase2_0235": {
+    "ID": "imvi_phase2_0235",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0236_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 102,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase2_0236_Branch": {
+    "ID": "imvi_phase2_0236_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0240_M_[=PType]"
+  },
+
+  "imvi_phase2_0241": {
+    "ID": "imvi_phase2_0241",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0242",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "えへへへ…やった…お姉ちゃんに感じさせた…"
+    }
+  },
+
+  "imvi_phase2_0242": {
+    "ID": "imvi_phase2_0242",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0243_camerapan",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_taimenzai.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 103,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase2_0243_camerapan": {
+    "ID": "imvi_phase2_0243_camerapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "imvi_phase2_0243_Branch",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "1.04, 0.95, 0.07",
+        "TargetPosString": "0.08, 0.64, -0.89",
+        "AroundAngleString": "225.03, 12.78",
+        "Distance": 1.4
+      },
+      "AnimationTime": 0.5
+    }
+  },
+
+  "imvi_phase2_0243_Branch": {
+    "ID": "imvi_phase2_0243_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0250_M_[=PType]"
+  },
+
+  "imvi_phase2_0251": {
+    "ID": "imvi_phase2_0251",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0252",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_taimenzai.ks",
+        "ScriptLabel": "*激しさ１キス",
+        "SexPosID": 103,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "接吻",
+          "FaceBlend": "頬１涙０"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase2_0252": {
+    "ID": "imvi_phase2_0252",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0253",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]は翔太君に情熱いっぱいのキスして、恋人同士のように舌を絡ませている。）"
+    }
+  },
+
+  "imvi_phase2_0253": {
+    "ID": "imvi_phase2_0253",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0254_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（二人の溶けそうな顔を見ると、俺も興奮しました。よかったね、翔太くん。）"
+    }
+  },
+
+  "imvi_phase2_0254_Branch": {
+    "ID": "imvi_phase2_0254_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0260_T_[=PType]"
+  },
+
+  "imvi_phase2_0261": {
+    "ID": "imvi_phase2_0261",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0262",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "お姉ちゃん…好き…好き…大好き！"
+    }
+  },
+
+  "imvi_phase2_0262": {
+    "ID": "imvi_phase2_0262",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0263_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_taimenzai.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 103,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase2_0263_Branch": {
+    "ID": "imvi_phase2_0263_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0270_M_[=PType]"
+  },
+
+  "imvi_phase2_0271": {
+    "ID": "imvi_phase2_0271",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0272_Branch",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "うん！お姉ちゃんのキスのおかげで…僕のおちんちんはまだまだ立ってるよ！"
+    }
+  },
+
+  "imvi_phase2_0272_Branch": {
+    "ID": "imvi_phase2_0272_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase2_0280_M_[=PType]"
+  },
+
+  "imvi_phase2_0281": {
+    "ID": "imvi_phase2_0281",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0282",
+    "TalkData": {
+      "SpeakerName": "翔太",
+      "Text": "うん！喜んで！お姉ちゃんの望めば、十回でも百回でもヤりますよ！"
+    }
+  },
+
+  "imvi_phase2_0282": {
+    "ID": "imvi_phase2_0282",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "imvi_phase2_0283"
+  },
+
+  "imvi_phase2_0283": {
+    "ID": "imvi_phase2_0283",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_yotogiplay_phase2_closepanel",
+    "ListUpdateData": {
+      "Add": [
+        {
+          "Type": "M",
+          "SrcPosition": 7,
+          "PositionToInsert": 0
+        }
+      ]
+    }
+  },
+
+
+
+
+
+  "imvi_yotogiplay_phase2_closepanel": {
+    "ID": "imvi_intro_yotogiplay_phase2_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_start_yotogiplay_phase2"
+  },
+
+  "imvi_start_yotogiplay_phase2": {
+    "ID": "imvi_start_yotogiplay_phase2",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "ImmoralVillage",
+      "Phase": 2,
+      "IsKeepCharacterVisibleAfterYotogi": true,
+      "IsFinalYotogi": true,
+      "IsClubOwnerMainCharacter": false
+    },
+    "NextStepID": "imvi_postyotogi_init"
+  }
+}

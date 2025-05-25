@@ -1,0 +1,2567 @@
+{
+  "imvi_phase1_0001": {
+    "ID": "imvi_phase1_0001",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase1_0001a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "14.20, 1.84, -1.75",
+        "TargetPosString": "14.09, 1.58, -3.01",
+        "AroundAngleString": "185.09, 11.53",
+        "Distance": 1.3
+      }
+    }
+  },
+
+  "imvi_phase1_0001a": {
+    "ID": "imvi_phase1_0001a",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "imvi_phase1_0001b"
+  },
+
+  "imvi_phase1_0001b": {
+    "ID": "imvi_phase1_0001b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0001c",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": false
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 12,
+        "Visible": false
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 13,
+        "Visible": false
+      }
+    ]
+  },
+
+
+  "imvi_phase1_0001c": {
+    "ID": "imvi_phase1_0001c",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0002",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "14.02, 0.00, -3.50",
+          "RotString": "0, 0.994, 0, -0.110"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ためいき",
+        "PosRot": {
+          "PosString": "14.59, 0.00, -4.31",
+          "RotString": "0, 0.513, 0, -0.858"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "13.28, 0.00, -4.31",
+          "RotString": "0, -0.546, 0, -0.838"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0002": {
+    "ID": "imvi_phase1_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そして俺たち３人は、[=Name,Maid,0,CallName]が担当する部屋の前に立った。[=Name,Maid,0,CallName]は、何人の初対面の男の子の最初の相手になることは責任重大を感じるのて、少し緊張しているようだ。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_phase1_0003": {
+    "ID": "imvi_phase1_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0004_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "大丈夫ー　いつも通り楽しめばいいよ。"
+    }
+  },
+
+  "imvi_phase1_0004_Branch": {
+    "ID": "imvi_phase1_0004_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0010_M_[=PType]"
+  },
+
+  "imvi_phase1_0011": {
+    "ID": "imvi_phase1_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0012",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ふーん……ここは助言を与える時だ。）"
+    }
+  },
+
+  "imvi_phase1_0012": {
+    "ID": "imvi_phase1_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0013_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "その子たちのママであることを想像してのはどう？そうすれば、甘やかしながら性指導を始めることができるよ。"
+    }
+  },
+
+  "imvi_phase1_0013_Branch": {
+    "ID": "imvi_phase1_0013_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0020_M_[=PType]"
+  },
+
+  "imvi_phase1_0021": {
+    "ID": "imvi_phase1_0021",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0022_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "俺もついているから、心配しないで。"
+    }
+  },
+
+  "imvi_phase1_0022_Branch": {
+    "ID": "imvi_phase1_0022_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0030_M_[=PType]"
+  },
+
+  "imvi_phase1_0031": {
+    "ID": "imvi_phase1_0031",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0032",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      }
+    ]
+  },
+
+
+  "imvi_phase1_0032": {
+    "ID": "imvi_phase1_0032",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0033",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "オーナーさん、これは他では見られないイベントだ。全過程の撮影はどう？"
+    }
+  },
+
+  "imvi_phase1_0033": {
+    "ID": "imvi_phase1_0033",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0034",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "おっ！撮ってもいいんか？"
+    }
+  },
+
+  "imvi_phase1_0034": {
+    "ID": "imvi_phase1_0034",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0035",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "はは、もちろんだ！是非こうして、記念品としてお持ち帰りください。"
+    }
+  },
+
+  "imvi_phase1_0035": {
+    "ID": "imvi_phase1_0035",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_phase1_0036",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_phase1_0036": {
+    "ID": "imvi_phase1_0036",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0036a",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.78, 0.00, -3.08",
+          "RotString": "0, 0.507, 0, 0.862"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-1.83, 0.00, -2.22",
+          "RotString": "0, 0.647, 0, 0.762"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.89, 0.00, -1.30",
+          "RotString": "0, 0.644, 0, 0.765"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 0
+          }
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "1.20, 0.50, -1.81",
+          "RotString": "0, 0.735, 0, 0.678"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "1.46, 0.50, -1.02",
+          "RotString": "0, 0.678, 0, 0.735"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "1.25, 0.50, -2.75",
+          "RotString": "0, 0.677, 0, 0.736"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "1.28, 0.50, -0.23",
+          "RotString": "0, 0.613, 0, 0.790"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "1.91, 0.50, -2.22",
+          "RotString": "0, 0.795, 0, 0.606"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "2.01, 0.50, -0.60",
+          "RotString": "0, 0.602, 0, 0.798"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "2.18, 0.50, -1.63",
+          "RotString": "0, 0.715, 0, 0.699"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "2.13, 0.50, 1.08",
+          "RotString": "0, 0.946, 0, 0.325"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0036a": {
+    "ID": "imvi_phase1_0036a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase1_0037",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-2.97, 2.24, 3.39",
+        "TargetPosString": "0.33, 0.86, -1.05",
+        "AroundAngleString": "143.47, 14.02",
+        "Distance": 5.7
+      },
+      "LockCamera": { "IsLock": false }
+    }
+  },
+
+  "imvi_phase1_0037": {
+    "ID": "imvi_phase1_0037",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0038",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（それなら、俺たちは部屋に入る。男の子たちがじっと座って待っている。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_phase1_0038": {
+    "ID": "imvi_phase1_0038",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0039",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "みんな聞け、今日はお前らにとって最も重要な日だ。この二人は[=ClubOwnerName]くんと奥さんの[=Name,Maid,0,CallName]さんだ。彼らはこの筆おろしに協力してくれる親切なお客さんだ。"
+    }
+  },
+
+  "imvi_phase1_0039": {
+    "ID": "imvi_phase1_0039",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0040",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "[=Name,Maid,0,CallName]さんが筆ろしの相手になってくれて、お前らは本当にとても幸運だった。感謝の気持ちを忘れないよ。"
+    }
+  },
+
+  "imvi_phase1_0040": {
+    "ID": "imvi_phase1_0040",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0041",
+    "TalkData": {
+      "SpeakerName": "男の子全員",
+      "Text": "わかりました、[=Name,NPC_M,0,LastName]さん。"
+    }
+  },
+
+  "imvi_phase1_0041": {
+    "ID": "imvi_phase1_0041",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0042",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "この機会に子作りの知識をしっかり勉強しろよ！いいか？"
+    }
+  },
+
+  "imvi_phase1_0042": {
+    "ID": "imvi_phase1_0042",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0043",
+    "TalkData": {
+      "SpeakerName": "男の子全員",
+      "Text": "はーい！"
+    }
+  },
+
+  "imvi_phase1_0043": {
+    "ID": "imvi_phase1_0043",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0043a",
+    "CharaData": [
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "-1.89, 0.00, -1.30",
+          "RotString": "0, 0.991, 0, 0.132"
+        },
+        "SmoothMovement": { "Time": 0.3 },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0043a": {
+    "ID": "imvi_phase1_0043a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0044",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "では、二人にお任せ。"
+    }
+  },
+
+  "imvi_phase1_0044": {
+    "ID": "imvi_phase1_0044",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0045",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ。"
+    }
+  },
+
+  "imvi_phase1_0045": {
+    "ID": "imvi_phase1_0045",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_phase1_0045a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_phase1_0045a": {
+    "ID": "imvi_phase1_0045a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0045b",
+    "CharaData": [
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": false
+      }
+    ]
+  },
+
+  "imvi_phase1_0045b": {
+    "ID": "imvi_phase1_0045b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase1_0046",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "3.75, 0.93, -1.10",
+        "TargetPosString": "-0.50, 0.88, -1.71",
+        "AroundAngleString": "261.74, 0.66",
+        "Distance": 4.3
+      }
+    }
+  },
+
+  "imvi_phase1_0046": {
+    "ID": "imvi_phase1_0046",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0047_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（村長さんの話が終わると、部屋を出て行った。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "imvi_phase1_0047_Branch": {
+    "ID": "imvi_phase1_0047_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0050_M_[=PType]"
+  },
+
+  "imvi_phase1_0051": {
+    "ID": "imvi_phase1_0051",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0052",
+    "TalkData": {
+      "SpeakerName": "男の子全員",
+      "Text": "よ…よろしくお願いします……"
+    }
+  },
+
+  "imvi_phase1_0052": {
+    "ID": "imvi_phase1_0052",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0053",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（男の子たちも緊張しているようだ…）"
+    }
+  },
+
+  "imvi_phase1_0053": {
+    "ID": "imvi_phase1_0053",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0054",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "みんな、そんなに緊張しなくてもいいよ、力抜いて。妻はとても優しくて、男に奉仕のが大好きなんだ。彼女を優しいママだと思って、たくさん甘えさせてもいいよ。"
+    }
+  },
+
+  "imvi_phase1_0054": {
+    "ID": "imvi_phase1_0054",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0055_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子全員",
+      "Text": "は…はい！"
+    }
+  },
+
+  "imvi_phase1_0055_Branch": {
+    "ID": "imvi_phase1_0055_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0060_M_[=PType]"
+  },
+
+
+  "imvi_phase1_0061": {
+    "ID": "imvi_phase1_0061",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_phase1_0062",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_phase1_0062": {
+    "ID": "imvi_phase1_0062",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0062a",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "2.84, 0.10, -2.59",
+          "RotString": "0, 0.810, 0, 0.586"
+        },
+        "MotionInfo": {
+          "CustomMotionFile": "wp_mod_motion_male_stand_holding_camera.anm",
+          "MotionTag": "wp_mod_motion_male_stand_holding_camera.anm"
+        },
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "HandItemR_HandyCam_I_.menu",
+              "Target": "handitem"
+            }
+          ]
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "ClothesSetID": "ImmoralVillage_ShowBoobs",
+        "MotionInfo": {
+          "MotionFile": "sit_bed1.anm",
+          "MotionTag": "sit_bed1.anm"
+        },
+        "PosRot": {
+          "PosString": "-0.68, 0.10, -1.37",
+          "RotString": "0, 0.647, 0, 0.762"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "CustomMotionFile": "wp_mod_motion_man_crawling.anm",
+          "MotionTag": "wp_mod_motion_man_crawling.anm"
+        },
+        "PosRot": {
+          "PosString": "1.20, 0.05, -2.04",
+          "RotString": "0, 0.613, 0, -0.790"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "CustomMotionFile": "wp_mod_motion_man_crawling.anm",
+          "MotionTag": "wp_mod_motion_man_crawling.anm"
+        },
+        "PosRot": {
+          "PosString": "1.19, 0.05, -1.15",
+          "RotString": "0, 0.688, 0, -0.726"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "CustomMotionFile": "wp_mod_motion_man_crawling.anm",
+          "MotionTag": "wp_mod_motion_man_crawling.anm"
+        },
+        "PosRot": {
+          "PosString": "0.70, 0.05, -2.75",
+          "RotString": "0, 0.375, 0, -0.927"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "CustomMotionFile": "wp_mod_motion_man_crawling.anm",
+          "MotionTag": "wp_mod_motion_man_crawling.anm"
+        },
+        "PosRot": {
+          "PosString": "0.93, 0.05, -0.18",
+          "RotString": "0, 0.907, 0, -0.422"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "man_tati_seigan_m.anm",
+          "MotionTag": "man_tati_seigan_m.anm"
+        },
+        "PosRot": {
+          "PosString": "1.91, 0.00, -2.60",
+          "RotString": "0, 0.546, 0, -0.838"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "man_tati_seigan_m.anm",
+          "MotionTag": "man_tati_seigan_m.anm"
+        },
+        "PosRot": {
+          "PosString": "1.63, 0.00, -0.49",
+          "RotString": "0, 0.880, 0, -0.475"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "man_tati_seigan_m.anm",
+          "MotionTag": "man_tati_seigan_m.anm"
+        },
+        "PosRot": {
+          "PosString": "1.85, 0.00, -1.63",
+          "RotString": "0, 0.765, 0, -0.644"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "2.13, 0.50, 1.08",
+          "RotString": "0, 0.946, 0, 0.325"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0062a": {
+    "ID": "imvi_phase1_0062a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase1_0063",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-3.10, 1.93, 0.76",
+        "TargetPosString": "0.49, 0.93, -1.18",
+        "AroundAngleString": "118.44, 13.71",
+        "Distance": 4.2
+      }
+    }
+  },
+
+
+  "imvi_phase1_0063": {
+    "ID": "imvi_phase1_0063",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0064",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は部屋の隅に行き、ビデオカメラを構える。男の子たちは[=Name,Maid,0,CallName]に近づき、[=Name,Maid,0,CallName]は服を脱ぎ始める。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "imvi_phase1_0064": {
+    "ID": "imvi_phase1_0064",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "imvi_phase1_0064a",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "4.41, 2.38, -0.79",
+        "TargetPosString": "0.49, 0.93, -1.18",
+        "AroundAngleString": "264.25, 20.23",
+        "Distance": 4.2
+      }
+    }
+  },
+
+  "imvi_phase1_0064a": {
+    "ID": "imvi_phase1_0064a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0065",
+    "TalkData": {
+      "SpeakerName": "男の子全員",
+      "Text": "おおーっ！"
+    }
+  },
+
+  "imvi_phase1_0065": {
+    "ID": "imvi_phase1_0065",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0066",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "わわーッ！本物の生おっぱいだ！"
+    }
+  },
+
+  "imvi_phase1_0066": {
+    "ID": "imvi_phase1_0066",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0067",
+    "TalkData": {
+      "SpeakerName": "男の子２",
+      "Text": "すっげー！女の人の…！"
+    }
+  },
+
+  "imvi_phase1_0067": {
+    "ID": "imvi_phase1_0067",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0068",
+    "TalkData": {
+      "SpeakerName": "男の子３",
+      "Text": "キレイー……"
+    }
+  },
+
+  "imvi_phase1_0068": {
+    "ID": "imvi_phase1_0068",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0069_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "MotionFile": "edit_pose_003_005_f.anm",
+          "MotionTag": "edit_pose_003_005_f.anm"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0069_Branch": {
+    "ID": "imvi_phase1_0069_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0070_T_[=PType]"
+  },
+
+  "imvi_phase1_0071": {
+    "ID": "imvi_phase1_0071",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0072",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "おおッ！スゲー！"
+    }
+  },
+
+  "imvi_phase1_0072": {
+    "ID": "imvi_phase1_0072",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0073",
+    "TalkData": {
+      "SpeakerName": "男の子２",
+      "Text": "な…舐めたい…！"
+    }
+  },
+
+  "imvi_phase1_0073": {
+    "ID": "imvi_phase1_0073",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0074",
+    "TalkData": {
+      "SpeakerName": "男の子４",
+      "Text": "あ、あの！お姉ちゃん！し…下着ィ……"
+    }
+  },
+
+  "imvi_phase1_0074": {
+    "ID": "imvi_phase1_0074",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0075_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "MotionFile": "sit_bed1.anm",
+          "MotionTag": "sit_bed1.anm"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0075_Branch": {
+    "ID": "imvi_phase1_0075_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0080_T_[=PType]"
+  },
+
+  "imvi_phase1_0081": {
+    "ID": "imvi_phase1_0081",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0082",
+    "TalkData": {
+      "SpeakerName": "男の子５",
+      "Text": "う…うん！見たい見たい！"
+    }
+  },
+
+  "imvi_phase1_0082": {
+    "ID": "imvi_phase1_0082",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0083_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase1_0083_Branch": {
+    "ID": "imvi_phase1_0083_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0090_T_[=PType]"
+  },
+
+  "imvi_phase1_0091": {
+    "ID": "imvi_phase1_0091",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_phase1_0092",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_phase1_0092": {
+    "ID": "imvi_phase1_0092",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0093",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "ClothesSetID": "ImmoralVillage_ShowBoobsNoUnderwear",
+        "MotionInfo": {
+          "ScriptFile": "sex_OM_onani.ks",
+          "ScriptLabel": "*待機"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0093": {
+    "ID": "imvi_phase1_0093",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0094",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]は最後まで脱いだ。彼女は座って足を開き、アソコを男の子たちに見せた。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_phase1_0094": {
+    "ID": "imvi_phase1_0094",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0095",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮２",
+        "MotionInfo": {
+          "ScriptFile": "sex_OM_onani.ks",
+          "ScriptLabel": "*広げさせる"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0095": {
+    "ID": "imvi_phase1_0095",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0096_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子全員",
+      "Text": "うおおーっ！"
+    }
+  },
+
+  "imvi_phase1_0096_Branch": {
+    "ID": "imvi_phase1_0096_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0100_M_[=PType]"
+  },
+
+  "imvi_phase1_0101": {
+    "ID": "imvi_phase1_0101",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0102",
+    "TalkData": {
+      "SpeakerName": "男の子３",
+      "Text": "そ…そんなことないよ！お姉ちゃんの…その……おまんこッ！めっちゃキレイー！"
+    }
+  },
+
+  "imvi_phase1_0102": {
+    "ID": "imvi_phase1_0102",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0103_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子２",
+      "Text": "そうだそうだ！キレイ！[=Name,Maid,0,CallName]お姉ちゃんのおまんこ舐めたい！"
+    }
+  },
+
+  "imvi_phase1_0103_Branch": {
+    "ID": "imvi_phase1_0103_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0110_M_[=PType]"
+  },
+
+  "imvi_phase1_0111": {
+    "ID": "imvi_phase1_0111",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0112",
+    "TalkData": {
+      "SpeakerName": "男の子５",
+      "Text": "あっ…あっ…おちんちんが…なんか変…！"
+    }
+  },
+
+  "imvi_phase1_0112": {
+    "ID": "imvi_phase1_0112",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0113",
+    "TalkData": {
+      "SpeakerName": "男の子６",
+      "Text": "あぅ…ダメっ……何かくるっ！"
+    }
+  },
+
+  "imvi_phase1_0113": {
+    "ID": "imvi_phase1_0113",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0113a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "びっくり",
+        "MotionInfo": {
+          "ScriptFile": "sex_OM_onani.ks",
+          "ScriptLabel": "*待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 5
+          }
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "OM_tekoki_uiui_shasei_soto_m_ONCE_.anm",
+          "MotionTag": "om_tekoki_uiui_shasei_soto_m_once_.anm",
+          "IsLoopMotion": false,
+          "IsBlend": false
+        },
+        "PosRot": {
+          "PosString": "1.91, 0.00, -2.60",
+          "RotString": "0, 0.838, 0, 0.546"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "OM_tekoki_uiui_shasei_soto_m_ONCE_.anm",
+          "MotionTag": "om_tekoki_uiui_shasei_soto_m_once_.anm",
+          "IsLoopMotion": false,
+          "IsBlend": false
+        },
+        "PosRot": {
+          "PosString": "1.63, 0.00, -0.49",
+          "RotString": "0, 0.475, 0, 0.880"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "OM_tekoki_uiui_shasei_soto_m_ONCE_.anm",
+          "MotionTag": "om_tekoki_uiui_shasei_soto_m_once_.anm",
+          "IsLoopMotion": false,
+          "IsBlend": false
+        },
+        "PosRot": {
+          "PosString": "1.85, 0.00, -1.63",
+          "RotString": "0, 0.644, 0, 0.765"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0113a": {
+    "ID": "imvi_phase1_0113a",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE016.ogg"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase1_0113b"
+  },
+  "imvi_phase1_0113b": {
+    "ID": "imvi_phase1_0113b",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE016.ogg"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase1_0113c"
+  },
+  "imvi_phase1_0113c": {
+    "ID": "imvi_phase1_0113c",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE016.ogg"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase1_0114_Branch"
+  },
+
+  "imvi_phase1_0114_Branch": {
+    "ID": "imvi_phase1_0114_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0120_T_[=PType]"
+  },
+
+  "imvi_phase1_0121": {
+    "ID": "imvi_phase1_0121",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0121a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "びっくり",
+        "MotionInfo": {
+          "MotionFile": "sit_bed1.anm",
+          "MotionTag": "sit_bed1.anm"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0121a": {
+    "ID": "imvi_phase1_0121a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0122",
+    "TalkData": {
+      "SpeakerName": "男の子６",
+      "Text": "はぁ…はぁ……あっ…！ごめん！"
+    }
+  },
+
+  "imvi_phase1_0122": {
+    "ID": "imvi_phase1_0122",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0123_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0123_Branch": {
+    "ID": "imvi_phase1_0123_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0130_T_[=PType]"
+  },
+
+  "imvi_phase1_0132": {
+    "ID": "imvi_phase1_0132",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0133",
+    "TalkData": {
+      "SpeakerName": "男の子５",
+      "Text": "うん…"
+    }
+  },
+
+  "imvi_phase1_0133": {
+    "ID": "imvi_phase1_0133",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0134",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]は優しく微笑み、早漏の男の子たちを落ち着かせた。）"
+    }
+  },
+
+  "imvi_phase1_0134": {
+    "ID": "imvi_phase1_0134",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0135_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "あの、お姉ちゃん！おちんちんがまだむずむずしてきた…！"
+    }
+  },
+
+  "imvi_phase1_0135_Branch": {
+    "ID": "imvi_phase1_0135_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0140_M_[=PType]"
+  },
+
+  "imvi_phase1_0141": {
+    "ID": "imvi_phase1_0141",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_phase1_0142",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+
+  "imvi_phase1_0142": {
+    "ID": "imvi_phase1_0142",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0142a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "PosRot": {
+          "PosString": "-0.43, 0.10, -1.17",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.43, 0.10, -1.17",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "0.91, 0.50, -2.56",
+          "RotString": "0, 0.908, 0, 0.419"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.83, 0.50, -0.94",
+          "RotString": "0, 0.642, 0, -0.766"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.75, 0.50, -1.89",
+          "RotString": "0, 0.825, 0, -0.565"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "0.86, 0.50, -0.59",
+          "RotString": "0, 0.467, 0, 0.884"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.66, 0.50, -2.74",
+          "RotString": "0, 0.914, 0, -0.406"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.82, 0.50, 0.00",
+          "RotString": "0, 0.440, 0, -0.898"
+        }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 7,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "0.98, 0.50, 1.95",
+          "RotString": "0, 0.901, 0, 0.434"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0142a": {
+    "ID": "imvi_phase1_0142a",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase1_0142b",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 0
+        },
+        "Maid1": {
+          "Type": "F",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0142b": {
+    "ID": "imvi_phase1_0142b",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0142c",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_amayakasi_tekoki.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "優しさ",
+          "FaceBlend": "頬１涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-0.43, 0.10, -1.17",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0142c": {
+    "ID": "imvi_phase1_0142c",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase1_0143",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "0.67, 1.30, 1.10",
+        "TargetPosString": "-0.13, 0.74, -0.64",
+        "AroundAngleString": "204.67, 16.19",
+        "Distance": 2
+      }
+    }
+  },
+
+  "imvi_phase1_0143": {
+    "ID": "imvi_phase1_0143",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0144_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]は男の子を自分の足の上に寝かせ、手コキを始めた。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_phase1_0144_Branch": {
+    "ID": "imvi_phase1_0144_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0150_T_[=PType]"
+  },
+
+  "imvi_phase1_0151": {
+    "ID": "imvi_phase1_0151",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0152_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "あ…あッ…ああッ……おちんちんが…！"
+    }
+  },
+
+  "imvi_phase1_0152_Branch": {
+    "ID": "imvi_phase1_0152_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0160_M_[=PType]"
+  },
+
+  "imvi_phase1_0161": {
+    "ID": "imvi_phase1_0161",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0162",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "あッ！あッ！まだっ…あッ……おしっこ出ちゃうぅっ…！"
+    }
+  },
+
+  "imvi_phase1_0162": {
+    "ID": "imvi_phase1_0162",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0163_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_amayakasi_tekoki.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 1,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase1_0163_Branch": {
+    "ID": "imvi_phase1_0163_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0170_M_[=PType]"
+  },
+
+  "imvi_phase1_0171": {
+    "ID": "imvi_phase1_0171",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0172_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_amayakasi_tekoki.ks",
+        "ScriptLabel": "*射精外",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "imvi_phase1_0172_Branch": {
+    "ID": "imvi_phase1_0172_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0180_M_[=PType]"
+  },
+
+  "imvi_phase1_0181": {
+    "ID": "imvi_phase1_0181",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0182",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "んあっ……あっ……あたま…ふわふわする……す…すごい……"
+    }
+  },
+
+  "imvi_phase1_0182": {
+    "ID": "imvi_phase1_0182",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0183_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "あの…お姉ちゃん……おっぱい…触っていい…？"
+    }
+  },
+
+  "imvi_phase1_0183_Branch": {
+    "ID": "imvi_phase1_0183_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0190_M_[=PType]"
+  },
+
+  "imvi_phase1_0191": {
+    "ID": "imvi_phase1_0191",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0192",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_amayakasi_tekoki.ks",
+        "ScriptLabel": "*胸揉み",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮１",
+          "FaceBlend": "頬２涙０"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0192": {
+    "ID": "imvi_phase1_0192",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0193_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "あァ…これが大人のおっぱい……わぁ……スゲー……"
+    }
+  },
+
+  "imvi_phase1_0193_Branch": {
+    "ID": "imvi_phase1_0193_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0200_M_[=PType]"
+  },
+
+  "imvi_phase1_0201": {
+    "ID": "imvi_phase1_0201",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0202",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "うん……やゃッ…柔らかいッ…あッ…！お姉ちゃんの…あッ…！あッ！……おっぱいッ…うぁッ…！うひぃッ…！…だ…大好きィッ…！"
+    }
+  },
+
+  "imvi_phase1_0202": {
+    "ID": "imvi_phase1_0202",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0203_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_amayakasi_tekoki.ks",
+        "ScriptLabel": "*激しさ２キス",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "接吻",
+          "FaceBlend": "頬２涙０"
+        }
+      }
+    ]
+  },
+
+
+  "imvi_phase1_0203_Branch": {
+    "ID": "imvi_phase1_0203_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0210_T_[=PType]"
+  },
+
+  "imvi_phase1_0211": {
+    "ID": "imvi_phase1_0211",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0212",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_amayakasi_tekoki.ks",
+        "ScriptLabel": "*射精外",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮２",
+          "FaceBlend": "頬２涙０"
+        },
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "imvi_phase1_0212": {
+    "ID": "imvi_phase1_0212",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0213_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "ひッ！ひッ！まだくる……！んぁ……で…でちゃうぅぅぅぅぅう！"
+    }
+  },
+
+  "imvi_phase1_0213_Branch": {
+    "ID": "imvi_phase1_0213_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0220_M_[=PType]"
+  },
+
+  "imvi_phase1_0221": {
+    "ID": "imvi_phase1_0221",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0222_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "うん……おっぱい…気持ち…いいぃ……"
+    }
+  },
+
+  "imvi_phase1_0222_Branch": {
+    "ID": "imvi_phase1_0222_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0230_M_[=PType]"
+  },
+
+  "imvi_phase1_0231": {
+    "ID": "imvi_phase1_0231",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0232",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "あ…あの！僕…もっと出したい！"
+    }
+  },
+
+  "imvi_phase1_0232": {
+    "ID": "imvi_phase1_0232",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_phase1_0233",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_phase1_0233": {
+    "ID": "imvi_phase1_0233",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0233a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "優しさ",
+          "FaceBlend": "頬２涙０"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0233a": {
+    "ID": "imvi_phase1_0233a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase1_0234",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "0.82, 2.07, -0.06",
+        "TargetPosString": "0.05, 0.82, -0.92",
+        "AroundAngleString": "221.74, 47.56",
+        "Distance": 1.7
+      }
+    }
+  },
+
+  "imvi_phase1_0234": {
+    "ID": "imvi_phase1_0234",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0235_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "え…えっと……どうすればいい……？"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_phase1_0235_Branch": {
+    "ID": "imvi_phase1_0235_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0240_M_[=PType]"
+  },
+
+  "imvi_phase1_0242": {
+    "ID": "imvi_phase1_0242",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0243_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "ここ？ここでいいの？"
+    }
+  },
+
+  "imvi_phase1_0243_Branch": {
+    "ID": "imvi_phase1_0243_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0250_M_[=PType]"
+  },
+
+  "imvi_phase1_0251": {
+    "ID": "imvi_phase1_0251",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0252_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]は男の子のチンポを手で軽めに握り、おまんこへと動かした。）"
+    }
+  },
+
+  "imvi_phase1_0252_Branch": {
+    "ID": "imvi_phase1_0252_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0260_M_[=PType]"
+  },
+
+  "imvi_phase1_0261": {
+    "ID": "imvi_phase1_0261",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0262",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "い…入れるよ…"
+    }
+  },
+
+  "imvi_phase1_0262": {
+    "ID": "imvi_phase1_0262",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0263_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*挿入",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "居眠り安眠",
+          "FaceBlend": "頬２涙０"
+        },
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "imvi_phase1_0263_Branch": {
+    "ID": "imvi_phase1_0263_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0270_T_[=PType]"
+  },
+
+  "imvi_phase1_0271": {
+    "ID": "imvi_phase1_0271",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0272",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "あっ…あっ…これが…おまんこ……"
+    }
+  },
+
+  "imvi_phase1_0272": {
+    "ID": "imvi_phase1_0272",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0273_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "imvi_phase1_0273_Branch": {
+    "ID": "imvi_phase1_0273_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0280_M_[=PType]"
+  },
+
+  "imvi_phase1_0281": {
+    "ID": "imvi_phase1_0281",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0282",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "あっ…んっ…ヌルヌルで…あっ…温かくて…んぁ…あっ…心地よくて…んぁ…気持ちいいぃぃィィィー！"
+    }
+  },
+
+  "imvi_phase1_0282": {
+    "ID": "imvi_phase1_0282",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0283",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*抱き付き激しさ２",
+        "SexPosID": 102,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase1_0283": {
+    "ID": "imvi_phase1_0283",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0284_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "あっ…ああーーっ…！お姉ちゃん！出るっ！出るっーー！"
+    }
+  },
+
+  "imvi_phase1_0284_Branch": {
+    "ID": "imvi_phase1_0284_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0290_M_[=PType]"
+  },
+
+  "imvi_phase1_0291": {
+    "ID": "imvi_phase1_0291",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0292a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*抱き付き射精中",
+        "SexPosID": 102,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+
+  "imvi_phase1_0292a": {
+    "ID": "imvi_phase1_0292a",
+    "Type": "AddTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_phase1_0292",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F",
+        "IndexPosition": 0,
+        "BodyTarget": [ "Vagina" ]
+      }
+    ]
+  },
+
+  "imvi_phase1_0292": {
+    "ID": "imvi_phase1_0292",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0293_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "ううッ！"
+    }
+  },
+
+  "imvi_phase1_0293_Branch": {
+    "ID": "imvi_phase1_0293_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0300_M_[=PType]"
+  },
+
+  "imvi_phase1_0301": {
+    "ID": "imvi_phase1_0301",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0302",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "imvi_phase1_0302": {
+    "ID": "imvi_phase1_0302",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0303_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子１",
+      "Text": "ごめん…お姉ちゃん！また汚しちゃった……"
+    }
+  },
+
+  "imvi_phase1_0303_Branch": {
+    "ID": "imvi_phase1_0303_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0310_M_[=PType]"
+  },
+
+  "imvi_phase1_0311": {
+    "ID": "imvi_phase1_0311",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0312_Branch",
+    "TalkData": {
+      "SpeakerName": "男の子２",
+      "Text": "ず…ずるいよ…[=Name,Maid,0,CallName]お姉ちゃん！僕たちにもやってよ……"
+    }
+  },
+
+  "imvi_phase1_0312_Branch": {
+    "ID": "imvi_phase1_0312_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_phase1_0320_M_[=PType]"
+  },
+
+
+
+
+  "imvi_yotogiplay_phase1_closepanel": {
+    "ID": "imvi_intro_yotogiplay_phase1_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_start_yotogiplay_phase1"
+  },
+
+  "imvi_start_yotogiplay_phase1": {
+    "ID": "imvi_start_yotogiplay_phase1",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "ImmoralVillage",
+      "Phase": 1,
+      "IsKeepCharacterVisibleAfterYotogi": true,
+      "IsFinalYotogi": false,
+      "IsClubOwnerMainCharacter": false
+    },
+    "NextStepID": "imvi_phase2_init"
+  }
+}

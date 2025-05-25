@@ -177,6 +177,11 @@ namespace COM3D2.WildParty.Plugin
             internal const string OpenDoor = "mmlSE_065.ogg";
         }
 
+        internal static class DefinedColorString
+        {
+            internal const string White = "White";
+        }
+
 
         //Probably for reference only. The value string is used in json file
         //Not full list, Can be easily found in studio mode
@@ -545,6 +550,8 @@ namespace COM3D2.WildParty.Plugin
         {
             internal const string Maid = "F";
             internal const string Man = "M";
+            internal const string ADVMaid = "ADV_F";           //Not in YotogiWorkingMaidList but in SelectedMaidList
+            internal const string ADVMan = "ADV_M";            //Not in YotogiWorkingManList but in MenList
             internal const string NPCMale = "NPC_M";
             internal const string NPCFemale = "NPC_F";
             internal const string Owner = "Owner";

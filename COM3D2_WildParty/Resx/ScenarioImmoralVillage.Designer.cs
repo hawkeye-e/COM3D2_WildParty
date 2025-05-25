@@ -62,10 +62,40 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Muku&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Ta [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Muku {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Muku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;imvi0001&quot;: {
         ///    &quot;ID&quot;: &quot;imvi0001&quot;,
         ///    &quot;Type&quot;: &quot;BG&quot;,
-        ///    &quot;Tag&quot;: &quot;ShinShitsumu&quot;,
+        ///    &quot;Tag&quot;: &quot;EmpireClub_Rotary&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
         ///    &quot;NextStepID&quot;: &quot;imvi_init_chara&quot;
         ///  },
@@ -74,19 +104,138 @@ namespace ScenarioResources {
         ///    &quot;ID&quot;: &quot;imvi_init_chara&quot;,
         ///    &quot;Type&quot;: &quot;CharaInit&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;lbp_init_hide_pairedmen&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_init_hide_men&quot;,
         ///    &quot;CharaInitData&quot;: {
-        ///      &quot;ManRequired&quot;: 0,
         ///      &quot;IsClubOwnerADVMainCharacter&quot;: false,
-        ///      &quot;NPC&quot;: [
+        ///      &quot;ManRequired&quot;: 14,
+        ///      &quot;ValidManType&quot;: [
+        ///        &quot;Shota&quot;
+        ///      ],
+        ///      &quot;ModNPC&quot;: [
         ///        {
-        ///          &quot;Index&quot;: 0,
-        ///          &quot;Preset&quot;: &quot;pre_maid_secretary&quot;,
-        ///         [rest of string was truncated]&quot;;.
+        ///          &quot;Index&quot;: [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string ImmoralVillageADVIntro {
+        internal static string ImmoralVillageADVIntroDayTime {
             get {
-                return ResourceManager.GetString("ImmoralVillageADVIntro", resourceCulture);
+                return ResourceManager.GetString("ImmoralVillageADVIntroDayTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_night_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_night_0001&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_night_0001a&quot;,
+        ///    &quot;CameraData&quot;: {
+        ///      &quot;FixedPointData&quot;: {
+        ///        &quot;PosString&quot;: &quot;999,999,999&quot;,
+        ///        &quot;TargetPosString&quot;: &quot;1000,1000,1000&quot;,
+        ///        &quot;AroundAngleString&quot;: &quot;0,0&quot;,
+        ///        &quot;Distance&quot;: 0
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_night_0001a&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_night_0001a&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepI [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADVIntroNightTime {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADVIntroNightTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_phase1_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_phase1_0001&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_phase1_0001a&quot;,
+        ///    &quot;CameraData&quot;: {
+        ///      &quot;FixedPointData&quot;: {
+        ///        &quot;PosString&quot;: &quot;14.20, 1.84, -1.75&quot;,
+        ///        &quot;TargetPosString&quot;: &quot;14.09, 1.58, -3.01&quot;,
+        ///        &quot;AroundAngleString&quot;: &quot;185.09, 11.53&quot;,
+        ///        &quot;Distance&quot;: 1.3
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_phase1_0001a&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_phase1_0001a&quot;,
+        ///    &quot;Type&quot;: &quot;DismissGroup&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;Tag&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADVPhase1 {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADVPhase1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_phase2_init&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_phase2_init&quot;,
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_phase2_init_a&quot;
+        ///  },
+        ///
+        ///  &quot;imvi_phase2_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_phase2_init_a&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_phase2_init_b&quot;
+        ///  },
+        ///
+        ///  &quot;imvi_phase2_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_phase2_init_b&quot;,
+        ///    &quot;Type&quot;: &quot;DismissGroup&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;Tag&quot;: &quot;ALL&quot;,
+        ///    &quot;NextStepID&quot;: &quot;i [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADVPhase2 {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADVPhase2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_phase2_init&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_phase2_init&quot;,
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_phase2_init_a&quot;
+        ///  },
+        ///
+        ///  &quot;imvi_phase2_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_phase2_init_a&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_phase2_init_b&quot;
+        ///  },
+        ///
+        ///  &quot;imvi_phase2_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_phase2_init_b&quot;,
+        ///    &quot;Type&quot;: &quot;DismissGroup&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;Tag&quot;: &quot;ALL&quot;,
+        ///    &quot;NextStepID&quot;: &quot;i [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADVPostYotogi {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADVPostYotogi", resourceCulture);
             }
         }
     }

@@ -163,7 +163,13 @@ namespace COM3D2.WildParty.Plugin
         };
 
         private static readonly string[] ScenarioImmoralVillageResList = {
-            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADVIntro
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADVIntroDayTime,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADVIntroNightTime,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADVPhase1,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADVPhase2,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADVPostYotogi,
+
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Muku,
         };
 
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)

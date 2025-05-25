@@ -1,0 +1,3007 @@
+{
+  "imvi_intro_night_0001": {
+    "ID": "imvi_intro_night_0001",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0001a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "imvi_intro_night_0001a": {
+    "ID": "imvi_intro_night_0001a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そして俺たちは、予定通り一日を楽しむのだ。日没が近づくと、俺たちは神社に行って祭りに参加する。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_night_0002": {
+    "ID": "imvi_intro_night_0002",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_night_0003",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_night_0003": {
+    "ID": "imvi_intro_night_0003",
+    "Type": "BGM",
+    "Tag": "BGM044.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0003a"
+  },
+
+  "imvi_intro_night_0003a": {
+    "ID": "imvi_intro_night_0003a",
+    "Type": "BG",
+    "Tag": "ennichi_mainstage",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0003b"
+  },
+
+  "imvi_intro_night_0003b": {
+    "ID": "imvi_intro_night_0003b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0003c",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": false
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": false
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "MotionFile": "kaiwa_tati_hakusyu_taiki_2_f.anm",
+          "MotionTag": "kaiwa_tati_hakusyu_taiki_2_f.anm",
+          "IsBlend": false
+        },
+        "PosRot": {
+          "PosString": "-7.17, 0.00, 6.24",
+          "RotString": "0, -0.358, 0, 0.934"
+        },
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0003c": {
+    "ID": "imvi_intro_night_0003c",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0003d",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-6.69, 1.58, 7.96",
+        "TargetPosString": "-7.32, 1.39, 6.28",
+        "AroundAngleString": "200.66, 5.94",
+        "Distance": 1.8
+      }
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "imvi_intro_night_0003d": {
+    "ID": "imvi_intro_night_0003d",
+    "Type": "TimeWait",
+    "Tag": "2",
+    "WaitingType": "TimeWait",
+    "NextStepID": "imvi_intro_night_0004"
+  },
+
+  "imvi_intro_night_0004": {
+    "ID": "imvi_intro_night_0004",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_night_0004a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_night_0004a": {
+    "ID": "imvi_intro_night_0004a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0004b",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "MotionFile": "maidcho_oha1.anm",
+          "MotionTag": "maidcho_oha1.anm",
+          "IsBlend": false
+        },
+        "PosRot": {
+          "PosString": "12.04, 0.00, -2.49",
+          "RotString": "0, -0.920, 0, 0.391"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0004b": {
+    "ID": "imvi_intro_night_0004b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0004c",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "9.43, 1.00, -2.40",
+        "TargetPosString": "11.59, 1.07, -2.81",
+        "AroundAngleString": "100.66, -1.82",
+        "Distance": 2.2
+      }
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_night_0004c": {
+    "ID": "imvi_intro_night_0004c",
+    "Type": "TimeWait",
+    "Tag": "2",
+    "WaitingType": "TimeWait",
+    "NextStepID": "imvi_intro_night_0005"
+  },
+
+  "imvi_intro_night_0005": {
+    "ID": "imvi_intro_night_0005",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_night_0005a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_night_0005a": {
+    "ID": "imvi_intro_night_0005a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0005b",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ドヤ顔",
+        "MotionInfo": {
+          "MotionFile": "event_natumaturi_yt_frankfurt_f.anm",
+          "MotionTag": "event_natumaturi_yt_frankfurt_f.anm",
+          "IsBlend": false
+        },
+        "PosRot": {
+          "PosString": "15.32, 0.00, -2.29",
+          "RotString": "0, -0.405, 0, 0.914"
+        },
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "handitemr_denkigai2021s_frankfurt_i_.menu",
+              "Target": "handitem"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0005b": {
+    "ID": "imvi_intro_night_0005b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0005c",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "13.86, 1.47, -0.83",
+        "TargetPosString": "15.19, 1.30, -2.02",
+        "AroundAngleString": "131.80, 5.32",
+        "Distance": 1.8
+      }
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_night_0005c": {
+    "ID": "imvi_intro_night_0005c",
+    "Type": "TimeWait",
+    "Tag": "2",
+    "WaitingType": "TimeWait",
+    "NextStepID": "imvi_intro_night_0006"
+  },
+
+
+  "imvi_intro_night_0006": {
+    "ID": "imvi_intro_night_0006",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_night_0007",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_night_0007": {
+    "ID": "imvi_intro_night_0007",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0007a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "imvi_intro_night_0007a": {
+    "ID": "imvi_intro_night_0007a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0008",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（夜も更けてくると、俺と[=Name,Maid,0,CallName]は[=Name,NPC_M,0,LastName]さんに続いて筆おろしの会場に入る。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_night_0008": {
+    "ID": "imvi_intro_night_0008",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_night_0009",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_night_0009": {
+    "ID": "imvi_intro_night_0009",
+    "Type": "BG",
+    "Tag": "shrine_night",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0009a"
+  },
+
+  "imvi_intro_night_0009a": {
+    "ID": "imvi_intro_night_0009a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0009b",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼",
+          "IsBlend": false
+        },
+        "PosRot": {
+          "PosString": "4.44, 0.00, -16.40",
+          "RotString": "0, 0.521, 0, -0.853"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "苦笑い",
+        "ClothesSetID": "ImmoralVillage_HideBoobs",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頬掻き",
+          "IsBlend": false
+        },
+        "PosRot": {
+          "PosString": "3.72, 0.00, -16.46",
+          "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        },
+        "ExtraObjectsInfo": {
+          "RemoveObjects": [ "handitem" ]
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "3.06, 0.00, -15.60",
+          "RotString": "0, 0.881, 0, 0.474"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+
+  "imvi_intro_night_0009b": {
+    "ID": "imvi_intro_night_0009b",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0009c"
+  },
+
+
+  "imvi_intro_night_0009c": {
+    "ID": "imvi_intro_night_0009c",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0010_camerapan",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "3.89, 0.99, -15.56",
+        "TargetPosString": "3.77, 0.79, -16.22",
+        "AroundAngleString": "190.48, 16.81",
+        "Distance": 0.7
+      }
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_night_0010_camerapan": {
+    "ID": "imvi_intro_night_0010_camerapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "imvi_intro_night_0011",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "3.89, 1.49, -15.56",
+        "TargetPosString": "3.77, 1.29, -16.22",
+        "AroundAngleString": "190.48, 16.81",
+        "Distance": 0.7
+      },
+      "AnimationTime": 4
+    }
+  },
+
+  "imvi_intro_night_0011": {
+    "ID": "imvi_intro_night_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0012",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]はイベント用の服に着替えた。あのすごい格好は、肌の露出が多すぎて、[=Name,Maid,0,CallName]さえも恥ずかしく感じる。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_night_0012": {
+    "ID": "imvi_intro_night_0012",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0013",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "4.25, 1.87, -13.56",
+        "TargetPosString": "3.75, 1.03, -16.29",
+        "AroundAngleString": "190.48, 16.81",
+        "Distance": 2.9
+      }
+    }
+  },
+
+
+  "imvi_intro_night_0013": {
+    "ID": "imvi_intro_night_0013",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0013a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み",
+        "ClothesSetID": "ImmoralVillage_HideBoobs",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機",
+          "IsBlend": false
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0013a": {
+    "ID": "imvi_intro_night_0013a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0014",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "着いたぞ。ここでこの伝統的な活動を行った。毎年この日、人妻たちがここに集まり、男の子の筆おろしをする、将来セックスをする自信をつけさせる。"
+    }
+  },
+
+  "imvi_intro_night_0014": {
+    "ID": "imvi_intro_night_0014",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0015",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "旦那さんも観戦歓迎で、男の子にアドバイスすることもできる。"
+    }
+  },
+
+  "imvi_intro_night_0015": {
+    "ID": "imvi_intro_night_0015",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0016",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "あっ、すでに始めているグループもあるね。"
+    }
+  },
+
+  "imvi_intro_night_0016": {
+    "ID": "imvi_intro_night_0016",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0017",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,NPC_M,0,LastName]さんの言う通り、会場は熱気と甘いうめき声に包まれる。凄くエロいな雰囲気を感じる。）"
+    }
+  },
+
+  "imvi_intro_night_0017": {
+    "ID": "imvi_intro_night_0017",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0018",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "ちょっと歩いて見てみようか？"
+    }
+  },
+
+  "imvi_intro_night_0018": {
+    "ID": "imvi_intro_night_0018",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0018a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_intro_night_0018a": {
+    "ID": "imvi_intro_night_0018a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0019",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ。"
+    }
+  },
+
+  "imvi_intro_night_0019": {
+    "ID": "imvi_intro_night_0019",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_night_0020",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_night_0020": {
+    "ID": "imvi_intro_night_0020",
+    "Type": "BG",
+    "Tag": "yashiki_pillow",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0020a"
+  },
+
+  "imvi_intro_night_0020a": {
+    "ID": "imvi_intro_night_0020a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0020b",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-16.28, 0.00, 1.52",
+          "RotString": "0, 0.920, 0, 0.391"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "発情",
+        "PosRot": {
+          "PosString": "-16.62, 0.00, 0.89",
+          "RotString": "0, 0.945, 0, 0.326"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-15.66, 0.00, 1.89",
+          "RotString": "0, 0.972, 0, 0.234"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 0
+          }
+        }
+      },
+
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "-13.66, 0.00, -0.58",
+          "RotString": "0, 0.707, 0, -0.707"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 8
+          }
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 8,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-13.66, 0.00, -0.58",
+          "RotString": "0, 0.707, 0, -0.707"
+        },
+        "MotionInfo": {
+          "MotionFile": "OM_fera_2_m.anm",
+          "MotionTag": "om_fera_2_m.anm"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 9,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-12.68, 0.5, -1.15",
+          "RotString": "0, 0.962, 0, 0.272"
+        },
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 0
+          }
+        }
+      },
+
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿チャラ男"
+        },
+        "PosRot": {
+          "PosString": "-12.94, 0.00, 1.64",
+          "RotString": "0, 1, 0, 0.028"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+
+  "imvi_intro_night_0020b": {
+    "ID": "imvi_intro_night_0020b",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0020c",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 8
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0020c": {
+    "ID": "imvi_intro_night_0020c",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0020d",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 115,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロフェラ快楽",
+          "FaceBlend": "頬３涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-13.66, 0.00, -0.58",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0020d": {
+    "ID": "imvi_intro_night_0020d",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0021",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-16.92, 1.63, -3.97",
+        "TargetPosString": "-14.03, 0.96, -0.72",
+        "AroundAngleString": "41.56, 8.74",
+        "Distance": 4.4
+      },
+      "LockCamera": { "IsLock": true }
+    }
+  },
+
+  "imvi_intro_night_0021": {
+    "ID": "imvi_intro_night_0021",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0022",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "これが[=Name,NPC_F,0,FirstName]だ。新婚の妻。あそこに立っているのが彼女の夫　[=Name,NPC_M,1,FirstName]。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "imvi_intro_night_0022": {
+    "ID": "imvi_intro_night_0022",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0023",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "す…すごい！[=Name,NPC_F,0,FirstName]ねーちゃん……！…ヌルヌルに…包まれて……すごい！"
+    }
+  },
+
+  "imvi_intro_night_0023": {
+    "ID": "imvi_intro_night_0023",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0024",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*口内射精",
+        "SexPosID": 115,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "imvi_intro_night_0024": {
+    "ID": "imvi_intro_night_0024",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0025",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 0,
+      "Text": "ちゅぐ、ちゅ……もう、だめかな？　んふ、意外と早漏なんだねぇ。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U1_00207.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 9
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0025": {
+    "ID": "imvi_intro_night_0025",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0026",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "ご…ごめん！"
+    }
+  },
+
+  "imvi_intro_night_0026": {
+    "ID": "imvi_intro_night_0026",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0027_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 1,
+      "Text": "落ち着いて。そんなに緊張するな。初体験を恥じる必要はないだろ。もう一回やって、[=Name,NPC_F,0,FirstName]に感じさせてみよう。"
+    }
+  },
+
+  "imvi_intro_night_0027_camerapan": {
+    "ID": "imvi_intro_night_0027_camerapan",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0028",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-11.93, 1.51, -4.54",
+        "TargetPosString": "-14.03, 0.96, -0.72",
+        "AroundAngleString": "331.20, 7.18",
+        "Distance": 4.4
+      }
+    }
+  },
+
+  "imvi_intro_night_0028": {
+    "ID": "imvi_intro_night_0028",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0029",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "こんな感じ。さあ、行こうか。"
+    }
+  },
+
+  "imvi_intro_night_0029": {
+    "ID": "imvi_intro_night_0029",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_night_0030",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_night_0030": {
+    "ID": "imvi_intro_night_0030",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "imvi_intro_night_0030a"
+  },
+
+  "imvi_intro_night_0030a": {
+    "ID": "imvi_intro_night_0030a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0030b",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": false
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 8,
+        "Visible": false
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 9,
+        "Visible": false
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 1,
+        "Visible": false
+      }
+    ]
+  },
+
+
+  "imvi_intro_night_0030b": {
+    "ID": "imvi_intro_night_0030b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0030c",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "17.00, 0.00, 0.44",
+          "RotString": "0, 0.924, 0, -0.383"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 1
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "発情",
+        "PosRot": {
+          "PosString": "16.62, 0.00, 0.89",
+          "RotString": "0, 0.959, 0, -0.283"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 1
+          }
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "16.26, 0.00, 1.38",
+          "RotString": "0, 0.926, 0, -0.377"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 1
+          }
+        }
+      },
+
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "14.73, 0.00, -0.62",
+          "RotString": "0, 0.239, 0, -0.971"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 10
+          }
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 10,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "14.73, 0.00, -0.62",
+          "RotString": "0, 0.239, 0, -0.971"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 1
+          }
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 11,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "13.60, 0.50, -2.71",
+          "RotString": "0, 0.944, 0, -0.330"
+        },
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 1
+          }
+        }
+      }
+    ]
+  },
+
+
+  "imvi_intro_night_0030c": {
+    "ID": "imvi_intro_night_0030c",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0030d",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 10
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 1
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0030d": {
+    "ID": "imvi_intro_night_0030d",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0030e",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "ダンス誘惑",
+          "FaceBlend": "頬１涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "14.73, 0.00, -0.62",
+          "RotString": "0, 0.239, 0, -0.971"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0030e": {
+    "ID": "imvi_intro_night_0030e",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0031",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "16.69, 2.31, 3.59",
+        "TargetPosString": "15.53, 1.30, 0.78",
+        "AroundAngleString": "202.45, 18.36",
+        "Distance": 3.2
+      }
+    }
+  },
+
+
+  "imvi_intro_night_0031": {
+    "ID": "imvi_intro_night_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0032_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "そしてこれが[=Name,NPC_F,1,FirstName]、村の学校の先生だ。彼女は「童貞卒業の相手にしたい」ランキングで男の子の間で一位になったらしい。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_night_0032_camerapan": {
+    "ID": "imvi_intro_night_0032_camerapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "imvi_intro_night_0033",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "15.60, 1.70, 0.29",
+        "TargetPosString": "15.56, 1.62, 0.23",
+        "AroundAngleString": "212.04, 47.25",
+        "Distance": 0.1
+      },
+      "AnimationTime": 2
+    }
+  },
+
+  "imvi_intro_night_0033": {
+    "ID": "imvi_intro_night_0033",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0034",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 1,
+      "Text": "こんなに勃起してるくらいだもの。あなた素質あるわ……さ、力を抜いて♪",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U7_pen2_00247.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0034": {
+    "ID": "imvi_intro_night_0034",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0035",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "こ…この穴ですか？"
+    }
+  },
+
+  "imvi_intro_night_0035": {
+    "ID": "imvi_intro_night_0035",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0035a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*挿入",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "まぶたギュ",
+          "FaceBlend": "頬１涙０"
+        },
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "imvi_intro_night_0035a": {
+    "ID": "imvi_intro_night_0035a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0036",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 1,
+      "Text": "そう、きて、は♪　ん、あ、そう、そう……",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U7_pen2_00113.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6.7
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0036": {
+    "ID": "imvi_intro_night_0036",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0036a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_intro_night_0036a": {
+    "ID": "imvi_intro_night_0036a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0037",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 1,
+      "Text": "ペニスどうなってる？　先生のヴァギナは？",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U7_pen2_00170.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0037": {
+    "ID": "imvi_intro_night_0037",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0038",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "あァーー　すごく気持ちいいィィー　先生の膣はとても温かく、ヌルヌルで締まっているぅー"
+    }
+  },
+
+  "imvi_intro_night_0038": {
+    "ID": "imvi_intro_night_0038",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0039",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 1,
+      "Text": "そう、自分で押し出したりして腰を使うのもいいわね。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U7_pen2_00316.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0039": {
+    "ID": "imvi_intro_night_0039",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0040",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 1,
+      "Text": "男の腰の使い方で、い、言うでしょぉ？　丸書いてちょんとか、のの字を……とかっ。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U7_pen2_00334.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0040": {
+    "ID": "imvi_intro_night_0040",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0041",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮１",
+          "FaceBlend": "頬１涙０"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0041": {
+    "ID": "imvi_intro_night_0041",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0042",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "こ…こうか？"
+    }
+  },
+
+  "imvi_intro_night_0042": {
+    "ID": "imvi_intro_night_0042",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0042a",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 1,
+      "Text": "あ、そ、そぉっ♪　そこ……あ、当たるぅ。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U7_pen2_00178.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.3
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0042a": {
+    "ID": "imvi_intro_night_0042a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0042b",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮２",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "imvi_intro_night_0042b": {
+    "ID": "imvi_intro_night_0042b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0043",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 1,
+      "Text": "は、あ、あっあっ♪　ゴリゴリ、強、っあ！　イイ……はああんっ！",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U7_pen2_00142.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0043": {
+    "ID": "imvi_intro_night_0043",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0044_camerapan",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*抱き付き激しさ２",
+        "SexPosID": 102,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮３",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0044_camerapan": {
+    "ID": "imvi_intro_night_0044_camerapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "imvi_intro_night_0044",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "16.27, 0.37, -0.44",
+        "TargetPosString": "15.51, 0.30, -0.70",
+        "AroundAngleString": "251.26, 4.70",
+        "Distance": 0.8
+      },
+      "AnimationTime": 0.5
+    }
+  },
+
+  "imvi_intro_night_0044": {
+    "ID": "imvi_intro_night_0044",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0045",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "こうゆう動きは正しいか？先生。"
+    }
+  },
+
+  "imvi_intro_night_0045": {
+    "ID": "imvi_intro_night_0045",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0046",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 1,
+      "Text": "１００点ねっ♪　あなたとっても優秀だわ。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U7_pen2_00358.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0046": {
+    "ID": "imvi_intro_night_0046",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0047",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "ありがとうこざいます！先生。ぼく、頑張ります！"
+    }
+  },
+
+  "imvi_intro_night_0047": {
+    "ID": "imvi_intro_night_0047",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0048",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 1,
+      "Text": "よしよし、いい子でちゅねー？",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U7_pen2_00253.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0048": {
+    "ID": "imvi_intro_night_0048",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0049",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "先生、これめっちゃ気持ちいい！ぼくこれ大好き。ずっとやってたい！"
+    }
+  },
+
+  "imvi_intro_night_0049": {
+    "ID": "imvi_intro_night_0049",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0050",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*抱き付き激しさ２キス",
+        "SexPosID": 102,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "接吻",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0050": {
+    "ID": "imvi_intro_night_0050",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0051",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 1,
+      "Text": "ん～～……ちゅ、ちゅっ♪　私もすごく興奮しちゃった。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U7_pen2_00235.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 10
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0051": {
+    "ID": "imvi_intro_night_0051",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_night_0051a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_night_0051a": {
+    "ID": "imvi_intro_night_0051a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0051b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "imvi_intro_night_0051b": {
+    "ID": "imvi_intro_night_0051b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0051c",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺たちが見ている時、一人の女性が近くに来て、俺たちと話をした。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_night_0051c": {
+    "ID": "imvi_intro_night_0051c",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_night_0052",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_night_0052": {
+    "ID": "imvi_intro_night_0052",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0052a",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "17.01, 0.00, 2.17",
+          "RotString": "0, 0.754, 0, -0.657"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 2
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み",
+        "PosRot": {
+          "PosString": "16.55, 0.00, 1.49",
+          "RotString": "0, 0.540, 0, -0.842"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 2
+          }
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "16.44, 0.00, 2.66",
+          "RotString": "0, 0.932, 0, -0.362"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 1
+          }
+        }
+      },
+
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "11.62, 0.00, 2.09",
+          "RotString": "0, 0.707, 0, 0.707"
+        },
+        "ClothesSetID": "ImmoralVillage_HideBoobs",
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0052a": {
+    "ID": "imvi_intro_night_0052a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0053",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "18.33, 1.55, 2.69",
+        "TargetPosString": "14.68, 0.93, 1.84",
+        "AroundAngleString": "256.95, 9.36",
+        "Distance": 3.8
+      }
+    }
+  },
+
+  "imvi_intro_night_0053": {
+    "ID": "imvi_intro_night_0053",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0054",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*歩き１移動",
+          "IsBlend": false
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0054": {
+    "ID": "imvi_intro_night_0054",
+    "Type": "TimeWait",
+    "Tag": "3",
+    "WaitingType": "TimeWait",
+    "NextStepID": "imvi_intro_night_0055",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_night_0055": {
+    "ID": "imvi_intro_night_0055",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_night_0056",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_night_0056": {
+    "ID": "imvi_intro_night_0056",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0056a",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "15.93, 0.00, 2.46",
+          "RotString": "0, 0.790, 0, -0.613"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み",
+        "PosRot": {
+          "PosString": "15.60, 0.00, 1.72",
+          "RotString": "0, 0.491, 0, -0.871"
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "14.38, 0.00, 2.25",
+          "RotString": "0, -0.693, 0, -0.721"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "苦笑い",
+        "PosRot": {
+          "PosString": "14.68, 0.00, 1.65",
+          "RotString": "0, 0.496, 0, 0.869"
+        },
+        "MotionInfo": {
+          "MotionFile": "kaiwa_tati_taiki_f.anm",
+          "MotionTag": "kaiwa_tati_taiki_f.anm",
+          "IsBlend": false
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0056a": {
+    "ID": "imvi_intro_night_0056a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0057",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "15.23, 1.74, 4.89",
+        "TargetPosString": "15.27, 0.93, 1.79",
+        "AroundAngleString": "179.10, 14.64",
+        "Distance": 3.2
+      }
+    }
+  },
+
+
+  "imvi_intro_night_0057": {
+    "ID": "imvi_intro_night_0057",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0058",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "お待たせしました、すみません、夜遅くに……",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00222.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_night_0058": {
+    "ID": "imvi_intro_night_0058",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0059",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "あ、来たか、[=Name,NPC_F,2,FirstName]。これが妻の[=Name,NPC_F,2,FirstName]だ。[=Name,NPC_F,2,FirstName]、彼らはエンパイアクラブのオーナーさんの[=ClubOwnerName]くんと奥さんの[=Name,Maid,0,CallName]だ。"
+    }
+  },
+
+  "imvi_intro_night_0059": {
+    "ID": "imvi_intro_night_0059",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0059_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちお辞儀＿普通"
+        }
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を振る"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0059_Branch": {
+    "ID": "imvi_intro_night_0059_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_intro_night_0060_T_[=PType]"
+  },
+
+  "imvi_intro_night_0061": {
+    "ID": "imvi_intro_night_0061",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0062",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "よろしくね。"
+    }
+  },
+
+  "imvi_intro_night_0062": {
+    "ID": "imvi_intro_night_0062",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0063",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,NPC_F,2,FirstName]さんもその服を着ている。彼女も参加するつもりか。）"
+    }
+  },
+
+  "imvi_intro_night_0063": {
+    "ID": "imvi_intro_night_0063",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0064",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0064": {
+    "ID": "imvi_intro_night_0064",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0065",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "ここは初めてですか？",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00150.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0065": {
+    "ID": "imvi_intro_night_0065",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0066_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頷く"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0066_Branch": {
+    "ID": "imvi_intro_night_0066_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_intro_night_0070_T_[=PType]"
+  },
+
+  "imvi_intro_night_0071": {
+    "ID": "imvi_intro_night_0071",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0072",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0072": {
+    "ID": "imvi_intro_night_0072",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0073",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "ふふ……♪　たっぷり、味わってくださいね……？",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00158.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3.5
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0073": {
+    "ID": "imvi_intro_night_0073",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0074",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "[=Name,NPC_F,2,FirstName]、そこの部屋はどう？そこの男の子たちはもう待ちきれないみたい。"
+    }
+  },
+
+  "imvi_intro_night_0074": {
+    "ID": "imvi_intro_night_0074",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0075",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち喜ぶ"
+        },
+        "PosRot": {
+          "PosString": "14.68, 0.00, 1.65",
+          "RotString": "0, -0.143, 0, 0.990"
+        },
+        "SmoothMovement": { "Time": 0.3 },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0075": {
+    "ID": "imvi_intro_night_0075",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0076",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "はい、お任せください♪",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00234.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0076": {
+    "ID": "imvi_intro_night_0076",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_night_0077",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+
+
+
+  "imvi_intro_night_0077": {
+    "ID": "imvi_intro_night_0077",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "imvi_intro_night_0077a"
+  },
+
+  "imvi_intro_night_0077a": {
+    "ID": "imvi_intro_night_0077a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0077b",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 1,
+        "Visible": false
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 10,
+        "Visible": false
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 11,
+        "Visible": false
+      }
+    ]
+  },
+
+
+  "imvi_intro_night_0077b": {
+    "ID": "imvi_intro_night_0077b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0077c",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "20.40, 0.00, 0.51",
+          "RotString": "0, 0.982, 0, 0.19"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 2
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "発情",
+        "PosRot": {
+          "PosString": "20.99, 0.00, 0.89",
+          "RotString": "0, 0.996, 0, 0.091"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 2
+          }
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "19.88, 0.00, -0.02",
+          "RotString": "0, 0.834, 0, 0.552"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 2
+          }
+        }
+      },
+
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "ClothesSetID": "ImmoralVillage_ShowBoobsNoUnderwear",
+        "PosRot": {
+          "PosString": "21.78, 0.00, -1.08",
+          "RotString": "0, 0.239, 0, -0.971"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 12
+          }
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 12,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "21.78, 0.00, -1.08",
+          "RotString": "0, 0.239, 0, -0.971"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 2
+          }
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 13,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "21.03, 0.50, -1.91",
+          "RotString": "0, 0.853, 0, -0.522"
+        },
+        "MotionInfo": {
+          "MotionFile": "asikoki2_taiki_m.anm",
+          "MotionTag": "asikoki2_taiki_m.anm"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCFemale",
+            "ArrayPosition": 2
+          }
+        }
+      }
+    ]
+  },
+
+
+  "imvi_intro_night_0077c": {
+    "ID": "imvi_intro_night_0077c",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0077d",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 12
+        },
+        "Maid1": {
+          "Type": "NPC",
+          "ArrayPosition": 2
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0077d": {
+    "ID": "imvi_intro_night_0077d",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0077e",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_taimenzai.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 103,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "ダンス誘惑",
+          "FaceBlend": "頬１涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "21.78, 0.00, -1.08",
+          "RotString": "0, 0.239, 0, -0.971"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0077e": {
+    "ID": "imvi_intro_night_0077e",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0078",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "19.13, 1.81, 1.30",
+        "TargetPosString": "21.62, 0.81, -0.79",
+        "AroundAngleString": "130.18, 17.12",
+        "Distance": 3.4
+      }
+    }
+  },
+
+  "imvi_intro_night_0078": {
+    "ID": "imvi_intro_night_0078",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0079_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,NPC_F,2,FirstName]さんは部屋に入り、そこにいる男の子たちとセックスを始めた。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_night_0079_camerapan": {
+    "ID": "imvi_intro_night_0079_camerapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "imvi_intro_night_0080",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "22.60, 1.04, 0.61",
+        "TargetPosString": "22.00, 0.55, -1.01",
+        "AroundAngleString": "200.24, 15.88",
+        "Distance": 1.6
+      }
+    }
+  },
+
+  "imvi_intro_night_0080": {
+    "ID": "imvi_intro_night_0080",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0081",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "み…[=Name,NPC_F,2,FirstName]お姉ちゃん、僕はこの日をずっとずっと前から待っていた！ぼ…僕、[=Name,NPC_F,2,FirstName]お姉ちゃんのこと大好き！なんとしてもヤってたい！"
+    }
+  },
+
+  "imvi_intro_night_0081": {
+    "ID": "imvi_intro_night_0081",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0081a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_intro_night_0081a": {
+    "ID": "imvi_intro_night_0081a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0082",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "そうですか……ふふ♪　緊張しなくても大丈夫、私にすべて任せてくださいね……？",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00151.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0082": {
+    "ID": "imvi_intro_night_0082",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0083",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "[=Name,NPC_F,2,FirstName]お姉ちゃんを満足させるために、僕、頑張ります！"
+    }
+  },
+
+  "imvi_intro_night_0083": {
+    "ID": "imvi_intro_night_0083",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0083a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_intro_night_0083a": {
+    "ID": "imvi_intro_night_0083a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0084",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "今日が初めてなのですから……いっぱい、気持ちよくなってくれれば、それでいいんです。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00175.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0084": {
+    "ID": "imvi_intro_night_0084",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0085",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,NPC_F,2,FirstName]さんはゆっくりと男の子の上に座る。）"
+    }
+  },
+
+  "imvi_intro_night_0085": {
+    "ID": "imvi_intro_night_0085",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0086",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_taimenzai.ks",
+        "ScriptLabel": "*挿入",
+        "SexPosID": 103,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "優しさ",
+          "FaceBlend": "頬１涙０"
+        },
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "imvi_intro_night_0086": {
+    "ID": "imvi_intro_night_0086",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0087",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "はぁっ……ぁ、んん……おっきい……奥まで、入っちゃいましたね……？　童貞卒業、おめでとうございます……♪",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00178.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0087": {
+    "ID": "imvi_intro_night_0087",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0088",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "[=Name,NPC_F,2,FirstName]お姉ちゃん……！僕がやっと[=Name,NPC_F,2,FirstName]お姉ちゃんと一つになるんだ……！"
+    }
+  },
+
+  "imvi_intro_night_0088": {
+    "ID": "imvi_intro_night_0088",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0089",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "はぁっ、どう、っですかっ……？　私の、おまんこ……きもち、いいですかっ……？　あ、んんんっ……",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00183.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0089": {
+    "ID": "imvi_intro_night_0089",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0090",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "は、はい！…ああ……スゲェ…[=Name,NPC_F,2,FirstName]お姉さんの膣は僕のおちんちんを優しく包み込むだ！"
+    }
+  },
+
+  "imvi_intro_night_0090": {
+    "ID": "imvi_intro_night_0090",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0091",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "はぁっ……んん、私、動きますね……？　ふふ、んんっ……",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00180.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0091": {
+    "ID": "imvi_intro_night_0091",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0092",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_taimenzai.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 103,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮２",
+          "FaceBlend": "頬１涙０"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0092": {
+    "ID": "imvi_intro_night_0092",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0093",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "[=Name,NPC_F,2,FirstName]お姉ちゃん、キスしてもいい？[=Name,NPC_F,2,FirstName]お姉ちゃんと恋人のようにセックスのことが毎晩毎晩妄想し、オナニーした！"
+    }
+  },
+
+  "imvi_intro_night_0093": {
+    "ID": "imvi_intro_night_0093",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0093a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ好感２"
+      }
+    ]
+  },
+
+  "imvi_intro_night_0093a": {
+    "ID": "imvi_intro_night_0093a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0094",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "ふふ、贅沢な想像……でも、それが男の子、ですよね……？　いいんですよ♪",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00167.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 10
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0094": {
+    "ID": "imvi_intro_night_0094",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0094a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_taimenzai.ks",
+        "ScriptLabel": "*激しさ１キス",
+        "SexPosID": 103,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "接吻",
+          "FaceBlend": "頬２涙０"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0094a": {
+    "ID": "imvi_intro_night_0094a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0095",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "私も、キス、好きです……ちゅ、んん……れる……",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00169.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.5
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0095": {
+    "ID": "imvi_intro_night_0095",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0095a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_taimenzai.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 103,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ好感３",
+          "FaceBlend": "頬２涙０"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0095a": {
+    "ID": "imvi_intro_night_0095a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0096",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "[=Name,NPC_F,2,FirstName]お姉ちゃん！[=Name,NPC_F,2,FirstName]お姉ちゃん…！僕…もう…！"
+    }
+  },
+
+  "imvi_intro_night_0096": {
+    "ID": "imvi_intro_night_0096",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0096a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_taimenzai.ks",
+        "ScriptLabel": "*激しさ２キス",
+        "SexPosID": 103,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "接吻",
+          "FaceBlend": "頬２涙０"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0096a": {
+    "ID": "imvi_intro_night_0096a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0097",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "んっ、ちゅ、いい、ですよっ、ちゅ、んんっ！　私っ、一番奥で、受け入れてあげますっ、から、ちゅ、んっ、んんっ！",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00211.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0097": {
+    "ID": "imvi_intro_night_0097",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0097a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_taimenzai.ks",
+        "ScriptLabel": "*射精中",
+        "SexPosID": 103,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮３",
+          "FaceBlend": "頬２涙０"
+        },
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+
+  "imvi_intro_night_0097a": {
+    "ID": "imvi_intro_night_0097a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0098",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "あ…お…あっ……あァ…！"
+    }
+  },
+
+  "imvi_intro_night_0098": {
+    "ID": "imvi_intro_night_0098",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0098a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_taimenzai.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 103,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "にっこり",
+          "FaceBlend": "頬２涙０"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_night_0098a": {
+    "ID": "imvi_intro_night_0098a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0099",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "はぁっ、はぁ、ぁあ……すごい……こんなに、出るなんて……少し、感動します……",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00213.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0099": {
+    "ID": "imvi_intro_night_0099",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0100",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "はァ……はァ……ど…どう？僕のおちんちん……[=Name,NPC_F,2,FirstName]お姉ちゃん？"
+    }
+  },
+
+  "imvi_intro_night_0100": {
+    "ID": "imvi_intro_night_0100",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0100a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_intro_night_0100a": {
+    "ID": "imvi_intro_night_0100a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0101",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "もっと練習が、必要ですね……",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00216.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 8
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0101": {
+    "ID": "imvi_intro_night_0101",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0102",
+    "TalkData": {
+      "SpeakerName": "男の子",
+      "Text": "そうか…じゃあもう一度一緒に練習してくれる？"
+    }
+  },
+
+  "imvi_intro_night_0102": {
+    "ID": "imvi_intro_night_0102",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_night_0102a",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ好感３"
+      }
+    ]
+  },
+
+  "imvi_intro_night_0102a": {
+    "ID": "imvi_intro_night_0102a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0103",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 2,
+      "Text": "ん、いいんですよ……？",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "U0_00221.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1,
+          "EndTime": 4
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0103": {
+    "ID": "imvi_intro_night_0103",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0104",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "[=Name,NPC_F,2,FirstName]も頑張ったみたいね。さあ、行こうか。[=Name,Maid,0,CallName]さんが担当する部屋へ。"
+    }
+  },
+
+  "imvi_intro_night_0104": {
+    "ID": "imvi_intro_night_0104",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_phase1_0001",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  }
+
+}

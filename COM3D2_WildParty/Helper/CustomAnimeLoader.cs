@@ -15,7 +15,11 @@ namespace COM3D2.WildParty.Plugin.Helper
             "wp_mod_motion_female_stand.anm",
             "wp_mod_motion_female_stand_inverse.anm",
             
-            "wp_mod_motion_male_stand_holding_camera.anm"
+            "wp_mod_motion_male_stand_holding_camera.anm",
+            "wp_mod_maid_hand_on_shoulder.anm",
+            "wp_mod_motion_man_crawling.anm",
+            "wp_mod_maid_knee_stare_penis.anm",
+            "wp_mod_motion_man_seiza_hide_penis.anm"
         };
 
         public static byte[] GetAnimData(string fileName)
@@ -32,6 +36,14 @@ namespace COM3D2.WildParty.Plugin.Helper
 
             else if (fileName.ToLower() == "wp_mod_motion_male_stand_holding_camera.anm")
                 result = ModResources.CustomAnimResources.wp_mod_motion_male_stand_holding_camera;
+            else if (fileName.ToLower() == "wp_mod_maid_hand_on_shoulder.anm")
+                result = ModResources.CustomAnimResources.wp_mod_maid_hand_on_shoulder;
+            else if (fileName.ToLower() == "wp_mod_motion_man_crawling.anm")
+                result = ModResources.CustomAnimResources.wp_mod_motion_man_crawling;
+            else if (fileName.ToLower() == "wp_mod_maid_knee_stare_penis.anm")
+                result = ModResources.CustomAnimResources.wp_mod_maid_knee_stare_penis;
+            else if (fileName.ToLower() == "wp_mod_motion_man_seiza_hide_penis.anm")
+                result = ModResources.CustomAnimResources.wp_mod_motion_man_seiza_hide_penis;
 
             return result;
         }

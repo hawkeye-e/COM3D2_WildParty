@@ -1,0 +1,1527 @@
+{
+  "imvi0001": {
+    "ID": "imvi0001",
+    "Type": "BG",
+    "Tag": "EmpireClub_Rotary",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_init_chara"
+  },
+
+  "imvi_init_chara": {
+    "ID": "imvi_init_chara",
+    "Type": "CharaInit",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_init_hide_men",
+    "CharaInitData": {
+      "IsClubOwnerADVMainCharacter": false,
+      "ManRequired": 14,
+      "ValidManType": [
+        "Shota"
+      ],
+      "ModNPC": [
+        {
+          "Index": 0,
+          "NPCID": "Village_Head",
+          "IsFemale": false
+        },
+        {
+          "Index": 1,
+          "NPCID": "ImmoralVillage_Shinji",
+          "IsFemale": false
+        },
+        {
+          "Index": 0,
+          "NPCID": "ImmoralVillage_Sayaka",
+          "IsFemale": true
+        },
+        {
+          "Index": 1,
+          "NPCID": "ImmoralVillage_Kaede",
+          "IsFemale": true
+        },
+        {
+          "Index": 2,
+          "NPCID": "ImmoralVillage_Minori",
+          "IsFemale": true
+        }
+      ]
+    }
+  },
+
+  "imvi_init_hide_men": {
+    "ID": "imvi_init_hide_men",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_init_camera",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": false
+      }
+    ]
+  },
+
+  "imvi_init_camera": {
+    "ID": "imvi_init_camera",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_0001",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "3.79, 6.76, -3.67",
+        "TargetPosString": "3.18, 7.71, -2.02",
+        "AroundAngleString": "-20.30, 331.47",
+        "Distance": 2
+      },
+      "LockCamera": { "IsLock": true }
+    }
+  },
+
+
+  "imvi_intro_0001": {
+    "ID": "imvi_intro_0001",
+    "Type": "BGM",
+    "Tag": "BGM018.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_0002"
+  },
+
+  "imvi_intro_0002": {
+    "ID": "imvi_intro_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（他のクラブと連携イベントの商談のために、俺と[=Name,Maid,0,CallName]は遠方のクラブを訪問し、いくつかの取引について話し合う。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_0003": {
+    "ID": "imvi_intro_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（少し時間はかかるが、商談は順調だ。）"
+    }
+  },
+
+  "imvi_intro_0004": {
+    "ID": "imvi_intro_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0005",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（長い間休みを取っていなかったので、俺と[=Name,Maid,0,CallName]はこの機会に現地をちょっとした旅行をして休息を取ろうと計画した。）"
+    }
+  },
+
+  "imvi_intro_0005": {
+    "ID": "imvi_intro_0005",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0006",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そこのクラブのオーナーさんが、近くのある村に行くよう勧めてくれた。食事も景色もとてもいいと言っていた。そのゆえに俺たちはその村に、数日間滞在することにした。）"
+    }
+  },
+
+  "imvi_intro_0006": {
+    "ID": "imvi_intro_0006",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_0007",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_0007": {
+    "ID": "imvi_intro_0007",
+    "Type": "BG",
+    "Tag": "yashiki_day",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_0008"
+  },
+
+  "imvi_intro_0008": {
+    "ID": "imvi_intro_0008",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_0008a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "17.08, 1.58, 22.02",
+        "TargetPosString": "14.63, 1.23, 22.35",
+        "AroundAngleString": "277.78, 8.12",
+        "Distance": 2.5
+      },
+      "LockCamera": { "IsLock": true }
+    }
+  },
+
+  "imvi_intro_0008a": {
+    "ID": "imvi_intro_0008a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0008b",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "笑顔",
+        "FaceBlend": "頬１涙０",
+        "PosRot": {
+          "PosString": "14.64, 0.00, 22.32",
+          "RotString": "0, 0.707, 0, 0.707"
+        },
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        }
+      }
+
+    ],
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_0008b": {
+    "ID": "imvi_intro_0008b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0009",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "turn01.anm",
+          "MotionTag": "turn01.anm",
+          "IsLoopMotion": false
+        }
+      }
+
+    ]
+  },
+
+  "imvi_intro_0009": {
+    "ID": "imvi_intro_0009",
+    "Type": "TimeWait",
+    "Tag": "2",
+    "WaitingType": "TimeWait",
+    "NextStepID": "imvi_intro_0010"
+  },
+
+  "imvi_intro_0010": {
+    "ID": "imvi_intro_0010",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_0010a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true,
+      "Time": 0.1,
+      "ColorString": "White"
+    }
+  },
+
+  "imvi_intro_0010a": {
+    "ID": "imvi_intro_0010a",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE036.ogg"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_0011",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false,
+      "Time": 0.1
+    }
+  },
+
+  "imvi_intro_0011": {
+    "ID": "imvi_intro_0011",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0011a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "MotionFile": "pose_kakkoii_01_loop_f.anm",
+          "MotionTag": "pose_kakkoii_01_loop_f.anm",
+          "IsLoopMotion": false
+        }
+      }
+
+    ]
+  },
+
+  "imvi_intro_0011a": {
+    "ID": "imvi_intro_0011a",
+    "Type": "TimeWait",
+    "Tag": "1",
+    "WaitingType": "TimeWait",
+    "NextStepID": "imvi_intro_0011b"
+  },
+
+  "imvi_intro_0011b": {
+    "ID": "imvi_intro_0011b",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_0011c",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true,
+      "Time": 0.1,
+      "ColorString": "White"
+    }
+  },
+
+  "imvi_intro_0011c": {
+    "ID": "imvi_intro_0011c",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE036.ogg"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_0012",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false,
+      "Time": 0.1
+    }
+  },
+
+  "imvi_intro_0012": {
+    "ID": "imvi_intro_0012",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0012a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ダンス誘惑",
+        "MotionInfo": {
+          "MotionFile": "pose_kawaii_01_loop_f.anm",
+          "MotionTag": "pose_kawaii_01_loop_f.anm",
+          "IsLoopMotion": false,
+          "IsBlend": false
+        }
+      }
+
+    ]
+  },
+
+  "imvi_intro_0012a": {
+    "ID": "imvi_intro_0012a",
+    "Type": "TimeWait",
+    "Tag": "1",
+    "WaitingType": "TimeWait",
+    "NextStepID": "imvi_intro_0012b"
+  },
+
+  "imvi_intro_0012b": {
+    "ID": "imvi_intro_0012b",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_0012c",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true,
+      "Time": 0.1,
+      "ColorString": "White"
+    }
+  },
+
+  "imvi_intro_0012c": {
+    "ID": "imvi_intro_0012c",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE036.ogg"
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_0013",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false,
+      "Time": 0.1
+    }
+  },
+
+  "imvi_intro_0013": {
+    "ID": "imvi_intro_0013",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0014",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（初日はぶらぶらと歩き回った。こうしてのんびりするのは久しぶりだな。）"
+    }
+  },
+
+  "imvi_intro_0014": {
+    "ID": "imvi_intro_0014",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_0015",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_0015": {
+    "ID": "imvi_intro_0015",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_0015a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      },
+      "LockCamera": { "IsLock": false }
+    }
+  },
+
+  "imvi_intro_0015a": {
+    "ID": "imvi_intro_0015a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0016",
+    "TalkData": {
+      "SpecificSpeaker": "",
+      "Text": "次の朝"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_0016": {
+    "ID": "imvi_intro_0016",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_0017",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_0017": {
+    "ID": "imvi_intro_0017",
+    "Type": "BG",
+    "Tag": "japanesehouse",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_0017a"
+  },
+
+  "imvi_intro_0017a": {
+    "ID": "imvi_intro_0017a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_0017b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "2.26, 0.88, 4.69",
+        "TargetPosString": "0.49, 0.31, 3.33",
+        "AroundAngleString": "232.40, 14.33",
+        "Distance": 2.3
+      }
+    }
+  },
+
+  "imvi_intro_0017b": {
+    "ID": "imvi_intro_0017b",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0017c",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "man_ohayo.anm",
+          "MotionTag": "man_ohayo.anm"
+        },
+        "PosRot": {
+          "PosString": "0.79, -0.06, 3.70",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠",
+        "MotionInfo": {
+          "MotionFile": "sit_bed1.anm",
+          "MotionTag": "sit_bed1.anm"
+        },
+        "PosRot": {
+          "PosString": "0.59, -0.04, 2.80",
+          "RotString": "0, 0.417, 0, 0.909"
+        }
+      }
+
+    ]
+  },
+
+  "imvi_intro_0017c": {
+    "ID": "imvi_intro_0017c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0018_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ふぅー"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_0018_Branch": {
+    "ID": "imvi_intro_0018_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_intro_0020_T_[=PType]"
+  },
+
+  "imvi_intro_0021": {
+    "ID": "imvi_intro_0021",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0022",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ、そうだな。ここは本当に良い場所だ。食事は美味しく、空気は新鮮だ。"
+    }
+  },
+
+  "imvi_intro_0022": {
+    "ID": "imvi_intro_0022",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0023",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ここでゆっくり過ごすのはとてもリラックスだ。たまにはこういうのも良いよね……"
+    }
+  },
+
+  "imvi_intro_0023": {
+    "ID": "imvi_intro_0023",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0024_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_intro_0024_Branch": {
+    "ID": "imvi_intro_0024_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_intro_0030_T_[=PType]"
+  },
+
+
+  "imvi_intro_0031": {
+    "ID": "imvi_intro_0031",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0032",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_0032": {
+    "ID": "imvi_intro_0032",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0033",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "さて、今日はなにをするん？あ、昨日見たあの小高い丘はどう？きっと良い眺めだと思う。"
+    }
+  },
+
+  "imvi_intro_0033": {
+    "ID": "imvi_intro_0033",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0034_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "笑顔",
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      }
+    ]
+  },
+
+
+  "imvi_intro_0034_Branch": {
+    "ID": "imvi_intro_0034_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_intro_0040_T_[=PType]"
+  },
+
+  "imvi_intro_0041": {
+    "ID": "imvi_intro_0041",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0042",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "いいねー　じゃあ、お弁当を作ってそこでピクニックに行こうか？"
+    }
+  },
+
+  "imvi_intro_0042": {
+    "ID": "imvi_intro_0042",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0043_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_intro_0043_Branch": {
+    "ID": "imvi_intro_0043_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_intro_0050_T_[=PType]"
+  },
+
+
+  "imvi_intro_0051": {
+    "ID": "imvi_intro_0051",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_0052",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_0052": {
+    "ID": "imvi_intro_0052",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_0052a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "imvi_intro_0052a": {
+    "ID": "imvi_intro_0052a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0053",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（準備を終えて出発すると、村長さんがやってきて、俺たちと話をしたいと言った。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_0053": {
+    "ID": "imvi_intro_0053",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_0053a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_0053a": {
+    "ID": "imvi_intro_0053a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0053b",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼",
+          "IsBlend": false
+        },
+        "PosRot": {
+          "PosString": "-1.82, -0.46, 11.80",
+          "RotString": "0, 0, 0, -1"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機",
+          "IsBlend": false
+        },
+        "PosRot": {
+          "PosString": "-2.34, -0.46, 11.80",
+          "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "NPC_M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-1.98, -0.46, 13.07",
+          "RotString": "0, 1, 0, 0"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_0053b": {
+    "ID": "imvi_intro_0053b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_0053c",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-2.30, 1.30, 9.59",
+        "TargetPosString": "-1.87, 1.01, 12.24",
+        "AroundAngleString": "9.22, 6.25",
+        "Distance": 2.7
+      }
+    }
+  },
+
+  "imvi_intro_0053c": {
+    "ID": "imvi_intro_0053c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0054",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "おはよう、オーナーさん。今日は素晴らしい日ですねー"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_0054": {
+    "ID": "imvi_intro_0054",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0055",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "そうだな、天気もいいし、妻とあの小高い丘を散歩しようと思っているんだ。"
+    }
+  },
+
+  "imvi_intro_0055": {
+    "ID": "imvi_intro_0055",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0056",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "お！それはいい考えだな。そこの風景は村の誇りだ、きっと気に入ると思うよ。"
+    }
+  },
+
+  "imvi_intro_0056": {
+    "ID": "imvi_intro_0056",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0057",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "これは期待できるね、[=Name,NPC_M,0,LastName]さんがそう言うのなら。"
+    }
+  },
+
+  "imvi_intro_0057": {
+    "ID": "imvi_intro_0057",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_0059",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_0059": {
+    "ID": "imvi_intro_0059",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_0060",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-0.63, 1.61, 14.12",
+        "TargetPosString": "-1.95, 0.80, 12.28",
+        "AroundAngleString": "215.62, 19.61",
+        "Distance": 2.4
+      }
+    }
+  },
+
+  "imvi_intro_0060": {
+    "ID": "imvi_intro_0060",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0061",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "ところで、今夜は村でお祭りがあるんだ。二人とも参加するんだろう？"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_0061": {
+    "ID": "imvi_intro_0061",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0061a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_intro_0061a": {
+    "ID": "imvi_intro_0061a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0062_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "お、そうですか！この日を選んでここに泊まれるなんてラッキーだ。"
+    }
+  },
+
+  "imvi_intro_0062_Branch": {
+    "ID": "imvi_intro_0062_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_intro_0070_M_[=PType]"
+  },
+
+  "imvi_intro_0071": {
+    "ID": "imvi_intro_0071",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0072",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      }
+    ]
+  },
+
+
+  "imvi_intro_0072": {
+    "ID": "imvi_intro_0072",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0073",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "それを期待してるなら存分に楽しんでよ、奥さん。今年は女性の参加者が不足しているので、参加してもらえると助かったよ。"
+    }
+  },
+
+  "imvi_intro_0073": {
+    "ID": "imvi_intro_0073",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0074",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "へぇー　祭りの中で、女性には何をしてもらいたいか？"
+    }
+  },
+
+  "imvi_intro_0074": {
+    "ID": "imvi_intro_0074",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0075",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "え？君たち、知らないかい？この祭りを。"
+    }
+  },
+
+  "imvi_intro_0075": {
+    "ID": "imvi_intro_0075",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0076",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "疑問"
+      }
+    ]
+  },
+
+  "imvi_intro_0076": {
+    "ID": "imvi_intro_0076",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0077",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "全然。俺たちは事前に何も調べずに偶然ここに来ました。"
+    }
+  },
+
+  "imvi_intro_0077": {
+    "ID": "imvi_intro_0077",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0078",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "あっ、お二人はこの祭りを知っていて、この時間にここに来たんじゃなかったっけ？祭りの後の夜、若者たちの集団筆おろしイベントがありますよ。"
+    }
+  },
+
+  "imvi_intro_0078": {
+    "ID": "imvi_intro_0078",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0079",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち口元に手を当てる"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_0079": {
+    "ID": "imvi_intro_0079",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0080",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "待て待て、筆おろし？"
+    }
+  },
+
+  "imvi_intro_0080": {
+    "ID": "imvi_intro_0080",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0081",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "そう、筆おろし。"
+    }
+  },
+
+  "imvi_intro_0081": {
+    "ID": "imvi_intro_0081",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0082",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "-1.82, -0.46, 11.80",
+          "RotString": "0, 0.216, 0, -0.976"
+        },
+        "SmoothMovement": { "Time": 0.3 }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "CustomMotionFile": "wp_mod_maid_hand_on_shoulder.anm",
+          "MotionTag": "wp_mod_maid_hand_on_shoulder.anm"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        },
+        "IKAttach": [
+          {
+            "PosString": "-0.12, 0.05, 0.04",
+            "AttachType": "NewPoint",
+            "Source": {
+              "ArrayIndex": 0,
+              "ListType": "ADVMaid",
+              "Bone": "右手"
+            },
+            "Target": {
+              "ArrayIndex": 0,
+              "ListType": "ADVClubOwner",
+              "Bone": "_IK_ClavicleL"
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "imvi_intro_0082": {
+    "ID": "imvi_intro_0082",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0083",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "………"
+    }
+  },
+
+  "imvi_intro_0083": {
+    "ID": "imvi_intro_0083",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0083a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ドヤ顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち胸を叩く"
+        },
+        "PosRot": {
+          "PosString": "-2.34, -0.46, 11.80",
+          "RotString": "0, 0.707, 0, 0.707"
+        },
+        "SmoothMovement": { "Time": 0.5 },
+        "ResetIK": true
+      }
+    ]
+  },
+
+  "imvi_intro_0083a": {
+    "ID": "imvi_intro_0083a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0084",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "………………"
+    }
+  },
+
+  "imvi_intro_0084": {
+    "ID": "imvi_intro_0084",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0085_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,Maid,0,CallName]、嬉しそうだねー　なんか最近、こういうことがめっちゃ好きみたいだねー"
+    }
+  },
+
+  "imvi_intro_0085_Branch": {
+    "ID": "imvi_intro_0085_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_intro_0090_M_[=PType]"
+  },
+
+  "imvi_intro_0091": {
+    "ID": "imvi_intro_0091",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0092",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "いやいや、褒めてないよ。"
+    }
+  },
+
+  "imvi_intro_0092": {
+    "ID": "imvi_intro_0092",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0093",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼",
+          "IsBlend": false
+        },
+        "PosRot": {
+          "PosString": "-1.82, -0.46, 11.80",
+          "RotString": "0, 0, 0, -1"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        },
+        "SmoothMovement": { "Time": 0.5 }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機",
+          "IsBlend": false
+        },
+        "PosRot": {
+          "PosString": "-2.34, -0.46, 11.80",
+          "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        },
+        "SmoothMovement": { "Time": 0.5 }
+      }
+    ]
+  },
+
+  "imvi_intro_0093": {
+    "ID": "imvi_intro_0093",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0094",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "はぁ…まあいい。それがやりたいなら、ダメとは言わない。"
+    }
+  },
+
+  "imvi_intro_0094": {
+    "ID": "imvi_intro_0094",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0095",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,NPC_M,0,LastName]さん、俺たちはそれで構わないだから、妻を参加させよう。"
+    }
+  },
+
+  "imvi_intro_0095": {
+    "ID": "imvi_intro_0095",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0096",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "おー、ありがとう、助かるよ。"
+    }
+  },
+
+  "imvi_intro_0096": {
+    "ID": "imvi_intro_0096",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0097",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ところで、[=Name,NPC_M,0,LastName]さん…"
+    }
+  },
+
+  "imvi_intro_0097": {
+    "ID": "imvi_intro_0097",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0098",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "何だ？"
+    }
+  },
+
+  "imvi_intro_0098": {
+    "ID": "imvi_intro_0098",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0099",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "若い女の処女喪失は？彼女たちも…？"
+    }
+  },
+
+  "imvi_intro_0099": {
+    "ID": "imvi_intro_0099",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0100_Branch",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        },
+        "PosRot": {
+          "PosString": "-1.82, -0.46, 11.80",
+          "RotString": "0, 0.216, 0, -0.976"
+        },
+        "SmoothMovement": { "Time": 0.3 }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "むー",
+        "MotionInfo": {
+          "MotionFile": "kaiwa_tati_akireB_taiki_f.anm",
+          "MotionTag": "kaiwa_tati_akireB_taiki_f.anm"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        },
+        "PosRot": {
+          "PosString": "-2.34, -0.46, 11.80",
+          "RotString": "0, 0.216, 0, 0.976"
+        },
+        "SmoothMovement": { "Time": 0.3 }
+      }
+    ]
+  },
+
+  "imvi_intro_0100_Branch": {
+    "ID": "imvi_intro_0100_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_intro_0100_T_[=PType]"
+  },
+
+  "imvi_intro_0101": {
+    "ID": "imvi_intro_0101",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0102",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "いやいや、浮気のことを考えじゃないよ。……そ、そう！ただの文化的に興味があるだけ…"
+    }
+  },
+
+  "imvi_intro_0102": {
+    "ID": "imvi_intro_0102",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0103",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "ああ、それはあるが、今夜ではない。"
+    }
+  },
+
+  "imvi_intro_0103": {
+    "ID": "imvi_intro_0103",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0104_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "引きつり笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち呆れる"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_0104_Branch": {
+    "ID": "imvi_intro_0104_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "imvi_intro_0110_T_[=PType]"
+  },
+
+
+  "imvi_intro_0111": {
+    "ID": "imvi_intro_0111",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0112",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "くっ…"
+    }
+  },
+
+  "imvi_intro_0112": {
+    "ID": "imvi_intro_0112",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_night_0001",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  }
+
+}

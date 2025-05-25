@@ -44,7 +44,10 @@ namespace COM3D2.WildParty.Plugin
         {
             Maid,
             Man,
-            Group
+            Group,
+            ADVMaid,
+            ADVMan,
+            ADVClubOwner
         }
     }
 

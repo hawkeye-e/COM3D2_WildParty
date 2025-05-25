@@ -83,6 +83,36 @@ namespace ModResources {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Preset_ImmoralVillage_Minori {
+            get {
+                object obj = ResourceManager.GetObject("Preset_ImmoralVillage_Minori", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Preset_ImmoralVillage_Sayaka {
+            get {
+                object obj = ResourceManager.GetObject("Preset_ImmoralVillage_Sayaka", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Preset_ImmortalVillage_Kaede {
+            get {
+                object obj = ResourceManager.GetObject("Preset_ImmortalVillage_Kaede", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] Seikou_Haruna {
             get {
                 object obj = ResourceManager.GetObject("Seikou_Haruna", resourceCulture);

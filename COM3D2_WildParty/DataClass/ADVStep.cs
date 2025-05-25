@@ -44,6 +44,19 @@ namespace COM3D2.WildParty.Plugin
         {
             public bool IsFadeIn;
             public bool IsFadeOut;
+            public float Time = 0.5f;
+            public string ColorString = "";
+
+            public Color Color
+            {
+                get 
+                {
+                    if (ColorString.ToLower() == Constant.DefinedColorString.White.ToLower())
+                        return Color.white;
+                    else
+                        return Color.black;
+                }
+            }
         }
 
         internal class Talk
@@ -172,6 +185,7 @@ namespace COM3D2.WildParty.Plugin
             public bool WaitLoad = false;
             public bool IsManNude = false;
             public bool OpenMouth = false;                              //True: open mouth for fella motion etc; False: default
+            public bool ResetIK = false;
             public SmoothMovementSetup SmoothMovement = null;
 
             public MotionInfo MotionInfo;
@@ -183,6 +197,7 @@ namespace COM3D2.WildParty.Plugin
             public ExtraObjectsSetting ExtraObjectsInfo;
             public string ClothesSetID;                                 //Special ID: "RESET", reset all applied ClothesSetID. Otherwise follows ClothesSet.json
             public EffectDetail Effect;
+            public List<IKAttachInfo> IKAttach;
 
             public class SmoothMovementSetup
             {
