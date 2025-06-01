@@ -1421,7 +1421,7 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 PropertyInfo prop = typeof(Config).GetProperty(charaInitInfo.ValidManConfigKey, BindingFlags.Static | BindingFlags.NonPublic);
 
-                Config.ManTypeOption manTypeConfigValue = (Config.ManTypeOption)prop.GetValue(null);
+                Config.ManTypeOption manTypeConfigValue = (Config.ManTypeOption)prop.GetValue(null, null);
 
                 if (manTypeConfigValue == Config.ManTypeOption.Default)
                     return charaInitInfo.ValidManType;

@@ -160,12 +160,12 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
         [HarmonyPatch(typeof(MessageWindowMgr), nameof(MessageWindowMgr.CreateSelectButtons))]
         private static void CreateSelectButtons(List<KeyValuePair<string, KeyValuePair<string, bool>>> dicSelectButton, Action<string, string> onClickCallBack)
         {
-            foreach (var kvp in dicSelectButton)
-            {
-                if (!DebugHelper.DebugState.Instance.SelectOptions.Contains(kvp.Key))
-                    DebugHelper.DebugState.Instance.SelectOptions.Add(kvp.Key);
-                WildParty.Log.LogInfo(kvp.Key);
-            }
+            //foreach (var kvp in dicSelectButton)
+            //{
+            //    if (!DebugHelper.DebugState.Instance.SelectOptions.Contains(kvp.Key))
+            //        DebugHelper.DebugState.Instance.SelectOptions.Add(kvp.Key);
+            //    WildParty.Log.LogInfo(kvp.Key);
+            //}
         }
 
 
@@ -182,7 +182,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
         [HarmonyPatch(typeof(BaseKagManager), nameof(BaseKagManager.TagPlayBgm))]
         private static void TagPlayBgm(KagTagSupport tag_data)
         {
-            DebugHelper.DebugViewData.ViewTagData(tag_data);
+            //DebugHelper.DebugViewData.ViewTagData(tag_data);
         }
 
         [HarmonyPostfix]

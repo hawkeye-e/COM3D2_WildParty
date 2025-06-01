@@ -477,7 +477,7 @@ namespace COM3D2.WildParty.Plugin.Core
             PartyGroupSetup setupInfo = ModUseData.PartyGroupSetupList[formationID];
             
             StateManager.Instance.PartyGroupList.Clear();
-
+            
             //Keep the master list unchanged so that the chosen maid will remain the same in the ADV
             List<Maid> workingMaidList = new List<Maid>(StateManager.Instance.YotogiWorkingMaidList);
 
@@ -495,7 +495,7 @@ namespace COM3D2.WildParty.Plugin.Core
             }
             if (setupInfo.IsShuffleManList)
                 StateManager.Instance.YotogiWorkingManList = ShuffleMaidOrManList(StateManager.Instance.YotogiWorkingManList);
-
+            
             StateManager.Instance.YotogiWorkingMaidList = workingMaidList;
 
             int maidRunningNumber = 0;
@@ -516,7 +516,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
 
                 PartyGroup newGroup = new PartyGroup();
-
+                
                 for (int i = 0; i < groupSetupInfo.MaidCount; i++)
                 {
                     if (!groupSetupInfo.MaidFromNPC)
@@ -526,7 +526,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
                 for (int i = 0; i < groupSetupInfo.ManCount; i++)
                     newGroup.SetManAtIndex(i, StateManager.Instance.YotogiWorkingManList[manRunningNumber++]);
-
+                
 
 
                 newGroup.IsAutomatedGroup = groupSetupInfo.IsAutomatedGroup;
@@ -545,19 +545,21 @@ namespace COM3D2.WildParty.Plugin.Core
             for (int i = 0; i < extraManSlotCount; i++)
                 PartyGroup.SharedExtraManList.Add(i, null);
             for (int i = 0; i < setupInfo.ExtraManCount; i++)
-                PartyGroup.SharedExtraManList[i] = StateManager.Instance.YotogiWorkingManList[manRunningNumber++];
-
-                //Extra man for each group handling
+                if(StateManager.Instance.YotogiWorkingManList.Count > manRunningNumber)
+                    PartyGroup.SharedExtraManList[i] = StateManager.Instance.YotogiWorkingManList[manRunningNumber++];
+            
+            //Extra man for each group handling
             foreach (var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
             {
                 int groupExtraManSlotCount = groupSetupInfo.ExtraManSlotCount;
                 if (groupExtraManSlotCount < 0)
                     groupExtraManSlotCount = groupSetupInfo.ExtraManCount;
-
+                
                 for (int i = 0; i < groupExtraManSlotCount; i++)
                     StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].ExtraManList.Add(i, null);
                 for (int i = 0; i < groupSetupInfo.ExtraManCount; i++)
-                    StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].ExtraManList[i] = StateManager.Instance.YotogiWorkingManList[manRunningNumber++];
+                    if (StateManager.Instance.YotogiWorkingManList.Count > manRunningNumber)
+                        StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].ExtraManList[i] = StateManager.Instance.YotogiWorkingManList[manRunningNumber++];
             }
         }
 
