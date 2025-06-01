@@ -11,8 +11,9 @@ namespace COM3D2.WildParty.Plugin
     {
         private const string GENERAL = "1. General";
         private const string MOTIONSETTING = "2. H Motion Settings";
-        private const string YOTOGISETTING = "3. Yotogi Related Setting";
-        private const string DEVELOPER = "4. Developer Used";
+        private const string SCENARIOSETTING = "3. Scenario Related Setting";
+        private const string YOTOGISETTING = "4. Yotogi Related Setting";
+        private const string DEVELOPER = "5. Developer Used";
 
         internal static bool Enabled { get { return _enabled.Value; } }
         private static ConfigEntry<bool> _enabled;
@@ -83,10 +84,20 @@ namespace COM3D2.WildParty.Plugin
         internal static bool IsTriggerConditionOn { get { return _isTriggerConditionOn.Value; } }
         private static ConfigEntry<bool> _isTriggerConditionOn;
 
+        internal static ManTypeOption OrgyPartyManType { get { return _orgyPartyManType.Value; } }
+        private static ConfigEntry<ManTypeOption> _orgyPartyManType;
+
+        internal static ManTypeOption HappyGBClubManType { get { return _happyGBClubManType.Value; } }
+        private static ConfigEntry<ManTypeOption> _happyGBClubManType;
+
+        internal static ManTypeOption ImmoralVillageManType { get { return _immoralVillageManType.Value; } }
+        private static ConfigEntry<ManTypeOption> _immoralVillageManType;
+
         internal static void Init(BaseUnityPlugin plugin)
         {
             AddGeneralConfigs(plugin);
             AddMotionSettingConfigs(plugin);
+            AddScenarioRelatedConfigs(plugin);
             AddYotogiSettingConfigs(plugin);
             AddDeveloperRelatedConfigs(plugin);
         }
@@ -165,6 +176,21 @@ namespace COM3D2.WildParty.Plugin
             );
         }
 
+        private static void AddScenarioRelatedConfigs(BaseUnityPlugin plugin)
+        {
+            _orgyPartyManType = plugin.Config.Bind(SCENARIOSETTING, "Empire Club Thanksgiving Event - Man Types", 
+                ManTypeOption.YoungMan | ManTypeOption.Yanki | ManTypeOption.MiddleAged | ManTypeOption.Otaku | ManTypeOption.Shota,
+                "The type of man that will be used in the scenaio Empire Club Thanksgiving event. If all items are unchecked, the system will use the default man types.");
+
+            _happyGBClubManType = plugin.Config.Bind(SCENARIOSETTING, "Happy Gang Bang Club Event - Man Types",
+                ManTypeOption.YoungMan | ManTypeOption.Yanki | ManTypeOption.MiddleAged | ManTypeOption.Otaku,
+                "The type of man that will be used in the scenaio [Happy Gang Bang Club] and [Another Gang Bang Desire] event. If all items are unchecked, the system will use the default man types.");
+
+            _immoralVillageManType = plugin.Config.Bind(SCENARIOSETTING, "Summer Festival of Immoral Village Event - Man Types",
+                ManTypeOption.Shota,
+                "The type of man that will be used in the scenaio [Summer Festival of Immoral Village] event. If all items are unchecked, the system will use the default man types.");
+        }
+
         private static void AddDeveloperRelatedConfigs(BaseUnityPlugin plugin)
         {
             _developerMode = plugin.Config.Bind(DEVELOPER, "Developer Mode", false, "Leave this unchecked if you have no idea what it is (requires game restart)");
@@ -173,12 +199,25 @@ namespace COM3D2.WildParty.Plugin
 
             _debugCaptureDialogues = plugin.Config.Bind(DEVELOPER, "Log All Dialogues", false, "Leave this unchecked if you have no idea what it is");
 
-            _debugIgnoreADVForceTimeWait = plugin.Config.Bind(DEVELOPER, "Ingore ADV Time Wait Setting", false, "Skip all those time wait setting in ADV to speed up the debug process. Leave this unchecked if you have no idea what it is");
+            _debugIgnoreADVForceTimeWait = plugin.Config.Bind(DEVELOPER, "Ignore ADV Time Wait Setting", false, "Skip all those time wait setting in ADV to speed up the debug process. Leave this unchecked if you have no idea what it is");
         }
 
         private static void AddYotogiSettingConfigs(BaseUnityPlugin plugin)
         {
             _isTriggerConditionOn = plugin.Config.Bind(YOTOGISETTING, "Command Trigger Condition", true, "On: The player is required to do achieve some small goals in order to click certain command buttons in the yotogi scene. \n Off: The trigger conditions are ignored and the player can click the command buttons freely.");
+        }
+
+
+        //Refer to RandomizeManSetting.json
+        [Flags]
+        internal enum ManTypeOption
+        {
+            Default     = 0,
+            YoungMan    = 1 << 0,
+            Yanki       = 1 << 1,
+            MiddleAged  = 1 << 2,
+            Otaku       = 1 << 3,
+            Shota       = 1 << 4,
         }
     }
 }

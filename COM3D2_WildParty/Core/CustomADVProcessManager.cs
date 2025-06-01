@@ -4,6 +4,7 @@ using HarmonyLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using UnityEngine;
 
@@ -175,11 +176,13 @@ namespace COM3D2.WildParty.Plugin.Core
 
             if (step.CharaInitData.ManRequired >= 0)
                 StateManager.Instance.MaxManUsed = step.CharaInitData.ManRequired;
-            
+
+            List<string> validManTypes = GetValidManTypes(step.CharaInitData);
+
             //init man
             for (int i = 0; i < StateManager.Instance.MaxManUsed; i++)
             {
-                var man = Core.CharacterHandling.InitMan(i, step.CharaInitData.ValidManType);
+                var man = Core.CharacterHandling.InitMan(i, validManTypes);
                 StateManager.Instance.MenList.Add(man);
             }
             
@@ -1400,7 +1403,28 @@ namespace COM3D2.WildParty.Plugin.Core
             }   
         }
 
+        private static List<string> GetValidManTypes(ADVStep.CharaInit charaInitInfo)
+        {
+            if (string.IsNullOrEmpty(charaInitInfo.ValidManConfigKey))
+                return charaInitInfo.ValidManType;
+            else
+            {
+                PropertyInfo prop = typeof(Config).GetProperty(charaInitInfo.ValidManConfigKey, BindingFlags.Static | BindingFlags.NonPublic);
 
+                Config.ManTypeOption manTypeConfigValue = (Config.ManTypeOption)prop.GetValue(null);
+
+                if (manTypeConfigValue == Config.ManTypeOption.Default)
+                    return charaInitInfo.ValidManType;
+
+                List<string> result = new List<string>();
+
+                string[] typesInString = manTypeConfigValue.ToString().Split(',');
+                foreach (string t in typesInString)
+                    result.Add(t.Trim());
+
+                return result;
+            }
+        }
 
 
 
