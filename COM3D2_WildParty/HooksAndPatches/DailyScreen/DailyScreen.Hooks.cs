@@ -15,8 +15,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
 
         //This function will run everytime the daily screen shown, so need proper flag handling to avoid duplicate setup
         [HarmonyPostfix]
-        [HarmonyPatch(typeof(DailyMgr), nameof(DailyMgr.Init))]
-        private static void DailyMgrInitPost(DailyMgr __instance)
+        [HarmonyPatch(typeof(DailyCtrl), nameof(DailyCtrl.Init))]
+        private static void DailyCtrlInitPost()
         {
             //Check if there is any mod-injected NPC remains in the game due to a bug in 0.2.0. Remove them if found.
             Core.ModEventCleanUp.RemoveInjectedModNPC();
