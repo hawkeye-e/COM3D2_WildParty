@@ -1957,6 +1957,23 @@
 
   "imvi_phase1_0181": {
     "ID": "imvi_phase1_0181",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0181a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_amayakasi_tekoki.ks",
+        "ScriptLabel": "*‘Ò‹@",
+        "SexPosID": 1,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase1_0181a": {
+    "ID": "imvi_phase1_0181a",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0182",
@@ -2128,6 +2145,23 @@
 
   "imvi_phase1_0221": {
     "ID": "imvi_phase1_0221",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0221a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_amayakasi_tekoki.ks",
+        "ScriptLabel": "*‘Ò‹@",
+        "SexPosID": 1,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "imvi_phase1_0221a": {
+    "ID": "imvi_phase1_0221a",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0222_Branch",

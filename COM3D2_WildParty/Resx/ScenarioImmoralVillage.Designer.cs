@@ -62,6 +62,331 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Anesan&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Anesan&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Anesan&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Anesan&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Anesan&quot;,
+        ///    &quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Anesan {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Anesan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Childhood&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Childhood&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Childhood&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Childhood&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Chi [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Childhood {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Childhood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Cool&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Cool&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Cool&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Cool&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Cool&quot;,
+        ///    &quot;Type&quot;: &quot;Ta [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Cool {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Cool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Curtness&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Curtness&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Curtness&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Curtness&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Curtnes [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Curtness {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Curtness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Dame&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Dame&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Dame&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Dame&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Dame&quot;,
+        ///    &quot;Type&quot;: &quot;Ta [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Dame {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Dame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Devilish&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Devilish&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Devilish&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Devilish&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Devilis [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Devilish {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Devilish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Friendly&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Friendly&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Friendly&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Friendly&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Friendl [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Friendly {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Friendly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Genki&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Genki&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Genki&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Genki&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Genki&quot;,
+        ///    &quot;Type&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Genki {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Genki", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Ladylike&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Ladylike&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Ladylike&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Ladylike&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Ladylik [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Ladylike {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Ladylike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Majime&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Majime&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Majime&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Majime&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Majime&quot;,
+        ///    &quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Majime {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Majime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Missy&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Missy&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Missy&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Missy&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Missy&quot;,
+        ///    &quot;Type&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Missy {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Missy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;imvi_intro_0020_T_Muku&quot;: {
         ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Muku&quot;,
         ///    &quot;Type&quot;: &quot;Talk&quot;,
@@ -87,6 +412,245 @@ namespace ScenarioResources {
         internal static string ImmoralVillageADV_Muku {
             get {
                 return ResourceManager.GetString("ImmoralVillageADV_Muku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Pride&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Pride&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Pride&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Pride&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Pride&quot;,
+        ///    &quot;Type&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Pride {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Pride", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Pure&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Pure&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Pure&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Pure&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Pure&quot;,
+        ///    &quot;Type&quot;: &quot;Ta [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Pure {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Pure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Rindere&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Rindere&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Rindere&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Rindere&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Rindere&quot;,
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Rindere {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Rindere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Sadist&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Sadist&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Sadist&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Sadist&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Sadist&quot;,
+        ///    &quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Sadist {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Sadist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Secretary&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Secretary&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Secretary&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Secretary&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Sec [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Secretary {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Secretary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Silent&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Silent&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Silent&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Silent&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Silent&quot;,
+        ///    &quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Silent {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Silent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Sister&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Sister&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Sister&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Sister&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Sister&quot;,
+        ///    &quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Sister {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Sister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_intro_0020_T_Yandere&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0020_T_Yandere&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;いいお天気ですねー。&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Yandere&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02_23485.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;imvi_intro_0030_T_Yandere&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_intro_0030_T_Yandere&quot;,
+        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ImmoralVillageADV_Yandere {
+            get {
+                return ResourceManager.GetString("ImmoralVillageADV_Yandere", resourceCulture);
             }
         }
         
@@ -211,27 +775,26 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;imvi_phase2_init&quot;: {
-        ///    &quot;ID&quot;: &quot;imvi_phase2_init&quot;,
+        ///  &quot;imvi_postyotogi_init&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_postyotogi_init&quot;,
         ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
         ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
-        ///    &quot;NextStepID&quot;: &quot;imvi_phase2_init_a&quot;
+        ///    &quot;NextStepID&quot;: &quot;imvi_postyotogi_init_a&quot;
         ///  },
         ///
-        ///  &quot;imvi_phase2_init_a&quot;: {
-        ///    &quot;ID&quot;: &quot;imvi_phase2_init_a&quot;,
+        ///  &quot;imvi_postyotogi_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_postyotogi_init_a&quot;,
         ///    &quot;Type&quot;: &quot;BGM&quot;,
         ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;imvi_phase2_init_b&quot;
+        ///    &quot;NextStepID&quot;: &quot;imvi_postyotogi_init_b&quot;
         ///  },
         ///
-        ///  &quot;imvi_phase2_init_b&quot;: {
-        ///    &quot;ID&quot;: &quot;imvi_phase2_init_b&quot;,
-        ///    &quot;Type&quot;: &quot;DismissGroup&quot;,
+        ///  &quot;imvi_postyotogi_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_postyotogi_init_b&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;Tag&quot;: &quot;ALL&quot;,
-        ///    &quot;NextStepID&quot;: &quot;i [rest of string was truncated]&quot;;.
+        ///    &quot;NextStep [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ImmoralVillageADVPostYotogi {
             get {

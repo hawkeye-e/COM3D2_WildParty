@@ -1,71 +1,72 @@
 {
-  "imvi_intro_0020_T_Muku": {
-    "ID": "imvi_intro_0020_T_Muku",
+  "imvi_intro_0020_T_Pride": {
+    "ID": "imvi_intro_0020_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_0021",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "いいお天気ですねー。",
+      "Text": "今日はいい天気ね……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02_23485.ogg",
-          "IsChoppingAudio": false
+        "Pride": {
+          "VoiceFile": "S0_GP02_108943.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
         }
       }
     }
   },
 
-  "imvi_intro_0030_T_Muku": {
-    "ID": "imvi_intro_0030_T_Muku",
+  "imvi_intro_0030_T_Pride": {
+    "ID": "imvi_intro_0030_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_0031",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "こんな素敵な場所に、大好きなあなたと二人きりでいる……やっぱりこんなの贅沢です。",
+      "Text": "こんな素敵な場所に、それもあなたとふたり……贅沢しすぎって怒られそうだわ。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62263.ogg",
+        "Pride": {
+          "VoiceFile": "S0_X1P_54723.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 2.5
+          "StartTime": 2
         }
       }
     }
   },
 
-  "imvi_intro_0040_T_Muku": {
-    "ID": "imvi_intro_0040_T_Muku",
+  "imvi_intro_0040_T_Pride": {
+    "ID": "imvi_intro_0040_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_0041",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "じゃあ、そのへん散歩でもしませんか。汗も流したから、もっとベタベタしちゃおうかな？　えへへ。",
+      "Text": "じゃあ、そのへん散歩でもしましょうか。汗も流したし、心置きなくベタベタできるわよね？　ふふっ。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62029.ogg",
+        "Pride": {
+          "VoiceFile": "S0_X1P_55234.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_intro_0050_T_Muku": {
-    "ID": "imvi_intro_0050_T_Muku",
+  "imvi_intro_0050_T_Pride": {
+    "ID": "imvi_intro_0050_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_0051",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "そうしましょっか。",
+      "Text": "そうね。そうしましょ。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62357.ogg",
+        "Pride": {
+          "VoiceFile": "S0_X1P_54817.ogg",
           "IsChoppingAudio": false
         }
       }
@@ -73,12 +74,12 @@
   },
 
 
-  "imvi_intro_0070_M_Muku": {
-    "ID": "imvi_intro_0070_M_Muku",
+  "imvi_intro_0070_M_Pride": {
+    "ID": "imvi_intro_0070_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_intro_0070_T_Muku",
+    "NextStepID": "imvi_intro_0070_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -94,20 +95,19 @@
     ]
   },
 
-  "imvi_intro_0070_T_Muku": {
-    "ID": "imvi_intro_0070_T_Muku",
+  "imvi_intro_0070_T_Pride": {
+    "ID": "imvi_intro_0070_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_0071",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "えへへー♪　楽しみだなぁ♪",
+      "Text": "ふふっ……楽しみにしてるわね。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02_23461.ogg",
-          "IsChoppingAudio": true,
-          "StartTime": 8.5
+        "Pride": {
+          "VoiceFile": "S0_third_60267.ogg",
+          "IsChoppingAudio": false
         }
       }
     }
@@ -115,12 +115,12 @@
 
 
 
-  "imvi_intro_0090_M_Muku": {
-    "ID": "imvi_intro_0090_M_Muku",
+  "imvi_intro_0090_M_Pride": {
+    "ID": "imvi_intro_0090_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_intro_0090_T_Muku",
+    "NextStepID": "imvi_intro_0090_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -130,63 +130,62 @@
         "FaceAnime": "にっこり",
         "MotionInfo": {
           "ScriptFile": "h_kaiwa_tati_001.ks",
-          "ScriptLabel": "*会話立ち頬掻き"
+          "ScriptLabel": "*会話立ち腕を組む"
         }
       }
     ]
   },
 
-  "imvi_intro_0090_T_Muku": {
-    "ID": "imvi_intro_0090_T_Muku",
+  "imvi_intro_0090_T_Pride": {
+    "ID": "imvi_intro_0090_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_0091",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "えへへー♪",
+      "Text": "うふふっ♪",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02_23332.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP02_108891.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 0.5,
-          "EndTime": 2
+          "EndTime": 1.5
         }
       }
     }
   },
 
-  "imvi_intro_0100_T_Muku": {
-    "ID": "imvi_intro_0100_T_Muku",
+  "imvi_intro_0100_T_Pride": {
+    "ID": "imvi_intro_0100_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_0101",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "……あなた？",
+      "Text": "ちょっとあなた……？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62353.ogg",
+        "Pride": {
+          "VoiceFile": "S0_X1P_54813.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 1
+          "EndTime": 2
         }
       }
     }
   },
 
-  "imvi_intro_0110_T_Muku": {
-    "ID": "imvi_intro_0110_T_Muku",
+  "imvi_intro_0110_T_Pride": {
+    "ID": "imvi_intro_0110_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_0111",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "えへへ、残念♪",
+      "Text": "あらそう？　残念。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_17357.ogg",
+        "Pride": {
+          "VoiceFile": "S0_only_106854.ogg",
           "IsChoppingAudio": true,
           "EndTime": 2
         }
@@ -195,18 +194,18 @@
   },
 
 
-  "imvi_intro_night_0060_T_Muku": {
-    "ID": "imvi_intro_night_0060_T_Muku",
+  "imvi_intro_night_0060_T_Pride": {
+    "ID": "imvi_intro_night_0060_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_night_0061",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "初めましてー。",
+      "Text": "はじめまして。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_17712.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105853.ogg",
           "IsChoppingAudio": true,
           "EndTime": 1.5
         }
@@ -214,31 +213,30 @@
     }
   },
 
-  "imvi_intro_night_0070_T_Muku": {
-    "ID": "imvi_intro_night_0070_T_Muku",
+  "imvi_intro_night_0070_T_Pride": {
+    "ID": "imvi_intro_night_0070_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_night_0071",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あ……はい。",
+      "Text": "え、ええ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_17469.ogg",
-          "IsChoppingAudio": true,
-          "EndTime": 1.5
+        "Pride": {
+          "VoiceFile": "S0_order_50253.ogg",
+          "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase1_0010_M_Muku": {
-    "ID": "imvi_phase1_0010_M_Muku",
+  "imvi_phase1_0010_M_Pride": {
+    "ID": "imvi_phase1_0010_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0010_T_Muku",
+    "NextStepID": "imvi_phase1_0010_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -254,31 +252,32 @@
     ]
   },
 
-  "imvi_phase1_0010_T_Muku": {
-    "ID": "imvi_phase1_0010_T_Muku",
+  "imvi_phase1_0010_T_Pride": {
+    "ID": "imvi_phase1_0010_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0011",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "うぅ……なんだか緊張しちゃいます……",
+      "Text": "あ、アタシ……ちょっと緊張しちゃって……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_order_51498.ogg",
-          "IsChoppingAudio": false
+        "Pride": {
+          "VoiceFile": "S0_order_51499.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6
         }
       }
     }
   },
 
 
-  "imvi_phase1_0020_M_Muku": {
-    "ID": "imvi_phase1_0020_M_Muku",
+  "imvi_phase1_0020_M_Pride": {
+    "ID": "imvi_phase1_0020_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0020_T_Muku",
+    "NextStepID": "imvi_phase1_0020_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -294,30 +293,30 @@
     ]
   },
 
-  "imvi_phase1_0020_T_Muku": {
-    "ID": "imvi_phase1_0020_T_Muku",
+  "imvi_phase1_0020_T_Pride": {
+    "ID": "imvi_phase1_0020_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0021",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はっ……！　そ、それです！　その手がありました！",
+      "Text": "あっ！　たしかにそうだわ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_order_50347.ogg",
+        "Pride": {
+          "VoiceFile": "S0_order_50695.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase1_0030_M_Muku": {
-    "ID": "imvi_phase1_0030_M_Muku",
+  "imvi_phase1_0030_M_Pride": {
+    "ID": "imvi_phase1_0030_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0030_T_Muku",
+    "NextStepID": "imvi_phase1_0030_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -333,33 +332,32 @@
     ]
   },
 
-  "imvi_phase1_0030_T_Muku": {
-    "ID": "imvi_phase1_0030_T_Muku",
+  "imvi_phase1_0030_T_Pride": {
+    "ID": "imvi_phase1_0030_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0031",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あなた、ありがとう！",
+      "Text": "ありがとう、貴方っ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02_23386.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP02-5_113487.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 1.5,
-          "EndTime": 3.5
+          "StartTime": 1.5
         }
       }
     }
   },
 
 
-  "imvi_phase1_0050_M_Muku": {
-    "ID": "imvi_phase1_0050_M_Muku",
+  "imvi_phase1_0050_M_Pride": {
+    "ID": "imvi_phase1_0050_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0050_T_Muku",
+    "NextStepID": "imvi_phase1_0050_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -375,31 +373,31 @@
     ]
   },
 
-  "imvi_phase1_0050_T_Muku": {
-    "ID": "imvi_phase1_0050_T_Muku",
+  "imvi_phase1_0050_T_Pride": {
+    "ID": "imvi_phase1_0050_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0051",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "よろしくお願いしますね。",
+      "Text": "それじゃ、よろしくね？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16883.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105749.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 1
+          "StartTime": 2.5
         }
       }
     }
   },
 
-  "imvi_phase1_0060_M_Muku": {
-    "ID": "imvi_phase1_0060_M_Muku",
+  "imvi_phase1_0060_M_Pride": {
+    "ID": "imvi_phase1_0060_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0060_T_Muku",
+    "NextStepID": "imvi_phase1_0060_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -415,57 +413,56 @@
     ]
   },
 
-  "imvi_phase1_0060_T_Muku": {
-    "ID": "imvi_phase1_0060_T_Muku",
+  "imvi_phase1_0060_T_Pride": {
+    "ID": "imvi_phase1_0060_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0061",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "なんか恥ずかしいし、もう始めちゃう？",
+      "Text": "それで、もう始めても大丈夫？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16881.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105747.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 4.5
+          "StartTime": 6
         }
       }
     }
   },
 
-  "imvi_phase1_0070_T_Muku": {
-    "ID": "imvi_phase1_0070_T_Muku",
+  "imvi_phase1_0070_T_Pride": {
+    "ID": "imvi_phase1_0070_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0071",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ほら、どうですか～？",
+      "Text": "こんな感じだとどうなの？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02_23557.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP02B_109786.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 6.5,
-          "EndTime": 10
+          "StartTime": 5.5
         }
       }
     }
   },
 
-  "imvi_phase1_0080_T_Muku": {
-    "ID": "imvi_phase1_0080_T_Muku",
+  "imvi_phase1_0080_T_Pride": {
+    "ID": "imvi_phase1_0080_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0081",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "やっぱり、そこが気になりますよね……",
+      "Text": "やっぱり男の人はそこに注目するわよね。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_order_50556.ogg",
+        "Pride": {
+          "VoiceFile": "S0_order_50997.ogg",
           "IsChoppingAudio": true,
           "StartTime": 1.5
         }
@@ -473,320 +470,66 @@
     }
   },
 
-  "imvi_phase1_0090_T_Muku": {
-    "ID": "imvi_phase1_0090_T_Muku",
+  "imvi_phase1_0090_T_Pride": {
+    "ID": "imvi_phase1_0090_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0091",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "もう、しょうがないですねー♪",
+      "Text": "もう、しょうがないわねー……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP5_29034.ogg",
-          "IsChoppingAudio": true,
-          "StartTime": 3.1
+        "Pride": {
+          "VoiceFile": "S0_TSUN_53851.ogg",
+          "IsChoppingAudio": false
         }
       }
     }
   },
 
 
-  "imvi_phase1_0100_M_Muku": {
-    "ID": "imvi_phase1_0100_M_Muku",
+  "imvi_phase1_0100_M_Pride": {
+    "ID": "imvi_phase1_0100_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0100_T_Muku",
+    "NextStepID": "imvi_phase1_0100_T_Pride",
     "CharaData": [
       {
         "Type": "F",
         "UseBranchIndex": true,
         "Visible": true,
         "WaitLoad": true,
-        "FaceAnime": "苦笑い"
+        "FaceAnime": "優しさ"
       }
     ]
   },
 
-  "imvi_phase1_0100_T_Muku": {
-    "ID": "imvi_phase1_0100_T_Muku",
+  "imvi_phase1_0100_T_Pride": {
+    "ID": "imvi_phase1_0100_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0101",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "えへへ、おまんこ見るの初めてなんだよね？　あたしのでガッカリしてないかな……？",
+      "Text": "ふふ、どうかしら……？　アタシの体、もしかしたら期待通りじゃなかったかもしれないけど。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16897.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105763.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase1_0110_M_Muku": {
-    "ID": "imvi_phase1_0110_M_Muku",
+  "imvi_phase1_0110_M_Pride": {
+    "ID": "imvi_phase1_0110_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0110_T_Muku",
-    "CharaData": [
-      {
-        "Type": "F",
-        "UseBranchIndex": true,
-        "Visible": true,
-        "WaitLoad": true,
-        "FaceAnime": "優しさ"
-      }
-    ]
-  },
-
-  "imvi_phase1_0110_T_Muku": {
-    "ID": "imvi_phase1_0110_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "imvi_phase1_0111",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "お口が上手ですよね～。",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_order_51084.ogg",
-          "IsChoppingAudio": true,
-          "StartTime": 5
-        }
-      }
-    }
-  },
-
-  "imvi_phase1_0120_T_Muku": {
-    "ID": "imvi_phase1_0120_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "imvi_phase1_0121",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "あ！",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16873.ogg",
-          "IsChoppingAudio": true,
-          "EndTime": 0.5
-        }
-      }
-    }
-  },
-
-  "imvi_phase1_0130_T_Muku": {
-    "ID": "imvi_phase1_0130_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "imvi_phase1_0131_T_Muku",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "大丈夫ですよ。えへへ。",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_order_50288.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "imvi_phase1_0131_T_Muku": {
-    "ID": "imvi_phase1_0131_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "imvi_phase1_0132",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "初めてだと、裸みただけでイッちゃう人が多いから……ね？",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16887.ogg",
-          "IsChoppingAudio": true,
-          "StartTime": 3.5
-        }
-      }
-    }
-  },
-
-  "imvi_phase1_0140_M_Muku": {
-    "ID": "imvi_phase1_0140_M_Muku",
-    "Type": "Chara",
-    "WaitingType": "Auto",
-    "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0140_T_Muku",
-    "CharaData": [
-      {
-        "Type": "F",
-        "UseBranchIndex": true,
-        "Visible": true,
-        "WaitLoad": true,
-        "FaceAnime": "優しさ"
-      }
-    ]
-  },
-
-  "imvi_phase1_0140_T_Muku": {
-    "ID": "imvi_phase1_0140_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "imvi_phase1_0141",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "じゃあ、こっちに……",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_order_50194.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "imvi_phase1_0150_T_Muku": {
-    "ID": "imvi_phase1_0150_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "imvi_phase1_0151",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "あ……もう先っぽからお汁が出ちゃってる……はぁ……はぁ……大丈夫だよ……",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16890.ogg",
-          "IsChoppingAudio": true,
-          "EndTime": 8.5
-        }
-      }
-    }
-  },
-
-  "imvi_phase1_0160_M_Muku": {
-    "ID": "imvi_phase1_0160_M_Muku",
-    "Type": "Chara",
-    "WaitingType": "Auto",
-    "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0160_T_Muku",
-    "CharaData": [
-      {
-        "Type": "F",
-        "UseBranchIndex": true,
-        "Visible": true,
-        "WaitLoad": true,
-        "FaceAnime": "居眠り安眠"
-      }
-    ]
-  },
-
-  "imvi_phase1_0160_T_Muku": {
-    "ID": "imvi_phase1_0160_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "imvi_phase1_0161",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "ちょっと痛かった？　ゆっくり、やるね……んっ……はぁ……はぁ……んっ……んっ……はぁ……はぁ……",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16889.ogg",
-          "IsChoppingAudio": true,
-          "StartTime": 1.5
-        }
-      }
-    }
-  },
-
-  "imvi_phase1_0170_M_Muku": {
-    "ID": "imvi_phase1_0170_M_Muku",
-    "Type": "Chara",
-    "WaitingType": "Auto",
-    "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0170_T_Muku",
-    "CharaData": [
-      {
-        "Type": "F",
-        "UseBranchIndex": true,
-        "Visible": true,
-        "WaitLoad": true,
-        "FaceAnime": "優しさ"
-      }
-    ]
-  },
-
-  "imvi_phase1_0170_T_Muku": {
-    "ID": "imvi_phase1_0170_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "imvi_phase1_0171",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "んっ、んっ、んっ……はぁ、はぁ……いいよ……はぁ、んっ、んっ……出せそうなら、出しちゃって、下さい……んっ、んんっ……",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16893.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "imvi_phase1_0180_M_Muku": {
-    "ID": "imvi_phase1_0180_M_Muku",
-    "Type": "Chara",
-    "WaitingType": "Auto",
-    "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0180_T_Muku",
-    "CharaData": [
-      {
-        "Type": "F",
-        "UseBranchIndex": true,
-        "Visible": true,
-        "WaitLoad": true,
-        "FaceAnime": "優しさ"
-      }
-    ]
-  },
-
-  "imvi_phase1_0180_T_Muku": {
-    "ID": "imvi_phase1_0180_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "imvi_phase1_0181",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "うはぁ……んん、んっ……っはぁ、はぁ、はぁ……す、すっごく濃いのが……",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_17425.ogg",
-          "IsChoppingAudio": true,
-          "StartTime": 3.5
-        }
-      }
-    }
-  },
-
-  "imvi_phase1_0190_M_Muku": {
-    "ID": "imvi_phase1_0190_M_Muku",
-    "Type": "Chara",
-    "WaitingType": "Auto",
-    "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0190_T_Muku",
+    "NextStepID": "imvi_phase1_0110_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -798,31 +541,284 @@
     ]
   },
 
-  "imvi_phase1_0190_T_Muku": {
-    "ID": "imvi_phase1_0190_T_Muku",
+  "imvi_phase1_0110_T_Pride": {
+    "ID": "imvi_phase1_0110_T_Pride",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0111",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "一応お礼は言っておくわ。",
+      "VoiceData": {
+        "Pride": {
+          "VoiceFile": "S0_order_50045.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0120_T_Pride": {
+    "ID": "imvi_phase1_0120_T_Pride",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……あっ……",
+      "VoiceData": {
+        "Pride": {
+          "VoiceFile": "S0_GP01_105739.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0130_T_Pride": {
+    "ID": "imvi_phase1_0130_T_Pride",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0131_T_Pride",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ、大丈夫よ♪",
+      "VoiceData": {
+        "Pride": {
+          "VoiceFile": "S0_X1P_56072.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.9
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0131_T_Pride": {
+    "ID": "imvi_phase1_0131_T_Pride",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0132",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "童貞チンコは敏感だからね……",
+      "VoiceData": {
+        "Pride": {
+          "VoiceFile": "S0_X00_52828.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5,
+          "EndTime": 5.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0140_M_Pride": {
+    "ID": "imvi_phase1_0140_M_Pride",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0140_T_Pride",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0140_T_Pride": {
+    "ID": "imvi_phase1_0140_T_Pride",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0141",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "それじゃ、こっちに来て……",
+      "VoiceData": {
+        "Pride": {
+          "VoiceFile": "S0_order_50415.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0150_T_Pride": {
+    "ID": "imvi_phase1_0150_T_Pride",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁっ、はぁ……もう、先っぽからお汁が出てきてるわよ……？　気持ちよくなってるのかしら……",
+      "VoiceData": {
+        "Pride": {
+          "VoiceFile": "S0_GP01_105756.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0160_M_Pride": {
+    "ID": "imvi_phase1_0160_M_Pride",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0160_T_Pride",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠"
+      }
+    ]
+  },
+
+  "imvi_phase1_0160_T_Pride": {
+    "ID": "imvi_phase1_0160_T_Pride",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0161",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ、痛かったかしら？　ごめんなさいね……ゆっくりするから……んっ……はぁ……はぁ……んっ……んっ……はぁ……はぁ……",
+      "VoiceData": {
+        "Pride": {
+          "VoiceFile": "S0_GP01_105755.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0170_M_Pride": {
+    "ID": "imvi_phase1_0170_M_Pride",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0170_T_Pride",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0170_T_Pride": {
+    "ID": "imvi_phase1_0170_T_Pride",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ええ、んっ、はぁ……ほら、出していいから……我慢せずに、全部出しちゃって……はぁっ……",
+      "VoiceData": {
+        "Pride": {
+          "VoiceFile": "S0_GP01_105759.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0180_M_Pride": {
+    "ID": "imvi_phase1_0180_M_Pride",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0180_T_Pride",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0180_T_Pride": {
+    "ID": "imvi_phase1_0180_T_Pride",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いっぱい出したわね。……ふふ、おしっこも混じってるかしら？",
+      "VoiceData": {
+        "Pride": {
+          "VoiceFile": "S0_GP01_105970.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0190_M_Pride": {
+    "ID": "imvi_phase1_0190_M_Pride",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0190_T_Pride",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_phase1_0190_T_Pride": {
+    "ID": "imvi_phase1_0190_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0191",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "えへへ、いいですよ……？",
+      "Text": "ええ、構わないわよ。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62299.ogg",
+        "Pride": {
+          "VoiceFile": "S0_cpmm_60296.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 2.8
+          "EndTime": 2.5
         }
       }
     }
   },
 
-  "imvi_phase1_0200_M_Muku": {
-    "ID": "imvi_phase1_0200_M_Muku",
+  "imvi_phase1_0200_M_Pride": {
+    "ID": "imvi_phase1_0200_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0200_T_Muku",
+    "NextStepID": "imvi_phase1_0200_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -834,49 +830,48 @@
     ]
   },
 
-  "imvi_phase1_0200_T_Muku": {
-    "ID": "imvi_phase1_0200_T_Muku",
+  "imvi_phase1_0200_T_Pride": {
+    "ID": "imvi_phase1_0200_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0201",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "んふふっ……♪　好きなだけ、感じていいですよっ？　ほら、ほらっ……あたしのおっぱい、気持ちいいですよねっ？",
+      "Text": "んんっ……が、我慢なんかしなくていいんだからね……アタシの、おっぱいで気持ち良くなっても良いって言ってるのよっ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24630.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP02C_109978.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase1_0210_T_Muku": {
-    "ID": "imvi_phase1_0210_T_Muku",
+  "imvi_phase1_0210_T_Pride": {
+    "ID": "imvi_phase1_0210_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0211",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "出ちゃいますよねっ？　んちゅ、ぢゅぱっ……！　おちんちんから、精液の匂いがいっぱいして……！",
+      "Text": "ちょっと、まだだすんじゃないわよっ、んぢゅっ、ぢゅるっ……も、もう出ちゃうの、んんっ、ぢゅっ、ぢゅるるっ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24625.ogg",
-          "IsChoppingAudio": true,
-          "StartTime": 1
+        "Pride": {
+          "VoiceFile": "S0_GP02C_109973.ogg",
+          "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase1_0220_M_Muku": {
-    "ID": "imvi_phase1_0220_M_Muku",
+  "imvi_phase1_0220_M_Pride": {
+    "ID": "imvi_phase1_0220_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0220_T_Muku",
+    "NextStepID": "imvi_phase1_0220_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -888,31 +883,32 @@
     ]
   },
 
-  "imvi_phase1_0220_T_Muku": {
-    "ID": "imvi_phase1_0220_T_Muku",
+  "imvi_phase1_0220_T_Pride": {
+    "ID": "imvi_phase1_0220_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0221",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ぁっ、はぁ、まだこんなに出て……えへへ、そんなにあたしのおっぱい、気に入ったんですね？",
+      "Text": "はぁ、はぁ……まだこんなに溜め込んでたのね……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24632.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP02C_109980.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 3
+          "StartTime": 4,
+          "EndTime": 10.5
         }
       }
     }
   },
 
-  "imvi_phase1_0230_M_Muku": {
-    "ID": "imvi_phase1_0230_M_Muku",
+  "imvi_phase1_0230_M_Pride": {
+    "ID": "imvi_phase1_0230_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0230_T_Muku",
+    "NextStepID": "imvi_phase1_0230_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -924,31 +920,32 @@
     ]
   },
 
-  "imvi_phase1_0230_T_Muku": {
-    "ID": "imvi_phase1_0230_T_Muku",
+  "imvi_phase1_0230_T_Pride": {
+    "ID": "imvi_phase1_0230_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0231",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "やっぱり可愛いねっ！",
+      "Text": "とっても可愛かったわよ？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27159.ogg",
+        "Pride": {
+          "VoiceFile": "S0_Y_111057.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 1.6
+          "StartTime": 3,
+          "EndTime": 6
         }
       }
     }
   },
 
-  "imvi_phase1_0240_M_Muku": {
-    "ID": "imvi_phase1_0240_M_Muku",
+  "imvi_phase1_0240_M_Pride": {
+    "ID": "imvi_phase1_0240_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0240_T_Muku",
+    "NextStepID": "imvi_phase1_0240_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -960,30 +957,30 @@
     ]
   },
 
-  "imvi_phase1_0240_T_Muku": {
-    "ID": "imvi_phase1_0240_T_Muku",
+  "imvi_phase1_0240_T_Pride": {
+    "ID": "imvi_phase1_0240_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "imvi_phase1_0241_M_Muku",
+    "NextStepID": "imvi_phase1_0241_M_Pride",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "えへへ……そんなに固くならなくていいよ。それとも、やっぱり緊張しちゃう？",
+      "Text": "……ちょっと固くなりすぎじゃない？　そんなに緊張してるの？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27119.ogg",
+        "Pride": {
+          "VoiceFile": "S0_Y_111006.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase1_0241_M_Muku": {
-    "ID": "imvi_phase1_0241_M_Muku",
+  "imvi_phase1_0241_M_Pride": {
+    "ID": "imvi_phase1_0241_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0241_T_Muku",
+    "NextStepID": "imvi_phase1_0241_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -995,30 +992,30 @@
     ]
   },
 
-  "imvi_phase1_0241_T_Muku": {
-    "ID": "imvi_phase1_0241_T_Muku",
+  "imvi_phase1_0241_T_Pride": {
+    "ID": "imvi_phase1_0241_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0242",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ほら……ここが、おまんこですよ……？　ここを……触って、ください……？",
+      "Text": "ここ、おまんこ……ちょっと触ってみなさいよ……ほ、ほら、恥ずかしがらないで……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24608.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP02C_109956.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase1_0250_M_Muku": {
-    "ID": "imvi_phase1_0250_M_Muku",
+  "imvi_phase1_0250_M_Pride": {
+    "ID": "imvi_phase1_0250_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0250_T_Muku",
+    "NextStepID": "imvi_phase1_0250_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1030,30 +1027,30 @@
     ]
   },
 
-  "imvi_phase1_0250_T_Muku": {
-    "ID": "imvi_phase1_0250_T_Muku",
+  "imvi_phase1_0250_T_Pride": {
+    "ID": "imvi_phase1_0250_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0251",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あ……そこじゃないよ？　そこはおしっこ出るとこ……もっと下のほうにある穴……",
+      "Text": "あっ、そこは上すぎるわ……そっちはその……おしっこをする時の穴だから……ほら、下にあるでしょ？　もう一つの穴が……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16899.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105765.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase1_0260_M_Muku": {
-    "ID": "imvi_phase1_0260_M_Muku",
+  "imvi_phase1_0260_M_Pride": {
+    "ID": "imvi_phase1_0260_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0260_T_Muku",
+    "NextStepID": "imvi_phase1_0260_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1065,49 +1062,49 @@
     ]
   },
 
-  "imvi_phase1_0260_T_Muku": {
-    "ID": "imvi_phase1_0260_T_Muku",
+  "imvi_phase1_0260_T_Pride": {
+    "ID": "imvi_phase1_0260_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0261",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "こっちがおちんちん挿れる穴だよ……いっぱい可愛がってね……えへ……",
+      "Text": "そこが、アタシのおまんこだから……そこに、挿れるの……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16900.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105766.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase1_0270_T_Muku": {
-    "ID": "imvi_phase1_0270_T_Muku",
+  "imvi_phase1_0270_T_Pride": {
+    "ID": "imvi_phase1_0270_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0271",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "初めてのこと、んんっ！　あたしが貰っちゃったんですねっ！",
+      "Text": "初めて……んんっ、あぁっ、貰っちゃって……嬉しいとか、そんなことないんだから……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24612.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP02C_109960.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 2.2
+          "StartTime": 3.7
         }
       }
     }
   },
 
-  "imvi_phase1_0280_M_Muku": {
-    "ID": "imvi_phase1_0280_M_Muku",
+  "imvi_phase1_0280_M_Pride": {
+    "ID": "imvi_phase1_0280_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0280_T_Muku",
+    "NextStepID": "imvi_phase1_0280_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1119,31 +1116,30 @@
     ]
   },
 
-  "imvi_phase1_0280_T_Muku": {
-    "ID": "imvi_phase1_0280_T_Muku",
+  "imvi_phase1_0280_T_Pride": {
+    "ID": "imvi_phase1_0280_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0281",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あたしのおまんこ、どうっ？　くふぅうっ♪　あたし、気持ち、いいよっ、ぁんっ……！",
+      "Text": "あ、アタシのおまんこにチンポ入れられるなんて……んはぁ、んくぅ、ありがたく思いなさいよ……ああっ、んはぁ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24712.ogg",
-          "IsChoppingAudio": true,
-          "StartTime": 3.5
+        "Pride": {
+          "VoiceFile": "S0_GP02C_110060.ogg",
+          "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase1_0290_M_Muku": {
-    "ID": "imvi_phase1_0290_M_Muku",
+  "imvi_phase1_0290_M_Pride": {
+    "ID": "imvi_phase1_0290_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0290_T_Muku",
+    "NextStepID": "imvi_phase1_0290_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1155,31 +1151,31 @@
     ]
   },
 
-  "imvi_phase1_0290_T_Muku": {
-    "ID": "imvi_phase1_0290_T_Muku",
+  "imvi_phase1_0290_T_Pride": {
+    "ID": "imvi_phase1_0290_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0291",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "いいですよっ、中に、くださいっ！",
+      "Text": "んんっ、んはぁ、だ、出していいからっ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24613.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP02C_109961.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 2.5
+          "EndTime": 3
         }
       }
     }
   },
 
-  "imvi_phase1_0300_M_Muku": {
-    "ID": "imvi_phase1_0300_M_Muku",
+  "imvi_phase1_0300_M_Pride": {
+    "ID": "imvi_phase1_0300_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0300_T_Muku",
+    "NextStepID": "imvi_phase1_0300_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1191,31 +1187,31 @@
     ]
   },
 
-  "imvi_phase1_0300_T_Muku": {
-    "ID": "imvi_phase1_0300_T_Muku",
+  "imvi_phase1_0300_T_Pride": {
+    "ID": "imvi_phase1_0300_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0301",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あっ……はぁ、はぁ……んふ……はぁ、はぁ、はぁ……さっき出したばっかなのに、まだこんな……",
+      "Text": "あっ……はぁ、はぁ……んふ……はぁ、はぁ……ふふ、いっぱい出したのね……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16908.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105774.ogg",
           "IsChoppingAudio": true,
-          "StartTIme": 4
+          "StartTIme": 5
         }
       }
     }
   },
 
-  "imvi_phase1_0310_M_Muku": {
-    "ID": "imvi_phase1_0310_M_Muku",
+  "imvi_phase1_0310_M_Pride": {
+    "ID": "imvi_phase1_0310_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0310_T_Muku",
+    "NextStepID": "imvi_phase1_0310_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1227,18 +1223,18 @@
     ]
   },
 
-  "imvi_phase1_0310_T_Muku": {
-    "ID": "imvi_phase1_0310_T_Muku",
+  "imvi_phase1_0310_T_Pride": {
+    "ID": "imvi_phase1_0310_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase1_0311",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ううん、気にしなくていいよ……",
+      "Text": "いいのよ。そんなことは気にしなくても。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16896.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105762.ogg",
           "IsChoppingAudio": true,
           "EndTime": 3
         }
@@ -1246,12 +1242,12 @@
     }
   },
 
-  "imvi_phase1_0320_M_Muku": {
-    "ID": "imvi_phase1_0320_M_Muku",
+  "imvi_phase1_0320_M_Pride": {
+    "ID": "imvi_phase1_0320_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase1_0320_T_Muku",
+    "NextStepID": "imvi_phase1_0320_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1263,50 +1259,50 @@
     ]
   },
 
-  "imvi_phase1_0320_T_Muku": {
-    "ID": "imvi_phase1_0320_T_Muku",
+  "imvi_phase1_0320_T_Pride": {
+    "ID": "imvi_phase1_0320_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_yotogiplay_phase1_closepanel",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "なんかちょっと、可愛いかも……♪　ちゃんと平等にしてあげるから、安心してくださいね？",
+      "Text": "してあげないなんて、言ってないでしょ……してあげるから、落ち着きなさいよ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24623.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP02C_109971.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 2.4
+          "StartTime": 3.7
         }
       }
     }
   },
 
-  "imvi_phase2_0010_T_Muku": {
-    "ID": "imvi_phase2_0010_T_Muku",
+  "imvi_phase2_0010_T_Pride": {
+    "ID": "imvi_phase2_0010_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "imvi_phase2_0011_M_Muku",
+    "NextStepID": "imvi_phase2_0011_M_Pride",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "えーっと、次はどうしよっかなぁ？　えーとえーっと……",
+      "Text": "次は何をしようかしら……？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27196.ogg",
+        "Pride": {
+          "VoiceFile": "S0_Y_111083.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 7
+          "StartTime": 8.5
         }
       }
     }
   },
 
-  "imvi_phase2_0011_M_Muku": {
-    "ID": "imvi_phase2_0011_M_Muku",
+  "imvi_phase2_0011_M_Pride": {
+    "ID": "imvi_phase2_0011_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0011_T_Muku",
+    "NextStepID": "imvi_phase2_0011_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1322,31 +1318,31 @@
     ]
   },
 
-  "imvi_phase2_0011_T_Muku": {
-    "ID": "imvi_phase2_0011_T_Muku",
+  "imvi_phase2_0011_T_Pride": {
+    "ID": "imvi_phase2_0011_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0012",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あれ、どうしたんですか？",
+      "Text": "なに？　どうかしたの？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16862.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105728.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 3
+          "EndTime": 1.9
         }
       }
     }
   },
 
-  "imvi_phase2_0020_M_Muku": {
-    "ID": "imvi_phase2_0020_M_Muku",
+  "imvi_phase2_0020_M_Pride": {
+    "ID": "imvi_phase2_0020_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0020_T_Muku",
+    "NextStepID": "imvi_phase2_0020_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1358,30 +1354,30 @@
     ]
   },
 
-  "imvi_phase2_0020_T_Muku": {
-    "ID": "imvi_phase2_0020_T_Muku",
+  "imvi_phase2_0020_T_Pride": {
+    "ID": "imvi_phase2_0020_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0021",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あたしとするの……あんまり好きじゃなかった？",
+      "Text": "……アタシとは、したくなかったわけ？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27215.ogg",
+        "Pride": {
+          "VoiceFile": "S0_Y_111102.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0030_M_Muku": {
-    "ID": "imvi_phase2_0030_M_Muku",
+  "imvi_phase2_0030_M_Pride": {
+    "ID": "imvi_phase2_0030_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0030_T_Muku",
+    "NextStepID": "imvi_phase2_0030_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1393,48 +1389,48 @@
     ]
   },
 
-  "imvi_phase2_0030_T_Muku": {
-    "ID": "imvi_phase2_0030_T_Muku",
+  "imvi_phase2_0030_T_Pride": {
+    "ID": "imvi_phase2_0030_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0031",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "好きって言ってくれないのはガッカリだけど……えへへっ、嫌じゃないならそれでいいかな？",
+      "Text": "アタシとするの、嫌じゃないのよね？　それなら、いいでしょ？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27216.ogg",
+        "Pride": {
+          "VoiceFile": "S0_Y_111105.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0040_T_Muku": {
-    "ID": "imvi_phase2_0040_T_Muku",
+  "imvi_phase2_0040_T_Pride": {
+    "ID": "imvi_phase2_0040_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0041",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ふうん、そうなの？　あたしにはそう見えないんだけど？",
+      "Text": "そんなこと言ってるけど……こっちは全然、違う意見みたいよ？　まだまだ、こんなに溢れさせて……ふふっ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27222.ogg",
+        "Pride": {
+          "VoiceFile": "S0_Y_111108.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0050_M_Muku": {
-    "ID": "imvi_phase2_0050_M_Muku",
+  "imvi_phase2_0050_M_Pride": {
+    "ID": "imvi_phase2_0050_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0050_T_Muku",
+    "NextStepID": "imvi_phase2_0050_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1446,30 +1442,31 @@
     ]
   },
 
-  "imvi_phase2_0050_T_Muku": {
-    "ID": "imvi_phase2_0050_T_Muku",
+  "imvi_phase2_0050_T_Pride": {
+    "ID": "imvi_phase2_0050_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0051",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "隠しても見えちゃってるんだけど……ふふふっ♪　これでもエッチしたくないって言っちゃうつもりなの？",
+      "Text": "ふふっ、隠そうとしても無駄よ？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27223.ogg",
-          "IsChoppingAudio": false
+        "Pride": {
+          "VoiceFile": "S0_Y_111110.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
         }
       }
     }
   },
 
-  "imvi_phase2_0060_M_Muku": {
-    "ID": "imvi_phase2_0060_M_Muku",
+  "imvi_phase2_0060_M_Pride": {
+    "ID": "imvi_phase2_0060_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0060_T_Muku",
+    "NextStepID": "imvi_phase2_0060_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1481,30 +1478,31 @@
     ]
   },
 
-  "imvi_phase2_0060_T_Muku": {
-    "ID": "imvi_phase2_0060_T_Muku",
+  "imvi_phase2_0060_T_Pride": {
+    "ID": "imvi_phase2_0060_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0061",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あれっ、どうしたの？　いきなり可愛い声なんて出しちゃって～♪",
+      "Text": "何よ、急にそんな可愛い声出しちゃって。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27150.ogg",
-          "IsChoppingAudio": false
+        "Pride": {
+          "VoiceFile": "S0_Y_111037.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.5
         }
       }
     }
   },
 
-  "imvi_phase2_0070_M_Muku": {
-    "ID": "imvi_phase2_0070_M_Muku",
+  "imvi_phase2_0070_M_Pride": {
+    "ID": "imvi_phase2_0070_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0070_T_Muku",
+    "NextStepID": "imvi_phase2_0070_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1516,30 +1514,30 @@
     ]
   },
 
-  "imvi_phase2_0070_T_Muku": {
-    "ID": "imvi_phase2_0070_T_Muku",
+  "imvi_phase2_0070_T_Pride": {
+    "ID": "imvi_phase2_0070_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0071",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "……ふううん、なるほどぉ。うんうん、身体は正直だよね～。",
+      "Text": "……へえ、なるほどね。色々言っても、やっぱり身体は正直ってことね。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27148.ogg",
+        "Pride": {
+          "VoiceFile": "S0_Y_111035.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0080_M_Muku": {
-    "ID": "imvi_phase2_0080_M_Muku",
+  "imvi_phase2_0080_M_Pride": {
+    "ID": "imvi_phase2_0080_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0080_T_Muku",
+    "NextStepID": "imvi_phase2_0080_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1551,30 +1549,30 @@
     ]
   },
 
-  "imvi_phase2_0080_T_Muku": {
-    "ID": "imvi_phase2_0080_T_Muku",
+  "imvi_phase2_0080_T_Pride": {
+    "ID": "imvi_phase2_0080_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0081",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "そっか、まだ素直になれないんだねっ！　だったらこういうのはどうっ！？",
+      "Text": "本当に強情なんだから……それじゃあ、こんな風にしてあげれば、少しは素直になるかしらねっ？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27189.ogg",
+        "Pride": {
+          "VoiceFile": "S0_Y_111076.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0090_M_Muku": {
-    "ID": "imvi_phase2_0090_M_Muku",
+  "imvi_phase2_0090_M_Pride": {
+    "ID": "imvi_phase2_0090_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0090_T_Muku",
+    "NextStepID": "imvi_phase2_0090_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1586,30 +1584,30 @@
     ]
   },
 
-  "imvi_phase2_0090_T_Muku": {
-    "ID": "imvi_phase2_0090_T_Muku",
+  "imvi_phase2_0090_T_Pride": {
+    "ID": "imvi_phase2_0090_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0091",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "んんっ……どうですか？　あたしのおっぱい、気持ちいいですか……？",
+      "Text": "ねえ……どう？　アタシのおっぱい、気持ちいい……？　",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_order_50183.ogg",
+        "Pride": {
+          "VoiceFile": "S0_order_50404.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0100_M_Muku": {
-    "ID": "imvi_phase2_0100_M_Muku",
+  "imvi_phase2_0100_M_Pride": {
+    "ID": "imvi_phase2_0100_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0100_T_Muku",
+    "NextStepID": "imvi_phase2_0100_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1621,30 +1619,30 @@
     ]
   },
 
-  "imvi_phase2_0100_T_Muku": {
-    "ID": "imvi_phase2_0100_T_Muku",
+  "imvi_phase2_0100_T_Pride": {
+    "ID": "imvi_phase2_0100_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0101",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "でもっ、それが気持ちいいんだよねっ！？　さっきから嬉しそうなっ、エッチな顏してるしっ！　ほらっ、これがいいんでしょっ！",
+      "Text": "でも、気持ちいいんでしょっ？　ほらっ、はぁっ、あぁっ、顔も声も、さっきよりずっと、エッチになってきてるわよっ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27177.ogg",
+        "Pride": {
+          "VoiceFile": "S0_Y_111064.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0110_M_Muku": {
-    "ID": "imvi_phase2_0110_M_Muku",
+  "imvi_phase2_0110_M_Pride": {
+    "ID": "imvi_phase2_0110_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0110_T_Muku",
+    "NextStepID": "imvi_phase2_0110_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1656,30 +1654,30 @@
     ]
   },
 
-  "imvi_phase2_0110_T_Muku": {
-    "ID": "imvi_phase2_0110_T_Muku",
+  "imvi_phase2_0110_T_Pride": {
+    "ID": "imvi_phase2_0110_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0111",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "むうっ、まだ我慢してるのぉ？　だったら、こうしてあげるっ……！",
+      "Text": "んっふぅ、はぁっ……まだ堪えてるの……？　それなら……我慢できなくさせてあげるわっ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27176.ogg",
+        "Pride": {
+          "VoiceFile": "S0_Y_111063.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0120_M_Muku": {
-    "ID": "imvi_phase2_0120_M_Muku",
+  "imvi_phase2_0120_M_Pride": {
+    "ID": "imvi_phase2_0120_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0120_T_Muku",
+    "NextStepID": "imvi_phase2_0120_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1691,30 +1689,30 @@
     ]
   },
 
-  "imvi_phase2_0120_T_Muku": {
-    "ID": "imvi_phase2_0120_T_Muku",
+  "imvi_phase2_0120_T_Pride": {
+    "ID": "imvi_phase2_0120_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0121",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はぁ、んんっ……！　ふふ、おかしくなっちゃっていいよ！　もっともっと気持ちよくなってねっ……んちゅ、ちゅるううぅ……！",
+      "Text": "ぢゅぱっ、んぢゅぅ！　おかしくさせようと、してるのよっ！　じゅぷ、っぢゅるるる！　ほらっ、もっとおかしくなりなさいよっ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27435.ogg",
+        "Pride": {
+          "VoiceFile": "S0_Y_111322.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0130_M_Muku": {
-    "ID": "imvi_phase2_0130_M_Muku",
+  "imvi_phase2_0130_M_Pride": {
+    "ID": "imvi_phase2_0130_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0130_T_Muku",
+    "NextStepID": "imvi_phase2_0130_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1726,30 +1724,30 @@
     ]
   },
 
-  "imvi_phase2_0130_T_Muku": {
-    "ID": "imvi_phase2_0130_T_Muku",
+  "imvi_phase2_0130_T_Pride": {
+    "ID": "imvi_phase2_0130_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0131",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "いいですよ、いつでも出して……んんぅ……あたしのおっぱいに、思い切り出しちゃって下さい……！",
+      "Text": "いいわよ、好きな時に出しても……アタシのおっぱいに遠慮しないで、思い切り出してっ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_order_50189.ogg",
+        "Pride": {
+          "VoiceFile": "S0_order_50410.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0140_M_Muku": {
-    "ID": "imvi_phase2_0140_M_Muku",
+  "imvi_phase2_0140_M_Pride": {
+    "ID": "imvi_phase2_0140_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0140_T_Muku",
+    "NextStepID": "imvi_phase2_0140_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1761,31 +1759,31 @@
     ]
   },
 
-  "imvi_phase2_0140_T_Muku": {
-    "ID": "imvi_phase2_0140_T_Muku",
+  "imvi_phase2_0140_T_Pride": {
+    "ID": "imvi_phase2_0140_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0141",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はぁっ、はぁっ……あは、いっぱい出ましたね……",
+      "Text": "はぁ、はぁ……ふふっ、いっぱい出たわね……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_order_50190.ogg",
+        "Pride": {
+          "VoiceFile": "S0_order_50411.ogg",
           "IsChoppingAudio": true,
-          "StartTIme": 5
+          "StartTIme": 4
         }
       }
     }
   },
 
-  "imvi_phase2_0150_M_Muku": {
-    "ID": "imvi_phase2_0150_M_Muku",
+  "imvi_phase2_0150_M_Pride": {
+    "ID": "imvi_phase2_0150_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0150_T_Muku",
+    "NextStepID": "imvi_phase2_0150_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1797,103 +1795,102 @@
     ]
   },
 
-  "imvi_phase2_0150_T_Muku": {
-    "ID": "imvi_phase2_0150_T_Muku",
+  "imvi_phase2_0150_T_Pride": {
+    "ID": "imvi_phase2_0150_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0151",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ふふ……うん、ちゃんと言えたね。",
+      "Text": "……やっと本当の自分が認められたのね。",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_17379.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105924.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 4
-        }
-      }
-    }
-  },
-
-  "imvi_phase2_0160_M_Muku": {
-    "ID": "imvi_phase2_0160_M_Muku",
-    "Type": "Chara",
-    "WaitingType": "Auto",
-    "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0160_T_Muku",
-    "CharaData": [
-      {
-        "Type": "F",
-        "UseBranchIndex": true,
-        "Visible": true,
-        "WaitLoad": true,
-        "FaceAnime": "にっこり"
-      }
-    ]
-  },
-
-  "imvi_phase2_0160_T_Muku": {
-    "ID": "imvi_phase2_0160_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "imvi_phase2_0161",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "えへへっ、やっと素直になってくれたね～♪　そういう良い子にはたっぷりご褒美をあげるから、お腹いっぱい味わってね？",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27192.ogg",
-          "IsChoppingAudio": false
-        }
-      }
-    }
-  },
-
-  "imvi_phase2_0170_M_Muku": {
-    "ID": "imvi_phase2_0170_M_Muku",
-    "Type": "Chara",
-    "WaitingType": "Auto",
-    "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0170_T_Muku",
-    "CharaData": [
-      {
-        "Type": "F",
-        "UseBranchIndex": true,
-        "Visible": true,
-        "WaitLoad": true,
-        "FaceAnime": "にっこり"
-      }
-    ]
-  },
-
-  "imvi_phase2_0170_T_Muku": {
-    "ID": "imvi_phase2_0170_T_Muku",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "imvi_phase2_0171",
-    "TalkData": {
-      "SpecificSpeaker": "Maid",
-      "UseBranchIndex": true,
-      "Text": "好きなときに挿れてもいいですよ♪",
-      "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16898.ogg",
-          "IsChoppingAudio": true,
-          "StartTime": 3,
           "EndTime": 6
         }
       }
     }
   },
 
-  "imvi_phase2_0180_M_Muku": {
-    "ID": "imvi_phase2_0180_M_Muku",
+  "imvi_phase2_0160_M_Pride": {
+    "ID": "imvi_phase2_0160_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0180_T_Muku",
+    "NextStepID": "imvi_phase2_0160_T_Pride",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_phase2_0160_T_Pride": {
+    "ID": "imvi_phase2_0160_T_Pride",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0161",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっふふ……！　最初からそうやって、素直に言ってくれればいいのに。ほら、素直になれたご褒美をあげるわよっ……！",
+      "VoiceData": {
+        "Pride": {
+          "VoiceFile": "S0_Y_111079.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0170_M_Pride": {
+    "ID": "imvi_phase2_0170_M_Pride",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0170_T_Pride",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_phase2_0170_T_Pride": {
+    "ID": "imvi_phase2_0170_T_Pride",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "遠慮しなくていいから。アタシに好きな時に挿れていいよ。",
+      "VoiceData": {
+        "Pride": {
+          "VoiceFile": "S0_GP01_105764.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0180_M_Pride": {
+    "ID": "imvi_phase2_0180_M_Pride",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0180_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1905,30 +1902,30 @@
     ]
   },
 
-  "imvi_phase2_0180_T_Muku": {
-    "ID": "imvi_phase2_0180_T_Muku",
+  "imvi_phase2_0180_T_Pride": {
+    "ID": "imvi_phase2_0180_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0181",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "んふっ！　んん……んっ……あっ……んっ……んっ……はぁ、はぁ……あんっ……あっ……あっ……ど、どう？　はじめてのエッチ……",
+      "Text": "んふっ！　んん……んっ……あっ……んっ……んっ……！　はぁ、はぁ……どう、かしら……？　あんっ……アタシの、体は……？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16901.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105767.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0190_M_Muku": {
-    "ID": "imvi_phase2_0190_M_Muku",
+  "imvi_phase2_0190_M_Pride": {
+    "ID": "imvi_phase2_0190_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0190_T_Muku",
+    "NextStepID": "imvi_phase2_0190_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1940,31 +1937,31 @@
     ]
   },
 
-  "imvi_phase2_0190_T_Muku": {
-    "ID": "imvi_phase2_0190_T_Muku",
+  "imvi_phase2_0190_T_Pride": {
+    "ID": "imvi_phase2_0190_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0191",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はぁ、はぁ、好きに動いていいですよぉ……ふふ、もっと奥まで挿れたい……でしょ？",
+      "Text": "アタシのおまんこ、んっ……激しく、したくないの……？　んっ、ぁあ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_18850.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105671.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 1
+          "StartTime": 3.3
         }
       }
     }
   },
 
-  "imvi_phase2_0200_M_Muku": {
-    "ID": "imvi_phase2_0200_M_Muku",
+  "imvi_phase2_0200_M_Pride": {
+    "ID": "imvi_phase2_0200_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0200_T_Muku",
+    "NextStepID": "imvi_phase2_0200_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -1976,30 +1973,30 @@
     ]
   },
 
-  "imvi_phase2_0200_T_Muku": {
-    "ID": "imvi_phase2_0200_T_Muku",
+  "imvi_phase2_0200_T_Pride": {
+    "ID": "imvi_phase2_0200_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0201",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あっ！　あっ……あっ……んんっ……はぁ……も、もっと強くして……いいですよ……はぁ……はぁ……んっ……んっ……あっ……",
+      "Text": "あっ！　あっ……あっ……んんっ……はぁ……もっと、我慢しなくて……強くしても良いんだからね……はぁ……はぁ……んっ……んっ……あっ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16903.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105769.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0210_M_Muku": {
-    "ID": "imvi_phase2_0210_M_Muku",
+  "imvi_phase2_0210_M_Pride": {
+    "ID": "imvi_phase2_0210_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0210_T_Muku",
+    "NextStepID": "imvi_phase2_0210_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2011,30 +2008,30 @@
     ]
   },
 
-  "imvi_phase2_0210_T_Muku": {
-    "ID": "imvi_phase2_0210_T_Muku",
+  "imvi_phase2_0210_T_Pride": {
+    "ID": "imvi_phase2_0210_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0211",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "あああんっ！　ああっ、んっ、あはぁっ……あっ、あっ……おちんちん、すごい暴れてる……求められてる、感じが……ああっ、んん！",
+      "Text": "くぁあっ、あっ！　はぁっ、あっ、あ、アタシで……気持ちよくなってるの……？　だ、だめっ……激しいっ……んっ、ぁんっ、はぁあっ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16906.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105772.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0220_M_Muku": {
-    "ID": "imvi_phase2_0220_M_Muku",
+  "imvi_phase2_0220_M_Pride": {
+    "ID": "imvi_phase2_0220_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0220_T_Muku",
+    "NextStepID": "imvi_phase2_0220_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2046,30 +2043,30 @@
     ]
   },
 
-  "imvi_phase2_0220_T_Muku": {
-    "ID": "imvi_phase2_0220_T_Muku",
+  "imvi_phase2_0220_T_Pride": {
+    "ID": "imvi_phase2_0220_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0221",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はっ、あっ、んんっ！　ねっ、ねえっ、もうイクっ？　イッちゃいそうっ……！？",
+      "Text": "んっぁ、あぁ！　ほらっ、はぁっ、あぁっ、もう、イきそうなんでしょっ？　イっちゃうでしょっ……！？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27161.ogg",
+        "Pride": {
+          "VoiceFile": "S0_Y_111048.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0230_M_Muku": {
-    "ID": "imvi_phase2_0230_M_Muku",
+  "imvi_phase2_0230_M_Pride": {
+    "ID": "imvi_phase2_0230_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0230_T_Muku",
+    "NextStepID": "imvi_phase2_0230_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2081,31 +2078,31 @@
     ]
   },
 
-  "imvi_phase2_0230_T_Muku": {
-    "ID": "imvi_phase2_0230_T_Muku",
+  "imvi_phase2_0230_T_Pride": {
+    "ID": "imvi_phase2_0230_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0231",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はぁ、っはぁ……！　いいですよっ、出してください……！　",
+      "Text": "はぁ、んんっ……だ、出しなさいよ、ほら……早く……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24631.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP02C_109979.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 3.9
+          "EndTime": 4.3
         }
       }
     }
   },
 
-  "imvi_phase2_0240_M_Muku": {
-    "ID": "imvi_phase2_0240_M_Muku",
+  "imvi_phase2_0240_M_Pride": {
+    "ID": "imvi_phase2_0240_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0240_T_Muku",
+    "NextStepID": "imvi_phase2_0240_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2117,31 +2114,31 @@
     ]
   },
 
-  "imvi_phase2_0240_T_Muku": {
-    "ID": "imvi_phase2_0240_T_Muku",
+  "imvi_phase2_0240_T_Pride": {
+    "ID": "imvi_phase2_0240_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0241",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "はぁ、はぁ……ふぅ……ううん、ちゃんとあたしも、気持ちよかったよ……",
+      "Text": "はぁっ……ふふ、いいのよ。アタシも……気持ちよかったし。最初だとは思えなかったわよ？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP_16909.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105775.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 7
+          "EndTime": 10.5
         }
       }
     }
   },
 
-  "imvi_phase2_0250_M_Muku": {
-    "ID": "imvi_phase2_0250_M_Muku",
+  "imvi_phase2_0250_M_Pride": {
+    "ID": "imvi_phase2_0250_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0250_T_Muku",
+    "NextStepID": "imvi_phase2_0250_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2153,48 +2150,48 @@
     ]
   },
 
-  "imvi_phase2_0250_T_Muku": {
-    "ID": "imvi_phase2_0250_T_Muku",
+  "imvi_phase2_0250_T_Pride": {
+    "ID": "imvi_phase2_0250_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0251",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "えへへ……いっぱい出せたね……じゃあ、ご褒美にチューしてあげる……",
+      "Text": "はぁっ……ふふ、こんなに出せて、偉いわね……？　キス、してあげる……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP01_18867.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP01_105688.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0260_T_Muku": {
-    "ID": "imvi_phase2_0260_T_Muku",
+  "imvi_phase2_0260_T_Pride": {
+    "ID": "imvi_phase2_0260_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0261",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "れりゅ、んちゅっ……んぅぅっ、あなたの舌、美味し、んっちゅぱ、んちゅぅ……！　唾液も、もっとください、んちゅ、っちゅるぅ……！",
+      "Text": "れりゅ、ちゅう、んぅうう……あなたの舌、凄く美味しいの……んちゅ、ちゅうう……唾液、もっと、もっと欲しいの……んちゅ、ちゅうぅ……！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP5_29066.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP5_111422.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_phase2_0270_M_Muku": {
-    "ID": "imvi_phase2_0270_M_Muku",
+  "imvi_phase2_0270_M_Pride": {
+    "ID": "imvi_phase2_0270_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0270_T_Muku",
+    "NextStepID": "imvi_phase2_0270_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2206,31 +2203,32 @@
     ]
   },
 
-  "imvi_phase2_0270_T_Muku": {
-    "ID": "imvi_phase2_0270_T_Muku",
+  "imvi_phase2_0270_T_Pride": {
+    "ID": "imvi_phase2_0270_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0271",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "元気になったみたいですね？　こんなに、おちんちんガチガチにしちゃって……♪",
+      "Text": "おちんちん……ガッチガチじゃない……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24642.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP02C_109990.ogg",
           "IsChoppingAudio": true,
-          "StartTime": 2.5
+          "StartTime": 3.3,
+          "EndTime": 6.5
         }
       }
     }
   },
 
-  "imvi_phase2_0280_M_Muku": {
-    "ID": "imvi_phase2_0280_M_Muku",
+  "imvi_phase2_0280_M_Pride": {
+    "ID": "imvi_phase2_0280_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_phase2_0280_T_Muku",
+    "NextStepID": "imvi_phase2_0280_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2242,32 +2240,32 @@
     ]
   },
 
-  "imvi_phase2_0280_T_Muku": {
-    "ID": "imvi_phase2_0280_T_Muku",
+  "imvi_phase2_0280_T_Pride": {
+    "ID": "imvi_phase2_0280_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_phase2_0281",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ね、もう一回しよ……？",
+      "Text": "もう一回なら……してあげてもいいんだからね……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_GP02C_24640.ogg",
+        "Pride": {
+          "VoiceFile": "S0_GP02C_109988.ogg",
           "IsChoppingAudio": true,
-          "EndTime": 3
+          "StartTime": 6
         }
       }
     }
   },
 
 
-  "imvi_postyotogi_0010_M_Muku": {
-    "ID": "imvi_postyotogi_0010_M_Muku",
+  "imvi_postyotogi_0010_M_Pride": {
+    "ID": "imvi_postyotogi_0010_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_postyotogi_0010_T_Muku",
+    "NextStepID": "imvi_postyotogi_0010_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2279,30 +2277,30 @@
     ]
   },
 
-  "imvi_postyotogi_0010_T_Muku": {
-    "ID": "imvi_postyotogi_0010_T_Muku",
+  "imvi_postyotogi_0010_T_Pride": {
+    "ID": "imvi_postyotogi_0010_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_postyotogi_0011",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "んっ、ああああっ！　気持ちいいっ！　気持ちよすぎるよぉっ！　ひゃうんっ！　くうううんっ！　ふあっ、あああっ！",
+      "Text": "っはぅぅ、んぁあ！　そ、そこっ、ぁっ、んっ、んあぁっ！　そこ、ダメっ……気持ちよくて、すぐダメになっちゃうの……！！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27345.ogg",
+        "Pride": {
+          "VoiceFile": "S0_Y_111232.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_postyotogi_0020_M_Muku": {
-    "ID": "imvi_postyotogi_0020_M_Muku",
+  "imvi_postyotogi_0020_M_Pride": {
+    "ID": "imvi_postyotogi_0020_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_postyotogi_0020_T_Muku",
+    "NextStepID": "imvi_postyotogi_0020_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2314,30 +2312,30 @@
     ]
   },
 
-  "imvi_postyotogi_0020_T_Muku": {
-    "ID": "imvi_postyotogi_0020_T_Muku",
+  "imvi_postyotogi_0020_T_Pride": {
+    "ID": "imvi_postyotogi_0020_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_postyotogi_0021",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "ひいんっ、も、もうダメっ！　もうっ、なにも分かんないっ！　はあっ、あんっ！　んああっ！　はひっ、んっ、ひゃうううっ！",
+      "Text": "んふっ、んぁぁ！　これ、ダメなのっ、はっ、あぁぁっ……！　どんどん頭の中、真っ白になって、ひぅぅっ……！！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27343.ogg",
+        "Pride": {
+          "VoiceFile": "S0_Y_111230.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_postyotogi_0030_M_Muku": {
-    "ID": "imvi_postyotogi_0030_M_Muku",
+  "imvi_postyotogi_0030_M_Pride": {
+    "ID": "imvi_postyotogi_0030_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_postyotogi_0030_T_Muku",
+    "NextStepID": "imvi_postyotogi_0030_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2349,30 +2347,30 @@
     ]
   },
 
-  "imvi_postyotogi_0030_T_Muku": {
-    "ID": "imvi_postyotogi_0030_T_Muku",
+  "imvi_postyotogi_0030_T_Pride": {
+    "ID": "imvi_postyotogi_0030_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_postyotogi_0031",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "んああっ！　ひゃっ、くううううーーーーっ！",
+      "Text": "ぃくっ、イくっ、んあっ、ぁあぁああああ！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_Y_27347.ogg",
+        "Pride": {
+          "VoiceFile": "S0_Y_111234.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_postyotogi_0040_M_Muku": {
-    "ID": "imvi_postyotogi_0040_M_Muku",
+  "imvi_postyotogi_0040_M_Pride": {
+    "ID": "imvi_postyotogi_0040_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_postyotogi_0040_T_Muku",
+    "NextStepID": "imvi_postyotogi_0040_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2384,30 +2382,30 @@
     ]
   },
 
-  "imvi_postyotogi_0040_T_Muku": {
-    "ID": "imvi_postyotogi_0040_T_Muku",
+  "imvi_postyotogi_0040_T_Pride": {
+    "ID": "imvi_postyotogi_0040_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_postyotogi_0041",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "焦らなくても大丈夫ですよ……ちゃんとお相手しますから……はぁんっ……",
+      "Text": "焦っちゃダメよ……ちゃんと相手するから……あんっ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63389.ogg",
+        "Pride": {
+          "VoiceFile": "S0_X1Kai_56526.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_postyotogi_0050_M_Muku": {
-    "ID": "imvi_postyotogi_0050_M_Muku",
+  "imvi_postyotogi_0050_M_Pride": {
+    "ID": "imvi_postyotogi_0050_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_postyotogi_0050_T_Muku",
+    "NextStepID": "imvi_postyotogi_0050_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2419,30 +2417,30 @@
     ]
   },
 
-  "imvi_postyotogi_0050_T_Muku": {
-    "ID": "imvi_postyotogi_0050_T_Muku",
+  "imvi_postyotogi_0050_T_Pride": {
+    "ID": "imvi_postyotogi_0050_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_postyotogi_0051",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "もっとぉ……あたしのことぉ……触ってくださぁい……♪",
+      "Text": "もっとぉ……アタシにぃ……触ってぇ……♪",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X1Kai_63390.ogg",
+        "Pride": {
+          "VoiceFile": "S0_X1Kai_56527.ogg",
           "IsChoppingAudio": false
         }
       }
     }
   },
 
-  "imvi_postyotogi_0080_M_Muku": {
-    "ID": "imvi_postyotogi_0080_M_Muku",
+  "imvi_postyotogi_0080_M_Pride": {
+    "ID": "imvi_postyotogi_0080_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_postyotogi_0080_T_Muku",
+    "NextStepID": "imvi_postyotogi_0080_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2454,30 +2452,31 @@
     ]
   },
 
-  "imvi_postyotogi_0080_T_Muku": {
-    "ID": "imvi_postyotogi_0080_T_Muku",
+  "imvi_postyotogi_0080_T_Pride": {
+    "ID": "imvi_postyotogi_0080_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_postyotogi_0081",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "えへへ、どうですか？　あなた。",
+      "Text": "ふふ、どうかしら？",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_61978.ogg",
-          "IsChoppingAudio": false
+        "Pride": {
+          "VoiceFile": "S0_X1P_55268.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2
         }
       }
     }
   },
 
-  "imvi_postyotogi_0090_M_Muku": {
-    "ID": "imvi_postyotogi_0090_M_Muku",
+  "imvi_postyotogi_0090_M_Pride": {
+    "ID": "imvi_postyotogi_0090_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_postyotogi_0090_T_Muku",
+    "NextStepID": "imvi_postyotogi_0090_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2489,30 +2488,31 @@
     ]
   },
 
-  "imvi_postyotogi_0090_T_Muku": {
-    "ID": "imvi_postyotogi_0090_T_Muku",
+  "imvi_postyotogi_0090_T_Pride": {
+    "ID": "imvi_postyotogi_0090_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_postyotogi_0091",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "えへへ、ありがとうございます……んっ、でも今は、この余韻に浸ってたいなって思ってるから……今は大丈夫です……",
+      "Text": "もう少しこのまま余韻に浸っていたいわ……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62398.ogg",
-          "IsChoppingAudio": false
+        "Pride": {
+          "VoiceFile": "S0_X1P_54858.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6
         }
       }
     }
   },
 
-  "imvi_postyotogi_0100_M_Muku": {
-    "ID": "imvi_postyotogi_0100_M_Muku",
+  "imvi_postyotogi_0100_M_Pride": {
+    "ID": "imvi_postyotogi_0100_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_postyotogi_0100_T_Muku",
+    "NextStepID": "imvi_postyotogi_0100_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2524,18 +2524,18 @@
     ]
   },
 
-  "imvi_postyotogi_0100_T_Muku": {
-    "ID": "imvi_postyotogi_0100_T_Muku",
+  "imvi_postyotogi_0100_T_Pride": {
+    "ID": "imvi_postyotogi_0100_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_postyotogi_0101",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "期待してますね！",
+      "Text": "期待してるからね！",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62132.ogg",
+        "Pride": {
+          "VoiceFile": "S0_X1P_55280.ogg",
           "IsChoppingAudio": true,
           "StartTime": 1.4
         }
@@ -2543,12 +2543,12 @@
     }
   },
 
-  "imvi_postyotogi_0110_M_Muku": {
-    "ID": "imvi_postyotogi_0110_M_Muku",
+  "imvi_postyotogi_0110_M_Pride": {
+    "ID": "imvi_postyotogi_0110_M_Pride",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "imvi_postyotogi_0110_T_Muku",
+    "NextStepID": "imvi_postyotogi_0110_T_Pride",
     "CharaData": [
       {
         "Type": "F",
@@ -2566,18 +2566,18 @@
     ]
   },
 
-  "imvi_postyotogi_0110_T_Muku": {
-    "ID": "imvi_postyotogi_0110_T_Muku",
+  "imvi_postyotogi_0110_T_Pride": {
+    "ID": "imvi_postyotogi_0110_T_Pride",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "imvi_postyotogi_0111",
     "TalkData": {
       "SpecificSpeaker": "Maid",
       "UseBranchIndex": true,
-      "Text": "もう……",
+      "Text": "まったく……",
       "VoiceData": {
-        "Muku": {
-          "VoiceFile": "H0_X01_62356.ogg",
+        "Pride": {
+          "VoiceFile": "S0_X1P_54816.ogg",
           "IsChoppingAudio": false
         }
       }

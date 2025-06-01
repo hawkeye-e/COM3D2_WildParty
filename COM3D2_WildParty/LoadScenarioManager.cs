@@ -170,6 +170,25 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADVPostYotogi,
 
             ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Muku,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Majime,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Rindere,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Pure,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Cool,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Pride,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Yandere,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Anesan,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Genki,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Sadist,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Silent,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Devilish,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Ladylike,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Secretary,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Sister,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Curtness,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Missy,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Childhood,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Friendly,
+            ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Dame,
         };
 
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)
