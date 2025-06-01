@@ -30,6 +30,27 @@ namespace COM3D2.WildParty.Plugin
         internal static bool DebugIgnoreADVForceTimeWait { get { return _debugIgnoreADVForceTimeWait.Value; } }
         private static ConfigEntry<bool> _debugIgnoreADVForceTimeWait;
 
+        internal static bool DebugLogScriptInfo { get { return _debugLogScriptInfo.Value; } }
+        private static ConfigEntry<bool> _debugLogScriptInfo;
+
+        internal static bool DebugLogAnimationInfo { get { return _debugLogAnimationInfo.Value; } }
+        private static ConfigEntry<bool> _debugLogAnimationInfo;
+
+        internal static bool DebugLogBackgroundInfo { get { return _debugLogBackgroundInfo.Value; } }
+        private static ConfigEntry<bool> _debugLogBackgroundInfo;
+
+        internal static bool DebugLogBGMInfo { get { return _debugLogBGMInfo.Value; } }
+        private static ConfigEntry<bool> _debugLogBGMInfo;
+
+        internal static bool DebugLogSEInfo { get { return _debugLogSEInfo.Value; } }
+        private static ConfigEntry<bool> _debugLogSEInfo;
+
+        internal static bool DebugLogAudioInfo { get { return _debugLogAudioInfo.Value; } }
+        private static ConfigEntry<bool> _debugLogAudioInfo;
+
+        internal static bool DebugLogFaceAnimeInfo { get { return _debugLogFaceAnimeInfo.Value; } }
+        private static ConfigEntry<bool> _debugLogFaceAnimeInfo;
+
         internal static int MaxInitialRandomExciteValue { get { return _maxInitialRandomExciteValue.Value; } }
         private static ConfigEntry<int> _maxInitialRandomExciteValue;
 
@@ -200,6 +221,20 @@ namespace COM3D2.WildParty.Plugin
             _debugCaptureDialogues = plugin.Config.Bind(DEVELOPER, "Log All Dialogues", false, "Leave this unchecked if you have no idea what it is");
 
             _debugIgnoreADVForceTimeWait = plugin.Config.Bind(DEVELOPER, "Ignore ADV Time Wait Setting", false, "Skip all those time wait setting in ADV to speed up the debug process. Leave this unchecked if you have no idea what it is");
+
+            _debugLogScriptInfo = plugin.Config.Bind(DEVELOPER, "Log Load Script Info", false, "Log the script info whenever it is loaded in the game. Leave this unchecked if you have no idea what it is");
+
+            _debugLogAnimationInfo = plugin.Config.Bind(DEVELOPER, "Log Load Animation Info", false, "Log the animation info whenever an animation file is loaded for a object in the game. Leave this unchecked if you have no idea what it is");
+
+            _debugLogAudioInfo = plugin.Config.Bind(DEVELOPER, "Log Load Audio Info", false, "Log the audio info whenever an audio file is loaded for a maid in the game. Leave this unchecked if you have no idea what it is");
+
+            _debugLogFaceAnimeInfo = plugin.Config.Bind(DEVELOPER, "Log Load Face Anime Info", false, "Log the face anime info whenever the facial expression changed for a maid in the game. Leave this unchecked if you have no idea what it is");
+
+            _debugLogBackgroundInfo = plugin.Config.Bind(DEVELOPER, "Log Load Background Info", false, "Log the background info whenever it is changed in the game. Leave this unchecked if you have no idea what it is");
+
+            _debugLogBGMInfo = plugin.Config.Bind(DEVELOPER, "Log Load BGM Info", false, "Log the BGM info whenever it is changed in the game. Leave this unchecked if you have no idea what it is");
+
+            _debugLogSEInfo = plugin.Config.Bind(DEVELOPER, "Log Load SE Info", false, "Log the sound effect info whenever it is changed in the game. Leave this unchecked if you have no idea what it is");
         }
 
         private static void AddYotogiSettingConfigs(BaseUnityPlugin plugin)

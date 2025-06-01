@@ -48,7 +48,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
         [HarmonyPatch(typeof(ScriptManager), nameof(ScriptManager.LoadMotionScript))]
         private static void LoadMotionScriptPre(int sloat, bool is_next, string file_name, string label_name, string maid_guid, string man_guid, bool face_fix, bool valid_pos, bool disable_diff_pos)
         {
-            //WildParty.Log.LogInfo("LoadMotionScriptPre: file_name: " + file_name + ", label: " + label_name);
+            if (Config.DebugLogScriptInfo)
+                WildParty.Log.LogInfo("[Load Motion Script] Script FileName: " + file_name + ", Script Label: " + label_name);
             Patches.CaptureMotionFileNames(file_name, label_name);
             if (DebugHelper.DebugState.Instance.ScriptInfoCapture.ContainsKey(file_name))
             {
@@ -69,7 +70,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
         [HarmonyPatch(typeof(TBody), nameof(TBody.LoadAnime), new Type[] { typeof(string), typeof(AFileSystemBase), typeof(string), typeof(bool), typeof(bool) })]
         private static void LoadAnime(TBody __instance, string tag, AFileSystemBase fileSystem, string filename, bool additive, bool loop)
         {
-            //WildParty.Log.LogInfo("TBody.LoadAnime: " + __instance?.maid?.status?.fullNameJpStyle + ", filename: " + filename + ", tag: " + tag);
+            if (Config.DebugLogAnimationInfo)
+                WildParty.Log.LogInfo("[Load Animation] Maid: " + __instance?.maid?.status?.fullNameJpStyle + ", Filename: " + filename + ", Tag: " + tag);
         }
 
         //log down the corresponding face anime for the motion
@@ -77,7 +79,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
         [HarmonyPatch(typeof(Maid), nameof(Maid.FaceAnime))]
         private static void FaceAnimePre(Maid __instance, string tag, float t, int chkcode)
         {
-            //WildParty.Log.LogInfo("FaceAnimePre: " + __instance.status.fullNameJpStyle + ", tag: " + tag);
+            if (Config.DebugLogFaceAnimeInfo)
+                WildParty.Log.LogInfo("[Load Face Anime] Maid: " + __instance?.status?.fullNameJpStyle + ", Tag: " + tag);
             Patches.CaptureMotionFaceInfo(tag);
         }
 
@@ -86,7 +89,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
         [HarmonyPatch(typeof(AudioSourceMgr), nameof(AudioSourceMgr.LoadPlay))]
         private static void LoadPlayPre(AudioSourceMgr __instance, string f_strFileName, float f_fFadeTime, bool f_bStreaming, bool f_bLoop)
         {
-            //WildParty.Log.LogInfo("LoadPlayPre f_strFileName: " + f_strFileName + ", f_bLoop: " + f_bLoop);
+            if (Config.DebugLogAudioInfo)
+                WildParty.Log.LogInfo("[Play Audio] FileName: " + f_strFileName + ", Loop: " + f_bLoop);
             Patches.CaptureMotionVoiceFile(__instance, f_strFileName, f_bLoop);
         }
 
@@ -116,14 +120,16 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
         [HarmonyPatch(typeof(BgMgr), nameof(BgMgr.ChangeBg))]
         private static void ChangeBg(string f_strPrefubName)
         {
-            WildParty.Log.LogInfo("BgMgr.ChangeBg f_strPrefubName: " + f_strPrefubName);
+            if(Config.DebugLogBackgroundInfo)
+                WildParty.Log.LogInfo("[Load Background] PrefubName: " + f_strPrefubName);
         }
 
         [HarmonyPostfix]
         [HarmonyPatch(typeof(SoundMgr), nameof(SoundMgr.PlaySe))]
         private static void PlaySe(string f_strFileName, bool f_bLoop)
         {
-            //WildParty.Log.LogInfo("SoundMgr.PlaySe f_strFileName: " + f_strFileName + ", f_bLoop:" + f_bLoop);
+            if (Config.DebugLogSEInfo)
+                WildParty.Log.LogInfo("[Play SE] FileName: " + f_strFileName + ", Loop:" + f_bLoop);
         }
 
         [HarmonyPostfix]
@@ -183,14 +189,16 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
         [HarmonyPatch(typeof(SoundMgr), nameof(SoundMgr.PlayBGM))]
         private static void PlayBGM(string f_strFileName, float f_fTime, bool f_fLoop)
         {
-            WildParty.Log.LogInfo("PlayBGM: " + f_strFileName);
+            if(Config.DebugLogBGMInfo)
+                WildParty.Log.LogInfo("[Play BGM] FileName: " + f_strFileName);
         }
 
         [HarmonyPostfix]
         [HarmonyPatch(typeof(SoundMgr), nameof(SoundMgr.PlayBGMLegacy))]
         private static void PlayBGMLegacy(string f_strFileName, float f_fTime, bool f_fLoop)
         {
-            WildParty.Log.LogInfo("PlayBGMLegacy: " + f_strFileName);
+            if (Config.DebugLogBGMInfo)
+                WildParty.Log.LogInfo("[Play BGM Legacy] FileName: " + f_strFileName);
         }
     }
 }
