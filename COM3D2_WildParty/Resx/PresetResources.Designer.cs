@@ -83,9 +83,39 @@ namespace ModResources {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Preset_ImmoralVillage_Kaede {
+            get {
+                object obj = ResourceManager.GetObject("Preset_ImmoralVillage_Kaede", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Preset_ImmoralVillage_Kaede_v2 {
+            get {
+                object obj = ResourceManager.GetObject("Preset_ImmoralVillage_Kaede_v2", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] Preset_ImmoralVillage_Minori {
             get {
                 object obj = ResourceManager.GetObject("Preset_ImmoralVillage_Minori", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Preset_ImmoralVillage_Minori_v2 {
+            get {
+                object obj = ResourceManager.GetObject("Preset_ImmoralVillage_Minori_v2", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -103,9 +133,9 @@ namespace ModResources {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Preset_ImmortalVillage_Kaede {
+        internal static byte[] Preset_ImmoralVillage_Sayaka_v2 {
             get {
-                object obj = ResourceManager.GetObject("Preset_ImmortalVillage_Kaede", resourceCulture);
+                object obj = ResourceManager.GetObject("Preset_ImmoralVillage_Sayaka_v2", resourceCulture);
                 return ((byte[])(obj));
             }
         }

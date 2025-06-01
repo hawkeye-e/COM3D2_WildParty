@@ -17,13 +17,13 @@ namespace COM3D2.WildParty.Plugin
             { "Shirohama_Natsumi_v2", ModResources.PresetResources.Shirohama_Natsumi_v2 },
 
             { "ImmoralVillage_Sayaka", ModResources.PresetResources.Preset_ImmoralVillage_Sayaka },
-            //{ "ImmoralVillage_Sayaka_v2", ModResources.PresetResources. },
+            { "ImmoralVillage_Sayaka_v2", ModResources.PresetResources.Preset_ImmoralVillage_Sayaka_v2 },
 
-            { "ImmoralVillage_Kaede", ModResources.PresetResources.Preset_ImmortalVillage_Kaede },
-            //{ "ImmoralVillage_Kaede_v2", ModResources.PresetResources. },
+            { "ImmoralVillage_Kaede", ModResources.PresetResources.Preset_ImmoralVillage_Kaede },
+            { "ImmoralVillage_Kaede_v2", ModResources.PresetResources.Preset_ImmoralVillage_Kaede_v2 },
 
             { "ImmoralVillage_Minori", ModResources.PresetResources.Preset_ImmoralVillage_Minori },
-            //{ "ImmoralVillage_Minori_v2", ModResources.PresetResources. },
+            { "ImmoralVillage_Minori_v2", ModResources.PresetResources.Preset_ImmoralVillage_Minori_v2 },
         };
 
         internal static byte[] GetPresetResources(string presetFile)
