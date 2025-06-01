@@ -916,6 +916,16 @@ namespace COM3D2.WildParty.Plugin.Core
                     GameMain.Instance.CharacterMgr.status.AddFlag(flags.ID, flags.value);
                 }
 
+            //Add modded event flag to all individual maid, if any
+            if (Util.GetUndergoingScenario().SetMaidFlag != null)
+                foreach (Maid maid in StateManager.Instance.SelectedMaidsList)
+                {
+                    foreach (var flags in Util.GetUndergoingScenario().SetMaidFlag)
+                    {
+                        maid.status.AddFlag(flags.ID, flags.value);
+                    }
+                }
+
             //alter the maid status for all participants
             ModEventCleanUp.UpdateMaidStatusForModEvent(StateManager.Instance.SelectedMaidsList);
 

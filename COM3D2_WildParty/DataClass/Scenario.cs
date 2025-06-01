@@ -41,6 +41,7 @@ namespace COM3D2.WildParty.Plugin
         public bool IsGroupEvent;
         public MaidCountRequirement MaidCount;
         public List<ExtraScenarioFlag> SetScenarioFlag;
+        public List<ExtraScenarioFlag> SetMaidFlag;
 
         [JsonProperty]
         private string YotogiTypeEnumString;
