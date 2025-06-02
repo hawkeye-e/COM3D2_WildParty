@@ -13,6 +13,7 @@ For details or screenshots please refer to (https://hawkeye0.blogspot.com/)
   - Happy Gang Bang Club (NTR)
   - Another Gang Bang Wish (NTR)
   - Lily Blooming Paradise (Yuri)
+  - The Summer Festival of Immoral Village (NTR) 
  
 
 
