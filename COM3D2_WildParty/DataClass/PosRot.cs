@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using UnityEngine;
-using Newtonsoft.Json;
 
 namespace COM3D2.WildParty.Plugin
 {
@@ -18,7 +19,7 @@ namespace COM3D2.WildParty.Plugin
             get
             {
                 var splitPos = PosString.Split(',');
-                return new Vector3(float.Parse(splitPos[0].Trim()), float.Parse(splitPos[1].Trim()), float.Parse(splitPos[2].Trim()));
+                return new Vector3(float.Parse(splitPos[0].Trim(), CultureInfo.InvariantCulture), float.Parse(splitPos[1].Trim(), CultureInfo.InvariantCulture), float.Parse(splitPos[2].Trim(), CultureInfo.InvariantCulture));
             }
         }
         public Quaternion Rot
@@ -26,7 +27,7 @@ namespace COM3D2.WildParty.Plugin
             get
             {
                 var splitRot = RotString.Split(',');
-                return new Quaternion(float.Parse(splitRot[0].Trim()), float.Parse(splitRot[1].Trim()), float.Parse(splitRot[2].Trim()), float.Parse(splitRot[3].Trim()));
+                return new Quaternion(float.Parse(splitRot[0].Trim(), CultureInfo.InvariantCulture), float.Parse(splitRot[1].Trim(), CultureInfo.InvariantCulture), float.Parse(splitRot[2].Trim(), CultureInfo.InvariantCulture), float.Parse(splitRot[3].Trim(), CultureInfo.InvariantCulture));
             }
         }
 
@@ -44,7 +45,7 @@ namespace COM3D2.WildParty.Plugin
             get
             {
                 var splitPos = PosString.Split(',');
-                return new Vector3(float.Parse(splitPos[0].Trim()), float.Parse(splitPos[1].Trim()), float.Parse(splitPos[2].Trim()));
+                return new Vector3(float.Parse(splitPos[0].Trim(), CultureInfo.InvariantCulture), float.Parse(splitPos[1].Trim(), CultureInfo.InvariantCulture), float.Parse(splitPos[2].Trim(), CultureInfo.InvariantCulture));
             }
         }
         public Vector3 Rot
@@ -54,7 +55,7 @@ namespace COM3D2.WildParty.Plugin
                 if (!string.IsNullOrEmpty(RotString))
                 {
                     var splitRot = RotString.Split(',');
-                    return new Vector3(float.Parse(splitRot[0].Trim()), float.Parse(splitRot[1].Trim()), float.Parse(splitRot[2].Trim()));
+                    return new Vector3(float.Parse(splitRot[0].Trim(), CultureInfo.InvariantCulture), float.Parse(splitRot[1].Trim(), CultureInfo.InvariantCulture), float.Parse(splitRot[2].Trim(), CultureInfo.InvariantCulture));
                 }
                 else
                 {

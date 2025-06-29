@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using UnityEngine;
@@ -20,7 +21,7 @@ namespace COM3D2.WildParty.Plugin
             get
             {
                 var splitPos = PosString.Split(',');
-                return new Vector3(float.Parse(splitPos[0].Trim()), float.Parse(splitPos[1].Trim()), float.Parse(splitPos[2].Trim()));
+                return new Vector3(float.Parse(splitPos[0].Trim(), CultureInfo.InvariantCulture), float.Parse(splitPos[1].Trim(), CultureInfo.InvariantCulture), float.Parse(splitPos[2].Trim(), CultureInfo.InvariantCulture));
             }
         }
 

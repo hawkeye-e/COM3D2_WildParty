@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using UnityEngine;
-using Newtonsoft.Json;
 
 namespace COM3D2.WildParty.Plugin
 {
@@ -47,7 +48,7 @@ namespace COM3D2.WildParty.Plugin
             foreach(var rawData in XRangeRaw)
             {
                 string[] raw = rawData.Split(':');
-                RangeInt newRange = new RangeInt(int.Parse(raw[0]), int.Parse(raw[1]));
+                RangeInt newRange = new RangeInt(int.Parse(raw[0], CultureInfo.InvariantCulture), int.Parse(raw[1], CultureInfo.InvariantCulture));
                 XRange.Add(newRange);
             }
 
@@ -55,7 +56,7 @@ namespace COM3D2.WildParty.Plugin
             foreach (var rawData in YRangeRaw)
             {
                 string[] raw = rawData.Split(':');
-                RangeInt newRange = new RangeInt(int.Parse(raw[0]), int.Parse(raw[1]));
+                RangeInt newRange = new RangeInt(int.Parse(raw[0], CultureInfo.InvariantCulture), int.Parse(raw[1], CultureInfo.InvariantCulture));
                 YRange.Add(newRange);
             }
 
@@ -63,7 +64,7 @@ namespace COM3D2.WildParty.Plugin
             foreach (var rawData in RotRangeRaw)
             {
                 string[] raw = rawData.Split(':');
-                RangeFloat newRange = new RangeFloat(float.Parse(raw[0]), float.Parse(raw[1]));
+                RangeFloat newRange = new RangeFloat(float.Parse(raw[0], CultureInfo.InvariantCulture), float.Parse(raw[1], CultureInfo.InvariantCulture));
                 RotRange.Add(newRange);
             }
 
@@ -71,7 +72,7 @@ namespace COM3D2.WildParty.Plugin
             foreach (var rawData in ScaleRaw)
             {
                 string[] raw = rawData.Split(':');
-                RangeFloat newRange = new RangeFloat(float.Parse(raw[0]), float.Parse(raw[1]));
+                RangeFloat newRange = new RangeFloat(float.Parse(raw[0], CultureInfo.InvariantCulture), float.Parse(raw[1], CultureInfo.InvariantCulture));
                 Scale.Add(newRange);
             }
 

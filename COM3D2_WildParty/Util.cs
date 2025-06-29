@@ -1,10 +1,11 @@
-﻿using System;
+﻿using BepInEx.Logging;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
-using BepInEx.Logging;
 using UnityEngine;
-using System.IO;
 
 namespace COM3D2.WildParty.Plugin
 {
@@ -612,9 +613,9 @@ namespace COM3D2.WildParty.Plugin
             string[] split = offsetString.Split('|');
 
             var splitPos = split[0].Split(',');
-            pos = new Vector3(float.Parse(splitPos[0].Trim()), float.Parse(splitPos[1].Trim()), float.Parse(splitPos[2].Trim()));
+            pos = new Vector3(float.Parse(splitPos[0].Trim(), CultureInfo.InvariantCulture), float.Parse(splitPos[1].Trim(), CultureInfo.InvariantCulture), float.Parse(splitPos[2].Trim(), CultureInfo.InvariantCulture));
             var splitRot = split[1].Split(',');
-            rot = new Vector3(float.Parse(splitRot[0].Trim()), float.Parse(splitRot[1].Trim()), float.Parse(splitRot[2].Trim()));
+            rot = new Vector3(float.Parse(splitRot[0].Trim(), CultureInfo.InvariantCulture), float.Parse(splitRot[1].Trim(), CultureInfo.InvariantCulture), float.Parse(splitRot[2].Trim(), CultureInfo.InvariantCulture));
         }
 
         //From WfCameraMoveSupport class
@@ -664,7 +665,7 @@ namespace COM3D2.WildParty.Plugin
                 return Vector3.zero;
 
             var split = vectorInString.Split(',');
-            return new Vector2(float.Parse(split[0].Trim()), float.Parse(split[1].Trim()));
+            return new Vector2(float.Parse(split[0].Trim(), CultureInfo.InvariantCulture), float.Parse(split[1].Trim(), CultureInfo.InvariantCulture));
         }
 
         public static Vector3 ParseVector3RawString(string vectorInString)
@@ -673,13 +674,13 @@ namespace COM3D2.WildParty.Plugin
                 return Vector3.zero;
 
             var split = vectorInString.Split(',');
-            return new Vector3(float.Parse(split[0].Trim()), float.Parse(split[1].Trim()), float.Parse(split[2].Trim()));
+            return new Vector3(float.Parse(split[0].Trim(), CultureInfo.InvariantCulture), float.Parse(split[1].Trim(), CultureInfo.InvariantCulture), float.Parse(split[2].Trim(), CultureInfo.InvariantCulture));
         }
 
         public static Quaternion ParseQuaternionRawString(string quaternionInString)
         {
             var split = quaternionInString.Split(',');
-            return new Quaternion(float.Parse(split[0].Trim()), float.Parse(split[1].Trim()), float.Parse(split[2].Trim()), float.Parse(split[3].Trim()));
+            return new Quaternion(float.Parse(split[0].Trim(), CultureInfo.InvariantCulture), float.Parse(split[1].Trim(), CultureInfo.InvariantCulture), float.Parse(split[2].Trim(), CultureInfo.InvariantCulture), float.Parse(split[3].Trim(), CultureInfo.InvariantCulture));
         }
     }
 }

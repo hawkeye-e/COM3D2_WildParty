@@ -1,11 +1,12 @@
-﻿using System;
+﻿using BepInEx.Logging;
+using HarmonyLib;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
 using UnityEngine;
-using BepInEx.Logging;
-using HarmonyLib;
 
 namespace COM3D2.WildParty.Plugin.Core
 {
@@ -107,7 +108,7 @@ namespace COM3D2.WildParty.Plugin.Core
             Maid man = GameMain.Instance.CharacterMgr.AddStockMan();
 
             string[] npcColor = npcData.Color.Split(',');
-            Color manColor = new Color(float.Parse(npcColor[0].Trim()) / 256f, float.Parse(npcColor[1].Trim()) / 256f, float.Parse(npcColor[2].Trim()) / 256f);
+            Color manColor = new Color(float.Parse(npcColor[0].Trim(), CultureInfo.InvariantCulture) / 256f, float.Parse(npcColor[1].Trim(), CultureInfo.InvariantCulture) / 256f, float.Parse(npcColor[2].Trim(), CultureInfo.InvariantCulture) / 256f);
             SetManBody(man, manColor, npcData.BodySize, npcData.Head, npcData.Clothed);
 
             Traverse.Create(man.status).Field(Constant.DefinedClassFieldNames.MaidStatusFirstName).SetValue(npcData.FirstName);

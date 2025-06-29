@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 
@@ -81,8 +82,8 @@ namespace COM3D2.WildParty.Plugin
                 data.Personality = rowData[0];
                 data.Type = rowData[1];
                 data.FileName = rowData[2];
-                data.StartTime = float.Parse(rowData[3]);
-                data.EndTime = float.Parse(rowData[4]);
+                data.StartTime = float.Parse(rowData[3], CultureInfo.InvariantCulture);
+                data.EndTime = float.Parse(rowData[4], CultureInfo.InvariantCulture);
 
                 result.Add(data);
             }
