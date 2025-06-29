@@ -55,8 +55,11 @@ namespace COM3D2.WildParty.Plugin.Helper
                 }
             }
 
-            maid.AudioMan.audiosource.clip = subClip;
-            maid.AudioMan.audiosource.Play();
+            if (subClip != null)
+            {
+                maid.AudioMan.audiosource.clip = subClip;
+                maid.AudioMan.audiosource.Play();
+            }
 
 
         }
@@ -64,21 +67,28 @@ namespace COM3D2.WildParty.Plugin.Helper
         /* reference from https://discussions.unity.com/t/how-to-play-specific-part-of-the-audio/142016/2 */
         private static AudioClip MakeSubclip(AudioClip clip, float start, float stop)
         {
-            /* Create a new audio clip */
-            int frequency = clip.frequency;
-            float timeLength = stop - start;
-            int samplesLength = (int)(frequency * timeLength * clip.channels);
-            AudioClip newClip = AudioClip.Create(clip.name + "-sub", samplesLength, 1, frequency, false);
+            try
+            {
+                /* Create a new audio clip */
+                int frequency = clip.frequency;
+                float timeLength = stop - start;
+                int samplesLength = (int)(frequency * timeLength * clip.channels);
+                AudioClip newClip = AudioClip.Create(clip.name + "-sub", samplesLength, 1, frequency, false);
 
-            /* Create a temporary buffer for the samples */
-            float[] data = new float[samplesLength];
-            /* Get the data from the original clip */
-            clip.GetData(data, (int)(frequency * start));
-            /* Transfer the data to the new clip */
-            newClip.SetData(data, 0);
+                /* Create a temporary buffer for the samples */
+                float[] data = new float[samplesLength];
+                /* Get the data from the original clip */
+                clip.GetData(data, (int)(frequency * start));
+                /* Transfer the data to the new clip */
+                newClip.SetData(data, 0);
 
-            /* Return the sub clip */
-            return newClip;
+                /* Return the sub clip */
+                return newClip;
+            }catch 
+            { 
+                //There are report that the user can reach this MakeSubclip with an empty clip... use try catch to prevent game freeze
+                return null;
+            }
         }
     }
 }
