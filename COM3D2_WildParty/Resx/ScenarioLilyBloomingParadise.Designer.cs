@@ -70,19 +70,18 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;……んふぅ、んんっ……あなたの手でなら、お姉ちゃんどこを触られても嬉しいよ　……いっぱい、触ってね……？&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Anesan&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
-        ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;VoiceFile&quot;: &quot;S4_GP02C_106821.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false,
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
         ///  },
         ///
-        ///  &quot;lbp_hote [rest of string was truncated]&quot;;.
+        ///  &quot;lbp_hot [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Anesan {
             get {
@@ -100,19 +99,17 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;……はぁ、んっ……えへへぇ……もっと、いっぱい触ってほしいのっ……&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Childhood&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;H10_GP02ADD_62576.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;StartTime&quot;: 7,
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
-        ///  },
-        ///
-        ///   [rest of string was truncated]&quot;;.
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Childhood {
             get {
@@ -130,19 +127,19 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;……んっ、いいわよ、もっとたっぷり触ってちょうだい……んんっ……&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Cool&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;S1_GP02C_111392.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;StartTime&quot;: 6,
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
         ///  },
         ///
-        ///  &quot;lbp_hotel_0020 [rest of string was truncated]&quot;;.
+        ///  &quot;lbp_hot [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Cool {
             get {
@@ -160,19 +157,15 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;……ぁっ、んん……はぁ、ん……そのまま、してください……んん、あなたはこういうのが上手ですね……&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Curtness&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;H8_GP02C_10455.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;EndTime&quot;: 11,
+        ///          &quot;Volume&quot;: 0.3
         ///        }
-        ///      }
-        ///    }
-        ///  },
-        ///
-        ///  &quot;lb [rest of string was truncated]&quot;;.
+        ///      }        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Curtness {
             get {
@@ -193,16 +186,16 @@ namespace ScenarioResources {
         ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Dame&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;V0_GP02ADD_50910.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;StartTime&quot;: 10,
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
         ///  },
         ///
-        ///  &quot;lbp_hotel_0020 [rest of string was truncated]&quot;;.
+        ///  &quot;lbp_hotel_0 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Dame {
             get {
@@ -220,19 +213,18 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;……その……まだ、終わりじゃないですよね……？　今からもっと、色んなところ、触るんですよね……？&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Devilish&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
-        ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;VoiceFile&quot;: &quot;H4_GP02C_12722.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false,
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
         ///  },
         ///
-        ///  &quot;lb [rest of string was truncated]&quot;;.
+        ///  &quot;lbp_ho [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Devilish {
             get {
@@ -250,19 +242,17 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;……はぁ、んっ……ふふっ……もっと、いっぱい触ってほしいのっ……&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Friendly&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;V1_GP02ADD_50922.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;StartTime&quot;: 7,
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
-        ///  },
-        ///
-        ///  &quot;lb [rest of string was truncated]&quot;;.
+        ///  },        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Friendly {
             get {
@@ -280,19 +270,19 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;……んっ、えへへ……もっと、触ってもいいよ……気持ちいいから……♪&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Genki&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;S5_GP02C_106229.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;StartTime&quot;: 7,
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
         ///  },
         ///
-        ///  &quot;lbp_hotel_0 [rest of string was truncated]&quot;;.
+        ///  &quot;lbp [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Genki {
             get {
@@ -310,19 +300,17 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;んぅっ、んはぁ……あなたに触れるの、好きだよ……もっと、触っちゃう……？&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Ladylike&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;H5_GP02C_12515.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;EndTime&quot;: 10,
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
-        ///  },
-        ///
-        ///  &quot;lb [rest of string was truncated]&quot;;.
+        ///  }, [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Ladylike {
             get {
@@ -340,19 +328,19 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;えっと……もっと触っていいんですよ？&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Majime&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;H1_Sifuku_24405.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
         ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
         ///  },
         ///
-        ///  &quot;lbp_hote [rest of string was truncated]&quot;;.
+        ///  &quot;lbp_hotel_0020_ [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Majime {
             get {
@@ -370,19 +358,15 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;……あうっ、あぁぅっ……もう、エッチ……エッチですわ……あぁ、でも好きですっ……&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Missy&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;H9_GP02ADD_62404.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
-        ///        }
-        ///      }
-        ///    }
-        ///  },
-        ///
-        ///  &quot;lbp_hotel_0 [rest of string was truncated]&quot;;.
+        ///          &quot;StartTime&quot;: 2,
+        ///          &quot;EndTime&quot;: 13,
+        ///          &quot;Volume&quot;: 0.3
+        ///        [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Missy {
             get {
@@ -406,7 +390,7 @@ namespace ScenarioResources {
         ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
         ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
@@ -430,19 +414,19 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;……も、もっと撫でなさいよ……！&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Pride&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;S0_GP02C_110063.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;StartTime&quot;: 8.5,
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
         ///  },
         ///
-        ///  &quot;lbp_hotel_0 [rest of string was truncated]&quot;;.
+        ///  &quot;lbp_hotel_0020_T_P [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Pride {
             get {
@@ -460,19 +444,19 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;んっ、大丈夫です……もっと触ってください……&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Pure&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;S2_GP02C_110230.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;StartTime&quot;: 11,
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
         ///  },
         ///
-        ///  &quot;lbp_hotel_0020 [rest of string was truncated]&quot;;.
+        ///  &quot;lbp_hotel_0020_T [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Pure {
             get {
@@ -490,19 +474,18 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;……そこを触られると……くうっ、身体が熱くなってしまうから……くうう……&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Rindere&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;H2_PMD_28370.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;StartTime&quot;: 7
         ///        }
         ///      }
         ///    }
         ///  },
         ///
-        ///  &quot;lbp_h [rest of string was truncated]&quot;;.
+        ///  &quot;lbp_hotel_0020_T_Rinder [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Rindere {
             get {
@@ -520,19 +503,19 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;……触られるだけでドキドキしてきて……もっと、触ってもいいからね……&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Sadist&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;S6_GP02C_107351.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;StartTime&quot;: 6.8,
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
         ///  },
         ///
-        ///  &quot;lbp_hote [rest of string was truncated]&quot;;.
+        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Sadist {
             get {
@@ -550,19 +533,19 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;……もっと、いっぱい触ってくださいね……？&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Secretary&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;H6_GP02C_12875.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
         ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
         ///  },
         ///
-        ///   [rest of string was truncated]&quot;;.
+        ///  &quot;lbp_ [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Secretary {
             get {
@@ -580,13 +563,13 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;……幸せな気分になる……もっといっぱい、触って……？&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Silent&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;H3_GP02C_13400.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;StartTime&quot;: 5,
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
@@ -610,19 +593,19 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;……もっといっぱい、その……気持ちいいとこ、触って……&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Sister&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;H7_GP02C_10170.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;StartTime&quot;: 7,
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
         ///  },
         ///
-        ///  &quot;lbp_hote [rest of string was truncated]&quot;;.
+        ///  &quot;lbp_hot [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Sister {
             get {
@@ -640,19 +623,18 @@ namespace ScenarioResources {
         ///    &quot;TalkData&quot;: {
         ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
         ///      &quot;UseBranchIndex&quot;: true,
-        ///      &quot;Text&quot;: &quot;……はぁ、はぁ……もっといっぱい触ってほしいです……&quot;,
+        ///      &quot;Text&quot;: &quot;……焦らずゆっくりいたしましょう？　私は逃げたりしませんから……&quot;,
         ///      &quot;VoiceData&quot;: {
         ///        &quot;Yandere&quot;: {
-        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24725.ogg&quot;,
+        ///          &quot;VoiceFile&quot;: &quot;S3_GP02C_107675.ogg&quot;,
         ///          &quot;IsChoppingAudio&quot;: true,
-        ///          &quot;StartTime&quot;: 9,
-        ///          &quot;Volume&quot;: 0.1
+        ///          &quot;StartTime&quot;: 6.5,
+        ///          &quot;Volume&quot;: 0.3
         ///        }
         ///      }
         ///    }
         ///  },
-        ///
-        ///  &quot;lbp_h [rest of string was truncated]&quot;;.
+        ///        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LilyBloomingParadiseADV_Yandere {
             get {
@@ -717,6 +699,36 @@ namespace ScenarioResources {
         internal static string LilyBloomingParadiseADVPhase1Bedroom {
             get {
                 return ResourceManager.GetString("LilyBloomingParadiseADVPhase1Bedroom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lbp_bedroom_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_bedroom_0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;Shukuhakubeya_BedRoom_Night&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_bedroom_0001a&quot;
+        ///  },
+        ///
+        ///  &quot;lbp_bedroom_0001a&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_bedroom_0001a&quot;,
+        ///    &quot;Type&quot;: &quot;MakeGroup&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lbp_bedroom_0001b&quot;,
+        ///    &quot;GroupFormat&quot;: [
+        ///      {
+        ///        &quot;GroupIndex&quot;: 0,
+        ///        &quot;Maid1&quot;: {
+        ///          &quot;Type&quot;: &quot;Maid&quot;,
+        ///          &quot;ArrayPosition&quot;: 1
+        ///        },
+        ///        &quot;Maid2&quot;: { [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADVPhase1Bedroom_SkipPhase2 {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADVPhase1Bedroom_SkipPhase2", resourceCulture);
             }
         }
         
@@ -805,6 +817,35 @@ namespace ScenarioResources {
         internal static string LilyBloomingParadiseADVPostYotogi {
             get {
                 return ResourceManager.GetString("LilyBloomingParadiseADVPostYotogi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///
+        ///  &quot;lbp_postyotogi_init&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_postyotogi_init&quot;,
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_postyotogi_remove_owner&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_postyotogi_remove_owner&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_postyotogi_remove_owner&quot;,
+        ///    &quot;Type&quot;: &quot;ListUpdate&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lbp_postyotogi_init_a&quot;,
+        ///    &quot;ListUpdateData&quot;: {
+        ///      &quot;Remove&quot;: [
+        ///        {
+        ///          &quot;Type&quot;: &quot;Owner&quot;,
+        ///          &quot;SrcPosition&quot;: 0
+        ///    [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LilyBloomingParadiseADVPostYotogi_NoStrapOn {
+            get {
+                return ResourceManager.GetString("LilyBloomingParadiseADVPostYotogi_NoStrapOn", resourceCulture);
             }
         }
     }

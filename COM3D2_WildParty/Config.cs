@@ -114,6 +114,10 @@ namespace COM3D2.WildParty.Plugin
         internal static ManTypeOption ImmoralVillageManType { get { return _immoralVillageManType.Value; } }
         private static ConfigEntry<ManTypeOption> _immoralVillageManType;
 
+        internal static bool LilyBloomingParadiseNoStrapOn { get { return _lilyBloomingParadiseNoStrapOn.Value; } }
+        private static ConfigEntry<bool> _lilyBloomingParadiseNoStrapOn;
+        
+
         internal static void Init(BaseUnityPlugin plugin)
         {
             AddGeneralConfigs(plugin);
@@ -210,6 +214,10 @@ namespace COM3D2.WildParty.Plugin
             _immoralVillageManType = plugin.Config.Bind(SCENARIOSETTING, "Summer Festival of Immoral Village Event - Man Types",
                 ManTypeOption.Shota,
                 "The type of man that will be used in the scenaio [Summer Festival of Immoral Village] event. If all items are unchecked, the system will use the default man types.");
+
+            _lilyBloomingParadiseNoStrapOn = plugin.Config.Bind(SCENARIOSETTING, "Lily Blooming Paradise - Skip Strap-on part",
+                false,
+                "It is assuming the player use unmodded version of character models in the strap-on event in the scenario [Lily Blooming Paradise]. If you have applied different bodies for the maids and men, you may get a crash in th the strap-on part. Enable this to skip that part to finish the scenario.");
         }
 
         private static void AddDeveloperRelatedConfigs(BaseUnityPlugin plugin)
