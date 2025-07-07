@@ -82,10 +82,28 @@ namespace COM3D2.WildParty.Plugin.Helper
             {
                 string smBoneName = dummyMan.body0.m_Bones.name.Replace("_BO_", "_SM_");
 
-                TransplantPenisWithoutBalls(dummyMan.body0.m_Bones.transform, maid.transform, "ManBip/ManBip Pelvis/chinkoCenter/chinko1", "Offset/_BO_mbody/ManBip/ManBip Pelvis");
-                TransplantPenisWithoutBalls(dummyMan.body0.m_Bones.transform, maid.transform, smBoneName + "/ManBip/ManBip Pelvis/chinkoCenter/chinko1", "Offset/_BO_mbody/_SM_mbody/ManBip/ManBip Pelvis");
-                TransplantPenisWithoutBalls(dummyMan.body0.m_Bones.transform, maid.transform, "_SM_mbody_moza/ManBip/ManBip Pelvis/chinkoCenter/chinko1", "Offset/_BO_mbody/_SM_mbody_moza/ManBip/ManBip Pelvis");
-                TransplantPenisWithoutBalls(dummyMan.body0.m_Bones2.transform, maid.transform, "ManBip/ManBip Pelvis/chinkoCenter/chinko1", "Offset/_BO_mbody MR/ManBip/ManBip Pelvis");
+                string smBoneNameMaid = maid.body0.m_Bones.name.Replace("_BO_", "_SM_");
+
+                string mozaBoneNameMale = "";
+                string mozaBoneNameMaid = "";
+                for (int i=0; i< dummyMan.body0.m_Bones.transform.childCount; i++)
+                {
+                    var bone = dummyMan.body0.m_Bones.transform.GetChild(i);
+                    if (bone.name.EndsWith("moza"))
+                        mozaBoneNameMale = bone.name;
+                }
+
+                for (int i = 0; i < maid.body0.m_Bones.transform.childCount; i++)
+                {
+                    var bone = maid.body0.m_Bones.transform.GetChild(i);
+                    if (bone.name.EndsWith("moza"))
+                        mozaBoneNameMaid = bone.name;
+                }
+
+                TransplantPenisWithoutBalls(dummyMan.body0.m_Bones.transform, maid.body0.m_Bones.transform, "ManBip/ManBip Pelvis/chinkoCenter/chinko1", "ManBip/ManBip Pelvis");
+                TransplantPenisWithoutBalls(dummyMan.body0.m_Bones.transform, maid.body0.m_Bones.transform, smBoneName + "/ManBip/ManBip Pelvis/chinkoCenter/chinko1", smBoneNameMaid + "/ManBip/ManBip Pelvis");
+                TransplantPenisWithoutBalls(dummyMan.body0.m_Bones.transform, maid.body0.m_Bones.transform, mozaBoneNameMale + "/ManBip/ManBip Pelvis/chinkoCenter/chinko1", mozaBoneNameMaid + "/ManBip/ManBip Pelvis");
+                TransplantPenisWithoutBalls(dummyMan.body0.m_Bones2.transform, maid.body0.m_Bones2.transform, "ManBip/ManBip Pelvis/chinkoCenter/chinko1", "ManBip/ManBip Pelvis");
             }
         }
 
@@ -95,10 +113,16 @@ namespace COM3D2.WildParty.Plugin.Helper
             Transform srcBoneTransform = srcCharacter.transform.Find(sourceBoneLocation);
             Transform maidPelvis = targetCharacter.transform.Find(targetBoneLocation);
 
+            //It is possible to unable to locate the bone if uncensor exists, simply exit if thats the case.
+            if (srcBoneTransform == null)
+                return null;
+            if (maidPelvis == null)
+                return null;
+
             GameObject chinkoCenter = GameObject.Instantiate(srcBoneTransform.parent.gameObject);
             chinkoCenter.name = "chinkoCenter";
             chinkoCenter.SetActive(true);
-
+            
             //We only need the cloned chinkoCenter object, the cloned children is not needed as we will use the one we are going to transplant
             for (int i = chinkoCenter.transform.childCount - 1; i >= 0; i--)
             {
@@ -106,14 +130,14 @@ namespace COM3D2.WildParty.Plugin.Helper
                 t.SetParent(null);
                 GameObject.DestroyImmediate(t.gameObject);
             }
-
+            
             chinkoCenter.transform.SetParent(maidPelvis, false);
             chinkoCenter.transform.position = chinkoCenter.transform.parent.position;
-
+            
             srcBoneTransform.SetParent(chinkoCenter.transform);
             srcBoneTransform.localPosition = new Vector3(-0.05f, -0.03f, 0f);
             srcBoneTransform.localScale = Vector3.one;
-
+            
 
             return srcBoneTransform.transform;
         }
@@ -121,10 +145,28 @@ namespace COM3D2.WildParty.Plugin.Helper
         private static void ReturnPenis(Maid maid, Maid man)
         {
             string smBoneName = man.body0.m_Bones.name.Replace("_BO_", "_SM_");
-            ReturnPenisWithoutBalls(maid.transform, man.body0.m_Bones.transform, "Offset/_BO_mbody/ManBip/ManBip Pelvis/chinkoCenter/chinko1", "ManBip/ManBip Pelvis/chinkoCenter");
-            ReturnPenisWithoutBalls(maid.transform, man.body0.m_Bones.transform, "Offset/_BO_mbody/_SM_mbody/ManBip/ManBip Pelvis/chinkoCenter/chinko1", smBoneName + "/ManBip/ManBip Pelvis/chinkoCenter");
-            ReturnPenisWithoutBalls(maid.transform, man.body0.m_Bones.transform, "Offset/_BO_mbody/_SM_mbody_moza/ManBip/ManBip Pelvis/chinkoCenter/chinko1", "_SM_mbody_moza/ManBip/ManBip Pelvis/chinkoCenter");
-            ReturnPenisWithoutBalls(maid.transform, man.body0.m_Bones2.transform, "Offset/_BO_mbody MR/ManBip/ManBip Pelvis/chinkoCenter/chinko1", "ManBip/ManBip Pelvis/chinkoCenter");
+            string smBoneNameMaid = maid.body0.m_Bones.name.Replace("_BO_", "_SM_");
+
+            string mozaBoneNameMale = "";
+            string mozaBoneNameMaid = "";
+            for (int i = 0; i < man.body0.m_Bones.transform.childCount; i++)
+            {
+                var bone = man.body0.m_Bones.transform.GetChild(i);
+                if (bone.name.EndsWith("moza"))
+                    mozaBoneNameMale = bone.name;
+            }
+
+            for (int i = 0; i < maid.body0.m_Bones.transform.childCount; i++)
+            {
+                var bone = maid.body0.m_Bones.transform.GetChild(i);
+                if (bone.name.EndsWith("moza"))
+                    mozaBoneNameMaid = bone.name;
+            }
+
+            ReturnPenisWithoutBalls(maid.body0.m_Bones.transform, man.body0.m_Bones.transform, "ManBip/ManBip Pelvis/chinkoCenter/chinko1", "ManBip/ManBip Pelvis/chinkoCenter");
+            ReturnPenisWithoutBalls(maid.body0.m_Bones.transform, man.body0.m_Bones.transform, smBoneNameMaid + "/ManBip/ManBip Pelvis/chinkoCenter/chinko1", smBoneName + "/ManBip/ManBip Pelvis/chinkoCenter");
+            ReturnPenisWithoutBalls(maid.body0.m_Bones.transform, man.body0.m_Bones.transform, mozaBoneNameMaid + "/ManBip/ManBip Pelvis/chinkoCenter/chinko1", mozaBoneNameMale + "/ManBip/ManBip Pelvis/chinkoCenter");
+            ReturnPenisWithoutBalls(maid.body0.m_Bones2.transform, man.body0.m_Bones2.transform, "ManBip/ManBip Pelvis/chinkoCenter/chinko1", "ManBip/ManBip Pelvis/chinkoCenter");
         }
 
         //Detach the penis object from the maid and attach it back to the dummy character
@@ -132,14 +174,20 @@ namespace COM3D2.WildParty.Plugin.Helper
         {
             Transform srcBoneTransform = srcCharacter.transform.Find(sourceBoneLocation);
             Transform targetChinkoCenter = targetCharacter.transform.Find(targetBoneLocation);
-
+            
+            //It is possible to unable to locate the bone if uncensor exists, simply exit if thats the case.
+            if (srcBoneTransform == null)
+                return null;
+            if (targetChinkoCenter == null)
+                return null;
+            
             GameObject goMaidChinkoCenter = srcBoneTransform.parent.gameObject;
 
             srcBoneTransform.transform.SetParent(targetChinkoCenter, false);
-
+            
             goMaidChinkoCenter.transform.SetParent(null);
             GameObject.DestroyImmediate(goMaidChinkoCenter);
-
+            
             return srcBoneTransform.transform;
         }
 
