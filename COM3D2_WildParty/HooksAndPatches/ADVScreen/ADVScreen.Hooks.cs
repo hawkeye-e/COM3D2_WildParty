@@ -13,6 +13,16 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.ADVScreen
     {
         internal static string GUID = WildParty.GUID + ".ADVScreen";
 
+        //Prevent the game starts the YotogiStageSelectManager when trying to init yotogi scene?
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(WfScreenManager), nameof(WfScreenManager.CallScreen))]
+        private static bool WfScreenManagerCallScreenPre(string call_screen_name, WfScreenManager __instance)
+        {
+            if (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiInit && call_screen_name == "StageSelect")
+                return false;
+            return true;
+        }
+
         //Override the original flow and use our own adv flow 
         [HarmonyPostfix]
         [HarmonyPatch(typeof(WfScreenManager), nameof(WfScreenManager.CallScreen))]
