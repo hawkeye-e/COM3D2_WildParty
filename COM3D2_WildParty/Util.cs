@@ -52,6 +52,34 @@ namespace COM3D2.WildParty.Plugin
             }
         }
 
+        public static Maid GetMaidFromList(int index)
+        {
+            if (StateManager.Instance.SelectedMaidsList.Count > index)
+                return StateManager.Instance.SelectedMaidsList[index];
+            return null;
+        }
+
+        public static Maid GetManFromList(int index)
+        {
+            if (StateManager.Instance.MenList.Count > index)
+                return StateManager.Instance.MenList[index];
+            return null;
+        }
+
+        public static Maid GetNPCFemaleFromList(int index)
+        {
+            if (StateManager.Instance.NPCList.Count > index)
+                return StateManager.Instance.NPCList[index];
+            return null;
+        }
+
+        public static Maid GetNPCMaleFromList(int index)
+        {
+            if (StateManager.Instance.NPCManList.Count > index)
+                return StateManager.Instance.NPCManList[index];
+            return null;
+        }
+
         public static string GetPersonalityNameByValue(int value)
         {
             switch (value)

@@ -458,13 +458,13 @@ namespace COM3D2.WildParty.Plugin.Core
                 if (eyeSightSetting.EyeToCharaSetting.Type == EyeSightSetting.EyeToCharaSettingDetail.TargetType.ClubOwner)
                     target = StateManager.Instance.ClubOwner;
                 else if (eyeSightSetting.EyeToCharaSetting.Type == EyeSightSetting.EyeToCharaSettingDetail.TargetType.Man)
-                    target = StateManager.Instance.MenList[eyeSightSetting.EyeToCharaSetting.ArrayPosition];
+                    target = Util.GetManFromList(eyeSightSetting.EyeToCharaSetting.ArrayPosition);
                 else if (eyeSightSetting.EyeToCharaSetting.Type == EyeSightSetting.EyeToCharaSettingDetail.TargetType.Maid)
-                    target = StateManager.Instance.SelectedMaidsList[eyeSightSetting.EyeToCharaSetting.ArrayPosition];
+                    target = Util.GetMaidFromList(eyeSightSetting.EyeToCharaSetting.ArrayPosition);
                 else if (eyeSightSetting.EyeToCharaSetting.Type == EyeSightSetting.EyeToCharaSettingDetail.TargetType.NPCMale)
-                    target = StateManager.Instance.NPCManList[eyeSightSetting.EyeToCharaSetting.ArrayPosition];
+                    target = Util.GetNPCMaleFromList(eyeSightSetting.EyeToCharaSetting.ArrayPosition);
                 else if (eyeSightSetting.EyeToCharaSetting.Type == EyeSightSetting.EyeToCharaSettingDetail.TargetType.NPCFemale)
-                    target = StateManager.Instance.NPCList[eyeSightSetting.EyeToCharaSetting.ArrayPosition];
+                    target = Util.GetNPCFemaleFromList(eyeSightSetting.EyeToCharaSetting.ArrayPosition);
                 else if (eyeSightSetting.EyeToCharaSetting.Type == EyeSightSetting.EyeToCharaSettingDetail.TargetType.GroupMember)
                 {
                     PartyGroup group = StateManager.Instance.PartyGroupList[eyeSightSetting.EyeToCharaSetting.ArrayPosition];
