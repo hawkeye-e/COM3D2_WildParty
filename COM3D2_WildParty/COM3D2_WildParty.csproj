@@ -187,6 +187,11 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>CustomAnimResources.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resx\ExtraYotogiCommandResources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>ExtraYotogiCommandResources.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resx\ImageResources.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -268,6 +273,11 @@
 	  <EmbeddedResource Update="Resx\CustomAnimResources.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>CustomAnimResources.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ModResources</CustomToolNamespace>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\ExtraYotogiCommandResources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>ExtraYotogiCommandResources.Designer.cs</LastGenOutput>
 	    <CustomToolNamespace>ModResources</CustomToolNamespace>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resx\ImageResources.resx">

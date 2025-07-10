@@ -1,0 +1,53 @@
+{
+  "ChangePosition": {
+    "CommandCode": "ChangePosition",
+    "Name": "体位変更",
+    "Type": "Common"
+  },
+  "ChangePositionAll": {
+    "CommandCode": "ChangePositionAll",
+    "Name": "一緒に体位変更",
+    "Type": "Common"
+  },
+  "ChangePartner": {
+    "CommandCode": "ChangePartner",
+    "Name": "パートナー交換",
+    "Type": "Common"
+  },
+
+  "FetishLesbianPlay": {
+    "CommandCode": "AddFetish",
+    "Name": "性癖「レズプレイ大好き」",
+    "Type": "Fetish",
+    "FetishID": 99003,
+    "ConditionCheckTexts": [
+      {
+        "Field": "PositionOrgasmCount",
+        "DisplayText": "[=PositionOrgasmCount]種類以上の体位で絶頂する（[=CurrentPositionOrgasmCount]／[=PositionOrgasmCount]）"
+      },
+      {
+        "Field": "MaidOrgasmCount",
+        "DisplayText": "[=MaidOrgasmCount]回以上で絶頂する（[=CurrentMaidOrgasmCount]／[=MaidOrgasmCount]）"
+      }
+    ]
+  },
+
+  "SwapMaidWithinGroup": {
+    "CommandCode": "SwapMaidWithinGroup",
+    "Name": "交代",
+    "Type": "Common"
+  },
+
+  "ChangeControllingMaid": {
+    "CommandCode": "ChangeControllingMaid",
+    "Name": "操作メイド変更",
+    "Type": "Common"
+  },
+
+  "ShuffleMaidYuri": {
+    "CommandCode": "ShuffleMaidYuri",
+    "Name": "ペニスバンド交換",
+    "Type": "Common"
+  }
+
+}

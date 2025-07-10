@@ -1,0 +1,43 @@
+{
+  "ChangeFormationHaremKing": {
+    "CommandCode": "ChangeFormationAsPositionChange",
+    "Name": "体位変更",
+    "Type": "Common"
+  },
+
+  "ChangeMaidHaremKing": {
+    "CommandCode": "ChangeMaidHaremKing",
+    "Name": "チェンジ",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901001,
+        "SexPosIDs": [ 5, 6 ]
+      }
+    ]
+  },
+
+  "MoveLeftHaremKing": {
+    "CommandCode": "MoveLeftHaremKing",
+    "Name": "左に移動",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901001,
+        "SexPosIDs": [ 1, 2, 3, 4 ]
+      }
+    ]
+  },
+
+  "MoveRightHaremKing": {
+    "CommandCode": "MoveRightHaremKing",
+    "Name": "右に移動",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901001,
+        "SexPosIDs": [ 1, 2, 3, 4 ]
+      }
+    ]
+  }
+}

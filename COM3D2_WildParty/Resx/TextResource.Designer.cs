@@ -116,26 +116,26 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;Amayakasi_Tekoki_ChangeMan&quot;: {
+        ///  &quot;Common_ChangeMan_MF_Simple&quot;: {
         ///    &quot;FirstStep&quot;: &quot;step1&quot;,
+        ///    &quot;RequiredParams&quot;: [
+        ///      &quot;PrimaryGroup&quot;,
+        ///      &quot;NextExtraMan_Group&quot;,
+        ///      &quot;Man1ExitingMotionOffset&quot;,
+        ///      &quot;Man1ExitingMotion&quot;,
+        ///      &quot;NewManBeforeJoinMotionOffset&quot;,
+        ///      &quot;NewManBeforeJoinMotion&quot;,
+        ///
+        ///      &quot;NewManPreWalkingPosition&quot;,
+        ///      &quot;WalkingSetup&quot;
+        ///    ],
         ///    &quot;Steps&quot;: [
         ///      {
         ///        &quot;StepID&quot;: &quot;step1&quot;,
         ///        &quot;ActionType&quot;: &quot;ResetMotionToWaiting&quot;,
         ///        &quot;Target&quot;: {
-        ///          &quot;Type&quot;: &quot;Group&quot;,
-        ///          &quot;TargetGroupPosition&quot;: 0
-        ///        },
-        ///        &quot;NextStep&quot;: &quot;step1_resetik&quot;
-        ///      },
-        ///      {
-        ///        &quot;StepID&quot;: &quot;step1_resetik&quot;,
-        ///        &quot;ActionType&quot;: &quot;ResetIK&quot;,
-        ///        &quot;Target&quot;: {
-        ///          &quot;Type&quot;: &quot;Group&quot;,
-        ///          &quot;TargetGroupPosition&quot;: 0
-        ///        },
-        ///        &quot;NextStep&quot;: &quot;step2&quot; [rest of string was truncated]&quot;;.
+        ///          &quot;Type&quot;: &quot;Param&quot;,
+        ///          &quot;ParamName [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string CommandChainedAction {
             get {
@@ -145,51 +145,22 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;ChangePosition&quot;: {
-        ///    &quot;CommandCode&quot;: &quot;ChangePosition&quot;,
-        ///    &quot;Name&quot;: &quot;体位変更&quot;,
-        ///    &quot;Type&quot;: &quot;Common&quot;
-        ///  },
-        ///  &quot;ChangePositionAll&quot;: {
-        ///    &quot;CommandCode&quot;: &quot;ChangePositionAll&quot;,
-        ///    &quot;Name&quot;: &quot;一緒に体位変更&quot;,
-        ///    &quot;Type&quot;: &quot;Common&quot;
-        ///  },
-        ///  &quot;ChangeFormation&quot;: {
-        ///    &quot;CommandCode&quot;: &quot;ChangeFormation&quot;,
-        ///    &quot;Name&quot;: &quot;一緒に位置変更&quot;,
-        ///    &quot;Type&quot;: &quot;Common&quot;
-        ///  },
-        ///  &quot;ChangePartner&quot;: {
-        ///    &quot;CommandCode&quot;: &quot;ChangePartner&quot;,
-        ///    &quot;Name&quot;: &quot;パートナー交換&quot;,
-        ///    &quot;Type&quot;: &quot;Common&quot;
-        ///  },
-        ///  &quot;FetishOrgy&quot;: {
-        ///    &quot;CommandCode&quot;: &quot;AddFetish&quot;,
-        ///   [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string ExtraYotogiComands {
-            get {
-                return ResourceManager.GetString("ExtraYotogiComands", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to [
-        ///  {
-        ///    &quot;ID&quot;: &quot;Man2_Join_3PSexSeijouyi&quot;,
+        ///  &quot;Man2_Join_3PSexSeijouyi&quot;: {
         ///    &quot;Type&quot;: &quot;Walk&quot;,
         ///    &quot;ManWalkSetting&quot;: {
         ///      &quot;StandingAnimationFile&quot;: &quot;turusi_sex_taiki_m.anm&quot;,
         ///      &quot;StandingMotionOffsetString&quot;: &quot;0, 0, 0.346&quot;,
         ///      &quot;WalkingMotionOffsetString&quot;: &quot;0, 0.1, 0&quot;,
         ///      &quot;RotationOffsetString&quot;: &quot;0, 180, 0&quot;,
-        ///      &quot;MaidMotionOffsetString&quot;: &quot;0,0,0.3&quot;
+        ///      &quot;MaidMotionOffsetString&quot;: &quot;0,0,0&quot;
         ///    }
-        ///  }
-        ///]
-        ///.
+        ///  },
+        ///
+        ///  &quot;Man2_Join_3PSexAna&quot;: {
+        ///    &quot;Type&quot;: &quot;Walk&quot;,
+        ///    &quot;ManWalkSetting&quot;: {
+        ///      &quot;StandingAnimationFile&quot;: &quot;siriname_taiki_m.anm&quot;,
+        ///      &quot;StandingMotionOffsetString&quot;: &quot;0, 0,  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string HardCodeMotionSetup {
             get {

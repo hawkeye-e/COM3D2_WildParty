@@ -1,0 +1,160 @@
+{
+  "ChangePosition": {
+    "CommandCode": "ChangePosition",
+    "Name": "体位変更",
+    "Type": "Common"
+  },
+
+  "OrgasmInternal": {
+    "CommandCode": "OrgasmMotion",
+    "Name": "中出しする",
+    "Type": "Orgasm",
+    "Constraint": [
+      {
+        "EventID": 9900002,
+        "SexPosIDs": [ 3 ]
+      },
+      {
+        "EventID": 9900003,
+        "SexPosIDs": [ 3 ]
+      }
+    ],
+    "OrgasmSetting": {
+      "Type": "Internal",
+      "MinExcite": 80,
+      "ExciteDecay": 68
+    }
+  },
+
+  "OrgasmExternal": {
+    "CommandCode": "OrgasmMotion",
+    "Name": "外出しする",
+    "Type": "Orgasm",
+    "Constraint": [
+      {
+        "EventID": 9900002,
+        "SexPosIDs": [ 3 ]
+      },
+      {
+        "EventID": 9900003,
+        "SexPosIDs": [ 3 ]
+      }
+    ],
+    "OrgasmSetting": {
+      "Type": "External",
+      "MinExcite": 80,
+      "ExciteDecay": 68
+    }
+  },
+
+  "OrgasmMouth": {
+    "CommandCode": "OrgasmMotion",
+    "Name": "口内射精",
+    "Type": "Orgasm",
+    "Constraint": [
+      {
+        "EventID": 9900002,
+        "SexPosIDs": [ 1 ]
+      },
+      {
+        "EventID": 9900003,
+        "SexPosIDs": [ 1 ]
+      }
+    ],
+    "OrgasmSetting": {
+      "Type": "Mouth",
+      "MinExcite": 80,
+      "ExciteDecay": 66
+    }
+  },
+
+  "OrgasmFace": {
+    "CommandCode": "OrgasmMotion",
+    "Name": "顔射",
+    "Type": "Orgasm",
+    "Constraint": [
+      {
+        "EventID": 9900002,
+        "SexPosIDs": [ 1 ]
+      },
+      {
+        "EventID": 9900003,
+        "SexPosIDs": [ 1 ]
+      }
+    ],
+    "OrgasmSetting": {
+      "Type": "Face",
+      "MinExcite": 80,
+      "ExciteDecay": 66
+    }
+  },
+
+  "OrgasmBukkake": {
+    "CommandCode": "OrgasmMotion",
+    "Name": "ぶっかけ",
+    "Type": "Orgasm",
+    "Constraint": [
+      {
+        "EventID": 9900002,
+        "SexPosIDs": [ 1 ]
+      },
+      {
+        "EventID": 9900003,
+        "SexPosIDs": [ 1 ]
+      }
+    ],
+    "OrgasmSetting": {
+      "Type": "Bukkake",
+      "MinExcite": -100,
+      "ExciteDecay": 66
+    }
+  },
+
+  "OrgasmBukkake2": {
+    "CommandCode": "OrgasmMotion",
+    "Name": "ぶっかけ２",
+    "Type": "Orgasm",
+    "Constraint": [
+      {
+        "EventID": 9900002,
+        "SexPosIDs": [ 1 ]
+      },
+      {
+        "EventID": 9900003,
+        "SexPosIDs": [ 1 ]
+      }
+    ],
+    "OrgasmSetting": {
+      "Type": "Bukkake2",
+      "MinExcite": -100,
+      "ExciteDecay": 66
+    }
+  },
+
+  "ChangeFormationHappyGBClub": {
+    "CommandCode": "ChangeFormationAsPositionChange",
+    "Name": "一緒に体位変更",
+    "Type": "Common"
+  },
+
+  "FetishGangBang": {
+    "CommandCode": "AddFetish",
+    "Name": "性癖「輪姦大好き」",
+    "Type": "Fetish",
+    "FetishID": 99002,
+    "ConditionCheckTexts": [
+      {
+        "Field": "OrgasmCount",
+        "DisplayText": "[=OrgasmCount]回以上で絶頂する（[=CurrentOrgasmCount]／[=OrgasmCount]）"
+      }
+    ]
+  },
+
+  "ChangeMaidAnotherGBDesire": {
+    "CommandCode": "ChangeMaidAnotherGBDesire",
+    "Name": "メイド変更",
+    "Type": "Common"
+  }
+
+
+}
