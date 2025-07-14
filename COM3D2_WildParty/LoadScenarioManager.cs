@@ -219,6 +219,11 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioImmoralVillage.ImmoralVillageADV_Dame,
         };
 
+        private static readonly string[] ScenarioLustfulMaidResList = {
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADVIntro,
+        };
+
+
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)
         {
             Dictionary<int, Dictionary<string, ADVStep>> result = new Dictionary<int, Dictionary<string, ADVStep>>();
@@ -240,6 +245,8 @@ namespace COM3D2.WildParty.Plugin
             }
             else if (scenarioID == ScenarioIDList.ImmoralVillageScenarioID)
                 result.Add(ScenarioIDList.ImmoralVillageScenarioID, LoadScenarioFromResources(ScenarioImmoralVillageResList));
+            else if (scenarioID == ScenarioIDList.LustfulMaidScenarioID)
+                result.Add(ScenarioIDList.LustfulMaidScenarioID, LoadScenarioFromResources(ScenarioLustfulMaidResList));
 
             return result;
         }

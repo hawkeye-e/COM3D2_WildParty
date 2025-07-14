@@ -29,51 +29,25 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
         public static void MapAvailableSkillForMaid(Maid maid)
         {
             Dictionary<string, int> mylist = new Dictionary<string, int>();
-            mylist.Add("甘やかし手コキ", -1);
-            mylist.Add("甘やかし対面セックス", -1);
-            mylist.Add("甘やかし対面アナルセックス", -1);
-            mylist.Add("甘やかし挟み込み騎乗位", -1);
-            mylist.Add("甘やかし挟み込みアナル騎乗位", -1);
-            mylist.Add("甘やかし椅子対面座位", -1);
-            mylist.Add("甘やかし椅子アナル対面座位", -1);
-            mylist.Add("セックス正常位", -1);
-            mylist.Add("だいしゅきホールドセックス正常位", -1);
+            mylist.Add("高級MP全身洗い", -1);
+            mylist.Add("シックスナイン", -1);
+            mylist.Add("服従詰られ手コキ", -1);
+            mylist.Add("足コキ", -1);
+            mylist.Add("オナホコキ", -1);
+            mylist.Add("結婚四つん這いフェラ+バイブ", -1);
+            mylist.Add("【二人きり】松葉崩しセックス", -1);
+            mylist.Add("【二人きり】挟み込み騎乗位", -1);
+            mylist.Add("【二人きり】風呂対面座位", -1);
             mylist.Add("【二人きり】セックス見つめ合い対面座位A", -1);
+            mylist.Add("【二人きり】抱き着きセックス対面座位", -1);
+            mylist.Add("【二人きり】セックス背面騎乗位B", -1);
             mylist.Add("セックス騎乗位", -1);
             mylist.Add("グラインドセックス騎乗位", -1);
-            mylist.Add("【二人きり】セックス開脚側位", -1);
-            mylist.Add("【二人きり】寝バックA", -1);
-            mylist.Add("セックス後背位", -1);
-            mylist.Add("寝取らせセックス腕持ち後背位", -1);
-            mylist.Add("寝取らせセックス背面騎乗位", -1);
-            mylist.Add("【二人きり】腕持ち立ち後背位", -1);
-            mylist.Add("【二人きり】セックス開脚背面立位", -1);
-            mylist.Add("【二人きり】背面駅弁", -1);
-            mylist.Add("【二人きり】立位", -1);
-            mylist.Add("フェラチオ", -1);
-            mylist.Add("セルフイラマ", -1);
-            mylist.Add("パイズリ", -1);
-            mylist.Add("パイズリフェラ", -1);
-            mylist.Add("手コキ", -1);
-            mylist.Add("手コキオナニー", -1);
-            mylist.Add("乱交愛撫", -1);
-            mylist.Add("乱交奉仕", -1);
-            mylist.Add("乱交3Pセックス正常位", -1);
-            mylist.Add("乱交3P2穴セックス", -1);
-            mylist.Add("乱交3P腕持ち後背位", -1);
-            mylist.Add("乱交3P両穴駅弁", -1);
-            mylist.Add("【輪姦】乱交3P2穴抱え正常位", -1);
-            mylist.Add("【輪姦】乱交3P腕持ち2穴セックス", -1);
-            mylist.Add("【二人きり】膝立ちセックス後背位", -1);
-            mylist.Add("愛撫", -1);
-            mylist.Add("【二人きり】立ち愛撫", -1);
-            mylist.Add("【二人きり】拘束背面騎乗位B", -1);
-            mylist.Add("【ナイトプール】立ちクンニ", -1);
-            mylist.Add("寝取らせ四つん這いフェラ+バイブ", -1);
-            mylist.Add("【二人きり】セックス寄り添い側位", -1);
-            mylist.Add("【二人きり】抱え込み座位", -1);
-            mylist.Add("【二人きり】ブリッジセックス正常位", -1);
-            
+            mylist.Add("【二人きり】セックス手繋ぎ対面騎乗位", -1);
+            mylist.Add("【二人きり】セックス密着騎乗位", -1);
+            mylist.Add("全身舐め奉仕", -1);
+
+
 
 
 

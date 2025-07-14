@@ -95,14 +95,14 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
-        ///1,*挿入,Insert,,,,,,,Insert,,,,,
-        ///1,*待機,Waiting,,,,,,,Waiting,Waiting,,,,
-        ///1,*絶頂,Orgasm,,,,,,,Piston,,OrgasmWaitYuriBottom,OrgasmWaitYuriTop,,
+        ///1,*待機,Waiting,,,,,,,Waiting,,,,,
+        ///1,*射精外,Orgasm,Face,,,Maid1,,,Houshi,,OrgasmWaitHoushi,,,
         ///2,*挿入,Insert,,,,,,,Insert,,,,,
-        ///2,*待機,Waiting,,,,,,,Waiting,Waiting,,,,
-        ///2,*絶頂,Orgasm,,,,,,,Piston,,OrgasmWaitYuriBottom,OrgasmWaitYuriTop,,
-        ///3,*挿入,Insert,,,,,,,Insert,,,,,
-        ///3,*待機,Waiting,,,,,,,Waiting,Wai [rest of string was truncated]&quot;;.
+        ///2,*待機,Waiting,,,,,,,Waiting,,,,,
+        ///2,*射精外,Orgasm,Belly,,,Maid1,,,Piston,,OrgasmWait,,,
+        ///2,*射精中,Orgasm,Vagina,,,Maid1,,,Piston,,OrgasmWait,,,
+        ///2,*初々しい射精外,Orgasm,Belly,,,Maid1,,,Piston,,OrgasmWait,,,
+        ///2,*初々しい射精中,Orgasm,Vagina, [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosSpecialLabels_ImmoralVillage {
             get {
@@ -124,6 +124,26 @@ namespace ModResources {
         internal static string SexPosSpecialLabels_LilyBloomingParadise {
             get {
                 return ResourceManager.GetString("SexPosSpecialLabels_LilyBloomingParadise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
+        ///1,*待機,Waiting,,,,,,,Waiting,,,,,
+        ///2,*待機,Waiting,,,,,,,Waiting,,,,,
+        ///3,*待機,Waiting,,,,,,,Waiting,,,,,
+        ///4,*待機,Waiting,,,,,,,Waiting,,,,,
+        ///5,*待機,Waiting,,,,,,,Waiting,,,,,
+        ///6,*待機,Waiting,,,,,,,Waiting,,,,,
+        ///7,*待機,Waiting,,,,,,,Waiting,,,,,
+        ///8,*待機,Waiting,,,,,,,Waiting,,,,,
+        ///9,*待機,Waiting,,,,,,,Waiting,,,,,
+        ///10,*待機,Waiting,,,,,,,Waiting,,,,,
+        ///11,*待機 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SexPosSpecialLabels_LustfulMaid {
+            get {
+                return ResourceManager.GetString("SexPosSpecialLabels_LustfulMaid", resourceCulture);
             }
         }
         

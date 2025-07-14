@@ -27,6 +27,7 @@ namespace COM3D2.WildParty.Plugin
             ModResources.ImageResources.HappyGBClubIconFileName,
             ModResources.ImageResources.LilyBloomingParadiseFileName,
             ModResources.ImageResources.ImmoralVillageIconFileName,
+            ModResources.ImageResources.LustfulMaidIconFileName,
         };
 
         internal static readonly string[] DressingClothingTagArray = {
@@ -52,6 +53,13 @@ namespace COM3D2.WildParty.Plugin
         internal static readonly string[] EjaculateSEFileArray =
         {
             SE.Ejaculate,
+        };
+
+        internal static readonly string[] VibratorSEFileArray =
+        {
+            SE.VibratorLow,
+            SE.VibratorMedium,
+            SE.VibratorHigh,
         };
 
 
@@ -175,6 +183,10 @@ namespace COM3D2.WildParty.Plugin
             internal const string CameraShutter = "SE074.ogg";
             internal const string KnockDoor = "mmlSE_042.ogg";
             internal const string OpenDoor = "mmlSE_065.ogg";
+
+            internal const string VibratorLow = "SE026.ogg";
+            internal const string VibratorMedium = "SE020.ogg";
+            internal const string VibratorHigh = "SE019.ogg";
         }
 
         internal static class DefinedColorString
@@ -682,6 +694,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string HappyGBClub = "HappyGBClub";
             internal const string LilyBloomingParadise = "LilyBloomingParadise";
             internal const string ImmoralVillage = "ImmoralVillage";
+            internal const string LustfulMaid = "LustfulMaid";
         }
 
         internal static class TexturePattern

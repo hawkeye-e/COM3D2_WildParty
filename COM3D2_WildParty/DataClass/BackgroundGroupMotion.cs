@@ -28,6 +28,7 @@ namespace COM3D2.WildParty.Plugin
             public string VoiceType1;
             public string VoiceType2;
             public int LabelGroupID;
+            public string SpecialScriptName = "";        //If this is not empty, use this as script file intead of the motion item file name
         }
         
         
@@ -131,6 +132,10 @@ namespace COM3D2.WildParty.Plugin
                 data.VoiceType1 = rowData[3];
                 data.VoiceType2 = rowData[4];
                 data.LabelGroupID = int.Parse(rowData[5]);
+                if (rowData.Length >= 7)
+                    data.SpecialScriptName = rowData[6];
+                else
+                    data.SpecialScriptName = "";
 
                 result.Add(data);
             }

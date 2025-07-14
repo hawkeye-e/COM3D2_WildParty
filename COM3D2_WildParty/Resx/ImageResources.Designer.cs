@@ -121,6 +121,16 @@ namespace ModResources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_lustful_maid {
+            get {
+                object obj = ResourceManager.GetObject("icon_lustful_maid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_orgy {
             get {
                 object obj = ResourceManager.GetObject("icon_orgy", resourceCulture);
@@ -143,6 +153,15 @@ namespace ModResources {
         internal static string LilyBloomingParadiseFileName {
             get {
                 return ResourceManager.GetString("LilyBloomingParadiseFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to mod_icon_lustful_maid.tex.
+        /// </summary>
+        internal static string LustfulMaidIconFileName {
+            get {
+                return ResourceManager.GetString("LustfulMaidIconFileName", resourceCulture);
             }
         }
         

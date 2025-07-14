@@ -560,6 +560,122 @@
     ]
   },
 
+  "Common_Change_SexPos_With_Insert_Label_And_Connecting_Motion": {
+    "FirstStep": "step1",
+    "RequiredParams": [
+      "PrimaryGroup",
+      "NewSexPosID",
+      "NewMotionLabelGroupID",
+      "Man1Motion",
+      "Maid1Motion",
+      "Man1MotionOffset",
+      "Maid1MotionOffset"
+    ],
+    "Steps": [
+      {
+        "StepID": "step1",
+        "ActionType": "ResetIK",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "NextStep": "step2_Man1Motion"
+      },
+      {
+        "StepID": "step2_Man1Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Man1Motion"
+        },
+        "NextStep": "step2_Man1Offset"
+      },
+      {
+        "StepID": "step2_Man1Offset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Man1"
+        },
+        "OffsetInfo": {
+          "Param": "Man1MotionOffset"
+        },
+        "NextStep": "step3_Maid1Motion"
+      },
+      {
+        "StepID": "step3_Maid1Motion",
+        "ActionType": "LoadMotion",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
+        },
+        "MotionInfo": {
+          "ParamMotion": "Maid1Motion"
+        },
+        "NextStep": "step3_Maid1Offset"
+      },
+      {
+        "StepID": "step3_Maid1Offset",
+        "ActionType": "PositionOffset",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup",
+          "ParamGroupMember": "Maid1"
+        },
+        "OffsetInfo": {
+          "Param": "Maid1MotionOffset"
+        },
+        "NextStep": "step4_trigger"
+      },
+      {
+        "StepID": "step4_trigger",
+        "ActionType": "Trigger",
+        "TriggerSetting": {
+          "TriggerType": "TimeEnd",
+          "TimeToWaitType": "DefaultTweenMoveTime"
+        },
+        "NextStep": "step5"
+      },
+      {
+        "StepID": "step5",
+        "ActionType": "UpdateSexPos",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "UpdateSexPosInfo": {
+          "Value": {
+            "ParamValue": "NewSexPosID"
+          },
+          "PlayerState": "Insert",
+          "IsSmoothAnimationParamName": "IsSmoothAnimation"
+        },
+        "NextStep": "step6_MotionUpdate"
+      },
+      {
+        "StepID": "step6_MotionUpdate",
+        "ActionType": "LoadMotionLabelGroup",
+        "Target": {
+          "Type": "Param",
+          "ParamName": "PrimaryGroup"
+        },
+        "LoadMotionLabelGroupInfo": {
+          "Value": {
+            "ParamValue": "NewMotionLabelGroupID"
+          },
+          "IsSmoothAnimationParamName": "IsSmoothAnimation"
+        },
+        "NextStep": ""
+      }
+    ]
+  },
+
 
   "Common_Change_SexPos": {
     "FirstStep": "step1",

@@ -1,0 +1,184 @@
+{
+  "lum0001": {
+    "ID": "lum0001",
+    "Type": "BG",
+    "Tag": "MyRoom",
+    "WaitingType": "Auto",
+    "NextStepID": "lum0001_init_chara"
+  },
+
+  "lum0001_init_chara": {
+    "ID": "lum0001_init_chara",
+    "Type": "CharaInit",
+    "WaitingType": "Auto",
+    "NextStepID": "lum_intro_0001",
+    "CharaInitData": {
+      "IsClubOwnerMainCharacter": true,
+      "ManRequired": 0,
+      "ValidManType": [
+        "YoungMan"
+      ],
+      "NPC": [
+        {
+          "Index": 0,
+          "Preset": "pre_maid_secretary",
+          "EmptyLastName": false,
+          "Name": "エマ"
+        }
+      ]
+    }
+  },
+
+  "lum_intro_0001": {
+    "ID": "lum_intro_0001",
+    "Type": "BGM",
+    "Tag": "BGM015.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "lum_intro_0002"
+  },
+
+  "lum_intro_0002": {
+    "ID": "lum_intro_0002",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0003",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "nefera_2_m.anm",
+          "MotionTag": "nefera_2_m.anm"
+        },
+        "PosRot": {
+          "PosString": "0, 0.47, -0.30",
+          "RotString": "0.0, 0.0, 0.0, 1.0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "MotionFile": "nefera_2_f.anm",
+          "MotionTag": "nefera_2_f.anm"
+        },
+        "PosRot": {
+          "PosString": "0, 0.47, -0.30",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": false,
+        "PosRot": {
+          "PosString": "0, 0, 0",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+
+    ]
+  },
+
+  "lum_intro_0003": {
+    "ID": "lum_intro_0003",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lum_intro_0004",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "lum_intro_0004": {
+    "ID": "lum_intro_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0005",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "ある朝・ご主人様の部屋"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "lum_intro_0005": {
+    "ID": "lum_intro_0005",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "lum_intro_0006",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "lum_intro_0006": {
+    "ID": "lum_intro_0006",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lum_intro_0007",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-0.64, 0.86, -1.70",
+        "TargetPosString": "0.32, 0.82, 0.05",
+        "AroundAngleString": "28.50, 0.99",
+        "Distance": 2
+      },
+      "BlurCamera": { "IsBlur": true }
+    }
+  },
+
+  "lum_intro_0007": {
+    "ID": "lum_intro_0007",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0008",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "……"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+
+  "lum_intro_yotogiplay_closepanel": {
+    "ID": "lum_intro_yotogiplay_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "lum_start_yotogiplay"
+  },
+
+  "lum_start_yotogiplay": {
+    "ID": "lum_start_yotogiplay",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "LustfulMaid",
+      "Phase": 1,
+      "IsKeepCharacterVisibleAfterYotogi": false
+    },
+    "NextStepID": "lum_postyotogi_init"
+  }
+
+
+}

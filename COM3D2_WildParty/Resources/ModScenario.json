@@ -657,6 +657,113 @@
         "Value": 1
       }
     ]
+  },
+
+  {
+    "ScenarioID": 9901003,
+    "CategoryID": 99010,
+    "ADVEntryStep": "lum0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "性欲つよつよメイド",
+    "Information": "様々な夜伽を経て、メイドの性欲はますます強くなった。ある朝、彼女はもう耐えられなくなり、ついにご主人様に手を差し伸べた…",
+    "Icon": "mod_icon_lustful_maid",
+    "IsNetorare": false,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "ConditionInfoText": [
+      "恋人である",
+      "育成中のメイドではない",
+      "両穴経験済みである"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 210, 220 ],
+
+
+    "IsGroupEvent": false,
+    "MaidCount": {
+      "Max": 1,
+      "Min": 1
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "MyRoom",
+          "NightMapID": "MyRoom",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Default" ],
+          "DefaultFormation": "Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "MPArai_To_69",
+          "69_To_MPArai",
+          "MPArai_To_YotunbaiFera",
+          "YotunbaiFera_To_MPArai",
+          "MPArai_To_Onahole",
+          "Onahole_To_MPArai",
+          "MPArai_To_Taimenkijyoui",
+          "69_To_HaimenKijyoui",
+          "Onahole_To_Asikoki",
+          "Asikoki_To_Onahole",
+          "Asikoki_To_HasamikomiKijyoui",
+          "Asikoki_To_Matuba",
+          "Matuba_To_HasamikomiKijyoui",
+          "HasamikomiKijyoui_To_Matuba",
+          "YotunbaiFera_To_FuroTaimenzai",
+          "HasamikomiKijyoui_To_FuroTaimenzai",
+          "FuroTaimenzai_To_HasamikomiKijyoui",
+          "Matuba_To_HaimenKijyoui",
+          "HaimenKijyoui_To_Matuba",
+          "HaimenKijyoui_To_GrindTaimenkijyoui",
+          "GrindTaimenkijyoui_To_HaimenKijyoui",
+          "FuroTaimenzai_To_Taimenzai",
+          "Taimenzai_To_FuroTaimenzai",
+          "FuroTaimenzai_To_AmayakasiTaimen",
+          "AmayakasiTaimen_To_FuroTaimenzai",
+          "Taimenzai_To_AmayakasiTaimen",
+          "AmayakasiTaimen_To_Taimenzai",
+          "Taimenkijyoui_To_GrindTaimenkijyoui",
+          "GrindTaimenkijyoui_To_Taimenkijyoui",
+          "Taimenkijyoui_To_MittyakuKijyoui",
+          "MittyakuKijyoui_To_Taimenkijyoui",
+          "GrindTaimenkijyoui_To_MittyakuKijyoui",
+          "MittyakuKijyoui_To_GrindTaimenkijyoui",
+          "Taimenkijyoui_To_TetunagiKijyoui",
+          "TetunagiKijyoui_To_Taimenkijyoui",
+          "GrindTaimenkijyoui_To_TetunagiKijyoui",
+          "TetunagiKijyoui_To_GrindTaimenkijyoui",
+          "TetunagiKijyoui_To_Taimenzai",
+          "Taimenzai_To_TetunagiKijyoui",
+          "TetunagiKijyoui_To_MittyakuKijyoui",
+          "MittyakuKijyoui_To_TetunagiKijyoui",
+
+          "NonInverted_To_Rest",
+          "Inverted_To_Rest",
+          "Rest_To_MPArai"
+        ],
+        "IsMainManOwner": true,
+
+        "SexStateRule": "Common"
+      }
+    ],
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+    "IgnoreVibratorSE": true,
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_性欲つよつよメイド_Executed",
+        "Value": 1
+      }
+    ]
   }
 
 ]

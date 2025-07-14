@@ -127,6 +127,8 @@ namespace COM3D2.WildParty.Plugin
                 InitDataForLilyBloomingParadise();
             else if (scenarioID == ScenarioIDList.ImmoralVillageScenarioID)
                 InitDataForImmoralVillage();
+            else if (scenarioID == ScenarioIDList.LustfulMaidScenarioID)
+                InitDataForLustfulMaid();
         }
 
         public static void ReloadCoordinateData(int scenarioID)
@@ -144,6 +146,8 @@ namespace COM3D2.WildParty.Plugin
                 MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_LilyBloomingParadise);
             else if (scenarioID == ScenarioIDList.ImmoralVillageScenarioID)
                 MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ImmoralVillage);
+            else if (scenarioID == ScenarioIDList.LustfulMaidScenarioID)
+                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_LustfulMaid);
         }
 
         private static void ResetModUseData()
@@ -245,6 +249,21 @@ namespace COM3D2.WildParty.Plugin
             PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_ImmoralVillage);
 
             ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_ImmoralVillage);
+        }
+
+        private static void InitDataForLustfulMaid()
+        {
+            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.LustfulMaidScenarioID);
+
+            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_LustfulMaid, ModResources.SexPosValidLabelsResources.SexPosValidLabels_LustfulMaid, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_LustfulMaid);
+            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_LustfulMaid);
+
+            InitAllVoiceDataFromCSV();
+            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_LustfulMaid);
+
+            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_LustfulMaid);
+
+            ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_LustfulMaid);
         }
 
         private static void InitAllVoiceDataFromCSV()

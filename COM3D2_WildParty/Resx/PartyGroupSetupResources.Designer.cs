@@ -159,22 +159,23 @@ namespace ModResources {
         ///    &quot;IsRandomAssign&quot;: false,
         ///    &quot;IsShuffleMaidList&quot;: false,
         ///    &quot;IsShuffleManList&quot;: false,
-        ///    &quot;ExtraManCount&quot;: 28,
         ///
         ///    &quot;GroupSetup&quot;: [
         ///      {
         ///        &quot;ArrayPosition&quot;: 0,
-        ///        &quot;ManCount&quot;: 3,
+        ///        &quot;ManCount&quot;: 1,
         ///        &quot;MaidCount&quot;: 1,
+        ///        &quot;ExtraManCount&quot;: 6,
+        ///        &quot;ExtraManSlotCount&quot;: 7,
         ///        &quot;IsAutomatedGroup&quot;: false,
-        ///        &quot;ClothesSet&quot;: &quot;FullNude&quot;
-        ///      },
-        ///      {
-        ///        &quot;ArrayPosition&quot;: 1,
-        ///        &quot;ManCount&quot;: 3,
-        ///        &quot;MaidCount&quot;: 1,
-        ///        &quot;MaidFromNPC&quot;: true,
-        ///        &quot;IsAutomatedGroup&quot;: tru [rest of string was truncated]&quot;;.
+        ///        &quot;ClothesSet&quot;: &quot;ImmoralVillage_ShowBoobsNoUnderwear&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;Phase2_Default&quot;: {
+        ///    &quot;DefaultSexPosID&quot;: 103,
+        ///    &quot;IsRandomAssign [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string PartyGroupSetup_ImmoralVillage {
             get {
@@ -198,6 +199,37 @@ namespace ModResources {
         internal static string PartyGroupSetup_LilyBloomingParadise {
             get {
                 return ResourceManager.GetString("PartyGroupSetup_LilyBloomingParadise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;Phase1_Default&quot;: {
+        ///    &quot;DefaultSexPosID&quot;: 1,
+        ///    &quot;IsRandomAssign&quot;: false,
+        ///    &quot;IsShuffleMaidList&quot;: false,
+        ///    &quot;IsShuffleManList&quot;: false,
+        ///
+        ///    &quot;GroupSetup&quot;: [
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;ManCount&quot;: 1,
+        ///        &quot;MaidCount&quot;: 1,
+        ///        &quot;ExtraManCount&quot;: 6,
+        ///        &quot;ExtraManSlotCount&quot;: 7,
+        ///        &quot;IsAutomatedGroup&quot;: false,
+        ///        &quot;ClothesSet&quot;: &quot;ImmoralVillage_ShowBoobsNoUnderwear&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;Phase2_Default&quot;: {
+        ///    &quot;DefaultSexPosID&quot;: 103,
+        ///    &quot;IsRandomAssign [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string PartyGroupSetup_LustfulMaid {
+            get {
+                return ResourceManager.GetString("PartyGroupSetup_LustfulMaid", resourceCulture);
             }
         }
         

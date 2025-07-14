@@ -207,6 +207,11 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>ScenarioLilyBloomingParadise.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resx\ScenarioLustfulMaid.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>ScenarioLustfulMaid.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resx\YotogiMapCoordinatesResources.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -293,6 +298,11 @@
 	  <EmbeddedResource Update="Resx\ScenarioLilyBloomingParadise.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>ScenarioLilyBloomingParadise.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ScenarioResources</CustomToolNamespace>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\ScenarioLustfulMaid.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>ScenarioLustfulMaid.Designer.cs</LastGenOutput>
 	    <CustomToolNamespace>ScenarioResources</CustomToolNamespace>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resx\YotogiMapCoordinatesResources.resx">

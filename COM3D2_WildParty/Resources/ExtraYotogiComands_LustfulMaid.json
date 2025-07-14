@@ -1,0 +1,1873 @@
+{
+  "MPArai_To_69": {
+    "CommandCode": "ChainedAction",
+    "Name": "フェラする（シックスナイン）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 1 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 2
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 2
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 880 ],
+      "Texts": [ "体位が逆なら…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+  },
+
+  "69_To_MPArai": {
+    "CommandCode": "ChainedAction",
+    "Name": "マッサージする（全身密着マッサージ）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 2 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 1
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 1
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "mp2_sakasaarai_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "mp2_sakasaarai_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MaxExcite": 150
+      },
+      "Texts": [ "ちょっと落ち着いたら…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label_And_Connecting_Motion"
+  },
+
+  "MPArai_To_Onahole": {
+    "CommandCode": "ChainedAction",
+    "Name": "オナホを使う（オナホコキ）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 1 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 4
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 875, 876 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 875, 876 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっと奉仕すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos"
+  },
+
+  "Onahole_To_MPArai": {
+    "CommandCode": "ChainedAction",
+    "Name": "マッサージする（全身密着マッサージ）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 4 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 1
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "mp_arai_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "mp_arai_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MinExcite": 250
+      },
+      "Texts": [ "もっと興奮すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Connecting_Motion"
+  },
+
+  "MPArai_To_YotunbaiFera": {
+    "CommandCode": "ChainedAction",
+    "Name": "フェラする（四つん這いフェラ）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 1 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 5
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "yotunbai_fera_vibe_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "yotunbai_fera_vibe_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 879 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 879 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっと身体を使えば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Connecting_Motion"
+  },
+
+  "YotunbaiFera_To_MPArai": {
+    "CommandCode": "ChainedAction",
+    "Name": "マッサージする（全身密着マッサージ）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 5 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 1
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "mp_arai_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "mp_arai_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 6857, 6858, 40154, 40155, 41260, 41261, 48322, 48323, 58052, 58053 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 6857, 6858, 40154, 40155, 41260, 41261, 48322, 48323, 58052, 58053 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっと舐めたら…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Connecting_Motion"
+  },
+
+  "MPArai_To_Taimenkijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "挿れる（セックス騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 1 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 12
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 3
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "OM_taimenkijyoui_in_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "OM_taimenkijyoui_in_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MinExcite": 250
+      },
+      "Texts": [ "もっと興奮すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label_And_Connecting_Motion"
+  },
+
+  "69_To_HaimenKijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "挿れる（セックス背面騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 2 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 11
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 4
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "OM_haimen_kijyoui_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "OM_haimen_kijyoui_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MinExcite": 250
+      },
+      "Texts": [ "もっと興奮すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label_And_Connecting_Motion"
+  },
+
+
+  "Onahole_To_Asikoki": {
+    "CommandCode": "ChainedAction",
+    "Name": "足を使う（足コキ）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 4 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 3
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 1539, 1540 ],
+      "Texts": [ "絶頂すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos"
+  },
+
+  "Asikoki_To_Onahole": {
+    "CommandCode": "ChainedAction",
+    "Name": "オナホを使う（オナホコキ）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 3 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 4
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 1548 ],
+      "Texts": [ "絶頂すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos"
+  },
+
+
+  "Asikoki_To_HasamikomiKijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "挿れる（挟み込み騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 3 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 7
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 5
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "hasamikomi_kijyoui2_in_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "hasamikomi_kijyoui2_in_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0.1, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0.1, 0| 0,0,0"
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MinExcite": 250
+      },
+      "Texts": [ "もっと興奮すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label_And_Connecting_Motion"
+  },
+
+  "Asikoki_To_Matuba": {
+    "CommandCode": "ChainedAction",
+    "Name": "挿れる（松葉崩しセックス）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 3 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 6
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 6
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "OM_taimenkijyoui_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "hasamikomi_kijyoui2_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MinExcite": 250
+      },
+      "Texts": [ "もっと興奮すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label_And_Connecting_Motion"
+  },
+
+
+  "Matuba_To_HasamikomiKijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "足を上げる（挟み込み騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 6 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 7
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 14201, 14202, 22532, 22533 ],
+      "Texts": [ "絶頂すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_NonSmooth"
+  },
+
+  "HasamikomiKijyoui_To_Matuba": {
+    "CommandCode": "ChainedAction",
+    "Name": "足を下ろす（松葉崩しセックス）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 7 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 6
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 14643, 14644, 22974, 22975 ],
+      "Texts": [ "絶頂すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_NonSmooth"
+  },
+
+
+  "YotunbaiFera_To_FuroTaimenzai": {
+    "CommandCode": "ChainedAction",
+    "Name": "挿れる（密着対面座位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 5 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 8
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 6854, 6855, 40151, 40152, 41257, 41258, 48319, 48320, 58049, 58050 ],
+      "Texts": [ "絶頂すれば…？" ]
+    },
+
+    "ChainedActionCode": "Common_Change_SexPos"
+  },
+
+
+  "HasamikomiKijyoui_To_FuroTaimenzai": {
+    "CommandCode": "ChainedAction",
+    "Name": "抱きしめる（密着対面座位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 7 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 8
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 7
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 14640, 14641, 22971, 22972 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 14640, 14641, 22971, 22972 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっと責めれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+  },
+
+  "FuroTaimenzai_To_HasamikomiKijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "足を上げる（挟み込み騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 8 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 7
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 5
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "hasamikomi_kijyoui2_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "hasamikomi_kijyoui2_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0.1, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0.1, 0| 0,0,0"
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 14212, 14213, 22543, 22544 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 14212, 14213, 22543, 22544 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっと責めれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label_And_Connecting_Motion"
+  },
+
+
+  "Matuba_To_HaimenKijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "座る（セックス背面騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 6 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 11
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 4
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "OM_M_matuba_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "OM_taimenkijyoui_in_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 14198, 14199, 22529, 22530 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 14198, 14199, 22529, 22530 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっと責めれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label_And_Connecting_Motion"
+  },
+
+  "HaimenKijyoui_To_Matuba": {
+    "CommandCode": "ChainedAction",
+    "Name": "V字開脚（松葉崩しセックス）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 11 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 6
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 6
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "OM_taimenkijyoui_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "hasamikomi_kijyoui2_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 14310, 14311, 22641, 22642 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 14310, 14311, 22641, 22642 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっと責めれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label_And_Connecting_Motion"
+  },
+
+
+
+  "HaimenKijyoui_To_GrindTaimenkijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "振り向く（グラインドセックス騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 11 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 13
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 8
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "OM_taimenkijyoui_in_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "OM_taimenkijyoui_in_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MinExcite": 250
+      },
+      "Texts": [ "もっと興奮すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label_And_Connecting_Motion"
+  },
+
+  "GrindTaimenkijyoui_To_HaimenKijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "振り向く（セックス背面騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 13 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 11
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 4
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "OM_haimen_kijyoui_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "OM_haimen_kijyoui_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 262, 263 ],
+      "Texts": [ "絶頂すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label_And_Connecting_Motion"
+  },
+
+  "FuroTaimenzai_To_Taimenzai": {
+    "CommandCode": "ChainedAction",
+    "Name": "まっすぐ座る（見つめ合い対面座位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 8 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 9
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 9
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 14217, 22548 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 14217, 22548 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっとキスすれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+
+  },
+
+
+  "Taimenzai_To_FuroTaimenzai": {
+    "CommandCode": "ChainedAction",
+    "Name": "軽く押し付ける（密着対面座位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 9 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 8
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 10
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 14558, 22889 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 14558, 22889 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっとキスすれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+  },
+
+
+  "FuroTaimenzai_To_AmayakasiTaimen": {
+    "CommandCode": "ChainedAction",
+    "Name": "あぐらをかいて座る（抱き着き対面座位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 8 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 10
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 11
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 14217, 22548 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 14217, 22548 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっとキスすれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+
+  },
+
+  "AmayakasiTaimen_To_FuroTaimenzai": {
+    "CommandCode": "ChainedAction",
+    "Name": "軽く押し付ける（密着対面座位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 10 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 8
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 10
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 14629, 22960 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 14629, 22960 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっとキスすれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+  },
+
+
+  "Taimenzai_To_AmayakasiTaimen": {
+    "CommandCode": "ChainedAction",
+    "Name": "あぐらをかいて座る（抱き着き対面座位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 9 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 10
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 11
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "amayakasi_taimen_sex_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "amayakasi_taimen_sex_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 14558, 22889 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 14558, 22889 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっとキスすれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label_And_Connecting_Motion"
+  },
+
+  "AmayakasiTaimen_To_Taimenzai": {
+    "CommandCode": "ChainedAction",
+    "Name": "まっすぐ座る（見つめ合い対面座位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 10 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 9
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 9
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 14629, 22960 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 14629, 22960 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっとキスすれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+
+  },
+
+
+
+  "Taimenkijyoui_To_GrindTaimenkijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "尻を振る（グラインド騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 12 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 13
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 8
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MinExcite": 250
+      },
+      "Texts": [ "もっと興奮すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+  },
+
+  "GrindTaimenkijyoui_To_Taimenkijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "ピストンする（騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 13 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 12
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 3
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MinExcite": 250
+      },
+      "Texts": [ "もっと興奮すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+  },
+
+  "Taimenkijyoui_To_MittyakuKijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "抱きしめる（密着騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 12 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 15
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 12
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 164 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 164 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっとキスすれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+  },
+
+  "MittyakuKijyoui_To_Taimenkijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "まっすぐ座る（騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 15 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 12
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 13
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 14906, 23237 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 14906, 23237 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっと胸を揉めば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+  },
+
+  "GrindTaimenkijyoui_To_MittyakuKijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "抱きしめる（密着騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 13 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 15
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 12
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 265 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 265 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっとキスすれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+  },
+
+  "MittyakuKijyoui_To_GrindTaimenkijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "まっすぐ座る（グラインド騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 15 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 13
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 14
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 14906, 23237 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 14906, 23237 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっと胸を揉めば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+  },
+
+
+  "Taimenkijyoui_To_TetunagiKijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "恋人繋ぎ（手繋ぎ対面騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 12 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 14
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 15
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MinExcite": 150
+      },
+      "Texts": [ "もっと興奮すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+  },
+
+  "TetunagiKijyoui_To_Taimenkijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "ピストンする（騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 14 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 12
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 3
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MaxExcite": 150
+      },
+      "Texts": [ "ちょっと落ち着いたら…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+  },
+
+  "GrindTaimenkijyoui_To_TetunagiKijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "恋人繋ぎ（手繋ぎ対面騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 13 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 14
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 15
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MinExcite": 150
+      },
+      "Texts": [ "もっと興奮すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+  },
+
+
+  "TetunagiKijyoui_To_GrindTaimenkijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "尻を振る（グラインド騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 14 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 13
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 8
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MaxExcite": 150
+      },
+      "Texts": [ "ちょっと落ち着いたら…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+  },
+
+  "TetunagiKijyoui_To_Taimenzai": {
+    "CommandCode": "ChainedAction",
+    "Name": "起き上がる（見つめ合い対面座位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 14 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 9
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 16
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MinExcite": 250
+      },
+      "Texts": [ "もっと興奮すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label"
+
+  },
+
+  "Taimenzai_To_TetunagiKijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "横になる（手繋ぎ対面騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 9 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 14
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 15
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "tetunagi_kijyoui_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "tetunagi_kijyoui_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MaxExcite": 150
+      },
+      "Texts": [ "ちょっと落ち着いたら…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label_And_Connecting_Motion"
+
+  },
+
+
+  "TetunagiKijyoui_To_MittyakuKijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "抱きしめる（密着騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 14 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 15
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 12
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "mittyaku_kijyoui_kiss_1_m.anm.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "mittyaku_kijyoui_kiss_1_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [ 14591, 22922 ],
+      "RequireCommandClicks": [
+        {
+          "CommandIDs": [ 14591, 22922 ],
+          "Count": 5
+        }
+      ],
+      "Texts": [ "もっとキスすれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label_And_Connecting_Motion"
+  },
+
+
+  "MittyakuKijyoui_To_TetunagiKijyoui": {
+    "CommandCode": "ChainedAction",
+    "Name": "恋人繋ぎ（手繋ぎ対面騎乗位）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 15 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 14
+      },
+      {
+        "Name": "NewMotionLabelGroupID",
+        "Value": 15
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "tetunagi_kijyoui_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "tetunagi_kijyoui_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MinExcite": 250
+      },
+      "Texts": [ "もっと興奮すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Insert_Label_And_Connecting_Motion"
+
+  },
+
+
+  "NonInverted_To_Rest": {
+    "CommandCode": "ChainedAction",
+    "Name": "休憩（全身舐め奉仕）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 7, 8, 11, 12, 13 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 16
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "mp_arai_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "mp_arai_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [
+        162, 163, 262, 263,
+        14313, 14314,
+        14643, 14644,
+        14215, 14216,
+        22974, 22975,
+        22546, 22547,
+        22644, 22645
+      ],
+      "Texts": [ "絶頂すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Connecting_Motion"
+  },
+
+  "Inverted_To_Rest": {
+    "CommandCode": "ChainedAction",
+    "Name": "休憩（全身舐め奉仕）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 6, 9, 10, 14, 15 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 16
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "mittyaku_kijyoui_taiki_m.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "mittyaku_kijyoui_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "IsSmoothAnimation",
+        "Value": false
+      }
+    ],
+    "TriggerConditions": {
+      "CurrentCommandIDs": [
+        14201, 14202,
+        14555, 14556,
+        14627, 14628,
+        14589, 14590,
+        14903, 14904,
+        22532, 22533,
+        22886, 22887,
+        22958, 22959,
+        22920, 22921,
+        23234, 23235
+      ],
+      "Texts": [ "絶頂すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos_With_Connecting_Motion"
+  },
+
+
+  "Rest_To_MPArai": {
+    "CommandCode": "ChainedAction",
+    "Name": "マッサージする（全身密着マッサージ）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9901003,
+        "SexPosIDs": [ 16 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 1
+      }
+    ],
+    "TriggerConditions": {
+      "ExciteSetting": {
+        "MinExcite": 250
+      },
+      "Texts": [ "もっと興奮すれば…？" ]
+    },
+    "ChainedActionCode": "Common_Change_SexPos"
+  }
+
+}

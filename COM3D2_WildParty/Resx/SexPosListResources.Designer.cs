@@ -84,8 +84,8 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,IsBGGroupUse,Phase,MaidIndex,ManIndex,dummy
-        ///1,甘やかし手コキ,sex_amayakasi_tekoki.ks,MF,TRUE,,16270,16270,16270,25800,25800,25800,25800,16200,16200,16200,75500,43700,77300,79700,80600,74100,79300,80300,,,82000,82400,,TRUE,TRUE,FALSE,1,0,0,
-        ///2,甘やかし対面セックス,sex_amayakasi_taimen_sex.ks,MF,TRUE,,16280,16280,16280,25810,25810,2581 [rest of string was truncated]&quot;;.
+        ///1,甘やかし手コキ,sex_amayakasi_tekoki.ks,MF,TRUE,1,16270,16270,16270,25800,25800,25800,25800,16200,16200,16200,75500,43700,77300,79700,80600,74100,79300,80300,,,82000,82400,,TRUE,TRUE,FALSE,1,0,0,
+        ///2,甘やかし対面セックス,sex_amayakasi_taimen_sex.ks,MF,TRUE,2,16280,16280,16280,25810,25810,25 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosList_ImmoralVillage {
             get {
@@ -101,6 +101,17 @@ namespace ModResources {
         internal static string SexPosList_LilyBloomingParadise {
             get {
                 return ResourceManager.GetString("SexPosList_LilyBloomingParadise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,IsBGGroupUse,Phase,MaidIndex,ManIndex,dummy
+        ///1,高級MP全身洗い,sex_mp_arai.ks,MF,TRUE,1,630,630,630,630,630,630,630,630,630,630,630,630,630,630,630,630,630,630,,630,630,630,,TRUE,TRUE,FALSE,1,0,0,
+        ///2,シックスナイン,sex_sixnine.ks,MF,TRUE,2,510,510,510,510,510,510,510,510,510,510,510,510,510,510,510,510,510,510,,510,510,510,,TRUE,TR [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SexPosList_LustfulMaid {
+            get {
+                return ResourceManager.GetString("SexPosList_LustfulMaid", resourceCulture);
             }
         }
         

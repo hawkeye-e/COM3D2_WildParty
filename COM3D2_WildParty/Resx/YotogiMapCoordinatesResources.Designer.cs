@@ -144,17 +144,17 @@ namespace ModResources {
         ///    &quot;IsRandom&quot;: false,
         ///    &quot;CoordinateList&quot;: [
         ///      {
-        ///        &quot;MaxGroup&quot;: 3,
+        ///        &quot;MaxGroup&quot;: 1,
         ///        &quot;GroupCoordinates&quot;: [
         ///          {
         ///            &quot;ArrayPosition&quot;: 0,
-        ///            &quot;PosString&quot;: &quot;0.19, 0.00, -0.93&quot;,
-        ///            &quot;RotString&quot;: &quot;0.0, 1.0, 0.0, 0.0&quot;,
+        ///            &quot;PosString&quot;: &quot;-0.43, 0.10, -1.17&quot;,
+        ///            &quot;RotString&quot;: &quot;0, 0, 0, 1&quot;,
         ///            &quot;CameraSetup&quot;: {
-        ///              &quot;PosString&quot;: &quot;-1.91, 2.32, -2.69&quot;,
-        ///              &quot;TargetPosString&quot;: &quot;-0.33, 1.02, -1.42&quot;,
-        ///              &quot;AroundAngleString&quot;: &quot;51.14, 32.65&quot;,
-        ///              &quot;Dista [rest of string was truncated]&quot;;.
+        ///              &quot;PosString&quot;: &quot;-2.78, 2.52, 0.68&quot;,
+        ///              &quot;TargetPosString&quot;: &quot;-0.33, 0.61, -1.33&quot;,
+        ///              &quot;AroundAngleString&quot;: &quot;129.40, 31.12&quot;,
+        ///              &quot;Distance&quot;: 3 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string MapCoordinates_ImmoralVillage {
             get {
@@ -188,6 +188,33 @@ namespace ModResources {
         internal static string MapCoordinates_LilyBloomingParadise {
             get {
                 return ResourceManager.GetString("MapCoordinates_LilyBloomingParadise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;Houshi&quot;: {
+        ///    &quot;DisplayName&quot;: &quot;一緒に奉仕する&quot;,
+        ///    &quot;IsRandom&quot;: false,
+        ///    &quot;CoordinateList&quot;: [
+        ///      {
+        ///        &quot;MaxGroup&quot;: 4,
+        ///        &quot;GroupCoordinates&quot;: [
+        ///          {
+        ///            &quot;ArrayPosition&quot;: 0,
+        ///            &quot;PosString&quot;: &quot;8.45, 0.5, -1.5&quot;,
+        ///            &quot;RotString&quot;: &quot;0.0, 0.0, 0.0, 1.0&quot;,
+        ///            &quot;IKAttach&quot;: [
+        ///              {
+        ///                &quot;PosString&quot;: &quot;0.02, -0.04, -0.1&quot;,
+        ///                &quot;AttachType&quot;: &quot;NewPoint&quot;,
+        ///                &quot;Source&quot;: {
+        ///                  &quot;ArrayIndex&quot;: 0,
+        ///         [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MapCoordinates_LustfulMaid {
+            get {
+                return ResourceManager.GetString("MapCoordinates_LustfulMaid", resourceCulture);
             }
         }
         

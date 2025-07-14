@@ -38,6 +38,7 @@ namespace COM3D2.WildParty.Plugin
         public bool LockParameters;
         public bool UnlimitedMind;
         public bool IgnoreEjaculationSE = false;
+        public bool IgnoreVibratorSE = false;
         public bool IsGroupEvent;
         public MaidCountRequirement MaidCount;
         public List<ExtraScenarioFlag> SetScenarioFlag;

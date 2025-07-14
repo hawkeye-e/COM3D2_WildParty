@@ -107,7 +107,7 @@
       }
     },
     {
-      "SexPosIDs": [ 112],
+      "SexPosIDs": [ 112 ],
       "Offset": {
         "PosString": "0, 0, 0",
         "RotString": "0, 135, 0"
@@ -133,6 +133,29 @@
           }
         }
       ]
+    }
+  ],
+
+  "9901003": [
+    {
+      "SexPosIDs": [ 4 ],
+      "ExtraObjectsOnCharacter": [
+        {
+          "CharacterType": "Maid",
+          "ArrayPosition": "0",
+          "ItemInfo": {
+            "ItemFile": "HandItemR_Chu-B_Lip_Black_I_.menu",
+            "Target": "handitem"
+          }
+        }
+      ]
+    },
+    {
+      "SexPosIDs": [ 6, 9, 10, 14, 15 ],
+      "Offset": {
+        "PosString": "0, 0, 0",
+        "RotString": "0, 180, 0"
+      }
     }
   ]
 }

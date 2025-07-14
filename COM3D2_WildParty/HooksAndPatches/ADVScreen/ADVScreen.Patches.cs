@@ -201,6 +201,11 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.ADVScreen
                     if (Constant.EjaculateSEFileArray.Contains(fileName))
                         return false;
                 }
+                if (Util.GetUndergoingScenario().IgnoreVibratorSE)
+                {
+                    if (Constant.VibratorSEFileArray.Contains(fileName))
+                        return false;
+                }
             }
             return true;
         }

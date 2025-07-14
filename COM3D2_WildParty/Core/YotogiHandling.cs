@@ -53,9 +53,12 @@ namespace COM3D2.WildParty.Plugin.Core
             var label = motionItem.ValidLabels.Where(x => x.LabelGroupID == group.CurrentLabelGroupID && x.ExcitementLevel == excitementLevel).First();
 
             group.SexPosID = motionItem.ID;
+            string scriptFileName = motionItem.FileName;
+            if (!string.IsNullOrEmpty(label.SpecialScriptName)) 
+                scriptFileName = label.SpecialScriptName;
 
             CharacterHandling.LoadMotionScript(Util.GetPartyGroupIndex(group), false,
-                motionItem.FileName, label.LabelName,
+                scriptFileName, label.LabelName,
                 group.Maid1.status.guid, group.Man1?.status.guid, false, false, true, false);
             
             group.ReloadAnimation(isSmoothAnimation);
