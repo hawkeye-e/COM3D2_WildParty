@@ -163,6 +163,7 @@ namespace COM3D2.WildParty.Plugin.Core
             Util.ClearGenericCollection(PartyGroup.SharedExtraManSetupInfo);
 
             Util.ClearGenericCollection(StateManager.Instance.TimeEndTriggerList);
+            Util.ClearGenericCollection(StateManager.Instance.ADVTimeEndTriggerList);
             Util.ClearGenericCollection(StateManager.Instance.AddedGameObjectList);
 
             Util.ClearGenericCollection(StateManager.Instance.BackupMaidClothingList);

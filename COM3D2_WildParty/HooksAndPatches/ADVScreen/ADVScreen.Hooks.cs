@@ -78,6 +78,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.ADVScreen
                 Patches.HandleModADVScenarioUserInput();
 
             Patches.CheckWaitForFullLoadDone(__instance);
+            Patches.CheckADVTimeEndTrigger();
         }
 
 

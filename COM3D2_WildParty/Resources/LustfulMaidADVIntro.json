@@ -71,6 +71,12 @@
         "PosRot": {
           "PosString": "0, 0.47, -0.30",
           "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
         }
       },
       {
@@ -150,11 +156,369 @@
     "NextStepID": "lum_intro_0008",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "……"
+      "Text": "……ん……"
     },
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "lum_intro_0008": {
+    "ID": "lum_intro_0008",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0009",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ふわぁ～～～～～～"
+    }
+  },
+
+  "lum_intro_0009": {
+    "ID": "lum_intro_0009",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0010",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "もう……朝か…"
+    }
+  },
+
+  "lum_intro_0010": {
+    "ID": "lum_intro_0010",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "なんか気持ちが良いな…"
+    }
+  },
+
+  "lum_intro_0011": {
+    "ID": "lum_intro_0011",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lum_intro_0012",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-0.64, 0.86, -1.70",
+        "TargetPosString": "0.32, 0.82, 0.05",
+        "AroundAngleString": "28.50, 0.99",
+        "Distance": 2
+      },
+      "BlurCamera": { "IsBlur": false }
+    }
+  },
+
+  "lum_intro_0012": {
+    "ID": "lum_intro_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0013",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "……ん？"
+    }
+  },
+
+  "lum_intro_0013": {
+    "ID": "lum_intro_0013",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0014",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ちょっ…！[=Name,Maid,0,CallName]！？"
+    }
+  },
+
+  "lum_intro_0014": {
+    "ID": "lum_intro_0014",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0015_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "MotionFile": "yotunbai_fera_vibe_taiki_f.anm",
+          "MotionTag": "yotunbai_fera_vibe_taiki_f.anm"
+        }
+      }
+    ]
+  },
+
+  "lum_intro_0015_Branch": {
+    "ID": "lum_intro_0015_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lum_intro_0020_M_[=PType]"
+  },
+
+  "lum_intro_0021": {
+    "ID": "lum_intro_0021",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0022_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "何してんの！？"
+    }
+  },
+
+  "lum_intro_0022_Branch": {
+    "ID": "lum_intro_0022_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lum_intro_0030_M_[=PType]"
+  },
+
+  "lum_intro_0031": {
+    "ID": "lum_intro_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0032",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "いやいや、だからこんな朝早くから何をやってんの？こんなことしてるなんで…"
+    }
+  },
+
+  "lum_intro_0032": {
+    "ID": "lum_intro_0032",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "lum_intro_0033",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "Owner",
+          "ArrayPosition": 0
+        },
+        "Maid1": {
+          "Type": "F",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "lum_intro_0033": {
+    "ID": "lum_intro_0033",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0033a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_furo_taimenzai.ks",
+        "ScriptLabel": "*激しさ１キス",
+        "SexPosID": 8,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "接吻"
+        }
+      }
+    ]
+  },
+
+  "lum_intro_0033a": {
+    "ID": "lum_intro_0033a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lum_intro_0033b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-0.78, 1.22, -1.60",
+        "TargetPosString": "0.42, 1.07, 0.00",
+        "AroundAngleString": "36.88, 4.41",
+        "Distance": 2
+      },
+      "MoveType": "Smooth"
+    }
+  },
+
+  "lum_intro_0033b": {
+    "ID": "lum_intro_0033b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0034",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "………！"
+    }
+  },
+
+  "lum_intro_0034": {
+    "ID": "lum_intro_0034",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0035_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_furo_taimenzai.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 8,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "lum_intro_0035_Branch": {
+    "ID": "lum_intro_0035_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lum_intro_0040_M_[=PType]"
+  },
+
+  "lum_intro_0041": {
+    "ID": "lum_intro_0041",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0042",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あ、はい……"
+    }
+  },
+
+  "lum_intro_0042": {
+    "ID": "lum_intro_0042",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0042a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_taimenkijyoui.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 12,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "lum_intro_0042a": {
+    "ID": "lum_intro_0042a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "lum_intro_0043",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.39, 1.21, -2.01",
+        "TargetPosString": "0.38, 0.92, 0.01",
+        "AroundAngleString": "41.07, 6.27",
+        "Distance": 2.7
+      },
+      "MoveType": "Smooth"
+    },
+    "AnimationTime": 1
+  },
+
+  "lum_intro_0043": {
+    "ID": "lum_intro_0043",
+    "Type": "TimeWait",
+    "Tag": "1",
+    "WaitingType": "TimeWait",
+    "NextStepID": "lum_intro_0044"
+  },
+
+  "lum_intro_0044": {
+    "ID": "lum_intro_0044",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0045_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_taimenkijyoui.ks",
+        "ScriptLabel": "*挿入待機",
+        "SexPosID": 12,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "lum_intro_0045_Branch": {
+    "ID": "lum_intro_0045_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "lum_intro_0050_M_[=PType]"
+  },
+
+  "lum_intro_0051": {
+    "ID": "lum_intro_0051",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0052",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_taimenkijyoui.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 12,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮２"
+        }
+      }
+    ]
+  },
+
+  "lum_intro_0052": {
+    "ID": "lum_intro_0052",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0053",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（あーあ、完全にスイッチが入った……すぐには終わらなさそうだな……）"
+    }
+  },
+
+  "lum_intro_0053": {
+    "ID": "lum_intro_0053",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_yotogiplay_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "はぁ……しょうがないなぁ～　俺も本気で行くか。"
     }
   },
 

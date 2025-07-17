@@ -102,6 +102,7 @@ namespace COM3D2.WildParty.Plugin
 
         internal VoiceLoopTrigger VoiceLoopTrigger = null;
         internal List<TimeEndTrigger> TimeEndTriggerList = new List<TimeEndTrigger>();
+        internal List<TimeEndTrigger> ADVTimeEndTriggerList = new List<TimeEndTrigger>();
 
         internal DateTime ADVResumeTime = DateTime.MinValue;
 

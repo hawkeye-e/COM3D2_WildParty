@@ -16,6 +16,7 @@ namespace COM3D2.WildParty.Plugin
         public bool IsLoopMotion = true;
         public bool IsBlend = true;
         public bool IsQueued = false;
+        public float StartTime = 0;
 
         public MotionInfo() { }
         public MotionInfo(string scriptFile, string scriptLabel, string motionFile, string motionTag, bool isLoop = true, bool isBlend = true, bool isQueued = false)
@@ -38,6 +39,7 @@ namespace COM3D2.WildParty.Plugin
             IsLoopMotion = clone.IsLoopMotion;
             IsBlend = clone.IsBlend;
             IsQueued = clone.IsQueued;
+            StartTime = clone.StartTime;
         }
     }
 }

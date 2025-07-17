@@ -221,6 +221,9 @@ namespace COM3D2.WildParty.Plugin
 
         private static readonly string[] ScenarioLustfulMaidResList = {
             ScenarioResources.ScenarioLustfulMaid.LustfulMaidADVIntro,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADVPostYotogi,
+
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Muku,
         };
 
 

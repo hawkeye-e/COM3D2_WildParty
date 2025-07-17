@@ -20,6 +20,7 @@ namespace COM3D2.WildParty.Plugin
                                             //          ChangeBGM (BGM file name)
                                             //          Dismiss Group ("ALL" or group index)
         public string TagForNight = "";     //Same as Tag, will use this instead of tag if the current time is night
+        public float DelayEffectInSeconds = 0f;      //if it is > 0, it will move to next step but the effect of this step will be executed later
 
 
         public Fade FadeData;
@@ -187,11 +188,13 @@ namespace COM3D2.WildParty.Plugin
             public bool IsManNude = false;
             public bool OpenMouth = false;                              //True: open mouth for fella motion etc; False: default
             public bool ResetIK = false;
+            public bool BlockInputUntilMotionChange = false;            //Apply to single chara motion only
             public SmoothMovementSetup SmoothMovement = null;
 
             public MotionInfo MotionInfo;
             public string FaceAnime;
             public string FaceBlend;
+            public SpecialFaceEffect MoreFaceEffect = null;             //Require "Original" Face Anime
             public PosRot PosRot;
 
             public EyeSightSetting EyeSight;
@@ -203,6 +206,12 @@ namespace COM3D2.WildParty.Plugin
             public class SmoothMovementSetup
             {
                 public float Time;
+            }
+
+            public class SpecialFaceEffect
+            {
+                public bool IsShock = false;
+                public string BaseFaceAnime;
             }
         }
 

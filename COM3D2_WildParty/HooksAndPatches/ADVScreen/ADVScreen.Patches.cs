@@ -100,7 +100,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.ADVScreen
                 }
 
                 if (StateManager.Instance.WaitForFullLoadList.Count == 0)
-                    Core.CustomADVProcessManager.ProcessADVStep(instance);
+                    Core.CustomADVProcessManager.ProcessADV(instance);
             }
         }
 
@@ -208,6 +208,30 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.ADVScreen
                 }
             }
             return true;
+        }
+
+        internal static void CheckADVTimeEndTrigger()
+        {
+            if (StateManager.Instance.ModEventProgress != Constant.EventProgress.IntroADV &&
+                StateManager.Instance.ModEventProgress != Constant.EventProgress.EndingADV &&
+                StateManager.Instance.ModEventProgress != Constant.EventProgress.PostYotogiADV &&
+                StateManager.Instance.ModEventProgress != Constant.EventProgress.ADV)
+                return;
+
+            if (StateManager.Instance.ADVTimeEndTriggerList != null)
+            {
+                for (int i = StateManager.Instance.ADVTimeEndTriggerList.Count - 1; i >= 0; i--)
+                {
+                    if (DateTime.Now > StateManager.Instance.ADVTimeEndTriggerList[i].DueTime)
+                    {
+                        var delegateToExecute = StateManager.Instance.ADVTimeEndTriggerList[i].ToBeExecuted;
+                        StateManager.Instance.ADVTimeEndTriggerList.RemoveAt(i);
+                        delegateToExecute.Execute();
+                    }
+                }
+
+
+            }
         }
     }
 }

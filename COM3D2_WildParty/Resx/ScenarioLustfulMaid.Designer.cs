@@ -62,30 +62,93 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;haremking0001&quot;: {
-        ///    &quot;ID&quot;: &quot;haremking0001&quot;,
-        ///    &quot;Type&quot;: &quot;BG&quot;,
-        ///    &quot;Tag&quot;: &quot;ShinShitsumu&quot;,
+        ///  &quot;lum_intro_0020_M_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;haremking0001_init_chara&quot;
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Muku&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
         ///  },
         ///
-        ///  &quot;haremking0001_init_chara&quot;: {
-        ///    &quot;ID&quot;: &quot;haremking0001_init_chara&quot;,
+        ///  &quot;lum_intro_0020_T_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Muku {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Muku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum0001&quot;: {
+        ///    &quot;ID&quot;: &quot;lum0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;MyRoom&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lum0001_init_chara&quot;
+        ///  },
+        ///
+        ///  &quot;lum0001_init_chara&quot;: {
+        ///    &quot;ID&quot;: &quot;lum0001_init_chara&quot;,
         ///    &quot;Type&quot;: &quot;CharaInit&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;haremking0001_init_shuffle&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0001&quot;,
         ///    &quot;CharaInitData&quot;: {
         ///      &quot;IsClubOwnerMainCharacter&quot;: true,
-        ///      &quot;ManRequired&quot;: 9,
+        ///      &quot;ManRequired&quot;: 0,
         ///      &quot;ValidManType&quot;: [
         ///        &quot;YoungMan&quot;
         ///      ],
-        ///      &quot;NPC [rest of string was truncated]&quot;;.
+        ///      &quot;NPC&quot;: [
+        ///        {
+        ///          &quot;Index&quot;: 0,
+        ///         [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LustfulMaidADVIntro {
             get {
                 return ResourceManager.GetString("LustfulMaidADVIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;imvi_postyotogi_init&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_postyotogi_init&quot;,
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_postyotogi_init_a&quot;
+        ///  },
+        ///
+        ///  &quot;imvi_postyotogi_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_postyotogi_init_a&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;imvi_postyotogi_init_b&quot;
+        ///  },
+        ///
+        ///  &quot;imvi_postyotogi_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;imvi_postyotogi_init_b&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStep [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADVPostYotogi {
+            get {
+                return ResourceManager.GetString("LustfulMaidADVPostYotogi", resourceCulture);
             }
         }
     }

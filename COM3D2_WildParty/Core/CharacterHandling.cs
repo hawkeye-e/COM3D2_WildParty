@@ -1221,6 +1221,7 @@ namespace COM3D2.WildParty.Plugin.Core
             if (!string.IsNullOrEmpty(motionInfo.CustomMotionFile))
             {
                 PlayCustomAnimation(maid, motionInfo.CustomMotionFile, motionInfo.MotionTag, motionInfo.IsLoopMotion, motionInfo.IsBlend, motionInfo.IsQueued);
+                maid.body0.SetAnimeTime(0, motionInfo.StartTime);
             }
             else
             {
@@ -1246,6 +1247,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 else
                 {
                     PlayAnimation(maid, motionInfo.MotionFile, motionInfo.MotionTag, motionInfo.IsLoopMotion, motionInfo.IsBlend, motionInfo.IsQueued);
+                    maid.body0.SetAnimeTime(0, motionInfo.StartTime);
                 }
             }
         }
