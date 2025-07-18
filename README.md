@@ -3,17 +3,18 @@
 Wild Party is a mod trying to add new custom scenario to COM3D2.<br>
 Everything is possible!<br>
 
-For details or screenshots please refer to (https://hawkeye0.blogspot.com/)
+For details or screenshots please refer to the [blog](https://hawkeye0.blogspot.com/)
 
 ## Features
 
 - Add scenarios to the main game
-  - Empire Club Thanksgiving Event (NTR)
-  - Harem King (Pure Love)
-  - Happy Gang Bang Club (NTR)
-  - Another Gang Bang Wish (NTR)
-  - Lily Blooming Paradise (Yuri)
-  - The Summer Festival of Immoral Village (NTR) 
+  - [Empire Club Thanksgiving Event (NTR)](https://hawkeye0.blogspot.com/2025/02/scenario-info-empire-club-thanksgiving.html)
+  - [Harem King (Pure Love)](https://hawkeye0.blogspot.com/2025/02/scenario-info-harem-king.html)
+  - [Happy Gang Bang Club (NTR)](https://hawkeye0.blogspot.com/2025/03/scenario-info-happy-gang-bang-club.html)
+  - [Another Gang Bang Wish (NTR)](https://hawkeye0.blogspot.com/2025/03/scenario-another-gang-bang-wish.html)
+  - [Lily Blooming Paradise (Yuri)](https://hawkeye0.blogspot.com/2025/04/scenario-info-lily-blooming-paradise.html)
+  - [The Summer Festival of Immoral Village (NTR)](https://hawkeye0.blogspot.com/2025/06/scenario-info-summer-festival-of.html)
+  - [Lustful Maid (Pure Love)](https://hawkeye0.blogspot.com/2025/07/scenario-info-lustful-maid.html)
  
 
 
