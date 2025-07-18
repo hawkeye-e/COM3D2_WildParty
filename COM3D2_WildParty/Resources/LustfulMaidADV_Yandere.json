@@ -1,0 +1,198 @@
+{
+  "lum_intro_0020_M_Yandere": {
+    "ID": "lum_intro_0020_M_Yandere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0020_T_Yandere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "lum_intro_0020_T_Yandere": {
+    "ID": "lum_intro_0020_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うふふ、起きてしまいましたか？　ご主人様。おはようございます。",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105853.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0030_M_Yandere": {
+    "ID": "lum_intro_0030_M_Yandere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0030_T_Yandere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "lum_intro_0030_T_Yandere": {
+    "ID": "lum_intro_0030_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "大好きなご主人様のおちんちんを……どうかご奉仕させてくださいね……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105076.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0040_M_Yandere": {
+    "ID": "lum_intro_0030_M_Yandere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0040_T_Yandere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "lum_intro_0040_T_Yandere": {
+    "ID": "lum_intro_0040_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "黙っていてください。",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP02A_107329.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2
+        }
+      }
+    }
+  },
+
+  "lum_intro_0050_M_Yandere": {
+    "ID": "lum_intro_0050_M_Yandere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0050_T_Yandere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠"
+      }
+    ]
+  },
+
+  "lum_intro_0050_T_Yandere": {
+    "ID": "lum_intro_0050_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ、貴方様はじっとしていてくださいね？　ぁ、可愛い声を出されるのは全然構いませんよ……むしろ、私にとってはご褒美です♪",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP02C_107711.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0010_T_Yandere": {
+    "ID": "lum_postyotogi_0010_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んちゅっ、ぢゅむっ……私のご奉仕で大きくなっています……んちゅっ、ぢゅっ、ご主人様も私のことを愛しているのですね……んぢゅっ……！",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_GP02A_107043.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0020_T_Yandere": {
+    "ID": "lum_postyotogi_0020_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あら、もうこんな時間なのですね……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_order_51088.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0030_T_Yandere": {
+    "ID": "lum_postyotogi_0030_T_Yandere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ごちそうさまです。正に至福の時間でした……",
+      "VoiceData": {
+        "Yandere": {
+          "VoiceFile": "S3_order_51886.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1
+        }
+      }
+    }
+  }
+}

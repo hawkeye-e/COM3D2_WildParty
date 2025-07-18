@@ -1,0 +1,198 @@
+{
+  "lum_intro_0020_M_Friendly": {
+    "ID": "lum_intro_0020_M_Friendly",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0020_T_Friendly",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "lum_intro_0020_T_Friendly": {
+    "ID": "lum_intro_0020_T_Friendly",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ようやく起きたね……おはよ、ご主人様。",
+      "VoiceData": {
+        "Friendly": {
+          "VoiceFile": "V1_GP01ADD_50714.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0030_M_Friendly": {
+    "ID": "lum_intro_0030_M_Friendly",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0030_T_Friendly",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "lum_intro_0030_T_Friendly": {
+    "ID": "lum_intro_0030_T_Friendly",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ……おちんちん大好きだから……い～っぱい、ご奉仕させてね……？",
+      "VoiceData": {
+        "Friendly": {
+          "VoiceFile": "V1_GP01ADD_50063.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0040_M_Friendly": {
+    "ID": "lum_intro_0030_M_Friendly",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0040_T_Friendly",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ジト目"
+      }
+    ]
+  },
+
+  "lum_intro_0040_T_Friendly": {
+    "ID": "lum_intro_0040_T_Friendly",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いいから黙って！",
+      "VoiceData": {
+        "Friendly": {
+          "VoiceFile": "V1_GP02ADD_51051.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2
+        }
+      }
+    }
+  },
+
+  "lum_intro_0050_M_Friendly": {
+    "ID": "lum_intro_0050_M_Friendly",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0050_T_Friendly",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠"
+      }
+    ]
+  },
+
+  "lum_intro_0050_T_Friendly": {
+    "ID": "lum_intro_0050_T_Friendly",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁ……あなたの上に乗っちゃった♪　もう逃げられないよ？　今からあたしにされちゃうよ～！　……はぁ、はぁっ……",
+      "VoiceData": {
+        "Friendly": {
+          "VoiceFile": "V1_GP02ADD_50890.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0010_T_Friendly": {
+    "ID": "lum_postyotogi_0010_T_Friendly",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……ん……ちゅ、じゅ……ちゅう、んっ……ど、どうですか、ご主人様……んちゅ、む……気持ち、いいですか……？",
+      "VoiceData": {
+        "Friendly": {
+          "VoiceFile": "V1_GP02ADD_51184.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0020_T_Friendly": {
+    "ID": "lum_postyotogi_0020_T_Friendly",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ……もうこんな時間だったんだね。",
+      "VoiceData": {
+        "Friendly": {
+          "VoiceFile": "V1_order_56299.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0030_T_Friendly": {
+    "ID": "lum_postyotogi_0030_T_Friendly",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ごちそうさま。",
+      "VoiceData": {
+        "Friendly": {
+          "VoiceFile": "V1_order_56846.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1
+        }
+      }
+    }
+  }
+}

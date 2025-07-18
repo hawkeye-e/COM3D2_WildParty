@@ -62,6 +62,342 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Anesan&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Anesan&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Anesan&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Anesan&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Anesan&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;N [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Anesan {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Anesan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Childhood&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Childhood&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Childhood&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Childhood&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Childhood&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Childhood {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Childhood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Cool&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Cool&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Cool&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Cool&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Cool&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Cool {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Cool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Curtness&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Curtness&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Curtness&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Curtness&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Curtness&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Curtness {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Curtness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Dame&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Dame&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Dame&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Dame&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Dame&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Dame {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Dame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Devilish&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Devilish&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Devilish&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Devilish&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Devilish&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Devilish {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Devilish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Friendly&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Friendly&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Friendly&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Friendly&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Friendly&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Friendly {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Friendly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Genki&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Genki&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Genki&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Genki&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Genki&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextSt [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Genki {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Genki", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Ladylike&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Ladylike&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Ladylike&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Ladylike&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Ladylike&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Ladylike {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Ladylike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Majime&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Majime&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Majime&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Majime&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Majime&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;N [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Majime {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Majime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Missy&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Missy&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Missy&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Missy&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Missy&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextSt [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Missy {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Missy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;lum_intro_0020_M_Muku&quot;: {
         ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Muku&quot;,
         ///    &quot;Type&quot;: &quot;Chara&quot;,
@@ -88,6 +424,253 @@ namespace ScenarioResources {
         internal static string LustfulMaidADV_Muku {
             get {
                 return ResourceManager.GetString("LustfulMaidADV_Muku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Pride&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Pride&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Pride&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Pride&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Pride&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextSt [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Pride {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Pride", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Pure&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Pure&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Pure&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Pure&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Pure&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Pure {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Pure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Rindere&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Rindere&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Rindere&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Rindere&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Rindere&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Rindere {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Rindere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Sadist&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Sadist&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Sadist&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Sadist&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Sadist&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;N [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Sadist {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Sadist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Secretary&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Secretary&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Secretary&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Secretary&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Secretary&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Secretary {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Secretary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Silent&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Silent&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Silent&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Silent&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Silent&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;N [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Silent {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Silent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Sister&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Sister&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Sister&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Sister&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Sister&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;N [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Sister {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Sister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_intro_0020_M_Yandere&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_M_Yandere&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lum_intro_0020_T_Yandere&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;にっこり&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;lum_intro_0020_T_Yandere&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_intro_0020_T_Yandere&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LustfulMaidADV_Yandere {
+            get {
+                return ResourceManager.GetString("LustfulMaidADV_Yandere", resourceCulture);
             }
         }
         
@@ -125,26 +708,26 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;imvi_postyotogi_init&quot;: {
-        ///    &quot;ID&quot;: &quot;imvi_postyotogi_init&quot;,
+        ///  &quot;lum_postyotogi_init&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_postyotogi_init&quot;,
         ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
         ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
-        ///    &quot;NextStepID&quot;: &quot;imvi_postyotogi_init_a&quot;
+        ///    &quot;NextStepID&quot;: &quot;lum_postyotogi_init_a&quot;
         ///  },
         ///
-        ///  &quot;imvi_postyotogi_init_a&quot;: {
-        ///    &quot;ID&quot;: &quot;imvi_postyotogi_init_a&quot;,
+        ///  &quot;lum_postyotogi_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_postyotogi_init_a&quot;,
         ///    &quot;Type&quot;: &quot;BGM&quot;,
-        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM022.ogg&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;imvi_postyotogi_init_b&quot;
+        ///    &quot;NextStepID&quot;: &quot;lum_postyotogi_init_b&quot;
         ///  },
         ///
-        ///  &quot;imvi_postyotogi_init_b&quot;: {
-        ///    &quot;ID&quot;: &quot;imvi_postyotogi_init_b&quot;,
+        ///  &quot;lum_postyotogi_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_postyotogi_init_b&quot;,
         ///    &quot;Type&quot;: &quot;Camera&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStep [rest of string was truncated]&quot;;.
+        ///    &quot;NextStepID&quot;: &quot;lu [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string LustfulMaidADVPostYotogi {
             get {

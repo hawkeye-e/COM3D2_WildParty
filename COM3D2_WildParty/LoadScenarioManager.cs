@@ -224,6 +224,25 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioLustfulMaid.LustfulMaidADVPostYotogi,
 
             ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Muku,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Majime,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Rindere,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Pure,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Cool,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Pride,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Yandere,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Anesan,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Genki,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Sadist,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Silent,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Devilish,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Ladylike,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Secretary,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Sister,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Curtness,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Missy,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Childhood,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Friendly,
+            ScenarioResources.ScenarioLustfulMaid.LustfulMaidADV_Dame,
         };
 
 

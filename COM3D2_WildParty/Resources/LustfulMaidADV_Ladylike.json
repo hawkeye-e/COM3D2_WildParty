@@ -1,0 +1,198 @@
+{
+  "lum_intro_0020_M_Ladylike": {
+    "ID": "lum_intro_0020_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0020_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "lum_intro_0020_T_Ladylike": {
+    "ID": "lum_intro_0020_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふぅ、良かった……ちゃんと目を覚ましてくれて。ずっと寝てるから、心配になっちゃたよ。",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61237.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0030_M_Ladylike": {
+    "ID": "lum_intro_0030_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0030_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "lum_intro_0030_T_Ladylike": {
+    "ID": "lum_intro_0030_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "わたしね、ご主人様のオチンチン大好きなの。だから……いっぱいご奉仕してあげるね。",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_60572.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0040_M_Ladylike": {
+    "ID": "lum_intro_0030_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0040_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ジト目"
+      }
+    ]
+  },
+
+  "lum_intro_0040_T_Ladylike": {
+    "ID": "lum_intro_0040_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "知りたくありません……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_PMD_12982.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1
+        }
+      }
+    }
+  },
+
+  "lum_intro_0050_M_Ladylike": {
+    "ID": "lum_intro_0050_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0050_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠"
+      }
+    ]
+  },
+
+  "lum_intro_0050_T_Ladylike": {
+    "ID": "lum_intro_0050_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、っはぁ……私が、上になっちゃったからっ……？　もう、私が満足するまで、やめてあげないよっ……？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02C_12545.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0010_T_Ladylike": {
+    "ID": "lum_postyotogi_0010_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "どうかな……ん、ちゅ……るぅ……ちゅるっ……ご主人様、んんっ……はぁ、こういうの好きだよね……？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02B_11995.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0020_T_Ladylike": {
+    "ID": "lum_postyotogi_0020_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ……もうこんな時間だったんだね。",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_order_51339.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0030_T_Ladylike": {
+    "ID": "lum_postyotogi_0030_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ごちそうさまー。",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_order_51886.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3
+        }
+      }
+    }
+  }
+}

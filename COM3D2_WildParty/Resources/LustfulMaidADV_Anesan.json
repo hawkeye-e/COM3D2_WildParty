@@ -1,0 +1,198 @@
+{
+  "lum_intro_0020_M_Anesan": {
+    "ID": "lum_intro_0020_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0020_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "lum_intro_0020_T_Anesan": {
+    "ID": "lum_intro_0020_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ようやく起きたねぇー。ご主人様、おはよ。",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP01_A_104693.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0030_M_Anesan": {
+    "ID": "lum_intro_0030_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0030_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "lum_intro_0030_T_Anesan": {
+    "ID": "lum_intro_0030_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うふ……ご主人様のおちんちんに……い～っぱい、ご奉仕しちゃうね……",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP01_A_104299.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0040_M_Anesan": {
+    "ID": "lum_intro_0030_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0040_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ジト目"
+      }
+    ]
+  },
+
+  "lum_intro_0040_T_Anesan": {
+    "ID": "lum_intro_0040_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うるさいの！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP01_105036.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.2
+        }
+      }
+    }
+  },
+
+  "lum_intro_0050_M_Anesan": {
+    "ID": "lum_intro_0050_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0050_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠"
+      }
+    ]
+  },
+
+  "lum_intro_0050_T_Anesan": {
+    "ID": "lum_intro_0050_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁ……お姉ちゃんでこんなにガチガチなってくれたんだから……お姉ちゃんもちゃんとしてあげないとだよね……♪",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP02C_106854.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0010_T_Anesan": {
+    "ID": "lum_postyotogi_0010_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んちゅ……じゅう、ちゅ……はぁ、んっ、どうかな……ご主人様、気持ちよくなってくれてる……？　んっ、ふぅ……",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP02B_106282.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0020_T_Anesan": {
+    "ID": "lum_postyotogi_0020_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ、もうこんな時間だったんだね。",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_order_51339.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0030_T_Anesan": {
+    "ID": "lum_postyotogi_0030_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ごちそうさまでした……",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_order_51886.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1
+        }
+      }
+    }
+  }
+}

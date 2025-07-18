@@ -1,0 +1,198 @@
+{
+  "lum_intro_0020_M_Missy": {
+    "ID": "lum_intro_0020_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0020_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "lum_intro_0020_T_Missy": {
+    "ID": "lum_intro_0020_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ようやく起きてくれましたわね……おはようございます、ご主人様。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_61239.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0030_M_Missy": {
+    "ID": "lum_intro_0030_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0030_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "lum_intro_0030_T_Missy": {
+    "ID": "lum_intro_0030_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ……おちんちん大好きですから……い～っぱい、ご奉仕させてくださいね……？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_60588.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0040_M_Missy": {
+    "ID": "lum_intro_0030_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0040_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "lum_intro_0040_T_Missy": {
+    "ID": "lum_intro_0040_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いいから黙ってください？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62713.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.2
+        }
+      }
+    }
+  },
+
+  "lum_intro_0050_M_Missy": {
+    "ID": "lum_intro_0050_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0050_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠"
+      }
+    ]
+  },
+
+  "lum_intro_0050_T_Missy": {
+    "ID": "lum_intro_0050_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁ……貴方の上に、乗ってしまいました。　もう逃げられないですわよ？　わたくしにされてしまうのです！　はぁ、はぁっ……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62366.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0010_T_Missy": {
+    "ID": "lum_postyotogi_0010_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……んっ……ちゅ、じゅ……ちゅぅ、んっ……、ど、どうでしょうか、ご主人様……んちゅ、む……気持ち、いいでしょうか……？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62846.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0020_T_Missy": {
+    "ID": "lum_postyotogi_0020_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あら……もうこんな時間になりましたのね。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_order_51339.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0030_T_Missy": {
+    "ID": "lum_postyotogi_0030_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ごちそうさまです♪",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62113.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2
+        }
+      }
+    }
+  }
+}

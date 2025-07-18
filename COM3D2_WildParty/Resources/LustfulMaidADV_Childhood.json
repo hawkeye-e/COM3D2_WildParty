@@ -1,0 +1,198 @@
+{
+  "lum_intro_0020_M_Childhood": {
+    "ID": "lum_intro_0020_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0020_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "lum_intro_0020_T_Childhood": {
+    "ID": "lum_intro_0020_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ようやく起きてくれました……おはようございます、お兄様。",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP01ADD_66300.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0030_M_Childhood": {
+    "ID": "lum_intro_0030_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0030_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "lum_intro_0030_T_Childhood": {
+    "ID": "lum_intro_0030_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ……おちんちん大好きですから……い～っぱい、ご奉仕させてくださいね……？",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP01ADD_65635.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0040_M_Childhood": {
+    "ID": "lum_intro_0030_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0040_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "lum_intro_0040_T_Childhood": {
+    "ID": "lum_intro_0040_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いいから、黙ってください？",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP02ADD_62849.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "lum_intro_0050_M_Childhood": {
+    "ID": "lum_intro_0050_M_Childhood",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0050_T_Childhood",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠"
+      }
+    ]
+  },
+
+  "lum_intro_0050_T_Childhood": {
+    "ID": "lum_intro_0050_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁ……お兄様の上に乗っちゃいました♪　もう逃げられないですよ？　わたしにされてしまうんですっ！　……はぁ、はぁっ……",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP02ADD_62544.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0010_T_Childhood": {
+    "ID": "lum_postyotogi_0010_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……んっ……ちゅっ、じゅ……ちゅぅ、んっ……わたしのご奉仕、どうですか、お兄様？　んちゅ、むっ……気持ち、いいですか……？",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_GP02ADD_62982.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0020_T_Childhood": {
+    "ID": "lum_postyotogi_0020_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ……もうこんな時間なんですね。",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_order_51339.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0030_T_Childhood": {
+    "ID": "lum_postyotogi_0030_T_Childhood",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ごちそうさまでした……",
+      "VoiceData": {
+        "Childhood": {
+          "VoiceFile": "H10_order_51886.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1
+        }
+      }
+    }
+  }
+}

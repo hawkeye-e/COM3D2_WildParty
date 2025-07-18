@@ -1,0 +1,199 @@
+{
+  "lum_intro_0020_M_Genki": {
+    "ID": "lum_intro_0020_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0020_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "lum_intro_0020_T_Genki": {
+    "ID": "lum_intro_0020_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "おはよ、ご主人様。ずいぶんぐっすり眠ってたね。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105691.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0030_M_Genki": {
+    "ID": "lum_intro_0030_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0030_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "lum_intro_0030_T_Genki": {
+    "ID": "lum_intro_0030_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ボク、ご主人様のために沢山してあげるから……ほら、いっぱいご奉仕するね？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105256.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0040_M_Genki": {
+    "ID": "lum_intro_0030_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0040_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ジト目"
+      }
+    ]
+  },
+
+  "lum_intro_0040_T_Genki": {
+    "ID": "lum_intro_0040_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "聞きたくないよ……！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_PMD_107571.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 0.3,
+          "EndTime": 1.7
+        }
+      }
+    }
+  },
+
+  "lum_intro_0050_M_Genki": {
+    "ID": "lum_intro_0050_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0050_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠"
+      }
+    ]
+  },
+
+  "lum_intro_0050_T_Genki": {
+    "ID": "lum_intro_0050_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ、ボク、あなたの上に乗っちゃった……これでもう、あなたはボクのものだよね……ふふ、あなたを好きにしちゃうんだ……！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02C_106251.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0010_T_Genki": {
+    "ID": "lum_postyotogi_0010_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ、じゅ……ちゅ、んむ……こ、これで気持ちいいかな、ご主人様……んっ、はぁ、ちゅう、じゅる……んっ……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02B_105694.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0020_T_Genki": {
+    "ID": "lum_postyotogi_0020_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ……もうこんな時間だったんだね。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_order_51339.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0030_T_Genki": {
+    "ID": "lum_postyotogi_0030_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ごちそうさま。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_order_51886.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "lum_intro_0020_M_Cool": {
+    "ID": "lum_intro_0020_M_Cool",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0020_T_Cool",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "lum_intro_0020_T_Cool": {
+    "ID": "lum_intro_0020_T_Cool",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "おはよう。ご主人様。ずいぶんと遅いお目覚めね。",
+      "VoiceData": {
+        "Cool": {
+          "VoiceFile": "S1_GP01_106891.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0030_M_Cool": {
+    "ID": "lum_intro_0030_M_Cool",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0030_T_Cool",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "lum_intro_0030_T_Cool": {
+    "ID": "lum_intro_0030_T_Cool",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……だから、いっぱいご奉仕するから……ご主人、私をしっかり見てね？",
+      "VoiceData": {
+        "Cool": {
+          "VoiceFile": "S1_GP01_106460.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_intro_0040_M_Cool": {
+    "ID": "lum_intro_0030_M_Cool",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0040_T_Cool",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ジト目"
+      }
+    ]
+  },
+
+  "lum_intro_0040_T_Cool": {
+    "ID": "lum_intro_0040_T_Cool",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "聞きたくないわ……",
+      "VoiceData": {
+        "Cool": {
+          "VoiceFile": "S1_PMD_111513.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.7
+        }
+      }
+    }
+  },
+
+  "lum_intro_0050_M_Cool": {
+    "ID": "lum_intro_0050_M_Cool",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "lum_intro_0050_T_Cool",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠"
+      }
+    ]
+  },
+
+  "lum_intro_0050_T_Cool": {
+    "ID": "lum_intro_0050_T_Cool",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁ……こうやって乗られて……私に好き勝手されるのも……嫌いではないでしょう……はぁ、んんっ、たまにはこういうのもいいわよね……？",
+      "VoiceData": {
+        "Cool": {
+          "VoiceFile": "S1_GP02C_111414.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0010_T_Cool": {
+    "ID": "lum_postyotogi_0010_T_Cool",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んちゅっ、れろぉ、ご主人様の好きなところは……知っているつもりなのだから……んぢゅっ、んぶっ……これはどう……んんちゅっ！",
+      "VoiceData": {
+        "Cool": {
+          "VoiceFile": "S1_GP02B_110861.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.5
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0020_T_Cool": {
+    "ID": "lum_postyotogi_0020_T_Cool",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ、もうこんな時間ね。そろそろ仕事に戻らないと……",
+      "VoiceData": {
+        "Cool": {
+          "VoiceFile": "S1_COOL_53925.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5
+        }
+      }
+    }
+  },
+
+  "lum_postyotogi_0030_T_Cool": {
+    "ID": "lum_postyotogi_0030_T_Cool",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ごちそうさま。",
+      "VoiceData": {
+        "Cool": {
+          "VoiceFile": "S1_order_51955.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        }
+      }
+    }
+  }
+}
