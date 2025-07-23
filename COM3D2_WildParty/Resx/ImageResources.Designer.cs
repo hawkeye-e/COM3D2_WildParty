@@ -139,6 +139,16 @@ namespace ModResources {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_triple_booking {
+            get {
+                object obj = ResourceManager.GetObject("icon_triple_booking", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to mod_icon_immoral_village.tex.
         /// </summary>
         internal static string ImmoralVillageIconFileName {
@@ -171,6 +181,15 @@ namespace ModResources {
         internal static string OrgyPartyIconFileName {
             get {
                 return ResourceManager.GetString("OrgyPartyIconFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to mod_icon_triple_booking.tex.
+        /// </summary>
+        internal static string TripleBookingFileName {
+            get {
+                return ResourceManager.GetString("TripleBookingFileName", resourceCulture);
             }
         }
     }

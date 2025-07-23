@@ -503,6 +503,73 @@
     ]
   },
 
+
+  {
+    "ScenarioID": 9900010,
+    "CategoryID": 99000,
+    "ADVEntryStep": "trbo0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "トリプルブッキング",
+    "Information": "ミスにより、エンパイアクラブでトリプルブッキングが発生した。そこで、メイドが同時にすべてのお客様の要望に応えるために尽力する…",
+    "Icon": "mod_icon_triple_booking",
+    "IsNetorare": true,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "ConditionInfoText": [
+      "恋人である",
+      "育成中のメイドではない",
+      "両穴経験済みである",
+      "「エンパイアクラブ大姦射祭」を実行したことがある"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 210, 220 ],
+    "MasterRequireFlag": [ "Mod_エンパイアクラブ大姦射祭_Executed" ],
+
+    "IsGroupEvent": false,
+    "MaidCount": {
+      "Max": 1,
+      "Min": 1
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "Shukuhakubeya_BedRoom_Night",
+          "NightMapID": "Shukuhakubeya_BedRoom_Night",
+          "BGM": "BGM011.ogg",
+          "FormationOption": [ "Default" ],
+          "DefaultFormation": "Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition"
+        ],
+        "IsMainManOwner": false,
+
+        "SexStateRule": "Common"
+      }
+    ],
+
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_トリプルブッキング_Executed",
+        "Value": 1
+      }
+    ]
+  },
+
+
   {
     "ScenarioID": 9901001,
     "CategoryID": 99010,

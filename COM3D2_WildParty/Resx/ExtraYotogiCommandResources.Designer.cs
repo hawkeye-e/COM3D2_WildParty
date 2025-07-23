@@ -195,28 +195,32 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;ChangePosition&quot;: {
-        ///    &quot;CommandCode&quot;: &quot;ChangePosition&quot;,
-        ///    &quot;Name&quot;: &quot;体位変更&quot;,
-        ///    &quot;Type&quot;: &quot;Common&quot;
-        ///  },
-        ///
-        ///  &quot;FetishVirginEater&quot;: {
-        ///    &quot;CommandCode&quot;: &quot;AddFetish&quot;,
-        ///    &quot;Name&quot;: &quot;性癖「童貞喰い」&quot;,
-        ///    &quot;Type&quot;: &quot;Fetish&quot;,
-        ///    &quot;FetishID&quot;: 99004,
-        ///    &quot;ConditionCheckTexts&quot;: [
-        ///      {
-        ///        &quot;Field&quot;: &quot;SexPosRequired&quot;,
-        ///        &quot;DisplayText&quot;: &quot;男の子たちに全ての乱交体位を教える（[=CurrentSexPosCount]／[=SexPosRequired]）&quot;
-        ///      }
-        ///    ]
-        ///  },
-        ///
-        ///  &quot;ChangeMan_Amayakasi_Tekoki&quot;: {
+        ///  &quot;MPArai_To_69&quot;: {
         ///    &quot;CommandCode&quot;: &quot;ChainedAction&quot;,
-        ///    &quot;Name&quot; [rest of string was truncated]&quot;;.
+        ///    &quot;Name&quot;: &quot;フェラする（シックスナイン）&quot;,
+        ///    &quot;Type&quot;: &quot;Common&quot;,
+        ///    &quot;Constraint&quot;: [
+        ///      {
+        ///        &quot;EventID&quot;: 9901003,
+        ///        &quot;SexPosIDs&quot;: [ 1 ]
+        ///      }
+        ///    ],
+        ///    &quot;Parameters&quot;: [
+        ///      {
+        ///        &quot;Name&quot;: &quot;PrimaryGroup&quot;,
+        ///        &quot;Value&quot;: 0
+        ///      },
+        ///      {
+        ///        &quot;Name&quot;: &quot;NewSexPosID&quot;,
+        ///        &quot;Value&quot;: 2
+        ///      },
+        ///      {
+        ///        &quot;Name&quot;: &quot;NewMotionLabelGroupID&quot;,
+        ///        &quot;Value&quot;: 2
+        ///      }
+        ///    ],
+        ///    &quot;TriggerConditions&quot;: {
+        ///      &quot;Curren [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ExtraYotogiComands_LustfulMaid {
             get {
@@ -253,6 +257,38 @@ namespace ModResources {
         internal static string ExtraYotogiComands_OrgyParty {
             get {
                 return ResourceManager.GetString("ExtraYotogiComands_OrgyParty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;ChangePosition&quot;: {
+        ///    &quot;CommandCode&quot;: &quot;ChangePosition&quot;,
+        ///    &quot;Name&quot;: &quot;体位変更&quot;,
+        ///    &quot;Type&quot;: &quot;Common&quot;
+        ///  },
+        ///  &quot;ChangePositionAll&quot;: {
+        ///    &quot;CommandCode&quot;: &quot;ChangePositionAll&quot;,
+        ///    &quot;Name&quot;: &quot;一緒に体位変更&quot;,
+        ///    &quot;Type&quot;: &quot;Common&quot;
+        ///  },
+        ///  &quot;ChangeFormation&quot;: {
+        ///    &quot;CommandCode&quot;: &quot;ChangeFormation&quot;,
+        ///    &quot;Name&quot;: &quot;一緒に位置変更&quot;,
+        ///    &quot;Type&quot;: &quot;Common&quot;
+        ///  },
+        ///  &quot;ChangePartner&quot;: {
+        ///    &quot;CommandCode&quot;: &quot;ChangePartner&quot;,
+        ///    &quot;Name&quot;: &quot;パートナー交換&quot;,
+        ///    &quot;Type&quot;: &quot;Common&quot;
+        ///  },
+        ///  &quot;FetishOrgy&quot;: {
+        ///    &quot;CommandCode&quot;: &quot;AddFetish&quot;,
+        ///   [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ExtraYotogiComands_TripleBooking {
+            get {
+                return ResourceManager.GetString("ExtraYotogiComands_TripleBooking", resourceCulture);
             }
         }
     }

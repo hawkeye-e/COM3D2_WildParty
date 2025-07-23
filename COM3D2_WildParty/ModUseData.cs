@@ -129,6 +129,8 @@ namespace COM3D2.WildParty.Plugin
                 InitDataForImmoralVillage();
             else if (scenarioID == ScenarioIDList.LustfulMaidScenarioID)
                 InitDataForLustfulMaid();
+            else if (scenarioID == ScenarioIDList.TripleBookingScenarioID)
+                InitDataForTripleBooking();
         }
 
         public static void ReloadCoordinateData(int scenarioID)
@@ -148,6 +150,8 @@ namespace COM3D2.WildParty.Plugin
                 MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ImmoralVillage);
             else if (scenarioID == ScenarioIDList.LustfulMaidScenarioID)
                 MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_LustfulMaid);
+            else if (scenarioID == ScenarioIDList.TripleBookingScenarioID)
+                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_TripleBooking);
         }
 
         private static void ResetModUseData()
@@ -265,6 +269,23 @@ namespace COM3D2.WildParty.Plugin
 
             ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_LustfulMaid);
         }
+
+        private static void InitDataForTripleBooking()
+        {
+            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.TripleBookingScenarioID);
+
+            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_TripleBooking, ModResources.SexPosValidLabelsResources.SexPosValidLabels_TripleBooking, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_TripleBooking);
+            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_TripleBooking);
+
+            InitAllVoiceDataFromCSV();
+            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_TripleBooking);
+
+            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_TripleBooking);
+
+            ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_TripleBooking);
+        }
+
+        
 
         private static void InitAllVoiceDataFromCSV()
         {

@@ -1,0 +1,88 @@
+{
+  "trbo0001": {
+    "ID": "trbo0001",
+    "Type": "BG",
+    "Tag": "MyRoom",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo0001_init_chara"
+  },
+
+  "trbo0001_init_chara": {
+    "ID": "trbo0001_init_chara",
+    "Type": "CharaInit",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_0001",
+    "CharaInitData": {
+      "IsClubOwnerADVMainCharacter": false,
+      "ManRequired": 3,
+      "ValidManType": [
+        "YoungMan"
+      ]
+    }
+  },
+
+  "trbo_intro_0001": {
+    "ID": "trbo_intro_0001",
+    "Type": "BGM",
+    "Tag": "BGM015.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_0003"
+  },
+
+
+  "trbo_intro_0003": {
+    "ID": "trbo_intro_0003",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_0004",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "trbo_intro_0004": {
+    "ID": "trbo_intro_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_yotogiplay_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "Ç†ÇÈí©ÅEÇ≤éÂêlólÇÃïîâÆ"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+
+
+  "trbo_intro_yotogiplay_closepanel": {
+    "ID": "trbo_intro_yotogiplay_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_start_yotogiplay"
+  },
+
+  "trbo_start_yotogiplay": {
+    "ID": "trbo_start_yotogiplay",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "TripleBooking",
+      "Phase": 1,
+      "IsKeepCharacterVisibleAfterYotogi": false,
+      "IsClubOwnerMainCharacter": false
+    },
+    "NextStepID": "trbo_postyotogi_init"
+  }
+
+
+}

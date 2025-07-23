@@ -204,7 +204,7 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;Phase1_Default&quot;: {
+        ///  &quot;Default&quot;: {
         ///    &quot;DefaultSexPosID&quot;: 1,
         ///    &quot;IsRandomAssign&quot;: false,
         ///    &quot;IsShuffleMaidList&quot;: false,
@@ -215,17 +215,12 @@ namespace ModResources {
         ///        &quot;ArrayPosition&quot;: 0,
         ///        &quot;ManCount&quot;: 1,
         ///        &quot;MaidCount&quot;: 1,
-        ///        &quot;ExtraManCount&quot;: 6,
-        ///        &quot;ExtraManSlotCount&quot;: 7,
-        ///        &quot;IsAutomatedGroup&quot;: false,
-        ///        &quot;ClothesSet&quot;: &quot;ImmoralVillage_ShowBoobsNoUnderwear&quot;
+        ///        &quot;IsAutomatedGroup&quot;: false
         ///      }
         ///    ]
-        ///  },
+        ///  }
         ///
-        ///  &quot;Phase2_Default&quot;: {
-        ///    &quot;DefaultSexPosID&quot;: 103,
-        ///    &quot;IsRandomAssign [rest of string was truncated]&quot;;.
+        ///}.
         /// </summary>
         internal static string PartyGroupSetup_LustfulMaid {
             get {
@@ -261,6 +256,32 @@ namespace ModResources {
         internal static string PartyGroupSetup_OrgyParty {
             get {
                 return ResourceManager.GetString("PartyGroupSetup_OrgyParty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;Default&quot;: {
+        ///    &quot;DefaultSexPosID&quot;: 1,
+        ///    &quot;IsRandomAssign&quot;: false,
+        ///    &quot;IsShuffleMaidList&quot;: false,
+        ///    &quot;IsShuffleManList&quot;: false,
+        ///
+        ///    &quot;GroupSetup&quot;: [
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;ManCount&quot;: 1,
+        ///        &quot;MaidCount&quot;: 1,
+        ///        &quot;IsAutomatedGroup&quot;: false
+        ///      }
+        ///    ]
+        ///  }
+        ///
+        ///}.
+        /// </summary>
+        internal static string PartyGroupSetup_TripleBooking {
+            get {
+                return ResourceManager.GetString("PartyGroupSetup_TripleBooking", resourceCulture);
             }
         }
     }

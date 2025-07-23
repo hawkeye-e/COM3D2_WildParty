@@ -193,24 +193,23 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;Houshi&quot;: {
-        ///    &quot;DisplayName&quot;: &quot;一緒に奉仕する&quot;,
+        ///  &quot;Default&quot;: {
+        ///    &quot;DisplayName&quot;: &quot;&quot;,
         ///    &quot;IsRandom&quot;: false,
         ///    &quot;CoordinateList&quot;: [
         ///      {
-        ///        &quot;MaxGroup&quot;: 4,
+        ///        &quot;MaxGroup&quot;: 1,
         ///        &quot;GroupCoordinates&quot;: [
         ///          {
         ///            &quot;ArrayPosition&quot;: 0,
-        ///            &quot;PosString&quot;: &quot;8.45, 0.5, -1.5&quot;,
-        ///            &quot;RotString&quot;: &quot;0.0, 0.0, 0.0, 1.0&quot;,
-        ///            &quot;IKAttach&quot;: [
-        ///              {
-        ///                &quot;PosString&quot;: &quot;0.02, -0.04, -0.1&quot;,
-        ///                &quot;AttachType&quot;: &quot;NewPoint&quot;,
-        ///                &quot;Source&quot;: {
-        ///                  &quot;ArrayIndex&quot;: 0,
-        ///         [rest of string was truncated]&quot;;.
+        ///            &quot;PosString&quot;: &quot;0, 0.47, -0.30&quot;,
+        ///            &quot;RotString&quot;: &quot;0, 0, 0, 1&quot;,
+        ///            &quot;CameraSetup&quot;: {
+        ///              &quot;PosString&quot;: &quot;-1.77, 1.93, -1.91&quot;,
+        ///              &quot;TargetPosString&quot;: &quot;-0.21, 0.97, -0.51&quot;,
+        ///              &quot;AroundAngleString&quot;: &quot;48.26, 24.60&quot;,
+        ///              &quot;Distance&quot;: 2.3
+        ///        [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string MapCoordinates_LustfulMaid {
             get {
@@ -244,6 +243,32 @@ namespace ModResources {
         internal static string MapCoordinates_Orgy {
             get {
                 return ResourceManager.GetString("MapCoordinates_Orgy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;Default&quot;: {
+        ///    &quot;DisplayName&quot;: &quot;&quot;,
+        ///    &quot;IsRandom&quot;: false,
+        ///    &quot;CoordinateList&quot;: [
+        ///      {
+        ///        &quot;MaxGroup&quot;: 1,
+        ///        &quot;GroupCoordinates&quot;: [
+        ///          {
+        ///            &quot;ArrayPosition&quot;: 0,
+        ///            &quot;PosString&quot;: &quot;0, 0.47, -0.30&quot;,
+        ///            &quot;RotString&quot;: &quot;0, 0, 0, 1&quot;,
+        ///            &quot;CameraSetup&quot;: {
+        ///              &quot;PosString&quot;: &quot;-1.77, 1.93, -1.91&quot;,
+        ///              &quot;TargetPosString&quot;: &quot;-0.21, 0.97, -0.51&quot;,
+        ///              &quot;AroundAngleString&quot;: &quot;48.26, 24.60&quot;,
+        ///              &quot;Distance&quot;: 2.3
+        ///        [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MapCoordinates_TripleBooking {
+            get {
+                return ResourceManager.GetString("MapCoordinates_TripleBooking", resourceCulture);
             }
         }
     }

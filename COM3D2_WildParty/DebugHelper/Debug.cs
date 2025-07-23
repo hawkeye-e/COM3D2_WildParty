@@ -29,24 +29,16 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
         public static void MapAvailableSkillForMaid(Maid maid)
         {
             Dictionary<string, int> mylist = new Dictionary<string, int>();
-            mylist.Add("高級MP全身洗い", -1);
-            mylist.Add("シックスナイン", -1);
-            mylist.Add("服従詰られ手コキ", -1);
-            mylist.Add("足コキ", -1);
-            mylist.Add("オナホコキ", -1);
-            mylist.Add("結婚四つん這いフェラ+バイブ", -1);
-            mylist.Add("【二人きり】松葉崩しセックス", -1);
-            mylist.Add("【二人きり】挟み込み騎乗位", -1);
-            mylist.Add("【二人きり】風呂対面座位", -1);
-            mylist.Add("【二人きり】セックス見つめ合い対面座位A", -1);
-            mylist.Add("【二人きり】抱き着きセックス対面座位", -1);
-            mylist.Add("【二人きり】セックス背面騎乗位B", -1);
-            mylist.Add("セックス騎乗位", -1);
-            mylist.Add("グラインドセックス騎乗位", -1);
-            mylist.Add("【二人きり】セックス手繋ぎ対面騎乗位", -1);
-            mylist.Add("【二人きり】セックス密着騎乗位", -1);
-            mylist.Add("全身舐め奉仕", -1);
-
+            mylist.Add("【輪姦】乱交3Pセックス正常位", -1);
+            mylist.Add("【輪姦】乱交3P2穴抱え正常位", -1);
+            mylist.Add("【輪姦】乱交3P2穴セックス", -1);
+            mylist.Add("【輪姦】乱交3P腕持ち2穴セックス", -1);
+            mylist.Add("乱交3P腕持ち後背位", -1);
+            mylist.Add("快楽堕ち3P騎乗位", -1);
+            mylist.Add("快楽堕ち3P騎乗位&愛撫", -1);
+            mylist.Add("快楽堕ち3P開脚騎乗位", -1);
+            mylist.Add("ムリヤリハード3P押さえつけセックス", -1);
+            
 
 
 

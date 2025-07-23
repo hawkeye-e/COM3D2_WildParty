@@ -101,6 +101,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                     ModResources.ImageResources.icon_immoral_village.Save(mStream, ModResources.ImageResources.icon_immoral_village.RawFormat);
                 else if (fileName == ModResources.ImageResources.LustfulMaidIconFileName)
                     ModResources.ImageResources.icon_lustful_maid.Save(mStream, ModResources.ImageResources.icon_lustful_maid.RawFormat);
+                else if (fileName == ModResources.ImageResources.TripleBookingFileName)
+                    ModResources.ImageResources.icon_triple_booking.Save(mStream, ModResources.ImageResources.icon_triple_booking.RawFormat);
 
                 Texture2D tex = new Texture2D(64, 64);
                 ImageConversion.LoadImage(tex, mStream.ToArray());
@@ -132,6 +134,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                     ModResources.ImageResources.icon_immoral_village.Save(mStream, ModResources.ImageResources.icon_immoral_village.RawFormat);
                 else if (fileName == ModResources.ImageResources.LustfulMaidIconFileName)
                     ModResources.ImageResources.icon_lustful_maid.Save(mStream, ModResources.ImageResources.icon_lustful_maid.RawFormat);
+                else if (fileName == ModResources.ImageResources.TripleBookingFileName)
+                    ModResources.ImageResources.icon_triple_booking.Save(mStream, ModResources.ImageResources.icon_triple_booking.RawFormat);
 
                 Texture2D tex = new Texture2D(64, 64);
                 tex.LoadImage(mStream.ToArray());
