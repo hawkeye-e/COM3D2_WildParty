@@ -18,6 +18,7 @@ namespace COM3D2.WildParty.Plugin
             public int CommandID;
             public string DisplayName = "";
             public bool Enabled = true;
+            public bool IgnoreDefaultTJSRequestScript = false;
         }
 
 

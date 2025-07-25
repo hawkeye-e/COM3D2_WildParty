@@ -84,7 +84,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
                     foreach (var skill in skillList)
                     {
-                        var cmd = CloneCommandButton(skill.DisplayName, new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeMainGroupSkill_Callback(skill.YotogiSkillID)));
+                        var cmd = CloneCommandButton(skill.DisplayName, new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeMainGroupSkill_Callback(skill.SexPosID, skill.YotogiSkillID)));
                         var btn = cmd.GetComponent<UIButton>();
                         if (skill.SexPosID == StateManager.Instance.PartyGroupList[0].SexPosID)
                         {
@@ -550,7 +550,7 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.WaitingAnimationTrigger = trigger;
         }
 
-        private static void ProcessChainedAction(string buttonID)
+        internal static void ProcessChainedAction(string buttonID)
         {
             string chainedActionCode = ModUseData.ExtraYotogiCommandDataList[buttonID].ChainedActionCode;
 

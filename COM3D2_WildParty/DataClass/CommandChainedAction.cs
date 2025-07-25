@@ -126,6 +126,7 @@ namespace COM3D2.WildParty.Plugin
             public PosRotVectorFormat Offset;
             public string Param;
             public bool IsSmoothAnimation = true;
+            public string IsSmoothAnimationParamName;
         }
 
         public class PositionInfo
@@ -134,6 +135,7 @@ namespace COM3D2.WildParty.Plugin
             public string DefinedPointParamName;        //If this value is set, will use the point name defined in the param
             public string DefinedPointName;
             public bool IsSmoothAnimation = true;
+            public string IsSmoothAnimationParamName;
         }
 
         public class TriggerSettingInfo

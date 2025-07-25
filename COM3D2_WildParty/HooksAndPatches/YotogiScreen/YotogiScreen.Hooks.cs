@@ -74,18 +74,26 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             Patches.InitExtraCommandButtons();
         }
 
-        //Check if there is any command override setting from this mod
+        
         [HarmonyPrefix]
         [HarmonyPatch(typeof(YotogiCommandFactory), nameof(YotogiCommandFactory.AddCommand))]
-        private static bool YotogiCommandFactoryAddCommandPre(Yotogis.Skill.Data.Command.Data command_data)
+        private static bool YotogiCommandFactoryAddCommandPre(Yotogis.Skill.Data.Command.Data command_data, string __state)
         {
+            //Backup and update the TJSScript Setting
+            __state = Patches.OverrideCommandTJSScriptSetting(command_data);
+
+            //Check if this command should be hidden based on the override setting of the mod
             return Patches.IsEnableCommand(command_data);
         }
 
         [HarmonyPostfix]
         [HarmonyPatch(typeof(YotogiCommandFactory), nameof(YotogiCommandFactory.AddCommand))]
-        private static void YotogiCommandFactoryAddCommandPost(YotogiCommandFactory __instance, Yotogis.Skill.Data.Command.Data command_data)
+        private static void YotogiCommandFactoryAddCommandPost(YotogiCommandFactory __instance, Yotogis.Skill.Data.Command.Data command_data, string __state)
         {
+            //Restore the TJSScript
+            if (!string.IsNullOrWhiteSpace(__state))
+                Traverse.Create(command_data.basic).Field("request_tjsscript").SetValue(__state);
+
             //For easy access the yotogi command factory object, we have to remember the instance here
             StateManager.Instance.YotogiCommandFactory = __instance;
         }

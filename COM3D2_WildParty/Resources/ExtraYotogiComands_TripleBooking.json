@@ -3,5 +3,1522 @@
     "CommandCode": "ChangePosition",
     "Name": "体位変更",
     "Type": "Common"
+  },
+
+  "SeijyouiKuti_ChangeMan1": {
+    "CommandCode": "ChainedAction",
+    "Name": "別の男と交代する（マンコ）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900010,
+        "SexPosIDs": [ 1 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Man1ExitingMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": ""
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+      {
+        "Name": "NewManOffsetJustBeforeJoin",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionJustBeforeJoin",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "ran3p_seijyoui_kuti_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": ""
+      },
+      {
+        "Name": "IsMan1ExitSmoothAnimation",
+        "Value": true
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MMF_Man1_No_Walk"
+  },
+
+  "SeijyouiKuti_ChangeMan2": {
+    "CommandCode": "ChainedAction",
+    "Name": "別の男と交代する（口）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900010,
+        "SexPosIDs": [ 1 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man2ExitingMotionOffset",
+        "Value": "-0.12, 0, 0.51| 0, -90, 0"
+      },
+      {
+        "Name": "Man2ExitingMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": ""
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+      {
+        "Name": "NewManOffsetJustBeforeJoin",
+        "Value": "-0.12, 0, 0.51| 0, -90, 0"
+      },
+      {
+        "Name": "NewManStandingMotionJustBeforeJoin",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "0.12, 0.1, -0.51| 0, 90, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "ran3p_seijyoui_kuti_taiki_m2.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": ""
+      },
+      {
+        "Name": "IsMan2ExitSmoothAnimation",
+        "Value": false
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MMF_Man2_No_Walk"
+  },
+
+  "2AnaKakae_ChangeMan2": {
+    "CommandCode": "ChainedAction",
+    "Name": "別の男と交代する（マンコ）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900010,
+        "SexPosIDs": [ 2 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man2ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Man2ExitingMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": ""
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, -0.2, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+      {
+        "Name": "NewManOffsetJustBeforeJoin",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionJustBeforeJoin",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "ran3p_2ana_kakae_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": ""
+      },
+      {
+        "Name": "IsMan2ExitSmoothAnimation",
+        "Value": true
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MMF_Man2_No_Walk"
+  },
+
+
+  "2Ana_ChangeMan2": {
+    "CommandCode": "ChainedAction",
+    "Name": "別の男と交代する（アナル）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900010,
+        "SexPosIDs": [ 3 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man2ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Man2ExitingMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": ""
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+      {
+        "Name": "NewManOffsetJustBeforeJoin",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionJustBeforeJoin",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "ran3p_2ana_taiki_m2.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": ""
+      },
+      {
+        "Name": "IsMan2ExitSmoothAnimation",
+        "Value": true
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MMF_Man2_No_Walk"
+  },
+
+  "Ude2Ana_ChangeMan2": {
+    "CommandCode": "ChainedAction",
+    "Name": "別の男と交代する（アナル）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900010,
+        "SexPosIDs": [ 4 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man2ExitingMotionOffset",
+        "Value": "0, -0.2, 0.5| 0, 0, 0"
+      },
+      {
+        "Name": "Man2ExitingMotion",
+        "Value": "siriname_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": ""
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, -0.2, -0.5| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+      {
+        "Name": "NewManOffsetJustBeforeJoin",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionJustBeforeJoin",
+        "Value": "siriname_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "ran3p_ude_2ana_taiki_m2.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": ""
+      },
+      {
+        "Name": "IsMan2ExitSmoothAnimation",
+        "Value": true
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MMF_Man2_No_Walk"
+  },
+
+
+
+  "Udemoti_Kouhaii_ChangeMan1": {
+    "CommandCode": "ChainedAction",
+    "Name": "別の男と交代する（マンコ）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900010,
+        "SexPosIDs": [ 5 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Man1ExitingMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": ""
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+      {
+        "Name": "NewManOffsetJustBeforeJoin",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionJustBeforeJoin",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "ran3p_udemoti_kouhaii_fera_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": ""
+      },
+      {
+        "Name": "IsMan1ExitSmoothAnimation",
+        "Value": true
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MMF_Man1_No_Walk"
+  },
+
+  "Udemoti_Kouhaii_ChangeMan2": {
+    "CommandCode": "ChainedAction",
+    "Name": "別の男と交代する（口）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900010,
+        "SexPosIDs": [ 5 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man2ExitingMotionOffset",
+        "Value": "0, 0, 0.83| 0, 0, 0"
+      },
+      {
+        "Name": "Man2ExitingMotion",
+        "Value": "siriname_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": ""
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+      {
+        "Name": "NewManOffsetJustBeforeJoin",
+        "Value": "0, 0, 0.83| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionJustBeforeJoin",
+        "Value": "siriname_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "0, 0, -0.83| 0, 0, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "ran3p_udemoti_kouhaii_fera_taiki_m2.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": ""
+      },
+      {
+        "Name": "IsMan2ExitSmoothAnimation",
+        "Value": false
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MMF_Man2_No_Walk"
+  },
+
+  "Kijyoui_Kuti_ChangeMan1": {
+    "CommandCode": "ChainedAction",
+    "Name": "別の男と交代する（口）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900010,
+        "SexPosIDs": [ 6 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man1ExitingMotionOffset",
+        "Value": "0, 0, 0.09| 0, -90, 0"
+      },
+      {
+        "Name": "Man1ExitingMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": ""
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+      {
+        "Name": "NewManOffsetJustBeforeJoin",
+        "Value": "0, 0, 0.09| 0, -90, 0"
+      },
+      {
+        "Name": "NewManStandingMotionJustBeforeJoin",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "0, 0, -0.09| 0, 90, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "ran3p_kijyoui_kuti_taiki_m2.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": ""
+      },
+      {
+        "Name": "IsMan1ExitSmoothAnimation",
+        "Value": true
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MMF_Man1_No_Walk"
+  },
+
+  "Kijyoui_Aibu_ChangeMan1": {
+    "CommandCode": "ChainedAction",
+    "Name": "別の男と交代する（愛撫）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900010,
+        "SexPosIDs": [ 7 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man1ExitingMotionOffset",
+        "Value": "0, -0.2, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Man1ExitingMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": ""
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+      {
+        "Name": "NewManOffsetJustBeforeJoin",
+        "Value": "0, -0.2, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionJustBeforeJoin",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "0, 0.2, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "ran3p_kijyoui_aibu_taiki_m2.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": ""
+      },
+      {
+        "Name": "IsMan1ExitSmoothAnimation",
+        "Value": true
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MMF_Man1_No_Walk"
+  },
+
+  "Kaikyaku_ChangeMan1": {
+    "CommandCode": "ChainedAction",
+    "Name": "別の男と交代する（愛撫）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900010,
+        "SexPosIDs": [ 8 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man1ExitingMotionOffset",
+        "Value": "0.49, -0.25, 0.54| 0, -90, 0"
+      },
+      {
+        "Name": "Man1ExitingMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": ""
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+      {
+        "Name": "NewManOffsetJustBeforeJoin",
+        "Value": "0.49, -0.25, 0.54| 0, -90, 0"
+      },
+      {
+        "Name": "NewManStandingMotionJustBeforeJoin",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "-0.49, 0.25, -0.54| 0, 90, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "ran3p_kaikyaku_sex_taiki_m2.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": ""
+      },
+      {
+        "Name": "IsMan1ExitSmoothAnimation",
+        "Value": true
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MMF_Man1_No_Walk"
+  },
+
+  "MuriSeijyoui_ChangeMan2": {
+    "CommandCode": "ChainedAction",
+    "Name": "別の男と交代する（マンコ）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900010,
+        "SexPosIDs": [ 9 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man2ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Man2ExitingMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": ""
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+      {
+        "Name": "NewManOffsetJustBeforeJoin",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionJustBeforeJoin",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "muri_3p_seijyoui_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": ""
+      },
+      {
+        "Name": "IsMan1ExitSmoothAnimation",
+        "Value": true
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MMF_Man2_No_Walk"
+  },
+
+  "MuriSeijyoui_ChangeMan1": {
+    "CommandCode": "ChainedAction",
+    "Name": "別の男と交代する（押さえる）",
+    "Type": "Common",
+    "Constraint": [
+      {
+        "EventID": 9900010,
+        "SexPosIDs": [ 9 ]
+      }
+    ],
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NextExtraMan_Group",
+        "Value": 0
+      },
+
+      {
+        "Name": "Man1ExitingMotionOffset",
+        "Value": "0, 0, 1.27| 0, 0, 0"
+      },
+      {
+        "Name": "Man1ExitingMotion",
+        "Value": "siriname_taiki_m.anm"
+      },
+
+      {
+        "Name": "Maid1ExitingMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ExitingMotion",
+        "Value": ""
+      },
+
+      {
+        "Name": "NewManBeforeJoinMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "NewManBeforeJoinMotion",
+        "Value": "turusi_sex_taiki_m.anm"
+      },
+      {
+        "Name": "NewManOffsetJustBeforeJoin",
+        "Value": "0, 0, 1.27| 0, 0, 0"
+      },
+      {
+        "Name": "NewManStandingMotionJustBeforeJoin",
+        "Value": "siriname_taiki_m.anm"
+      },
+
+
+      {
+        "Name": "NewManReadyMotionOffset",
+        "Value": "0, 0, -1.27| 0, 0, 0"
+      },
+      {
+        "Name": "NewManReadyMotion",
+        "Value": "muri_3p_seijyoui_taiki_m2.anm"
+      },
+
+      {
+        "Name": "Maid1ReadyMotionOffset",
+        "Value": "0, 0, 0| 0, 0, 0"
+      },
+      {
+        "Name": "Maid1ReadyMotion",
+        "Value": ""
+      },
+      {
+        "Name": "IsMan1ExitSmoothAnimation",
+        "Value": false
+      }
+    ],
+
+    "ChainedActionCode": "Common_ChangeMan_MMF_Man1_No_Walk"
+  },
+
+
+
+
+
+
+
+  "To_SeijyouiKuti_Common": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 4, 5, 6, 7 ],
+      "TargetSexPosID": 1
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 1
+      }
+    ],
+    "ChainedActionCode": "Common_Change_SexPos"
+  },
+
+
+  "To_SeijyouiKuti_ManSwap": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 2, 3, 8, 9 ],
+      "TargetSexPosID": 1
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 1
+      }
+    ],
+    "ChainedActionCode": "Common_Change_3PSexPos_With_Man_Swap_Waiting"
+  },
+
+
+
+
+  "To_2AnaKakae_Common": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 3, 9 ],
+      "TargetSexPosID": 2
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 2
+      }
+    ],
+    "ChainedActionCode": "Common_Change_SexPos"
+  },
+
+  "To_2AnaKakae_ManSwap": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 1, 4, 5, 6, 7, 8 ],
+      "TargetSexPosID": 2
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 2
+      }
+    ],
+    "ChainedActionCode": "Common_Change_3PSexPos_With_Man_Swap_Waiting"
+  },
+
+
+
+
+  "To_2Ana_Common": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 2, 9 ],
+      "TargetSexPosID": 3
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 3
+      }
+    ],
+    "ChainedActionCode": "Common_Change_SexPos"
+  },
+
+  "To_2Ana_ManSwap": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 1, 4, 5, 6, 7, 8 ],
+      "TargetSexPosID": 3
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 3
+      }
+    ],
+    "ChainedActionCode": "Common_Change_3PSexPos_With_Man_Swap_Waiting"
+  },
+
+
+  "To_Ude2Ana_Connect_Motion": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 1, 5, 6 ],
+      "TargetSexPosID": 4
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 4
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "ran3p_ude_2ana_taiki_m.anm"
+      },
+      {
+        "Name": "Man2Motion",
+        "Value": "ran3p_ude_2ana_taiki_m2.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "ran3p_ude_2ana_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0.2, 0| 0,0,0"
+      },
+      {
+        "Name": "Man2MotionOffset",
+        "Value": "0, 0.2, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0.2, 0| 0,0,0"
+      }
+    ],
+    "ChainedActionCode": "Common_Change_3PSexPos_With_Connecting_Motion"
+  },
+
+  "To_Ude2Ana_Connect_Motion_2": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 7, 8 ],
+      "TargetSexPosID": 4
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 4
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "ran3p_ude_2ana_taiki_m.anm"
+      },
+      {
+        "Name": "Man2Motion",
+        "Value": "ran3p_ude_2ana_taiki_m2.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "ran3p_ude_2ana_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Man2MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      }
+    ],
+    "ChainedActionCode": "Common_Change_3PSexPos_With_Connecting_Motion"
+  },
+
+  "To_Ude2Ana_ManSwap_Connect_Motion": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 2 ],
+      "TargetSexPosID": 4
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 4
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "ran3p_ude_2ana_taiki_m.anm"
+      },
+      {
+        "Name": "Man2Motion",
+        "Value": "ran3p_ude_2ana_taiki_m2.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "ran3p_ude_2ana_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Man2MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0, 0| 0,0,0"
+      }
+    ],
+    "ChainedActionCode": "Common_Change_3PSexPos_With_Man_Swap_Connecting_Motion"
+  },
+
+  "To_Ude2Ana_ManSwap_Connect_Motion_2": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 3, 9 ],
+      "TargetSexPosID": 4
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 4
+      },
+      {
+        "Name": "Man1Motion",
+        "Value": "ran3p_ude_2ana_taiki_m.anm"
+      },
+      {
+        "Name": "Man2Motion",
+        "Value": "ran3p_ude_2ana_taiki_m2.anm"
+      },
+      {
+        "Name": "Maid1Motion",
+        "Value": "ran3p_ude_2ana_taiki_f.anm"
+      },
+      {
+        "Name": "Man1MotionOffset",
+        "Value": "0, 0.2, 0| 0,0,0"
+      },
+      {
+        "Name": "Man2MotionOffset",
+        "Value": "0, 0.2, 0| 0,0,0"
+      },
+      {
+        "Name": "Maid1MotionOffset",
+        "Value": "0, 0.2, 0| 0,0,0"
+      }
+    ],
+    "ChainedActionCode": "Common_Change_3PSexPos_With_Man_Swap_Connecting_Motion"
+  },
+
+
+
+
+
+
+
+  "To_Udemoti_Kouhaii_Common": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 1, 4, 6, 7, 8 ],
+      "TargetSexPosID": 5
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 5
+      }
+    ],
+    "ChainedActionCode": "Common_Change_SexPos"
+  },
+
+  "To_Udemoti_Kouhaii_ManSwap": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 2, 3, 9 ],
+      "TargetSexPosID": 5
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 5
+      }
+    ],
+    "ChainedActionCode": "Common_Change_3PSexPos_With_Man_Swap_Waiting"
+  },
+
+
+
+
+  "To_Kijyoui_Kuti_Common": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 1, 4, 5, 7, 8 ],
+      "TargetSexPosID": 6
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 6
+      }
+    ],
+    "ChainedActionCode": "Common_Change_SexPos"
+  },
+
+  "To_Kijyoui_Kuti_ManSwap": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 2, 3, 9 ],
+      "TargetSexPosID": 6
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 6
+      }
+    ],
+    "ChainedActionCode": "Common_Change_3PSexPos_With_Man_Swap_Waiting"
+  },
+
+
+
+
+  "To_Kijyoui_Aibu_Common": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 1, 4, 5, 6, 8 ],
+      "TargetSexPosID": 7
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 7
+      }
+    ],
+    "ChainedActionCode": "Common_Change_SexPos"
+  },
+
+  "To_Kijyoui_Aibu_ManSwap": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 2, 3, 9 ],
+      "TargetSexPosID": 7
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 7
+      }
+    ],
+    "ChainedActionCode": "Common_Change_3PSexPos_With_Man_Swap_Waiting"
+  },
+
+
+
+
+  "To_Kaikyaku_Common": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 4, 5, 6, 7 ],
+      "TargetSexPosID": 8
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 8
+      }
+    ],
+    "ChainedActionCode": "Common_Change_SexPos"
+  },
+
+  "To_Kaikyaku_ManSwap": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 1, 2, 3, 9 ],
+      "TargetSexPosID": 8
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 8
+      }
+    ],
+    "ChainedActionCode": "Common_Change_3PSexPos_With_Man_Swap_Waiting"
+  },
+
+
+
+
+  "To_MuriSeijyoui_Common": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 2, 3 ],
+      "TargetSexPosID": 9
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 9
+      }
+    ],
+    "ChainedActionCode": "Common_Change_SexPos"
+  },
+
+
+  "To_MuriSeijyoui_ManSwap": {
+    "CommandCode": "ChangePosition",
+    "IsGenericListCommand": true,
+    "GenericCommandSetting": {
+      "SourceSexPosIDs": [ 1, 4, 5, 6, 7, 8 ],
+      "TargetSexPosID": 9
+    },
+    "Parameters": [
+      {
+        "Name": "PrimaryGroup",
+        "Value": 0
+      },
+      {
+        "Name": "NewSexPosID",
+        "Value": 9
+      }
+    ],
+    "ChainedActionCode": "Common_Change_3PSexPos_With_Man_Swap_Waiting"
   }
+
 }

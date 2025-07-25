@@ -13,28 +13,41 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                foreach (var group in StateManager.Instance.PartyGroupList)
+                PartyGroup targetGroup = null;
+                if (StateManager.Instance.IsMainGroupMotionScriptFlag)
                 {
-                    if (group.Man1?.status.guid == StateManager.Instance.processingManGUID)
+                    targetGroup = StateManager.Instance.PartyGroupList[0];
+                }
+                else
+                {
+                    foreach (var group in StateManager.Instance.PartyGroupList)
                     {
-                        if (group.SexPosID >= 0)
+                        if (group.Man1?.status.guid == StateManager.Instance.processingManGUID)
                         {
-                            //If it is a hit, determine which man in the group is returned
-                            BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
-                            
-                            for (int i = 0; i < motionItem.ManIndex.Count; i++)
-                                if (motionItem.ManIndex[i] == manNo)
-                                {
-                                    result = group.GetManAtIndex(i);
-                                    return;
-                                }
+                            targetGroup = group;
                         }
-                        else
-                        {
-                            //For the case of it is not a yotogi motion
-                            result = group.GetManAtIndex(manNo);
-                            return;
-                        }
+                    }
+                }
+
+                if (targetGroup != null)
+                {
+                    if (targetGroup.SexPosID >= 0)
+                    {
+                        //If it is a hit, determine which man in the group is returned
+                        BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(targetGroup.SexPosID);
+
+                        for (int i = 0; i < motionItem.ManIndex.Count; i++)
+                            if (motionItem.ManIndex[i] == manNo)
+                            {
+                                result = targetGroup.GetManAtIndex(i);
+                                return;
+                            }
+                    }
+                    else
+                    {
+                        //For the case of it is not a yotogi motion
+                        result = targetGroup.GetManAtIndex(manNo);
+                        return;
                     }
                 }
 

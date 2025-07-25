@@ -1244,7 +1244,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
                     LoadMotionScript(0, false, motionInfo.ScriptFile, motionInfo.ScriptLabel, maidGUID, manGUID, false, false, false, false);
                 }
-                else
+                else if (!string.IsNullOrEmpty(motionInfo.MotionFile))
                 {
                     PlayAnimation(maid, motionInfo.MotionFile, motionInfo.MotionTag, motionInfo.IsLoopMotion, motionInfo.IsBlend, motionInfo.IsQueued);
                     maid.body0.SetAnimeTime(0, motionInfo.StartTime);

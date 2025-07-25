@@ -21,6 +21,9 @@ namespace COM3D2.WildParty.Plugin
         public List<CommandParameters> Parameters;              //Use in ChainedAction
         public TriggerConditionInfo TriggerConditions;    //If this is not null, the button will only be enabled if conditions are met
 
+        public bool IsGenericListCommand = false;               //True if this command data is for handling the cases in a generic list
+        public GenericCommandInfo GenericCommandSetting;
+
         public class ConditionCheck
         {
             public string Field;
@@ -30,7 +33,7 @@ namespace COM3D2.WildParty.Plugin
         public class ConstraintSetting
         {
             public int EventID;
-            public List<int> SexPosIDs;
+            public List<int> SexPosIDs;   
         }
 
         public class OrgasmSettingInfo
@@ -76,6 +79,12 @@ namespace COM3D2.WildParty.Plugin
                 public int MaxExcite = 300;         //The current excite need to stay below the Max value to show the button
                 public int MinExcite = -100;        //The current excite need to stay above the Min value to show the button
             }
+        }
+
+        public class GenericCommandInfo
+        {
+            public List<int> SourceSexPosIDs;
+            public int TargetSexPosID;
         }
     }
 }

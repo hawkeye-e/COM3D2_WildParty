@@ -49,7 +49,7 @@
     "ID": "trbo_intro_0004",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "trbo_intro_yotogiplay_closepanel",
+    "NextStepID": "trbo_intro_hidemaster",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
       "Text": "Ç†ÇÈí©ÅEÇ≤éÂêlólÇÃïîâÆ"
@@ -60,6 +60,23 @@
     }
   },
 
+  "trbo_intro_hidemaster": {
+    "ID": "trbo_intro_hidemaster",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_yotogiplay_closepanel",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": false,
+        "WaitLoad": true,
+        "IsManNude": false
+      }
+    ]
+  },
 
 
 

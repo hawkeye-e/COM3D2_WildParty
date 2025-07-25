@@ -1,10 +1,10 @@
-﻿using System;
+﻿using BepInEx.Logging;
+using COM3D2.WildParty.Plugin.Trigger;
+using HarmonyLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using BepInEx.Logging;
-using COM3D2.WildParty.Plugin.Trigger;
-using HarmonyLib;
 using UnityEngine;
 
 namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
@@ -1252,6 +1252,27 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             }
 
             return originalResult;
+        }
+
+        internal static string OverrideCommandTJSScriptSetting(Yotogis.Skill.Data.Command.Data command_data)
+        {
+            string original_script = "";
+            YotogiCommandDataOverride overrideInfo = ModUseData.YotogiCommandDataOverrideList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).FirstOrDefault();
+            if (overrideInfo != null)
+            {
+                YotogiCommandDataOverride.OverrideData info = overrideInfo.Override.Where(x => x.SkillID == command_data.basic.skill_id && x.CommandID == command_data.basic.id).FirstOrDefault();
+
+                if (info != null)
+                {
+                    if (info.IgnoreDefaultTJSRequestScript)
+                    {
+                        original_script = command_data.basic.request_tjsscript;
+
+                        Traverse.Create(command_data.basic).Field("request_tjsscript").SetValue(null);
+                    }
+                }
+            }
+            return original_script;
         }
 
         internal static void ResetGroupIK()

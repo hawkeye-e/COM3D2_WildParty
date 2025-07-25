@@ -139,7 +139,7 @@ namespace COM3D2.WildParty.Plugin.Core
                         motionInfo.MotionTag = fileName.ToLower();
                     }
                 }
-                                    
+
                 CharacterHandling.ApplyMotionInfoToCharacter(targetMaid, motionInfo);
             }
 
@@ -230,10 +230,15 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
                 
                 Quaternion newRotation = targetMaid.transform.rotation * Quaternion.Euler(Vector3.up * rotationOffset.y);
-                
-                if (stepInfo.OffsetInfo.IsSmoothAnimation)
-                {
 
+                bool isSmoothAnimation = stepInfo.OffsetInfo.IsSmoothAnimation;
+                if (!string.IsNullOrEmpty(stepInfo.OffsetInfo.IsSmoothAnimationParamName))
+                    if (ProcessingDict[guid].Parameters.ContainsKey(stepInfo.OffsetInfo.IsSmoothAnimationParamName))
+                        isSmoothAnimation = Convert.ToBoolean(ProcessingDict[guid].Parameters[stepInfo.OffsetInfo.IsSmoothAnimationParamName]);
+
+                if (isSmoothAnimation)
+                {
+                    
                     Util.SmoothMoveMaidPosition(targetMaid, targetMaid.transform.position + positionOffset, newRotation);
                 }
                 else {
@@ -288,8 +293,13 @@ namespace COM3D2.WildParty.Plugin.Core
                         }
                     }
 
+                    bool isSmoothAnimation = stepInfo.PositionInfo.IsSmoothAnimation;
+                    if (!string.IsNullOrEmpty(stepInfo.PositionInfo.IsSmoothAnimationParamName))
+                        if (ProcessingDict[guid].Parameters.ContainsKey(stepInfo.PositionInfo.IsSmoothAnimationParamName))
+                            isSmoothAnimation = Convert.ToBoolean(ProcessingDict[guid].Parameters[stepInfo.PositionInfo.IsSmoothAnimationParamName]);
+
                     //Apply the change
-                    if (stepInfo.PositionInfo.IsSmoothAnimation)
+                    if (isSmoothAnimation)
                         Util.SmoothMoveMaidPosition(targetMaid, newPosition, newRotation);
                     else
                     {
