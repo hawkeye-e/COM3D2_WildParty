@@ -247,6 +247,10 @@ namespace COM3D2.WildParty.Plugin
 
         private static readonly string[] ScenarioTripleBookingResList = {
             ScenarioResources.ScenarioTripleBooking.TripleBookingADVIntro,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADVIntroHotel,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADVPostYotogi,
+
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Muku,
         };
 
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)

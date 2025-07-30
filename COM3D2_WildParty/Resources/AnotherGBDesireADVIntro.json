@@ -16,12 +16,17 @@
       "IsClubOwnerADVMainCharacter": false,
       "ManRequired": 32,
       "ValidManType": [
-        "YoungMan",
-        "Yanki",
-        "MiddleAged",
-        "Otaku"
+        {
+          "Type": [
+            "YoungMan",
+            "Yanki",
+            "MiddleAged",
+            "Otaku"
+          ],
+          "Count": 32,
+          "ValidManConfigKey": "HappyGBClubManType"
+        }
       ],
-      "ValidManConfigKey": "HappyGBClubManType",
       "ModNPC": [
         {
           "Index": 0,

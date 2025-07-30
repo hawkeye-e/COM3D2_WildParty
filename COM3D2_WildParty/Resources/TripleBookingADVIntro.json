@@ -2,7 +2,7 @@
   "trbo0001": {
     "ID": "trbo0001",
     "Type": "BG",
-    "Tag": "MyRoom",
+    "Tag": "EmpireClub_Entrance",
     "WaitingType": "Auto",
     "NextStepID": "trbo0001_init_chara"
   },
@@ -16,7 +16,29 @@
       "IsClubOwnerADVMainCharacter": false,
       "ManRequired": 3,
       "ValidManType": [
-        "YoungMan"
+        {
+          "Type": [ "Playboy" ],
+          "Count": 1,
+          "ValidManConfigKey": "TripleBookingCharaOManType"
+        },
+        {
+          "Type": [ "MiddleAged" ],
+          "Count": 1,
+          "ValidManConfigKey": "TripleBookingMiddleAgedManType"
+        },
+        {
+          "Type": [ "Otaku" ],
+          "Count": 1,
+          "ValidManConfigKey": "TripleBookingOtakuManType"
+        }
+      ],
+      "NPC": [
+        {
+          "Index": 0,
+          "Preset": "pre_mobA",
+          "EmptyLastName": true,
+          "Name": "見習いメイド"
+        }
       ]
     }
   },
@@ -24,17 +46,17 @@
   "trbo_intro_0001": {
     "ID": "trbo_intro_0001",
     "Type": "BGM",
-    "Tag": "BGM015.ogg",
+    "Tag": "BGM013.ogg",
     "WaitingType": "Auto",
-    "NextStepID": "trbo_intro_0003"
+    "NextStepID": "trbo_intro_0002"
   },
 
 
-  "trbo_intro_0003": {
-    "ID": "trbo_intro_0003",
+  "trbo_intro_0002": {
+    "ID": "trbo_intro_0002",
     "Type": "Camera",
     "WaitingType": "Auto",
-    "NextStepID": "trbo_intro_0004",
+    "NextStepID": "trbo_intro_0003",
     "CameraData": {
       "FixedPointData": {
         "PosString": "999,999,999",
@@ -45,14 +67,14 @@
     }
   },
 
-  "trbo_intro_0004": {
-    "ID": "trbo_intro_0004",
+  "trbo_intro_0003": {
+    "ID": "trbo_intro_0003",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "trbo_intro_hidemaster",
+    "NextStepID": "trbo_intro_0004",
     "TalkData": {
-      "SpecificSpeaker": "Narrative",
-      "Text": "ある朝・ご主人様の部屋"
+      "SpecificSpeaker": "Owner",
+      "Text": "（大感謝祭の後、[=ClubName]はますます有名になり、より多くのお客様を獲得しました。）"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -60,46 +82,687 @@
     }
   },
 
-  "trbo_intro_hidemaster": {
-    "ID": "trbo_intro_hidemaster",
+  "trbo_intro_0004": {
+    "ID": "trbo_intro_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0005",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（今日のクラブはいつも通り忙しい。俺は執務室の外に出て、色んな場所をチェックした。）"
+    }
+  },
+
+  "trbo_intro_0005": {
+    "ID": "trbo_intro_0005",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0006",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（突然、エントランスから言い争う声が聞こえた。）"
+    }
+  },
+
+  "trbo_intro_0006": {
+    "ID": "trbo_intro_0006",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_intro_0007",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "trbo_intro_0007": {
+    "ID": "trbo_intro_0007",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "trbo_intro_yotogiplay_closepanel",
+    "NextStepID": "trbo_intro_0008",
     "CharaData": [
       {
         "Type": "M",
         "IsMaster": true,
         "ArrayPosition": 0,
-        "Visible": false,
+        "Visible": true,
         "WaitLoad": true,
-        "IsManNude": false
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-2.17, 0.00, 1.38",
+          "RotString": "0, 0.244, 0, 0.970"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿チャラ男"
+        },
+        "PosRot": {
+          "PosString": "-2.17, 0.00, 2.29",
+          "RotString": "0, 0.933, 0, 0.360"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-1.28, 0.00, 2.97",
+          "RotString": "0, 0.995, 0, -0.097"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-0.31, 0.00, 2.49",
+          "RotString": "0, -0.930, 0, 0.368"
+        }
+      },
+
+
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-0.51, 0.00, 0.97",
+          "RotString": "0, -0.178, 0, 0.984"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 1
+          }
+        }
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "困った",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち指を合わせる"
+        },
+        "PosRot": {
+          "PosString": "-1.14, 0.00, 1.61",
+          "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 1
+          }
+        }
+      }
+
+    ]
+  },
+
+  "trbo_intro_0008": {
+    "ID": "trbo_intro_0008",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_0009",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-3.19, 2.14, 4.88",
+        "TargetPosString": "-0.45, 0.69, 0.83",
+        "AroundAngleString": "145.87, 16.52",
+        "Distance": 5.1
+      }
+    }
+  },
+
+  "trbo_intro_0009": {
+    "ID": "trbo_intro_0009",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0010",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（慌てて駆けつけると、[=Name,Maid,0,CallName]と見習いメイド、そして３人のお客様がいた。お客様たちは少し怒っているようだ。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_intro_0010": {
+    "ID": "trbo_intro_0010",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0011",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "だから何回も言った、次はオレの番だ！[=Name,Maid,0,CallName]ちゃんを予約したのはオレだ！"
+    }
+  },
+
+  "trbo_intro_0011": {
+    "ID": "trbo_intro_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0012",
+    "TalkData": {
+      "SpeakerName": "気弱な男",
+      "Text": "ちょっと待て…次は僕の時間だよ…僕も[=Name,Maid,0,CallName]ちゃんを予約した…"
+    }
+  },
+
+  "trbo_intro_0012": {
+    "ID": "trbo_intro_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0013",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "はぁ～～～～？"
+    }
+  },
+
+  "trbo_intro_0013": {
+    "ID": "trbo_intro_0013",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0014",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "君たち黙ってろ。どうやって作ったのか知らないが、俺は本当の予約を持っている。俺の番が先だ、俺の時間の方は彼らより貴重なんだ。"
+    }
+  },
+
+  "trbo_intro_0014": {
+    "ID": "trbo_intro_0014",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0015",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "はぁ～？！なに言ってんだでめぇ！"
+    }
+  },
+
+  "trbo_intro_0015": {
+    "ID": "trbo_intro_0015",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0016",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 0,
+      "Text": "あれ～？",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "H2_mob_00005.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        }
+      }
+    }
+  },
+
+  "trbo_intro_0016": {
+    "ID": "trbo_intro_0016",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0017",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あの、すみません、何か問題がおありでしょうか？"
+    }
+  },
+
+  "trbo_intro_0017": {
+    "ID": "trbo_intro_0017",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0018",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "あ、オーナーさん！ちょうどいいところに来た！君のスタッフは何かの重大なミスを犯した。何とかしてくれ！"
+    }
+  },
+
+  "trbo_intro_0018": {
+    "ID": "trbo_intro_0018",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0019",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "ああ！ミスだ！これは…なんだっけ？"
+    }
+  },
+
+  "trbo_intro_0019": {
+    "ID": "trbo_intro_0019",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0020",
+    "TalkData": {
+      "SpeakerName": "気弱な男",
+      "Text": "トリプルブッキング…"
+    }
+  },
+
+  "trbo_intro_0020": {
+    "ID": "trbo_intro_0020",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0021",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "……名前なんてどうでもいい！さっさと解決しろ！"
+    }
+  },
+
+  "trbo_intro_0021": {
+    "ID": "trbo_intro_0021",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0022",
+    "TalkData": {
+      "SpeakerName": "気弱な男",
+      "Text": "そうだ…もし待たせるなら、SNSで拡散するぞ！これ絶対に炎上するぞ！"
+    }
+  },
+
+  "trbo_intro_0022": {
+    "ID": "trbo_intro_0022",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_0023",
+    "CharaData": [
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": { "Type": "ClubOwner" }
+        },
+        "PosRot": {
+          "PosString": "-1.14, 0.00, 1.61",
+          "RotString": "0, -0.723, 0, 0.691"
+        },
+        "SmoothMovement": { "Time": 1 }
       }
     ]
   },
 
-
-
-  "trbo_intro_yotogiplay_closepanel": {
-    "ID": "trbo_intro_yotogiplay_closepanel",
-    "Type": "CloseMsgPanel",
-    "WaitingType": "Auto",
-    "NextStepID": "trbo_start_yotogiplay"
+  "trbo_intro_0023": {
+    "ID": "trbo_intro_0023",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0024",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_F",
+      "Index": 0,
+      "Text": "私はどうすればいい～？　ご主人様、指示をお願い。",
+      "VoiceData": {
+        "NPC": {
+          "VoiceFile": "H2_mob_00007.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
   },
 
-  "trbo_start_yotogiplay": {
-    "ID": "trbo_start_yotogiplay",
-    "Type": "LoadYotogi",
-    "Tag": "SceneYotogi",
-    "WaitingType": "LoadScene",
-    "YotogiSetup": {
-      "YotogiCode": "TripleBooking",
-      "Phase": 1,
-      "IsKeepCharacterVisibleAfterYotogi": false,
-      "IsClubOwnerMainCharacter": false
-    },
-    "NextStepID": "trbo_postyotogi_init"
-  }
+  "trbo_intro_0024": {
+    "ID": "trbo_intro_0024",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0025",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "お客様、まずは落ち着いていただけますか？"
+    }
+  },
 
+  "trbo_intro_0025": {
+    "ID": "trbo_intro_0025",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0026_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（トリプルブッキング？なぜこんなことが起きた？…まぁ、とりあえず、彼らに納得する解決策を考えよう…）"
+    }
+  },
+
+  "trbo_intro_0026_Branch": {
+    "ID": "trbo_intro_0026_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_0030_M_[=PType]"
+  },
+
+  "trbo_intro_0041": {
+    "ID": "trbo_intro_0041",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0042",
+    "TalkData": {
+      "SpeakerName": "",
+      "Text": "気弱な男：え？\nチャラ男：は？\n中年男：…"
+    }
+  },
+
+  "trbo_intro_0042": {
+    "ID": "trbo_intro_0042",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_0043",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "微笑み",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "通常",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-1.14, 0.00, 1.61",
+          "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 1
+          }
+        },
+        "SmoothMovement": { "Time": 1 }
+      }
+
+    ]
+  },
+
+  "trbo_intro_0043": {
+    "ID": "trbo_intro_0043",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0044",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（なんど衝撃的な発言！…大丈夫か？……うーん、暴力的な客ではなさそうので、これはいい方法かもしれない…）"
+    }
+  },
+
+  "trbo_intro_0044": {
+    "ID": "trbo_intro_0044",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0045",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（でも彼らは受け入れるか？すべてのお客様が一緒にヤるのが好きなわけではないだろ…）"
+    }
+  },
+
+  "trbo_intro_0045": {
+    "ID": "trbo_intro_0045",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0046",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "…では皆さん、この提案はいかがでしょうか？…"
+    }
+  },
+
+  "trbo_intro_0046": {
+    "ID": "trbo_intro_0046",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0047",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "まあ…待たされないなら俺は問題ない。"
+    }
+  },
+
+  "trbo_intro_0047": {
+    "ID": "trbo_intro_0047",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0048",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "オレもだ。乱交は普段もやってるから全然オッケーだぜ。じゃあ、オタクくんは？"
+    }
+  },
+
+  "trbo_intro_0048": {
+    "ID": "trbo_intro_0048",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0049",
+    "TalkData": {
+      "SpeakerName": "気弱な男",
+      "Text": "え？オタクくん？僕のこと？"
+    }
+  },
+
+  "trbo_intro_0049": {
+    "ID": "trbo_intro_0049",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0050",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "お前以外に誰がオタクっぽい人いるんか？…お前はどう？"
+    }
+  },
+
+  "trbo_intro_0050": {
+    "ID": "trbo_intro_0050",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0051",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "僕は……その……"
+    }
+  },
+
+  "trbo_intro_0051": {
+    "ID": "trbo_intro_0051",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0052",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（うーん…その顔…多分こんなことが嫌いだろ。）"
+    }
+  },
+
+  "trbo_intro_0052": {
+    "ID": "trbo_intro_0052",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0053",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "チッ…オタクくん、時間を無駄にするな！はっきり言え！イヤなら終わるまで待ってな！"
+    }
+  },
+
+  "trbo_intro_0053": {
+    "ID": "trbo_intro_0053",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0054",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "…くぅ…[=Name,Maid,0,CallName]ちゃんをお前たちに渡さない！"
+    }
+  },
+
+  "trbo_intro_0054": {
+    "ID": "trbo_intro_0054",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0055",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "何言ってるだ君は。最初から君のものじゃないだろう。"
+    }
+  },
+
+  "trbo_intro_0055": {
+    "ID": "trbo_intro_0055",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0056",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "あーあ！わかった！わかった！僕も同意だ！"
+    }
+  },
+
+  "trbo_intro_0056": {
+    "ID": "trbo_intro_0056",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0057",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "承知いたしました。ご迷惑をおかけして申し訳ございません。では料金は同じですが、3時間コースに延長されます。いかがでしょうか？"
+    }
+  },
+
+  "trbo_intro_0057": {
+    "ID": "trbo_intro_0057",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0058_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（３人のお客様はうなずき、同意した。）"
+    }
+  },
+
+  "trbo_intro_0058_Branch": {
+    "ID": "trbo_intro_0058_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_0060_M_[=PType]"
+  },
+
+  "trbo_intro_0061": {
+    "ID": "trbo_intro_0061",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_intro_0062",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "trbo_intro_0062": {
+    "ID": "trbo_intro_0062",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_0063",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "trbo_intro_0063": {
+    "ID": "trbo_intro_0063",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0064",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（うーん…大丈夫かな……万が一のために、彼らの部屋を時々チェックしておく…）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_intro_0064": {
+    "ID": "trbo_intro_0064",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_intro_hotel_0001",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  }
 
 }

@@ -16,7 +16,12 @@
       "IsClubOwnerADVMainCharacter": true,
       "ManRequired": 9,
       "ValidManType": [
-        "YoungMan"
+        {
+          "Type": [
+            "YoungMan"
+          ],
+          "Count": 9
+        }
       ],
       "NPC": [
         {
@@ -120,7 +125,7 @@
     "NextStepID": "haremking_intro_0005",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（メイドたちの努力のおかげで、エンパイアクラブはどんどん有名になっています。今では、様々なお客様から色んなイベントの開催を依頼されることが多くなりました。）"
+      "Text": "（メイドたちの努力のおかげで、[=ClubName]はどんどん有名になっています。今では、様々なお客様から色んなイベントの開催を依頼されることが多くなりました。）"
     },
     "FadeData": {
       "IsFadeIn": true,

@@ -1,0 +1,1687 @@
+{
+  "trbo_postyotogi_init": {
+    "ID": "trbo_postyotogi_init",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "SystemFadeOut",
+    "NextStepID": "trbo_postyotogi_init_a"
+  },
+
+  "trbo_postyotogi_init_a": {
+    "ID": "trbo_postyotogi_init_a",
+    "Type": "BGM",
+    "Tag": "BGM019.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_init_b"
+  },
+
+  "trbo_postyotogi_init_b": {
+    "ID": "trbo_postyotogi_init_b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_init_c",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "1.86, 1.27, -0.87",
+        "TargetPosString": "-0.13, 0.97, 1.75",
+        "AroundAngleString": "-37.07, 5.32",
+        "Distance": 3.3
+      }
+    }
+  },
+
+  "trbo_postyotogi_init_c": {
+    "ID": "trbo_postyotogi_init_c",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "trbo_postyotogi_init_d"
+  },
+
+  "trbo_postyotogi_init_d": {
+    "ID": "trbo_postyotogi_init_d",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0001",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "nefera_taiki_m.anm",
+          "MotionTag": "nefera_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "0.17, 0.52, 1.17",
+          "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "nefera_taiki_m.anm",
+          "MotionTag": "nefera_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-0.65, 0.52, 2.37",
+          "RotString": "0, -0.968, 0, 0.250"
+
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "nefera_taiki_m.anm",
+          "MotionTag": "nefera_taiki_m.anm"
+        },
+        "PosRot": {
+          "PosString": "0.83, 0.52, 2.64",
+          "RotString": "0, 0.851, 0, 0.523"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "微笑み",
+        "MotionInfo": {
+          "MotionFile": "nefera_taiki_f.anm",
+          "MotionTag": "nefera_taiki_f.anm"
+        },
+        "PosRot": {
+          "PosString": "0.17, 0.52, 1.17",
+          "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0001": {
+    "ID": "trbo_postyotogi_0001",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "３時間の乱交の後、男たちは疲れ果ててベッドに横たが、[=Name,Maid,0,CallName]はまだ元気そうだった。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_postyotogi_0002": {
+    "ID": "trbo_postyotogi_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0003",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "あっ……降参だ…うっ……腰が……"
+    }
+  },
+
+  "trbo_postyotogi_0003": {
+    "ID": "trbo_postyotogi_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0004",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "やべぇ……死ぬかと思った……"
+    }
+  },
+
+  "trbo_postyotogi_0004": {
+    "ID": "trbo_postyotogi_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0005",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "[=Name,Maid,0,CallName]ちゃん、も…もう満足したよね…？"
+    }
+  },
+
+  "trbo_postyotogi_0005": {
+    "ID": "trbo_postyotogi_0005",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0006_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "MotionInfo": {
+          "MotionFile": "yotunbai_fera_vibe_taiki_f.anm",
+          "MotionTag": "yotunbai_fera_vibe_taiki_f.anm"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0006_Branch": {
+    "ID": "trbo_postyotogi_0006_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_postyotogi_0010_M_[=PType]"
+  },
+
+  "trbo_postyotogi_0011": {
+    "ID": "trbo_postyotogi_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0012_se",
+    "TalkData": {
+      "SpeakerName": "全員",
+      "Text": "え？！マジ？"
+    }
+  },
+
+  "trbo_postyotogi_0012_se": {
+    "ID": "trbo_postyotogi_0012_se",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE024.ogg"
+    },
+    "DelayEffectInSeconds": 0,
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0012_se2"
+  },
+
+  "trbo_postyotogi_0012_se2": {
+    "ID": "trbo_postyotogi_0012_se2",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE024.ogg"
+    },
+    "DelayEffectInSeconds": 0.1,
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0012_se3"
+  },
+
+  "trbo_postyotogi_0012_se3": {
+    "ID": "trbo_postyotogi_0012_se3",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE024.ogg"
+    },
+    "DelayEffectInSeconds": 0.2,
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0012_se4"
+  },
+
+  "trbo_postyotogi_0012_se4": {
+    "ID": "trbo_postyotogi_0012_se4",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE024.ogg"
+    },
+    "DelayEffectInSeconds": 0.3,
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0012_se5"
+  },
+
+  "trbo_postyotogi_0012_se5": {
+    "ID": "trbo_postyotogi_0012_se5",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE024.ogg"
+    },
+    "DelayEffectInSeconds": 1,
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0012_se6"
+  },
+
+  "trbo_postyotogi_0012_se6": {
+    "ID": "trbo_postyotogi_0012_se6",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE024.ogg"
+    },
+    "DelayEffectInSeconds": 1.1,
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0012_se7"
+  },
+
+  "trbo_postyotogi_0012_se7": {
+    "ID": "trbo_postyotogi_0012_se7",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE024.ogg"
+    },
+    "DelayEffectInSeconds": 1.2,
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0012_se8"
+  },
+
+  "trbo_postyotogi_0012_se8": {
+    "ID": "trbo_postyotogi_0012_se8",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE024.ogg"
+    },
+    "DelayEffectInSeconds": 1.3,
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0012_se9"
+  },
+
+  "trbo_postyotogi_0012_se9": {
+    "ID": "trbo_postyotogi_0012_se9",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE024.ogg"
+    },
+    "DelayEffectInSeconds": 2,
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0012_se10"
+  },
+
+  "trbo_postyotogi_0012_se10": {
+    "ID": "trbo_postyotogi_0012_se10",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE024.ogg"
+    },
+    "DelayEffectInSeconds": 2.1,
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0012_se11"
+  },
+
+  "trbo_postyotogi_0012_se11": {
+    "ID": "trbo_postyotogi_0012_se11",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE024.ogg"
+    },
+    "DelayEffectInSeconds": 2.2,
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0012_se12"
+  },
+
+  "trbo_postyotogi_0012_se12": {
+    "ID": "trbo_postyotogi_0012_se12",
+    "Type": "SE",
+    "SEData": {
+      "FileName": "SE024.ogg"
+    },
+    "DelayEffectInSeconds": 2.3,
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0013"
+  },
+
+  "trbo_postyotogi_0013": {
+    "ID": "trbo_postyotogi_0013",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0014",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "ピーピーピーピー　ピーピーピーピー　ピーピーピーピー"
+    }
+  },
+
+  "trbo_postyotogi_0014": {
+    "ID": "trbo_postyotogi_0014",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0015_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "セッションはもうすぐ終わるので、時計が鳴った。"
+    }
+  },
+
+  "trbo_postyotogi_0015_Branch": {
+    "ID": "trbo_postyotogi_0015_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_postyotogi_0020_M_[=PType]"
+  },
+
+  "trbo_postyotogi_0021": {
+    "ID": "trbo_postyotogi_0021",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0022",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "（あんなに激しい乱交セックスをしたのに、ただのゲームだと…？）"
+    }
+  },
+
+  "trbo_postyotogi_0022": {
+    "ID": "trbo_postyotogi_0022",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0023",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "（この底無し女、めっちゃやべぇな…）"
+    }
+  },
+
+  "trbo_postyotogi_0023": {
+    "ID": "trbo_postyotogi_0023",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0024",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "（や…やっと終わった……助かった……）"
+    }
+  },
+
+  "trbo_postyotogi_0024": {
+    "ID": "trbo_postyotogi_0024",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_postyotogi_0025",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "trbo_postyotogi_0025": {
+    "ID": "trbo_postyotogi_0025",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0026",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "trbo_postyotogi_0026": {
+    "ID": "trbo_postyotogi_0026",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0027",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "こうして、[=Name,Maid,0,CallName]と男たちは身だしなみを整え、エントランスに戻った。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_postyotogi_0027": {
+    "ID": "trbo_postyotogi_0027",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_postyotogi_0028",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "trbo_postyotogi_0028": {
+    "ID": "trbo_postyotogi_0028",
+    "Type": "RemoveTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0029",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F_ALL"
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0029": {
+    "ID": "trbo_postyotogi_0029",
+    "Type": "BG",
+    "Tag": "EmpireClub_Entrance",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0030"
+  },
+
+  "trbo_postyotogi_0030": {
+    "ID": "trbo_postyotogi_0030",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0031",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-3.76, 0.00, 3.92",
+          "RotString": "0, 0.244, 0, 0.970"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-3.79, 0.00, 5.60",
+          "RotString": "0, 0.965, 0, 0.261"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-3.10, 0.00, 5.88",
+          "RotString": "0, 0.995, 0, -0.097"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-2.49, 0.00, 5.63",
+          "RotString": "0, -0.873, 0, 0.487"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "微笑み",
+        "ClothesSetID": "RESET",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-3.25, 0.00, 3.92",
+          "RotString": "0, 0, 0, 1"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 1
+          }
+        }
+      }
+
+    ]
+  },
+
+  "trbo_postyotogi_0031": {
+    "ID": "trbo_postyotogi_0031",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0032",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-5.28, 2.19, 2.36",
+        "TargetPosString": "-3.11, 0.87, 5.19",
+        "AroundAngleString": "37.6, 20.23",
+        "Distance": 3.8
+      }
+    }
+  },
+
+  "trbo_postyotogi_0032": {
+    "ID": "trbo_postyotogi_0032",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0033a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]のセッションはそろそろ終わりだな。少し心配になりながら、俺はエントランスに向かった。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_postyotogi_0033a": {
+    "ID": "trbo_postyotogi_0033a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0033",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.87, 1.64, 4.03",
+        "TargetPosString": "-2.89, 1.39, 5.50",
+        "AroundAngleString": "-34.55, 8.12",
+        "Distance": 1.8
+      }
+    }
+  },
+
+  "trbo_postyotogi_0033": {
+    "ID": "trbo_postyotogi_0033",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0034",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "いやぁー楽しかったぜ。"
+    }
+  },
+
+  "trbo_postyotogi_0034": {
+    "ID": "trbo_postyotogi_0034",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0035",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "ああ、そうたな。"
+    }
+  },
+
+  "trbo_postyotogi_0035": {
+    "ID": "trbo_postyotogi_0035",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0036",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "二人ともありがとう……今日は多くのことを学んだ……"
+    }
+  },
+
+  "trbo_postyotogi_0036": {
+    "ID": "trbo_postyotogi_0036",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0037",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "へへぇ！言わなくていいぜ！"
+    }
+  },
+
+  "trbo_postyotogi_0037": {
+    "ID": "trbo_postyotogi_0037",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0038a",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "もっと自信を持っていいさ。"
+    }
+  },
+
+  "trbo_postyotogi_0038a": {
+    "ID": "trbo_postyotogi_0038a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0038",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-2.51, 1.85, 4.79",
+        "TargetPosString": "-2.65, 1.79, 4.66",
+        "AroundAngleString": "224.25, 18.36",
+        "Distance": 0.2
+      }
+    }
+  },
+
+  "trbo_postyotogi_0038": {
+    "ID": "trbo_postyotogi_0038",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0039",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（この光景を見ていた俺は、[=Name,Maid,0,CallName]にささやいた。）"
+    }
+  },
+
+  "trbo_postyotogi_0039": {
+    "ID": "trbo_postyotogi_0039",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0040_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "なにこれ…変な友情が生まれた？"
+    }
+  },
+
+  "trbo_postyotogi_0040_Branch": {
+    "ID": "trbo_postyotogi_0040_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_postyotogi_0050_M_[=PType]"
+  },
+
+  "trbo_postyotogi_0051": {
+    "ID": "trbo_postyotogi_0051",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0052",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "微笑み",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      }
+
+    ]
+  },
+
+  "trbo_postyotogi_0052": {
+    "ID": "trbo_postyotogi_0052",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0053",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-0.90, 2.12, 6.42",
+        "TargetPosString": "-3.09, 1.15, 4.97",
+        "AroundAngleString": "236.70, 20.23",
+        "Distance": 2.8
+      }
+    }
+  },
+
+  "trbo_postyotogi_0053": {
+    "ID": "trbo_postyotogi_0053",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0054",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "乱交がこんな楽しいなんて、初めて知った。"
+    }
+  },
+
+  "trbo_postyotogi_0054": {
+    "ID": "trbo_postyotogi_0054",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0055",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "ほーう。"
+    }
+  },
+
+  "trbo_postyotogi_0055": {
+    "ID": "trbo_postyotogi_0055",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0056",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "おいおいおい、[=Name,Maid,0,CallName]ちゃん。お前、オタクくんの性癖を歪んだぞ。"
+    }
+  },
+
+  "trbo_postyotogi_0056": {
+    "ID": "trbo_postyotogi_0056",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0057_Branch",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "罪深い女だな。"
+    }
+  },
+
+  "trbo_postyotogi_0057_Branch": {
+    "ID": "trbo_postyotogi_0057_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_postyotogi_0060_M_[=PType]"
+  },
+
+  "trbo_postyotogi_0061": {
+    "ID": "trbo_postyotogi_0061",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0062_Branch",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "そ、そんなことはないよ！む、むしろ新しい扉を開いてくれてありがとう！"
+    }
+  },
+
+  "trbo_postyotogi_0062_Branch": {
+    "ID": "trbo_postyotogi_0062_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_postyotogi_0070_M_[=PType]"
+  },
+
+  "trbo_postyotogi_0071": {
+    "ID": "trbo_postyotogi_0071",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0071a",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "微笑み",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      }
+
+    ]
+  },
+
+  "trbo_postyotogi_0071a": {
+    "ID": "trbo_postyotogi_0071a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0072",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "あの…もしかしたら…今度またやる？"
+    }
+  },
+
+  "trbo_postyotogi_0072": {
+    "ID": "trbo_postyotogi_0072",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0073",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "あははは、ハマっちゃったじゃねえか、オタクくん！いいぜ！やろやろ！"
+    }
+  },
+
+  "trbo_postyotogi_0073": {
+    "ID": "trbo_postyotogi_0073",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0074_Branch",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "まあ、たまにはこういうのもいい。[=Name,Maid,0,CallName]ちゃん、それでいいんか？"
+    }
+  },
+
+  "trbo_postyotogi_0074_Branch": {
+    "ID": "trbo_postyotogi_0074_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_postyotogi_0080_M_[=PType]"
+  },
+
+  "trbo_postyotogi_0081": {
+    "ID": "trbo_postyotogi_0081",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_postyotogi_0082",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "trbo_postyotogi_0082": {
+    "ID": "trbo_postyotogi_0082",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0083",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "-2.29, 0.00, 7.69",
+          "RotString": "0, 0.324, 0, 0.946"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "-1.70, 0.00, 7.14",
+          "RotString": "0, -0.078, 0, -0.997"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "-0.85, 0.00, 7.08",
+          "RotString": "0, 0.024, 0, 0.999"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "苦笑い"
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0083": {
+    "ID": "trbo_postyotogi_0083",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0083a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-4.99, 2.09, 2.54",
+        "TargetPosString": "-3.02, 1.06, 5.24",
+        "AroundAngleString": "-323.89, 17.12",
+        "Distance": 3.5
+      }
+    }
+  },
+
+  "trbo_postyotogi_0083a": {
+    "ID": "trbo_postyotogi_0083a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0084",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "あの…僕たち…連絡先を交換しよ？"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_postyotogi_0084": {
+    "ID": "trbo_postyotogi_0084",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0085",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "はいはい……おい、次の店に飲みに行こうぜ？"
+    }
+  },
+
+  "trbo_postyotogi_0085": {
+    "ID": "trbo_postyotogi_0085",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0086",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "おっ！いいよ、今日妻が家にいないんだ。"
+    }
+  },
+
+  "trbo_postyotogi_0086": {
+    "ID": "trbo_postyotogi_0086",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0087",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "オタクくんはどう？"
+    }
+  },
+
+  "trbo_postyotogi_0087": {
+    "ID": "trbo_postyotogi_0087",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0088",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "行こう、行こう！二人からもっと学びたい！"
+    }
+  },
+
+  "trbo_postyotogi_0088": {
+    "ID": "trbo_postyotogi_0088",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0089",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "おいおい、そんなに真面目になるなよ！そうだ、後でオレの彼女を紹介しよぜ。彼女はギャル友達がたくさんいるんだ、中には君に合いそうな女もいるかもな！"
+    }
+  },
+
+  "trbo_postyotogi_0089": {
+    "ID": "trbo_postyotogi_0089",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0090",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-4.44, 1.71, 5.16",
+        "TargetPosString": "-3.89, 1.51, 4.36",
+        "AroundAngleString": "-214.61, 11.22",
+        "Distance": 1
+      }
+    }
+  },
+
+  "trbo_postyotogi_0090": {
+    "ID": "trbo_postyotogi_0090",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（３人のお客様が話して立ち去り、[=Name,Maid,0,CallName]と俺はエントランスに残された…）"
+    }
+  },
+
+  "trbo_postyotogi_0091": {
+    "ID": "trbo_postyotogi_0091",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0092",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（あの３人が仲良くなれると思わなかったので、俺たちはちょっと言葉を失った。）"
+    }
+  },
+
+  "trbo_postyotogi_0092": {
+    "ID": "trbo_postyotogi_0092",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_postyotogi_0093",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "trbo_postyotogi_0093": {
+    "ID": "trbo_postyotogi_0093",
+    "Type": "BG",
+    "Tag": "ShinShitsumu_Night",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0094"
+  },
+
+
+  "trbo_postyotogi_0094": {
+    "ID": "trbo_postyotogi_0094",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0095",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": false,
+        "WaitLoad": true,
+        "IsManNude": false
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": false,
+        "WaitLoad": true,
+        "IsManNude": false
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": false,
+        "WaitLoad": true,
+        "IsManNude": false
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": false,
+        "WaitLoad": true,
+        "IsManNude": false
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "微笑み",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-0.19, 0.00, -0.54",
+          "RotString": "0, 1, 0, 0"
+        },
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        }
+      }
+
+    ]
+  },
+
+  "trbo_postyotogi_0095": {
+    "ID": "trbo_postyotogi_0095",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0096",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-0.20, 1.50, -2.13",
+        "TargetPosString": "-0.21, 1.34, -0.53",
+        "AroundAngleString": "359.64, 5.65",
+        "Distance": 1.6
+      }
+    }
+  },
+
+  "trbo_postyotogi_0096": {
+    "ID": "trbo_postyotogi_0096",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0097_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "お疲れ、あの状況に対処してくれてありがとう。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_postyotogi_0097_Branch": {
+    "ID": "trbo_postyotogi_0097_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_postyotogi_0100_M_[=PType]"
+  },
+
+  "trbo_postyotogi_0101": {
+    "ID": "trbo_postyotogi_0101",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0102_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "大変だったな。"
+    }
+  },
+
+  "trbo_postyotogi_0102_Branch": {
+    "ID": "trbo_postyotogi_0102_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_postyotogi_0110_M_[=PType]"
+  },
+
+  "trbo_postyotogi_0112": {
+    "ID": "trbo_postyotogi_0112",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0113",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ふーん。"
+    }
+  },
+
+  "trbo_postyotogi_0113": {
+    "ID": "trbo_postyotogi_0113",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0114",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ところで、記録によると、[=Name,Maid,0,CallName]はあのお客様たちの予約を担当した人だ。"
+    }
+  },
+
+  "trbo_postyotogi_0114": {
+    "ID": "trbo_postyotogi_0114",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0115_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "……今回の事件は、わざとやったのか？"
+    }
+  },
+
+  "trbo_postyotogi_0115_Branch": {
+    "ID": "trbo_postyotogi_0115_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_postyotogi_0120_M_[=PType]"
+  },
+
+  "trbo_postyotogi_0121": {
+    "ID": "trbo_postyotogi_0121",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0122a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（あーあ、この反応、間違いなくわざとだな…）"
+    }
+  },
+
+  "trbo_postyotogi_0122a": {
+    "ID": "trbo_postyotogi_0122a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0122",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "悲しみ２",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0122": {
+    "ID": "trbo_postyotogi_0122",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0123",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "まあいい、たが次はないぞ。今回はエスカレートしなかったのは幸運だった。"
+    }
+  },
+
+  "trbo_postyotogi_0123": {
+    "ID": "trbo_postyotogi_0123",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0124_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "…クラブでのグループサービスを追加するつもりだから、そんな顔しないて。"
+    }
+  },
+
+  "trbo_postyotogi_0124_Branch": {
+    "ID": "trbo_postyotogi_0124_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_postyotogi_0130_M_[=PType]"
+  },
+
+  "trbo_postyotogi_0131": {
+    "ID": "trbo_postyotogi_0131",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0132",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "やれやれ…"
+    }
+  },
+
+  "trbo_postyotogi_0132": {
+    "ID": "trbo_postyotogi_0132",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0133",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ふぅ…一件落着だ。でも、俺はまだ「仕事」が残ってる。）"
+    }
+  },
+
+  "trbo_postyotogi_0133": {
+    "ID": "trbo_postyotogi_0133",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0134_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "さあ、服を脱いて。"
+    }
+  },
+
+  "trbo_postyotogi_0134_Branch": {
+    "ID": "trbo_postyotogi_0134_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_postyotogi_0140_M_[=PType]"
+  },
+
+  "trbo_postyotogi_0141": {
+    "ID": "trbo_postyotogi_0141",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0142_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "まだ満足しないだろう？ご主人様として、これくらいわかるよ。"
+    }
+  },
+
+  "trbo_postyotogi_0142_Branch": {
+    "ID": "trbo_postyotogi_0142_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_postyotogi_0150_M_[=PType]"
+  },
+
+  "trbo_postyotogi_0151": {
+    "ID": "trbo_postyotogi_0151",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_postyotogi_0152",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "trbo_postyotogi_0152": {
+    "ID": "trbo_postyotogi_0152",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0153",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "table_kouhaii_2_m.anm",
+          "MotionTag": "table_kouhaii_2_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-0.19, 0.83, -1.50",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "エロ興奮２",
+        "FaceBlend": "頬２涙０",
+        "ClothesSetID": "FullNude",
+        "MotionInfo": {
+          "MotionFile": "table_kouhaii_2_f.anm",
+          "MotionTag": "table_kouhaii_2_f.anm"
+        },
+        "PosRot": {
+          "PosString": "-0.19, 0.83, -1.50",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+
+    ]
+  },
+
+  "trbo_postyotogi_0153": {
+    "ID": "trbo_postyotogi_0153",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0154",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-4.25, 2.45, 2.40",
+        "TargetPosString": "0.02, 0.81, -1.48",
+        "AroundAngleString": "132.28, 15.90",
+        "Distance": 6
+      }
+    }
+  },
+
+  "trbo_postyotogi_0154": {
+    "ID": "trbo_postyotogi_0154",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0155",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（それで[=Name,Maid,0,CallName]ともう１時間くらいセックスを続けた。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_postyotogi_0155": {
+    "ID": "trbo_postyotogi_0155",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0156",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（こんな淫らなメイドを持つことは簡単な仕事ではないな。だか、彼女を満足させるのも俺の仕事だ。）"
+    }
+  },
+
+  "trbo_postyotogi_0156": {
+    "ID": "trbo_postyotogi_0156",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0157",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（まあ、俺はご主人様だからな。当然のことだ。）"
+    }
+  },
+
+  "trbo_postyotogi_0157": {
+    "ID": "trbo_postyotogi_0157",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_postyotogi_0158",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "trbo_postyotogi_0158": {
+    "ID": "trbo_postyotogi_0158",
+    "Type": "BG",
+    "Tag": "EmpireClub_Rotary_Night",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0159"
+  },
+
+  "trbo_postyotogi_0159": {
+    "ID": "trbo_postyotogi_0159",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0160_Branch",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "1.98, 4.04, -3.26",
+        "TargetPosString": "1.79, 4.86, -2.02",
+        "AroundAngleString": "351.44, -33.17",
+        "Distance": 1.5
+      },
+      "LockCamera": { "IsLock": true }
+    }
+  },
+
+  "trbo_postyotogi_0160_Branch": {
+    "ID": "trbo_postyotogi_0160_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_postyotogi_0170_T_[=PType]",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_postyotogi_0171": {
+    "ID": "trbo_postyotogi_0171",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0172_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ん？なんだ？"
+    }
+  },
+
+  "trbo_postyotogi_0172_Branch": {
+    "ID": "trbo_postyotogi_0172_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_postyotogi_0180_T_[=PType]"
+  },
+
+  "trbo_postyotogi_0181": {
+    "ID": "trbo_postyotogi_0181",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0182",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "……"
+    }
+  },
+
+  "trbo_postyotogi_0182": {
+    "ID": "trbo_postyotogi_0182",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_end",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（やれやれ…）"
+    }
+  },
+
+
+  "trbo_end": {
+    "ID": "trbo_end",
+    "Type": "Special",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_postyotogi_unlockcamera",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "trbo_postyotogi_unlockcamera": {
+    "ID": "trbo_postyotogi_unlockcamera",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_end2",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "1.98, 4.04, -3.26",
+        "TargetPosString": "1.79, 4.86, -2.02",
+        "AroundAngleString": "351.44, -33.17",
+        "Distance": 1.5
+      },
+      "LockCamera": { "IsLock": false }
+    }
+  },
+
+  "trbo_end2": {
+    "ID": "trbo_end2",
+    "Type": "ADVEnd",
+    "WaitingType": "End"
+  }
+}

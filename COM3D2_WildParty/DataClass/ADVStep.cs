@@ -151,12 +151,13 @@ namespace COM3D2.WildParty.Plugin
         internal class CharaInit
         {
             public int ManRequired = -1;        //Indicate how many man character needed to be initialized. Negative to skip (eg. it is decided from user input)
-            public List<string> ValidManType;   //Referencing RandomizeManSetting. Required if ManRequired is non negative.
-            public string ValidManConfigKey = "";         //The config key to determine what types of man are loaded.
+            public List<ValidManTypeInfo> ValidManType;   //Referencing RandomizeManSetting. Required if ManRequired is non negative.
+            //public string ValidManConfigKey = "";         //The config key to determine what types of man are loaded.
             public List<NPCData> NPC;
             public List<ModNPCData> ModNPC;
             public bool IsClubOwnerADVMainCharacter = true;    //True: Man[0] will be the owner; False: Man[0] will be replaced with other man character and owner is accessible from StateManager.Instance.ClubOwner
             public bool RequiresMaidPairMan = false;            //For the use of converting maid to man
+            
 
             internal class NPCData
             {
@@ -171,6 +172,13 @@ namespace COM3D2.WildParty.Plugin
                 public int Index;               //Share the same array with NPC
                 public string NPCID;
                 public bool IsFemale = true;
+            }
+
+            internal class ValidManTypeInfo
+            {
+                public List<string> Type;
+                public int Count = -1;
+                public string ValidManConfigKey;
             }
         }
 

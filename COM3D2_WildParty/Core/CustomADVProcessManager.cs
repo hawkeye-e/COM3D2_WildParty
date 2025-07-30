@@ -199,13 +199,21 @@ namespace COM3D2.WildParty.Plugin.Core
             if (step.CharaInitData.ManRequired >= 0)
                 StateManager.Instance.MaxManUsed = step.CharaInitData.ManRequired;
 
-            List<string> validManTypes = GetValidManTypes(step.CharaInitData);
-
-            //init man
-            for (int i = 0; i < StateManager.Instance.MaxManUsed; i++)
+            foreach (var validManTypeInfo in step.CharaInitData.ValidManType)
             {
-                var man = Core.CharacterHandling.InitMan(i, validManTypes);
-                StateManager.Instance.MenList.Add(man);
+                List<string> validManTypes = GetValidManTypes(validManTypeInfo);
+
+                int manCount = validManTypeInfo.Count;
+                
+                if (manCount < 0)
+                    manCount = StateManager.Instance.MaxManUsed;
+                
+                //init man
+                for (int i = 0; i < manCount; i++)
+                {
+                    var man = Core.CharacterHandling.InitMan(StateManager.Instance.MenList.Count, validManTypes);
+                    StateManager.Instance.MenList.Add(man);
+                }
             }
 
             //init the club owner
@@ -1457,18 +1465,18 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
-        private static List<string> GetValidManTypes(ADVStep.CharaInit charaInitInfo)
+        private static List<string> GetValidManTypes(ADVStep.CharaInit.ValidManTypeInfo validManTypeInfo)
         {
-            if (string.IsNullOrEmpty(charaInitInfo.ValidManConfigKey))
-                return charaInitInfo.ValidManType;
+            if (string.IsNullOrEmpty(validManTypeInfo.ValidManConfigKey))
+                return validManTypeInfo.Type;
             else
             {
-                PropertyInfo prop = typeof(Config).GetProperty(charaInitInfo.ValidManConfigKey, BindingFlags.Static | BindingFlags.NonPublic);
+                PropertyInfo prop = typeof(Config).GetProperty(validManTypeInfo.ValidManConfigKey, BindingFlags.Static | BindingFlags.NonPublic);
 
                 Config.ManTypeOption manTypeConfigValue = (Config.ManTypeOption)prop.GetValue(null, null);
 
                 if (manTypeConfigValue == Config.ManTypeOption.Default)
-                    return charaInitInfo.ValidManType;
+                    return validManTypeInfo.Type;
 
                 List<string> result = new List<string>();
 

@@ -116,7 +116,15 @@ namespace COM3D2.WildParty.Plugin
 
         internal static bool LilyBloomingParadiseNoStrapOn { get { return _lilyBloomingParadiseNoStrapOn.Value; } }
         private static ConfigEntry<bool> _lilyBloomingParadiseNoStrapOn;
+
+        internal static ManTypeOption TripleBookingCharaOManType { get { return _tripleBookingCharaOManType.Value; } }
+        private static ConfigEntry<ManTypeOption> _tripleBookingCharaOManType;
+
+        internal static ManTypeOption TripleBookingMiddleAgedManType { get { return _tripleBookingMiddleAgedManType.Value; } }
+        private static ConfigEntry<ManTypeOption> _tripleBookingMiddleAgedManType;
         
+        internal static ManTypeOption TripleBookingOtakuManType { get { return _tripleBookingOtakuManType.Value; } }
+        private static ConfigEntry<ManTypeOption> _tripleBookingOtakuManType;
 
         internal static void Init(BaseUnityPlugin plugin)
         {
@@ -204,11 +212,11 @@ namespace COM3D2.WildParty.Plugin
         private static void AddScenarioRelatedConfigs(BaseUnityPlugin plugin)
         {
             _orgyPartyManType = plugin.Config.Bind(SCENARIOSETTING, "Empire Club Thanksgiving Event - Man Types", 
-                ManTypeOption.YoungMan | ManTypeOption.Yanki | ManTypeOption.MiddleAged | ManTypeOption.Otaku | ManTypeOption.Shota,
+                ManTypeOption.YoungMan | ManTypeOption.Yanki | ManTypeOption.MiddleAged | ManTypeOption.Otaku | ManTypeOption.Shota | ManTypeOption.Playboy,
                 "The type of man that will be used in the scenaio Empire Club Thanksgiving event. If all items are unchecked, the system will use the default man types.");
 
             _happyGBClubManType = plugin.Config.Bind(SCENARIOSETTING, "Happy Gang Bang Club Event - Man Types",
-                ManTypeOption.YoungMan | ManTypeOption.Yanki | ManTypeOption.MiddleAged | ManTypeOption.Otaku,
+                ManTypeOption.YoungMan | ManTypeOption.Yanki | ManTypeOption.MiddleAged | ManTypeOption.Otaku | ManTypeOption.Playboy,
                 "The type of man that will be used in the scenaio [Happy Gang Bang Club] and [Another Gang Bang Desire] event. If all items are unchecked, the system will use the default man types.");
 
             _immoralVillageManType = plugin.Config.Bind(SCENARIOSETTING, "Summer Festival of Immoral Village Event - Man Types",
@@ -218,6 +226,19 @@ namespace COM3D2.WildParty.Plugin
             _lilyBloomingParadiseNoStrapOn = plugin.Config.Bind(SCENARIOSETTING, "Lily Blooming Paradise - Skip Strap-on part",
                 false,
                 "It is assuming the player use unmodded version of character models in the strap-on event in the scenario [Lily Blooming Paradise]. If you have applied different bodies for the maids and men, you may get a crash in th the strap-on part. Enable this to skip that part to finish the scenario.");
+
+            _tripleBookingCharaOManType = plugin.Config.Bind(SCENARIOSETTING, "Triple Booking Event - Playboy Man Types",
+                ManTypeOption.Playboy,
+                "The type of man of Playboy that will be used in the scenaio [Triple Booking] event. If all items are unchecked, the system will use the default man types.");
+
+
+            _tripleBookingMiddleAgedManType = plugin.Config.Bind(SCENARIOSETTING, "Triple Booking Event - Middle-Aged Man Types",
+                ManTypeOption.MiddleAged,
+                "The type of man of Middle-Aged man that will be used in the scenaio [Triple Booking] event. If all items are unchecked, the system will use the default man types.");
+
+            _tripleBookingOtakuManType = plugin.Config.Bind(SCENARIOSETTING, "Triple Booking Event - Otaku Kun Man Types",
+                ManTypeOption.Otaku,
+                "The type of man of Otaku Kun that will be used in the scenaio [Triple Booking] event. If all items are unchecked, the system will use the default man types.");
         }
 
         private static void AddDeveloperRelatedConfigs(BaseUnityPlugin plugin)
@@ -261,6 +282,7 @@ namespace COM3D2.WildParty.Plugin
             MiddleAged  = 1 << 2,
             Otaku       = 1 << 3,
             Shota       = 1 << 4,
+            Playboy     = 1 << 5,
         }
     }
 }

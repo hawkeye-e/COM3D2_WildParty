@@ -16,9 +16,14 @@
       "IsClubOwnerADVMainCharacter": false,
       "ManRequired": 14,
       "ValidManType": [
-        "Shota"
+        {
+          "Type": [
+            "Shota"
+          ],
+          "Count": 14,
+          "ValidManConfigKey": "ImmoralVillageManType"
+        }
       ],
-      "ValidManConfigKey": "ImmoralVillageManType",
       "ModNPC": [
         {
           "Index": 0,

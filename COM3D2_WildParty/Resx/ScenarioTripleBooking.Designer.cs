@@ -62,33 +62,119 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;lum0001&quot;: {
-        ///    &quot;ID&quot;: &quot;lum0001&quot;,
-        ///    &quot;Type&quot;: &quot;BG&quot;,
-        ///    &quot;Tag&quot;: &quot;MyRoom&quot;,
+        ///  &quot;trbo_intro_0030_M_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;lum0001_init_chara&quot;
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Muku&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
         ///  },
         ///
-        ///  &quot;lum0001_init_chara&quot;: {
-        ///    &quot;ID&quot;: &quot;lum0001_init_chara&quot;,
+        ///  &quot;trbo_intro_0030_T_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextSte [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Muku {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Muku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo0001&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;EmpireClub_Entrance&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;trbo0001_init_chara&quot;
+        ///  },
+        ///
+        ///  &quot;trbo0001_init_chara&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo0001_init_chara&quot;,
         ///    &quot;Type&quot;: &quot;CharaInit&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;lum_intro_0001&quot;,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0001&quot;,
         ///    &quot;CharaInitData&quot;: {
-        ///      &quot;IsClubOwnerMainCharacter&quot;: true,
-        ///      &quot;ManRequired&quot;: 0,
+        ///      &quot;IsClubOwnerADVMainCharacter&quot;: false,
+        ///      &quot;ManRequired&quot;: 3,
         ///      &quot;ValidManType&quot;: [
-        ///        &quot;YoungMan&quot;
-        ///      ],
-        ///      &quot;NPC&quot;: [
         ///        {
-        ///          &quot;Index&quot;: 0,
-        ///         [rest of string was truncated]&quot;;.
+        ///          &quot;Type&quot;: [ &quot;Playboy&quot; ],
+        ///          &quot;Count&quot;: 1 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string TripleBookingADVIntro {
             get {
                 return ResourceManager.GetString("TripleBookingADVIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_hotel_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_hotel_0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;Shukuhakubeya_BedRoom_Night&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_hotel_0002&quot;
+        ///  },
+        ///
+        ///  &quot;trbo_intro_hotel_0002&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_hotel_0002&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_hotel_0003&quot;
+        ///  },
+        ///
+        ///  &quot;trbo_intro_hotel_0003&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_hotel_0003&quot;,
+        ///    &quot;Type&quot;: &quot;AddObject&quot;,
+        ///    &quot;WaitingType&quot;:  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADVIntroHotel {
+            get {
+                return ResourceManager.GetString("TripleBookingADVIntroHotel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;lum_postyotogi_init&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_postyotogi_init&quot;,
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lum_postyotogi_init_a&quot;
+        ///  },
+        ///
+        ///  &quot;lum_postyotogi_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_postyotogi_init_a&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM022.ogg&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lum_postyotogi_init_b&quot;
+        ///  },
+        ///
+        ///  &quot;lum_postyotogi_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;lum_postyotogi_init_b&quot;,
+        ///    &quot;Type&quot;: &quot;Camera&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;lu [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADVPostYotogi {
+            get {
+                return ResourceManager.GetString("TripleBookingADVPostYotogi", resourceCulture);
             }
         }
     }

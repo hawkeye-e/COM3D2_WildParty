@@ -163,12 +163,18 @@
     "NextStepID": "orgy_intro_0001",
     "CharaInitData": {
       "IsClubOwnerADVMainCharacter": false,
+      "YoungMan": null,
       "ValidManType": [
-        "YoungMan",
-        "Yanki",
-        "MiddleAged",
-        "Otaku",
-        "Shota"
+        {
+          "Type": [
+            "YoungMan",
+            "Yanki",
+            "MiddleAged",
+            "Otaku",
+            "Shota"
+          ],
+          "ValidManConfigKey": "OrgyPartyManType"
+        }
       ],
       "ValidManConfigKey": "OrgyPartyManType"
     }

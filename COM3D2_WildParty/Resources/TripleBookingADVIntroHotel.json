@@ -1,0 +1,2763 @@
+{
+  "trbo_intro_hotel_0001": {
+    "ID": "trbo_intro_hotel_0001",
+    "Type": "BG",
+    "Tag": "Shukuhakubeya_BedRoom_Night",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0002"
+  },
+
+  "trbo_intro_hotel_0002": {
+    "ID": "trbo_intro_hotel_0002",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0003"
+  },
+
+  "trbo_intro_hotel_0003": {
+    "ID": "trbo_intro_hotel_0003",
+    "Type": "AddObject",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0004",
+    "WorldObjectData": [
+      {
+        "Src": "photo_ver/Odogu_HeroineChair_cooldere_photo_ver",
+        "ObjectID": "mod_otaku_char",
+        "PosRot": {
+          "PosString": "-3.135, 0.000, 1.841",
+          "RotString": "0, 1, 0, 0"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0004": {
+    "ID": "trbo_intro_hotel_0004",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0005",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": false,
+        "WaitLoad": true,
+        "IsManNude": false
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿チャラ男"
+        },
+        "PosRot": {
+          "PosString": "-1.70, 0.00, -1.94",
+          "RotString": "0, -0.762, 0, 0.648"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-1.95, 0.00, -1.18",
+          "RotString": "0, -0.886, 0, 0.464"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿考える"
+        },
+        "PosRot": {
+          "PosString": "-3.13, 0.51, 1.84",
+          "RotString": "0, 1, 0, 0"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Maid",
+            "ArrayPosition": 0
+          }
+        }
+      },
+
+
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "微笑み",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-2.64, 0.00, -1.75",
+          "RotString": "0, 0.396, 0, 0.918"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 0
+          }
+        }
+      },
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": false
+      }
+
+    ]
+  },
+
+  "trbo_intro_hotel_0005": {
+    "ID": "trbo_intro_hotel_0005",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0006",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "4.14, 1.87, 0.15",
+        "TargetPosString": "-3.01, 1.39, -1.23",
+        "AroundAngleString": "259.04, 3.77",
+        "Distance": 7.3
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0006": {
+    "ID": "trbo_intro_hotel_0006",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0007",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]は３人を部屋に案内した。彼女は必要なものを整え、男たちに奉仕する準備をする。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_intro_hotel_0007": {
+    "ID": "trbo_intro_hotel_0007",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0008",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "その頃、オタクくんはしぶしぶ部屋の隅に座った。"
+    }
+  },
+
+  "trbo_intro_hotel_0008": {
+    "ID": "trbo_intro_hotel_0008",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0009_Branch",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-0.09, 1.62, -1.34",
+        "TargetPosString": "-2.63, 1.17, -1.62",
+        "AroundAngleString": "263.53, 9.98",
+        "Distance": 2.6
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0009_Branch": {
+    "ID": "trbo_intro_hotel_0009_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0010_M_[=PType]"
+  },
+
+  "trbo_intro_hotel_0011": {
+    "ID": "trbo_intro_hotel_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0012",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "そうだな…ちょっとビッチ風はどう？"
+    }
+  },
+
+
+  "trbo_intro_hotel_0012": {
+    "ID": "trbo_intro_hotel_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0013_Branch",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "おっ！いいっすね！"
+    }
+  },
+
+  "trbo_intro_hotel_0013_Branch": {
+    "ID": "trbo_intro_hotel_0013_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0020_M_[=PType]"
+  },
+
+  "trbo_intro_hotel_0021": {
+    "ID": "trbo_intro_hotel_0021",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_intro_hotel_0022",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+
+  "trbo_intro_hotel_0022": {
+    "ID": "trbo_intro_hotel_0022",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0023",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 0
+        },
+        "Man2": {
+          "Type": "M",
+          "ArrayPosition": 1
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0023": {
+    "ID": "trbo_intro_hotel_0023",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0024",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "ClothesSetID": "FullNude"
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0024": {
+    "ID": "trbo_intro_hotel_0024",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0024a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_housi.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 100,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ期待",
+          "FaceBlend": "頬２涙０"
+        },
+        "PosRot": {
+          "PosString": "-2.64, 0.00, -1.75",
+          "RotString": "0, 0.396, 0, 0.918"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0024a": {
+    "ID": "trbo_intro_hotel_0024a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0025",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-0.74, 1.44, 0.03",
+        "TargetPosString": "-2.54, 0.85, -1.59",
+        "AroundAngleString": "227.90, 13.71",
+        "Distance": 2.5
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0025": {
+    "ID": "trbo_intro_hotel_0025",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0026",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]は全て服を脱ぎ全裸になった。そして膝をつき、中年男とチャラ男のズボンを脱がせ、両手で彼らの性器を丁寧に握った。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_intro_hotel_0026": {
+    "ID": "trbo_intro_hotel_0026",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0027",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "わあ、オッサン、お前のモノもすげぇな！さぁ、[=Name,Maid,0,CallName]ちゃん、俺たちのでけぇチンポを咥えられるか？"
+    }
+  },
+
+  "trbo_intro_hotel_0027": {
+    "ID": "trbo_intro_hotel_0027",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0028_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]は頬を紅潮させ、二人の性器を見て、ゴクリと唾液を飲み込んだ。"
+    }
+  },
+
+  "trbo_intro_hotel_0028_Branch": {
+    "ID": "trbo_intro_hotel_0028_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0030_M_[=PType]"
+  },
+
+  "trbo_intro_hotel_0031": {
+    "ID": "trbo_intro_hotel_0031",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0032",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_housi.ks",
+        "ScriptLabel": "*男２激しさ２",
+        "SexPosID": 100,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロフェラ愛情"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0032": {
+    "ID": "trbo_intro_hotel_0032",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0033_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]は片方のチンポを丁寧にしゃぶり始めた。"
+    }
+  },
+
+  "trbo_intro_hotel_0033_Branch": {
+    "ID": "trbo_intro_hotel_0033_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0040_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0041": {
+    "ID": "trbo_intro_hotel_0041",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0042",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "ああ、やっぱりこれだ。おい、俺のだけじゃなくて、チャラ男のも咥えろ。"
+    }
+  },
+
+  "trbo_intro_hotel_0042": {
+    "ID": "trbo_intro_hotel_0042",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0043_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_housi.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 100,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0043_Branch": {
+    "ID": "trbo_intro_hotel_0043_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0050_M_[=PType]"
+  },
+
+  "trbo_intro_hotel_0051": {
+    "ID": "trbo_intro_hotel_0051",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0052",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "おや、[=Name,Maid,0,CallName]ちゃんは変態メイドさんだね。ほらほら、[=Name,Maid,0,CallName]ちゃんの大好きなデカチンがここにもあるよ。"
+    }
+  },
+
+  "trbo_intro_hotel_0052": {
+    "ID": "trbo_intro_hotel_0052",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0053_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_housi.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 100,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロフェラ愛情"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0053_Branch": {
+    "ID": "trbo_intro_hotel_0053_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0060_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0061": {
+    "ID": "trbo_intro_hotel_0061",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0062",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "ふはぁ…いいよいいよ。やっぱり[=Name,Maid,0,CallName]ちゃんのフェラは一番すけぇな…"
+    }
+  },
+
+  "trbo_intro_hotel_0062": {
+    "ID": "trbo_intro_hotel_0062",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0063",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "ははぁ、同感だ。……あーあ、チャラ男くん、こいつの顔見て。"
+    }
+  },
+
+  "trbo_intro_hotel_0063": {
+    "ID": "trbo_intro_hotel_0063",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0064",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "エロフェラ快楽"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0064": {
+    "ID": "trbo_intro_hotel_0064",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0065",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "おいおい、２本のチンポを同時にしゃぶるだけでそんなに嬉しいか？"
+    }
+  },
+
+  "trbo_intro_hotel_0065": {
+    "ID": "trbo_intro_hotel_0065",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0066_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_housi.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 100,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0066_Branch": {
+    "ID": "trbo_intro_hotel_0066_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0070_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0071": {
+    "ID": "trbo_intro_hotel_0071",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0072a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_housi.ks",
+        "ScriptLabel": "*男２激しさ２",
+        "SexPosID": 100,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+
+  "trbo_intro_hotel_0072a": {
+    "ID": "trbo_intro_hotel_0072a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0072",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "ほーう。この蕩けそうな顔、[=Name,Maid,0,CallName]ちゃん、フェラだけでこんな感じるのか。"
+    }
+  },
+
+  "trbo_intro_hotel_0072": {
+    "ID": "trbo_intro_hotel_0072",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0073",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "マジかよ？本当のビッチじゃねぇか！"
+    }
+  },
+
+  "trbo_intro_hotel_0073": {
+    "ID": "trbo_intro_hotel_0073",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0074_camerapan",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_housi.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 100,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0074_camerapan": {
+    "ID": "trbo_intro_hotel_0074_camerapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "trbo_intro_hotel_0075",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-1.56, 1.21, 3.09",
+        "TargetPosString": "-2.94, 1.03, 0.89",
+        "AroundAngleString": "212.04, 3.77",
+        "Distance": 2.6
+      },
+      "AnimationTime": 2
+    }
+  },
+
+  "trbo_intro_hotel_0075": {
+    "ID": "trbo_intro_hotel_0075",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0076",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "そして、チャラ男はオタクくんに話しかけた。"
+    }
+  },
+
+  "trbo_intro_hotel_0076": {
+    "ID": "trbo_intro_hotel_0076",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0077",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "おい、オタクくん。お前さぁ、そこに黙って座ってだけじゃねぇよ。こっち来い、一緒に遊ぼうよ。気分を壊すな。"
+    }
+  },
+
+  "trbo_intro_hotel_0077": {
+    "ID": "trbo_intro_hotel_0077",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0078",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "これじゃない…これじゃない…"
+    }
+  },
+
+  "trbo_intro_hotel_0078": {
+    "ID": "trbo_intro_hotel_0078",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0079",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "うるせぇよブツブツ！さっさと来い、[=Name,Maid,0,CallName]ちゃんにお前のも咥えらせろ。"
+    }
+  },
+
+  "trbo_intro_hotel_0079": {
+    "ID": "trbo_intro_hotel_0079",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0080",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "これは[=Name,Maid,0,CallName]ちゃんじゃない！[=Name,Maid,0,CallName]ちゃんは…[=Name,Maid,0,CallName]ちゃんはこんな女じゃない！"
+    }
+  },
+
+  "trbo_intro_hotel_0080": {
+    "ID": "trbo_intro_hotel_0080",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0081",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "……[=Name,Maid,0,CallName]ちゃんは…天使だ…こんなふしだらな女じゃない……"
+    }
+  },
+
+  "trbo_intro_hotel_0081": {
+    "ID": "trbo_intro_hotel_0081",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0082",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_housi.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 100,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0082": {
+    "ID": "trbo_intro_hotel_0082",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0083_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "疑問",
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "Man",
+            "ArrayPosition": 2
+          }
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0083_Branch": {
+    "ID": "trbo_intro_hotel_0083_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0090_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0091": {
+    "ID": "trbo_intro_hotel_0091",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0092",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_housi.ks",
+        "ScriptLabel": "*男２激しさ２",
+        "SexPosID": 100,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロフェラ愛情"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0092": {
+    "ID": "trbo_intro_hotel_0092",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0093",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "はぁ…コイツは何か勘違いしてんな。[=Name,Maid,0,CallName]ちゃんは最初からこういう淫乱な女だったよ。"
+    }
+  },
+
+  "trbo_intro_hotel_0093": {
+    "ID": "trbo_intro_hotel_0093",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0094",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "うわぁ…オタクくんお前……こんな場所に天使な女がいると思うなんて…正気かお前？"
+    }
+  },
+
+  "trbo_intro_hotel_0094": {
+    "ID": "trbo_intro_hotel_0094",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0095",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "ダメだなお前は。……しょうがねぇなー　[=Name,Maid,0,CallName]ちゃん、オタクくんのために立って足を開いて、彼にアソコを見せてあげて。"
+    }
+  },
+
+  "trbo_intro_hotel_0095": {
+    "ID": "trbo_intro_hotel_0095",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_intro_hotel_0096",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "trbo_intro_hotel_0096": {
+    "ID": "trbo_intro_hotel_0096",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "trbo_intro_hotel_0097"
+  },
+
+  "trbo_intro_hotel_0097": {
+    "ID": "trbo_intro_hotel_0097",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0098",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 0
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0098": {
+    "ID": "trbo_intro_hotel_0098",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0099",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-2.38, 0.00, 0.12",
+          "RotString": "0.00000, -0.33467, 0.00000, 0.94233"
+        }
+      }
+
+    ]
+  },
+
+  "trbo_intro_hotel_0099": {
+    "ID": "trbo_intro_hotel_0099",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0100",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_tati_aibu.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮２",
+          "EyeSight": {
+            "Type": "ToChara",
+            "EyeToCharaSetting": {
+              "Type": "Man",
+              "ArrayPosition": 2
+            }
+          }
+        },
+        "PosRot": {
+          "PosString": "-3.13, 0, 0.85",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0100": {
+    "ID": "trbo_intro_hotel_0100",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]はチャラ男の言うとおりにした。彼女が足を広げると、愛液の雫が床に落ちた。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_intro_hotel_0101": {
+    "ID": "trbo_intro_hotel_0102",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0103_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_tati_aibu.ks",
+        "ScriptLabel": "*秘部広げ",
+        "SexPosID": 101,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0103_Branch": {
+    "ID": "trbo_intro_hotel_0103_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0110_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0111": {
+    "ID": "trbo_intro_hotel_0111",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0112",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "ほらほら、この淫乱女、俺たちのチンポを咥えだけでこんーなに濡れちゃったよー　ほらほら。"
+    }
+  },
+
+  "trbo_intro_hotel_0112": {
+    "ID": "trbo_intro_hotel_0112",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0113",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "まるでお漏らしみたいなおい。"
+    }
+  },
+
+  "trbo_intro_hotel_0113": {
+    "ID": "trbo_intro_hotel_0113",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0114",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "あーあ、床がもうビショビショじゃねか！メイドとしてダメだろこんなの？"
+    }
+  },
+
+  "trbo_intro_hotel_0114": {
+    "ID": "trbo_intro_hotel_0114",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0115",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "中年男とチャラ男が[=Name,Maid,0,CallName]に言葉責めを続け、彼女のアソコはますます濡れていった。その時、オタクくんは怒った。"
+    }
+  },
+
+  "trbo_intro_hotel_0115": {
+    "ID": "trbo_intro_hotel_0115",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0116",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "man_tati_seigan_m.anm",
+          "MotionTag": "man_tati_seigan_m.anm"
+        },
+        "PosRot": {
+          "PosString": "-3.13, 0.00, 1.38",
+          "RotString": "0, 1, 0, 0"
+        },
+        "SmoothMovement": { "Time": 0.5 }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0116": {
+    "ID": "trbo_intro_hotel_0116",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0117",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "違う違う違う！お前ら[=Name,Maid,0,CallName]ちゃんに無理矢理やらせるんだ！[=Name,Maid,0,CallName]ちゃん、君はそんな女じゃない、そうだろう？"
+    }
+  },
+
+  "trbo_intro_hotel_0117": {
+    "ID": "trbo_intro_hotel_0117",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_intro_hotel_0118",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "trbo_intro_hotel_0118": {
+    "ID": "trbo_intro_hotel_0118",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0119",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.55, 1.71, 2.71",
+        "TargetPosString": "-3.07, 1.22, 1.19",
+        "AroundAngleString": "225.21, 12.77",
+        "Distance": 2.2
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0119": {
+    "ID": "trbo_intro_hotel_0119",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "trbo_intro_hotel_0121"
+  },
+
+  "trbo_intro_hotel_0121": {
+    "ID": "trbo_intro_hotel_0121",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0122",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 2
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0122": {
+    "ID": "trbo_intro_hotel_0122",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0123",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿チャラ男"
+        },
+        "PosRot": {
+          "PosString": "-3.70, 0.00, 0.32",
+          "RotString": "0, 0.278, 0, 0.961"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0123": {
+    "ID": "trbo_intro_hotel_0123",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0124",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_tati_tekoki_aibu.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 102,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ好感２"
+        },
+        "PosRot": {
+          "PosString": "-3.13, 0, 1.11",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0124": {
+    "ID": "trbo_intro_hotel_0124",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0125_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]がオタクくんに近づき、彼の手を握り、顔を近づけて小声で言った。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_intro_hotel_0125_Branch": {
+    "ID": "trbo_intro_hotel_0125_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0130_M_[=PType]"
+  },
+
+  "trbo_intro_hotel_0131": {
+    "ID": "trbo_intro_hotel_0131",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0132",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "……え？"
+    }
+  },
+
+  "trbo_intro_hotel_0132": {
+    "ID": "trbo_intro_hotel_0132",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0133",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "だからさぁ！いい加減認めろ！こいつすげぇビッチだぜ！"
+    }
+  },
+
+  "trbo_intro_hotel_0133": {
+    "ID": "trbo_intro_hotel_0133",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0134",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "黙れ黙れ黙れ！もう[=Name,Maid,0,CallName]ちゃんの悪口を言うな！"
+    }
+  },
+
+  "trbo_intro_hotel_0134": {
+    "ID": "trbo_intro_hotel_0134",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0135_Branch",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "[=Name,Maid,0,CallName]ちゃん、嫌だと言ってくれ。なぁ？こういう乱暴なセックスは嫌いだろう？"
+    }
+  },
+
+  "trbo_intro_hotel_0135_Branch": {
+    "ID": "trbo_intro_hotel_0135_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0140_M_[=PType]"
+  },
+
+  "trbo_intro_hotel_0141": {
+    "ID": "trbo_intro_hotel_0141",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0142_Branch",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "……え？え？"
+    }
+  },
+
+  "trbo_intro_hotel_0142_Branch": {
+    "ID": "trbo_intro_hotel_0142_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0150_M_[=PType]"
+  },
+
+  "trbo_intro_hotel_0151": {
+    "ID": "trbo_intro_hotel_0151",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0152",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "……"
+    }
+  },
+
+  "trbo_intro_hotel_0152": {
+    "ID": "trbo_intro_hotel_0152",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0153_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "オタクくんは唖然として泣きそうな顔で苦笑した。[=Name,Maid,0,CallName]は彼に優しく微笑みかけた。"
+    }
+  },
+
+  "trbo_intro_hotel_0153_Branch": {
+    "ID": "trbo_intro_hotel_0153_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0160_M_[=PType]"
+  },
+
+  "trbo_intro_hotel_0161": {
+    "ID": "trbo_intro_hotel_0161",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0162",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_tati_tekoki_aibu.ks",
+        "ScriptLabel": "*ディープキス",
+        "SexPosID": 102,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "接吻"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0162": {
+    "ID": "trbo_intro_hotel_0162",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0163",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "話し終えると、[=Name,Maid,0,CallName]はオタクくんの唇にキスをした。"
+    }
+  },
+
+  "trbo_intro_hotel_0163": {
+    "ID": "trbo_intro_hotel_0163",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0164",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "…！"
+    }
+  },
+
+  "trbo_intro_hotel_0164": {
+    "ID": "trbo_intro_hotel_0164",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0165",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_tati_tekoki_aibu.ks",
+        "ScriptLabel": "*両手コキ",
+        "SexPosID": 102,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0165": {
+    "ID": "trbo_intro_hotel_0165",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0166_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]は重ねていた唇を離すと、彼の股間に触れた。"
+    }
+  },
+
+  "trbo_intro_hotel_0166_Branch": {
+    "ID": "trbo_intro_hotel_0166_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0170_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0171": {
+    "ID": "trbo_intro_hotel_0171",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0172",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "優等生みたいなことばかり言って、結局、お前もしたいじゃねぇか？"
+    }
+  },
+
+  "trbo_intro_hotel_0172": {
+    "ID": "trbo_intro_hotel_0172",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0173",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "くっ…これは……"
+    }
+  },
+
+  "trbo_intro_hotel_0173": {
+    "ID": "trbo_intro_hotel_0173",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0174_Branch",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "ははははぁ、いいじゃない？最初は嫌がるのが普通だと思いよ。さぁ、[=Name,Maid,0,CallName]ちゃん、オタクくんに乱交の楽しさを教えてあげて。"
+    }
+  },
+
+  "trbo_intro_hotel_0174_Branch": {
+    "ID": "trbo_intro_hotel_0174_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0180_M_[=PType]"
+  },
+
+  "trbo_intro_hotel_0181": {
+    "ID": "trbo_intro_hotel_0181",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_intro_hotel_0182",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "trbo_intro_hotel_0182": {
+    "ID": "trbo_intro_hotel_0182",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0183",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-3.27, 1.95, 2.13",
+        "TargetPosString": "-0.83, 1.03, 1.12",
+        "AroundAngleString": "112.34, 19.30",
+        "Distance": 2.8
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0183": {
+    "ID": "trbo_intro_hotel_0183",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "trbo_intro_hotel_0184"
+  },
+
+  "trbo_intro_hotel_0184": {
+    "ID": "trbo_intro_hotel_0184",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0185",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.72, 0.00, 2.06",
+          "RotString": "0, 0.908, 0, 0.418"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-1.92, 0.00, 0.12",
+          "RotString": "0, 0.339, 0, 0.941"
+        }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "ran3p_kijyoui_kuti_taiki_m2.anm",
+          "MotionTag": "*ran3p_kijyoui_kuti_taiki_m2.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.55, 0.00, 1.11",
+          "RotString": "0, 0, 0, 1"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "sex_OM_onani.ks",
+          "ScriptLabel": "*待機"
+        },
+        "PosRot": {
+          "PosString": "-0.55, 0.52, 1.11",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0185": {
+    "ID": "trbo_intro_hotel_0185",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0186",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]はベッドに座り、足を広げた。彼女は濡れたアソコをオタクくんに見せて、彼を誘惑しようとした。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_intro_hotel_0186": {
+    "ID": "trbo_intro_hotel_0186",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0187_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "MotionInfo": {
+          "ScriptFile": "sex_OM_onani.ks",
+          "ScriptLabel": "*広げさせる"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0187_Branch": {
+    "ID": "trbo_intro_hotel_0187_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0190_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0191": {
+    "ID": "trbo_intro_hotel_0191",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0192",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "おお！いいねぇー　すげぇビッチっぽい！"
+    }
+  },
+
+  "trbo_intro_hotel_0192": {
+    "ID": "trbo_intro_hotel_0192",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0193",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "いやぁ、おっさん、これもう「っぽい」のレベルじゃねぇだろ！"
+    }
+  },
+
+  "trbo_intro_hotel_0193": {
+    "ID": "trbo_intro_hotel_0193",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0194_Branch",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "さあ、もっといやらしくおねだりをしてみて？もっと具体的に何をしてほしいかを言って？"
+    }
+  },
+
+  "trbo_intro_hotel_0194_Branch": {
+    "ID": "trbo_intro_hotel_0194_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0200_M_[=PType]"
+  },
+
+  "trbo_intro_hotel_0201": {
+    "ID": "trbo_intro_hotel_0201",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0202",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "おおー！いいよ！いいよ！"
+    }
+  },
+
+  "trbo_intro_hotel_0202": {
+    "ID": "trbo_intro_hotel_0202",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0203",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "うっ…"
+    }
+  },
+
+  "trbo_intro_hotel_0203": {
+    "ID": "trbo_intro_hotel_0203",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0204_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "エロ興奮２",
+        "MotionInfo": {
+          "ScriptFile": "sex_OM_onani.ks",
+          "ScriptLabel": "*激しさ１指３"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0204_Branch": {
+    "ID": "trbo_intro_hotel_0204_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0210_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0211": {
+    "ID": "trbo_intro_hotel_0211",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0212",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "あっ…ああァ…やめろォォ…"
+    }
+  },
+
+  "trbo_intro_hotel_0212": {
+    "ID": "trbo_intro_hotel_0212",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0213_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "オタクくんの頭が混乱し、まだ抵抗している。"
+    }
+  },
+
+  "trbo_intro_hotel_0213_Branch": {
+    "ID": "trbo_intro_hotel_0213_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0220_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0221": {
+    "ID": "trbo_intro_hotel_0221",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0222",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "良くないよ、オタクくん。大好きな女性が君のペニスを求めているのに、君は何もせずただ立っているのか？"
+    }
+  },
+
+  "trbo_intro_hotel_0222": {
+    "ID": "trbo_intro_hotel_0222",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0223_Branch",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "男なら黙ってぶち込んでいけよ！"
+    }
+  },
+
+  "trbo_intro_hotel_0223_Branch": {
+    "ID": "trbo_intro_hotel_0223_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0230_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0231": {
+    "ID": "trbo_intro_hotel_0231",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0232",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "うぁ…うァ……うおおおおおォォォォォ！"
+    }
+  },
+
+  "trbo_intro_hotel_0232": {
+    "ID": "trbo_intro_hotel_0232",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_intro_hotel_0233",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "trbo_intro_hotel_0233": {
+    "ID": "trbo_intro_hotel_0233",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0234",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 2
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+
+
+  "trbo_intro_hotel_0234": {
+    "ID": "trbo_intro_hotel_0234",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0234a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 103,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ好感３"
+        },
+        "PosRot": {
+          "PosString": "-0.55, 0.52, 1.11",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0234a": {
+    "ID": "trbo_intro_hotel_0234a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0235",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.43, 2.14, 2.94",
+        "TargetPosString": "-0.65, 0.90, 1.30",
+        "AroundAngleString": "154.56, 34.21",
+        "Distance": 2.2
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0235": {
+    "ID": "trbo_intro_hotel_0235",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0236_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "オタクくんはまるで気が狂ったかのように[=Name,Maid,0,CallName]を押し倒した。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_intro_hotel_0236_Branch": {
+    "ID": "trbo_intro_hotel_0236_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0240_M_[=PType]"
+  },
+
+  "trbo_intro_hotel_0241": {
+    "ID": "trbo_intro_hotel_0241",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0242_Branch",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "ハァ……ハァ……なぜ…？なぜそんな卑猥な言葉を言い続けるんだ？なぜだ？"
+    }
+  },
+
+  "trbo_intro_hotel_0242_Branch": {
+    "ID": "trbo_intro_hotel_0242_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0250_M_[=PType]"
+  },
+
+
+  "trbo_intro_hotel_0251": {
+    "ID": "trbo_intro_hotel_0251",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0251a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*抱き付き激しさ２",
+        "SexPosID": 103,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0251a": {
+    "ID": "trbo_intro_hotel_0251a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0252",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "クソッ…クソォ……！君は僕のものだ！……わかった…わかった！だったら僕は君を満たしてあげる！だから君はもう他の男は必要ないよ！"
+    }
+  },
+
+  "trbo_intro_hotel_0252": {
+    "ID": "trbo_intro_hotel_0252",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0253_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "オタクくんは[=Name,Maid,0,CallName]を征服しようと必死に腰を振った。"
+    }
+  },
+
+  "trbo_intro_hotel_0253_Branch": {
+    "ID": "trbo_intro_hotel_0253_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0260_M_[=PType]"
+  },
+
+  "trbo_intro_hotel_0261": {
+    "ID": "trbo_intro_hotel_0261",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0262_Branch",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "あァァ…なんで……"
+    }
+  },
+
+  "trbo_intro_hotel_0262_Branch": {
+    "ID": "trbo_intro_hotel_0262_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0270_M_[=PType]"
+  },
+
+  "trbo_intro_hotel_0271": {
+    "ID": "trbo_intro_hotel_0271",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0271a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_taimenkijyoui.ks",
+        "ScriptLabel": "*挿入待機",
+        "SexPosID": 104,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0271a": {
+    "ID": "trbo_intro_hotel_0271a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0272",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-2.16, 1.85, 3.69",
+        "TargetPosString": "-1.01, 0.93, 1.07",
+        "AroundAngleString": "156.36, 17.75",
+        "Distance": 3
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0272": {
+    "ID": "trbo_intro_hotel_0272",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0273",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]は振り返ってオタクくんを押し倒した。それに彼女は尻を振りながら、後ろに座っている男たちをいやらしい目で見ていた。"
+    }
+  },
+
+  "trbo_intro_hotel_0273": {
+    "ID": "trbo_intro_hotel_0273",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "trbo_intro_hotel_0274"
+  },
+
+  "trbo_intro_hotel_0274": {
+    "ID": "trbo_intro_hotel_0274",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0275",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "ran3p_2ana_taiki_m.anm",
+          "MotionTag": "ran3p_2ana_taiki_m.anm"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "MotionFile": "ran3p_2ana_taiki_f.anm",
+          "MotionTag": "ran3p_2ana_taiki_f.anm"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0275": {
+    "ID": "trbo_intro_hotel_0275",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0276_Branch",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "ふーん、なになに？[=Name,Maid,0,CallName]ちゃん。"
+    }
+  },
+
+  "trbo_intro_hotel_0276_Branch": {
+    "ID": "trbo_intro_hotel_0276_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0280_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0281": {
+    "ID": "trbo_intro_hotel_0281",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0282_Branch",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "えっー？わかんないよー　何が欲しいか詳しく教えてくれよ。"
+    }
+  },
+
+  "trbo_intro_hotel_0282_Branch": {
+    "ID": "trbo_intro_hotel_0282_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0290_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0291": {
+    "ID": "trbo_intro_hotel_0291",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0292",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "仕方ない女だねー　じゃあチャラ男くん、まずは俺の番、どう？"
+    }
+  },
+
+  "trbo_intro_hotel_0292": {
+    "ID": "trbo_intro_hotel_0292",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0293",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "いいぜー！"
+    }
+  },
+
+  "trbo_intro_hotel_0293": {
+    "ID": "trbo_intro_hotel_0293",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_intro_hotel_0294",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "trbo_intro_hotel_0294": {
+    "ID": "trbo_intro_hotel_0294",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0295",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "M",
+          "ArrayPosition": 2
+        },
+        "Man2": {
+          "Type": "M",
+          "ArrayPosition": 1
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0295": {
+    "ID": "trbo_intro_hotel_0295",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0296",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ好感３"
+        },
+        "PosRot": {
+          "PosString": "0, 0.5, 1.6",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0296": {
+    "ID": "trbo_intro_hotel_0296",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0297",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "MotionFile": "man_ohayo.anm",
+          "MotionTag": "man_ohayo.anm"
+        },
+        "PosRot": {
+          "PosString": "0.97, 0.61, 2.82",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0297": {
+    "ID": "trbo_intro_hotel_0297",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0297a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "1.67, 1.07, -0.10",
+        "TargetPosString": "0.20, 0.89, 1.53",
+        "AroundAngleString": "318.04, 4.71",
+        "Distance": 2.2
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0297a": {
+    "ID": "trbo_intro_hotel_0297a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0298",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "素晴らしいお尻……ふふっ、たまんないな……！"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_intro_hotel_0298": {
+    "ID": "trbo_intro_hotel_0298",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0299_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana.ks",
+        "ScriptLabel": "*挿入",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮２"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0299_Branch": {
+    "ID": "trbo_intro_hotel_0299_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0300_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0301": {
+    "ID": "trbo_intro_hotel_0301",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0302",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "ほら、オタク、一緒に腰振れよ！"
+    }
+  },
+
+  "trbo_intro_hotel_0302": {
+    "ID": "trbo_intro_hotel_0302",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0303",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "あっ……はい……"
+    }
+  },
+
+  "trbo_intro_hotel_0303": {
+    "ID": "trbo_intro_hotel_0303",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0304_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ我慢２"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0304_Branch": {
+    "ID": "trbo_intro_hotel_0304_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0310_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0311": {
+    "ID": "trbo_intro_hotel_0311",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0312",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "さあさあ、もっと激しくしろ！いいぞいいぞ、そのイキそうな顔！"
+    }
+  },
+
+  "trbo_intro_hotel_0312": {
+    "ID": "trbo_intro_hotel_0312",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0313",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "ああ、もっと力を入れて、オタクくん！"
+    }
+  },
+
+  "trbo_intro_hotel_0313": {
+    "ID": "trbo_intro_hotel_0313",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0314",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮３"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0314": {
+    "ID": "trbo_intro_hotel_0314",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0315_Branch",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "オラ！オラ！"
+    }
+  },
+
+  "trbo_intro_hotel_0315_Branch": {
+    "ID": "trbo_intro_hotel_0315_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0320_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0321": {
+    "ID": "trbo_intro_hotel_0321",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0322",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "[=Name,Maid,0,CallName]ちゃんはオタクくんのチンポを感じると言ったよ！こんなのは初めて聞いたんよね？"
+    }
+  },
+
+  "trbo_intro_hotel_0322": {
+    "ID": "trbo_intro_hotel_0322",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0323",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "あぁ…ああ…！そうだ……！！"
+    }
+  },
+
+  "trbo_intro_hotel_0323": {
+    "ID": "trbo_intro_hotel_0323",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0324_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "快感と失望が入り混じり、オタクくんの顔は泣き笑いに歪んでいた。"
+    }
+  },
+
+  "trbo_intro_hotel_0324_Branch": {
+    "ID": "trbo_intro_hotel_0324_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0330_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0331": {
+    "ID": "trbo_intro_hotel_0331",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0332",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "ほらね、[=Name,Maid,0,CallName]ちゃんはビッチなので、こういうのことを求めてるんだ。だから、こうするのは実に良いことだよ。"
+    }
+  },
+
+  "trbo_intro_hotel_0332": {
+    "ID": "trbo_intro_hotel_0332",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0333",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "はい……これは…[=Name,Maid,0,CallName]ちゃんの…ために…！オラ！オラ！"
+    }
+  },
+
+  "trbo_intro_hotel_0333": {
+    "ID": "trbo_intro_hotel_0333",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0334_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0334_Branch": {
+    "ID": "trbo_intro_hotel_0334_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0340_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0341": {
+    "ID": "trbo_intro_hotel_0341",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0342",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "うっ…締まってきた…！俺たちのペニス…気持ちいいんだろ？ううっ…膣圧は強い…！"
+    }
+  },
+
+  "trbo_intro_hotel_0342": {
+    "ID": "trbo_intro_hotel_0342",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0343",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "もう…ダメ…！"
+    }
+  },
+
+  "trbo_intro_hotel_0343": {
+    "ID": "trbo_intro_hotel_0343",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0344a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana.ks",
+        "ScriptLabel": "*初々しい射精中",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0344a": {
+    "ID": "trbo_intro_hotel_0344a",
+    "Type": "AddTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_hotel_0344_Branch",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F",
+        "IndexPosition": 0,
+        "BodyTarget": [ "Vagina", "Vagina" ]
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0344_Branch": {
+    "ID": "trbo_intro_hotel_0344_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0350_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0351": {
+    "ID": "trbo_intro_hotel_0351",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0352",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "これ……すごいィ……すごく…きもちいいィィ……"
+    }
+  },
+
+  "trbo_intro_hotel_0352": {
+    "ID": "trbo_intro_hotel_0352",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0353_Branch",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "だろう？"
+    }
+  },
+
+  "trbo_intro_hotel_0353_Branch": {
+    "ID": "trbo_intro_hotel_0353_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0360_T_[=PType]"
+  },
+
+  "trbo_intro_hotel_0361": {
+    "ID": "trbo_intro_hotel_0361",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0362",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "おいオタクくん、見て！今[=Name,Maid,0,CallName]ちゃんの顔！こんな顔を見たことがある？ないよね？"
+    }
+  },
+
+  "trbo_intro_hotel_0362": {
+    "ID": "trbo_intro_hotel_0362",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0363",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "これは女のイキ顔だ！よくやったな、オタクくん！"
+    }
+  },
+
+  "trbo_intro_hotel_0363": {
+    "ID": "trbo_intro_hotel_0363",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0364",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "女の…イキ顔……うへぇ…僕だって、女のイキ顔を見ることができるなんて……うへぇへぇ……"
+    }
+  },
+
+  "trbo_intro_hotel_0364": {
+    "ID": "trbo_intro_hotel_0364",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0365",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "この征服感……たまんない！……うへぇへぇへぇ……"
+    }
+  },
+
+  "trbo_intro_hotel_0365": {
+    "ID": "trbo_intro_hotel_0365",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0366",
+    "TalkData": {
+      "SpeakerName": "中年男",
+      "Text": "はぁはぁ…チャラ男くん、交代だ…！少し休みたい…"
+    }
+  },
+
+  "trbo_intro_hotel_0366": {
+    "ID": "trbo_intro_hotel_0366",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0367_Branch",
+    "TalkData": {
+      "SpeakerName": "チャラ男",
+      "Text": "へへえ、任せて！"
+    }
+  },
+
+  "trbo_intro_hotel_0367_Branch": {
+    "ID": "trbo_intro_hotel_0367_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "trbo_intro_hotel_0370_M_[=PType]"
+  },
+
+  "trbo_intro_hotel_0371": {
+    "ID": "trbo_intro_hotel_0371",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0372",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]は柔らかな声と淫らな顔でオタクくんを誘惑した。"
+    }
+  },
+
+  "trbo_intro_hotel_0372": {
+    "ID": "trbo_intro_hotel_0372",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0373",
+    "TalkData": {
+      "SpeakerName": "オタクくん",
+      "Text": "ああ…もっと[=Name,Maid,0,CallName]ちゃんのイキ顔が見たい……　何回でもやるから…いろんなイキ顔を見せてくれ……"
+    }
+  },
+
+  "trbo_intro_hotel_0373": {
+    "ID": "trbo_intro_hotel_0373",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0374",
+    "ListUpdateData": {
+      "Add": [
+        {
+          "Type": "M",
+          "SrcPosition": 7,
+          "PositionToInsert": 0
+        }
+      ]
+    }
+  },
+
+  "trbo_intro_hotel_0374": {
+    "ID": "trbo_intro_hotel_0374",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_yotogiplay_closepanel",
+    "ListUpdateData": {
+      "Add": [
+        {
+          "Type": "M",
+          "SrcPosition": 2,
+          "PositionToInsert": 1
+        }
+      ]
+    }
+  },
+
+
+  "trbo_intro_yotogiplay_closepanel": {
+    "ID": "trbo_intro_yotogiplay_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_start_yotogiplay"
+  },
+
+  "trbo_start_yotogiplay": {
+    "ID": "trbo_start_yotogiplay",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "TripleBooking",
+      "Phase": 1,
+      "IsKeepCharacterVisibleAfterYotogi": false,
+      "IsClubOwnerMainCharacter": false
+    },
+    "NextStepID": "trbo_postyotogi_init"
+  }
+
+
+}
