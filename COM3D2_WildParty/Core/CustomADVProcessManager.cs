@@ -199,20 +199,23 @@ namespace COM3D2.WildParty.Plugin.Core
             if (step.CharaInitData.ManRequired >= 0)
                 StateManager.Instance.MaxManUsed = step.CharaInitData.ManRequired;
 
-            foreach (var validManTypeInfo in step.CharaInitData.ValidManType)
+            if (step.CharaInitData.ValidManType != null)
             {
-                List<string> validManTypes = GetValidManTypes(validManTypeInfo);
-
-                int manCount = validManTypeInfo.Count;
-                
-                if (manCount < 0)
-                    manCount = StateManager.Instance.MaxManUsed;
-                
-                //init man
-                for (int i = 0; i < manCount; i++)
+                foreach (var validManTypeInfo in step.CharaInitData.ValidManType)
                 {
-                    var man = Core.CharacterHandling.InitMan(StateManager.Instance.MenList.Count, validManTypes);
-                    StateManager.Instance.MenList.Add(man);
+                    List<string> validManTypes = GetValidManTypes(validManTypeInfo);
+
+                    int manCount = validManTypeInfo.Count;
+
+                    if (manCount < 0)
+                        manCount = StateManager.Instance.MaxManUsed;
+
+                    //init man
+                    for (int i = 0; i < manCount; i++)
+                    {
+                        var man = Core.CharacterHandling.InitMan(StateManager.Instance.MenList.Count, validManTypes);
+                        StateManager.Instance.MenList.Add(man);
+                    }
                 }
             }
 

@@ -18,7 +18,7 @@ namespace COM3D2.WildParty.Plugin
     {
         public const string PluginName = "WildParty";
         public const string GUID = "COM3D2.WildParty.Plugin";
-        public const string Version = "0.6.0";
+        public const string Version = "0.7.0";
 
         internal static ManualLogSource Log;
 

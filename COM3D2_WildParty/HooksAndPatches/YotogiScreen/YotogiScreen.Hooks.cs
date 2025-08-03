@@ -91,7 +91,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         private static void YotogiCommandFactoryAddCommandPost(YotogiCommandFactory __instance, Yotogis.Skill.Data.Command.Data command_data, string __state)
         {
             //Restore the TJSScript
-            if (!string.IsNullOrWhiteSpace(__state))
+            if (!string.IsNullOrEmpty(__state))
                 Traverse.Create(command_data.basic).Field("request_tjsscript").SetValue(__state);
 
             //For easy access the yotogi command factory object, we have to remember the instance here
