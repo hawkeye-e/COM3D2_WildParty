@@ -1,0 +1,1508 @@
+{
+  "trbo_intro_0030_M_Majime": {
+    "ID": "trbo_intro_0030_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_0030_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "trbo_intro_0030_T_Majime": {
+    "ID": "trbo_intro_0030_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0040_M_Majime",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "まあまあ、いいじゃないですか。",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_third_61106.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.8
+        }
+      }
+    }
+  },
+
+  "trbo_intro_0040_M_Majime": {
+    "ID": "trbo_intro_0040_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_0040_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_0040_T_Majime": {
+    "ID": "trbo_intro_0040_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "皆さんで一緒にしましょう。",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_third_61113.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.8
+        }
+      }
+    }
+  },
+
+
+  "trbo_intro_0060_M_Majime": {
+    "ID": "trbo_intro_0060_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_0060_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちご案内"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_0060_T_Majime": {
+    "ID": "trbo_intro_0060_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "では早速、お部屋にご案内いたしますね。",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_tsou_68774.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+
+
+  "trbo_intro_hotel_0010_M_Majime": {
+    "ID": "trbo_intro_hotel_0010_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0010_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0010_T_Majime": {
+    "ID": "trbo_intro_hotel_0010_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "どんな風にしてほしいのか、要望でもありますか？",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_third_61130.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0020_M_Majime": {
+    "ID": "trbo_intro_hotel_0020_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0020_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0020_T_Majime": {
+    "ID": "trbo_intro_hotel_0020_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はい、わかりました。",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_tsou_68748.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0030_M_Majime": {
+    "ID": "trbo_intro_hotel_0030_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0030_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮２"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0030_T_Majime": {
+    "ID": "trbo_intro_hotel_0030_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "は、はい、構いません。誠心誠意奉仕させて頂きます。",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP01_17805.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0040_T_Majime": {
+    "ID": "trbo_intro_hotel_0040_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あむっ、ぢゅっ……はぷっ、ぢゅっぷ、私……上手くできていますか？",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_order_51600.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0050_M_Majime": {
+    "ID": "trbo_intro_hotel_0050_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0050_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ羞恥２"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0050_T_Majime": {
+    "ID": "trbo_intro_hotel_0050_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁっ……あなたのおちんちん、さっきよりいやらしい匂いがしてきますっ……ふあぁ……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_order_50186.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0060_T_Majime": {
+    "ID": "trbo_intro_hotel_0060_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んあぷ、ぢゅっず、んんぅっ！　おちんちん、どんどん熱くなってますっ……！　ふぁぷ、ぢゅるるっ、はぁっ……！",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_order_51604.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0070_T_Majime": {
+    "ID": "trbo_intro_hotel_0070_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ……さっきよりも硬くなりましたね……？　いいんですよ、気持ちよくなってくださいね……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_order_50185.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0090_T_Majime": {
+    "ID": "trbo_intro_hotel_0090_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そんな風に見えますか？",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_order_50308.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0110_T_Majime": {
+    "ID": "trbo_intro_hotel_0110_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0111",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もうこんなになってしまいました……ほら、見て下さい……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_order_50114.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0130_M_Majime": {
+    "ID": "trbo_intro_hotel_0130_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0130_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮２"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0130_T_Majime": {
+    "ID": "trbo_intro_hotel_0130_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0131",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "実はわたし、それだったんですよね……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_order_50867.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0140_M_Majime": {
+    "ID": "trbo_intro_hotel_0140_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0140_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0140_T_Majime": {
+    "ID": "trbo_intro_hotel_0140_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0141",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "別にこれくらい……私は、平気です……なんだったらもっとしても、大丈夫なくらいですよ……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP01_18066.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0150_M_Majime": {
+    "ID": "trbo_intro_hotel_0150_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0150_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "発情"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0150_T_Majime": {
+    "ID": "trbo_intro_hotel_0150_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "それにしても、こうして一緒にプレイをするのも結構楽しかったですね。",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_third_61064.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0160_M_Majime": {
+    "ID": "trbo_intro_hotel_0160_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0160_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ好感３"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0160_T_Majime": {
+    "ID": "trbo_intro_hotel_0160_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0161",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もしかして、引いちゃいました……？",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_order_50879.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0170_T_Majime": {
+    "ID": "trbo_intro_hotel_0170_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あぁっ、凄く熱いです……んっ、こんなに硬く張り詰めてるなんて……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_order_51590.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0180_M_Majime": {
+    "ID": "trbo_intro_hotel_0180_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0180_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0180_T_Majime": {
+    "ID": "trbo_intro_hotel_0180_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もちろん……任せておいてくださいっ！",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_Sifuku_24548.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0190_T_Majime": {
+    "ID": "trbo_intro_hotel_0190_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0191",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "その、おまんこが疼いてしまいます……んぅんっ……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP01_17969.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0200_M_Majime": {
+    "ID": "trbo_intro_hotel_0200_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0200_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ羞恥２"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0200_T_Majime": {
+    "ID": "trbo_intro_hotel_0200_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0201",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "おちんちん待ってます……寂しくて、あっ、あっ……切ないです……いっぱい、ずぽずぽください……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP01_18063.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5.8
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0210_T_Majime": {
+    "ID": "trbo_intro_hotel_0210_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0211",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "これ以上お預けされたら……私、おかしくなっちゃいます……ください……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP02B_23914.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.9,
+          "EndTime": 8.5
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0220_T_Majime": {
+    "ID": "trbo_intro_hotel_0220_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0221",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もう、私のここ……早く挿れて欲しくて、準備万端……ですから♪",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP02B_23906.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.5
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0230_T_Majime": {
+    "ID": "trbo_intro_hotel_0230_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0231",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "オチンポ、もうおっきくなって来ましたね……私も大丈夫ですから……あなたの好きなように、オマンコたくさん使ってくださいね♪",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_Sifuku_24209.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0240_M_Majime": {
+    "ID": "trbo_intro_hotel_0240_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0240_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0240_T_Majime": {
+    "ID": "trbo_intro_hotel_0240_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0241",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ごめんなさい♪",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_Y_26530a.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 9
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0250_M_Majime": {
+    "ID": "trbo_intro_hotel_0250_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0250_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ期待"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0250_T_Majime": {
+    "ID": "trbo_intro_hotel_0250_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0251",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ん、あっ……お客様のちんぽが欲しくなってしまって……まんこが疼いてしまうんですぅ……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP01_18084.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 9.3
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0260_M_Majime": {
+    "ID": "trbo_intro_hotel_0260_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0260_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0260_T_Majime": {
+    "ID": "trbo_intro_hotel_0260_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0261",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "う、すみません……少し物足りない気持ちがないと言えば……嘘になってしまいます……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP02B_23942.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0270_M_Majime": {
+    "ID": "trbo_intro_hotel_0270_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0270_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0270_T_Majime": {
+    "ID": "trbo_intro_hotel_0270_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0271",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ♪",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP5_28474.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0280_T_Majime": {
+    "ID": "trbo_intro_hotel_0280_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0281",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "意地悪言わないでくださいぃっ……はぁ、はぁ……興奮して、もう、我慢できなくなりそう……なんですっ……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_Sifuku_24172.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0290_T_Majime": {
+    "ID": "trbo_intro_hotel_0290_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0291",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "こんなにお尻を振って待っているんですよぉ……？　今すぐ勃起したおちんちん、ぶち込んでくださいぃ……気持ちいい穴、使ってくださいぃ……♪",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP01_18070.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0300_T_Majime": {
+    "ID": "trbo_intro_hotel_0300_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0301",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ひぐっ、お、おっ！　あ、あっ、やっとぉ、あっ……アナルにちんぽぉぉ！　奥までほじってくださいっ！　アヘ顔晒すまでぇぇっ！　んひぃぃっ！",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP01_18068.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0310_T_Majime": {
+    "ID": "trbo_intro_hotel_0310_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0311",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ひぐっ……んぅんっ！　くぅうううっ……！　ケツ穴っ……ケツ穴ですぅっ、ケツ穴とマンコに、太チンポ入れられてっ、アヘってるんですっ……！",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_X1Kai_63479.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0320_T_Majime": {
+    "ID": "trbo_intro_hotel_0320_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0321",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あひぃんっ♪　んんぅっ……！　これっ、これスキなんですぅ！　んんっ！　ああああっ！　おほっ！　ひぐぅぅぅぅっ……！",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_SM_64543.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0330_T_Majime": {
+    "ID": "trbo_intro_hotel_0330_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0331",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あひぃ……♪　ひっ、ひああぁぁっ♪　しあわせぇ……わ、わたし……しあわせ、ですぅ……♪　気持ちいいこと、ばっかりでぇ……♪",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_SM_64547.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0340_T_Majime": {
+    "ID": "trbo_intro_hotel_0340_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0341",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふぁぁ、あひっ、はぁ、あぁんっ！　こんなに愛されてっ、あぁ、ぁっ、幸せ感じながらおまんこイきますぅっ、んひゃあ、ああっ、くるぅぅ！",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_X01_61067.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0350_T_Majime": {
+    "ID": "trbo_intro_hotel_0350_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0351",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ、あああああああああああああああっ！　はぁ、はぁ……最高、ですっ……んぅんっ……こんな刺激……初めて、ですぅっ……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_X1Kai_63485.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0360_T_Majime": {
+    "ID": "trbo_intro_hotel_0360_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0361",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁっ……すごい、においですね……なんだか、イッたばっかりなのに……体が、熱くて……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP02B_24061.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0370_M_Majime": {
+    "ID": "trbo_intro_hotel_0370_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0370_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ好感３"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0370_T_Majime": {
+    "ID": "trbo_intro_hotel_0370_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0371",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私、まだしたりないです……せっかくの機会なんですからもっと……したい、です……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_Sifuku_24207.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+
+  "trbo_postyotogi_0010_M_Majime": {
+    "ID": "trbo_postyotogi_0010_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0010_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "困った"
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0010_T_Majime": {
+    "ID": "trbo_postyotogi_0010_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "まだ、物足りないというか……もう少し、できたりしませんか……？",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP02B_24029.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.3
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0020_M_Majime": {
+    "ID": "trbo_postyotogi_0020_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0020_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0020_T_Majime": {
+    "ID": "trbo_postyotogi_0020_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "では、ゲームはここで終了ということでっ。お疲れさまでした。",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_order_50679.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0050_M_Majime": {
+    "ID": "trbo_postyotogi_0050_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0050_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "苦笑い",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頬掻き"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0050_T_Majime": {
+    "ID": "trbo_postyotogi_0050_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ、あはは……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP_17119.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.7
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0060_M_Majime": {
+    "ID": "trbo_postyotogi_0060_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0060_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "困った",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0060_T_Majime": {
+    "ID": "trbo_postyotogi_0060_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そのっ……嫌いに何てならないですよね……？",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP01_17739.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 7
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0070_M_Majime": {
+    "ID": "trbo_postyotogi_0070_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0070_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0070_T_Majime": {
+    "ID": "trbo_postyotogi_0070_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お礼なんて、しなくてもいいですよ♪　だって、私が好きでやったことなんですから……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_Y_26540a.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0080_M_Majime": {
+    "ID": "trbo_postyotogi_0080_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0080_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0080_T_Majime": {
+    "ID": "trbo_postyotogi_0080_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いいですね、次もぜひ。",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_third_61065.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0100_M_Majime": {
+    "ID": "trbo_postyotogi_0100_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0100_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0100_T_Majime": {
+    "ID": "trbo_postyotogi_0100_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "大切なお客様ですから、誠心誠意奉仕させて頂きました。",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP01_17756.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0110_M_Majime": {
+    "ID": "trbo_postyotogi_0100_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0110_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0110_T_Majime": {
+    "ID": "trbo_postyotogi_0110_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0111_T_Majime",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]は嬉しそうに淫らな笑顔を浮かべた。"
+    }
+  },
+
+  "trbo_postyotogi_0111_T_Majime": {
+    "ID": "trbo_postyotogi_0111_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0112",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "正直に言うと……楽しかったんですよね……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_order_50861.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.5
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0120_M_Majime": {
+    "ID": "trbo_postyotogi_0120_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0120_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "苦笑い",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0120_T_Majime": {
+    "ID": "trbo_postyotogi_0120_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そ、そんな事……あるはずないじゃないですか……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP01_17827.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0130_M_Majime": {
+    "ID": "trbo_postyotogi_0130_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0130_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0130_T_Majime": {
+    "ID": "trbo_postyotogi_0130_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0131",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ、ありがとうございます！",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_third_61080.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "trbo_postyotogi_0140_M_Majime": {
+    "ID": "trbo_postyotogi_0140_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0140_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "疑問"
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0140_T_Majime": {
+    "ID": "trbo_postyotogi_0140_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0141",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "え？",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_order_50669.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.5
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0150_M_Majime": {
+    "ID": "trbo_postyotogi_0150_M_Majime",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0150_T_Majime",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0150_T_Majime": {
+    "ID": "trbo_postyotogi_0150_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はい！　分かってくれますか！　さすがはご主人様！",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_ADD_20803.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0170_T_Majime": {
+    "ID": "trbo_postyotogi_0170_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んぅ……ご主人様……",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_Sifuku_24549.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0180_T_Majime": {
+    "ID": "trbo_postyotogi_0180_T_Majime",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ご主人様さえよければ……ですけど……また、しませんか……？",
+      "VoiceData": {
+        "Majime": {
+          "VoiceFile": "H1_GP02B_23938.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5,
+          "EndTime": 7.5
+        }
+      }
+    }
+  }
+}

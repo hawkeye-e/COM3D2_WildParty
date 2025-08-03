@@ -1,0 +1,1511 @@
+{
+  "trbo_intro_0030_M_Devilish": {
+    "ID": "trbo_intro_0030_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_0030_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "trbo_intro_0030_T_Devilish": {
+    "ID": "trbo_intro_0030_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0040_M_Devilish",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "まあまあ、いいじゃないですか。",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_third_60949.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "trbo_intro_0040_M_Devilish": {
+    "ID": "trbo_intro_0040_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_0040_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_0040_T_Devilish": {
+    "ID": "trbo_intro_0040_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "皆さんで一緒にしましょうね。",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_third_60956.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.8
+        }
+      }
+    }
+  },
+
+
+  "trbo_intro_0060_M_Devilish": {
+    "ID": "trbo_intro_0060_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_0060_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちご案内"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_0060_T_Devilish": {
+    "ID": "trbo_intro_0060_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "では早速、お部屋にご案内しますね。",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_tsou_61094.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+
+
+  "trbo_intro_hotel_0010_M_Devilish": {
+    "ID": "trbo_intro_hotel_0010_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0010_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0010_T_Devilish": {
+    "ID": "trbo_intro_hotel_0010_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "どんな風にしてほしいとか、要望ありますか？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_third_60973.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0020_M_Devilish": {
+    "ID": "trbo_intro_hotel_0020_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0020_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0020_T_Devilish": {
+    "ID": "trbo_intro_hotel_0020_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はいっ、わかりました♪　それじゃ、頑張ってご奉仕しちゃいますねっ♪",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_07575.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0030_M_Devilish": {
+    "ID": "trbo_intro_hotel_0030_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0030_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮２"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0030_T_Devilish": {
+    "ID": "trbo_intro_hotel_0030_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "は、はい、わかりました……おちんちんに、ご奉仕すればいいんですよね……？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09445.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0040_T_Devilish": {
+    "ID": "trbo_intro_hotel_0040_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あむっ……んじゅ、ぢゅる……れる、ぢゅるぅ……んん、はっ……お汁が、たくさん出てきちゃってます……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_order_51534.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0050_M_Devilish": {
+    "ID": "trbo_intro_hotel_0050_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0050_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ羞恥２"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0050_T_Devilish": {
+    "ID": "trbo_intro_hotel_0050_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "おちんちんの匂い、私好きになっちゃいそうです……♪　もっと嗅いじゃいますね……？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_order_51202.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.8
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0060_T_Devilish": {
+    "ID": "trbo_intro_hotel_0060_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ぢゅ、はっ、んむっ！　じゅるる！　びふびふして、んむぅっ！　はっ、じゅるる……！　じゅぽっ、じゅぼっ！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_order_51538.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0070_T_Devilish": {
+    "ID": "trbo_intro_hotel_0070_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "おちんちん、今にもはちきれちゃいそうですね……？　先っぽがぷくぅって膨らんじゃって……可愛い……♪",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_order_51201.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 0.8
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0090_T_Devilish": {
+    "ID": "trbo_intro_hotel_0090_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そう、見えますかね……？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_order_50854.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0110_T_Devilish": {
+    "ID": "trbo_intro_hotel_0110_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0111",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ほ・ら……♪　私のおまんこ……こんなになっちゃってるんですよ……？　わかりますよね……？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_order_51130.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0130_M_Devilish": {
+    "ID": "trbo_intro_hotel_0130_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0130_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮２"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0130_T_Devilish": {
+    "ID": "trbo_intro_hotel_0130_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0131",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私、そういうタイプだったんですよねえ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_order_51048.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0140_M_Devilish": {
+    "ID": "trbo_intro_hotel_0140_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0140_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0140_T_Devilish": {
+    "ID": "trbo_intro_hotel_0140_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0141",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "え～？　そんなことないですよぉ？　どこがそう見えますか？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_order_50306.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0150_M_Devilish": {
+    "ID": "trbo_intro_hotel_0150_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0150_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "発情"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0150_T_Devilish": {
+    "ID": "trbo_intro_hotel_0150_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "それにしても、こうして一緒にエッチするのも結構楽しかったですね。",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_third_60907.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0160_M_Devilish": {
+    "ID": "trbo_intro_hotel_0160_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0160_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ好感３"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0160_T_Devilish": {
+    "ID": "trbo_intro_hotel_0160_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0161",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "引いちゃいますよね……？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_order_50962.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 9.5
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0170_T_Devilish": {
+    "ID": "trbo_intro_hotel_0170_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うわ、すごい……ガチガチになっちゃってますね……？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_order_51524.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0180_M_Devilish": {
+    "ID": "trbo_intro_hotel_0180_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0180_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0180_T_Devilish": {
+    "ID": "trbo_intro_hotel_0180_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふ……ふふっ、もちろん、いいですよ！　任せてください！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_07487.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 6
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0190_T_Devilish": {
+    "ID": "trbo_intro_hotel_0190_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0191",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁ……んんぅ……あたしのおまんこがほしいんですよね……？　そう、なんですよね……んはぁっ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_BUA_11810.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0200_M_Devilish": {
+    "ID": "trbo_intro_hotel_0200_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0200_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ羞恥２"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0200_T_Devilish": {
+    "ID": "trbo_intro_hotel_0200_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0201",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁっ……お客様のおちんちんを……あたしに、入れてくださいっ……ほしいんですっ……あたしのおまんこっ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_BUA_11815.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0210_T_Devilish": {
+    "ID": "trbo_intro_hotel_0210_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0211",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私のおまんこ、早く擦ってほしくてたまらないからっ……おちんちん、ちょうだい……♪",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09413.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0220_T_Devilish": {
+    "ID": "trbo_intro_hotel_0220_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0221",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私のおまんこ、どうですかっ……？　その……挿れたくなったり、しませんっ……？　いいんですよ、ぜんぜん……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09420.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0230_T_Devilish": {
+    "ID": "trbo_intro_hotel_0230_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0231",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お願いしますっ……私のマンコにっ……はぁ、あぁ、はぅんっ！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP02C_12475.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.8
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0240_M_Devilish": {
+    "ID": "trbo_intro_hotel_0240_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0240_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0240_T_Devilish": {
+    "ID": "trbo_intro_hotel_0240_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0241",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ええと、これはちょっとやり過ぎた……かな？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_Y_13209.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 6
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0250_M_Devilish": {
+    "ID": "trbo_intro_hotel_0250_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0250_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ期待"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0250_T_Devilish": {
+    "ID": "trbo_intro_hotel_0250_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0251",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うう……だ、だって……私も、女の子なんですよ……？　気持ちよかったんだから、仕方ないじゃないですか……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09562.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0260_M_Devilish": {
+    "ID": "trbo_intro_hotel_0260_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0260_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0260_T_Devilish": {
+    "ID": "trbo_intro_hotel_0260_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0261",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私、まだ物足りないんですけど……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP02B_12232.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0270_M_Devilish": {
+    "ID": "trbo_intro_hotel_0270_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0270_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0270_T_Devilish": {
+    "ID": "trbo_intro_hotel_0270_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0271",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふふっ♪",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP5_14451.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0280_T_Devilish": {
+    "ID": "trbo_intro_hotel_0280_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0281",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ぜったいわざと、からかってますよね……？　い、意地悪……いじわる……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09415.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.8
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0290_T_Devilish": {
+    "ID": "trbo_intro_hotel_0290_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0291",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私、もう我慢できなくて……おちんちん、くれませんか……？　お尻で、いいですから……ね……？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09396.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0300_T_Devilish": {
+    "ID": "trbo_intro_hotel_0300_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0301",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あぐっ、んっ、ぁあ……お尻の、穴が……ぁあ、気持ち、いいですっ、んっ、ぁあう……！　もっと、んっ……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09418.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0310_T_Devilish": {
+    "ID": "trbo_intro_hotel_0310_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0311",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ひぐっ……んぅんっ！　くぅうううっ……！　ケツ穴っ……ケツ穴ですぅっ、ケツ穴とマンコに、太チンポ入れられてっ、アヘってるんですっ……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_58328.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0320_T_Devilish": {
+    "ID": "trbo_intro_hotel_0320_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0321",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ひゃふぅっ、ふひぃい！　それ、いいっ、ひあっ、あぁっ！　それ、好きれすぅっ、んひぃっ、ひぐぅううん！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_SM_59439.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0330_T_Devilish": {
+    "ID": "trbo_intro_hotel_0330_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0331",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "でも、これぇっ、ひふぅう！　これ、気持ちよくて、幸せれすぅっ、んひぃっ、ひふぁああ！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_SM_59442.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0340_T_Devilish": {
+    "ID": "trbo_intro_hotel_0340_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0341",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ、あっ、あああああっ！　もっ、もうダメっ！　イクっ、イッちゃううっ！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_Y_13283.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0350_T_Devilish": {
+    "ID": "trbo_intro_hotel_0350_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0351",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ、あああああああああああああああっ！　はぁ、はぁ……最高、ですっ……んぅんっ……こんな刺激……初めて、ですぅっ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_58334.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0360_T_Devilish": {
+    "ID": "trbo_intro_hotel_0360_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0361",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "すごい匂いで……ちょっと、ドキドキしてきちゃいますよ、これぇ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP02B_12360.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5
+        }
+      }
+    }
+  },
+
+  "trbo_intro_hotel_0370_M_Devilish": {
+    "ID": "trbo_intro_hotel_0370_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_intro_hotel_0370_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ好感３"
+      }
+    ]
+  },
+
+  "trbo_intro_hotel_0370_T_Devilish": {
+    "ID": "trbo_intro_hotel_0370_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_intro_hotel_0371",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "一回だけじゃ物足りないですよね……ふふ、後何回しちゃいますか？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP02C_12510.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1
+        }
+      }
+    }
+  },
+
+
+  "trbo_postyotogi_0010_M_Devilish": {
+    "ID": "trbo_postyotogi_0010_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0010_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ジト目"
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0010_T_Devilish": {
+    "ID": "trbo_postyotogi_0010_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私はまだまだ、満足できてないですよ？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP02B_12236.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0020_M_Devilish": {
+    "ID": "trbo_postyotogi_0020_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0020_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "苦笑い"
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0020_T_Devilish": {
+    "ID": "trbo_postyotogi_0020_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "じゃあおしまいですね。お疲れ様でーす。",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_order_50681.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0050_M_Devilish": {
+    "ID": "trbo_postyotogi_0050_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0050_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "苦笑い",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頬掻き"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0050_T_Devilish": {
+    "ID": "trbo_postyotogi_0050_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あはは……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_order_51013.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.5
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0060_M_Devilish": {
+    "ID": "trbo_postyotogi_0060_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0060_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "困った",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0060_T_Devilish": {
+    "ID": "trbo_postyotogi_0060_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私……嫌いになりました……？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP02B_12173.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2,
+          "EndTime": 5.5
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0070_M_Devilish": {
+    "ID": "trbo_postyotogi_0070_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0070_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0070_T_Devilish": {
+    "ID": "trbo_postyotogi_0070_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お礼なんて別にいいよ？　だって、私が楽しむために好きでやったんだから♪",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_Y_13272.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0080_M_Devilish": {
+    "ID": "trbo_postyotogi_0080_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0080_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0080_T_Devilish": {
+    "ID": "trbo_postyotogi_0080_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はい、次もぜひ。",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_third_60908.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0100_M_Devilish": {
+    "ID": "trbo_postyotogi_0100_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0100_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0100_T_Devilish": {
+    "ID": "trbo_postyotogi_0100_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "大切なお客様ですし、これくらいは……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09448.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.2
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0110_M_Devilish": {
+    "ID": "trbo_postyotogi_0100_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0110_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0110_T_Devilish": {
+    "ID": "trbo_postyotogi_0110_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0111_T_Devilish",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]は嬉しそうに淫らな笑顔を浮かべた。"
+    }
+  },
+
+  "trbo_postyotogi_0111_T_Devilish": {
+    "ID": "trbo_postyotogi_0111_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0112",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……でもとっても楽しかったです。",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X01_54771.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.5
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0120_M_Devilish": {
+    "ID": "trbo_postyotogi_0120_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0120_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "苦笑い",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0120_T_Devilish": {
+    "ID": "trbo_postyotogi_0120_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "べ、別にそんなことないですよ～？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X01_54714.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0130_M_Devilish": {
+    "ID": "trbo_postyotogi_0130_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0130_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0130_T_Devilish": {
+    "ID": "trbo_postyotogi_0130_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0131",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ、ありがとうございます！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_third_60923.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "trbo_postyotogi_0140_M_Devilish": {
+    "ID": "trbo_postyotogi_0140_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0140_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "疑問"
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0140_T_Devilish": {
+    "ID": "trbo_postyotogi_0140_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0141",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "え？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_08631.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0150_M_Devilish": {
+    "ID": "trbo_postyotogi_0150_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "trbo_postyotogi_0150_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        }
+      }
+    ]
+  },
+
+  "trbo_postyotogi_0150_T_Devilish": {
+    "ID": "trbo_postyotogi_0150_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "わー、凄い！　よくわかりますね！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01ADD_61176.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0170_T_Devilish": {
+    "ID": "trbo_postyotogi_0170_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ね、ねぇ……ご主人様……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP02C_12822.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "trbo_postyotogi_0180_T_Devilish": {
+    "ID": "trbo_postyotogi_0180_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私、癖になっちゃいそうです……また、楽しみましょうね♪",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_07666.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

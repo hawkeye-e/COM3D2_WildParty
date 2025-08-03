@@ -62,6 +62,342 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Anesan&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Anesan&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Anesan&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Anesan&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Anesan&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///   [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Anesan {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Anesan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Childhood&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Childhood&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Childhood&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Childhood&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Childhood&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Childhood {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Childhood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Cool&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Cool&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Cool&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Cool&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Cool&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextSte [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Cool {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Cool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Curtness&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Curtness&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Curtness&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Curtness&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Curtness&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;C [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Curtness {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Curtness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Dame&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Dame&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Dame&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Dame&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Dame&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextSte [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Dame {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Dame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Devilish&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Devilish&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Devilish&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Devilish&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Devilish&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;C [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Devilish {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Devilish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Friendly&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Friendly&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Friendly&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Friendly&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Friendly&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;C [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Friendly {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Friendly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Genki&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Genki&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Genki&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Genki&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Genki&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;Ne [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Genki {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Genki", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Ladylike&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Ladylike&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Ladylike&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Ladylike&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Ladylike&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;C [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Ladylike {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Ladylike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Majime&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Majime&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Majime&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Majime&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Majime&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///   [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Majime {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Majime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Missy&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Missy&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Missy&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Missy&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Missy&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;Ne [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Missy {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Missy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;trbo_intro_0030_M_Muku&quot;: {
         ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Muku&quot;,
         ///    &quot;Type&quot;: &quot;Chara&quot;,
@@ -88,6 +424,251 @@ namespace ScenarioResources {
         internal static string TripleBookingADV_Muku {
             get {
                 return ResourceManager.GetString("TripleBookingADV_Muku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Pride&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Pride&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Pride&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Pride&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Pride&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;Ne [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Pride {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Pride", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Pure&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Pure&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Pure&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Pure&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Pure&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextSte [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Pure {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Pure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Rindere&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Rindere&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Rindere&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Rindere&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Rindere&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Rindere {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Rindere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Sadist&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Sadist&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Sadist&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Sadist&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Sadist&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///   [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Sadist {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Sadist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Secretary&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Secretary&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Secretary&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Secretary&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Secretary&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Secretary {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Secretary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Silent&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Silent&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Silent&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Silent&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Silent&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///   [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Silent {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Silent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Sister&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Sister&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Sister&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Sister&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Sister&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///   [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Sister {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Sister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;trbo_intro_0030_M_Yandere&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_M_Yandere&quot;,
+        ///    &quot;Type&quot;: &quot;Chara&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;trbo_intro_0030_T_Yandere&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;Type&quot;: &quot;F&quot;,
+        ///        &quot;UseBranchIndex&quot;: true,
+        ///        &quot;Visible&quot;: true,
+        ///        &quot;WaitLoad&quot;: true,
+        ///        &quot;FaceAnime&quot;: &quot;微笑み&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;trbo_intro_0030_T_Yandere&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_intro_0030_T_Yandere&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string TripleBookingADV_Yandere {
+            get {
+                return ResourceManager.GetString("TripleBookingADV_Yandere", resourceCulture);
             }
         }
         
@@ -151,26 +732,26 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;lum_postyotogi_init&quot;: {
-        ///    &quot;ID&quot;: &quot;lum_postyotogi_init&quot;,
+        ///  &quot;trbo_postyotogi_init&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_postyotogi_init&quot;,
         ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
         ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
-        ///    &quot;NextStepID&quot;: &quot;lum_postyotogi_init_a&quot;
+        ///    &quot;NextStepID&quot;: &quot;trbo_postyotogi_init_a&quot;
         ///  },
         ///
-        ///  &quot;lum_postyotogi_init_a&quot;: {
-        ///    &quot;ID&quot;: &quot;lum_postyotogi_init_a&quot;,
+        ///  &quot;trbo_postyotogi_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_postyotogi_init_a&quot;,
         ///    &quot;Type&quot;: &quot;BGM&quot;,
-        ///    &quot;Tag&quot;: &quot;BGM022.ogg&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM019.ogg&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;lum_postyotogi_init_b&quot;
+        ///    &quot;NextStepID&quot;: &quot;trbo_postyotogi_init_b&quot;
         ///  },
         ///
-        ///  &quot;lum_postyotogi_init_b&quot;: {
-        ///    &quot;ID&quot;: &quot;lum_postyotogi_init_b&quot;,
+        ///  &quot;trbo_postyotogi_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;trbo_postyotogi_init_b&quot;,
         ///    &quot;Type&quot;: &quot;Camera&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;lu [rest of string was truncated]&quot;;.
+        ///    &quot;NextStep [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string TripleBookingADVPostYotogi {
             get {

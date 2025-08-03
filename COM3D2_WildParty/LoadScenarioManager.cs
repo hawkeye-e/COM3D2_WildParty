@@ -251,6 +251,25 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioTripleBooking.TripleBookingADVPostYotogi,
 
             ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Muku,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Majime,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Rindere,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Pure,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Cool,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Pride,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Yandere,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Anesan,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Genki,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Sadist,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Silent,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Devilish,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Ladylike,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Secretary,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Sister,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Curtness,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Missy,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Childhood,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Friendly,
+            ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Dame,
         };
 
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)
