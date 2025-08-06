@@ -200,5 +200,12 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
             if (Config.DebugLogBGMInfo)
                 WildParty.Log.LogInfo("[Play BGM Legacy] FileName: " + f_strFileName);
         }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(KagTagSupport), MethodType.Constructor, new Type[] { typeof(IntPtr) })]
+        private static void KagTagSupport(KagTagSupport __instance)
+        {
+            //DebugHelper.DebugViewData.ViewTagData(__instance);
+        }
     }
 }

@@ -149,6 +149,23 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
+        ///1,*挿入,Insert,,,,,,,InsertMouth,,,,,
+        ///1,*待機,Waiting,,,,,,,Waiting,,,,,
+        ///1,*初々しい射精外,Orgasm,Face,,,Maid1,,,3PFellatioFace,,OrgasmWaitExcite,,,
+        ///1,*初々しい射精中,Orgasm,Mouth,,,Maid1,,,3PFellatio,,OrgasmWaitExcite,,,
+        ///2,*挿入,Insert,,,,,,,Insert,,,,,
+        ///2,*待機,Waiting,,,,,,,Waiting,,,,,
+        ///2,*初々しい射精外,Orgasm,Face,,,Maid1,,,3PFellatioFace,,OrgasmWaitExcite,,,
+        ///2,* [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SexPosSpecialLabels_ManInLilies {
+            get {
+                return ResourceManager.GetString("SexPosSpecialLabels_ManInLilies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
         ///1,*待機,Waiting,,,,,,,Waiting,,,,,
         ///1,*初々しい秘部弄り絶頂,Orgasm,None,,,,,,Aibu,,OrgasmWait,,,
         ///2,*挿入,Insert,,,,,,,Insert,,,,,

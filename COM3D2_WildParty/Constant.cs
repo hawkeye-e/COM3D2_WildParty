@@ -29,6 +29,7 @@ namespace COM3D2.WildParty.Plugin
             ModResources.ImageResources.ImmoralVillageIconFileName,
             ModResources.ImageResources.LustfulMaidIconFileName,
             ModResources.ImageResources.TripleBookingFileName,
+            ModResources.ImageResources.ManInLiliesFileName,
         };
 
         internal static readonly string[] DressingClothingTagArray = {
@@ -697,6 +698,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string ImmoralVillage = "ImmoralVillage";
             internal const string LustfulMaid = "LustfulMaid";
             internal const string TripleBooking = "TripleBooking";
+            internal const string ManInLilies = "ManInLilies";
         }
 
         internal static class TexturePattern

@@ -196,6 +196,34 @@ namespace ModResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SexPosID,ExcitementLevel,LabelName,VoiceType,VoiceType2,LabelGroupID
+        ///1,0,*激しさ１,Fellatio,,1
+        ///1,1,*激しさ１,Fellatio,,1
+        ///1,2,*激しさ２,Fellatio,,1
+        ///1,3,*激しさ３,Fellatio,,1
+        ///2,0,*激しさ１,Fellatio,,2
+        ///2,1,*激しさ１,Fellatio,,2
+        ///2,2,*激しさ２,Fellatio,,2
+        ///2,3,*激しさ３,Fellatio,,2
+        ///2,0,*激しさ１胸揉み,Fellatio,,3
+        ///2,1,*激しさ１胸揉み,Fellatio,,3
+        ///2,2,*激しさ２胸揉み,Fellatio,,3
+        ///2,3,*激しさ３胸揉み,Fellatio,,3
+        ///3,0,*激しさ１,PistonExcite,,4
+        ///3,1,*激しさ１,PistonExcite,,4
+        ///3,2,*激しさ２,PistonExcite,,4
+        ///3,3,*激しさ３,PistonExcite,,4
+        ///3,0,*激しさ１キス,Kiss,,5
+        ///3,1,*激しさ１キス,Kiss,,5
+        ///3,2, [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SexPosValidLabels_ManInLilies {
+            get {
+                return ResourceManager.GetString("SexPosValidLabels_ManInLilies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SexPosID,ExcitementLevel,LabelName,VoiceType,VoiceType2,LabelGroupID,,,,
         ///1,0,*激しさ１秘部弄り,Piston,,1,,,,
         ///1,1,*激しさ１秘部弄り,Piston,,1,,,,

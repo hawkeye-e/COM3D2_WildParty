@@ -212,6 +212,11 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>ScenarioLustfulMaid.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resx\ScenarioManInLilies.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>ScenarioManInLilies.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resx\ScenarioTripleBooking.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -308,6 +313,11 @@
 	  <EmbeddedResource Update="Resx\ScenarioLustfulMaid.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>ScenarioLustfulMaid.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ScenarioResources</CustomToolNamespace>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\ScenarioManInLilies.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>ScenarioManInLilies.Designer.cs</LastGenOutput>
 	    <CustomToolNamespace>ScenarioResources</CustomToolNamespace>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resx\ScenarioTripleBooking.resx">

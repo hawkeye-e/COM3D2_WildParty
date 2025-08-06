@@ -648,7 +648,7 @@ namespace COM3D2.WildParty.Plugin.Core
         }
 
         //This function is for yotogi scene that maid will act as a man
-        internal static void InitArrayForYotogiUsed(int maidConvertToManRatioInPercentage)
+        internal static void InitArrayForYotogiUsed(int maidConvertToManRatioInPercentage, bool includeMaster = false)
         {
             if(maidConvertToManRatioInPercentage > 0)
             {
@@ -672,6 +672,9 @@ namespace COM3D2.WildParty.Plugin.Core
                     StateManager.Instance.YotogiWorkingMaidList.Add(shuffleList[i]);
                     RemoveMaidFromMaidArray(shuffleList[i]);
                 }
+
+                if (includeMaster)
+                    StateManager.Instance.YotogiWorkingManList.Add(StateManager.Instance.ClubOwner);
             }
             else
             {

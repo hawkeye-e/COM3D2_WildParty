@@ -230,6 +230,32 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;Default&quot;: {
+        ///    &quot;DefaultSexPosID&quot;: 1,
+        ///    &quot;IsRandomAssign&quot;: false,
+        ///    &quot;IsShuffleMaidList&quot;: false,
+        ///    &quot;IsShuffleManList&quot;: false,
+        ///
+        ///    &quot;GroupSetup&quot;: [
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;ManCount&quot;: 1,
+        ///        &quot;MaidCount&quot;: 1,
+        ///        &quot;IsAutomatedGroup&quot;: false
+        ///      }
+        ///    ]
+        ///  }
+        ///
+        ///}.
+        /// </summary>
+        internal static string PartyGroupSetup_ManInLilies {
+            get {
+                return ResourceManager.GetString("PartyGroupSetup_ManInLilies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;Theatre_Scattered&quot;: {
         ///    &quot;IsRandomAssign&quot;: true,
         ///    &quot;IsShuffleMaidList&quot;: true,
@@ -266,12 +292,15 @@ namespace ModResources {
         ///    &quot;IsRandomAssign&quot;: false,
         ///    &quot;IsShuffleMaidList&quot;: false,
         ///    &quot;IsShuffleManList&quot;: false,
+        ///    
         ///
         ///    &quot;GroupSetup&quot;: [
         ///      {
         ///        &quot;ArrayPosition&quot;: 0,
-        ///        &quot;ManCount&quot;: 1,
+        ///        &quot;ManCount&quot;: 2,
         ///        &quot;MaidCount&quot;: 1,
+        ///        &quot;ExtraManCount&quot;: 1,
+        ///        &quot;ExtraManSlotCount&quot;: 3,
         ///        &quot;IsAutomatedGroup&quot;: false
         ///      }
         ///    ]

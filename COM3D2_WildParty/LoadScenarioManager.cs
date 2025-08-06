@@ -272,6 +272,10 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioTripleBooking.TripleBookingADV_Dame,
         };
 
+        private static readonly string[] ScenarioManInLiliesResList = {
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADVIntro,
+        };
+
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)
         {
             Dictionary<int, Dictionary<string, ADVStep>> result = new Dictionary<int, Dictionary<string, ADVStep>>();
@@ -297,6 +301,8 @@ namespace COM3D2.WildParty.Plugin
                 result.Add(ScenarioIDList.LustfulMaidScenarioID, LoadScenarioFromResources(ScenarioLustfulMaidResList));
             else if (scenarioID == ScenarioIDList.TripleBookingScenarioID)
                 result.Add(ScenarioIDList.TripleBookingScenarioID, LoadScenarioFromResources(ScenarioTripleBookingResList));
+            else if (scenarioID == ScenarioIDList.ManInLiliesScenarioID)
+                result.Add(ScenarioIDList.ManInLiliesScenarioID, LoadScenarioFromResources(ScenarioManInLiliesResList));
 
             return result;
         }

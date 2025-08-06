@@ -70,7 +70,9 @@ namespace COM3D2.WildParty.Plugin.Core
                 case Constant.YotogiSceneCode.TripleBooking:
                     ProcessADV_Step_TripleBooking_YotogiPlay(instance, step);
                     break;
-                    
+                case Constant.YotogiSceneCode.ManInLilies:
+                    ProcessADV_Step_ManInLilies_YotogiPlay(instance,step);
+                    break;
             }
         }
 
@@ -305,7 +307,38 @@ namespace COM3D2.WildParty.Plugin.Core
 
         }
 
-        
+        private static void ProcessADV_Step_ManInLilies_YotogiPlay(ADVKagManager instance, ADVStep step)
+        {
+            StateManager.Instance.ModEventProgress = Constant.EventProgress.YotogiInit;
+
+            GameMain.Instance.MainCamera.FadeOut(f_dg: delegate
+            {
+                ModUseData.ReloadCoordinateData(StateManager.Instance.UndergoingModEventID);
+
+                if (step.YotogiSetup.MaidConvertToMan != null)
+                    YotogiHandling.InitArrayForYotogiUsed(step.YotogiSetup.MaidConvertToMan.RatioPercent, step.YotogiSetup.IsClubOwnerMainCharacter);
+                else
+                    YotogiHandling.InitArrayForYotogiUsed();
+
+                
+
+                CharacterHandling.SetDefaultGroupFormation();
+
+                CharacterHandling.AssignPartyGrouping(PartyGroup.CurrentFormation);
+
+                YotogiHandling.SetupYotogiSceneInitialSkill(Util.GetCurrentDefaultSexPosID());
+
+                CharacterHandling.SetGroupZeroActive();
+
+                YotogiHandling.InitYotogiData();
+
+
+                GameMain.Instance.LoadScene(step.Tag);
+            });
+
+        }
+
+
 
     }
 }

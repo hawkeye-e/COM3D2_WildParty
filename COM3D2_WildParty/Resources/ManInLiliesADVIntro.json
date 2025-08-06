@@ -1,0 +1,151 @@
+{
+  "mil0001": {
+    "ID": "mil0001",
+    "Type": "BG",
+    "Tag": "ShinShitsumu",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_init_chara"
+  },
+
+  "mil_init_chara": {
+    "ID": "mil_init_chara",
+    "Type": "CharaInit",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_init_hide_pairedmen",
+    "CharaInitData": {
+      "ManRequired": 0,
+      "RequiresMaidPairMan": true,
+      "IsClubOwnerADVMainCharacter": true
+    }
+  },
+
+  "mil_init_hide_pairedmen": {
+    "ID": "mil_init_hide_pairedmen",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_init_hide_men",
+    "CharaData": [
+      {
+        "Type": "PairedMan",
+        "Visible": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-999, -999, -999",
+          "RotString": "0, 1, 0, 0"
+        }
+      }
+    ]
+  },
+
+  "mil_init_hide_men": {
+    "ID": "mil_init_hide_men",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0001",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": false
+      }
+    ]
+  },
+
+
+  "mil_intro_0001": {
+    "ID": "mil_intro_0001",
+    "Type": "BGM",
+    "Tag": "BGM009.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0001a"
+  },
+
+  "mil_intro_0001a": {
+    "ID": "mil_intro_0001a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0001b",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組"
+        },
+        "PosRot": {
+          "PosString": "0.0, 0.5, -3.4",
+          "RotString": "0.0, 0.0, 0.0, 1.0"
+        }
+      }
+    ]
+  },
+
+  "mil_intro_0001b": {
+    "ID": "mil_intro_0001b",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0002",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "0,1.6,0.9",
+        "TargetPosString": "-0.1,1.5,-0.1",
+        "AroundAngleString": "-179.6,5.3",
+        "Distance": 1
+      }
+    }
+  },
+
+  "mil_intro_0002": {
+    "ID": "mil_intro_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_yotogiplay_phase1_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（……おかしい…）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+
+
+
+
+
+
+  "mil_yotogiplay_phase1_closepanel": {
+    "ID": "mil_yotogiplay_phase1_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_yotogiplay_phase1"
+  },
+
+  "mil_yotogiplay_phase1": {
+    "ID": "mil_yotogiplay_phase1",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "ManInLilies",
+      "MaidConvertToMan": { "RatioPercent": 50 },
+      "Phase": 1,
+      "UseModSemenPattern": true,
+      "IsKeepCharacterVisibleAfterYotogi": true,
+      "IsFinalYotogi": true,
+      "IsClubOwnerMainCharacter": true
+    },
+    "NextStepID": "mil_postyotogi_init"
+  }
+}

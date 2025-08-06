@@ -31,7 +31,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
             }
 
             //Inject the scenario item
-            foreach (var scenario in ModUseData.ScenarioList)
+            foreach (var scenario in ModUseData.ScenarioList.OrderBy(x => x.DisplayOrder))
             {
                 //A part of the conditions below leave as empty list as it is not used by this mod at this moment.
                 Schedule.ScheduleCSVData.Yotogi newScenario = new Schedule.ScheduleCSVData.Yotogi();
@@ -103,6 +103,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                     ModResources.ImageResources.icon_lustful_maid.Save(mStream, ModResources.ImageResources.icon_lustful_maid.RawFormat);
                 else if (fileName == ModResources.ImageResources.TripleBookingFileName)
                     ModResources.ImageResources.icon_triple_booking.Save(mStream, ModResources.ImageResources.icon_triple_booking.RawFormat);
+                else if (fileName == ModResources.ImageResources.ManInLiliesFileName)
+                    ModResources.ImageResources.icon_man_in_lilies.Save(mStream, ModResources.ImageResources.icon_man_in_lilies.RawFormat);
 
                 Texture2D tex = new Texture2D(64, 64);
                 ImageConversion.LoadImage(tex, mStream.ToArray());
@@ -136,6 +138,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                     ModResources.ImageResources.icon_lustful_maid.Save(mStream, ModResources.ImageResources.icon_lustful_maid.RawFormat);
                 else if (fileName == ModResources.ImageResources.TripleBookingFileName)
                     ModResources.ImageResources.icon_triple_booking.Save(mStream, ModResources.ImageResources.icon_triple_booking.RawFormat);
+                else if (fileName == ModResources.ImageResources.ManInLiliesFileName)
+                    ModResources.ImageResources.icon_man_in_lilies.Save(mStream, ModResources.ImageResources.icon_man_in_lilies.RawFormat);
 
                 Texture2D tex = new Texture2D(64, 64);
                 tex.LoadImage(mStream.ToArray());

@@ -219,6 +219,32 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;Default&quot;: {
+        ///    &quot;DisplayName&quot;: &quot;&quot;,
+        ///    &quot;IsRandom&quot;: false,
+        ///    &quot;CoordinateList&quot;: [
+        ///      {
+        ///        &quot;MaxGroup&quot;: 1,
+        ///        &quot;GroupCoordinates&quot;: [
+        ///          {
+        ///            &quot;ArrayPosition&quot;: 0,
+        ///            &quot;PosString&quot;: &quot;0, 0.5, 1.6&quot;,
+        ///            &quot;RotString&quot;: &quot;0, 0.707, 0, -0.707&quot;,
+        ///            &quot;CameraSetup&quot;: {
+        ///              &quot;PosString&quot;: &quot;1.67, 1.07, -0.10&quot;,
+        ///              &quot;TargetPosString&quot;: &quot;0.20, 0.89, 1.53&quot;,
+        ///              &quot;AroundAngleString&quot;: &quot;318.04, 4.71&quot;,
+        ///              &quot;Distance&quot;: 2.2
+        ///     [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MapCoordinates_ManInLilies {
+            get {
+                return ResourceManager.GetString("MapCoordinates_ManInLilies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;Theatre_Scattered&quot;: {
         ///    &quot;MapID&quot;: 10,
         ///    &quot;DisplayName&quot;: &quot;バラバラ&quot;,
@@ -257,14 +283,14 @@ namespace ModResources {
         ///        &quot;GroupCoordinates&quot;: [
         ///          {
         ///            &quot;ArrayPosition&quot;: 0,
-        ///            &quot;PosString&quot;: &quot;0, 0.47, -0.30&quot;,
-        ///            &quot;RotString&quot;: &quot;0, 0, 0, 1&quot;,
+        ///            &quot;PosString&quot;: &quot;0, 0.5, 1.6&quot;,
+        ///            &quot;RotString&quot;: &quot;0, 0.707, 0, -0.707&quot;,
         ///            &quot;CameraSetup&quot;: {
-        ///              &quot;PosString&quot;: &quot;-1.77, 1.93, -1.91&quot;,
-        ///              &quot;TargetPosString&quot;: &quot;-0.21, 0.97, -0.51&quot;,
-        ///              &quot;AroundAngleString&quot;: &quot;48.26, 24.60&quot;,
-        ///              &quot;Distance&quot;: 2.3
-        ///        [rest of string was truncated]&quot;;.
+        ///              &quot;PosString&quot;: &quot;1.67, 1.07, -0.10&quot;,
+        ///              &quot;TargetPosString&quot;: &quot;0.20, 0.89, 1.53&quot;,
+        ///              &quot;AroundAngleString&quot;: &quot;318.04, 4.71&quot;,
+        ///              &quot;Distance&quot;: 2.2
+        ///     [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string MapCoordinates_TripleBooking {
             get {

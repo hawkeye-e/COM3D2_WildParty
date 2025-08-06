@@ -11,6 +11,7 @@ namespace COM3D2.WildParty.Plugin
     {
         public int ScenarioID;
         public int CategoryID;
+        public int DisplayOrder;                            //ascending order
         public string DisplayName;
         public Schedule.ScheduleCSVData.YotogiType YotogiType;
         public int CondSalonGrade;
