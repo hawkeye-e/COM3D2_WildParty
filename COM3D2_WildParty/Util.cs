@@ -488,6 +488,15 @@ namespace COM3D2.WildParty.Plugin
 
             return result;
         }
+
+        internal static int GetSexPosIDBySkillID(string skillID)
+        {
+            int personality = StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id;
+            string targetGroupType = Util.GetSkillGroupType(StateManager.Instance.PartyGroupList[0], skillID);
+            var selectedSkill = ModUseData.ValidSkillList[personality][targetGroupType].Where(x => x.YotogiSkillID == skillID).First();
+
+            return selectedSkill.SexPosID;
+        }
         
         internal static BackupParamAccessor.Params GetBackupParam(Maid maid, bool isDaytime)
         {

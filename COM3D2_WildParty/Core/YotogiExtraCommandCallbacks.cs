@@ -25,6 +25,9 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 GameMain.Instance.MainCamera.FadeOut(ConfigurableValue.CameraFadeTime, f_dg: delegate
                 {
+                    //Check the misc handling, and see if formation or need to swap
+                    YotogiHandling.CheckPreChangeSkillYotogiMiscSetup(StateManager.Instance.PartyGroupList[0], skillID);
+
                     YotogiHandling.ChangeMainGroupSkill(skillID);
 
                     StateManager.Instance.ExtraCommandWindow.SetVisible(false);

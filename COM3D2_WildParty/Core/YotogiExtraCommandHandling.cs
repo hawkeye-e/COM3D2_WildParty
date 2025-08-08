@@ -1,10 +1,10 @@
-﻿using System;
+﻿using BepInEx.Logging;
+using HarmonyLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
-using BepInEx.Logging;
-using HarmonyLib;
 
 namespace COM3D2.WildParty.Plugin.Core
 {
@@ -56,6 +56,8 @@ namespace COM3D2.WildParty.Plugin.Core
                 case Constant.ModYotogiCommandButtonCode.ChainedAction:
                     return new EventDelegate(() => ProcessChainedAction(buttonID));
 
+                case Constant.ModYotogiCommandButtonCode.ExchangeStrapOn:
+                    return new EventDelegate(ExchangeStrapOnYuri);
                 default:
                     return null;
             }
@@ -523,6 +525,73 @@ namespace COM3D2.WildParty.Plugin.Core
                 //need to update the main group
                 var initialSkill = YotogiHandling.GetSkill(StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id, StateManager.Instance.PartyGroupList[0].GroupType);
                 CharacterHandling.CleanseCharacterMgrArray();
+                YotogiHandling.ChangeMainGroupSkill(initialSkill.YotogiSkillID);
+
+                YotogiHandling.SetGroupToScene();
+
+                Util.ResetAllGroupPosition();
+
+                CameraHandling.SetCameraLookAt(StateManager.Instance.PartyGroupList[0].Maid1);
+
+                StateManager.Instance.ExtraCommandWindow.SetVisible(false);
+
+                GameMain.Instance.MainCamera.FadeIn(ConfigurableValue.CameraFadeTime);
+            });
+        }
+
+        public static void ExchangeStrapOnYuri()
+        {
+            GameMain.Instance.MainCamera.FadeOut(ConfigurableValue.CameraFadeTime, f_dg: delegate
+            {
+                //stop all maid motion
+                CharacterHandling.StopCurrentAnimation();
+                GameMain.Instance.ScriptMgr.StopMotionScript();
+
+                PartyGroup group = StateManager.Instance.PartyGroupList[0];
+                group.DetachAllIK();
+
+                //Locate the maid with strap-on and the maid without
+                //Assumption: This is a MMF situation so the maid without strap-on must be the only female in the MMF group
+                Maid maidNoStrapOn = group.Maid1;
+                Maid maidWithStrapOn = null;
+                for (int i = 0; i < group.ManCount; i++)
+                    if (group.GetManAtIndex(i) != null)
+                        if (Util.IsManAConvertedMaid(group.GetManAtIndex(i)))
+                            maidWithStrapOn = group.GetManAtIndex(i);
+
+                //restore the maid back to female structure
+                CharacterHandling.RecoverMaidFromManStructure(maidWithStrapOn);
+
+                //convert the maid without strap to man
+                CharacterHandling.ConvertMaidToManStructure(maidNoStrapOn, StateManager.Instance.PairedManForMaidList[maidNoStrapOn]);
+
+
+                //Update working maid and working man list
+                StateManager.Instance.YotogiWorkingManList.Remove(maidWithStrapOn);
+                StateManager.Instance.YotogiWorkingMaidList.Remove(maidNoStrapOn);
+
+                StateManager.Instance.YotogiWorkingManList.Add(maidNoStrapOn);
+                StateManager.Instance.YotogiWorkingMaidList.Add(maidWithStrapOn);
+
+
+                //set the default skill
+                
+                CharacterHandling.AssignPartyGroupingBySetupInfo(PartyGroup.CurrentFormation);
+
+                //Update the variable reference again
+                group = StateManager.Instance.PartyGroupList[0];
+
+                YotogiHandling.SetupYotogiSceneInitialSkill(Util.GetCurrentDefaultSexPosID());
+                
+                CharacterHandling.SetGroupZeroActive();
+
+                //need to update the main group
+                var initialSkill = YotogiHandling.GetSkill(StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id, StateManager.Instance.PartyGroupList[0].GroupType, group.SexPosID);
+                CharacterHandling.CleanseCharacterMgrArray();
+
+                //Check if the strap on maid is in the correct position
+                YotogiHandling.CheckPreChangeSkillYotogiMiscSetup(StateManager.Instance.PartyGroupList[0], initialSkill.YotogiSkillID);
+
                 YotogiHandling.ChangeMainGroupSkill(initialSkill.YotogiSkillID);
 
                 YotogiHandling.SetGroupToScene();

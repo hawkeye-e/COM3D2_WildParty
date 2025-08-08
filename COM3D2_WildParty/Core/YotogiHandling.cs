@@ -610,10 +610,10 @@ namespace COM3D2.WildParty.Plugin.Core
         }
 
         internal static void SetupYotogiSceneInitialSkill(int defaultSexPosID)
-        {            
+        {
             PlayableSkill.SkillItem initialSkill;
             initialSkill = GetSkill(StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id, StateManager.Instance.PartyGroupList[0].GroupType, defaultSexPosID);
-
+            
             StateManager.Instance.PartyGroupList[0].SexPosID = initialSkill.SexPosID;
         }
 
@@ -1018,6 +1018,52 @@ namespace COM3D2.WildParty.Plugin.Core
                     group.ExtraCharacterObjects[target].Add(extraObjectOnCharSetup.ItemInfo.Target);
                 }
             }
+        }
+
+        internal static void CheckPreChangeSkillYotogiMiscSetup(PartyGroup group, string skillID)
+        {
+            if (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiPlay)
+            {
+                if (group != null)
+                {
+                    
+                    if (ModUseData.YotogiMiscSetupList.ContainsKey(StateManager.Instance.UndergoingModEventID))
+                    {
+                        int newSexPosID = Util.GetSexPosIDBySkillID(skillID);
+
+                        YotogiMiscSetup miscSetup = ModUseData.YotogiMiscSetupList[StateManager.Instance.UndergoingModEventID].Where(x => x.SexPosIDs.Contains(newSexPosID)).FirstOrDefault();
+                        if (miscSetup != null)
+                        {
+                            ApplyPreChangeSkillYotogiMiscSetup(group, miscSetup);
+                        }
+                    }
+                }
+            }
+        }
+
+        internal static void ApplyPreChangeSkillYotogiMiscSetup(PartyGroup group, YotogiMiscSetup setupInfo)
+        {
+            if (!string.IsNullOrEmpty(setupInfo.RequiredFormationID))
+            {
+                SetGroupFormation(setupInfo.RequiredFormationID);
+                PartyGroup.CurrentFormation = setupInfo.RequiredFormationID;
+            }
+
+            if (setupInfo.YuriMMFSetup != null)
+            {
+                //this assumes one of the male group member is a real man
+                Maid man = group.GetManAtIndex(setupInfo.YuriMMFSetup.ConvertedMaidPosition);
+                if (man != null)
+                {
+                    if (!Util.IsManAConvertedMaid(man))
+                    {
+                        //the converted maid is not in the target position, do a swap
+                        CharacterHandling.AssignPartyGrouping_SwapMember(group.GetManAtIndex(0), group.GetManAtIndex(1));
+                    }
+                }
+
+            }
+
         }
 
         //Function to set all yotogi command disabled

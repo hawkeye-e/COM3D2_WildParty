@@ -616,6 +616,8 @@ namespace COM3D2.WildParty.Plugin
             internal const string ChangeControllingMaid = "ChangeControllingMaid";
             internal const string ShuffleMaidYuri = "ShuffleMaidYuri";
 
+            internal const string ExchangeStrapOn = "ExchangeStrapOn";
+
             internal const string ChainedAction = "ChainedAction";
         }
 
