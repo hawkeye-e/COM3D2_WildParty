@@ -62,31 +62,90 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;lbp0001&quot;: {
-        ///    &quot;ID&quot;: &quot;lbp0001&quot;,
-        ///    &quot;Type&quot;: &quot;BG&quot;,
-        ///    &quot;Tag&quot;: &quot;ShinShitsumu&quot;,
-        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;lbp_init_chara&quot;
+        ///  &quot;mil_intro_0020_T_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Muku&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
         ///  },
         ///
-        ///  &quot;lbp_init_chara&quot;: {
-        ///    &quot;ID&quot;: &quot;lbp_init_chara&quot;,
+        ///  &quot;mil_intro_0030_T_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0030_T_Muku&quot;,        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Muku {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Muku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil0001&quot;: {
+        ///    &quot;ID&quot;: &quot;mil0001&quot;,
+        ///    &quot;Type&quot;: &quot;BG&quot;,
+        ///    &quot;Tag&quot;: &quot;&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_init_chara&quot;
+        ///  },
+        ///
+        ///  &quot;mil_init_chara&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_init_chara&quot;,
         ///    &quot;Type&quot;: &quot;CharaInit&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;NextStepID&quot;: &quot;lbp_init_hide_pairedmen&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_init_hide_pairedmen&quot;,
         ///    &quot;CharaInitData&quot;: {
         ///      &quot;ManRequired&quot;: 0,
         ///      &quot;RequiresMaidPairMan&quot;: true,
-        ///      &quot;IsClubOwnerADVMainCharacter&quot;: true,
-        ///      &quot;NPC&quot;: [
-        ///        {
-        ///          &quot;Index&quot;: 0,
-        ///          &quot;Preset&quot;: &quot; [rest of string was truncated]&quot;;.
+        ///      &quot;IsClubOwnerADVMainCharacter&quot;: true
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_init_hide_pairedmen&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_init_hide_pairedmen&quot;,        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ManInLiliesADVIntro {
             get {
                 return ResourceManager.GetString("ManInLiliesADVIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///
+        ///  &quot;lbp_postyotogi_init&quot;: {
+        ///    &quot;ID&quot;: &quot;lbp_postyotogi_init&quot;,
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
+        ///    &quot;NextStepID&quot;: &quot;hgbc_postyotogi_remove_owner&quot;
+        ///  },
+        ///
+        ///  &quot;hgbc_postyotogi_remove_owner&quot;: {
+        ///    &quot;ID&quot;: &quot;hgbc_postyotogi_remove_owner&quot;,
+        ///    &quot;Type&quot;: &quot;ListUpdate&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;WaitFullLoad&quot;: true,
+        ///    &quot;NextStepID&quot;: &quot;lbp_postyotogi_init_a&quot;,
+        ///    &quot;ListUpdateData&quot;: {
+        ///      &quot;Remove&quot;: [
+        ///        {
+        ///          &quot;Type&quot;: &quot;Owner&quot;,
+        ///          &quot;SrcPosition&quot;: 0
+        ///    [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADVPostYotogi {
+            get {
+                return ResourceManager.GetString("ManInLiliesADVPostYotogi", resourceCulture);
             }
         }
     }

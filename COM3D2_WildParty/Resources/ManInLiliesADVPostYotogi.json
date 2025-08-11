@@ -1,0 +1,652 @@
+{
+
+  "mil_postyotogi_init": {
+    "ID": "mil_postyotogi_init",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "SystemFadeOut",
+    "NextStepID": "mil_postyotogi_init_a"
+  },
+
+  "mil_postyotogi_init_a": {
+    "ID": "mil_postyotogi_init_a",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_postyotogi_init_b"
+  },
+
+  "mil_postyotogi_init_b": {
+    "ID": "mil_postyotogi_init_b",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "mil_postyotogi_init_c"
+  },
+
+  "mil_postyotogi_init_c": {
+    "ID": "mil_postyotogi_init_c",
+    "Type": "ConvertSex",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_postyotogi_init_c1",
+    "ConvertSexData": {
+      "BackToFemale": [
+        {
+          "Type": "F",
+          "ArrayPosition": 0
+        },
+        {
+          "Type": "F",
+          "ArrayPosition": 1
+        }
+      ]
+    }
+  },
+
+  "mil_postyotogi_init_c1": {
+    "ID": "mil_postyotogi_init_c1",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_postyotogi_init_d",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮３",
+        "FaceBlend": "頬３涙０"
+      }
+
+    ]
+  },
+
+
+  "mil_postyotogi_init_d": {
+    "ID": "mil_postyotogi_init_d",
+    "Type": "ConvertSex",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_postyotogi_init_e",
+    "ConvertSexData": {
+      "ToMale": [
+        {
+          "Type": "F",
+          "ArrayPosition": 1
+        }
+      ]
+    }
+  },
+
+  "mil_postyotogi_init_e": {
+    "ID": "mil_postyotogi_init_e",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_postyotogi_init_f",
+    "ListUpdateData": {
+      "Add": [
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 1,
+          "PositionToInsert": 0
+        }
+      ]
+    }
+  },
+
+  "mil_postyotogi_init_f": {
+    "ID": "mil_postyotogi_init_f",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_postyotogi_init_g",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        },
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 0
+        },
+        "Man2": {
+          "Type": "Man",
+          "ArrayPosition": 1
+        }
+      }
+    ]
+  },
+
+  "mil_postyotogi_init_g": {
+    "ID": "mil_postyotogi_init_g",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_postyotogi_init_h",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana_kakae_sex.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ痛み我慢３",
+          "FaceBlend": "頬３涙０"
+        },
+        "PosRot": {
+          "PosString": "0, 0.5, 1.6",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      }
+    ]
+  },
+
+
+  "mil_postyotogi_init_h": {
+    "ID": "mil_postyotogi_init_h",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_postyotogi_0001",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-2.98, 1.25, -3.28",
+        "TargetPosString": "0.22, 0.90, 1.55",
+        "AroundAngleString": "33.49, 3.46",
+        "Distance": 5.8
+      }
+    }
+  },
+
+  "mil_postyotogi_0001": {
+    "ID": "mil_postyotogi_0001",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_postyotogi_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]と[=Name,Maid,1,CallName]は交代でペニバンを装着し、俺と２穴セックスを楽しむ。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "mil_postyotogi_0002": {
+    "ID": "mil_postyotogi_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_postyotogi_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（これは俺たちがこれまで試したことのない新しいプレイだ、そのため皆、非常に興奮していた。）"
+    }
+  },
+
+  "mil_postyotogi_0003": {
+    "ID": "mil_postyotogi_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_postyotogi_0003a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（今まで聞いたことのない下品な呻き声が、果てしなく響かせる。）"
+    }
+  },
+
+
+  "mil_postyotogi_0003a": {
+    "ID": "mil_postyotogi_0003a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_postyotogi_0004_Branch",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-0.60, 1.60, 0.23",
+        "TargetPosString": "0.22, 0.91, 1.55",
+        "AroundAngleString": "31.69, 23.65",
+        "Distance": 1.7
+      }
+    }
+  },
+
+  "mil_postyotogi_0004_Branch": {
+    "ID": "mil_postyotogi_0004_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "mil_postyotogi_0010_T_[=PType]"
+  },
+
+  "mil_postyotogi_0011_Branch": {
+    "ID": "mil_postyotogi_0011_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "mil_postyotogi_0020_T_[=PType]"
+  },
+
+  "mil_postyotogi_0021": {
+    "ID": "mil_postyotogi_0021",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_postyotogi_0022",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ、大丈夫だ、イっちゃって！ベッドをびしょびしょに濡らしてしまえ！ほらほら、すごく気持ちいいだろ？"
+    }
+  },
+
+  "mil_postyotogi_0022": {
+    "ID": "mil_postyotogi_0022",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_postyotogi_0023_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana_kakae_sex.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 3,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "mil_postyotogi_0023_Branch": {
+    "ID": "mil_postyotogi_0023_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "mil_postyotogi_0030_M_[=PType]"
+  },
+
+  "mil_postyotogi_0031": {
+    "ID": "mil_postyotogi_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_postyotogi_0032",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ、いいぞ！じゃあみんな一緒にイって！"
+    }
+  },
+
+  "mil_postyotogi_0032": {
+    "ID": "mil_postyotogi_0032",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_postyotogi_0033",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_2ana_kakae_sex.ks",
+        "ScriptLabel": "*初々しい射精中",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮３"
+        },
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "mil_postyotogi_0033": {
+    "ID": "mil_postyotogi_0033",
+    "Type": "AddTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_postyotogi_0034_Branch",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F",
+        "IndexPosition": 0,
+        "BodyTarget": [ "Vagina" ]
+      }
+    ]
+  },
+
+  "mil_postyotogi_0034_Branch": {
+    "ID": "mil_postyotogi_0034_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "mil_postyotogi_0040_T_[=PType]"
+  },
+
+  "mil_postyotogi_0041": {
+    "ID": "mil_postyotogi_0041",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_postyotogi_0042_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ふーう……　よし、次は[=Name,Maid,1,CallName]の番だ。ペニバンを[=Name,Maid,0,CallName]に渡して。"
+    }
+  },
+
+  "mil_postyotogi_0042_Branch": {
+    "ID": "mil_postyotogi_0042_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "mil_postyotogi_0050_M_[=PType]"
+  },
+
+  "mil_postyotogi_0051": {
+    "ID": "mil_postyotogi_0051",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "mil_postyotogi_0052",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "mil_postyotogi_0052": {
+    "ID": "mil_postyotogi_0052",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "mil_postyotogi_0053"
+  },
+
+  "mil_postyotogi_0053": {
+    "ID": "mil_postyotogi_0053",
+    "Type": "ConvertSex",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_postyotogi_0053a",
+    "ConvertSexData": {
+      "BackToFemale": [
+        {
+          "Type": "F",
+          "ArrayPosition": 1
+        }
+      ]
+    }
+  },
+
+  "mil_postyotogi_0053a": {
+    "ID": "mil_postyotogi_0053a",
+    "Type": "ConvertSex",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_postyotogi_0054",
+    "ConvertSexData": {
+      "ToMale": [
+        {
+          "Type": "F",
+          "ArrayPosition": 0
+        }
+      ]
+    }
+  },
+
+  "mil_postyotogi_0054": {
+    "ID": "mil_postyotogi_0054",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_postyotogi_0055",
+    "ListUpdateData": {
+      "Remove": [
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 1
+        }
+      ]
+    }
+  },
+
+  "mil_postyotogi_0055": {
+    "ID": "mil_postyotogi_0055",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_postyotogi_0056",
+    "ListUpdateData": {
+      "Add": [
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 0,
+          "PositionToInsert": 0
+        }
+      ]
+    }
+  },
+
+
+  "mil_postyotogi_0056": {
+    "ID": "mil_postyotogi_0056",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_postyotogi_0058",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮３",
+        "FaceBlend": "頬３涙０"
+      }
+
+    ]
+  },
+
+  "mil_postyotogi_0058": {
+    "ID": "mil_postyotogi_0058",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_postyotogi_0059",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 1
+        },
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 0
+        },
+        "Man2": {
+          "Type": "Man",
+          "ArrayPosition": 1
+        }
+      }
+    ]
+  },
+
+  "mil_postyotogi_0059": {
+    "ID": "mil_postyotogi_0059",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_postyotogi_0060",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_ude_2ana.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 5,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情"
+        },
+        "PosRot": {
+          "PosString": "0, 0.46, 1.6",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      }
+    ]
+  },
+
+  "mil_postyotogi_0060": {
+    "ID": "mil_postyotogi_0060",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_postyotogi_0061",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-2.98, 1.25, -3.28",
+        "TargetPosString": "0.22, 0.90, 1.55",
+        "AroundAngleString": "33.49, 3.46",
+        "Distance": 5.8
+      }
+    }
+  },
+
+  "mil_postyotogi_0061": {
+    "ID": "mil_postyotogi_0061",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_postyotogi_0062",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そして、この淫らな夜伽は、ようやく疲れて終わりまで、長い時間がかかた。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "mil_postyotogi_0062": {
+    "ID": "mil_postyotogi_0062",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_postyotogi_0063",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（正直こういう乱交は本当に良いものだね。うん、ちょっとハマってるみたい。）"
+    }
+  },
+
+  "mil_postyotogi_0063": {
+    "ID": "mil_postyotogi_0063",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_postyotogi_0064",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（他のメイドたちにも試してみようと。ふふっ、しばらくは楽しいだろうな…）"
+    }
+  },
+
+  "mil_postyotogi_0064": {
+    "ID": "mil_postyotogi_0064",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "mil_postyotogi_0065",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "mil_postyotogi_0065": {
+    "ID": "mil_postyotogi_0065",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_postyotogi_0066",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "mil_postyotogi_0066": {
+    "ID": "mil_postyotogi_0066",
+    "Type": "ConvertSex",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_postyotogi_0067",
+    "ConvertSexData": {
+      "BackToFemale": [
+        {
+          "Type": "F",
+          "ArrayPosition": 0
+        }
+      ]
+    }
+  },
+
+  "mil_postyotogi_0067": {
+    "ID": "mil_postyotogi_0067",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_postyotogi_0068",
+    "ListUpdateData": {
+      "Remove": [
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 0
+        }
+      ]
+    }
+  },
+
+  "mil_postyotogi_0068": {
+    "ID": "mil_postyotogi_0068",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "mil_end",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "mil_end": {
+    "ID": "mil_end",
+    "Type": "Special",
+    "WaitingType": "FadeOut",
+    "NextStepID": "mil_end2",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "mil_end2": {
+    "ID": "mil_end2",
+    "Type": "ADVEnd",
+    "WaitingType": "End"
+  }
+}

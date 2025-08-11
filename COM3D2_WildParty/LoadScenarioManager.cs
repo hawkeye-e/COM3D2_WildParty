@@ -274,6 +274,9 @@ namespace COM3D2.WildParty.Plugin
 
         private static readonly string[] ScenarioManInLiliesResList = {
             ScenarioResources.ScenarioManInLilies.ManInLiliesADVIntro,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADVPostYotogi,
+
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Muku,
         };
 
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)

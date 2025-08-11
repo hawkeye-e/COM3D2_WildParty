@@ -2,7 +2,7 @@
   "mil0001": {
     "ID": "mil0001",
     "Type": "BG",
-    "Tag": "ShinShitsumu",
+    "Tag": "",
     "WaitingType": "Auto",
     "NextStepID": "mil_init_chara"
   },
@@ -56,48 +56,22 @@
   "mil_intro_0001": {
     "ID": "mil_intro_0001",
     "Type": "BGM",
-    "Tag": "BGM009.ogg",
+    "Tag": "BGM011.ogg",
     "WaitingType": "Auto",
     "NextStepID": "mil_intro_0001a"
   },
 
   "mil_intro_0001a": {
     "ID": "mil_intro_0001a",
-    "Type": "Chara",
-    "WaitingType": "Auto",
-    "WaitFullLoad": true,
-    "NextStepID": "mil_intro_0001b",
-    "CharaData": [
-      {
-        "Type": "M",
-        "IsMaster": true,
-        "ArrayPosition": 0,
-        "Visible": true,
-        "WaitLoad": true,
-        "IsManNude": false,
-        "MotionInfo": {
-          "ScriptFile": "h_man_001.ks",
-          "ScriptLabel": "*男座り＿腕組"
-        },
-        "PosRot": {
-          "PosString": "0.0, 0.5, -3.4",
-          "RotString": "0.0, 0.0, 0.0, 1.0"
-        }
-      }
-    ]
-  },
-
-  "mil_intro_0001b": {
-    "ID": "mil_intro_0001b",
     "Type": "Camera",
     "WaitingType": "Auto",
     "NextStepID": "mil_intro_0002",
     "CameraData": {
       "FixedPointData": {
-        "PosString": "0,1.6,0.9",
-        "TargetPosString": "-0.1,1.5,-0.1",
-        "AroundAngleString": "-179.6,5.3",
-        "Distance": 1
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
       }
     }
   },
@@ -106,10 +80,10 @@
     "ID": "mil_intro_0002",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "mil_yotogiplay_phase1_closepanel",
+    "NextStepID": "mil_intro_0003",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（……おかしい…）"
+      "Text": "メイドたちがレズ乱交をしているのを見て以来、すごく気に入った。このせいで、俺はメイドたちに夜伽でレズプレイを定期的に要求した。"
     },
 
     "FadeData": {
@@ -118,7 +92,1373 @@
     }
   },
 
+  "mil_intro_0003": {
+    "ID": "mil_intro_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "今日の夜伽は、[=Name,Maid,0,CallName]と[=Name,Maid,1,CallName]の番か。これも面白い組み合わせだ。ふふっ…楽しみだな…"
+    }
+  },
 
+  "mil_intro_0004": {
+    "ID": "mil_intro_0004",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "mil_intro_0005",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "mil_intro_0005": {
+    "ID": "mil_intro_0005",
+    "Type": "BG",
+    "Tag": "Shukuhakubeya_BedRoom",
+    "TagForNight": "Shukuhakubeya_BedRoom_Night",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0006"
+  },
+
+  "mil_intro_0006": {
+    "ID": "mil_intro_0006",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0007",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-1.42, 0.00, -1.15",
+          "RotString": "0, -0.873, 0, 0.487"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-1.74, 0.00, -0.83",
+          "RotString": "0, 0.985, 0, -0.172"
+        }
+      }
+
+    ]
+  },
+
+  "mil_intro_0007": {
+    "ID": "mil_intro_0007",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0008",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-2.35, 1.58, -1.84",
+        "TargetPosString": "-1.54, 1.44, -0.96",
+        "AroundAngleString": "42.57, 6.87",
+        "Distance": 1.2
+      }
+    }
+  },
+
+  "mil_intro_0008": {
+    "ID": "mil_intro_0008",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0009",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "さて、今日の夜伽は前回と同じ百合セックスだ。[=Name,Maid,0,CallName]、[=Name,Maid,1,CallName]、二人に任せた。俺はベッドのそばで見ておくよ。"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "mil_intro_0009": {
+    "ID": "mil_intro_0009",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0010",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ジト目"
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ジト目"
+      }
+
+    ]
+  },
+
+  "mil_intro_0010": {
+    "ID": "mil_intro_0010",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]と[=Name,Maid,1,CallName]は、俺が言うことを聞いた時、ちょっと不機嫌そうだった。なんだこのジト目…）"
+    }
+  },
+
+  "mil_intro_0011_Branch": {
+    "ID": "mil_intro_0011_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "mil_intro_0020_T_[=PType]"
+  },
+
+  "mil_intro_0021_Branch": {
+    "ID": "mil_intro_0021_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "mil_intro_0030_T_[=PType]"
+  },
+
+  "mil_intro_0031": {
+    "ID": "mil_intro_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0032",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（メイドたちから突然の罵倒！…あーあ、最近レズプレイばかりのせいか。）"
+    }
+  },
+
+  "mil_intro_0032": {
+    "ID": "mil_intro_0032",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0034",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ともかく、俺は絶対に引き下がらない。レズは正義だからな。）"
+    }
+  },
+
+  "mil_intro_0034": {
+    "ID": "mil_intro_0034",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0035",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "はいはい、俺はド変態ご主人様だ。あー、でも今日のド変態ご主人様はどーしてもレズプレイ見たいなー　さぁさぁ、早く始めようよ。"
+    }
+  },
+
+
+  "mil_intro_0035": {
+    "ID": "mil_intro_0035",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0036",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（二人は、さらに不満げな表情で俺を見つめた。）"
+    }
+  },
+
+  "mil_intro_0036": {
+    "ID": "mil_intro_0036",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0037",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ためいき"
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ためいき"
+      }
+
+    ]
+  },
+
+  "mil_intro_0037": {
+    "ID": "mil_intro_0037",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0038",
+    "TalkData": {
+      "SpecificSpeaker": "All",
+      "SpeakerName": "メイド一同",
+      "Text": "はぁ……",
+      "VoiceData": {
+        "Muku": {
+          "VoiceFile": "H0_third_61078.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        },
+        "Majime": {
+          "VoiceFile": "H1_third_61042.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        },
+        "Rindere": {
+          "VoiceFile": "H2_13209.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.95
+        },
+        "Pride": {
+          "VoiceFile": "S0_GP01_105741.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.95
+        },
+        "Cool": {
+          "VoiceFile": "S1_GP_105775.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.95
+        },
+        "Pure": {
+          "VoiceFile": "S2_GP01_105938.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.9
+        },
+        "Yandere": {
+          "VoiceFile": "S3_GP01_105666.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.1
+        },
+        "Anesan": {
+          "VoiceFile": "S4_GP01_A_104509.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.45
+        },
+        "Genki": {
+          "VoiceFile": "S5_GP01_105503.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.15
+        },
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105232.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.9
+        },
+        "Silent": {
+          "VoiceFile": "H3_GP01_09209.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.45
+        },
+        "Devilish": {
+          "VoiceFile": "H4_GP01_A_08940.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.15
+        },
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61048.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.15
+        },
+        "Secretary": {
+          "VoiceFile": "H6_GP01ADD_60615.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.05
+        },
+        "Sister": {
+          "VoiceFile": "H7_GP01ADD_60620.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.86
+        },
+        "Curtness": {
+          "VoiceFile": "H8_GP01ADD_60974.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.95
+        },
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_61050.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.95
+        },
+        "Childhood": {
+          "VoiceFile": "H10_GP01ADD_66111.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.95
+        },
+        "Friendly": {
+          "VoiceFile": "V1_GP01ADD_50525.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.95
+        },
+        "Dame": {
+          "VoiceFile": "V0_GP01ADD_50525.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.95
+        },
+        "Masochist": {
+          "VoiceFile": "H11_01238.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.95
+        },
+        "Cunning": {
+          "VoiceFile": "H12_04290.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.05
+        },
+        "Gyaru": {
+          "VoiceFile": "H13_03010.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.25
+        }
+      }
+    }
+  },
+
+  "mil_intro_0038": {
+    "ID": "mil_intro_0038",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "mil_intro_0039",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "mil_intro_0039": {
+    "ID": "mil_intro_0039",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0040",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち腕を組む"
+        },
+        "PosRot": {
+          "PosString": "2.25, 0.00, -2.09",
+          "RotString": "0, -0.702, 0, -0.712"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "MotionInfo": {
+          "MotionFile": "kaiwa_tati_akireB_taiki_f.anm",
+          "MotionTag": "kaiwa_tati_akireB_taiki_f.anm"
+        },
+        "PosRot": {
+          "PosString": "2.58, 0.00, -1.79",
+          "RotString": "0, 0.950, 0, 0.311"
+        }
+      }
+
+    ]
+  },
+
+  "mil_intro_0040": {
+    "ID": "mil_intro_0040",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0041",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-3.40, 1.32, 2.12",
+        "TargetPosString": "1.63, 1.08, -1.50",
+        "AroundAngleString": "125.75, 2.22",
+        "Distance": 6.2
+      }
+    }
+  },
+
+  "mil_intro_0041": {
+    "ID": "mil_intro_0041",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0042",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（二人はため息をつきながら、隅へ行き、服を脱ぎ始めた。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "mil_intro_0042": {
+    "ID": "mil_intro_0042",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0043",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そこで、二人は互いにささやき合っているようだ。何かを話し合っているんだろうな。）"
+    }
+  },
+
+  "mil_intro_0043": {
+    "ID": "mil_intro_0043",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "mil_intro_0044",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "mil_intro_0044": {
+    "ID": "mil_intro_0044",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0045",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "mil_intro_0045": {
+    "ID": "mil_intro_0045",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0046",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（二人の話を聞こうとするともう話し終わった。そして、二人は一緒にベッドに座った。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "mil_intro_0046": {
+    "ID": "mil_intro_0046",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0047",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（さあ、始めの時だ。想像するだけでもめっちゃ興奮した…へへぇ…）"
+    }
+  },
+
+  "mil_intro_0047": {
+    "ID": "mil_intro_0047",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "mil_intro_0048",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "mil_intro_0048": {
+    "ID": "mil_intro_0048",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0049",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        },
+        "Maid2": {
+          "Type": "Maid",
+          "ArrayPosition": 1
+        }
+      }
+    ]
+  },
+
+  "mil_intro_0049": {
+    "ID": "mil_intro_0049",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0050",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_x_yuri_aibu2.ks",
+        "ScriptLabel": "*激しさ１見つめ合う",
+        "SexPosID": 100,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ羞恥２",
+          "FaceBlend": "頬２涙０"
+        },
+        "Maid2": {
+          "Visible": true,
+          "FaceAnime": "エロ好感２",
+          "FaceBlend": "頬２涙０"
+        },
+        "PosRot": {
+          "PosString": "0, 0.52, 1.6",
+          "RotString": "0, 0.707, 0, -0.707"
+        }
+      }
+    ]
+  },
+
+  "mil_intro_0050": {
+    "ID": "mil_intro_0050",
+    "Type": "AddObject",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0051",
+    "WorldObjectData": [
+      {
+        "Src": "photo_ver/Odogu_HeroineChair_cooldere_photo_ver",
+        "ObjectID": "mod_master_char",
+        "PosRot": {
+          "PosString": "-2.41, 0, 1.82",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
+      }
+    ]
+  },
+
+  "mil_intro_0051": {
+    "ID": "mil_intro_0051",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0051a",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿考える"
+        },
+        "PosRot": {
+          "PosString": "-2.42, 0.52, 1.82",
+          "RotString": "0, 0.707, 0, 0.707"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "ClothesSetID": "FullNude"
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "ClothesSetID": "FullNude"
+      }
+    ]
+  },
+
+  "mil_intro_0051a": {
+    "ID": "mil_intro_0051a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0052",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-3.15, 1.23, 1.14",
+        "TargetPosString": "-2.87, 1.22, 1.25",
+        "AroundAngleString": "68.33, 3.15",
+        "Distance": 0.3
+      }
+    }
+  },
+
+  "mil_intro_0052": {
+    "ID": "mil_intro_0052",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0053",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]と[=Name,Maid,1,CallName]は互いに触れ合い始めった。二人は互いの柔らかい肌を優しく触り、舐め合っている。おお…いいぞ…）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "mil_intro_0053": {
+    "ID": "mil_intro_0053",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0054",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（そして、[=Name,Maid,1,CallName]は[=Name,Maid,0,CallName]の股間を軽く手で触り始める。[=Name,Maid,0,CallName]は、欲情したような喘ぎ声が出る。その声はまるで[=Name,Maid,1,CallName]に、もっとしてほしいとおねだりしているようだ。）"
+    }
+  },
+
+  "mil_intro_0054": {
+    "ID": "mil_intro_0054",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0055",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_x_yuri_aibu2.ks",
+        "ScriptLabel": "*激しさ２見つめ合う",
+        "SexPosID": 100,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬３涙０"
+        }
+      }
+    ]
+  },
+
+  "mil_intro_0055": {
+    "ID": "mil_intro_0055",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0056_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]の喘ぎ声が次第に大きくなっていった。彼女は紅潮し、明らかに発情していた。）"
+    }
+  },
+
+  "mil_intro_0056_Branch": {
+    "ID": "mil_intro_0056_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "mil_intro_0060_T_[=PType]"
+  },
+
+  "mil_intro_0061_Branch": {
+    "ID": "mil_intro_0061_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "mil_intro_0070_T_[=PType]"
+  },
+
+  "mil_intro_0071": {
+    "ID": "mil_intro_0071",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "mil_intro_0072",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "mil_intro_0072": {
+    "ID": "mil_intro_0072",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0073",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "mil_intro_0073": {
+    "ID": "mil_intro_0073",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0074",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,1,CallName]は話しながらペニバンを取り出し、それを装着する。やっぱりこれだ！俺はこれを待っていた！）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "mil_intro_0074": {
+    "ID": "mil_intro_0074",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "mil_intro_0075",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "mil_intro_0075a": {
+    "ID": "mil_intro_0075a",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "mil_intro_0075"
+  },
+
+  "mil_intro_0075": {
+    "ID": "mil_intro_0075",
+    "Type": "ConvertSex",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0075_add_converted_maid",
+    "ConvertSexData": {
+      "ToMale": [
+        {
+          "Type": "F",
+          "ArrayPosition": 1
+        }
+      ]
+    }
+  },
+
+  "mil_intro_0075_add_converted_maid": {
+    "ID": "mil_intro_0075_add_converted_maid",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0076",
+    "ListUpdateData": {
+      "Add": [
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 1,
+          "PositionToInsert": 0
+        }
+      ]
+    }
+  },
+
+
+  "mil_intro_0076": {
+    "ID": "mil_intro_0076",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0077",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 0
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      }
+
+    ]
+  },
+
+  "mil_intro_0077": {
+    "ID": "mil_intro_0077",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0078",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*挿入",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Man1": {
+          "Visible": true,
+          "FaceAnime": "エロ好感３",
+          "FaceBlend": "頬２涙０"
+        },
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ期待",
+          "FaceBlend": "頬２涙０"
+        },
+        "PosRot": {
+          "PosString": "-0.22, 0.52, 1.57",
+          "RotString": "0, 0, 0, 1"
+        },
+        "BlockInputUntilMotionChange": true
+      }
+
+    ]
+  },
+
+  "mil_intro_0078": {
+    "ID": "mil_intro_0078",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0079",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-3.01, 1.60, 1.51",
+        "TargetPosString": "-0.59, 0.97, 1.68",
+        "AroundAngleString": "85.99, 14.63",
+        "Distance": 2.5
+      }
+    }
+  },
+
+  "mil_intro_0079": {
+    "ID": "mil_intro_0079",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0080",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（数回のキス後、[=Name,Maid,0,CallName]は自らの脚を広げ、[=Name,Maid,1,CallName]のペニバンを迎え入れる。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "mil_intro_0080": {
+    "ID": "mil_intro_0080",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0081",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮２"
+        }
+      }
+
+    ]
+  },
+
+  "mil_intro_0081": {
+    "ID": "mil_intro_0081",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0082_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]は[=Name,Maid,0,CallName]を強く責めなかった。代わりに、彼女は優しく、リズムよくピストンする。）"
+    }
+  },
+
+  "mil_intro_0082_Branch": {
+    "ID": "mil_intro_0082_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "mil_intro_0090_T_[=PType]"
+  },
+
+  "mil_intro_0091": {
+    "ID": "mil_intro_0091",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0092",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "……"
+    }
+  },
+
+  "mil_intro_0092": {
+    "ID": "mil_intro_0092",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0093",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]は[=Name,Maid,1,CallName]を褒めちぎり、俺を嘲笑し始めた。）"
+    }
+  },
+
+  "mil_intro_0093": {
+    "ID": "mil_intro_0093",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0094_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（なんかわざとやってる気がする…）"
+    }
+  },
+
+  "mil_intro_0094_Branch": {
+    "ID": "mil_intro_0094_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "mil_intro_0100_T_[=PType]"
+  },
+
+  "mil_intro_0101": {
+    "ID": "mil_intro_0101",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0102",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]の言葉を聞くと、チンポが反応した。ドＭじゃないげと、[=Name,Maid,0,CallName]の意外な一面を見ると、俺はめっちゃ興奮する。）"
+    }
+  },
+
+  "mil_intro_0102": {
+    "ID": "mil_intro_0102",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0103_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情"
+        }
+      }
+
+    ]
+  },
+
+  "mil_intro_0103_Branch": {
+    "ID": "mil_intro_0103_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "mil_intro_0110_T_[=PType]"
+  },
+
+  "mil_intro_0111": {
+    "ID": "mil_intro_0111",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0112",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]がこのように他人を褒めるのを見ると、俺は彼女を征服したいという欲望がますます膨らんだ。）"
+    }
+  },
+
+  "mil_intro_0112": {
+    "ID": "mil_intro_0112",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0113",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（それに、彼女はさっきからずっと俺を挑発し続けているので、ちょっとお仕置きが必要なようね。）"
+    }
+  },
+
+  "mil_intro_0113": {
+    "ID": "mil_intro_0113",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "mil_intro_0114",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "mil_intro_0114": {
+    "ID": "mil_intro_0114",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "mil_intro_0115"
+  },
+
+  "mil_intro_0115": {
+    "ID": "mil_intro_0115",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0116",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 0
+        },
+        "Man2": {
+          "Type": "Man",
+          "ArrayPosition": 1
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "mil_intro_0116": {
+    "ID": "mil_intro_0116",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0116a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_seijyoui_kuti.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 1,
+        "WaitLoad": true
+      }
+
+    ]
+  },
+
+  "mil_intro_0116a": {
+    "ID": "mil_intro_0116a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0117",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.09, 2.29, 2.33",
+        "TargetPosString": "-0.31, 0.90, 1.48",
+        "AroundAngleString": "137.19, 50.35",
+        "Distance": 1.8
+      }
+    }
+  },
+
+  "mil_intro_0117": {
+    "ID": "mil_intro_0117",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0118",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は立ち上がり、[=Name,Maid,0,CallName]に近づいた。そしてチンポを彼女の顔に押し付けた。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "mil_intro_0118": {
+    "ID": "mil_intro_0118",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0119",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,Maid,0,CallName]、口を開けて咥えろ。"
+    }
+  },
+
+  "mil_intro_0119": {
+    "ID": "mil_intro_0119",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0120",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_seijyoui_kuti.ks",
+        "ScriptLabel": "*挿入",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "閉じフェラ快楽"
+        }
+      }
+
+    ]
+  },
+
+  "mil_intro_0120": {
+    "ID": "mil_intro_0120",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0121_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]は俺のチンポを一瞥すると、ためらいもなく快楽に浸りながら口を開き、咥え始めた。）"
+    }
+  },
+
+  "mil_intro_0121_Branch": {
+    "ID": "mil_intro_0121_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "mil_intro_0130_T_[=PType]"
+  },
+
+  "mil_intro_0131": {
+    "ID": "mil_intro_0131",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0132",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,Maid,1,CallName]、このまま続けて。君たちは俺がただ座って見ているだけなのは欲しくないじゃねえか。だから君たちはさっきから俺を挑発し続ける。違うか？"
+    }
+  },
+
+  "mil_intro_0132": {
+    "ID": "mil_intro_0132",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0133",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_ran3p_seijyoui_kuti.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 1,
+        "WaitLoad": true
+      }
+
+    ]
+  },
+
+  "mil_intro_0133": {
+    "ID": "mil_intro_0133",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0134",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "たから俺も参戦だ！たが、今回はいつも通りのハーレムプレイとはちょっと違う。"
+    }
+  },
+
+  "mil_intro_0134": {
+    "ID": "mil_intro_0134",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0135",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "二人の同時奉仕は欲しくない。その代わりに、二人のどちらかが２本のチンポで犯される。どう？嬉しいだろ？"
+    }
+  },
+
+  "mil_intro_0135": {
+    "ID": "mil_intro_0135",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "mil_intro_0136",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "これはご主人様を軽蔑したメイドへのお仕置きだ。喜べ。"
+    }
+  },
+
+  "mil_intro_0136": {
+    "ID": "mil_intro_0136",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0137_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+
+    ]
+  },
+
+  "mil_intro_0137_Branch": {
+    "ID": "mil_intro_0137_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "mil_intro_0140_T_[=PType]"
+  },
+
+  "mil_intro_0141": {
+    "ID": "mil_intro_0141",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "mil_intro_0141a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "mil_intro_0141a": {
+    "ID": "mil_intro_0141a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_intro_0141b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "mil_intro_0141b": {
+    "ID": "mil_intro_0141b",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "mil_intro_0142",
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "mil_intro_0142": {
+    "ID": "mil_intro_0142",
+    "Type": "ListUpdate",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_intro_0143",
+    "ListUpdateData": {
+      "Remove": [
+        {
+          "Type": "ConvertedMaid",
+          "SrcPosition": 1
+        }
+      ]
+    }
+  },
+
+  "mil_intro_0143": {
+    "ID": "mil_intro_0143",
+    "Type": "ConvertSex",
+    "WaitingType": "Auto",
+    "NextStepID": "mil_yotogiplay_phase1_closepanel",
+    "ConvertSexData": {
+      "BackToFemale": [
+        {
+          "Type": "F",
+          "ArrayPosition": 1
+        }
+      ]
+    }
+  },
 
 
 
