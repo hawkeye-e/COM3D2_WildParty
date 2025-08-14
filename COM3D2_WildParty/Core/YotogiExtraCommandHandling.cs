@@ -592,6 +592,8 @@ namespace COM3D2.WildParty.Plugin.Core
                 //Check if the strap on maid is in the correct position
                 YotogiHandling.CheckPreChangeSkillYotogiMiscSetup(StateManager.Instance.PartyGroupList[0], initialSkill.YotogiSkillID);
 
+                YotogiHandling.UpdateParameterView(StateManager.Instance.PartyGroupList[0].Maid1);
+
                 YotogiHandling.ChangeMainGroupSkill(initialSkill.YotogiSkillID);
 
                 YotogiHandling.SetGroupToScene();
