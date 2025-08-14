@@ -15,6 +15,7 @@ For details or screenshots please refer to the [blog](https://hawkeye0.blogspot.
   - [Lily Blooming Paradise (Yuri)](https://hawkeye0.blogspot.com/2025/04/scenario-info-lily-blooming-paradise.html)
   - [The Summer Festival of Immoral Village (NTR)](https://hawkeye0.blogspot.com/2025/06/scenario-info-summer-festival-of.html)
   - [Lustful Maid (Pure Love)](https://hawkeye0.blogspot.com/2025/07/scenario-info-lustful-maid.html)
+  - [Triple Booking (NTR)](https://hawkeye0.blogspot.com/2025/08/scenario-info-triple-booking.html)
  
 
 
