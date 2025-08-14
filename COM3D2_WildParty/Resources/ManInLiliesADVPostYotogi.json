@@ -51,11 +51,19 @@
     "CharaData": [
       {
         "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "ClothesSetID": "FullNude"
+      },
+      {
+        "Type": "F",
         "ArrayPosition": 1,
         "Visible": true,
         "WaitLoad": true,
         "FaceAnime": "ÉGÉçãªï±ÇR",
-        "FaceBlend": "ñjÇRó‹ÇO"
+        "FaceBlend": "ñjÇRó‹ÇO",
+        "ClothesSetID": "FullNude"
       }
 
     ]
@@ -231,7 +239,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "mil_postyotogi_0020_T_[=PType]"
@@ -354,7 +362,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "mil_postyotogi_0050_M_[=PType]"
@@ -396,6 +404,24 @@
 
   "mil_postyotogi_0053a": {
     "ID": "mil_postyotogi_0053a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "mil_postyotogi_0053b",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "ClothesSetID": "FullNude"
+      }
+
+    ]
+  },
+
+  "mil_postyotogi_0053b": {
+    "ID": "mil_postyotogi_0053b",
     "Type": "ConvertSex",
     "WaitingType": "Auto",
     "NextStepID": "mil_postyotogi_0054",

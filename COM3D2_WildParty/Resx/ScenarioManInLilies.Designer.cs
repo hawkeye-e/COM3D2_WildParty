@@ -62,6 +62,412 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Anesan&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Anesan&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Anesan&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Anesan&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0030_T [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Anesan {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Anesan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Childhood&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Childhood&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Childhood&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Childhood&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Childhood {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Childhood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Cool&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Cool&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Cool&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Cool&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0030_T_Cool&quot;,        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Cool {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Cool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Cunning&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Cunning&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Cunning&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Cunning&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_00 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Cunning {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Cunning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Curtness&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Curtness&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Curtness&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Curtness&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intr [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Curtness {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Curtness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Dame&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Dame&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Dame&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Dame&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0030_T_Dame&quot;,        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Dame {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Dame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Devilish&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Devilish&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Devilish&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Devilish&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intr [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Devilish {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Devilish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Friendly&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Friendly&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Friendly&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Friendly&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intr [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Friendly {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Friendly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Genki&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Genki&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Genki&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Genki&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0030_T_Gen [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Genki {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Genki", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Gyaru&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Gyaru&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Gyaru&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Gyaru&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0030_T_Gya [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Gyaru {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Gyaru", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Ladylike&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Ladylike&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Ladylike&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Ladylike&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intr [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Ladylike {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Ladylike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Majime&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Majime&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Majime&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Majime&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0030_T [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Majime {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Majime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Masochist&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Masochist&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Masochist&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Masochist&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Masochist {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Masochist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Missy&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Missy&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Missy&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Missy&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0030_T_Mis [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Missy {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Missy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;mil_intro_0020_T_Muku&quot;: {
         ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Muku&quot;,
         ///    &quot;Type&quot;: &quot;Talk&quot;,
@@ -86,6 +492,238 @@ namespace ScenarioResources {
         internal static string ManInLiliesADV_Muku {
             get {
                 return ResourceManager.GetString("ManInLiliesADV_Muku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Pride&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Pride&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Pride&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Pride&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0030_T_Pri [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Pride {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Pride", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Pure&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Pure&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Pure&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Pure&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0030_T_Pure&quot;,        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Pure {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Pure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Rindere&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Rindere&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Rindere&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Rindere&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_00 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Rindere {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Rindere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Sadist&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Sadist&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Sadist&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Sadist&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0030_T [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Sadist {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Sadist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Secretary&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Secretary&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Secretary&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Secretary&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Secretary {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Secretary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Silent&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Silent&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Silent&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Silent&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0030_T [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Silent {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Silent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Sister&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Sister&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Sister&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Sister&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0030_T [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Sister {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Sister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;mil_intro_0020_T_Yandere&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_0020_T_Yandere&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;mil_intro_0021_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;もう、ご主人様、ホントに変態なんですからぁ……&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Yandere&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_GP02C_24616.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;mil_intro_0030_T_Yandere&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_intro_00 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ManInLiliesADV_Yandere {
+            get {
+                return ResourceManager.GetString("ManInLiliesADV_Yandere", resourceCulture);
             }
         }
         
@@ -123,25 +761,26 @@ namespace ScenarioResources {
         /// <summary>
         ///   Looks up a localized string similar to {
         ///
-        ///  &quot;lbp_postyotogi_init&quot;: {
-        ///    &quot;ID&quot;: &quot;lbp_postyotogi_init&quot;,
+        ///  &quot;mil_postyotogi_init&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_postyotogi_init&quot;,
         ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
         ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
-        ///    &quot;NextStepID&quot;: &quot;hgbc_postyotogi_remove_owner&quot;
+        ///    &quot;NextStepID&quot;: &quot;mil_postyotogi_init_a&quot;
         ///  },
         ///
-        ///  &quot;hgbc_postyotogi_remove_owner&quot;: {
-        ///    &quot;ID&quot;: &quot;hgbc_postyotogi_remove_owner&quot;,
-        ///    &quot;Type&quot;: &quot;ListUpdate&quot;,
+        ///  &quot;mil_postyotogi_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_postyotogi_init_a&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
         ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
-        ///    &quot;WaitFullLoad&quot;: true,
-        ///    &quot;NextStepID&quot;: &quot;lbp_postyotogi_init_a&quot;,
-        ///    &quot;ListUpdateData&quot;: {
-        ///      &quot;Remove&quot;: [
-        ///        {
-        ///          &quot;Type&quot;: &quot;Owner&quot;,
-        ///          &quot;SrcPosition&quot;: 0
-        ///    [rest of string was truncated]&quot;;.
+        ///    &quot;NextStepID&quot;: &quot;mil_postyotogi_init_b&quot;
+        ///  },
+        ///
+        ///  &quot;mil_postyotogi_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;mil_postyotogi_init_b&quot;,
+        ///    &quot;Type&quot;: &quot;DismissGroup&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;Tag&quot;: &quot;A [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ManInLiliesADVPostYotogi {
             get {

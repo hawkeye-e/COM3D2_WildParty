@@ -277,6 +277,28 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioManInLilies.ManInLiliesADVPostYotogi,
 
             ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Muku,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Majime,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Rindere,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Pure,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Pride,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Cool,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Yandere,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Anesan,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Genki,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Sadist,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Silent,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Devilish,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Ladylike,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Secretary,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Sister,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Curtness,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Missy,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Childhood,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Friendly,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Dame,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Masochist,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Cunning,
+            ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Gyaru
         };
 
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)
