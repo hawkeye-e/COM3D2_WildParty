@@ -125,6 +125,12 @@ namespace COM3D2.WildParty.Plugin
         
         internal static ManTypeOption TripleBookingOtakuManType { get { return _tripleBookingOtakuManType.Value; } }
         private static ConfigEntry<ManTypeOption> _tripleBookingOtakuManType;
+        
+        internal static ManTypeOption ExpExchangeEventManType { get { return _expExchangeEventManType.Value; } }
+        private static ConfigEntry<ManTypeOption> _expExchangeEventManType;
+
+        internal static Helper.TallyCounterMarker.TextureType TallyCounterMarkType { get { return _tallyCountMarkerType.Value; } }
+        private static ConfigEntry<Helper.TallyCounterMarker.TextureType> _tallyCountMarkerType;
 
         internal static void Init(BaseUnityPlugin plugin)
         {
@@ -221,7 +227,7 @@ namespace COM3D2.WildParty.Plugin
 
             _immoralVillageManType = plugin.Config.Bind(SCENARIOSETTING, "Summer Festival of Immoral Village Event - Man Types",
                 ManTypeOption.Shota,
-                "The type of man that will be used in the scenaio [Summer Festival of Immoral Village] event. If all items are unchecked, the system will use the default man types.");
+                "The type of man that will be used in the scenaio [Summer Festival of Immoral Village]. If all items are unchecked, the system will use the default man types.");
 
             _lilyBloomingParadiseNoStrapOn = plugin.Config.Bind(SCENARIOSETTING, "Lily Blooming Paradise - Skip Strap-on part",
                 false,
@@ -229,16 +235,20 @@ namespace COM3D2.WildParty.Plugin
 
             _tripleBookingCharaOManType = plugin.Config.Bind(SCENARIOSETTING, "Triple Booking Event - Playboy Man Types",
                 ManTypeOption.Playboy,
-                "The type of man of Playboy that will be used in the scenaio [Triple Booking] event. If all items are unchecked, the system will use the default man types.");
+                "The type of man of Playboy that will be used in the scenaio [Triple Booking]. If all items are unchecked, the system will use the default man types.");
 
 
             _tripleBookingMiddleAgedManType = plugin.Config.Bind(SCENARIOSETTING, "Triple Booking Event - Middle-Aged Man Types",
                 ManTypeOption.MiddleAged,
-                "The type of man of Middle-Aged man that will be used in the scenaio [Triple Booking] event. If all items are unchecked, the system will use the default man types.");
+                "The type of man of Middle-Aged man that will be used in the scenaio [Triple Booking]. If all items are unchecked, the system will use the default man types.");
 
             _tripleBookingOtakuManType = plugin.Config.Bind(SCENARIOSETTING, "Triple Booking Event - Otaku Kun Man Types",
                 ManTypeOption.Otaku,
-                "The type of man of Otaku Kun that will be used in the scenaio [Triple Booking] event. If all items are unchecked, the system will use the default man types.");
+                "The type of man of Otaku Kun that will be used in the scenaio [Triple Booking]. If all items are unchecked, the system will use the default man types.");
+
+            _expExchangeEventManType = plugin.Config.Bind(SCENARIOSETTING, "Empire Club Experience Exchange Event - Man Types",
+                ManTypeOption.YoungMan | ManTypeOption.MiddleAged,
+                "The type of man that will be used in the scenaio [Empire Club Experience Exchange Event]. If all items are unchecked, the system will use the default man types.");
         }
 
         private static void AddDeveloperRelatedConfigs(BaseUnityPlugin plugin)
@@ -269,6 +279,10 @@ namespace COM3D2.WildParty.Plugin
         private static void AddYotogiSettingConfigs(BaseUnityPlugin plugin)
         {
             _isTriggerConditionOn = plugin.Config.Bind(YOTOGISETTING, "Command Trigger Condition", true, "On: The player is required to do achieve some small goals in order to click certain command buttons in the yotogi scene. \n Off: The trigger conditions are ignored and the player can click the command buttons freely.");
+
+            _tallyCountMarkerType = plugin.Config.Bind(YOTOGISETTING, "Tally Count Marker Type",
+                Helper.TallyCounterMarker.TextureType.Kanji,
+                "The marker type used to mark on the maid's body. Only applied to certain NTR scenario.");
         }
 
 

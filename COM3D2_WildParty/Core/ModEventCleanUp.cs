@@ -165,6 +165,7 @@ namespace COM3D2.WildParty.Plugin.Core
             Util.ClearGenericCollection(StateManager.Instance.TimeEndTriggerList);
             Util.ClearGenericCollection(StateManager.Instance.ADVTimeEndTriggerList);
             Util.ClearGenericCollection(StateManager.Instance.AddedGameObjectList);
+            Util.ClearGenericCollection(StateManager.Instance.AddedCustomGameObjectList);
 
             Util.ClearGenericCollection(StateManager.Instance.BackupMaidClothingList);
             Util.ClearGenericCollection(StateManager.Instance.IgnoreResetPropMaidList);
@@ -180,6 +181,7 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.IsMainGroupMotionScriptFlag = false;
             StateManager.Instance.IsYotogiUseModSemenPattern = false;
             StateManager.Instance.WaitForMotionChange = false;
+            StateManager.Instance.IsApplyTallyCounterTexture = false;
 
             StateManager.Instance.YotogiManager = null;
             StateManager.Instance.YotogiCommandFactory = null;
@@ -210,6 +212,11 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             foreach(var kvp in StateManager.Instance.AddedGameObjectList)
                 GameMain.Instance.BgMgr.DelPrefabFromBg(kvp.Key);
+            foreach(var kvp in StateManager.Instance.AddedCustomGameObjectList)
+            {
+                if (kvp.Value != null) 
+                    GameObject.Destroy(kvp.Value);
+            }
         }
 
         private static void ResetAllMaid()

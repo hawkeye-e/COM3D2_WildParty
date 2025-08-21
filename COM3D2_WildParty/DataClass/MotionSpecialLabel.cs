@@ -26,6 +26,9 @@ namespace COM3D2.WildParty.Plugin
         public string WaitLabel2;           //Maid2
 
         public string OrgasmType;
+        public List<Helper.TallyCounterMarker.BodySide> TallyCountMaid1;
+        public List<Helper.TallyCounterMarker.BodySide> TallyCountMaid2;
+
 
         public static class LabelType
         {
@@ -82,6 +85,26 @@ namespace COM3D2.WildParty.Plugin
                 newItem.WaitLabel2 = rowData[12];
 
                 newItem.OrgasmType = rowData[13];
+
+                newItem.TallyCountMaid1 = new List<Helper.TallyCounterMarker.BodySide>();
+                newItem.TallyCountMaid2 = new List<Helper.TallyCounterMarker.BodySide>();
+                if (!string.IsNullOrEmpty(rowData[14]))
+                {
+                    var tallySplit = rowData[14].Split(';');
+                    foreach (var s in tallySplit)
+                    {
+                        newItem.TallyCountMaid1.Add((Helper.TallyCounterMarker.BodySide)Enum.Parse(typeof(Helper.TallyCounterMarker.BodySide), s, true));
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(rowData[15]))
+                {
+                    var tallySplit = rowData[15].Split(';');
+                    foreach (var s in tallySplit)
+                    {
+                        newItem.TallyCountMaid2.Add((Helper.TallyCounterMarker.BodySide)Enum.Parse(typeof(Helper.TallyCounterMarker.BodySide), s, true));
+                    }
+                }
 
                 result.Add(newItem);
 

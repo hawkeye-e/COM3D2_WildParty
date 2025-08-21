@@ -28,6 +28,8 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.YotogiPhase = step.YotogiSetup.Phase;
             StateManager.Instance.IsFinalYotogi = step.YotogiSetup.IsFinalYotogi;
             StateManager.Instance.IsYotogiUseModSemenPattern = step.YotogiSetup.UseModSemenPattern;
+            StateManager.Instance.IsApplyTallyCounterTexture = step.YotogiSetup.IsApplyTallyCounterTexture;
+            StateManager.Instance.TallyCountMarkerType = Config.TallyCounterMarkType;
 
             if (!step.YotogiSetup.IsClubOwnerMainCharacter)
             {
@@ -72,6 +74,9 @@ namespace COM3D2.WildParty.Plugin.Core
                     break;
                 case Constant.YotogiSceneCode.ManInLilies:
                     ProcessADV_Step_ManInLilies_YotogiPlay(instance,step);
+                    break;
+                case Constant.YotogiSceneCode.ExpExchangeEvent:
+                    ProcessADV_Step_ExpExchangeEvent_YotogiPlay(instance, step);
                     break;
             }
         }
@@ -338,7 +343,31 @@ namespace COM3D2.WildParty.Plugin.Core
 
         }
 
+        private static void ProcessADV_Step_ExpExchangeEvent_YotogiPlay(ADVKagManager instance, ADVStep step)
+        {
+            StateManager.Instance.ModEventProgress = Constant.EventProgress.YotogiInit;
 
+            GameMain.Instance.MainCamera.FadeOut(f_dg: delegate
+            {
+                ModUseData.ReloadCoordinateData(StateManager.Instance.UndergoingModEventID);
+
+                YotogiHandling.InitArrayForYotogiUsed();
+
+                CharacterHandling.SetDefaultGroupFormation();
+
+                CharacterHandling.AssignPartyGrouping(PartyGroup.CurrentFormation);
+
+                YotogiHandling.SetupYotogiSceneInitialSkill(Util.GetCurrentDefaultSexPosID());
+
+                CharacterHandling.SetGroupZeroActive();
+
+                YotogiHandling.InitYotogiData();
+
+
+                GameMain.Instance.LoadScene(step.Tag);
+            });
+
+        }
 
     }
 }

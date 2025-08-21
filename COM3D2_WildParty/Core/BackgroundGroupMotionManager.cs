@@ -171,6 +171,16 @@ namespace COM3D2.WildParty.Plugin.Core
                 //add semen
                 ProcessSemenForGroup(group);
 
+                //add tally count mark
+                if (StateManager.Instance.IsApplyTallyCounterTexture)
+                {
+                    foreach (var bodyside in group.CurrentOrgasmLabelRecord.TallyCountMaid1)
+                        YotogiHandling.ApplyTallyCounterTexture(group.Maid1, bodyside);
+
+                    foreach (var bodyside in group.CurrentOrgasmLabelRecord.TallyCountMaid2)
+                        YotogiHandling.ApplyTallyCounterTexture(group.Maid2, bodyside);
+                }
+
                 group.CurrentSexState = GetNextSexState(group.CurrentSexState);
             }
         }

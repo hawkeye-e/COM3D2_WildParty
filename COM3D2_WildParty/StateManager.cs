@@ -46,6 +46,7 @@ namespace COM3D2.WildParty.Plugin
 
         //Key: Object ID defined in json
         internal Dictionary<string, GameObject> AddedGameObjectList = new Dictionary<string, GameObject>();
+        internal Dictionary<string, GameObject> AddedCustomGameObjectList = new Dictionary<string, GameObject>();
 
         internal int MaxManUsed = -1;
 
@@ -116,5 +117,8 @@ namespace COM3D2.WildParty.Plugin
         internal bool IsMainGroupMotionScriptFlag = false;
         
         internal bool IsYotogiUseModSemenPattern = false;
+
+        internal bool IsApplyTallyCounterTexture = false;
+        internal Helper.TallyCounterMarker.TextureType TallyCountMarkerType = Helper.TallyCounterMarker.TextureType.Kanji;
     }
 }

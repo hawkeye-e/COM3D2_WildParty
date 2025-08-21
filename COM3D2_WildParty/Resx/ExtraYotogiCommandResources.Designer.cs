@@ -62,6 +62,18 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  
+        ///}
+        ///.
+        /// </summary>
+        internal static string ExtraYotogiComands_ExpExchangeEvent {
+            get {
+                return ResourceManager.GetString("ExtraYotogiComands_ExpExchangeEvent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;ChangePosition&quot;: {
         ///    &quot;CommandCode&quot;: &quot;ChangePosition&quot;,
         ///    &quot;Name&quot;: &quot;体位変更&quot;,
@@ -235,27 +247,13 @@ namespace ModResources {
         ///    &quot;Name&quot;: &quot;体位変更&quot;,
         ///    &quot;Type&quot;: &quot;Common&quot;
         ///  },
-        ///
-        ///  &quot;SeijyouiKuti_ChangeMan1&quot;: {
-        ///    &quot;CommandCode&quot;: &quot;ChainedAction&quot;,
-        ///    &quot;Name&quot;: &quot;別の男と交代する（マンコ）&quot;,
-        ///    &quot;Type&quot;: &quot;Common&quot;,
-        ///    &quot;Constraint&quot;: [
-        ///      {
-        ///        &quot;EventID&quot;: 9900010,
-        ///        &quot;SexPosIDs&quot;: [ 1 ]
-        ///      }
-        ///    ],
-        ///    &quot;Parameters&quot;: [
-        ///      {
-        ///        &quot;Name&quot;: &quot;PrimaryGroup&quot;,
-        ///        &quot;Value&quot;: 0
-        ///      },
-        ///      {
-        ///        &quot;Name&quot;: &quot;NextExtraMan_Group&quot;,
-        ///        &quot;Value&quot;: 0
-        ///      },
-        /// [rest of string was truncated]&quot;;.
+        ///  &quot;ExchangeStrapOn&quot;: {
+        ///    &quot;CommandCode&quot;: &quot;ExchangeStrapOn&quot;,
+        ///    &quot;Name&quot;: &quot;ペニスバンド交換&quot;,
+        ///    &quot;Type&quot;: &quot;Common&quot;
+        ///  }
+        ///}
+        ///.
         /// </summary>
         internal static string ExtraYotogiComands_ManInLilies {
             get {

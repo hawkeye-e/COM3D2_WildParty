@@ -1,11 +1,12 @@
-﻿using System;
+﻿using BepInEx;
+using BepInEx.Logging;
+using HarmonyLib;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using UnityEngine;
-using BepInEx;
-using BepInEx.Logging;
-using HarmonyLib;
 
 namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
 {
@@ -42,6 +43,10 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
         {
             //Check if the file name to load is the mod icon or not. Stop this function from running if it is a mod icon
             Texture2D icon = Patches.LoadModScenarioIcon(f_strFileName);
+
+            if (icon == null)
+                icon = Patches.LoadTallyCounterTexture(f_strFileName);
+
             if (icon != null)
             {
                 __result = icon;

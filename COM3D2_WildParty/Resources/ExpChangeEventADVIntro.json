@@ -1,0 +1,149 @@
+{
+  "eee0001": {
+    "ID": "eee0001",
+    "Type": "BG",
+    "Tag": "",
+    "WaitingType": "Auto",
+    "NextStepID": "eee0001_init_chara"
+  },
+
+  "eee0001_init_chara": {
+    "ID": "eee0001_init_chara",
+    "Type": "CharaInit",
+    "WaitingType": "Auto",
+    "NextStepID": "eee0001_init_hide_men",
+    "CharaInitData": {
+      "IsClubOwnerADVMainCharacter": false,
+      "ManRequired": 35,
+      "ValidManType": [
+        {
+          "Type": [
+            "YoungMan",
+            "MiddleAged"
+          ],
+          "Count": 35,
+          "ValidManConfigKey": "ExpExchangeEventManType"
+        }
+      ]
+    }
+  },
+
+  "eee0001_init_hide_men": {
+    "ID": "eee0001_init_hide_men",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_0001",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": false
+      }
+    ]
+  },
+
+  "eee_intro_0001": {
+    "ID": "eee_intro_0001",
+    "Type": "BGM",
+    "Tag": "BGM013.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_0002"
+  },
+
+  "eee_intro_0002": {
+    "ID": "eee_intro_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_1002",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ある晩、[=Name,Maid,0,CallName]が接待中のお客様がが俺に会いたいと言ってきた。）"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "eee_intro_1002": {
+    "ID": "eee_intro_1002",
+    "Type": "BG",
+    "Tag": "Theater",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_1003a"
+  },
+
+  "eee_intro_1003a": {
+    "ID": "eee_intro_1003a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_1003",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-0.1,0.6,1.9",
+        "TargetPosString": "-0.1,0.4,0",
+        "AroundAngleString": "180,3.5",
+        "Distance": 2
+      }
+    }
+  },
+
+  "eee_intro_1003": {
+    "ID": "eee_intro_1003",
+    "Type": "AddObject",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_1004",
+    "WorldObjectData": [
+      {
+        "IsCustom": true,
+        "Src": "WallAssWall",
+        "ObjectID": "mod_wall_ass_wall",
+        "PosRot": {
+          "PosString": "0.020,-0.320,-0.270",
+          "RotString": "0, 0, 0, -1"
+        },
+        "Scale": -1
+      }
+    ]
+  },
+
+  "eee_intro_1004": {
+    "ID": "eee_intro_1004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_yotogiplay_phase1_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "test"
+    }
+
+  },
+
+
+  "eee_intro_yotogiplay_phase1_closepanel": {
+    "ID": "eee_intro_yotogiplay_phase1_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_start_yotogiplay_phase1"
+  },
+
+
+
+
+  "eee_start_yotogiplay_phase1": {
+    "ID": "eee_start_yotogiplay_phase1",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "ExpExchangeEvent",
+      "Phase": 1,
+      "IsKeepCharacterVisibleAfterYotogi": true,
+      "IsFinalYotogi": false,
+      "IsClubOwnerMainCharacter": false,
+      "IsApplyTallyCounterTexture": true
+    },
+    "NextStepID": "eee_post_yotogi"
+  }
+}

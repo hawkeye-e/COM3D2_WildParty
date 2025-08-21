@@ -115,6 +115,36 @@ namespace ModResources {
         ///        &quot;MaidFromNPC&quot;: true,
         ///        &quot;IsAutomatedGroup&quot;: tru [rest of string was truncated]&quot;;.
         /// </summary>
+        internal static string PartyGroupSetup_ExpExchangeEvent {
+            get {
+                return ResourceManager.GetString("PartyGroupSetup_ExpExchangeEvent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;Phase1_Default&quot;: {
+        ///    &quot;DefaultSexPosID&quot;: 1,
+        ///    &quot;IsRandomAssign&quot;: false,
+        ///    &quot;IsShuffleMaidList&quot;: false,
+        ///    &quot;IsShuffleManList&quot;: false,
+        ///    &quot;ExtraManCount&quot;: 28,
+        ///
+        ///    &quot;GroupSetup&quot;: [
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///        &quot;ManCount&quot;: 3,
+        ///        &quot;MaidCount&quot;: 1,
+        ///        &quot;IsAutomatedGroup&quot;: false,
+        ///        &quot;ClothesSet&quot;: &quot;FullNude&quot;
+        ///      },
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 1,
+        ///        &quot;ManCount&quot;: 3,
+        ///        &quot;MaidCount&quot;: 1,
+        ///        &quot;MaidFromNPC&quot;: true,
+        ///        &quot;IsAutomatedGroup&quot;: tru [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string PartyGroupSetup_HappyGBClub {
             get {
                 return ResourceManager.GetString("PartyGroupSetup_HappyGBClub", resourceCulture);
@@ -239,14 +269,23 @@ namespace ModResources {
         ///    &quot;GroupSetup&quot;: [
         ///      {
         ///        &quot;ArrayPosition&quot;: 0,
-        ///        &quot;ManCount&quot;: 1,
+        ///        &quot;ManCount&quot;: 2,
         ///        &quot;MaidCount&quot;: 1,
         ///        &quot;IsAutomatedGroup&quot;: false
         ///      }
         ///    ]
-        ///  }
+        ///  },
         ///
-        ///}.
+        ///  &quot;Bedside&quot;: {
+        ///    &quot;DefaultSexPosID&quot;: 2,
+        ///    &quot;IsRandomAssign&quot;: false,
+        ///    &quot;IsShuffleMaidList&quot;: false,
+        ///    &quot;IsShuffleManList&quot;: false,
+        ///
+        ///    &quot;GroupSetup&quot;: [
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 0,
+        ///    [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string PartyGroupSetup_ManInLilies {
             get {

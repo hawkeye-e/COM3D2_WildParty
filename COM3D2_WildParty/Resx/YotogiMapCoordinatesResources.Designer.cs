@@ -87,6 +87,35 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;Theatre_Scattered&quot;: {
+        ///    &quot;MapID&quot;: 10,
+        ///    &quot;DisplayName&quot;: &quot;バラバラ&quot;,
+        ///    &quot;IsRandom&quot;: true,
+        ///    &quot;CoordinateList&quot;: [
+        ///      {
+        ///        &quot;MaxGroup&quot;: 20,
+        ///        &quot;GroupCoordinates&quot;: [
+        ///          {
+        ///            &quot;ArrayPosition&quot;: 0,
+        ///            &quot;PosString&quot;: &quot;0.0, 0.0, -1.4&quot;,
+        ///            &quot;RotString&quot;: &quot;0.0, -0.4, 0.0, 0.9&quot;
+        ///          },
+        ///          {
+        ///            &quot;ArrayPosition&quot;: 1,
+        ///            &quot;PosString&quot;: &quot;-1.5, 0.0, -3.5&quot;,
+        ///            &quot;RotString&quot;: &quot;0.0, 0.2, 0.0, 1.0&quot;
+        ///          },
+        ///          {
+        ///        [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MapCoordinates_ExpExchangeEvent {
+            get {
+                return ResourceManager.GetString("MapCoordinates_ExpExchangeEvent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;Phase1_Default&quot;: {
         ///    &quot;DisplayName&quot;: &quot;&quot;,
         ///    &quot;IsRandom&quot;: false,

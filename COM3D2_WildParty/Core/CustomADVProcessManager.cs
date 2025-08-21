@@ -33,7 +33,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 //We dont want to process this over and over again if we are waiting for user input
                 if (StateManager.Instance.ProcessedADVStepID != StateManager.Instance.CurrentADVStepID)
                 {
-                    
+
                     //ADVStep thisStep = StateManager.Instance.dicADVSceneSteps[StateManager.Instance.CurrentADVStepID];
                     ADVStep thisStep = ModUseData.ADVStepData[StateManager.Instance.UndergoingModEventID][StateManager.Instance.CurrentADVStepID];
 
@@ -720,10 +720,10 @@ namespace COM3D2.WildParty.Plugin.Core
                     int targetGroupIndex = step.GroupData[i].ArrayPosition;
                     if (step.GroupData[i].UseRandomPick)
                         targetGroupIndex = StateManager.Instance.RandomPickIndexList[step.GroupData[i].ArrayPosition];
-                    
+
 
                     PartyGroup group = StateManager.Instance.PartyGroupList[targetGroupIndex];
-                    
+
                     //could be a empty group due to not enough character selected
                     if (group.GroupType != Constant.GroupType.Invalid)
                     {
@@ -742,13 +742,13 @@ namespace COM3D2.WildParty.Plugin.Core
                                 false, true, false, false);
 
                         }
-                        
+
                         ProcessADVGroupIndividual(group.Maid1, step.GroupData[i].Maid1);
                         ProcessADVGroupIndividual(group.Maid2, step.GroupData[i].Maid2);
                         ProcessADVGroupIndividual(group.Man1, step.GroupData[i].Man1);
                         ProcessADVGroupIndividual(group.Man2, step.GroupData[i].Man2);
                         ProcessADVGroupIndividual(group.Man3, step.GroupData[i].Man3);
-                        
+
                         if (step.GroupData[i].WaitLoad)
                         {
                             StateManager.Instance.WaitForFullLoadList.Add(group.Maid1);
@@ -761,12 +761,12 @@ namespace COM3D2.WildParty.Plugin.Core
                             if (group.Man3 != null)
                                 StateManager.Instance.WaitForFullLoadList.Add(group.Man3);
                         }
-                        
+
                         if (step.GroupData[i].PosRot != null)
                             group.SetGroupPosition(step.GroupData[i].PosRot.Pos, step.GroupData[i].PosRot.Rot);
 
                         group.SetGroupPosition();
-                        
+
                         if (step.GroupData[i].BlockInputUntilMotionChange && !Config.DebugIgnoreADVForceTimeWait)
                         {
                             StateManager.Instance.WaitForMotionChange = true;
@@ -1210,28 +1210,29 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 foreach (var objData in step.WorldObjectData)
                 {
-                    GameObject addedObject = GameMain.Instance.BgMgr.AddPrefabToBg(objData.Src, objData.ObjectID, "", Vector3.zero, Vector3.zero);
+                    SceneHandling.AddObjectToWorld(objData);
 
-                    if (addedObject != null)
-                    {
-                        addedObject.transform.position = objData.PosRot.Pos;
-                        addedObject.transform.rotation = objData.PosRot.Rot;
-                        addedObject.transform.localScale = new Vector3(objData.Scale, objData.Scale, objData.Scale);
-                        StateManager.Instance.AddedGameObjectList.Add(objData.ObjectID, addedObject);
-                    }
                 }
             }
         }
-
+        
         private static void ProcessADVRemoveObject(ADVKagManager instance, ADVStep step)
         {
             if (step.WorldObjectData != null)
             {
                 foreach (var objData in step.WorldObjectData)
                 {
-                    GameMain.Instance.BgMgr.DelPrefabFromBg(objData.ObjectID);
+                    if (StateManager.Instance.AddedGameObjectList.ContainsKey(objData.ObjectID))
+                    {
+                        GameMain.Instance.BgMgr.DelPrefabFromBg(objData.ObjectID);
+                        StateManager.Instance.AddedGameObjectList.Remove(objData.ObjectID);
+                    }
 
-                    StateManager.Instance.AddedGameObjectList.Remove(objData.ObjectID);
+                    if (StateManager.Instance.AddedCustomGameObjectList.ContainsKey(objData.ObjectID))
+                    {
+                        GameObject.Destroy(StateManager.Instance.AddedCustomGameObjectList[objData.ObjectID]);
+                        StateManager.Instance.AddedCustomGameObjectList.Remove(objData.ObjectID);
+                    }
                 }
             }
         }

@@ -82,7 +82,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 {
                     Core.YotogiHandling.ResetYotogiMiscSetup(group);
                     //The mod cannot register the extra objects for the case of the main group starts with extra object and ends immediately. Explicitly remove all the handitem
-                    for(int i=0; i<group.ManCount; i++)
+                    for (int i = 0; i < group.ManCount; i++)
                         group.GetManAtIndex(i).ResetProp(MPN.handitem, true);
                     for (int i = 0; i < group.MaidCount; i++)
                         group.GetMaidAtIndex(i).ResetProp(MPN.handitem, true);
@@ -155,9 +155,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                             }
                             else
                             {
-                                if(btn.Data.TriggerConditions != null)
+                                if (btn.Data.TriggerConditions != null)
                                 {
-                                    if(btn.Data.TriggerConditions.Texts != null)
+                                    if (btn.Data.TriggerConditions.Texts != null)
                                     {
                                         List<KeyValuePair<string[], Color>> displayConditions = new List<KeyValuePair<string[], Color>>();
                                         foreach (var text in btn.Data.TriggerConditions.Texts)
@@ -807,7 +807,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 case Yotogi.SkillCommandType.止める:
                     PartyGroup.CurrentMainGroupMotionType = ForceSexPosInfo.Type.Waiting;
                     break;
-            }   
+            }
         }
 
         internal static void UpdateYotogiProgressInfoCommandClick(Yotogis.Skill.Data.Command.Data command_data)
@@ -905,6 +905,30 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             Core.YotogiHandling.ChangeManMembersQueueType(StateManager.Instance.PartyGroupList[0]);
         }
+
+        internal static void CheckApplyTallyCounterTexture(Yotogis.Skill.Data.Command.Data command_data)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (StateManager.Instance.IsApplyTallyCounterTexture && command_data.basic.command_type == Yotogi.SkillCommandType.絶頂)
+                {
+                    //this is by clicking command so it has to be main group
+                    PartyGroup mainGroup = StateManager.Instance.PartyGroupList[0];
+
+                    BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemOfGroup(mainGroup);
+                    MotionSpecialLabel spLabel = motionItem.SpecialLabels.Where(x => x.SexPosID == mainGroup.SexPosID && x.Label == mainGroup.CurrentLabelName).FirstOrDefault();
+
+                    foreach (var bodyside in spLabel.TallyCountMaid1)
+                        Core.YotogiHandling.ApplyTallyCounterTexture(mainGroup.Maid1, bodyside);
+                    
+                    foreach (var bodyside in spLabel.TallyCountMaid2)
+                        Core.YotogiHandling.ApplyTallyCounterTexture(mainGroup.Maid2, bodyside);
+                    
+                }
+            }
+        }
+
+
 
         internal static void CheckVoiceloopTrigger(AudioSourceMgr audioMgr, bool isLoop)
         {
@@ -1051,8 +1075,11 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                         {
                             if (!string.IsNullOrEmpty(groupSetupInfo.ClothesSet))
                             {
-                                for (int i = 0; i < groupSetupInfo.MaidCount; i++)
-                                    Core.CharacterHandling.SetFemaleClothing(StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].GetMaidAtIndex(i), groupSetupInfo.ClothesSet);
+                                if (StateManager.Instance.PartyGroupList.Count > groupSetupInfo.ArrayPosition)
+                                {
+                                    for (int i = 0; i < groupSetupInfo.MaidCount; i++)
+                                        Core.CharacterHandling.SetFemaleClothing(StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].GetMaidAtIndex(i), groupSetupInfo.ClothesSet);
+                                }
                             }
                         }
                     }
@@ -1316,7 +1343,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         //Try to load face anime on maid as man characters so that they dont look that dull
         internal static void RandomizeMaidConvertedManFaceAnime()
         {
-            
+
             if (StateManager.Instance.ModEventProgress == Constant.EventProgress.YotogiPlay)
             {
                 PartyGroup group;
@@ -1366,7 +1393,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 }
             }
         }
-        
+
         internal static void PrepareIgnoreResetPropList()
         {
             if (StateManager.Instance.UndergoingModEventID > 0)

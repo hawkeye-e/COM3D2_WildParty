@@ -301,6 +301,10 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioManInLilies.ManInLiliesADV_Gyaru
         };
 
+        private static readonly string[] ScenarioExpExchangeEventResList = {
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADVIntro
+        };
+
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)
         {
             Dictionary<int, Dictionary<string, ADVStep>> result = new Dictionary<int, Dictionary<string, ADVStep>>();
@@ -328,6 +332,8 @@ namespace COM3D2.WildParty.Plugin
                 result.Add(ScenarioIDList.TripleBookingScenarioID, LoadScenarioFromResources(ScenarioTripleBookingResList));
             else if (scenarioID == ScenarioIDList.ManInLiliesScenarioID)
                 result.Add(ScenarioIDList.ManInLiliesScenarioID, LoadScenarioFromResources(ScenarioManInLiliesResList));
+            else if (scenarioID == ScenarioIDList.ExpExchangeEventID)
+                result.Add(ScenarioIDList.ExpExchangeEventID, LoadScenarioFromResources(ScenarioExpExchangeEventResList));
 
             return result;
         }

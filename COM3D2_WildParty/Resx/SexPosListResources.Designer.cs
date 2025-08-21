@@ -62,6 +62,17 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,IsBGGroupUse,Phase,MaidIndex,ManIndex,dummy
+        ///1,ギロチン拘束セックス,sex_kousoku_sex.ks,MF,TRUE,1,750,750,750,750,750,750,750,750,750,750,750,750,750,750,750,750,750,750,19100,20370,750,750,84680,FALSE,TRUE,TRUE,1,0,0,
+        ///2,ギロチン拘束アナルセックス,sex_kousoku_sexA.ks,MF,TRUE,2,760,760,760,760,760,760,760,760,760,760,760,760,760,760,760,760, [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SexPosList_ExpExchangeEvent {
+            get {
+                return ResourceManager.GetString("SexPosList_ExpExchangeEvent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,IsBGGroupUse,Phase,MaidIndex,ManIndex,dummy
         ///1,輪姦4P奉仕,sex_ran4p_housi_c001.ks,MMMF,TRUE,1,75400,75400,75400,59800,75400,75400,59800,59800,59800,59800,59800,59800,59800,75400,59800,59800,75400,75400,,,75400,75400,,TRUE,TRUE,TRUE,1,0,1;2;3,
         ///2,輪姦3P両穴駅弁,sex_OM_haimenekiben_c001.ks,MMF,TRUE,2,75410,75410,75410,59810,75410 [rest of string was truncated]&quot;;.
         /// </summary>
@@ -117,9 +128,8 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to SexPosID,DisplayName,MotionFile,GroupType,IsActive,Order,P10,P20,P30,P40,P50,P60,P70,P80,P90,P100,P110,P120,P130,P140,P150,P160,P170,P180,P190,P200,P210,P220,P230,IsDialogueAllowed,IsChoosable,IsBGGroupUse,Phase,MaidIndex,ManIndex,dummy
-        ///1,【輪姦】乱交3Pセックス正常位,sex_ran3p_seijyoui_kuti.ks,MMF,TRUE,1,,,,,,,,,,,,,,,,,,,,,,,,FALSE,TRUE,TRUE,1,0,0;1,
-        ///2,【輪姦】乱交3Pベッド後背位,sex_ran3p_bed_kouhaii.ks,MMF,TRUE,2,,,,,,,,,,,,,,,,,,,,,,,,FALSE,TRUE,TRUE,1,0,0;1,
-        ///3,【輪姦】乱交3P2穴抱え正常位,sex_ran3p_2ana_kakae_sex.ks,MMF,TRUE,3,,,,,,,,,,, [rest of string was truncated]&quot;;.
+        ///1,乱交3Pセックス正常位,sex_ran3p_seijyoui_kuti.ks,MMF,TRUE,1,57000,57000,57000,57000,57000,57000,57000,42000,42000,42000,42000,42000,42000,57000,57000,42000,57000,57000,73000,73000,57000,57000,103000,FALSE,TRUE,TRUE,1,0,0;1,
+        ///2,乱交3Pベッド後背位,sex_ran3p_bed_kouhaii.ks,MMF,TRUE,2,57020,57 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosList_ManInLilies {
             get {

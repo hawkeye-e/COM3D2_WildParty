@@ -16,6 +16,7 @@ namespace COM3D2.WildParty.Plugin
         public List<CoordinatesInfo> SpecialCoordinates;
         public SpecialSettingInfo SpecialSetting;
         public List<SpecialDefinedPoint> SpecialDefinedPoints;
+        public List<WorldObject> WorldObjects;
 
         internal class CoordinateListInfo
         {

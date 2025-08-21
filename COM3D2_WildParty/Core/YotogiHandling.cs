@@ -1,11 +1,12 @@
-﻿using System;
+﻿using BepInEx.Logging;
+using COM3D2.WildParty.Plugin.Helper;
+using COM3D2.WildParty.Plugin.Trigger;
+using HarmonyLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
-using BepInEx.Logging;
-using HarmonyLib;
-using COM3D2.WildParty.Plugin.Trigger;
 
 namespace COM3D2.WildParty.Plugin.Core
 {
@@ -59,7 +60,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             CharacterHandling.LoadMotionScript(Util.GetPartyGroupIndex(group), false,
                 scriptFileName, label.LabelName,
-                group.Maid1.status.guid, group.Man1?.status.guid, false, false, true, false);
+                group.Maid1.status.guid, group.Man1?.status.guid, false, true, true, false);
             
             group.ReloadAnimation(isSmoothAnimation);
 
@@ -234,6 +235,15 @@ namespace COM3D2.WildParty.Plugin.Core
                     }
                 }
                 PartyGroup.SetSharedExtraManPosition();
+            }
+
+            //Add objects that required by this formation
+            if (coordsGroup.WorldObjects != null)
+            {
+                foreach (var obj in coordsGroup.WorldObjects)
+                {
+                    SceneHandling.AddObjectToWorld(obj);
+                }
             }
         }
 
@@ -1241,6 +1251,14 @@ namespace COM3D2.WildParty.Plugin.Core
             
             group.MovingExtraManIndexList.Remove(originalIndex);
 
+        }
+
+        internal static void ApplyTallyCounterTexture(Maid maid, TallyCounterMarker.BodySide bodySide)
+        {
+            if (maid == null)
+                return;
+            
+            TallyCounterMarker.AddTallyCounterMark(maid, StateManager.Instance.TallyCountMarkerType, bodySide);
         }
     }
 }

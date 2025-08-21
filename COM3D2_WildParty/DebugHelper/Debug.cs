@@ -29,16 +29,32 @@ namespace COM3D2.WildParty.Plugin.DebugHelper
         public static void MapAvailableSkillForMaid(Maid maid)
         {
             Dictionary<string, int> mylist = new Dictionary<string, int>();
-            mylist.Add("【輪姦】乱交3Pセックス正常位", -1);
-            mylist.Add("【輪姦】乱交3P2穴抱え正常位", -1);
-            mylist.Add("【輪姦】乱交3P2穴セックス", -1);
-            mylist.Add("【輪姦】乱交3P腕持ち2穴セックス", -1);
-            mylist.Add("乱交3P腕持ち後背位", -1);
-            mylist.Add("快楽堕ち3P騎乗位", -1);
-            mylist.Add("快楽堕ち3P騎乗位&愛撫", -1);
-            mylist.Add("快楽堕ち3P開脚騎乗位", -1);
-            mylist.Add("ムリヤリハード3P押さえつけセックス", -1);
-            
+            mylist.Add("ギロチン拘束セックス", -1);
+            mylist.Add("ギロチン拘束アナルセックス", -1);
+            mylist.Add("【NTR】拘束台セックス", -1);
+            mylist.Add("【NTR】拘束台アナルセックス", -1);
+            mylist.Add("【NTR】吊るしセックス", -1);
+            mylist.Add("【NTR】吊るしアナルセックス", -1);
+            mylist.Add("【NTR】拘束セックス", -1);
+            mylist.Add("【NTR】拘束アナルセックス", -1);
+            mylist.Add("【NTR】吊るし正常位", -1);
+            mylist.Add("【NTR】吊るしアナル正常位", -1);
+            mylist.Add("【NTR】拘束まんぐり返しセックス", -1);
+            mylist.Add("【NTR】拘束まんぐり返しアナルセックス", -1);
+            mylist.Add("【NTR】拘束立ち後背位セックス", -1);
+            mylist.Add("【NTR】拘束立ち後背位アナルセックス", -1);
+            mylist.Add("【NTR】開脚セックス正常位", -1);
+            mylist.Add("【NTR】開脚アナルセックス正常位", -1);
+            mylist.Add("【NTR】吊るし拘束後背位", -1);
+            mylist.Add("【NTR】吊るし拘束アナル後背位", -1);
+            mylist.Add("【NTR】台上セックス背面立位", -1);
+            mylist.Add("【NTR】台上アナルセックス背面立位", -1);
+            mylist.Add("【NTR】セックスソファーまんぐり返しセックス", -1);
+            mylist.Add("【NTR】セックスソファーまんぐり返しアナルセックス", -1);
+            mylist.Add("【NTR】セックスソファー後背位", -1);
+            mylist.Add("【NTR】セックスソファーアナル後背位", -1);
+
+
 
 
 

@@ -197,6 +197,16 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>ImageResources.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resx\PrefabResources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>PrefabResources.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resx\ScenarioExpExchangeEvent.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>ScenarioExpExchangeEvent.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resx\ScenarioImmoralVillage.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -299,6 +309,16 @@
 	    <CustomToolNamespace>ModResources</CustomToolNamespace>
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>ImageResources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\PrefabResources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>PrefabResources.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ModResources</CustomToolNamespace>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\ScenarioExpExchangeEvent.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>ScenarioExpExchangeEvent.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ScenarioResources</CustomToolNamespace>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resx\ScenarioImmoralVillage.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>

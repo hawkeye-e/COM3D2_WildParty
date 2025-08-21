@@ -383,6 +383,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             Patches.ApplyLinkedGroupMotionUponCommandClicked(command_data);
             //Force Man Change if it is required in the scenario
             Patches.ForceChangeManUponCommandClicked(command_data);
+            //Apply tally counter texture
+            Patches.CheckApplyTallyCounterTexture(command_data);
         }
 
         [HarmonyPrefix]

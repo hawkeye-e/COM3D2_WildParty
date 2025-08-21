@@ -14,6 +14,7 @@ namespace COM3D2.WildParty.Plugin
         internal const string ClothesSetResetCode = "RESET";
         internal const string ClothesSetStrapOnDildo = "StrapOnDildo";
         internal const int OrgasmMotionEjaculationTime = 3;
+        internal const string DefaultShader = "CM3D2/Lighted";
 
         internal const float DefaultTweenMoveTime = 1f;
 
@@ -30,6 +31,7 @@ namespace COM3D2.WildParty.Plugin
             ModResources.ImageResources.LustfulMaidIconFileName,
             ModResources.ImageResources.TripleBookingFileName,
             ModResources.ImageResources.ManInLiliesFileName,
+            ModResources.ImageResources.ExpChangeEventFileName,
         };
 
         internal static readonly string[] DressingClothingTagArray = {
@@ -701,6 +703,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string LustfulMaid = "LustfulMaid";
             internal const string TripleBooking = "TripleBooking";
             internal const string ManInLilies = "ManInLilies";
+            internal const string ExpExchangeEvent = "ExpExchangeEvent";
         }
 
         internal static class TexturePattern

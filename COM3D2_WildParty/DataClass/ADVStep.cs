@@ -266,6 +266,7 @@ namespace COM3D2.WildParty.Plugin
             public bool IsClubOwnerMainCharacter = true;    //True: Man[0] will be the owner; False: Man[0] will be replaced with other man character and owner is accessible from StateManager.Instance.ClubOwner
             public MaidConvertToManSetting MaidConvertToMan = null;
             public bool UseModSemenPattern = false;
+            public bool IsApplyTallyCounterTexture = false;
 
             public class MaidConvertToManSetting
             {
@@ -352,13 +353,7 @@ namespace COM3D2.WildParty.Plugin
             public List<string> RemoveObjects;     //For remove, only need to provide the Target
         }
 
-        internal class WorldObject
-        {
-            public string Src;
-            public string ObjectID;                 //Used for removing the object
-            public PosRot PosRot;
-            public float Scale = 1;
-        }
+
 
         internal class EffectDetail
         {

@@ -105,8 +105,29 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                     ModResources.ImageResources.icon_triple_booking.Save(mStream, ModResources.ImageResources.icon_triple_booking.RawFormat);
                 else if (fileName == ModResources.ImageResources.ManInLiliesFileName)
                     ModResources.ImageResources.icon_man_in_lilies.Save(mStream, ModResources.ImageResources.icon_man_in_lilies.RawFormat);
+                else if (fileName == ModResources.ImageResources.ExpChangeEventFileName)
+                    ModResources.ImageResources.icon_exp_exchange_event.Save(mStream, ModResources.ImageResources.icon_exp_exchange_event.RawFormat);
 
                 Texture2D tex = new Texture2D(64, 64);
+                ImageConversion.LoadImage(tex, mStream.ToArray());
+
+                return tex;
+            }
+
+
+            return null;
+        }
+
+        internal static Texture2D LoadTallyCounterTexture(string fileName)
+        {
+            if (Helper.TallyCounterMarker.TallyCounterTextureNames.ContainsKey(fileName))
+            {
+                System.IO.MemoryStream mStream = new System.IO.MemoryStream();
+
+                var bitmap = Helper.TallyCounterMarker.TallyCounterTextureNames[fileName];
+                bitmap.Save(mStream, bitmap.RawFormat);
+
+                Texture2D tex = new Texture2D(50, 50);
                 ImageConversion.LoadImage(tex, mStream.ToArray());
 
                 return tex;
@@ -140,12 +161,33 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                     ModResources.ImageResources.icon_triple_booking.Save(mStream, ModResources.ImageResources.icon_triple_booking.RawFormat);
                 else if (fileName == ModResources.ImageResources.ManInLiliesFileName)
                     ModResources.ImageResources.icon_man_in_lilies.Save(mStream, ModResources.ImageResources.icon_man_in_lilies.RawFormat);
+                else if (fileName == ModResources.ImageResources.ExpChangeEventFileName)
+                    ModResources.ImageResources.icon_exp_exchange_event.Save(mStream, ModResources.ImageResources.icon_exp_exchange_event.RawFormat);
 
                 Texture2D tex = new Texture2D(64, 64);
                 tex.LoadImage(mStream.ToArray());
 
                 return tex;
             }
+
+            return null;
+        }
+
+        internal static Texture2D LoadTallyCounterTexture(string fileName)
+        {
+            if (Helper.TallyCounterMarker.TallyCounterTextureNames.ContainsKey(fileName))
+            {
+                System.IO.MemoryStream mStream = new System.IO.MemoryStream();
+
+                var bitmap = Helper.TallyCounterMarker.TallyCounterTextureNames[fileName];
+                bitmap.Save(mStream, bitmap.RawFormat);
+
+                Texture2D tex = new Texture2D(50, 50);
+                tex.LoadImage(mStream.ToArray());
+
+                return tex;
+            }
+
 
             return null;
         }

@@ -61,6 +61,15 @@ namespace ModResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to mod_icon_exp_exchange_event.tex.
+        /// </summary>
+        internal static string ExpChangeEventFileName {
+            get {
+                return ResourceManager.GetString("ExpChangeEventFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to mod_icon_happy_gb_club.tex.
         /// </summary>
         internal static string HappyGBClubIconFileName {
@@ -75,6 +84,16 @@ namespace ModResources {
         internal static string HaremKingIconFileName {
             get {
                 return ResourceManager.GetString("HaremKingIconFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_exp_exchange_event {
+            get {
+                object obj = ResourceManager.GetObject("icon_exp_exchange_event", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -200,6 +219,306 @@ namespace ModResources {
         internal static string OrgyPartyIconFileName {
             get {
                 return ResourceManager.GetString("OrgyPartyIconFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_kanji_1_1 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_kanji_1_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_kanji_1_2 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_kanji_1_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_kanji_1_3 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_kanji_1_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_kanji_1_4 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_kanji_1_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_kanji_1_5 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_kanji_1_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_kanji_2_1 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_kanji_2_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_kanji_2_2 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_kanji_2_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_kanji_2_3 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_kanji_2_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_kanji_2_4 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_kanji_2_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_kanji_2_5 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_kanji_2_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_kanji_3_1 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_kanji_3_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_kanji_3_2 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_kanji_3_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_kanji_3_3 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_kanji_3_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_kanji_3_4 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_kanji_3_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_kanji_3_5 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_kanji_3_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_western_1_1 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_western_1_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_western_1_2 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_western_1_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_western_1_3 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_western_1_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_western_1_4 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_western_1_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_western_1_5 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_western_1_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_western_2_1 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_western_2_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_western_2_2 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_western_2_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_western_2_3 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_western_2_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_western_2_4 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_western_2_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_western_2_5 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_western_2_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_western_3_1 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_western_3_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_western_3_2 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_western_3_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_western_3_3 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_western_3_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_western_3_4 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_western_3_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tally_counter_western_3_5 {
+            get {
+                object obj = ResourceManager.GetObject("tally_counter_western_3_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
