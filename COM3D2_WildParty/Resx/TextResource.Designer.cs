@@ -357,6 +357,7 @@ namespace ModResources {
         ///  {
         ///    &quot;ScenarioID&quot;: 9900001,
         ///    &quot;CategoryID&quot;: 99000,
+        ///    &quot;DisplayOrder&quot;: 1,
         ///    &quot;ADVEntryStep&quot;: &quot;org0001&quot;,
         ///    &quot;YotogiTypeEnumString&quot;: &quot;NewSex&quot;,
         ///    &quot;CondSalonGrade&quot;: 0,
@@ -368,7 +369,7 @@ namespace ModResources {
         ///    &quot;ModeEnumString&quot;: &quot;COM3D&quot;,
         ///    &quot;TypeEnumString&quot;: &quot;Yotogi&quot;,
         ///    &quot;ContractEnumString&quot;: [ &quot;Exclusive&quot;, &quot;Free&quot; ],
-        ///    &quot;SexExperienceEnumString [rest of string was truncated]&quot;;.
+        ///     [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ModScenario {
             get {
@@ -534,6 +535,35 @@ namespace ModResources {
         ///    &quot;NextStates&quot;: [ &quot;OrgasmEnd&quot; ]
         ///  },
         ///  &quot;OrgasmEnd&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;OrgasmWait&quot; ]
+        ///  },
+        ///  &quot;OrgasmWait&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;Insert&quot; ]
+        ///  },
+        ///  &quot;Insert&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;InsertEnd&quot; ]
+        ///  },
+        ///  &quot;InsertEnd&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;NormalPlay&quot; ]
+        ///  }
+        ///}
+        ///.
+        /// </summary>
+        internal static string SexStateDescription_FixedPosition {
+            get {
+                return ResourceManager.GetString("SexStateDescription_FixedPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;NormalPlay&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;Orgasm&quot; ]
+        ///  },
+        ///  &quot;Orgasm&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;OrgasmEnd&quot; ]
+        ///  },
+        ///  &quot;OrgasmEnd&quot;: {
         ///    &quot;NextStates&quot;: [ &quot;ChangeManFromQueue&quot; ]
         ///  },
         ///  &quot;ChangeManFromQueue&quot;: {
@@ -551,6 +581,35 @@ namespace ModResources {
         internal static string SexStateDescription_GBQueuedType {
             get {
                 return ResourceManager.GetString("SexStateDescription_GBQueuedType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;NormalPlay&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;Orgasm&quot; ]
+        ///  },
+        ///  &quot;Orgasm&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;OrgasmEnd&quot; ]
+        ///  },
+        ///  &quot;OrgasmEnd&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;ChangeManFromQueueWithBackground&quot; ]
+        ///  },
+        ///  &quot;ChangeManFromQueueWithBackground&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;Insert&quot; ]
+        ///  },
+        ///  &quot;Insert&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;InsertEnd&quot; ]
+        ///  },
+        ///  &quot;InsertEnd&quot;: {
+        ///    &quot;NextStates&quot;: [ &quot;NormalPlay&quot; ]
+        ///  }
+        ///}
+        ///.
+        /// </summary>
+        internal static string SexStateDescription_GBQueuedWithBackgroundType {
+            get {
+                return ResourceManager.GetString("SexStateDescription_GBQueuedWithBackgroundType", resourceCulture);
             }
         }
         

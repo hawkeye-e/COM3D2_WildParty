@@ -70,6 +70,12 @@ namespace COM3D2.WildParty.Plugin
         //Key: index
         public static Dictionary<int, Maid> SharedExtraManList = new Dictionary<int, Maid>();
         public static List<MapCoorindates.CoordinatesInfo> SharedExtraManSetupInfo = new List<MapCoorindates.CoordinatesInfo>();
+
+        //A list of man that do not directly involve in any yotogi right now, but can be move to extra man list depends on situation
+        //Key: index
+        public static Dictionary<int, Maid> BackgroundManList = new Dictionary<int, Maid>();
+        public static List<MapCoorindates.CoordinatesInfo> BackgroundManSetupInfo = new List<MapCoorindates.CoordinatesInfo>();
+
         public static ForceSexPosInfo.Type CurrentMainGroupMotionType = ForceSexPosInfo.Type.Waiting;
 
         public int CurrentExtraManIndex = 0;
@@ -175,6 +181,7 @@ namespace COM3D2.WildParty.Plugin
             SetCharacterPosition(Man3, 2);
 
             SetSharedExtraManPosition();
+            SetBackgroundManPosition();
 
             //Do not enforce the extra man position if they are moving
             if (MovingExtraManIndexList.Count == 0)
@@ -221,6 +228,37 @@ namespace COM3D2.WildParty.Plugin
                 if (extraManList.ContainsKey(setupInfo.ArrayPosition))
                 {
                     Maid man = extraManList[setupInfo.ArrayPosition];
+
+                    if (man != null)
+                    {
+                        man.Visible = setupInfo.IsManVisible;
+                        if (setupInfo.IsManVisible)
+                            man.transform.localScale = Vector3.one;
+                        else
+                            man.transform.localScale = Vector3.zero;
+                        man.transform.localPosition = Vector3.zero;
+                        man.transform.position = setupInfo.Pos;
+                        man.transform.rotation = setupInfo.Rot;
+                        man.body0.SetBoneHitHeightY(setupInfo.Pos.y);
+                    }
+                }
+            }
+        }
+
+        public static void SetBackgroundManPosition()
+        {
+            SetBackgroundManPosition(BackgroundManList, BackgroundManSetupInfo);
+        }
+
+        private static void SetBackgroundManPosition(Dictionary<int, Maid> bgManList, List<MapCoorindates.CoordinatesInfo> infoList)
+        {
+            if (infoList == null || bgManList == null)
+                return;
+            foreach (var setupInfo in infoList)
+            {
+                if (bgManList.ContainsKey(setupInfo.ArrayPosition))
+                {
+                    Maid man = bgManList[setupInfo.ArrayPosition];
 
                     if (man != null)
                     {

@@ -227,9 +227,9 @@ namespace COM3D2.WildParty.Plugin
             
             InitAllVoiceDataFromCSV();
             MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_AnotherGBDesire);
-
+            
             PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_AnotherGBDesire);
-
+            
             ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_HappyGBClub);
         }
 
@@ -403,8 +403,12 @@ namespace COM3D2.WildParty.Plugin
                 SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_GBType);
             else if (ruleName == Constant.SexStateRuleDefinition.GangBangQueued)
                 SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_GBQueuedType);
+            else if (ruleName == Constant.SexStateRuleDefinition.GangBangQueuedWithBackground)
+                SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_GBQueuedWithBackgroundType);
             else if (ruleName == Constant.SexStateRuleDefinition.Lesbian)
                 SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_LesbianType);
+            else if (ruleName == Constant.SexStateRuleDefinition.FixedPosition)
+                SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_FixedPosition);
             else
                 SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription);
         }

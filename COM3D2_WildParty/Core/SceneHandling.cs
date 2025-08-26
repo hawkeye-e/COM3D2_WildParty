@@ -14,6 +14,8 @@ namespace COM3D2.WildParty.Plugin.Core
             GameObject addedObject = null;
             if (objData.IsCustom)
             {
+                if (StateManager.Instance.AddedCustomGameObjectList.ContainsKey(objData.ObjectID))
+                    return;
                 addedObject = Helper.CustomObjectLoader.GetCustomObject(objData.Src);
             }
             else

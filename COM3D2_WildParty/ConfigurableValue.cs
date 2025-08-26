@@ -13,6 +13,7 @@ namespace COM3D2.WildParty.Plugin
         internal const int GangBangReQueueMinLengthDiffLimit = 2;       //When a man is trying to requeue after orgasm, if the minimum length of all queues is X, the man is allowed to join a queue if its length <= X + (this value)
         internal const int ReplacedOrgasmWaitBufferTime = 2;
         internal const float AnimationBlendTime = 0.5f;
+        internal const int YotogiMassMotionRandomTimeDeviation = 300;         //in ms
 
         internal static class YotogiSimulation
         {

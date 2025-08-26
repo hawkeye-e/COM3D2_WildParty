@@ -52,7 +52,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
 
                 newScenario.condMaidClass = new List<int>();
                 newScenario.condYotogiClass = new List<int>();
-                newScenario.condPropensity = new List<int>();           //性癖, need to be careful on this flag as the 3 cheap price classes dont have full access of all propensity type
+                newScenario.condPropensity = scenario.PropensityRequired;           //性癖, need to be careful on this flag as the 3 cheap price classes dont have full access of all propensity type
 
                 newScenario.condSeikeiken = scenario.SexExperience;
 

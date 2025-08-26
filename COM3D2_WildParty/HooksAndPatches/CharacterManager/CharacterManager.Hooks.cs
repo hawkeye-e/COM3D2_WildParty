@@ -105,5 +105,13 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.CharacterManager
         }
 #endif
 #endif
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(TBody), nameof(TBody.CrossFade), new Type[] { typeof(string), typeof(AFileSystemBase), typeof(bool), typeof(bool), typeof(bool), typeof(float), typeof(float) })]
+        private static void CrossFade(ref float fade)
+        {
+            if (StateManager.Instance.ForceAnimationNoFade)
+                fade = 0f;
+        }
     }
 }

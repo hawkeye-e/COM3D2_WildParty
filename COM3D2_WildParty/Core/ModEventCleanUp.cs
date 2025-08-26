@@ -161,6 +161,8 @@ namespace COM3D2.WildParty.Plugin.Core
 
             Util.ClearGenericCollection(PartyGroup.SharedExtraManList);
             Util.ClearGenericCollection(PartyGroup.SharedExtraManSetupInfo);
+            Util.ClearGenericCollection(PartyGroup.BackgroundManList);
+            Util.ClearGenericCollection(PartyGroup.BackgroundManSetupInfo);
 
             Util.ClearGenericCollection(StateManager.Instance.TimeEndTriggerList);
             Util.ClearGenericCollection(StateManager.Instance.ADVTimeEndTriggerList);
@@ -170,7 +172,8 @@ namespace COM3D2.WildParty.Plugin.Core
             Util.ClearGenericCollection(StateManager.Instance.BackupMaidClothingList);
             Util.ClearGenericCollection(StateManager.Instance.IgnoreResetPropMaidList);
             Util.ClearGenericCollection(StateManager.Instance.PairedManForMaidList);
-            Util.ClearGenericCollection(StateManager.Instance.ConvertedMaidFacialUpdateControlList);            
+            Util.ClearGenericCollection(StateManager.Instance.ConvertedMaidFacialUpdateControlList);
+            Util.ClearGenericCollection(StateManager.Instance.WaitForYotogiProcessList);
 
             StateManager.Instance.RequireCheckModdedSceneFlag = false;
             StateManager.Instance.WaitForCharactersFullLoadFlag = false;
@@ -182,6 +185,10 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.IsYotogiUseModSemenPattern = false;
             StateManager.Instance.WaitForMotionChange = false;
             StateManager.Instance.IsApplyTallyCounterTexture = false;
+
+            StateManager.Instance.RequiresYotogiButtonPostPorcess = false;
+            StateManager.Instance.ForceAnimationNoFade = false;
+            StateManager.Instance.IsEyeMaskEnabled = true;
 
             StateManager.Instance.YotogiManager = null;
             StateManager.Instance.YotogiCommandFactory = null;

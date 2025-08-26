@@ -33,7 +33,8 @@ namespace COM3D2.WildParty.Plugin
         public class ConstraintSetting
         {
             public int EventID;
-            public List<int> SexPosIDs;   
+            public List<int> SexPosIDs;
+            public List<string> FormationIDs;
         }
 
         public class OrgasmSettingInfo

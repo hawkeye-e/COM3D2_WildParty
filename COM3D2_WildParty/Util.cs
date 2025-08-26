@@ -645,6 +645,16 @@ namespace COM3D2.WildParty.Plugin
             return ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
         }
 
+        internal static YotogiMiscSetup GetYotogiMiscSetup(int sexPosID)
+        {
+            if (ModUseData.YotogiMiscSetupList.ContainsKey(StateManager.Instance.UndergoingModEventID))
+            {
+                YotogiMiscSetup miscSetup = ModUseData.YotogiMiscSetupList[StateManager.Instance.UndergoingModEventID].Where(x => x.SexPosIDs.Contains(sexPosID)).FirstOrDefault();
+                return miscSetup;
+            }
+            return null;
+        }
+
         internal static void ParseRawOffsetString(string offsetString, out Vector3 pos, out Vector3 rot)
         {
             string[] split = offsetString.Split('|');

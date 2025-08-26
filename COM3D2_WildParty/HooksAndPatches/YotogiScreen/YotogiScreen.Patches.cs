@@ -210,8 +210,17 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                             var constraintInfo = commandInfo.Constraint.Where(x => x.EventID == StateManager.Instance.UndergoingModEventID).FirstOrDefault();
                             if (constraintInfo != null)
                             {
-                                if (!constraintInfo.SexPosIDs.Contains(StateManager.Instance.PartyGroupList[0].SexPosID))
-                                    continue;
+                                if (constraintInfo.SexPosIDs != null)
+                                {
+                                    if (!constraintInfo.SexPosIDs.Contains(StateManager.Instance.PartyGroupList[0].SexPosID))
+                                        continue;
+                                }
+
+                                if (constraintInfo.FormationIDs != null)
+                                {
+                                    if (!constraintInfo.FormationIDs.Contains(PartyGroup.CurrentFormation))
+                                        continue;
+                                }
                             }
 
                         }
@@ -881,8 +890,10 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                         Core.YotogiHandling.BlockAllYotogiCommands();
 
                         EventDelegate toBeExec;
-                        if (StateManager.Instance.PartyGroupList[0].ExtraManList.Count > 0)
-                            toBeExec = new EventDelegate(() => ForceChangeManQueueTypeTriggerExecution());
+                        if (StateManager.Instance.PartyGroupList[0].ExtraManList.Count > 0 && PartyGroup.BackgroundManList.Count > 0)
+                            toBeExec = new EventDelegate(ForceChangeManQueueTypeWithBackgroundTriggerExecution);
+                        else if (StateManager.Instance.PartyGroupList[0].ExtraManList.Count > 0)
+                            toBeExec = new EventDelegate(ForceChangeManQueueTypeTriggerExecution);
                         else
                             toBeExec = new EventDelegate(() => ForceChangeManShareListTypeTriggerExecution(yotogiSetup.IsMainManOwner));
 
@@ -906,6 +917,11 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             Core.YotogiHandling.ChangeManMembersQueueType(StateManager.Instance.PartyGroupList[0]);
         }
 
+        private static void ForceChangeManQueueTypeWithBackgroundTriggerExecution()
+        {
+            Core.YotogiHandling.ChangeManMembersQueueTypeWithBackground(StateManager.Instance.PartyGroupList[0]);
+        }
+
         internal static void CheckApplyTallyCounterTexture(Yotogis.Skill.Data.Command.Data command_data)
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
@@ -920,10 +936,10 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
                     foreach (var bodyside in spLabel.TallyCountMaid1)
                         Core.YotogiHandling.ApplyTallyCounterTexture(mainGroup.Maid1, bodyside);
-                    
+
                     foreach (var bodyside in spLabel.TallyCountMaid2)
                         Core.YotogiHandling.ApplyTallyCounterTexture(mainGroup.Maid2, bodyside);
-                    
+
                 }
             }
         }
@@ -1081,6 +1097,19 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                                         Core.CharacterHandling.SetFemaleClothing(StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].GetMaidAtIndex(i), groupSetupInfo.ClothesSet);
                                 }
                             }
+
+                            //check the eye mask setting
+
+                            if (groupSetupInfo.IsApplyEyeMask)
+                            {
+                                for (int i = 0; i < groupSetupInfo.MaidCount; i++)
+                                {
+                                    //Maid maid = currentGroup.GetMaidAtIndex(mCount);
+                                    Core.CharacterHandling.ApplyEyeMaskToMaid(StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].GetMaidAtIndex(i), StateManager.Instance.IsEyeMaskEnabled);
+                                }
+
+                            }
+
                         }
                     }
                 }

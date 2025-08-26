@@ -63,6 +63,9 @@ namespace COM3D2.WildParty.Plugin
         internal List<Maid> WaitForFullLoadList = new List<Maid>();                //flag for waiting the scene to load the required characters etc.
         internal List<Maid> IgnoreResetPropMaidList = new List<Maid>();
 
+        internal List<Maid> WaitForYotogiProcessList = new List<Maid>();                //List of maid that requires processing during a button click. Removed the element if process finish
+        internal bool RequiresYotogiButtonPostPorcess = false;                          //a flag that used to check post process status in case of multiple process during custom yotogi command
+
         internal UILabel CommandLabel = null;
         internal YotogiManager YotogiManager = null;
         internal YotogiCommandFactory YotogiCommandFactory = null;
@@ -120,5 +123,8 @@ namespace COM3D2.WildParty.Plugin
 
         internal bool IsApplyTallyCounterTexture = false;
         internal Helper.TallyCounterMarker.TextureType TallyCountMarkerType = Helper.TallyCounterMarker.TextureType.Kanji;
+
+        internal bool ForceAnimationNoFade = false;
+        internal bool IsEyeMaskEnabled = true;                  //Can be altered by user during yotogi game play
     }
 }

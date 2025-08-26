@@ -13,6 +13,7 @@ namespace COM3D2.WildParty.Plugin
         internal const int YotogiExcitementLevelStep = 100;
         internal const string ClothesSetResetCode = "RESET";
         internal const string ClothesSetStrapOnDildo = "StrapOnDildo";
+        internal const string ClothesSetEyeMask = "EyeMask";
         internal const int OrgasmMotionEjaculationTime = 3;
         internal const string DefaultShader = "CM3D2/Lighted";
 
@@ -366,8 +367,9 @@ namespace COM3D2.WildParty.Plugin
 
             internal const string SexPosRequired = "[=SexPosRequired]";
             internal const string CurrentSexPosCount = "[=CurrentSexPosCount]";
-            
 
+            internal const string FullTallyMarkCount = "[=FullTallyMarkCount]";
+            internal const string CurrentTallyMarkCount = "[=CurrentTallyMarkCount]";
 
 
             /*Format: [=Name,{Source},{Index},{CallMethod}]
@@ -620,6 +622,10 @@ namespace COM3D2.WildParty.Plugin
 
             internal const string ExchangeStrapOn = "ExchangeStrapOn";
 
+            internal const string MoveQueueForward = "MoveQueueForward";
+            internal const string ChangeFormationSexStateDescChange = "ChangeFormationSexStateDescChange";
+            internal const string ChangeEyeMask = "ChangeEyeMask";
+
             internal const string ChainedAction = "ChainedAction";
         }
 
@@ -688,8 +694,10 @@ namespace COM3D2.WildParty.Plugin
         internal static class SexStateRuleDefinition
         {
             internal const string Common = "Common";
+            internal const string FixedPosition = "FixedPosition";
             internal const string GangBangNormal = "GangBangNormal";
             internal const string GangBangQueued = "GangBangQueued";
+            internal const string GangBangQueuedWithBackground = "GangBangQueuedWithBackground";
             internal const string Lesbian = "Lesbian";
         }
 

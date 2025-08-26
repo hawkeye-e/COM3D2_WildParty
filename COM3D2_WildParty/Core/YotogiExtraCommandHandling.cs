@@ -58,6 +58,13 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 case Constant.ModYotogiCommandButtonCode.ExchangeStrapOn:
                     return new EventDelegate(ExchangeStrapOnYuri);
+
+                case Constant.ModYotogiCommandButtonCode.MoveQueueForward:
+                    return new EventDelegate(MoveQueueForward);
+                case Constant.ModYotogiCommandButtonCode.ChangeFormationSexStateDescChange:
+                    return new EventDelegate(ShowFormationOption_SexStateDescChange);
+                case Constant.ModYotogiCommandButtonCode.ChangeEyeMask:
+                    return new EventDelegate(ChangeEyeMask);
                 default:
                     return null;
             }
@@ -112,7 +119,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 //Load the position list based on the info of maid zero
                 int personality = StateManager.Instance.PartyGroupList[0].Maid1.status.personal.id;
                 string groupType = StateManager.Instance.PartyGroupList[0].GroupType;
-                var skillList = ModUseData.ValidSkillList[personality][groupType];
+                var skillList = ModUseData.ValidSkillList[personality][groupType].Where(x => x.Phase == StateManager.Instance.YotogiPhase);
 
                 List<GameObject> buttons = new List<GameObject>();
 
@@ -248,6 +255,47 @@ namespace COM3D2.WildParty.Plugin.Core
                     if (IsShowButtonPerFormation(fid, StateManager.Instance.PartyGroupList[0].Maid1))
                     {
                         var cmd = CloneCommandButton(coord.DisplayName, new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeFormationWithNewGroup_Callback(fid)));
+                        var btn = cmd.GetComponent<UIButton>();
+                        if (fid == PartyGroup.CurrentFormation)
+                        {
+                            btn.isEnabled = false;
+                            btn.SetState(UIButtonColor.State.Disabled, true);
+                        }
+
+                        buttons.Add(cmd);
+                    }
+                }
+                StateManager.Instance.ExtraCommandWindow.ShowContent(buttons, CustomGameObject.YotogiExtraCommandWindow.Mode.FormationList);
+
+                StateManager.Instance.ExtraCommandWindow.SetVisible(true);
+            }
+        }
+
+        public static void ShowFormationOption_SexStateDescChange()
+        {
+            StateManager.Instance.ExtraCommandWindow.ResetScrollPosition();
+
+            if (CheckRequireExtraCommandWindowPopulate(CustomGameObject.YotogiExtraCommandWindow.Mode.FormationList))
+            {
+                //Load the formation list based on the current stage
+                Scenario scenario = ModUseData.ScenarioList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID).First();
+                Scenario.YotogiSetupInfo yotogiSetup = scenario.YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First();
+                List<string> formationOption;
+                if (yotogiSetup.AllowMap != null)
+                    formationOption = yotogiSetup.AllowMap.Where(x => x.MapID == YotogiStageSelectManager.SelectedStage.stageData.id).First().FormationOption;
+                else
+                    formationOption = yotogiSetup.DefaultMap.FormationOption;
+
+
+                List<GameObject> buttons = new List<GameObject>();
+
+                foreach (var fid in formationOption)
+                {
+                    var coord = ModUseData.MapCoordinateList[fid];
+
+                    if (IsShowButtonPerFormation(fid, StateManager.Instance.PartyGroupList[0].Maid1))
+                    {
+                        var cmd = CloneCommandButton(coord.DisplayName, new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeFormationWithSexStateDescriptionChange(fid)));
                         var btn = cmd.GetComponent<UIButton>();
                         if (fid == PartyGroup.CurrentFormation)
                         {
@@ -497,7 +545,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 //stop all maid motion
                 foreach (PartyGroup group in StateManager.Instance.PartyGroupList)
                     group.StopNextReviewTime();
-                
+
                 CharacterHandling.StopCurrentAnimation();
                 GameMain.Instance.ScriptMgr.StopMotionScript();
 
@@ -575,14 +623,14 @@ namespace COM3D2.WildParty.Plugin.Core
 
 
                 //set the default skill
-                
+
                 CharacterHandling.AssignPartyGroupingBySetupInfo(PartyGroup.CurrentFormation);
 
                 //Update the variable reference again
                 group = StateManager.Instance.PartyGroupList[0];
 
                 YotogiHandling.SetupYotogiSceneInitialSkill(Util.GetCurrentDefaultSexPosID());
-                
+
                 CharacterHandling.SetGroupZeroActive();
 
                 //need to update the main group
@@ -621,6 +669,296 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.WaitingAnimationTrigger = trigger;
         }
 
+
+        private static void MoveQueueForward()
+        {
+            /* this function is designed for exp exchange event case */
+
+            // Init the yotogi process list, to add the characters that will be affected in this command button
+            StateManager.Instance.RequiresYotogiButtonPostPorcess = true;
+
+            StateManager.Instance.WaitForYotogiProcessList = new List<Maid>();
+            foreach (PartyGroup group in StateManager.Instance.PartyGroupList)
+            {
+                StateManager.Instance.WaitForYotogiProcessList.Add(group.Maid1);
+                StateManager.Instance.WaitForYotogiProcessList.Add(group.Man1);
+            }
+            foreach (var kvp in PartyGroup.SharedExtraManList)
+                StateManager.Instance.WaitForYotogiProcessList.Add(kvp.Value);
+
+            //Get the group man movement setup by id
+            string groupManMovementSetupID = "";
+            string queueMovementSetupID = "";
+            YotogiMiscSetup miscSetup = Util.GetYotogiMiscSetup(StateManager.Instance.PartyGroupList[0].SexPosID);
+            if (miscSetup != null)
+            {
+                groupManMovementSetupID = miscSetup.GroupManMovementSetupID;
+                queueMovementSetupID = miscSetup.QueueMovementSetupID;
+            }
+
+            PartyGroupSetup.MovingQueueSetupData groupManMovementSetup = ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].GroupManMovementSetup.Where(x => x.ID == groupManMovementSetupID).First();
+            PartyGroupSetup.MovingQueueSetupData queueMovementSetup = ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].MovingQueueSetup.Where(x => x.ID == queueMovementSetupID).First();
+            MapCoorindates.CoordinateListInfo coordinateListInfo = ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].CoordinateList.Where(x => x.MaxGroup >= StateManager.Instance.PartyGroupList.Count).OrderBy(x => x.MaxGroup).First();
+
+            Core.YotogiHandling.BlockAllYotogiCommands();
+
+            //set to stand up motion for all group
+            foreach (var group in StateManager.Instance.PartyGroupList)
+            {
+                YotogiHandling.ChangeBackgroundGroupMotionWithSpecificLabel(group, SexState.StateType.Waiting);
+            }
+
+
+            foreach (var group in StateManager.Instance.PartyGroupList)
+            {
+                group.DetachAllIK();
+                group.StopNextReviewTime();
+                group.CurrentSexState = SexState.StateType.NormalPlay;
+
+                //need to remove the group offset value
+                group.Man1.transform.position = group.Man1.transform.position - group.GroupOffsetVector - group.GroupOffsetVector2 - group.ManOffsetList[0];
+
+                string animFile = groupManMovementSetup.StandingAnimationFile;
+                Vector3 offset = groupManMovementSetup.StandingMotionOffset;
+                group.Man1.transform.position += offset;
+
+                CharacterHandling.PlayAnimation(group.Man1, animFile, animFile, isBlend: true);
+            }
+
+            int lastQueueOrderNumber = coordinateListInfo.GroupCoordinates.Max(x => x.QueueOrder);
+
+            //Move the man of group N to group N+1, N < group.count
+            for (int i = 0; i < StateManager.Instance.PartyGroupList.Count; i++)
+            {
+                //find the queue order of this group
+
+                int queueOrder = coordinateListInfo.GroupCoordinates.Where(x => x.ArrayPosition == i).First().QueueOrder;
+                //WildParty.Log.LogInfo("pt 0 " + queueOrder);
+                if (queueOrder == lastQueueOrderNumber || queueOrder < 0)
+                    continue;
+
+                int nextQueueGroupIndex = coordinateListInfo.GroupCoordinates.Where(x => x.QueueOrder == queueOrder + 1).First().ArrayPosition;
+
+                int counter = i;
+                PartyGroup group = StateManager.Instance.PartyGroupList[counter];
+                float distance = Vector3.Distance(StateManager.Instance.PartyGroupList[counter].Maid1.transform.position, StateManager.Instance.PartyGroupList[nextQueueGroupIndex].Maid1.transform.position);
+                PartyGroup targetGroup = StateManager.Instance.PartyGroupList[nextQueueGroupIndex];
+                Maid movingMan = StateManager.Instance.PartyGroupList[counter].Man1;
+
+
+                StateManager.Instance.PartyGroupList[counter].Man1 = null;
+
+
+                Trigger.TimeEndTrigger mainGroupTrigger = new Trigger.TimeEndTrigger();
+                mainGroupTrigger.DueTime = DateTime.Now.AddMilliseconds(RNG.Random.Next(ConfigurableValue.YotogiMassMotionRandomTimeDeviation));
+
+                mainGroupTrigger.ToBeExecuted = new EventDelegate(() =>
+                {
+                    MoveManTrainOfAsses(groupManMovementSetup, movingMan, distance,
+                        new EventDelegate(() => ChangeManMembersSidewayType_ManMoveFinish(targetGroup, movingMan))
+                        );
+                });
+                StateManager.Instance.TimeEndTriggerList.Add(mainGroupTrigger);
+            }
+
+
+            //Move the man of group[group.count] to walk out, and move to background queue
+            int lastGroupIndex = coordinateListInfo.GroupCoordinates.OrderBy(x => x.QueueOrder).Last().ArrayPosition;
+
+            PartyGroup lastGroup = StateManager.Instance.PartyGroupList[lastGroupIndex];
+
+            MapCoorindates.SpecialDefinedPoint exitPoint = ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].SpecialDefinedPoints.Where(x => x.Name == "GroupManFinalExitPoint").FirstOrDefault();
+            if (exitPoint != null)
+            {
+                Maid target = lastGroup.Man1;
+                float lastGroupDistance = Vector3.Distance(target.transform.position, exitPoint.Location.Pos);
+
+                StateManager.Instance.PartyGroupList[lastGroupIndex].Man1 = null;
+
+                Trigger.TimeEndTrigger lastGroupTrigger = new Trigger.TimeEndTrigger();
+                lastGroupTrigger.DueTime = DateTime.Now.AddMilliseconds(RNG.Random.Next(ConfigurableValue.YotogiMassMotionRandomTimeDeviation));
+                lastGroupTrigger.ToBeExecuted = new EventDelegate(() =>
+                {
+                    MoveManTrainOfAsses(groupManMovementSetup, target, lastGroupDistance,
+                        new EventDelegate(() => ChangeManMembersSidewayType_LastGroup(target))
+                        );
+                });
+                StateManager.Instance.TimeEndTriggerList.Add(lastGroupTrigger);
+            }
+
+
+            //move the first man in extra man queue to group 0
+            Maid firstManInQueue = PartyGroup.SharedExtraManList[0];
+            if (firstManInQueue != null)
+            {
+                PartyGroup.SharedExtraManList[0] = null;
+
+                MapCoorindates.SpecialDefinedPoint entryPoint = ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].SpecialDefinedPoints.Where(x => x.Name == "QueueFirstManEntryPoint").FirstOrDefault();
+                float firstManDistance = Vector3.Distance(firstManInQueue.transform.position, entryPoint.Location.Pos);
+                int firstGroupIndex = coordinateListInfo.GroupCoordinates.OrderBy(x => x.QueueOrder).First().ArrayPosition;
+                PartyGroup targetGroup = StateManager.Instance.PartyGroupList[firstGroupIndex];
+
+                targetGroup.SetManAtIndex(0, firstManInQueue);
+
+                Trigger.TimeEndTrigger firstExtraManTrigger = new Trigger.TimeEndTrigger();
+                firstExtraManTrigger.DueTime = DateTime.Now.AddMilliseconds(RNG.Random.Next(ConfigurableValue.YotogiMassMotionRandomTimeDeviation));
+                firstExtraManTrigger.ToBeExecuted = new EventDelegate(() =>
+                {
+                    MoveManTrainOfAsses(queueMovementSetup, firstManInQueue, firstManDistance,
+                    new EventDelegate(() => ChangeManMembersSidewayType_ManMoveFinish(targetGroup, firstManInQueue))
+                    );
+                });
+                StateManager.Instance.TimeEndTriggerList.Add(firstExtraManTrigger);
+
+            }
+
+            //Move the extra man queue forward
+            for (int i = 1; i < PartyGroup.SharedExtraManList.Count; i++)
+            {
+                int counter = i;
+
+                Maid manInQueue = PartyGroup.SharedExtraManList[counter];
+                if (manInQueue != null)
+                {
+                    PartyGroup.SharedExtraManList[counter] = null;
+
+                    float manInQueueDistance = Vector3.Distance(manInQueue.transform.position, PartyGroup.SharedExtraManSetupInfo[counter - 1].Pos);
+                    int targetIndex = counter - 1;
+
+
+                    Trigger.TimeEndTrigger extraManTrigger = new Trigger.TimeEndTrigger();
+                    extraManTrigger.DueTime = DateTime.Now.AddMilliseconds(RNG.Random.Next(ConfigurableValue.YotogiMassMotionRandomTimeDeviation));
+                    extraManTrigger.ToBeExecuted = new EventDelegate(() =>
+                    {
+                        MoveManTrainOfAsses(queueMovementSetup, manInQueue, manInQueueDistance,
+                        new EventDelegate(() => UpdateExtraManQueue_TrainOfAsses(manInQueue, targetIndex))
+                        );
+                    });
+                    StateManager.Instance.TimeEndTriggerList.Add(extraManTrigger);
+                }
+
+            }
+        }
+
+        private static void MoveManTrainOfAsses(PartyGroupSetup.MovingQueueSetupData groupManMovementSetup, Maid manToMove, float distance, EventDelegate postMoveAction)
+        {
+            HardCodeMotion.ManWalkController.StandingMotionType standingMotionType = new HardCodeMotion.ManWalkController.StandingMotionType();
+            standingMotionType.AnimationFileName = groupManMovementSetup.StandingAnimationFile;
+            standingMotionType.StandingMotionOffset = groupManMovementSetup.StandingMotionOffset;
+            standingMotionType.WalkingMotionOffset = groupManMovementSetup.WalkingMotionOffset;
+            standingMotionType.RotationOffset = groupManMovementSetup.RotationOffset;
+
+            HardCodeMotion.ManWalkController.MoveForward(manToMove, distance, standingMotionType, postMoveAction);
+        }
+
+        private static void ChangeManMembersSidewayType_ManMoveFinish(PartyGroup group, Maid man)
+        {
+            bool isSmoothMovement = true;
+            YotogiMiscSetup miscSetup = Util.GetYotogiMiscSetup(group.SexPosID);
+            if (miscSetup != null)
+                isSmoothMovement = miscSetup.IsSmoothGroupManMovement;
+
+            group.DetachAllIK();
+            group.SetManAtIndex(0, man);
+
+            BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
+
+            int groupIndex = 0;
+            for (int i = 0; i < StateManager.Instance.PartyGroupList.Count; i++)
+                if (StateManager.Instance.PartyGroupList[i] == group)
+                {
+                    groupIndex = i;
+                    break;
+                }
+
+            //reload motion for the group
+            MotionSpecialLabel waitingLabel = motionItem.SpecialLabels.Where(x => x.Type == MotionSpecialLabel.LabelType.Waiting).First();
+
+            //Change skill will reset the current process of the yotogi...
+            StateManager.Instance.ForceAnimationNoFade = !isSmoothMovement;
+            YotogiHandling.SetGroupWaitingMotion(group, motionItem);
+            StateManager.Instance.ForceAnimationNoFade = false;
+
+            //reassign position for the group
+            MapCoorindates.CoordinateListInfo coordinateListInfo = ModUseData.MapCoordinateList[PartyGroup.CurrentFormation].CoordinateList.Where(x => x.MaxGroup >= StateManager.Instance.PartyGroupList.Count).OrderBy(x => x.MaxGroup).First();
+            MapCoorindates.CoordinatesInfo coordinatesInfo = coordinateListInfo.GroupCoordinates.Where(x => x.ArrayPosition == groupIndex).First();
+            group.SetGroupPosition(coordinatesInfo.Pos, coordinatesInfo.Rot);
+
+            group.CurrentSexState = SexState.StateType.Insert;
+            group.GenerateNextReviewTime(0);
+
+            StateManager.Instance.WaitForYotogiProcessList.Remove(group.Maid1);
+            StateManager.Instance.WaitForYotogiProcessList.Remove(group.Man1);
+            MoveForwardQueueFinalize_TrainOfAsses();
+        }
+
+        private static void UpdateExtraManQueue_TrainOfAsses(Maid man, int position)
+        {
+            PartyGroup.SharedExtraManList[position] = man;
+
+            MapCoorindates.CoordinatesInfo coords = PartyGroup.SharedExtraManSetupInfo[position];
+
+            man.transform.position = coords.Pos;
+            man.transform.rotation = coords.Rot;
+            CharacterHandling.ApplyMotionInfoToCharacter(man, coords.Motion);
+
+            StateManager.Instance.WaitForYotogiProcessList.Remove(man);
+            MoveForwardQueueFinalize_TrainOfAsses();
+        }
+
+        private static void ChangeManMembersSidewayType_LastGroup(Maid man)
+        {
+            if (man == null)
+                return;
+
+            YotogiHandling.AddManToBackgroundList(man);
+
+            StateManager.Instance.WaitForYotogiProcessList.Remove(man);
+            MoveForwardQueueFinalize_TrainOfAsses();
+        }
+
+
+        private static void MoveForwardQueueFinalize_TrainOfAsses()
+        {
+            if (StateManager.Instance.WaitForYotogiProcessList.Count > 0 || !StateManager.Instance.RequiresYotogiButtonPostPorcess)
+                return;
+
+            StateManager.Instance.RequiresYotogiButtonPostPorcess = false;
+
+            YotogiHandling.PickBackgroundManToQueue(PartyGroup.SharedExtraManList, PartyGroup.SharedExtraManSetupInfo);
+
+            //Refresh the command list
+            PartyGroup group = StateManager.Instance.PartyGroupList[0];
+            BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemBySexPosID(group.SexPosID);
+
+            StateManager.Instance.YotogiManager.play_mgr.UpdateCommand();
+
+            StateManager.Instance.SpoofActivateMaidObjectFlag = true;
+            GameMain.Instance.CharacterMgr.SetActiveMan(group.Man1, motionItem.ManIndex[0]);
+            StateManager.Instance.SpoofActivateMaidObjectFlag = false;
+
+        }
+
+        private static void ChangeEyeMask()
+        {
+            StateManager.Instance.IsEyeMaskEnabled = !StateManager.Instance.IsEyeMaskEnabled;
+
+            //Apply the changes
+            var groupSetupInfoList = ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].GroupSetup;
+
+            if (groupSetupInfoList != null)
+            {
+                foreach (var groupSetupInfo in groupSetupInfoList)
+                {
+                    for (int i = 0; i < groupSetupInfo.MaidCount; i++)
+                    {
+                        CharacterHandling.ApplyEyeMaskToMaid(StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].GetMaidAtIndex(i), StateManager.Instance.IsEyeMaskEnabled);
+                    }
+                }
+            }
+        }
+
+
         internal static void ProcessChainedAction(string buttonID)
         {
             string chainedActionCode = ModUseData.ExtraYotogiCommandDataList[buttonID].ChainedActionCode;
@@ -639,11 +977,11 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
 
-            if(ModUseData.ExtraYotogiCommandDataList[buttonID].Parameters != null)
+            if (ModUseData.ExtraYotogiCommandDataList[buttonID].Parameters != null)
             {
-                foreach(ExtraYotogiCommandData.CommandParameters paramSetting in ModUseData.ExtraYotogiCommandDataList[buttonID].Parameters)
+                foreach (ExtraYotogiCommandData.CommandParameters paramSetting in ModUseData.ExtraYotogiCommandDataList[buttonID].Parameters)
                 {
-                    if(paramSetting.Name == ExtraYotogiCommandData.SpecialParameterNames.PrimaryGroup)
+                    if (paramSetting.Name == ExtraYotogiCommandData.SpecialParameterNames.PrimaryGroup)
                     {
                         parameters.Add(paramSetting.Name, StateManager.Instance.PartyGroupList[Convert.ToInt32(paramSetting.Value)]);
                     }
@@ -660,7 +998,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
             }
 
-            
+
 
             return parameters;
         }
@@ -726,6 +1064,8 @@ namespace COM3D2.WildParty.Plugin.Core
                     isAllFulfilled = isAllFulfilled && (progressInfo.MaidOrgasmCount >= fetishInfo.Conditions.MaidOrgasmCount);
                     isAllFulfilled = isAllFulfilled && (progressInfo.SexPositionOrgasmInfo.Count >= fetishInfo.Conditions.PositionOrgasmCount);
 
+                    isAllFulfilled = isAllFulfilled && (Helper.TallyCounterMarker.GetFullTallyMarkCount(maid) >= fetishInfo.Conditions.FullTallyMarkCount);
+
                     if (fetishInfo.Conditions.SexPosRequired != null)
                     {
                         int matchCount = fetishInfo.Conditions.SexPosRequired.Intersect(progressInfo.SexPositionOrgasmInfo.Keys).Count();
@@ -745,24 +1085,24 @@ namespace COM3D2.WildParty.Plugin.Core
                     {
                         bool isAllFulfilled = true;
                         YotogiProgressInfo progressInfo = StateManager.Instance.YotogiProgressInfoList[maid.status.guid];
-                        
+
                         if (commandBtn.Data.TriggerConditions.CurrentCommandIDs != null)
                         {
                             bool isOK = false;
                             if (commandBtn.Data.TriggerConditions.CurrentCommandIDs.Contains(progressInfo.CurrentCommandID))
                                 isOK = true;
-                            
+
                             isAllFulfilled = isAllFulfilled && isOK;
                         }
-                        
+
                         if (commandBtn.Data.TriggerConditions.RequireCommandClicks != null)
                         {
                             bool isOK = true;
-                            
+
                             foreach (var clickRequirement in commandBtn.Data.TriggerConditions.RequireCommandClicks)
                             {
                                 bool hasMatch = false;
-                                foreach(var commandID in clickRequirement.CommandIDs)
+                                foreach (var commandID in clickRequirement.CommandIDs)
                                 {
                                     if (progressInfo.CommandClicked.ContainsKey(commandID))
                                         if (progressInfo.CommandClicked[commandID] >= clickRequirement.Count)
@@ -893,7 +1233,9 @@ namespace COM3D2.WildParty.Plugin.Core
                            .Replace(Constant.JsonReplaceTextLabels.PositionOrgasmCount, fetishInfo.Conditions.PositionOrgasmCount.ToString())
                            .Replace(Constant.JsonReplaceTextLabels.CurrentPositionOrgasmCount, progressInfo.SexPositionOrgasmInfo.Count.ToString())
                            .Replace(Constant.JsonReplaceTextLabels.SexPosRequired, sexPosRequired.ToString())
-                           .Replace(Constant.JsonReplaceTextLabels.CurrentSexPosCount, currentSexPosCount.ToString());
+                           .Replace(Constant.JsonReplaceTextLabels.FullTallyMarkCount, fetishInfo.Conditions.FullTallyMarkCount.ToString())
+                           .Replace(Constant.JsonReplaceTextLabels.CurrentTallyMarkCount, Helper.TallyCounterMarker.GetFullTallyMarkCount(maid).ToString())
+                           ;
         }
 
         internal static bool IsThisConditionFulfilled(string field, Fetish fetishInfo)

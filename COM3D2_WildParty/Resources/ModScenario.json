@@ -607,16 +607,17 @@
       "嫁である",
       "育成中のメイドではない",
       "両穴経験済みである",
-      "性癖「変態の素質」と「ドＭの素質」を取得している",
+      "性癖「ドＭの素質」を取得している",
       "「エンパイアクラブ大姦射祭」を実行したことがある"
     ],
     "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 210, 220 ],
     "MasterRequireFlag": [ "Mod_エンパイアクラブ大姦射祭_Executed" ],
+    "PropensityRequired": [ 110 ],
 
     "IsGroupEvent": true,
     "MaidCount": {
       "Max": 5,
-      "Min": 3
+      "Min": 5
     },
 
     "YotogiSetup": [
@@ -626,16 +627,44 @@
           "DayMapID": "Theater",
           "NightMapID": "Theater",
           "BGM": "BGM022.ogg",
-          "FormationOption": [ "Theatre_ButtockWall" ],
-          "DefaultFormation": "Theatre_ButtockWall"
+          "FormationOption": [ "Theatre_ButtockWall_Single", "Theatre_ButtockWall_Multiple" ],
+          "DefaultFormation": "Theatre_ButtockWall_Single"
         },
 
         "ExtraYotogiCommands": [
-
+          "ChangeMaidExpExchangeEvent",
+          "ChangeFormationExpExchangeEvent",
+          "MoveQueueForward",
+          "Kousoku_To_Anal",
+          "Kousoku_To_Vagina",
+          "FetishMeatToilet"
         ],
         "IsMainManOwner": false,
 
-        "SexStateRule": "Common"
+        "SexStateRule": "FixedPosition"
+      },
+
+      {
+        "Phase": 2,
+        "DefaultMap": {
+          "DayMapID": "Theater",
+          "NightMapID": "Theater",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Theatre_Restraint_Single", "Theatre_Restraint_Multiple" ],
+          "DefaultFormation": "Theatre_Restraint_Single"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeMaidExpExchangeEvent",
+          "ChangePositionAll",
+          "ChangeEyeMask",
+          "ChangeFormationExpExchangeEvent",
+          "MoveQueueForward",
+          "FetishMeatToilet"
+        ],
+        "IsMainManOwner": false,
+
+        "SexStateRule": "FixedPosition"
       }
     ],
 

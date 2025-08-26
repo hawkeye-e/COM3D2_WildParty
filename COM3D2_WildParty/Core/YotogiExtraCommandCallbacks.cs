@@ -175,6 +175,51 @@ namespace COM3D2.WildParty.Plugin.Core
 
         }
 
+        internal static void ChangeFormationWithSexStateDescriptionChange(string formationID)
+        {
+            PartyGroup.CurrentFormation = formationID;
+            GameMain.Instance.MainCamera.FadeOut(ConfigurableValue.CameraFadeTime, f_dg: delegate
+            {
+                foreach (var group in StateManager.Instance.PartyGroupList)
+                {
+                    group.StopNextReviewTime();
+                    group.CurrentSexState = SexState.StateType.NormalPlay;
+                }
+
+                int sexPosID = StateManager.Instance.PartyGroupList[0].SexPosID;
+                
+                StopAllQueueMovement();
+
+                if (!string.IsNullOrEmpty(ModUseData.PartyGroupSetupList[formationID].SexStateRule))
+                    ModUseData.LoadSexStateRule(ModUseData.PartyGroupSetupList[formationID].SexStateRule);
+                if (ModUseData.PartyGroupSetupList[formationID].SpecialRules != null)
+                {
+                    if (ModUseData.PartyGroupSetupList[formationID].SpecialRules.ChangeManWhenOrgasmRule != null) {
+                        Scenario.YotogiSetupInfo yotogiSetup = Util.GetUndergoingScenario().YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First();
+                        yotogiSetup.ForceChangeManWhenOrgasm = ModUseData.PartyGroupSetupList[formationID].SpecialRules.ChangeManWhenOrgasmRule.ForceChangeManWhenOrgasm;
+                    }
+                }
+                
+                foreach (var group in StateManager.Instance.PartyGroupList)
+                    group.DetachAllIK();
+
+                CharacterHandling.AssignPartyGrouping(formationID, true);
+                
+                YotogiHandling.SetupYotogiSceneInitialSkill(sexPosID);
+                CharacterHandling.SetGroupZeroActive();
+                
+                YotogiHandling.UpdateParameterView(StateManager.Instance.PartyGroupList[0].Maid1);
+                
+                PlayableSkill.SkillItem skill = Util.GetGroupSkillIDBySexPosID(StateManager.Instance.PartyGroupList[0], sexPosID);
+                YotogiHandling.ChangeMainGroupSkill(skill.YotogiSkillID);
+                
+                YotogiHandling.SetGroupToScene();
+                
+                StateManager.Instance.ExtraCommandWindow.SetVisible(false);
+                
+                GameMain.Instance.MainCamera.FadeIn(ConfigurableValue.CameraFadeTime); 
+            });
+        }
 
         internal static void HaremKing_SwapMainGroupMaid(int originalMaidIndex, int workingMaidIndex, bool isMovingRight)
         {
@@ -425,26 +470,31 @@ namespace COM3D2.WildParty.Plugin.Core
 
             foreach (var group in StateManager.Instance.PartyGroupList)
             {
-
+                
                 group.MovingExtraManIndexList.Clear();
                 group.MovingGroupMemberList.Clear();
-
+                
                 //May have converted the bone of the man, recover all the man characters to play safe
                 foreach (var kvp in group.ExtraManList)
                     Helper.BoneNameConverter.RecoverConvertedManStructure(kvp.Value);
                 Helper.BoneNameConverter.RecoverConvertedManStructure(group.Man1);
-
+                
 
                 //Move queue forward to make sure position 0 is used
                 if (group.ExtraManList.Count > 0)
                 {
+                    bool noProcess = true;
                     while (group.ExtraManList[0] == null)
                     {
                         for (int i = 1; i < group.ExtraManList.Keys.Max(x => x); i++)
                         {
+                            noProcess = false;
                             group.ExtraManList[i - 1] = group.ExtraManList[i];
                             group.ExtraManList[i] = null;
                         }
+
+                        if (noProcess)
+                            break;
                     }
                 }
             }

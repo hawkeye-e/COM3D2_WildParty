@@ -25,11 +25,14 @@ namespace COM3D2.WildParty.Plugin
             public List<CoordinatesInfo> GroupCoordinates;
             public List<CoordinatesInfo> IndividualCoordinates;
             public List<ExtraManCoordinatesInfo> ExtraManInfo;
+
+            public List<ExtraManCoordinatesInfo> BackgroundManInfo;         //A list of man that do not directly involve in any yotogi right now, but can be move to extra man list depends on situation
         }
 
         internal class CoordinatesInfo : PosRot
         {
             public int ArrayPosition = -1;
+            public int QueueOrder = -1;                     //For a single queue involving all group used. The array position will be updated due to "change maid" and this value will remain unchanged.
             public string Type ="";
             public MotionInfo Motion;
             public List<EyeSightSetting> EyeSight;

@@ -31,6 +31,7 @@ namespace COM3D2.WildParty.Plugin
         public List<string> MaidExcludeFlag;
         public List<string> MasterRequireFlag;
         public List<string> MasterExcludeFlag;
+        public List<int> PropensityRequired;
 
         
         public List<YotogiSetupInfo> YotogiSetup;           //A list to allow multiple yotogi scene in a single scenario
@@ -111,6 +112,7 @@ namespace COM3D2.WildParty.Plugin
             if (MaidExcludeFlag == null) MaidExcludeFlag = new List<string>();
             if (MasterRequireFlag == null) MasterRequireFlag = new List<string>();
             if (MasterExcludeFlag == null) MasterExcludeFlag = new List<string>();
+            if (PropensityRequired == null) PropensityRequired = new List<int>();
 
             Contract = new List<MaidStatus.Contract>();
             SexExperience = new List<MaidStatus.Seikeiken>();

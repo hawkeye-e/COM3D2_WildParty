@@ -112,12 +112,26 @@
     "ID": "eee_intro_1004",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "eee_intro_yotogiplay_phase1_closepanel",
+    "NextStepID": "eee_intro_1005",
     "TalkData": {
       "SpecificSpeaker": "Owner",
       "Text": "test"
     }
 
+  },
+
+  "eee_intro_1005": {
+    "ID": "eee_intro_1005",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_yotogiplay_phase1_closepanel",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": true
+      }
+    ]
   },
 
 
@@ -140,7 +154,7 @@
       "YotogiCode": "ExpExchangeEvent",
       "Phase": 1,
       "IsKeepCharacterVisibleAfterYotogi": true,
-      "IsFinalYotogi": false,
+      "IsFinalYotogi": true,
       "IsClubOwnerMainCharacter": false,
       "IsApplyTallyCounterTexture": true
     },

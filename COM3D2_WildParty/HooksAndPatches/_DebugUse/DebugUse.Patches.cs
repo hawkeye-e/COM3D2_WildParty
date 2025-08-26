@@ -211,7 +211,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                         //Core.CharacterHandling.AttachObjectToCharacter(maid, addobj.AddObjects);
 
                         //maid.AddPrefab("Particle/pToiki", "夜伽_吐息", "Bip01 Head", new Vector3(0.04f, 0.08f, 0.00f), new Vector3(-90.00f, 90.00f, 0.00f));
-                        //Core.CharacterHandling.PlayAnimation(maid, "wasikoki_3_f.anm", "wasikoki_3_f.anm");
+                        Core.CharacterHandling.PlayAnimation(maid, "kousoku_sex_1_f.anm", "kousoku_sex_1_f.anm");
                     }
                     if (i == 1)
                     {
@@ -312,11 +312,11 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                     if (i == 0)
                     {
                         //Core.CharacterHandling.LoadMotionScript(0, false, "h_man_001.ks", "*男座り＿腕組", "", maid.status.guid);
-                        //Core.CharacterHandling.PlayAnimation(maid, "wasikoki_3_m.anm", "wasikoki_3_m.anm");
+                        //Core.CharacterHandling.PlayAnimation(maid, "kousoku_sex_1_m.anm", "kousoku_sex_1_m.anm");
                     }
-                    if(i > 0)
+                    if (i > 0)
                     {
-                        if(maid != null)
+                        if (maid != null)
                         {
                             Core.CharacterHandling.PlayAnimation(maid, "asikoki2_taiki_m.anm", "asikoki2_taiki_m.anm");
                         }
@@ -505,8 +505,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                             WildParty.Log.LogInfo("\"MotionType\": \"RandomRest\"");
                             WildParty.Log.LogInfo("\"FaceAnime\": \"RandomRest\",");
                             WildParty.Log.LogInfo("\"PosRot\": {");
-                            WildParty.Log.LogInfo("\"PosString\": \"" + maid.transform.position + "\",");
-                            WildParty.Log.LogInfo("\"RotString\": \"" + maid.transform.rotation + "\"");
+                            WildParty.Log.LogInfo("\"PosString\": \"" + PrintFormattedVector(maid.transform.position, 2) + "\",");
+                            WildParty.Log.LogInfo("\"RotString\": \"" + PrintFormattedQuaternion(maid.transform.rotation, 3) + "\"");
                             //WildParty.Log.LogInfo("\"PosX\": " + maid.transform.localPosition.x.ToString("0.0") + ",");
                             //WildParty.Log.LogInfo("\"PosY\": " + maid.transform.localPosition.y.ToString("0.0") + ",");
                             //WildParty.Log.LogInfo("\"PosZ\": " + maid.transform.localPosition.z.ToString("0.0") + ",");
@@ -535,8 +535,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                             WildParty.Log.LogInfo("\"WaitLoad\": true,");
                             WildParty.Log.LogInfo("\"MotionType\": \"RandomRest\"");
                             WildParty.Log.LogInfo("\"PosRot\": {");
-                            WildParty.Log.LogInfo("\"PosString\": \"" + maid.transform.position + "\",");
-                            WildParty.Log.LogInfo("\"RotString\": \"" + maid.transform.rotation + "\"");
+                            WildParty.Log.LogInfo("\"PosString\": \"" + PrintFormattedVector(maid.transform.position, 2) + "\",");
+                            WildParty.Log.LogInfo("\"RotString\": \"" + PrintFormattedQuaternion(maid.transform.rotation, 3) + "\"");
                             //WildParty.Log.LogInfo("\"PosX\": " + maid.transform.localPosition.x.ToString("0.0") + ",");
                             //WildParty.Log.LogInfo("\"PosY\": " + maid.transform.localPosition.y.ToString("0.0") + ",");
                             //WildParty.Log.LogInfo("\"PosZ\": " + maid.transform.localPosition.z.ToString("0.0") + ",");
@@ -549,6 +549,30 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DebugUse
                     }
                 }
             }
+        }
+
+        private static string PrintFormattedVector(Vector3 v, int dp)
+        {
+            string format = "0";
+            if (dp > 0)
+            {
+                format = format + ".";
+                for(int i = 0; i < dp; i++)
+                    format = format + "0";
+            }
+            return v.x.ToString(format) + ", " + v.y.ToString(format) + ", " + v.z.ToString(format);
+        }
+
+        private static string PrintFormattedQuaternion(Quaternion v, int dp)
+        {
+            string format = "0";
+            if (dp > 0)
+            {
+                format = format + ".";
+                for (int i = 0; i < dp; i++)
+                    format = format + "0";
+            }
+            return v.x.ToString(format) + ", " + v.y.ToString(format) + ", " + v.z.ToString(format) + ", " + v.w.ToString(format);
         }
 
         internal static void CaptureMotionFileNames(string file_name, string label_name)

@@ -15,6 +15,10 @@ namespace COM3D2.WildParty.Plugin
         public List<ExtraObjectOnCharacterInfo> ExtraObjectsOnCharacter;
         public string RequiredFormationID = "";                             //if this value is supplied, for the main group to change to this formation id
         public YuriMMFSetupInfo YuriMMFSetup = null;
+        public string GroupManMovementSetupID = "";                         //use the ID assigned in PartyGroupSetup json
+        public string QueueMovementSetupID = "";
+        public bool IsSmoothGroupManMovement = true;
+        public bool IsSmoothQueueMovement = true;
 
         internal class ExtraObjectInfo
         {

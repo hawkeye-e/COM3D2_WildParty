@@ -1,10 +1,36 @@
 {
-  "Theatre_ButtockWall": {
+  "Theatre_ButtockWall_Single": {
     "DefaultSexPosID": 1,
+    "IsSyncBackgroundSexPos": true,
+    "SexStateRule": "FixedPosition",
+    "SpecialRules": {
+      "ChangeManWhenOrgasmRule": { "ForceChangeManWhenOrgasm": false }
+    },
     "IsRandomAssign": false,
     "IsShuffleMaidList": false,
     "IsShuffleManList": false,
-    "ExtraManCount": 30,
+    "ExtraManCount": 9,
+    "BackgroundManCount": 21,
+    "BackgroundManSlotCount": 40,
+
+    "MovingQueueSetup": [
+      {
+        "StandingAnimationFile": "siriname_taiki_m.anm",
+        "StandingMotionOffsetString": "0, 0, 0",
+        "WalkingMotionOffsetString": "0, 0.1, 0",
+        "RotationOffsetString": "0, 180, 0",
+        "MaidMotionOffsetString": "0,0,0"
+      }
+    ],
+    "GroupManMovementSetup": [
+      {
+        "StandingAnimationFile": "siriname_taiki_m.anm",
+        "StandingMotionOffsetString": "0, 0, 0.3",
+        "WalkingMotionOffsetString": "0, 0.1, 0",
+        "RotationOffsetString": "0, -90, 0",
+        "MaidMotionOffsetString": "0,0,0"
+      }
+    ],
 
     "GroupSetup": [
       {
@@ -39,6 +65,252 @@
         "ArrayPosition": 4,
         "ManCount": 1,
         "MaidCount": 1,
+        "IsAutomatedGroup": true,
+        "ClothesSet": "FullNude"
+      }
+    ]
+  },
+
+  "Theatre_ButtockWall_Multiple": {
+    "DefaultSexPosID": 1,
+    "IsSyncBackgroundSexPos": true,
+    "SexStateRule": "GangBangQueuedWithBackground",
+    "SpecialRules": {
+      "ChangeManWhenOrgasmRule": { "ForceChangeManWhenOrgasm": true }
+    },
+    "IsRandomAssign": false,
+    "IsShuffleMaidList": false,
+    "IsShuffleManList": false,
+    "BackgroundManCount": 20,
+    "BackgroundManSlotCount": 40,
+
+    "MovingQueueSetup": [
+      {
+        "StandingAnimationFile": "siriname_taiki_m.anm",
+        "IsExitingManMotionBlend": false,
+        "ExitingManOffsetString": "0, 0, 0.3",
+        "StandingMotionOffsetString": "0, 0, 0",
+        "WalkingMotionOffsetString": "0, 0.1, 0",
+        "RotationOffsetString": "0, 180, 0",
+        "MaidMotionOffsetString": "0,0,0"
+      }
+    ],
+
+    "DefaultStandingAnimationFile": "turusi_sex_taiki_m.anm",
+
+    "GroupSetup": [
+      {
+        "ArrayPosition": 0,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 2,
+        "IsAutomatedGroup": false,
+        "ClothesSet": "FullNude"
+      },
+      {
+        "ArrayPosition": 1,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 2,
+        "IsAutomatedGroup": true,
+        "ClothesSet": "FullNude"
+      },
+      {
+        "ArrayPosition": 2,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 2,
+        "IsAutomatedGroup": true,
+        "ClothesSet": "FullNude"
+      },
+      {
+        "ArrayPosition": 3,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 2,
+        "IsAutomatedGroup": true,
+        "ClothesSet": "FullNude"
+      },
+      {
+        "ArrayPosition": 4,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 2,
+        "IsAutomatedGroup": true,
+        "ClothesSet": "FullNude"
+      }
+    ]
+  },
+
+  "Theatre_Restraint_Single": {
+    "DefaultSexPosID": 3,
+    "IsSyncBackgroundSexPos": true,
+    "SexStateRule": "FixedPosition",
+    "SpecialRules": {
+      "ChangeManWhenOrgasmRule": { "ForceChangeManWhenOrgasm": false }
+    },
+    "IsRandomAssign": false,
+    "IsShuffleMaidList": false,
+    "IsShuffleManList": false,
+    "ExtraManCount": 9,
+    "BackgroundManCount": 21,
+    "BackgroundManSlotCount": 40,
+
+    "MovingQueueSetup": [
+      {
+        "ID": "",
+        "StandingAnimationFile": "turusi_sex_taiki_m.anm",
+        "StandingMotionOffsetString": "0, 0, 0",
+        "WalkingMotionOffsetString": "0, 0.1, 0",
+        "RotationOffsetString": "0, 180, 0",
+        "MaidMotionOffsetString": "0,0,0"
+      },
+      {
+        "ID": "Inverted",
+        "StandingAnimationFile": "turusi_sex_taiki_m.anm",
+        "StandingMotionOffsetString": "0, 0, 0",
+        "WalkingMotionOffsetString": "0, 0.1, 0",
+        "RotationOffsetString": "0, 180, 0",
+        "MaidMotionOffsetString": "0,0,0"
+      }
+    ],
+    "GroupManMovementSetup": [
+      {
+        "ID": "",
+        "StandingAnimationFile": "siriname_taiki_m.anm",
+        "StandingMotionOffsetString": "0, 0, 0.3",
+        "WalkingMotionOffsetString": "0, 0.1, 0",
+        "RotationOffsetString": "0, -90, 0",
+        "MaidMotionOffsetString": "0,0,0"
+      },
+      {
+        "ID": "Inverted",
+        "StandingAnimationFile": "turusi_sex_taiki_m.anm",
+        "StandingMotionOffsetString": "0, 0, 0.3",
+        "WalkingMotionOffsetString": "0, 0.1, 0",
+        "RotationOffsetString": "0, 90, 0",
+        "MaidMotionOffsetString": "0,0,0"
+      }
+    ],
+
+    "GroupSetup": [
+      {
+        "ArrayPosition": 0,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "IsAutomatedGroup": false,
+        "ClothesSet": "FullNude",
+        "IsApplyEyeMask": true
+      },
+      {
+        "ArrayPosition": 1,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "IsAutomatedGroup": true,
+        "ClothesSet": "FullNude",
+        "IsApplyEyeMask": true
+      },
+      {
+        "ArrayPosition": 2,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "IsAutomatedGroup": true,
+        "ClothesSet": "FullNude",
+        "IsApplyEyeMask": true
+      },
+      {
+        "ArrayPosition": 3,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "IsAutomatedGroup": true,
+        "ClothesSet": "FullNude",
+        "IsApplyEyeMask": true
+      },
+      {
+        "ArrayPosition": 4,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "IsAutomatedGroup": true,
+        "ClothesSet": "FullNude",
+        "IsApplyEyeMask": true
+      }
+    ]
+  },
+
+
+  "Theatre_Restraint_Multiple": {
+    "DefaultSexPosID": 3,
+    "IsSyncBackgroundSexPos": true,
+    "SexStateRule": "GangBangQueuedWithBackground",
+    "SpecialRules": {
+      "ChangeManWhenOrgasmRule": { "ForceChangeManWhenOrgasm": true }
+    },
+    "IsRandomAssign": false,
+    "IsShuffleMaidList": false,
+    "IsShuffleManList": false,
+    "BackgroundManCount": 20,
+    "BackgroundManSlotCount": 40,
+
+    "MovingQueueSetup": [
+      {
+        "StandingAnimationFile": "siriname_taiki_m.anm",
+        "ExitingManOffsetString": "0, 0, 0.3",
+        "StandingMotionOffsetString": "0, 0, 0",
+        "WalkingMotionOffsetString": "0, 0.1, 0",
+        "RotationOffsetString": "0, 180, 0",
+        "MaidMotionOffsetString": "0,0,0.3"
+      },
+      {
+        "ID": "Inverted",
+        "StandingAnimationFile": "turusi_sex_taiki_m.anm",
+        "ExitingManOffsetString": "0, 0, 0.3",
+        "StandingMotionOffsetString": "0, 0, 0",
+        "WalkingMotionOffsetString": "0, 0.1, 0",
+        "RotationOffsetString": "0, 180, 0",
+        "MaidMotionOffsetString": "0,0,0.3"
+      }
+    ],
+
+    "DefaultStandingAnimationFile": "turusi_sex_taiki_m.anm",
+
+    "GroupSetup": [
+      {
+        "ArrayPosition": 0,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 2,
+        "IsAutomatedGroup": false,
+        "ClothesSet": "FullNude"
+      },
+      {
+        "ArrayPosition": 1,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 2,
+        "IsAutomatedGroup": true,
+        "ClothesSet": "FullNude"
+      },
+      {
+        "ArrayPosition": 2,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 2,
+        "IsAutomatedGroup": true,
+        "ClothesSet": "FullNude"
+      },
+      {
+        "ArrayPosition": 3,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 2,
+        "IsAutomatedGroup": true,
+        "ClothesSet": "FullNude"
+      },
+      {
+        "ArrayPosition": 4,
+        "ManCount": 1,
+        "MaidCount": 1,
+        "ExtraManCount": 2,
         "IsAutomatedGroup": true,
         "ClothesSet": "FullNude"
       }

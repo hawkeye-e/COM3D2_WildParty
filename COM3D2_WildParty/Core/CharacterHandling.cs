@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using System.Reflection;
 
 namespace COM3D2.WildParty.Plugin.Core
 {
@@ -63,7 +64,7 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static Maid InitModNPCFemale(string NPCID)
         {
             ModNPCFemale npcData = ModUseData.ModNPCFemaleList[NPCID];
-            
+
             Maid maid = GameMain.Instance.CharacterMgr.AddStockMaid();
 #if COM3D2_5
 #if UNITY_2022_3
@@ -271,7 +272,7 @@ namespace COM3D2.WildParty.Plugin.Core
             }
 
             //Backup all maid clothes information. We will use this info to restore the clothing information when the mod event is reset
-            foreach(Maid maid in StateManager.Instance.SelectedMaidsList)
+            foreach (Maid maid in StateManager.Instance.SelectedMaidsList)
                 BackupMaidClothesInfo(maid);
 
         }
@@ -295,7 +296,7 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             if (ModUseData.PartyGroupSetupList[formationID].IsRandomAssign)
             {
-                if(ModUseData.PartyGroupSetupList[formationID].IsLesbianSetup)
+                if (ModUseData.PartyGroupSetupList[formationID].IsLesbianSetup)
                     AssignPartyGroupingRandomCaseLesbian(retainMainZero);
                 else
                     AssignPartyGroupingRandom(retainMainZero);
@@ -310,7 +311,7 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             StateManager.Instance.PartyGroupList.Clear();
             PartyGroup.UnassignedMaid = null;
-            
+
             //Keep the master list unchanged so that the chosen maid will remain the same in the ADV
             List<Maid> workingMaidList = new List<Maid>(StateManager.Instance.YotogiWorkingMaidList);
 
@@ -318,13 +319,13 @@ namespace COM3D2.WildParty.Plugin.Core
             Maid firstMan = StateManager.Instance.YotogiWorkingManList[0];
             StateManager.Instance.YotogiWorkingManList.Remove(firstMan);
 
-            
+
             //Shuffle the man list
             if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].IsShuffleManList)
                 StateManager.Instance.YotogiWorkingManList = ShuffleMaidOrManList(StateManager.Instance.YotogiWorkingManList);
             StateManager.Instance.YotogiWorkingManList.Insert(0, firstMan);
 
-            
+
             //Shuffle the maid list
             if (retainMaidZero)
             {
@@ -340,13 +341,13 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 workingMaidList = ShuffleMaidOrManList(workingMaidList);
             }
-            
+
             StateManager.Instance.YotogiWorkingMaidList = workingMaidList;
 
             int numOfMale = StateManager.Instance.YotogiWorkingManList.Count;
             int numOfFemale = workingMaidList.Count;
 
-            
+
             //First we assign each group 1 man and 1 maid
             for (int i = 0; i < Math.Min(numOfMale, numOfFemale); i++)
             {
@@ -355,10 +356,10 @@ namespace COM3D2.WildParty.Plugin.Core
                 newGroup.Maid1 = workingMaidList[i];
                 StateManager.Instance.PartyGroupList.Add(newGroup);
             }
-            
+
             bool isMoreMan = true;
             if (numOfFemale > numOfMale) isMoreMan = false;
-            
+
             for (int i = Math.Min(numOfFemale, numOfMale); i < Math.Max(numOfFemale, numOfMale); i++)
             {
                 //randomly pick a group and assign extra man or maid there
@@ -437,19 +438,19 @@ namespace COM3D2.WildParty.Plugin.Core
 
             //Keep the master list unchanged so that the chosen maid will remain the same in the ADV
             List<Maid> workingMaidList = new List<Maid>(StateManager.Instance.YotogiWorkingMaidList);
-            
+
             //Shuffle the maid list
             if (retainGroupZero)
             {
                 Maid firstMaid = GameMain.Instance.CharacterMgr.GetMaid(0);
                 Maid secondMaid = GameMain.Instance.CharacterMgr.GetMaid(1);
-             
+
                 workingMaidList.Remove(firstMaid);
                 workingMaidList.Remove(secondMaid);
-             
+
                 if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].IsShuffleMaidList)
                     workingMaidList = ShuffleMaidOrManList(workingMaidList);
-             
+
                 workingMaidList.Insert(0, firstMaid);
                 workingMaidList.Insert(1, secondMaid);
             }
@@ -467,8 +468,8 @@ namespace COM3D2.WildParty.Plugin.Core
             for (int i = 0; i < numOfFemale / 2; i++)
             {
                 PartyGroup newGroup = new PartyGroup();
-                newGroup.Maid1 = workingMaidList[i*2];
-                newGroup.Maid2 = workingMaidList[i*2+1];
+                newGroup.Maid1 = workingMaidList[i * 2];
+                newGroup.Maid2 = workingMaidList[i * 2 + 1];
                 StateManager.Instance.PartyGroupList.Add(newGroup);
             }
         }
@@ -476,9 +477,9 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void AssignPartyGroupingBySetupInfo(string formationID, bool retainMaidZero = false)
         {
             PartyGroupSetup setupInfo = ModUseData.PartyGroupSetupList[formationID];
-            
+
             StateManager.Instance.PartyGroupList.Clear();
-            
+
             //Keep the master list unchanged so that the chosen maid will remain the same in the ADV
             List<Maid> workingMaidList = new List<Maid>(StateManager.Instance.YotogiWorkingMaidList);
 
@@ -496,13 +497,13 @@ namespace COM3D2.WildParty.Plugin.Core
             }
             if (setupInfo.IsShuffleManList)
                 StateManager.Instance.YotogiWorkingManList = ShuffleMaidOrManList(StateManager.Instance.YotogiWorkingManList);
-            
+
             StateManager.Instance.YotogiWorkingMaidList = workingMaidList;
 
             int maidRunningNumber = 0;
             int manRunningNumber = 0;
             int NPCFemaleRunningNumber = 0;
-            
+
             foreach (var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
             {
                 if (!groupSetupInfo.MaidFromNPC)
@@ -517,7 +518,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
 
                 PartyGroup newGroup = new PartyGroup();
-                
+
                 for (int i = 0; i < groupSetupInfo.MaidCount; i++)
                 {
                     if (!groupSetupInfo.MaidFromNPC)
@@ -527,17 +528,17 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
                 for (int i = 0; i < groupSetupInfo.ManCount; i++)
                     newGroup.SetManAtIndex(i, StateManager.Instance.YotogiWorkingManList[manRunningNumber++]);
-                
+
 
 
                 newGroup.IsAutomatedGroup = groupSetupInfo.IsAutomatedGroup;
                 newGroup.IsVoicelessGroup = groupSetupInfo.IsVoicelessGroup;
-                
+
 
                 StateManager.Instance.PartyGroupList.Add(newGroup);
-                
+
             }
-            
+
             //Shared extra man handling
             PartyGroup.SharedExtraManList = new Dictionary<int, Maid>();
             int extraManSlotCount = setupInfo.ExtraManSlotCount;
@@ -546,22 +547,40 @@ namespace COM3D2.WildParty.Plugin.Core
             for (int i = 0; i < extraManSlotCount; i++)
                 PartyGroup.SharedExtraManList.Add(i, null);
             for (int i = 0; i < setupInfo.ExtraManCount; i++)
-                if(StateManager.Instance.YotogiWorkingManList.Count > manRunningNumber)
+                if (StateManager.Instance.YotogiWorkingManList.Count > manRunningNumber)
                     PartyGroup.SharedExtraManList[i] = StateManager.Instance.YotogiWorkingManList[manRunningNumber++];
-            
+
             //Extra man for each group handling
             foreach (var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
             {
                 int groupExtraManSlotCount = groupSetupInfo.ExtraManSlotCount;
                 if (groupExtraManSlotCount < 0)
                     groupExtraManSlotCount = groupSetupInfo.ExtraManCount;
-                
+
                 for (int i = 0; i < groupExtraManSlotCount; i++)
                     StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].ExtraManList.Add(i, null);
                 for (int i = 0; i < groupSetupInfo.ExtraManCount; i++)
                     if (StateManager.Instance.YotogiWorkingManList.Count > manRunningNumber)
                         StateManager.Instance.PartyGroupList[groupSetupInfo.ArrayPosition].ExtraManList[i] = StateManager.Instance.YotogiWorkingManList[manRunningNumber++];
             }
+
+            //Background man handling
+            PartyGroup.BackgroundManList = new Dictionary<int, Maid>();
+            int backgroundManSlotCount = setupInfo.BackgroundManSlotCount;
+            if (backgroundManSlotCount < 0)
+                backgroundManSlotCount = setupInfo.BackgroundManCount;
+            for (int i = 0; i < backgroundManSlotCount; i++)
+                PartyGroup.BackgroundManList.Add(i, null);
+
+            //create a shuffle list to random assign the background man
+            List<int> lstShuffle = new List<int>();
+            for (int i = 0; i < backgroundManSlotCount; i++)
+                lstShuffle.Add(i);
+            lstShuffle.Shuffle();
+
+            for (int i = 0; i < setupInfo.BackgroundManCount; i++)
+                if (StateManager.Instance.YotogiWorkingManList.Count > manRunningNumber)
+                    PartyGroup.BackgroundManList[lstShuffle[i]] = StateManager.Instance.YotogiWorkingManList[manRunningNumber++];
         }
 
         internal static void AssignPartyGrouping_SwapMember(Maid maid1, Maid maid2)
@@ -580,10 +599,10 @@ namespace COM3D2.WildParty.Plugin.Core
             int group2Index = group2.GetMaidOrManIndex(maid2);
 
             //do the swapping
-            
+
             ReplaceTargetMaid(group1, group1Index, maid2);
             ReplaceTargetMaid(group2, group2Index, maid1);
-            
+
         }
 
         private static void ReplaceTargetMaid(PartyGroup group, int index, Maid newMaid)
@@ -592,7 +611,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 group.SetMaidAtIndex(index, newMaid);
             else
                 group.SetManAtIndex(index, newMaid);
-            
+
         }
 
         internal static void CleanseCharacterMgrArray()
@@ -616,17 +635,17 @@ namespace COM3D2.WildParty.Plugin.Core
         //Special handling for the User control group to make sure the system is referencing the correct maids and men
         internal static void SetGroupZeroActive()
         {
-            
+
             //back up the maid[0], maid[1], and man[1], we will have to set the gameobject visible later. No need for man[0] since he will be the temp protagonist in the yotogi scenario.
             Maid backupMaid0 = GameMain.Instance.CharacterMgr.GetMaid(0);
             Maid backupMaid1 = GameMain.Instance.CharacterMgr.GetMaid(1);
 
             UnlinkMaid(backupMaid0);
             UnlinkMaid(backupMaid1);
-            
+
             PartyGroup group = StateManager.Instance.PartyGroupList[0];
             PlayableSkill.SkillItem skill = Util.GetGroupCurrentSkill(group);
-            
+
             //Set the spoof flag so that the while object doesnt go through the whole initialization process again
             StateManager.Instance.SpoofActivateMaidObjectFlag = true;
 
@@ -637,13 +656,13 @@ namespace COM3D2.WildParty.Plugin.Core
                     group.GetMaidAtIndex(i).ActiveSlotNo = skill.MaidIndex[i];
                     GameMain.Instance.CharacterMgr.SetActiveMaid(group.GetMaidAtIndex(i), skill.MaidIndex[i]);
                 }
-            
+
             for (int i = 0; i < skill.ManIndex.Count; i++)
                 if (group.GetManAtIndex(i) != null)
                 {
                     GameMain.Instance.CharacterMgr.SetActiveMan(group.GetManAtIndex(i), skill.ManIndex[i]);
                 }
-            
+
             //Check if there is any null in the man list, need to fill something back there to avoid error
             List<Maid> currentManArray = new List<Maid>();
             for (int i = 0; i < GameMain.Instance.CharacterMgr.GetManCount(); i++)
@@ -652,7 +671,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 if (man != null)
                     currentManArray.Add(man);
             }
-            
+
             for (int i = 0; i < GameMain.Instance.CharacterMgr.GetManCount(); i++)
             {
                 Maid man = GameMain.Instance.CharacterMgr.GetMan(i);
@@ -663,7 +682,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     GameMain.Instance.CharacterMgr.SetActiveMan(randomMan, i);
                 }
             }
-            
+
             StateManager.Instance.SpoofActivateMaidObjectFlag = false;
         }
 
@@ -981,7 +1000,7 @@ namespace COM3D2.WildParty.Plugin.Core
             IKAttachPoint(tag_data, srcMaid, targetMaid);
         }
 
-        
+
 
         private static Maid GetMaidForIKCharaInfo(IKAttachInfo.IKCharaInfo charaInfo)
         {
@@ -1177,7 +1196,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 fade = ConfigurableValue.AnimationBlendTime;
             else
                 maid.body0.StopAnime();
-            
+
             maid.body0.LoadAnime(tag, GameUty.FileSystem, fileName, false, isLoop);
             maid.body0.CrossFade(maid.body0.LastAnimeFN, GameUty.FileSystem, additive: false, loop: isLoop, boAddQue: isQueued, fade: fade);
         }
@@ -1217,7 +1236,7 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             if (motionInfo == null || maid == null)
                 return;
-
+            
             if (!string.IsNullOrEmpty(motionInfo.CustomMotionFile))
             {
                 PlayCustomAnimation(maid, motionInfo.CustomMotionFile, motionInfo.MotionTag, motionInfo.IsLoopMotion, motionInfo.IsBlend, motionInfo.IsQueued);
@@ -1225,23 +1244,28 @@ namespace COM3D2.WildParty.Plugin.Core
             }
             else
             {
-
+                
                 if (!string.IsNullOrEmpty(motionInfo.RandomMotion))
                 {
                     //Replace the variable if random motion is set
-                    motionInfo = RandomList.Motion.GetRandomMotionByCode(motionInfo.RandomMotion, maid.boMAN);
-                }
+                    var rndMotion = RandomList.Motion.GetRandomMotionByCode(motionInfo.RandomMotion, maid.boMAN);
+                    rndMotion.IsQueued = motionInfo.IsQueued;
+                    rndMotion.IsBlend = motionInfo.IsBlend;
+                    rndMotion.IsLoopMotion = motionInfo.IsLoopMotion;
 
+                    motionInfo = rndMotion;
+                }
+                
                 if (!string.IsNullOrEmpty(motionInfo.ScriptFile))
                 {
                     string maidGUID = "";
                     string manGUID = "";
-
+                    
                     if (maid.boMAN)
                         manGUID = maid.status.guid;
                     else
                         maidGUID = maid.status.guid;
-
+                    
                     LoadMotionScript(0, false, motionInfo.ScriptFile, motionInfo.ScriptLabel, maidGUID, manGUID, false, false, false, false);
                 }
                 else if (!string.IsNullOrEmpty(motionInfo.MotionFile))
@@ -1366,9 +1390,9 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 if (targetSet.NonClothesSlots != null)
                 {
-                    foreach(var item in targetSet.NonClothesSlots)
+                    foreach (var item in targetSet.NonClothesSlots)
                         maid.SetProp(item.Key, item.Value, 0, true);
-                    
+
                     maid.AllProcProp();
                 }
             }
@@ -1382,9 +1406,32 @@ namespace COM3D2.WildParty.Plugin.Core
                 return;
 
             Dictionary<string, string> maidClothesDict = StateManager.Instance.BackupMaidClothingList[maid.status.guid];
-            foreach(var kvp in maidClothesDict)
+            foreach (var kvp in maidClothesDict)
             {
                 maid.SetProp(kvp.Key, kvp.Value, 0, false);
+            }
+            maid.AllProcProp();
+        }
+
+        //Only restore a single part
+        internal static void RestoreMaidClothesInfo(Maid maid, string part)
+        {
+            if (maid == null)
+                return;
+            if (!StateManager.Instance.BackupMaidClothingList.ContainsKey(maid.status.guid))
+                return;
+
+            Dictionary<string, string> maidClothesDict = StateManager.Instance.BackupMaidClothingList[maid.status.guid];
+
+            foreach (var kvp in maidClothesDict)
+            {
+                if (kvp.Key == part)
+                {
+                    maid.ResetProp(kvp.Key, true);
+                    maid.AllProcProp();
+
+                    maid.SetProp(kvp.Key, kvp.Value, 0, false);
+                }
             }
             maid.AllProcProp();
         }
@@ -1393,13 +1440,17 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             Dictionary<string, string> maidClothesDict = new Dictionary<string, string>();
 
-            for (int i = 0; i < Constant.DressingClothingTagArray.Length; i++)
+            FieldInfo[] properties = typeof(Constant.ClothingTag).GetFields(
+                BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static |
+                BindingFlags.FlattenHierarchy); 
+
+            foreach (FieldInfo property in properties)
             {
-                maidClothesDict.Add(Constant.DressingClothingTagArray[i], maid.GetProp(Constant.DressingClothingTagArray[i]).strFileName);
+                maidClothesDict.Add(property.Name, maid.GetProp(property.Name).strFileName);
             }
 
             if (!StateManager.Instance.BackupMaidClothingList.ContainsKey(maid.status.guid))
-                StateManager.Instance.BackupMaidClothingList.Add(maid.status.guid, maidClothesDict);            
+                StateManager.Instance.BackupMaidClothingList.Add(maid.status.guid, maidClothesDict);
             else
                 StateManager.Instance.BackupMaidClothingList[maid.status.guid] = maidClothesDict;
         }
@@ -1411,7 +1462,7 @@ namespace COM3D2.WildParty.Plugin.Core
             if (effectList == null)
                 return;
 
-            foreach(string effectID in effectList)
+            foreach (string effectID in effectList)
             {
                 if (!ModUseData.CharacterEffectList.ContainsKey(effectID))
                     continue;
@@ -1443,7 +1494,7 @@ namespace COM3D2.WildParty.Plugin.Core
             maid.AllProcProp();
 
             Helper.BoneNameConverter.ConvertFemaleStructureToMale(maid, dummyMan);
-            if(!StateManager.Instance.ConvertedMaidFacialUpdateControlList.ContainsKey(maid))
+            if (!StateManager.Instance.ConvertedMaidFacialUpdateControlList.ContainsKey(maid))
                 StateManager.Instance.ConvertedMaidFacialUpdateControlList.Add(maid, false);
             maid.boMAN = true;
 
@@ -1477,6 +1528,20 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void RecoverManFromFemaleStructure(Maid man)
         {
             Helper.BoneNameConverter.RecoverConvertedManStructure(man);
+        }
+
+        internal static void ApplyEyeMaskToMaid(Maid maid, bool isAddEyeMask)
+        {
+            if (isAddEyeMask)
+            {
+                SetFemaleClothing(maid, Constant.ClothesSetEyeMask);
+                maid.AllProcProp();
+            }
+            else
+            {
+                //remove eye mask
+                RestoreMaidClothesInfo(maid, Constant.ClothingTag.acchead);
+            }
         }
     }
 }
