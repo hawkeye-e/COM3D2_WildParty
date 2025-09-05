@@ -12,14 +12,22 @@ namespace COM3D2.WildParty.Plugin.Core
         //for calling other functions that require special coding in certain step
         private static void ProcessADVSpecial(ADVKagManager instance, ADVStep step)
         {
-            switch (step.ID)
+            if (step.Tag == "GetMaxTallyCounterIndex")
             {
-                case "org0004":
-                    ProcessADV_OrgyParty_NumberOfGuests(instance, step);
-                    break;
-                case "orgy_wg_CameraDecision":
-                    ProcessADV_OrgyParty_CameraDecision(instance, step);
-                    break;
+                ProcessADV_GetMaxTallyCounterIndex(instance, step);
+            }
+            else
+            {
+                //TODO: revamp this part to fade out the use of step id comparsion
+                switch (step.ID)
+                {
+                    case "org0004":
+                        ProcessADV_OrgyParty_NumberOfGuests(instance, step);
+                        break;
+                    case "orgy_wg_CameraDecision":
+                        ProcessADV_OrgyParty_CameraDecision(instance, step);
+                        break;
+                }
             }
         }
 
@@ -93,7 +101,7 @@ namespace COM3D2.WildParty.Plugin.Core
             List<KeyValuePair<string, KeyValuePair<string, bool>>> lstNumofMan = new List<KeyValuePair<string, KeyValuePair<string, bool>>>();
             for (int i = minGuestMan; i <= maxGuestMan; i++)
             {
-                lstNumofMan.Add(new KeyValuePair<string, KeyValuePair<string, bool>>(step.ChoiceData[i - 1].Value, new KeyValuePair<string, bool>(step.ChoiceData[i - 1].Key, true)));
+                lstNumofMan.Add(new KeyValuePair<string, KeyValuePair<string, bool>>(step.ChoiceData.Options[i - 1].Value, new KeyValuePair<string, bool>(step.ChoiceData.Options[i - 1].Key, true)));
             }
 
             Action<string, string> onClickCallBack = delegate (string displayText, string value)
@@ -123,6 +131,26 @@ namespace COM3D2.WildParty.Plugin.Core
                 ADVSceneProceedToNextStep("orgy_wg_30Maid");
             else
                 ADVSceneProceedToNextStep("orgy_wg_40Maid");
+        }
+
+        //Function to get maid with the max tally count and stored in custom variable
+        private static void ProcessADV_GetMaxTallyCounterIndex(ADVKagManager instance, ADVStep step)
+        {
+            int maxIndex = 0;
+            int maxCount = -1;
+            for(int i = 0; i < StateManager.Instance.SelectedMaidsList.Count; i++)
+            {
+                int count = Helper.TallyCounterMarker.GetTallyMarkCount(StateManager.Instance.SelectedMaidsList[i]);
+                if (maxCount < count)
+                {
+                    maxCount = count;
+                    maxIndex = i;
+                }
+            }
+
+            StateManager.Instance.CustomVariable.Add(Constant.SpecialCustomVariable.TallyCountIndex, maxIndex.ToString());
+
+            ADVSceneProceedToNextStep();
         }
 
 

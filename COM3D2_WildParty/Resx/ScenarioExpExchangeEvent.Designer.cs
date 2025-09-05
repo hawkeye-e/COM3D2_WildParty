@@ -62,6 +62,92 @@ namespace ScenarioResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
+        ///  &quot;eee_intro_0020_T_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_intro_0020_T_Muku&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;eee_intro_0021&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Maid&quot;,
+        ///      &quot;UseBranchIndex&quot;: true,
+        ///      &quot;Text&quot;: &quot;くぅっ……んんっ……やっ……！　んっ……んっ……はぅっ……！&quot;,
+        ///      &quot;VoiceData&quot;: {
+        ///        &quot;Muku&quot;: {
+        ///          &quot;VoiceFile&quot;: &quot;H0_order_52128.ogg&quot;,
+        ///          &quot;IsChoppingAudio&quot;: false
+        ///        }
+        ///      }
+        ///    }
+        ///  },
+        ///
+        ///  &quot;eee_intro_0030_M_Muku&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_intro_0030_M_Muku&quot;,        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ExpChangeEventADV_Muku {
+            get {
+                return ResourceManager.GetString("ExpChangeEventADV_Muku", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;eee_intro_wall_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_intro_wall_0001&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;eee_intro_wall_0002&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Owner&quot;,
+        ///      &quot;Text&quot;: &quot;ふむ、屈辱プレイと言えば、間違いなく壁尻だ。&quot;
+        ///    }
+        ///  },
+        ///
+        ///  &quot;eee_intro_wall_0002&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_intro_wall_0002&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;eee_intro_wall_0003&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Owner&quot;,
+        ///      &quot;Text&quot;: &quot;よし、可動式の壁の設置を手配しよう。&quot;
+        ///   [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ExpChangeEventADVButtockWall {
+            get {
+                return ResourceManager.GetString("ExpChangeEventADVButtockWall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;eee_intro_chain_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_intro_chain_0001&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;eee_intro_chain_0002&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Owner&quot;,
+        ///      &quot;Text&quot;: &quot;屈辱プレイには鎖なしではありえん。ＳＭクラブにある拘束具も使えるので、準備はそんなに難しくないはず。&quot;
+        ///    }
+        ///  },
+        ///
+        ///  &quot;eee_intro_chain_0002&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_intro_chain_0002&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;eee_intro_chain_0003&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Owner&quot;,
+        ///     [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ExpChangeEventADVChains {
+            get {
+                return ResourceManager.GetString("ExpChangeEventADVChains", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
         ///  &quot;eee0001&quot;: {
         ///    &quot;ID&quot;: &quot;eee0001&quot;,
         ///    &quot;Type&quot;: &quot;BG&quot;,
@@ -87,6 +173,141 @@ namespace ScenarioResources {
         internal static string ExpChangeEventADVIntro {
             get {
                 return ResourceManager.GetString("ExpChangeEventADVIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;eee_intro_theater_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_intro_theater_0001&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;eee_intro_theater_0002_Branch&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Owner&quot;,
+        ///      &quot;Text&quot;: &quot;どう？気に入った？&quot;
+        ///    }
+        ///  },
+        ///
+        ///  &quot;eee_intro_theater_0002_Branch&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_intro_theater_0002_Branch&quot;,
+        ///    &quot;Type&quot;: &quot;BranchByPersonality&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Branch&quot;,
+        ///    &quot;CharaData&quot;: [
+        ///      {
+        ///        &quot;ArrayPosition&quot;: 0
+        ///      }
+        ///    ],
+        ///    &quot;NextStepID&quot;: &quot;ee [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ExpChangeEventADVIntroTheater {
+            get {
+                return ResourceManager.GetString("ExpChangeEventADVIntroTheater", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;eee_post_yotogi_common_theater_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_post_yotogi_common_theater_0001&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;eee_post_yotogi_common_theater_0002&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Owner&quot;,
+        ///      &quot;Text&quot;: &quot;（こんなに酷い扱いを受けても、[=Name,Maid,0,CallName]たちは愉しんでいる。ふふふっ、調教は成功だな…）&quot;
+        ///    }
+        ///  },
+        ///
+        ///  &quot;eee_post_yotogi_common_theater_0002&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_post_yotogi_common_theater_0002&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;eee_post_yotogi [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ExpChangeEventADVPostYotogiBedroom {
+            get {
+                return ResourceManager.GetString("ExpChangeEventADVPostYotogiBedroom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;eee_post_yotogi_wall&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_post_yotogi_wall&quot;,
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
+        ///    &quot;NextStepID&quot;: &quot;eee_post_yotogi_wall_init_a&quot;
+        ///  },
+        ///
+        ///  &quot;eee_post_yotogi_wall_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_post_yotogi_wall_init_a&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;eee_post_yotogi_wall_init_b&quot;
+        ///  },
+        ///
+        ///  &quot;eee_post_yotogi_wall_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_post_yotogi_wall_init_b&quot;,
+        ///    &quot;Type&quot;: &quot;DismissGroup&quot;,
+        ///    &quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ExpChangeEventADVPostYotogiButtockWall {
+            get {
+                return ResourceManager.GetString("ExpChangeEventADVPostYotogiButtockWall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;eee_post_yotogi_chain&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_post_yotogi_chain&quot;,
+        ///    &quot;Type&quot;: &quot;CloseMsgPanel&quot;,
+        ///    &quot;WaitingType&quot;: &quot;SystemFadeOut&quot;,
+        ///    &quot;NextStepID&quot;: &quot;eee_post_yotogi_chain_init_a&quot;
+        ///  },
+        ///
+        ///  &quot;eee_post_yotogi_chain_init_a&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_post_yotogi_chain_init_a&quot;,
+        ///    &quot;Type&quot;: &quot;BGM&quot;,
+        ///    &quot;Tag&quot;: &quot;BGM011.ogg&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Auto&quot;,
+        ///    &quot;NextStepID&quot;: &quot;eee_post_yotogi_chain_init_b&quot;
+        ///  },
+        ///
+        ///  &quot;eee_post_yotogi_chain_init_b&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_post_yotogi_chain_init_b&quot;,
+        ///    &quot;Type&quot;: &quot;DismissGroup&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ExpChangeEventADVPostYotogiChains {
+            get {
+                return ResourceManager.GetString("ExpChangeEventADVPostYotogiChains", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;eee_post_yotogi_common_theater_0001&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_post_yotogi_common_theater_0001&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;eee_post_yotogi_common_theater_0002&quot;,
+        ///    &quot;TalkData&quot;: {
+        ///      &quot;SpecificSpeaker&quot;: &quot;Owner&quot;,
+        ///      &quot;Text&quot;: &quot;（こんなに酷い扱いを受けても、[=Name,Maid,0,CallName]たちは愉しんでいる。ふふふっ、調教は成功だな…）&quot;
+        ///    }
+        ///  },
+        ///
+        ///  &quot;eee_post_yotogi_common_theater_0002&quot;: {
+        ///    &quot;ID&quot;: &quot;eee_post_yotogi_common_theater_0002&quot;,
+        ///    &quot;Type&quot;: &quot;Talk&quot;,
+        ///    &quot;WaitingType&quot;: &quot;Click&quot;,
+        ///    &quot;NextStepID&quot;: &quot;eee_post_yotogi [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ExpChangeEventADVPostYotogiTheater {
+            get {
+                return ResourceManager.GetString("ExpChangeEventADVPostYotogiTheater", resourceCulture);
             }
         }
     }

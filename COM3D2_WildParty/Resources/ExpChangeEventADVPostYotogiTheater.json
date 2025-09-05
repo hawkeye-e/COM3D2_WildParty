@@ -1,0 +1,844 @@
+{
+  "eee_post_yotogi_common_theater_0001": {
+    "ID": "eee_post_yotogi_common_theater_0001",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（こんなに酷い扱いを受けても、[=Name,Maid,0,CallName]たちは愉しんでいる。ふふふっ、調教は成功だな…）"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0002": {
+    "ID": "eee_post_yotogi_common_theater_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（肉便器妻…ちょっと考えただけで、すごく興奮するんだ…）"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0003": {
+    "ID": "eee_post_yotogi_common_theater_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "皆様、あと１時間ほどイベントが終了いたします。もしまだ肉便器をご利用になりたいのでしたら、ぜひ最後のチャンスを活用してください！"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0004": {
+    "ID": "eee_post_yotogi_common_theater_0004",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "eee_post_yotogi_common_theater_0005",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0005": {
+    "ID": "eee_post_yotogi_common_theater_0005",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_common_theater_0006",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0006": {
+    "ID": "eee_post_yotogi_common_theater_0006",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0007",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "さらに一時間後"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0007": {
+    "ID": "eee_post_yotogi_common_theater_0007",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0007a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（それから俺は[=Name,Maid,0,CallName]たちに、少し身だしなみを整えるよう頼む。そして、俺は短い閉会の挨拶をします。）"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0007a": {
+    "ID": "eee_post_yotogi_common_theater_0007a",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "eee_post_yotogi_common_theater_0008",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0008": {
+    "ID": "eee_post_yotogi_common_theater_0008",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "eee_post_yotogi_common_theater_0009"
+  },
+
+  "eee_post_yotogi_common_theater_0009": {
+    "ID": "eee_post_yotogi_common_theater_0009",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_common_theater_0010",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": false
+      }
+    ]
+  },
+
+  "eee_post_yotogi_common_theater_0010": {
+    "ID": "eee_post_yotogi_common_theater_0010",
+    "Type": "RemoveTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_common_theater_0011",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F_ALL"
+      }
+    ]
+  },
+
+  "eee_post_yotogi_common_theater_0011": {
+    "ID": "eee_post_yotogi_common_theater_0011",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_common_theater_0012",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "FaceBlend": "頬１涙０",
+        "PosRot": {
+          "PosString": "0.00, 0.00, 3.28",
+          "RotString": "0.000, 0.000, 0.000, 1.000"
+        },
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "ExtraObjectsInfo": {
+          "RemoveObjects": [ "kousoku_upper", "kousoku_lower", "acchead" ]
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "FaceBlend": "頬１涙０",
+        "PosRot": {
+          "PosString": "0.60, 0.00, 3.28",
+          "RotString": "0.000, 0.000, 0.000, 1.000"
+        },
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "ExtraObjectsInfo": {
+          "RemoveObjects": [ "kousoku_upper", "kousoku_lower", "acchead" ]
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "FaceBlend": "頬１涙０",
+        "PosRot": {
+          "PosString": "-0.60, 0.00, 3.28",
+          "RotString": "0.000, 0.000, 0.000, 1.000"
+        },
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "ExtraObjectsInfo": {
+          "RemoveObjects": [ "kousoku_upper", "kousoku_lower", "acchead" ]
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "FaceBlend": "頬１涙０",
+        "PosRot": {
+          "PosString": "1.20, 0.00, 3.28",
+          "RotString": "0.000, 0.000, 0.000, 1.000"
+        },
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "ExtraObjectsInfo": {
+          "RemoveObjects": [ "kousoku_upper", "kousoku_lower", "acchead" ]
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "FaceBlend": "頬１涙０",
+        "PosRot": {
+          "PosString": "-1.20, 0.00, 3.28",
+          "RotString": "0.000, 0.000, 0.000, 1.000"
+        },
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "ExtraObjectsInfo": {
+          "RemoveObjects": [ "kousoku_upper", "kousoku_lower", "acchead" ]
+        }
+      }
+    ]
+  },
+
+  "eee_post_yotogi_common_theater_0012": {
+    "ID": "eee_post_yotogi_common_theater_0012",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_common_theater_0013",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 10,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "1.77, -0.85, 11.98",
+          "RotString": "0.000, 0.956, 0.000, -0.294"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 11,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "0.00, -1.33, 9.19",
+          "RotString": "0.000, 0.996, 0.000, 0.095"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 12,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "3.25, -1.33, 7.29",
+          "RotString": "0.000, -0.885, 0.000, 0.465"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 13,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "-3.76, -1.22, 9.52",
+          "RotString": "0.000, 0.926, 0.000, 0.377"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 14,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "-1.62, -1.33, 8.76",
+          "RotString": "0.000, 0.997, 0.000, 0.074"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 15,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "1.77, -1.33, 8.50",
+          "RotString": "0.000, -0.973, 0.000, 0.233"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 16,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "-0.74, -0.85, 12.41",
+          "RotString": "0.000, 0.990, 0.000, 0.140"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 17,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "3.69, -1.04, 10.58",
+          "RotString": "0.000, -0.926, 0.000, 0.379"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 18,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "-2.81, -1.33, 7.21",
+          "RotString": "0.000, 0.922, 0.000, 0.387"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 19,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "1.05, -1.33, 7.17",
+          "RotString": "0.000, 0.985, 0.000, -0.171"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "2.24, 0.00, 3.98",
+          "RotString": "0.000, -0.478, 0.000, 0.878"
+        }
+      }
+    ]
+  },
+
+  "eee_post_yotogi_common_theater_0013": {
+    "ID": "eee_post_yotogi_common_theater_0013",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_common_theater_0014",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "0.05, 1.04, 9.14",
+        "TargetPosString": "0.11, 0.70, 3.55",
+        "AroundAngleString": "179.40, 3.46",
+        "Distance": 5.6
+      }
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0014": {
+    "ID": "eee_post_yotogi_common_theater_0014",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0015",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "集計が終わりました。これより結果を発表します。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0015": {
+    "ID": "eee_post_yotogi_common_theater_0015",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0016",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "皆様から最も多くの落書きを受け取りまして、堂々の１位のは……"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0016": {
+    "ID": "eee_post_yotogi_common_theater_0016",
+    "Type": "Special",
+    "Tag": "GetMaxTallyCounterIndex",
+    "WaitingType": "Special",
+    "NextStepID": "eee_post_yotogi_common_theater_0017"
+  },
+
+  "eee_post_yotogi_common_theater_0017": {
+    "ID": "eee_post_yotogi_common_theater_0017",
+    "Type": "Branch",
+    "WaitingType": "Branch",
+    "BranchData": {
+      "VariableName": "TallyCountIndex",
+      "BranchList": [
+        {
+          "Value": "0",
+          "NextStepID": "eee_post_yotogi_common_theater_0018_result_0"
+        },
+        {
+          "Value": "1",
+          "NextStepID": "eee_post_yotogi_common_theater_0018_result_1"
+        },
+        {
+          "Value": "2",
+          "NextStepID": "eee_post_yotogi_common_theater_0018_result_2"
+        },
+        {
+          "Value": "3",
+          "NextStepID": "eee_post_yotogi_common_theater_0018_result_3"
+        },
+        {
+          "Value": "4",
+          "NextStepID": "eee_post_yotogi_common_theater_0018_result_4"
+        }
+      ]
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0018_result_0": {
+    "ID": "eee_post_yotogi_common_theater_0018_result_0",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0019",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,Maid,0,CallName]！"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0018_result_1": {
+    "ID": "eee_post_yotogi_common_theater_0018_result_1",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0019",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,Maid,1,CallName]！"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0018_result_2": {
+    "ID": "eee_post_yotogi_common_theater_0018_result_2",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0019",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,Maid,2,CallName]！"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0018_result_3": {
+    "ID": "eee_post_yotogi_common_theater_0018_result_3",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0019",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,Maid,3,CallName]！"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0018_result_4": {
+    "ID": "eee_post_yotogi_common_theater_0018_result_4",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0019",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,Maid,4,CallName]！"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0019": {
+    "ID": "eee_post_yotogi_common_theater_0019",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_common_theater_0020_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "MotionFile": "kaiwa_tati_hakusyu_taiki_f.anm",
+          "MotionTag": "kaiwa_tati_hakusyu_taiki_f.anm"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "MotionFile": "kaiwa_tati_hakusyu_taiki_f.anm",
+          "MotionTag": "kaiwa_tati_hakusyu_taiki_f.anm"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "MotionFile": "kaiwa_tati_hakusyu_taiki_f.anm",
+          "MotionTag": "kaiwa_tati_hakusyu_taiki_f.anm"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "MotionFile": "kaiwa_tati_hakusyu_taiki_f.anm",
+          "MotionTag": "kaiwa_tati_hakusyu_taiki_f.anm"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "MotionFile": "kaiwa_tati_hakusyu_taiki_f.anm",
+          "MotionTag": "kaiwa_tati_hakusyu_taiki_f.anm"
+        }
+      }
+    ]
+  },
+
+  "eee_post_yotogi_common_theater_0020_Branch": {
+    "ID": "eee_post_yotogi_common_theater_0020_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_common_theater_0030_M_[=PType]"
+  },
+
+  "eee_post_yotogi_common_theater_0031": {
+    "ID": "eee_post_yotogi_common_theater_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0032_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ここに、「エンパイアクラブ一番肉便器」の名誉称号を授与します。"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0032_Branch": {
+    "ID": "eee_post_yotogi_common_theater_0032_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_common_theater_0040_M_[=PType]"
+  },
+
+  "eee_post_yotogi_common_theater_0041": {
+    "ID": "eee_post_yotogi_common_theater_0041",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0042_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "君は皆様のお気に入り、一番中出しされるです！それは本当に光栄なことですね！"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0042_Branch": {
+    "ID": "eee_post_yotogi_common_theater_0042_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_common_theater_0050_M_[=PType]"
+  },
+
+  "eee_post_yotogi_common_theater_0051": {
+    "ID": "eee_post_yotogi_common_theater_0051",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0052_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "おお！凄い発言ですね！とても嬉しそうに見えるよ！"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0052_Branch": {
+    "ID": "eee_post_yotogi_common_theater_0052_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_common_theater_0060_T_[=PType]"
+  },
+
+  "eee_post_yotogi_common_theater_0061": {
+    "ID": "eee_post_yotogi_common_theater_0061",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0062",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "では皆様、もしこちらのメイドを自分の子種を種付けしてほしいなら、是非再度ご来店いただき当店のメイドをご予約ください。"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0062": {
+    "ID": "eee_post_yotogi_common_theater_0062",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0063",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "これからメイドたちはますますファンが増えていくので、是非お見逃なく！"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0063": {
+    "ID": "eee_post_yotogi_common_theater_0063",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_common_theater_0064_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を振る"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を振る"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を振る"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を振る"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を振る"
+        }
+      }
+    ]
+  },
+
+  "eee_post_yotogi_common_theater_0064_Branch": {
+    "ID": "eee_post_yotogi_common_theater_0064_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_common_theater_0070_T_[=PType]"
+  },
+
+  "eee_post_yotogi_common_theater_0071": {
+    "ID": "eee_post_yotogi_common_theater_0071",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0072",
+    "TalkData": {
+      "SpeakerName": "お客様１６",
+      "Text": "ははぁ、このオーナーさんは本当に売り方がうまいなぁ！"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0072": {
+    "ID": "eee_post_yotogi_common_theater_0072",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0073",
+    "TalkData": {
+      "SpeakerName": "お客様１７",
+      "Text": "おおっ！そうだな、もちろんそうする！一番左の子が一番のお気に入りで、絶対にあの子に俺の子を産ませる！"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0073": {
+    "ID": "eee_post_yotogi_common_theater_0073",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0074",
+    "TalkData": {
+      "SpeakerName": "お客様１８",
+      "Text": "へぇー、自分は右から二番目の子に目をつけてるんだ。本当に自分のタイプなんだ。"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0074": {
+    "ID": "eee_post_yotogi_common_theater_0074",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0075",
+    "TalkData": {
+      "SpeakerName": "お客様１９",
+      "Text": "君もか！じゃあ一緒に３Ｐはどう？このプレイを可能だって聞いたよ。"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0075": {
+    "ID": "eee_post_yotogi_common_theater_0075",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0076",
+    "TalkData": {
+      "SpeakerName": "お客様１８",
+      "Text": "お？いいですか？やるやる！連絡先を交換しよ。楽しみ！"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0076": {
+    "ID": "eee_post_yotogi_common_theater_0076",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_bedroom_0001",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ふふっ、これで間違いなく常連客が増えるぞ…）"
+    }
+  }
+
+}

@@ -325,5 +325,20 @@ namespace COM3D2.WildParty.Plugin.Helper
 
             return result;
         }
+
+        public static int GetTallyMarkCount(Maid maid)
+        {
+            if (maid == null)
+                return 0;
+            if (!MarkProgressList.ContainsKey(maid))
+                return 0;
+
+            int result = 0;
+
+            foreach (var bodyPartMark in MarkProgressList[maid].BodyPartMarkProgress)
+                result += bodyPartMark.Value + 1;
+
+            return result;
+        }
     }
 }

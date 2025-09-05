@@ -45,19 +45,125 @@
   "eee_intro_0001": {
     "ID": "eee_intro_0001",
     "Type": "BGM",
-    "Tag": "BGM013.ogg",
+    "Tag": "BGM022.ogg",
     "WaitingType": "Auto",
     "NextStepID": "eee_intro_0002"
   },
 
   "eee_intro_0002": {
     "ID": "eee_intro_0002",
+    "Type": "BG",
+    "Tag": "MyRoom_Night",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_0003"
+  },
+
+  "eee_intro_0003": {
+    "ID": "eee_intro_0003",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_0004",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "0.00, 0.44, -0.64",
+          "RotString": "0.000, 0.000, 0.000, 1.000"
+        },
+        "ClothesSetID": "FullNude",
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": { "Type": "ClubOwner" }
+        }
+      },
+
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "0.00, 0.44, -0.64",
+          "RotString": "0.000, 0.000, 0.000, 1.000"
+        }
+      }
+    ]
+  },
+
+  "eee_intro_0004": {
+    "ID": "eee_intro_0004",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_0005",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "Owner"
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "eee_intro_0005": {
+    "ID": "eee_intro_0005",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_0006",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*抱き付き激しさ２",
+        "SexPosID": 100,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "まぶたギュ",
+          "FaceBlend": "頬１涙０"
+        },
+        "PosRot": {
+          "PosString": "0.00, 0.44, -0.64",
+          "RotString": "0.000, 0.000, 0.000, 1.000"
+        }
+      }
+    ]
+  },
+
+  "eee_intro_0006": {
+    "ID": "eee_intro_0006",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_0007",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-3.83, 2.45, 0.98",
+        "TargetPosString": "-0.41, 0.87, -0.36",
+        "AroundAngleString": "111.44, 23.35",
+        "Distance": 4
+      }
+    }
+  },
+
+  "eee_intro_0007": {
+    "ID": "eee_intro_0007",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "eee_intro_1002",
+    "NextStepID": "eee_intro_0008",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（ある晩、[=Name,Maid,0,CallName]が接待中のお客様がが俺に会いたいと言ってきた。）"
+      "Text": "（[=ClubName]のオーナーとして、俺はメイドたちのセックスの腕前を研ぎ澄ますために、定期的に夜伽を実行する。）"
     },
 
     "FadeData": {
@@ -66,98 +172,1174 @@
     }
   },
 
-  "eee_intro_1002": {
-    "ID": "eee_intro_1002",
-    "Type": "BG",
-    "Tag": "Theater",
-    "WaitingType": "Auto",
-    "NextStepID": "eee_intro_1003a"
+  "eee_intro_0008": {
+    "ID": "eee_intro_0008",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0009",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（今日のセクションは、[=Name,Maid,0,CallName]と行います。）"
+    }
   },
 
-  "eee_intro_1003a": {
-    "ID": "eee_intro_1003a",
+  "eee_intro_0009": {
+    "ID": "eee_intro_0009",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0010",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（…でもちょっとうまく行かずみたいだな…）"
+    }
+  },
+
+  "eee_intro_0010": {
+    "ID": "eee_intro_0010",
     "Type": "Camera",
     "WaitingType": "Auto",
-    "NextStepID": "eee_intro_1003",
+    "NextStepID": "eee_intro_0011_Branch",
     "CameraData": {
       "FixedPointData": {
-        "PosString": "-0.1,0.6,1.9",
-        "TargetPosString": "-0.1,0.4,0",
-        "AroundAngleString": "180,3.5",
-        "Distance": 2
+        "PosString": "-1.51, 1.39, -0.19",
+        "TargetPosString": "-0.48, 0.92, -0.60",
+        "AroundAngleString": "111.44, 23.35",
+        "Distance": 1.2
       }
     }
   },
 
-  "eee_intro_1003": {
-    "ID": "eee_intro_1003",
-    "Type": "AddObject",
-    "WaitingType": "Auto",
-    "NextStepID": "eee_intro_1004",
-    "WorldObjectData": [
+  "eee_intro_0011_Branch": {
+    "ID": "eee_intro_0011_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
       {
-        "IsCustom": true,
-        "Src": "WallAssWall",
-        "ObjectID": "mod_wall_ass_wall",
-        "PosRot": {
-          "PosString": "0.020,-0.320,-0.270",
-          "RotString": "0, 0, 0, -1"
-        },
-        "Scale": -1
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0020_T_[=PType]"
+  },
+
+  "eee_intro_0021": {
+    "ID": "eee_intro_0021",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_0022",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*射精中",
+        "SexPosID": 100,
+        "WaitLoad": true
       }
     ]
   },
 
-  "eee_intro_1004": {
-    "ID": "eee_intro_1004",
+  "eee_intro_0022": {
+    "ID": "eee_intro_0022",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "eee_intro_1005",
+    "NextStepID": "eee_intro_0023",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "test"
+      "Text": "はぁ……はぁ……[=Name,Maid,0,CallName]……もうイキそうなんだ……出すぞ…！ううっ…！"
     }
-
   },
 
-  "eee_intro_1005": {
-    "ID": "eee_intro_1005",
+  "eee_intro_0023": {
+    "ID": "eee_intro_0023",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0023a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "はぁ……はぁ……ふぅ……"
+    }
+  },
+
+  "eee_intro_0023a": {
+    "ID": "eee_intro_0023a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0024",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は射精したけど、[=Name,Maid,0,CallName]はあまり楽しんでいるようには見えなかった。）"
+    }
+  },
+
+  "eee_intro_0024": {
+    "ID": "eee_intro_0024",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "eee_intro_0025",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "eee_intro_0025": {
+    "ID": "eee_intro_0025",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_0025a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_yorisoi_aibu.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 101,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "閉じ目"
+        }
+      }
+    ]
+  },
+
+  "eee_intro_0025a": {
+    "ID": "eee_intro_0025a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_0026",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "0.64, 1.74, 0.30",
+        "TargetPosString": "0.34, 1.01, -0.46",
+        "AroundAngleString": "201.56, 41.98",
+        "Distance": 1.1
+      }
+    }
+  },
+
+  "eee_intro_0026": {
+    "ID": "eee_intro_0026",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0027_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "どうしたの？気分が乗らないみたい。"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "eee_intro_0027_Branch": {
+    "ID": "eee_intro_0027_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0030_M_[=PType]"
+  },
+
+  "eee_intro_0031": {
+    "ID": "eee_intro_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0032",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "隠さないで。反応からわかるんだ。俺たちは夫婦だよ。お互いに隠すことは何もないんだよ、違う？"
+    }
+  },
+
+  "eee_intro_0032": {
+    "ID": "eee_intro_0032",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0033_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "じゃあ聞くね。さっきのセックス、つまらなかった？"
+    }
+  },
+
+  "eee_intro_0033_Branch": {
+    "ID": "eee_intro_0033_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0040_M_[=PType]"
+  },
+
+  "eee_intro_0041": {
+    "ID": "eee_intro_0041",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0042",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]は困惑した顔をする。）"
+    }
+  },
+
+  "eee_intro_0042": {
+    "ID": "eee_intro_0042",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_0043",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "通常"
+      }
+    ]
+  },
+
+  "eee_intro_0043": {
+    "ID": "eee_intro_0043",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0044_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "大丈夫だよ、言って。…最近の性生活は、退屈に思ってる？"
+    }
+  },
+
+  "eee_intro_0044_Branch": {
+    "ID": "eee_intro_0044_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0050_M_[=PType]"
+  },
+
+  "eee_intro_0051": {
+    "ID": "eee_intro_0051",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0052_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "うーん…でも大感謝祭みたいな乱交イベントを定期的にやってるじゃない？"
+    }
+  },
+
+  "eee_intro_0052_Branch": {
+    "ID": "eee_intro_0052_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0060_M_[=PType]"
+  },
+
+  "eee_intro_0061": {
+    "ID": "eee_intro_0061",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0062",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ほうー"
+    }
+  },
+
+  "eee_intro_0062": {
+    "ID": "eee_intro_0062",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0063",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]は何か新しく刺激的なセックスを求めているんだ……あーあ、この淫乱妻め、夫のチンポに満たされず、いつももっと欲しがっている…）"
+    }
+  },
+
+  "eee_intro_0063": {
+    "ID": "eee_intro_0063",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0064",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（……このふしだらさがたまらなく大好きなんだ……）"
+    }
+  },
+
+  "eee_intro_0064": {
+    "ID": "eee_intro_0064",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0065",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（うーん…でも今は新しいプレイが浮かばないな…ちょっとからかってみようか。）"
+    }
+  },
+
+  "eee_intro_0065": {
+    "ID": "eee_intro_0065",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0065a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ふーん、じゃあ何しようかなー？　あ、そうだ。[=Name,Maid,0,CallName]を拘束して、アソコを沢山のお客様の前に披露する、一人ずつ犯させてやるか？どう？"
+    }
+  },
+
+  "eee_intro_0065a": {
+    "ID": "eee_intro_0065a",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_0066",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "疑問"
+      }
+    ]
+  },
+
+  "eee_intro_0066": {
+    "ID": "eee_intro_0066",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0067_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "はは、こうしたらおもしろそうじゃない？"
+    }
+  },
+
+  "eee_intro_0067_Branch": {
+    "ID": "eee_intro_0067_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0070_T_[=PType]"
+  },
+
+  "eee_intro_0071": {
+    "ID": "eee_intro_0071",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0072",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あー、すまんすまん。冗談だ。怒らないでね？"
+    }
+  },
+
+  "eee_intro_0072": {
+    "ID": "eee_intro_0072",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_0073",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "目口閉じ"
+      }
+    ]
+  },
+
+  "eee_intro_0073": {
+    "ID": "eee_intro_0073",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0074_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]は目を閉じた。怒っていると思うが、何かを想像しているようだ。）"
+    }
+  },
+
+  "eee_intro_0074_Branch": {
+    "ID": "eee_intro_0074_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0080_M_[=PType]"
+  },
+
+  "eee_intro_0081": {
+    "ID": "eee_intro_0081",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0082",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "え？"
+    }
+  },
+
+  "eee_intro_0082": {
+    "ID": "eee_intro_0082",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0083",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]を見ると、うわぁ、めっちゃ濡れているじゃないか！さっき俺とヤった時も、そんなに濡れないのに…）"
+    }
+  },
+
+  "eee_intro_0083": {
+    "ID": "eee_intro_0083",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0084",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（自分が肉便器になるところを想像するだけでこんなに興奮するとは……ふふっ、素晴らしい…）"
+    }
+  },
+
+  "eee_intro_0084": {
+    "ID": "eee_intro_0084",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "eee_intro_0085",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "eee_intro_0085": {
+    "ID": "eee_intro_0085",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_0085a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_tekoki_aibu.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 102,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮２",
+          "FaceBlend": "頬２涙０"
+        }
+      }
+    ]
+  },
+
+  "eee_intro_0085a": {
+    "ID": "eee_intro_0085a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_0086",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "1.07, 1.11, 0.72",
+        "TargetPosString": "0.35, 0.91, -0.47",
+        "AroundAngleString": "211.14, 8.13",
+        "Distance": 1.4
+      }
+    }
+  },
+
+  "eee_intro_0086": {
+    "ID": "eee_intro_0086",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0087",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は[=Name,Maid,0,CallName]のアソコに触れ、愛撫し始めた。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "eee_intro_0087": {
+    "ID": "eee_intro_0087",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0088",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あれー　ねぇねぇ、見て見てー　なにこれー？"
+    }
+  },
+
+  "eee_intro_0088": {
+    "ID": "eee_intro_0088",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0089_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あー　さっき話したあのプレイを想像して、発情した？"
+    }
+  },
+
+  "eee_intro_0089_Branch": {
+    "ID": "eee_intro_0089_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0090_M_[=PType]"
+  },
+
+  "eee_intro_0091": {
+    "ID": "eee_intro_0091",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0092_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "へぇー　また嘘をついた…悪い子だねー　じゃあ、これはなんだ？ 説明して？"
+    }
+  },
+
+  "eee_intro_0092_Branch": {
+    "ID": "eee_intro_0092_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0100_M_[=PType]"
+  },
+
+  "eee_intro_0101": {
+    "ID": "eee_intro_0101",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0102",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あーあ、俺の愛する妻は変態女だ。沢山の男に犯されたと聞くと、アソコがめちゃくちゃ濡れちゃって…　ヘ・ン・タ・イ"
+    }
+  },
+
+  "eee_intro_0102": {
+    "ID": "eee_intro_0102",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0103_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（これを聞くと、[=Name,Maid,0,CallName]は俺のチンポを掴んで、反撃を始めた。）"
+    }
+  },
+
+  "eee_intro_0103_Branch": {
+    "ID": "eee_intro_0103_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0110_M_[=PType]"
+  },
+
+  "eee_intro_0112": {
+    "ID": "eee_intro_0112",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0113_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]の言うことを聞いて…思わずゴクリした）"
+    }
+  },
+
+  "eee_intro_0113_Branch": {
+    "ID": "eee_intro_0113_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0120_M_[=PType]"
+  },
+
+  "eee_intro_0121": {
+    "ID": "eee_intro_0121",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0122_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ…見たい。見たいんだ！俺はどうしようもない変態男だな…自分の妻がたくさんの男にめちゃくちゃされる姿を見たいなんて…"
+    }
+  },
+
+  "eee_intro_0122_Branch": {
+    "ID": "eee_intro_0122_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0130_M_[=PType]"
+  },
+
+  "eee_intro_0131": {
+    "ID": "eee_intro_0131",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0132",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "変態はいいぞー　変態妻は大好き。"
+    }
+  },
+
+  "eee_intro_0132": {
+    "ID": "eee_intro_0132",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0133_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "うーん、「肉便器体験会」、どう？"
+    }
+  },
+
+  "eee_intro_0133_Branch": {
+    "ID": "eee_intro_0133_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0140_M_[=PType]"
+  },
+
+  "eee_intro_0141": {
+    "ID": "eee_intro_0141",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_0142",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_tekoki_aibu.ks",
+        "ScriptLabel": "*キス",
+        "SexPosID": 102,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "接吻"
+        }
+      }
+    ]
+  },
+
+  "eee_intro_0142": {
+    "ID": "eee_intro_0142",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0143",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ああ、俺の妻は本当に愛しいな。そう思うと、ついキスしちゃった。）"
+    }
+  },
+
+  "eee_intro_0143": {
+    "ID": "eee_intro_0143",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_0144",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_tekoki_aibu.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 102,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情"
+        }
+      }
+    ]
+  },
+
+  "eee_intro_0144": {
+    "ID": "eee_intro_0144",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0145_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,Maid,0,CallName]…"
+    }
+  },
+
+  "eee_intro_0145_Branch": {
+    "ID": "eee_intro_0145_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0150_T_[=PType]"
+  },
+
+  "eee_intro_0151": {
+    "ID": "eee_intro_0151",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0152",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ、俺もだ。なんかムラムラしてきた。もう一回ヤってみない？"
+    }
+  },
+
+  "eee_intro_0152": {
+    "ID": "eee_intro_0152",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "eee_intro_0153",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "eee_intro_0153": {
+    "ID": "eee_intro_0153",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_0153a",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 100,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ好感３"
+        }
+      }
+    ]
+  },
+
+  "eee_intro_0153a": {
+    "ID": "eee_intro_0153a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_0154",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-0.89, 1.85, -0.07",
+        "TargetPosString": "0.07, 0.82, -0.58",
+        "AroundAngleString": "118.03, 43.53",
+        "Distance": 1.5
+      }
+    }
+  },
+
+  "eee_intro_0154": {
+    "ID": "eee_intro_0154",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0154a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "[=Name,Maid,0,CallName]がお客様の肉便器になる前に、いーっぱいヤろ？　マンコが俺のチンポの形になるまで突きまくってあげるよ。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "eee_intro_0154a": {
+    "ID": "eee_intro_0154a",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_0155_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*挿入",
+        "SexPosID": 100,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "eee_intro_0155_Branch": {
+    "ID": "eee_intro_0155_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0160_M_[=PType]"
+  },
+
+  "eee_intro_0161": {
+    "ID": "eee_intro_0161",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_0162",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*抱き付き激しさ２",
+        "SexPosID": 100,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "eee_intro_0162": {
+    "ID": "eee_intro_0162",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0163",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "んん…いいねぇ……めっちゃ興奮してきた！何があっても……愛しているよ！たとえ[=Name,Maid,0,CallName]がたくさんのお客様に犯されても俺は抱くよ！"
+    }
+  },
+
+  "eee_intro_0163": {
+    "ID": "eee_intro_0163",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_0164_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_seijyoui.ks",
+        "ScriptLabel": "*抱き付き激しさ３キス",
+        "SexPosID": 100,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "接吻"
+        }
+      }
+    ]
+  },
+
+  "eee_intro_0164_Branch": {
+    "ID": "eee_intro_0164_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_intro_0170_T_[=PType]"
+  },
+
+  "eee_intro_0171": {
+    "ID": "eee_intro_0171",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0172",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（結局、さっきよりもずっと良いセックスができた。これは変態プレイを期待して興奮した夫婦だった。）"
+    }
+  },
+
+  "eee_intro_0172": {
+    "ID": "eee_intro_0172",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "eee_intro_0173",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "eee_intro_0173": {
+    "ID": "eee_intro_0173",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "eee_intro_0174"
+  },
+
+  "eee_intro_0174": {
+    "ID": "eee_intro_0174",
+    "Type": "BG",
+    "Tag": "ShinShitsumu",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_0175"
+  },
+
+  "eee_intro_0175": {
+    "ID": "eee_intro_0175",
+    "Type": "BGM",
+    "Tag": "BGM015.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_0176"
+  },
+
+  "eee_intro_0176": {
+    "ID": "eee_intro_0176",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "eee_intro_yotogiplay_phase1_closepanel",
+    "NextStepID": "eee_intro_0177",
     "CharaData": [
       {
-        "Type": "M_ALL",
-        "Visible": true
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組"
+        },
+        "PosRot": {
+          "PosString": "0.0, 0.5, -3.4",
+          "RotString": "0.0, 0.0, 0.0, 1.0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": false,
+        "PosRot": {
+          "PosString": "0, 0, 0",
+          "RotString": "0, 0, 0, 1"
+        }
       }
+
     ]
   },
 
-
-  "eee_intro_yotogiplay_phase1_closepanel": {
-    "ID": "eee_intro_yotogiplay_phase1_closepanel",
-    "Type": "CloseMsgPanel",
+  "eee_intro_0177": {
+    "ID": "eee_intro_0177",
+    "Type": "Camera",
     "WaitingType": "Auto",
-    "NextStepID": "eee_start_yotogiplay_phase1"
+    "NextStepID": "eee_intro_0178",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "0,1.6,0.9",
+        "TargetPosString": "-0.1,1.5,-0.1",
+        "AroundAngleString": "-179.6,5.3",
+        "Distance": 1
+      }
+    }
   },
 
-
-
-
-  "eee_start_yotogiplay_phase1": {
-    "ID": "eee_start_yotogiplay_phase1",
-    "Type": "LoadYotogi",
-    "Tag": "SceneYotogi",
-    "WaitingType": "LoadScene",
-    "YotogiSetup": {
-      "YotogiCode": "ExpExchangeEvent",
-      "Phase": 1,
-      "IsKeepCharacterVisibleAfterYotogi": true,
-      "IsFinalYotogi": true,
-      "IsClubOwnerMainCharacter": false,
-      "IsApplyTallyCounterTexture": true
+  "eee_intro_0178": {
+    "ID": "eee_intro_0178",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0179",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "翌日"
     },
-    "NextStepID": "eee_post_yotogi"
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "eee_intro_0179": {
+    "ID": "eee_intro_0179",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0180",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "さて、次回のイベントのテーマは決まった。でも、まだ詳細を考える必要がある。"
+    }
+  },
+
+  "eee_intro_0180": {
+    "ID": "eee_intro_0180",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "屈辱感を高めるにはたくさんのお客様が必要だ。そのためには広い場所が必要で……うーん、劇場がこれにぴったりだな。"
+    }
+  },
+
+  "eee_intro_0181": {
+    "ID": "eee_intro_0181",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0182",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "そして、新規客を招待しなければなりません。常連客には不向きだ。常連客が来ると、メイドたちがいつもの変態プレイだと思い込むだけだからな。"
+    }
+  },
+
+  "eee_intro_0182": {
+    "ID": "eee_intro_0182",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0183",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "たくさんの見知らぬ人に自分の体をさらす、そして、その人たちに犯される……うまくいけば、常連客になるかもしれない。一石二鳥だ。"
+    }
+  },
+
+  "eee_intro_0183": {
+    "ID": "eee_intro_0183",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0184",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "次は、どの拘束方法を使うか。うーん、二つの案がある。"
+    }
+  },
+
+  "eee_intro_0184": {
+    "ID": "eee_intro_0184",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0185",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "一つは、鎖と拘束具を追加。メイドたちを鎖で繋ぎ、恥辱の姿をお客様に晒せ。　ん……あ、そうだ、さらに目も覆いましょう。……うん！これでいい！"
+    }
+  },
+
+  "eee_intro_0185": {
+    "ID": "eee_intro_0185",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0186",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "もう一つは、可動式の壁を追加。こうすればみんな大好きな壁尻プレイができる。"
+    }
+  },
+
+  "eee_intro_0186": {
+    "ID": "eee_intro_0186",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_0187",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "時間を考慮すると、おそらくどっちか一方しか追加できない。さて、どっちがより面白いのか……"
+    }
+  },
+
+  "eee_intro_0187": {
+    "ID": "eee_intro_0187",
+    "Type": "List",
+    "WaitingType": "InputChoice",
+    "NextStepID": "eee_intro_0188_Branch",
+    "ChoiceData": {
+      "Variable": "PlayType",
+      "Options": [
+        {
+          "Key": "OptChain",
+          "Value": "鎖と拘束具"
+        },
+        {
+          "Key": "OptWall",
+          "Value": "壁尻"
+        }
+      ]
+    }
+  },
+
+  "eee_intro_0188_Branch": {
+    "ID": "eee_intro_0188_Branch",
+    "Type": "Branch",
+    "WaitingType": "Branch",
+    "BranchData": {
+      "VariableName": "PlayType",
+      "BranchList": [
+        {
+          "Value": "OptChain",
+          "NextStepID": "eee_intro_chain_0001"
+        },
+        {
+          "Value": "OptWall",
+          "NextStepID": "eee_intro_wall_0001"
+        }
+      ]
+    }
   }
 }

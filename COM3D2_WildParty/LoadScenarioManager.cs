@@ -302,7 +302,16 @@ namespace COM3D2.WildParty.Plugin
         };
 
         private static readonly string[] ScenarioExpExchangeEventResList = {
-            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADVIntro
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADVIntro,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADVIntroTheater,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADVButtockWall,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADVChains,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADVPostYotogiButtockWall,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADVPostYotogiChains,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADVPostYotogiTheater,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADVPostYotogiBedroom,
+
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Muku
         };
 
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)

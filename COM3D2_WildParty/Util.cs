@@ -655,6 +655,16 @@ namespace COM3D2.WildParty.Plugin
             return null;
         }
 
+        internal static void SetCustomVariable(string name, string value)
+        {
+            if (StateManager.Instance.CustomVariable.ContainsKey(name))
+                StateManager.Instance.CustomVariable.Remove(name);
+
+            StateManager.Instance.CustomVariable.Add(name, value);
+        }
+
+
+
         internal static void ParseRawOffsetString(string offsetString, out Vector3 pos, out Vector3 rot)
         {
             string[] split = offsetString.Split('|');

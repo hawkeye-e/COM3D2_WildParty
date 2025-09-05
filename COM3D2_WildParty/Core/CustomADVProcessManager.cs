@@ -33,7 +33,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 //We dont want to process this over and over again if we are waiting for user input
                 if (StateManager.Instance.ProcessedADVStepID != StateManager.Instance.CurrentADVStepID)
                 {
-
+                    
                     //ADVStep thisStep = StateManager.Instance.dicADVSceneSteps[StateManager.Instance.CurrentADVStepID];
                     ADVStep thisStep = ModUseData.ADVStepData[StateManager.Instance.UndergoingModEventID][StateManager.Instance.CurrentADVStepID];
 
@@ -81,6 +81,9 @@ namespace COM3D2.WildParty.Plugin.Core
                         case Constant.ADVType.CharaInit:
                             ProcessADVCharaInit(instance, thisStep);
                             break;
+                        case Constant.ADVType.Branch:
+                            ProcessADVBranch(instance, thisStep);
+                            break;
                         case Constant.ADVType.BranchByPersonality:
                             ProcessADVBranchByPersonality(instance, thisStep);
                             break;
@@ -107,6 +110,9 @@ namespace COM3D2.WildParty.Plugin.Core
                             break;
                         case Constant.ADVType.RemoveObject:
                             ProcessADVRemoveObject(instance, thisStep);
+                            break;
+                        case Constant.ADVType.ShowChoiceList:
+                            ProcessADVShowChoiceList(instance, thisStep);
                             break;
                         case Constant.ADVType.Shuffle:
                             ProcessADVShuffle(instance, thisStep);
@@ -1018,6 +1024,24 @@ namespace COM3D2.WildParty.Plugin.Core
             instance.TagSceneCall(tagSceneCall);
         }
 
+        private static void ProcessADVBranch(ADVKagManager instance, ADVStep step)
+        {
+            if (step.BranchData != null)
+            {
+                string varObject = StateManager.Instance.CustomVariable[step.BranchData.VariableName];
+
+                foreach (var branchItem in step.BranchData.BranchList)
+                {
+                    if (varObject == branchItem.Value)
+                    {
+                        ADVSceneProceedToNextStep(branchItem.NextStepID);
+                        break;
+                    }
+                }
+
+            }
+        }
+        
         private static void ProcessADVBranchByPersonality(ADVKagManager instance, ADVStep step)
         {
             StateManager.Instance.BranchIndex = step.CharaData[0].ArrayPosition;
@@ -1215,7 +1239,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
             }
         }
-        
+
         private static void ProcessADVRemoveObject(ADVKagManager instance, ADVStep step)
         {
             if (step.WorldObjectData != null)
@@ -1234,6 +1258,30 @@ namespace COM3D2.WildParty.Plugin.Core
                         StateManager.Instance.AddedCustomGameObjectList.Remove(objData.ObjectID);
                     }
                 }
+            }
+        }
+
+        private static void ProcessADVShowChoiceList(ADVKagManager instance, ADVStep step)
+        {
+            if (step.ChoiceData != null)
+            {
+                //Key: Display Text;    Value.Key: Value;    Value.Value: IsEnabled
+                List<KeyValuePair<string, KeyValuePair<string, bool>>> lstChoice = new List<KeyValuePair<string, KeyValuePair<string, bool>>>();
+
+                foreach (var choice in step.ChoiceData.Options)
+                {
+                    lstChoice.Add(new KeyValuePair<string, KeyValuePair<string, bool>>(choice.Value, new KeyValuePair<string, bool>(choice.Key, true)));
+                }
+
+
+                Action<string, string> onClickCallBack = delegate (string displayText, string value)
+                {
+                    //proceed to next step
+                    Util.SetCustomVariable(step.ChoiceData.Variable, value);
+                    ADVSceneProceedToNextStep();
+                };
+
+                instance.MessageWindowMgr.CreateSelectButtons(lstChoice, onClickCallBack);
             }
         }
 

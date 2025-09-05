@@ -26,7 +26,7 @@ namespace COM3D2.WildParty.Plugin
         public Fade FadeData;
         public Talk TalkData;
         public Camera CameraData;
-        public Choice[] ChoiceData;
+        public Choice ChoiceData;
         public CharaInit CharaInitData;
         public ShowChara[] CharaData;
         public ShowGroupMotion[] GroupData;       //Separate from ShowChara to not making things over complicated
@@ -40,6 +40,8 @@ namespace COM3D2.WildParty.Plugin
         public RandomPick PickData;             //This is for ordering to randomly pick some characters for later adv processing
         public List<MakeGroupFormat> GroupFormat;     //Assign group to perform group motion in ADV scene etc
         public ConvertSex ConvertSexData;
+
+        public Branch BranchData;
 
         internal class Fade
         {
@@ -144,8 +146,14 @@ namespace COM3D2.WildParty.Plugin
 
         internal class Choice
         {
-            public string Key;
-            public string Value;
+            public string Variable;
+            public List<ChoiceOption> Options;
+
+            public class ChoiceOption
+            {
+                public string Key;
+                public string Value;
+            }
         }
 
         internal class CharaInit
@@ -372,6 +380,18 @@ namespace COM3D2.WildParty.Plugin
             {
                 public string Type;                         //Use Constant.TargetType
                 public int ArrayPosition;
+            }
+        }
+
+        internal class Branch
+        {
+            public string VariableName;     //The variable that used to compared
+            public List<BranchItem> BranchList;
+
+            public class BranchItem
+            {
+                public string Value;        //string only
+                public string NextStepID;
             }
         }
 

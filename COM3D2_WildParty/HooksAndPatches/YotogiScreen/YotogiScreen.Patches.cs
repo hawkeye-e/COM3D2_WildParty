@@ -349,11 +349,12 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                     //Remove IK attach so that no weird animation after yotogi
                     group.ForceIKAttach.Clear();
                 }
-
+                
                 //Some motion script will keep changing character's animation over time. Need to call them to stop so that in the ADV after yotogi will not switch animation suddenly.
                 GameMain.Instance.ScriptMgr.StopMotionScript();
 
                 PartyGroup.SharedExtraManList.Clear();
+                PartyGroup.BackgroundManList.Clear();
 
                 //To fix the invalid status that causing the scene unable to go through the finish process when player click "next" in the yotogi play scene.
                 if (instance.fade_status != WfScreenChildren.FadeStatus.Wait)

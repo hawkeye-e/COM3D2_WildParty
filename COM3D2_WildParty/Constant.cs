@@ -297,6 +297,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string LoadScene = "LoadScene";
 
             internal const string CharaInit = "CharaInit";
+            internal const string Branch = "Branch";
             internal const string BranchByPersonality = "BranchByPersonality";
             internal const string BranchByMap = "BranchByMap";
             
@@ -726,6 +727,11 @@ namespace COM3D2.WildParty.Plugin
                 internal const string Mouth = "Mouth";
                 internal const string Face = "Face";
             }
+        }
+
+        internal static class SpecialCustomVariable
+        {
+            internal const string TallyCountIndex = "TallyCountIndex";
         }
     }
 }

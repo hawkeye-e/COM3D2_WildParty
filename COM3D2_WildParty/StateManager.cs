@@ -48,6 +48,9 @@ namespace COM3D2.WildParty.Plugin
         internal Dictionary<string, GameObject> AddedGameObjectList = new Dictionary<string, GameObject>();
         internal Dictionary<string, GameObject> AddedCustomGameObjectList = new Dictionary<string, GameObject>();
 
+        //Key: Variable name defined in scenario json.
+        internal Dictionary<string, string> CustomVariable = new Dictionary<string, string>();
+
         internal int MaxManUsed = -1;
 
         internal int UndergoingModEventID = -1;                     //A number as to fit the data type of the schedule event in the game

@@ -175,6 +175,8 @@ namespace COM3D2.WildParty.Plugin.Core
             Util.ClearGenericCollection(StateManager.Instance.ConvertedMaidFacialUpdateControlList);
             Util.ClearGenericCollection(StateManager.Instance.WaitForYotogiProcessList);
 
+            Util.ClearGenericCollection(StateManager.Instance.CustomVariable);
+
             StateManager.Instance.RequireCheckModdedSceneFlag = false;
             StateManager.Instance.WaitForCharactersFullLoadFlag = false;
             StateManager.Instance.RequireInjectCommandButtons = false;

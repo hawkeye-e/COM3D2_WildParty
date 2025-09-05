@@ -733,7 +733,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 //find the queue order of this group
 
                 int queueOrder = coordinateListInfo.GroupCoordinates.Where(x => x.ArrayPosition == i).First().QueueOrder;
-                //WildParty.Log.LogInfo("pt 0 " + queueOrder);
+                
                 if (queueOrder == lastQueueOrderNumber || queueOrder < 0)
                     continue;
 
