@@ -3,11 +3,38 @@
     "ID": "eee_post_yotogi_common_bedroom_0001",
     "Type": "CloseMsgPanel",
     "WaitingType": "FadeOut",
-    "NextStepID": "eee_post_yotogi_common_bedroom_0001a",
+    "NextStepID": "eee_post_yotogi_common_bedroom_0001_clearup",
     "FadeData": {
       "IsFadeIn": false,
       "IsFadeOut": true
     }
+  },
+
+  "eee_post_yotogi_common_bedroom_0001_clearup": {
+    "ID": "eee_post_yotogi_common_bedroom_0001_clearup",
+    "Type": "RemoveObject",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_common_bedroom_0001a",
+    "WorldObjectData": [
+      {
+        "ObjectID": "mod_wall_ass_wall"
+      },
+      {
+        "ObjectID": "mod_intro_table1"
+      },
+      {
+        "ObjectID": "mod_intro_table2"
+      },
+      {
+        "ObjectID": "mod_intro_table3"
+      },
+      {
+        "ObjectID": "mod_intro_table4"
+      },
+      {
+        "ObjectID": "mod_intro_table5"
+      }
+    ]
   },
 
   "eee_post_yotogi_common_bedroom_0001a": {
@@ -515,7 +542,7 @@
     "NextStepID": "eee_post_yotogi_common_bedroom_0078_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "さて、俺はみんなが楽しんでいるのを見るばかり、今すごくムラムラしてきた。今は肉便器妻を使う時だ。さあさあ、お尻をこっちに向けて。"
+      "Text": "さて、俺はみんなが楽しんでいるのを見るばかり、今すごくムラムラしてきた。　今は肉便器妻を使う時だ。　今夜は寝せないぞー"
     }
   },
 
@@ -595,7 +622,7 @@
     "NextStepID": "eee_post_yotogi_common_bedroom_0102",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ああ…"
+      "Text": "ああ……さあみんな、お尻をこっちに向けて。"
     }
   },
 

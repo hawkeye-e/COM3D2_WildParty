@@ -311,7 +311,26 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADVPostYotogiTheater,
             ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADVPostYotogiBedroom,
 
-            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Muku
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Muku,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Majime,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Rindere,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Pure,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Pride,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Cool,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Yandere,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Anesan,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Genki,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Sadist,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Silent,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Devilish,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Ladylike,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Secretary,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Sister,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Curtness,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Missy,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Childhood,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Friendly,
+            ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Dame,
         };
 
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)
