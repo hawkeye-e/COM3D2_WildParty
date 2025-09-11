@@ -1044,9 +1044,13 @@ namespace COM3D2.WildParty.Plugin.Core
         
         private static void ProcessADVBranchByPersonality(ADVKagManager instance, ADVStep step)
         {
-            StateManager.Instance.BranchIndex = step.CharaData[0].ArrayPosition;
+            int position = step.CharaData[0].ArrayPosition;
+            if (!string.IsNullOrEmpty(step.CharaData[0].UseVariableAsArrayPosition))
+                position = int.Parse(StateManager.Instance.CustomVariable[step.CharaData[0].UseVariableAsArrayPosition]);
 
-            string personalityName = Util.GetPersonalityNameByValue(StateManager.Instance.SelectedMaidsList[step.CharaData[0].ArrayPosition].status.personal.id);
+            StateManager.Instance.BranchIndex = position;
+
+            string personalityName = Util.GetPersonalityNameByValue(StateManager.Instance.SelectedMaidsList[position].status.personal.id);
 
             string nextStepID = step.NextStepID;
             nextStepID = nextStepID.Replace(Constant.JsonReplaceTextLabels.PersonalityType, personalityName);

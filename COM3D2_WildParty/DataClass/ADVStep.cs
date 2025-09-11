@@ -195,6 +195,7 @@ namespace COM3D2.WildParty.Plugin
             public string Type;
             public int ArrayPosition;
             public bool UseBranchIndex = false;
+            public string UseVariableAsArrayPosition = "";              //For Branch by Personality use.
 
             //In some scenario the master may be removed from the array, use this flag if want to do any setup with it in the adv. 
             //If this is set to true, the ArrayPosition has to be set to zero
