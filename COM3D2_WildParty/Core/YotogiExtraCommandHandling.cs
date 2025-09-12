@@ -1235,6 +1235,7 @@ namespace COM3D2.WildParty.Plugin.Core
                            .Replace(Constant.JsonReplaceTextLabels.SexPosRequired, sexPosRequired.ToString())
                            .Replace(Constant.JsonReplaceTextLabels.FullTallyMarkCount, fetishInfo.Conditions.FullTallyMarkCount.ToString())
                            .Replace(Constant.JsonReplaceTextLabels.CurrentTallyMarkCount, Helper.TallyCounterMarker.GetFullTallyMarkCount(maid).ToString())
+                           .Replace(Constant.JsonReplaceTextLabels.CurrentSexPosCount, currentSexPosCount.ToString())
                            ;
         }
 

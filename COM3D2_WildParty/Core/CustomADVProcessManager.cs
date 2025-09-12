@@ -153,6 +153,7 @@ namespace COM3D2.WildParty.Plugin.Core
                                 };
                             }
                             CharacterHandling.StopAllMaidSound();
+                            ClearDelayExecutionQueue();
                             GameMain.Instance.MainCamera.FadeOut(f_dg: dg, f_fTime: thisStep.FadeData.Time, f_color: thisStep.FadeData.Color);
                         }
                     }
@@ -1607,6 +1608,11 @@ namespace COM3D2.WildParty.Plugin.Core
         private static void ADVMotionChangeComplete()
         {
             StateManager.Instance.WaitForMotionChange = false;
+        }
+
+        private static void ClearDelayExecutionQueue()
+        {
+            StateManager.Instance.ADVTimeEndTriggerList.Clear();
         }
     }
 }
