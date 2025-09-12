@@ -18,7 +18,7 @@ namespace COM3D2.WildParty.Plugin
     {
         public const string PluginName = "WildParty";
         public const string GUID = "COM3D2.WildParty.Plugin";
-        public const string Version = "0.8.0";
+        public const string Version = "0.9.0";
 
         internal static ManualLogSource Log;
 
@@ -26,6 +26,13 @@ namespace COM3D2.WildParty.Plugin
         {
             // Plugin startup logic
             Log = base.Logger;
+
+            if (!IsGameVersionCorrect())
+            {
+                Log.LogInfo($"Incorrect dll version! Abandon all patching.");
+                return;
+            }
+
             Log.LogInfo($"Plugin {GUID} is loaded!");
 
             Plugin.Config.Init(this);
@@ -57,7 +64,28 @@ namespace COM3D2.WildParty.Plugin
                     Log.LogInfo(ex.StackTrace);
                 }
             }
+        }
 
+        private static bool IsGameVersionCorrect()
+        {
+            string gameVersionText = GameUty.GetGameVersionText();
+#if COM3D2_5
+#if UNITY_2022_3
+            if (gameVersionText.StartsWith("3"))
+                return true;
+            else
+                NDebug.MessageBox("Plugin Error", "Your COM3D2 is V2.5 but the WildParty mod you are using is V2 version. Please download the V2.5 version dll instead.");
+#endif
+#endif
+
+#if COM3D2
+            if (gameVersionText.StartsWith("2"))
+                return true;
+            else
+                NDebug.MessageBox("Plugin Error", "Your COM3D2 is V2 but the WildParty mod you are using is V2.5 version. Please download the V2 version dll instead.");
+#endif
+
+            return false;
         }
 
 
