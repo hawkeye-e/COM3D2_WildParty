@@ -118,21 +118,26 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
             return null;
         }
 
-        internal static Texture2D LoadTallyCounterTexture(string fileName)
+        internal static Texture2D LoadBodyWritingTexture(string fileName)
         {
-            if (Helper.TallyCounterMarker.TallyCounterTextureNames.ContainsKey(fileName))
+            if (Helper.BodyWritingsMarker.IsFileNameExistsInBodyWritingTextureList(fileName))
             {
-                System.IO.MemoryStream mStream = new System.IO.MemoryStream();
+                Texture2D tex = null;
 
-                var bitmap = Helper.TallyCounterMarker.TallyCounterTextureNames[fileName];
-                bitmap.Save(mStream, bitmap.RawFormat);
+                using (System.IO.MemoryStream mStream = new System.IO.MemoryStream())
+                {
+                    using (System.Drawing.Bitmap bitmap = (System.Drawing.Bitmap)ModResources.ImageResources.ResourceManager.GetObject(fileName))
+                    {
+                        bitmap.Save(mStream, bitmap.RawFormat);
 
-                Texture2D tex = new Texture2D(50, 50);
-                ImageConversion.LoadImage(tex, mStream.ToArray());
+                        tex = new Texture2D(bitmap.Width, bitmap.Height);
+                        ImageConversion.LoadImage(tex, mStream.ToArray());
+                    }
+                }
+                    
 
                 return tex;
             }
-
 
             return null;
         }
@@ -173,21 +178,26 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
             return null;
         }
 
-        internal static Texture2D LoadTallyCounterTexture(string fileName)
+        internal static Texture2D LoadBodyWritingTexture(string fileName)
         {
-            if (Helper.TallyCounterMarker.TallyCounterTextureNames.ContainsKey(fileName))
+            if (Helper.BodyWritingsMarker.IsFileNameExistsInBodyWritingTextureList(fileName))
             {
-                System.IO.MemoryStream mStream = new System.IO.MemoryStream();
+                Texture2D tex = null;
 
-                var bitmap = Helper.TallyCounterMarker.TallyCounterTextureNames[fileName];
-                bitmap.Save(mStream, bitmap.RawFormat);
+                using (System.IO.MemoryStream mStream = new System.IO.MemoryStream())
+                {
+                    using (System.Drawing.Bitmap bitmap = (System.Drawing.Bitmap)ModResources.ImageResources.ResourceManager.GetObject(fileName))
+                    {
+                        bitmap.Save(mStream, bitmap.RawFormat);
 
-                Texture2D tex = new Texture2D(50, 50);
-                tex.LoadImage(mStream.ToArray());
+                        tex = new Texture2D(bitmap.Width, bitmap.Height);
+                        tex.LoadImage(mStream.ToArray());
+                    }
+                }
+
 
                 return tex;
             }
-
 
             return null;
         }

@@ -140,7 +140,7 @@ namespace COM3D2.WildParty.Plugin.Core
             int maxCount = -1;
             for(int i = 0; i < StateManager.Instance.SelectedMaidsList.Count; i++)
             {
-                int count = Helper.TallyCounterMarker.GetTallyMarkCount(StateManager.Instance.SelectedMaidsList[i]);
+                int count = Helper.BodyWritingsMarker.GetTallyMarkCount(StateManager.Instance.SelectedMaidsList[i]);
                 if (maxCount < count)
                 {
                     maxCount = count;

@@ -125,7 +125,7 @@ namespace COM3D2.WildParty.Plugin
         internal bool IsYotogiUseModSemenPattern = false;
 
         internal bool IsApplyTallyCounterTexture = false;
-        internal Helper.TallyCounterMarker.TextureType TallyCountMarkerType = Helper.TallyCounterMarker.TextureType.Kanji;
+        internal Helper.BodyWritingsMarker.TextureType TallyCountMarkerType = Helper.BodyWritingsMarker.TextureType.Kanji;
 
         internal bool ForceAnimationNoFade = false;
         internal bool IsEyeMaskEnabled = true;                  //Can be altered by user during yotogi game play

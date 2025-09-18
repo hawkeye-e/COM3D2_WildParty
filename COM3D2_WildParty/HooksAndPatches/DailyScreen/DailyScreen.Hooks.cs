@@ -45,7 +45,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
             Texture2D icon = Patches.LoadModScenarioIcon(f_strFileName);
 
             if (icon == null)
-                icon = Patches.LoadTallyCounterTexture(f_strFileName);
+                icon = Patches.LoadBodyWritingTexture(f_strFileName);
 
             if (icon != null)
             {

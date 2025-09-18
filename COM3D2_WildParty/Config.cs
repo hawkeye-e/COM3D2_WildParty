@@ -129,8 +129,8 @@ namespace COM3D2.WildParty.Plugin
         internal static ManTypeOption ExpExchangeEventManType { get { return _expExchangeEventManType.Value; } }
         private static ConfigEntry<ManTypeOption> _expExchangeEventManType;
 
-        internal static Helper.TallyCounterMarker.TextureType TallyCounterMarkType { get { return _tallyCountMarkerType.Value; } }
-        private static ConfigEntry<Helper.TallyCounterMarker.TextureType> _tallyCountMarkerType;
+        internal static Helper.BodyWritingsMarker.TextureType TallyCounterMarkType { get { return _tallyCountMarkerType.Value; } }
+        private static ConfigEntry<Helper.BodyWritingsMarker.TextureType> _tallyCountMarkerType;
 
         internal static void Init(BaseUnityPlugin plugin)
         {
@@ -281,7 +281,7 @@ namespace COM3D2.WildParty.Plugin
             _isTriggerConditionOn = plugin.Config.Bind(YOTOGISETTING, "Command Trigger Condition", true, "On: The player is required to do achieve some small goals in order to click certain command buttons in the yotogi scene. \n Off: The trigger conditions are ignored and the player can click the command buttons freely.");
 
             _tallyCountMarkerType = plugin.Config.Bind(YOTOGISETTING, "Tally Count Marker Type",
-                Helper.TallyCounterMarker.TextureType.Kanji,
+                Helper.BodyWritingsMarker.TextureType.Kanji,
                 "The marker type used to mark on the maid's body. Only applied to certain NTR scenario.");
         }
 

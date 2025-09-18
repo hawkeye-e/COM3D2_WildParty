@@ -1064,7 +1064,7 @@ namespace COM3D2.WildParty.Plugin.Core
                     isAllFulfilled = isAllFulfilled && (progressInfo.MaidOrgasmCount >= fetishInfo.Conditions.MaidOrgasmCount);
                     isAllFulfilled = isAllFulfilled && (progressInfo.SexPositionOrgasmInfo.Count >= fetishInfo.Conditions.PositionOrgasmCount);
 
-                    isAllFulfilled = isAllFulfilled && (Helper.TallyCounterMarker.GetFullTallyMarkCount(maid) >= fetishInfo.Conditions.FullTallyMarkCount);
+                    isAllFulfilled = isAllFulfilled && (Helper.BodyWritingsMarker.GetFullTallyMarkCount(maid) >= fetishInfo.Conditions.FullTallyMarkCount);
 
                     if (fetishInfo.Conditions.SexPosRequired != null)
                     {
@@ -1234,7 +1234,7 @@ namespace COM3D2.WildParty.Plugin.Core
                            .Replace(Constant.JsonReplaceTextLabels.CurrentPositionOrgasmCount, progressInfo.SexPositionOrgasmInfo.Count.ToString())
                            .Replace(Constant.JsonReplaceTextLabels.SexPosRequired, sexPosRequired.ToString())
                            .Replace(Constant.JsonReplaceTextLabels.FullTallyMarkCount, fetishInfo.Conditions.FullTallyMarkCount.ToString())
-                           .Replace(Constant.JsonReplaceTextLabels.CurrentTallyMarkCount, Helper.TallyCounterMarker.GetFullTallyMarkCount(maid).ToString())
+                           .Replace(Constant.JsonReplaceTextLabels.CurrentTallyMarkCount, Helper.BodyWritingsMarker.GetFullTallyMarkCount(maid).ToString())
                            .Replace(Constant.JsonReplaceTextLabels.CurrentSexPosCount, currentSexPosCount.ToString())
                            ;
         }

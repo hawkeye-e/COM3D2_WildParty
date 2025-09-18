@@ -67,6 +67,12 @@ namespace COM3D2.WildParty.Plugin
         //Key: HardCode Motion Code
         public static Dictionary<string, HardCodeMotionSetup> HardCodeMotionSetupList;
 
+        public static Dictionary<BodyWritingSetupInfo.BodyPart, List<BodyWritingSetupInfo>> BodyWritingBodyTextSetupList;
+        public static Dictionary<BodyWritingSetupInfo.BodyPart, List<BodyWritingSetupInfo>> BodyWritingTallyCountSetupList;
+
+        //Key: texture type
+        public static Dictionary<string, List<BodyWritingTextureInfo>> BodyWritingTextureList;
+
         public ModUseData()
         {
         }
@@ -110,6 +116,11 @@ namespace COM3D2.WildParty.Plugin
             CommandChainedActionList = Newtonsoft.Json.JsonConvert.DeserializeObject< Dictionary<string, CommandChainedAction>> (ModResources.TextResource.CommandChainedAction);
 
             HardCodeMotionSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, HardCodeMotionSetup>>(ModResources.TextResource.HardCodeMotionSetup);
+
+            BodyWritingBodyTextSetupList = BodyWritingSetupInfo.ReadCSVFile(ModResources.TextResource.BodyWritingBodyTextSetup);
+            BodyWritingTallyCountSetupList = BodyWritingSetupInfo.ReadCSVFile(ModResources.TextResource.BodyWritingTallyCountSetup);
+
+            BodyWritingTextureList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, List<BodyWritingTextureInfo>>>(ModResources.TextResource.BodyWritingTextureFileList);
         }
 
         public static void InitDataForScenario(int scenarioID)

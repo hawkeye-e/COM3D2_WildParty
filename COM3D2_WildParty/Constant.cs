@@ -638,11 +638,17 @@ namespace COM3D2.WildParty.Plugin
         internal static class TextureType
         {
             internal const string Semen = "Semen";
+
+            internal const string BodyWritingTallyCount = "TallyCount";
+            internal const string BodyWritingWholeBodyText = "BodyText";
         }
 
         internal static class TextureLayer
         {
             internal const int Semen = 18;
+
+            internal const int BodyWritingTallyCount = 98;
+            internal const int BodyWritingWholeBodyText = 99;
         }
 
         internal static class YotogiProgressFieldName

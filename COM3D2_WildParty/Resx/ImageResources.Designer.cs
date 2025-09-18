@@ -61,6 +61,1806 @@ namespace ModResources {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_1_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_1_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_1_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_1_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_1_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_1_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_10_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_10_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_10_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_10_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_10_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_10_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_11_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_11_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_11_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_11_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_11_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_11_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_12_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_12_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_12_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_12_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_12_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_12_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_13_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_13_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_13_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_13_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_13_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_13_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_14_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_14_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_14_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_14_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_14_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_14_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_15_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_15_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_15_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_15_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_15_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_15_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_2_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_2_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_2_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_2_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_2_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_2_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_3_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_3_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_3_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_3_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_3_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_3_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_4_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_4_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_4_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_4_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_4_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_4_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_5_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_5_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_5_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_5_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_5_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_5_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_6_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_6_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_6_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_6_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_6_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_6_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_7_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_7_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_7_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_7_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_7_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_7_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_8_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_8_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_8_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_8_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_8_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_8_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_9_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_9_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_9_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_9_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_en_9_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_en_9_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_1_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_1_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_1_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_1_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_1_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_1_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_10_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_10_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_10_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_10_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_10_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_10_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_11_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_11_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_11_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_11_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_11_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_11_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_12_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_12_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_12_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_12_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_12_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_12_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_13_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_13_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_13_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_13_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_13_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_13_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_14_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_14_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_14_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_14_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_14_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_14_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_15_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_15_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_15_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_15_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_15_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_15_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_2_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_2_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_2_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_2_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_2_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_2_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_3_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_3_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_3_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_3_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_3_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_3_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_4_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_4_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_4_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_4_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_4_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_4_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_5_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_5_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_5_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_5_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_5_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_5_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_6_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_6_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_6_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_6_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_6_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_6_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_7_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_7_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_7_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_7_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_7_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_7_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_8_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_8_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_8_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_8_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_8_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_8_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_9_1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_9_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_9_2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_9_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_back_jp_9_3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_back_jp_9_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_a1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_a1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_a2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_a2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_a3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_a3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_b1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_b1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_b2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_b2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_b3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_b3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_c1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_c1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_c2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_c2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_c3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_c3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_d1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_d1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_d2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_d2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_d3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_d3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_e1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_e1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_e2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_e2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_e3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_e3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_f1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_f1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_f2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_f2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_f3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_f3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_g1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_g1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_g2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_g2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_g3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_g3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_h1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_h1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_h2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_h2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_h3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_h3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_i1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_i1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_i2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_i2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_i3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_i3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_j1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_j1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_j2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_j2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_j3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_j3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_k1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_k1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_k2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_k2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_k3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_k3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_l1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_l1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_l2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_l2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_l3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_l3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_m1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_m1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_m2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_m2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_m3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_m3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_p1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_p1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_p2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_p2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_p3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_p3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_q1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_q1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_q2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_q2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_en_q3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_en_q3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_a1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_a1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_a2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_a2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_a3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_a3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_b1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_b1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_b2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_b2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_b3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_b3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_c1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_c1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_c2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_c2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_c3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_c3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_d1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_d1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_d2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_d2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_d3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_d3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_e1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_e1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_e2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_e2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_e3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_e3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_f1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_f1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_f2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_f2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_f3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_f3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_g1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_g1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_g2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_g2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_g3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_g3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_h1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_h1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_h2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_h2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_h3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_h3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_i1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_i1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_i2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_i2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_i3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_i3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_j1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_j1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_j2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_j2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_j3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_j3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_k1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_k1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_k2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_k2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_k3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_k3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_l1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_l1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_l2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_l2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_l3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_l3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_m1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_m1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_m2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_m2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_m3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_m3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_p1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_p1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_p2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_p2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_p3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_p3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_q1 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_q1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_q2 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_q2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap body_writing_front_jp_q3 {
+            get {
+                object obj = ResourceManager.GetObject("body_writing_front_jp_q3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to mod_icon_exp_exchange_event.tex.
         /// </summary>
         internal static string ExpChangeEventFileName {

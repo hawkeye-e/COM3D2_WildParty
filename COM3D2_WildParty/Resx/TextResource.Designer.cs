@@ -61,6 +61,80 @@ namespace ModResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Part,Slot,X,Y,W,H,dummy
+        ///BodyFront,A,500,410,160,30,
+        ///BodyFront,B,450,490,100,100,
+        ///BodyFront,C,570,490,100,100,
+        ///BodyFront,D,510,620,160,60,
+        ///BodyFront,E,510,830,160,60,
+        ///BodyFront,F,450,700,100,120,
+        ///BodyFront,G,570,700,100,120,
+        ///BodyFront,H,120,180,100,240,
+        ///BodyFront,I,890,180,100,240,
+        ///BodyFront,J,160,430,100,200,
+        ///BodyFront,K,870,430,100,200,
+        ///BodyFront,L,150,730,80,160,
+        ///BodyFront,M,900,730,80,160,
+        ///BodyFront,P,130,930,60,140,
+        ///BodyFront,Q,900,930,60,140,
+        ///BodyBack,1,520,300,180,50,
+        ///BodyBack,2,550,2 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string BodyWritingBodyTextSetup {
+            get {
+                return ResourceManager.GetString("BodyWritingBodyTextSetup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Part,Slot,X,Y,W,H,dummy
+        ///LeftThighFront,0,800,70,50,50,
+        ///LeftThighFront,1,800,85,50,50,
+        ///LeftThighFront,2,800,100,50,50,
+        ///LeftThighFront,3,800,115,50,50,
+        ///LeftThighFront,4,800,130,50,50,
+        ///LeftThighFront,5,820,70,50,50,
+        ///LeftThighFront,6,820,85,50,50,
+        ///LeftThighFront,7,820,100,50,50,
+        ///LeftThighFront,8,820,115,50,50,
+        ///LeftThighFront,9,820,130,50,50,
+        ///LeftThighBack,0,980,70,50,50,
+        ///LeftThighBack,1,980,85,50,50,
+        ///LeftThighBack,2,980,100,50,50,
+        ///LeftThighBack,3,980,115,50,50,
+        ///LeftThighBack,4,980,130,50,50,
+        ///Lef [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string BodyWritingTallyCountSetup {
+            get {
+                return ResourceManager.GetString("BodyWritingTallyCountSetup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;FullNude&quot;: {
+        ///    &quot;Slots&quot;: {
+        ///      &quot;acchat&quot;: &quot;_I_acchat_del.menu&quot;,
+        ///      &quot;headset&quot;: &quot;_I_headset_del.menu&quot;,
+        ///      &quot;acckami&quot;: &quot;_I_acckami_del.menu&quot;,
+        ///      &quot;acckamisub&quot;: &quot;_I_acckamisub_del.menu&quot;,
+        ///      &quot;wear&quot;: &quot;_I_wear_del.menu&quot;,
+        ///      &quot;skirt&quot;: &quot;_I_skirt_del.menu&quot;,
+        ///      &quot;megane&quot;: &quot;_I_megane_del.menu&quot;,
+        ///      &quot;acchead&quot;: &quot;_I_acchead_del.menu&quot;,
+        ///      &quot;onepiece&quot;: &quot;_I_onepiece_del.menu&quot;,
+        ///      &quot;mizugi&quot;: &quot;_I_mizugi_del.menu&quot;,
+        ///      &quot;accmimi&quot;: &quot;_I_accmimi_del.menu&quot;,
+        ///      &quot;acchana&quot;: &quot;_I_acchana_del. [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string BodyWritingTextureFileList {
+            get {
+                return ResourceManager.GetString("BodyWritingTextureFileList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {
         ///  &quot;Breath&quot;: {
         ///    &quot;Prefab&quot;: &quot;Particle/pToiki&quot;,

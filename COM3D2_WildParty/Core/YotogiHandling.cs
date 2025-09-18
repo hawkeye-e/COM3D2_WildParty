@@ -1395,12 +1395,12 @@ namespace COM3D2.WildParty.Plugin.Core
 
         }
 
-        internal static void ApplyTallyCounterTexture(Maid maid, TallyCounterMarker.BodySide bodySide)
+        internal static void ApplyTallyCounterTexture(Maid maid, BodyWritingsMarker.BodySide bodySide)
         {
             if (maid == null)
                 return;
 
-            TallyCounterMarker.AddTallyCounterMark(maid, StateManager.Instance.TallyCountMarkerType, bodySide);
+            BodyWritingsMarker.AddTallyCounterMark(maid, StateManager.Instance.TallyCountMarkerType, bodySide);
         }
 
         internal static void AddManToBackgroundList(Maid man)
