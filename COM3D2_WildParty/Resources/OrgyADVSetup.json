@@ -163,7 +163,7 @@
     "ID": "org0021",
     "Type": "CharaInit",
     "WaitingType": "Auto",
-    "NextStepID": "orgy_intro_0001",
+    "NextStepID": "org0021a",
     "CharaInitData": {
       "IsClubOwnerADVMainCharacter": false,
       "YoungMan": null,
@@ -181,6 +181,13 @@
       ],
       "ValidManConfigKey": "OrgyPartyManType"
     }
-  }
+  },
 
+  "org0021a": {
+    "ID": "org0021a",
+    "Type": "PostInitEffect",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0001",
+    "WaitFullLoad": true
+  }
 }

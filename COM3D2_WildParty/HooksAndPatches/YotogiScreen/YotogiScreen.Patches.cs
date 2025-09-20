@@ -927,20 +927,15 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             if (StateManager.Instance.UndergoingModEventID > 0)
             {
-                if (StateManager.Instance.IsApplyTallyCounterTexture && command_data.basic.command_type == Yotogi.SkillCommandType.絶頂)
+                if (Helper.BodyWritingsMarker.IsEnableBodyWritings && command_data.basic.command_type == Yotogi.SkillCommandType.絶頂)
                 {
                     //this is by clicking command so it has to be main group
                     PartyGroup mainGroup = StateManager.Instance.PartyGroupList[0];
-
+                    
                     BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemOfGroup(mainGroup);
                     MotionSpecialLabel spLabel = motionItem.SpecialLabels.Where(x => x.SexPosID == mainGroup.SexPosID && x.Label == mainGroup.CurrentLabelName).FirstOrDefault();
 
-                    foreach (var bodyside in spLabel.TallyCountMaid1)
-                        Core.YotogiHandling.ApplyTallyCounterTexture(mainGroup.Maid1, bodyside);
-
-                    foreach (var bodyside in spLabel.TallyCountMaid2)
-                        Core.YotogiHandling.ApplyTallyCounterTexture(mainGroup.Maid2, bodyside);
-
+                    Core.BackgroundGroupMotionManager.ProcessTallyCounterTexture(mainGroup, spLabel);
                 }
             }
         }

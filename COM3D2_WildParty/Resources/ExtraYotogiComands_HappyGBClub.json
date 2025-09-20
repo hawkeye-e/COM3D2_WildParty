@@ -154,7 +154,18 @@
     "CommandCode": "ChangeMaidAnotherGBDesire",
     "Name": "メイド変更",
     "Type": "Common"
+  },
+
+  "FetishBodyWritings": {
+    "CommandCode": "AddFetish",
+    "Name": "性癖「淫語落書き大好き」",
+    "Type": "Fetish",
+    "FetishID": 99006,
+    "ConditionCheckTexts": [
+      {
+        "Field": "BodyTextCount",
+        "DisplayText": "全身を落書きで覆う（[=CurrentBodyTextCount]／[=FullBodyTextCount]）"
+      }
+    ]
   }
-
-
 }

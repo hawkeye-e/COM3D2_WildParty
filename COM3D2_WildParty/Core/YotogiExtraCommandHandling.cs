@@ -444,6 +444,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             PartyGroup mainGroup = StateManager.Instance.PartyGroupList[0];
             BackgroundGroupMotionManager.ProcessSemenForGroup(mainGroup);
+            BackgroundGroupMotionManager.ProcessTallyCounterTexture(mainGroup, mainGroup.CurrentOrgasmLabelRecord);
 
             if (nextState == SexState.StateType.OrgasmWait)
             {
@@ -1066,6 +1067,8 @@ namespace COM3D2.WildParty.Plugin.Core
 
                     isAllFulfilled = isAllFulfilled && (Helper.BodyWritingsMarker.GetFullTallyMarkCount(maid) >= fetishInfo.Conditions.FullTallyMarkCount);
 
+                    isAllFulfilled = isAllFulfilled && (Helper.BodyWritingsMarker.GetBodyTextCount(maid) >= fetishInfo.Conditions.BodyTextCount);
+
                     if (fetishInfo.Conditions.SexPosRequired != null)
                     {
                         int matchCount = fetishInfo.Conditions.SexPosRequired.Intersect(progressInfo.SexPositionOrgasmInfo.Keys).Count();
@@ -1236,6 +1239,8 @@ namespace COM3D2.WildParty.Plugin.Core
                            .Replace(Constant.JsonReplaceTextLabels.FullTallyMarkCount, fetishInfo.Conditions.FullTallyMarkCount.ToString())
                            .Replace(Constant.JsonReplaceTextLabels.CurrentTallyMarkCount, Helper.BodyWritingsMarker.GetFullTallyMarkCount(maid).ToString())
                            .Replace(Constant.JsonReplaceTextLabels.CurrentSexPosCount, currentSexPosCount.ToString())
+                           .Replace(Constant.JsonReplaceTextLabels.FullBodyTextCount, fetishInfo.Conditions.BodyTextCount.ToString())
+                           .Replace(Constant.JsonReplaceTextLabels.CurrentBodyTextCount, Helper.BodyWritingsMarker.GetBodyTextCount(maid).ToString())
                            ;
         }
 

@@ -11,7 +11,7 @@
     "ID": "hgbc0001_init_chara",
     "Type": "CharaInit",
     "WaitingType": "Auto",
-    "NextStepID": "hgbc0001_init_hide_men",
+    "NextStepID": "hgbc0001_post_init_effect",
     "CharaInitData": {
       "IsClubOwnerADVMainCharacter": false,
       "ManRequired": 32,
@@ -70,6 +70,14 @@
         }
       ]
     }
+  },
+
+  "hgbc0001_post_init_effect": {
+    "ID": "hgbc0001_post_init_effect",
+    "Type": "PostInitEffect",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc0001_init_hide_men",
+    "WaitFullLoad": true
   },
 
   "hgbc0001_init_hide_men": {

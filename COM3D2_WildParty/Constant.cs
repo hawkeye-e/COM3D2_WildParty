@@ -297,6 +297,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string LoadScene = "LoadScene";
 
             internal const string CharaInit = "CharaInit";
+            internal const string PostInitEffect = "PostInitEffect";
             internal const string Branch = "Branch";
             internal const string BranchByPersonality = "BranchByPersonality";
             internal const string BranchByMap = "BranchByMap";
@@ -372,6 +373,8 @@ namespace COM3D2.WildParty.Plugin
             internal const string FullTallyMarkCount = "[=FullTallyMarkCount]";
             internal const string CurrentTallyMarkCount = "[=CurrentTallyMarkCount]";
 
+            internal const string FullBodyTextCount = "[=FullBodyTextCount]";
+            internal const string CurrentBodyTextCount = "[=CurrentBodyTextCount]";
 
             /*Format: [=Name,{Source},{Index},{CallMethod}]
              * {Source} :   "Maid" : From SelectedMaidsList; "NPC_F" : From NPCList;  "NPC_M" : From NPCManList
@@ -552,6 +555,11 @@ namespace COM3D2.WildParty.Plugin
         internal static class ModFetishID
         {
             internal const int OrgyLover = 99001;
+            internal const int GangBangLover = 99002;
+            internal const int LesbianPlayLover = 99003;
+            internal const int VirginEater = 99004;
+            internal const int WantToBeMeatToilet = 99005;
+            internal const int BodyWritingsLover = 99006;
         }
 
         internal static class MotionLabelType

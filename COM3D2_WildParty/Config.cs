@@ -13,7 +13,8 @@ namespace COM3D2.WildParty.Plugin
         private const string MOTIONSETTING = "2. H Motion Settings";
         private const string SCENARIOSETTING = "3. Scenario Related Setting";
         private const string YOTOGISETTING = "4. Yotogi Related Setting";
-        private const string DEVELOPER = "5. Developer Used";
+        private const string BODYWRITINGSETTING = "5. Body Writings Setting";
+        private const string DEVELOPER = "6. Developer Used";
 
         internal static bool Enabled { get { return _enabled.Value; } }
         private static ConfigEntry<bool> _enabled;
@@ -129,8 +130,20 @@ namespace COM3D2.WildParty.Plugin
         internal static ManTypeOption ExpExchangeEventManType { get { return _expExchangeEventManType.Value; } }
         private static ConfigEntry<ManTypeOption> _expExchangeEventManType;
 
-        internal static Helper.BodyWritingsMarker.TextureType TallyCounterMarkType { get { return _tallyCountMarkerType.Value; } }
-        private static ConfigEntry<Helper.BodyWritingsMarker.TextureType> _tallyCountMarkerType;
+        internal static Helper.BodyWritingsMarker.Scope BodyWritingScope { get { return _bodyWritingScope.Value; } }
+        private static ConfigEntry<Helper.BodyWritingsMarker.Scope> _bodyWritingScope;
+
+        internal static Helper.BodyWritingsMarker.Level BodyWritingLevel { get { return _bodyWritingLevel.Value; } }
+        private static ConfigEntry<Helper.BodyWritingsMarker.Level> _bodyWritingLevel;
+
+        internal static Helper.BodyWritingsMarker.TextureType BodyWritingTallyCountMarkerType { get { return _bodyWritingTallyCountMarkerType.Value; } }
+        private static ConfigEntry<Helper.BodyWritingsMarker.TextureType> _bodyWritingTallyCountMarkerType;
+
+        internal static Helper.BodyWritingsMarker.TextureType BodyWritingFullBodyTextType { get { return _bodyWritingFullBodyTextType.Value; } }
+        private static ConfigEntry<Helper.BodyWritingsMarker.TextureType> _bodyWritingFullBodyTextType;
+
+        internal static bool BodyWritingFetishEffect { get { return _bodyWritingFetishEffect.Value; } }
+        private static ConfigEntry<bool> _bodyWritingFetishEffect;
 
         internal static void Init(BaseUnityPlugin plugin)
         {
@@ -138,6 +151,7 @@ namespace COM3D2.WildParty.Plugin
             AddMotionSettingConfigs(plugin);
             AddScenarioRelatedConfigs(plugin);
             AddYotogiSettingConfigs(plugin);
+            AddBodyWritingSettingConfigs(plugin);
             AddDeveloperRelatedConfigs(plugin);
         }
 
@@ -279,10 +293,29 @@ namespace COM3D2.WildParty.Plugin
         private static void AddYotogiSettingConfigs(BaseUnityPlugin plugin)
         {
             _isTriggerConditionOn = plugin.Config.Bind(YOTOGISETTING, "Command Trigger Condition", true, "On: The player is required to do achieve some small goals in order to click certain command buttons in the yotogi scene. \n Off: The trigger conditions are ignored and the player can click the command buttons freely.");
+        }
 
-            _tallyCountMarkerType = plugin.Config.Bind(YOTOGISETTING, "Tally Count Marker Type",
+        private static void AddBodyWritingSettingConfigs(BaseUnityPlugin plugin)
+        {
+            _bodyWritingScope = plugin.Config.Bind(BODYWRITINGSETTING, "1. Scenarios To Apply",
+                Helper.BodyWritingsMarker.Scope.Default,
+                "Select the type of scenarios that applying body writings. Changes have to be made before yotogi scene starts.");
+
+            _bodyWritingLevel = plugin.Config.Bind(BODYWRITINGSETTING, "2. Level of Body Writings",
+                Helper.BodyWritingsMarker.Level.FullBodyText,
+                "Select what kind of writings to be applied to the body of the maid. Changes have to be made before yotogi scene starts.");
+
+            _bodyWritingTallyCountMarkerType = plugin.Config.Bind(BODYWRITINGSETTING, "3. Tally Count Marker Type",
                 Helper.BodyWritingsMarker.TextureType.Kanji,
-                "The marker type used to mark on the maid's body. Only applied to certain NTR scenario.");
+                "The marker type used to mark on the maid's body. Changes have to be made before yotogi scene starts.");
+
+            _bodyWritingFullBodyTextType = plugin.Config.Bind(BODYWRITINGSETTING, "4. Full Body Text Type",
+                Helper.BodyWritingsMarker.TextureType.Kanji,
+                "The type of text to be written on the body of the maid. Changes have to be made before yotogi scene starts.");
+
+            _bodyWritingFetishEffect = plugin.Config.Bind(BODYWRITINGSETTING, "5. Enable Fetish Effect",
+                true,
+                "If this is checked, the maid with the body writing fetish will be filled with full body text at the beginning of the scenario. Changes have to be made before scenario starts.");
         }
 
 

@@ -1543,5 +1543,17 @@ namespace COM3D2.WildParty.Plugin.Core
                 RestoreMaidClothesInfo(maid, Constant.ClothingTag.acchead);
             }
         }
+
+        internal static void ApplyFullBodyWritingsFetishEffect(Maid maid)
+        {
+            //fetish check
+            if (!maid.status.propensitys.ContainsKey(Constant.ModFetishID.BodyWritingsLover))
+                return;
+
+            Helper.BodyWritingsMarker.InitMarkProgressForMaid(maid);
+
+            while (Helper.BodyWritingsMarker.GetBodyTextAvailableSlotCount(maid) > 0)
+                Helper.BodyWritingsMarker.AddRandomBodyTexture(maid, Config.BodyWritingFullBodyTextType);
+        }
     }
 }

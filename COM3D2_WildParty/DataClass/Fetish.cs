@@ -24,6 +24,7 @@ namespace COM3D2.WildParty.Plugin
             public int MaidOrgasmCount = 0;         //Maid version
             public int PositionOrgasmCount = 0;
             public int FullTallyMarkCount = 0;
+            public int BodyTextCount = 0;
 
             public List<int> SexPosRequired;        //If this is not null, the maid must have orgasm at least once for each sex pos in this list
         }

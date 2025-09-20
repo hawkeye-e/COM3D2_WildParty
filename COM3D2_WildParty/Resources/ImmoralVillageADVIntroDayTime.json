@@ -11,7 +11,7 @@
     "ID": "imvi_init_chara",
     "Type": "CharaInit",
     "WaitingType": "Auto",
-    "NextStepID": "imvi_init_hide_men",
+    "NextStepID": "imvi_post_init_effect",
     "CharaInitData": {
       "IsClubOwnerADVMainCharacter": false,
       "ManRequired": 14,
@@ -52,6 +52,14 @@
         }
       ]
     }
+  },
+
+  "imvi_post_init_effect": {
+    "ID": "imvi_post_init_effect",
+    "Type": "PostInitEffect",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_init_hide_men",
+    "WaitFullLoad": true
   },
 
   "imvi_init_hide_men": {

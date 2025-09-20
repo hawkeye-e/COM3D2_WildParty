@@ -186,7 +186,6 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.IsMainGroupMotionScriptFlag = false;
             StateManager.Instance.IsYotogiUseModSemenPattern = false;
             StateManager.Instance.WaitForMotionChange = false;
-            StateManager.Instance.IsApplyTallyCounterTexture = false;
 
             StateManager.Instance.RequiresYotogiButtonPostPorcess = false;
             StateManager.Instance.ForceAnimationNoFade = false;

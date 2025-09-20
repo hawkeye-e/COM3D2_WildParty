@@ -1399,8 +1399,8 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             if (maid == null)
                 return;
-
-            BodyWritingsMarker.AddTallyCounterMark(maid, StateManager.Instance.TallyCountMarkerType, bodySide);
+            
+            BodyWritingsMarker.AddTallyCounterMark(maid, bodySide); 
         }
 
         internal static void AddManToBackgroundList(Maid man)

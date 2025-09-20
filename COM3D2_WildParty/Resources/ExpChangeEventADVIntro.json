@@ -11,7 +11,7 @@
     "ID": "eee0001_init_chara",
     "Type": "CharaInit",
     "WaitingType": "Auto",
-    "NextStepID": "eee0001_init_hide_men",
+    "NextStepID": "eee0001_post_init_effect",
     "CharaInitData": {
       "IsClubOwnerADVMainCharacter": false,
       "ManRequired": 35,
@@ -26,6 +26,14 @@
         }
       ]
     }
+  },
+
+  "eee0001_post_init_effect": {
+    "ID": "eee0001_init_hide_men",
+    "Type": "PostInitEffect",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_0001",
+    "WaitFullLoad": true
   },
 
   "eee0001_init_hide_men": {

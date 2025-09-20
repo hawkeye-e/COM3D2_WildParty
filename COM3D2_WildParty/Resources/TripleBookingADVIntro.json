@@ -11,7 +11,7 @@
     "ID": "trbo0001_init_chara",
     "Type": "CharaInit",
     "WaitingType": "Auto",
-    "NextStepID": "trbo_intro_0001",
+    "NextStepID": "trbo_post_init_effect",
     "CharaInitData": {
       "IsClubOwnerADVMainCharacter": false,
       "ManRequired": 3,
@@ -41,6 +41,14 @@
         }
       ]
     }
+  },
+
+  "trbo_post_init_effect": {
+    "ID": "trbo_post_init_effect",
+    "Type": "PostInitEffect",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_intro_0001",
+    "WaitFullLoad": true
   },
 
   "trbo_intro_0001": {

@@ -81,6 +81,9 @@ namespace COM3D2.WildParty.Plugin.Core
                         case Constant.ADVType.CharaInit:
                             ProcessADVCharaInit(instance, thisStep);
                             break;
+                        case Constant.ADVType.PostInitEffect:
+                            ProcessADVPostInitEffect(instance, thisStep);
+                            break;
                         case Constant.ADVType.Branch:
                             ProcessADVBranch(instance, thisStep);
                             break;
@@ -276,6 +279,19 @@ namespace COM3D2.WildParty.Plugin.Core
                     }
                 }
             }
+        }
+
+        private static void ProcessADVPostInitEffect(ADVKagManager instance, ADVStep step)
+        {
+            SetupBodyWritings(true);
+
+            //If the maid has the body writing fetish, and the config enable the effect
+            if (Config.BodyWritingFetishEffect && Config.BodyWritingScope != Helper.BodyWritingsMarker.Scope.None)
+                foreach (Maid maid in StateManager.Instance.SelectedMaidsList)
+                {
+                    CharacterHandling.ApplyFullBodyWritingsFetishEffect(maid);
+                    maid.body0.MulTexProc("body");
+                }
         }
 
         private static void ProcessADVChangeBGM(ADVKagManager instance, ADVStep step)
@@ -1545,7 +1561,20 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
+        internal static void SetupBodyWritings(bool isApplyBodyWritings)
+        {
+            bool isEnable = false;
 
+            if (Util.GetUndergoingScenario().IsNetorare)
+            {
+                if (Config.BodyWritingScope == Helper.BodyWritingsMarker.Scope.AllNtrScenario)
+                    isEnable = true;
+                else if (Config.BodyWritingScope == Helper.BodyWritingsMarker.Scope.Default)
+                    isEnable = isApplyBodyWritings;
+            }
+
+            Helper.BodyWritingsMarker.SetUpBodyWritingSystem(isEnable, Config.BodyWritingTallyCountMarkerType, Config.BodyWritingFullBodyTextType, Config.BodyWritingLevel == Helper.BodyWritingsMarker.Level.FullBodyText);
+        }
 
 
 

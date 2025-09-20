@@ -36,8 +36,7 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.YotogiPhase = step.YotogiSetup.Phase;
             StateManager.Instance.IsFinalYotogi = step.YotogiSetup.IsFinalYotogi;
             StateManager.Instance.IsYotogiUseModSemenPattern = step.YotogiSetup.UseModSemenPattern;
-            StateManager.Instance.IsApplyTallyCounterTexture = step.YotogiSetup.IsApplyTallyCounterTexture;
-            StateManager.Instance.TallyCountMarkerType = Config.TallyCounterMarkType;
+            SetupBodyWritings(step.YotogiSetup.IsApplyTallyCounterTexture);
 
             if (!step.YotogiSetup.IsClubOwnerMainCharacter)
             {

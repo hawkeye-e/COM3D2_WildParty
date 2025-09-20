@@ -11,7 +11,7 @@
     "ID": "agbd_init_chara",
     "Type": "CharaInit",
     "WaitingType": "Auto",
-    "NextStepID": "agbd_init_hide_men",
+    "NextStepID": "agbd_post_init_effect",
     "CharaInitData": {
       "IsClubOwnerADVMainCharacter": false,
       "ManRequired": 32,
@@ -55,6 +55,14 @@
         }
       ]
     }
+  },
+
+  "agbd_post_init_effect": {
+    "ID": "agbd_post_init_effect",
+    "Type": "PostInitEffect",
+    "WaitingType": "Auto",
+    "NextStepID": "agbd_init_hide_men",
+    "WaitFullLoad": true
   },
 
   "agbd_init_hide_men": {
@@ -781,7 +789,8 @@
       "Phase": 1,
       "IsKeepCharacterVisibleAfterYotogi": true,
       "IsFinalYotogi": false,
-      "IsClubOwnerMainCharacter": false
+      "IsClubOwnerMainCharacter": false,
+      "IsApplyTallyCounterTexture": true
     },
     "NextStepID": "agbd_phase2_init"
   }

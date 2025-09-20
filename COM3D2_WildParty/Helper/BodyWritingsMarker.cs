@@ -13,86 +13,19 @@ namespace COM3D2.WildParty.Plugin.Helper
     //This class is to load and instantiate custom prefab that included in the PrefabResources.
     internal class BodyWritingsMarker
     {
-        //internal static readonly Dictionary<string, BodyWritingTextureInfo> BodyWritingTextureNames = new Dictionary<string, BodyWritingTextureInfo>()
-        //{
-        //    { "tally_counter_kanji_1_1" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_kanji_1_1, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_kanji_1_2" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_kanji_1_2, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_kanji_1_3" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_kanji_1_3, TallyCountSizeWidth, TallyCountSizeHeight)},
-        //    { "tally_counter_kanji_1_4" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_kanji_1_4, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_kanji_1_5" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_kanji_1_5, TallyCountSizeWidth, TallyCountSizeHeight) },
-
-        //    { "tally_counter_kanji_2_1" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_kanji_2_1, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_kanji_2_2" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_kanji_2_2, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_kanji_2_3" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_kanji_2_3, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_kanji_2_4" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_kanji_2_4, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_kanji_2_5" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_kanji_2_5, TallyCountSizeWidth, TallyCountSizeHeight) },
-
-        //    { "tally_counter_kanji_3_1" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_kanji_3_1, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_kanji_3_2" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_kanji_3_2, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_kanji_3_3" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_kanji_3_3, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_kanji_3_4" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_kanji_3_4, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_kanji_3_5" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_kanji_3_5, TallyCountSizeWidth, TallyCountSizeHeight) },
-
-        //    { "tally_counter_western_1_1" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_western_1_1, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_western_1_2" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_western_1_2, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_western_1_3" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_western_1_3, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_western_1_4" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_western_1_4, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_western_1_5" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_western_1_5, TallyCountSizeWidth, TallyCountSizeHeight) },
-
-        //    { "tally_counter_western_2_1" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_western_2_1, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_western_2_2" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_western_2_2, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_western_2_3" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_western_2_3, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_western_2_4" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_western_2_4, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_western_2_5" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_western_2_5, TallyCountSizeWidth, TallyCountSizeHeight) },
-
-        //    { "tally_counter_western_3_1" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_western_3_1, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_western_3_2" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_western_3_2, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_western_3_3" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_western_3_3, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_western_3_4" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_western_3_4, TallyCountSizeWidth, TallyCountSizeHeight) },
-        //    { "tally_counter_western_3_5" , new BodyWritingTextureInfo(ModResources.ImageResources.tally_counter_western_3_5, TallyCountSizeWidth, TallyCountSizeHeight) },
-
-        //    { "body_writing_front_jp_a1", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_front_jp_a1, 160, 30 )},
-        //    { "body_writing_front_jp_b2", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_front_jp_b2, 100, 100 )},
-        //    { "body_writing_front_jp_c2", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_front_jp_c2, 100, 100 )},
-        //    { "body_writing_front_jp_d1", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_front_jp_d1, 160, 60)},
-        //    { "body_writing_front_jp_e1", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_front_jp_e1, 160, 60)},
-        //    { "body_writing_front_jp_f3", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_front_jp_f3, 100, 120)},
-        //    { "body_writing_front_jp_g1", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_front_jp_g1, 100, 120)},
-        //    { "body_writing_front_jp_h2", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_front_jp_h2, 100, 240)},
-        //    { "body_writing_front_jp_i1", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_front_jp_i1, 100, 240)},
-        //    { "body_writing_front_jp_j2", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_front_jp_j2, 100, 200)},
-        //    { "body_writing_front_jp_k1", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_front_jp_k1, 100, 200)},
-        //    { "body_writing_front_jp_l1", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_front_jp_l1,  80, 160)},
-        //    { "body_writing_front_jp_m2", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_front_jp_m2,  80, 160)},
-        //    { "body_writing_front_jp_p3", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_front_jp_p3,  60, 140)},
-        //    { "body_writing_front_jp_q2", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_front_jp_q2,  60, 140)},
-
-        //    { "body_writing_back_jp_1_3", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_back_jp_1_3,  180, 50)},
-        //    { "body_writing_back_jp_2_1", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_back_jp_2_1,  80, 120)},
-        //    { "body_writing_back_jp_3_2", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_back_jp_3_2,  80, 120)},
-        //    { "body_writing_back_jp_4_1", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_back_jp_4_1,  80, 80)},
-        //    { "body_writing_back_jp_5_2", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_back_jp_5_2,  80, 80)},
-        //    { "body_writing_back_jp_6_1", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_back_jp_6_1,  100, 130)},
-        //    { "body_writing_back_jp_7_1", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_back_jp_7_1,  100, 130)},
-        //    { "body_writing_back_jp_8_1", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_back_jp_8_1, 100, 150)},
-        //    { "body_writing_back_jp_9_1", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_back_jp_9_1, 100, 150)},
-        //    { "body_writing_back_jp_10_3", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_back_jp_10_3, 80, 170)},
-        //    { "body_writing_back_jp_11_3", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_back_jp_11_3, 80, 170)},
-
-        //    { "body_writing_back_jp_12_2", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_back_jp_12_2, 50, 160)},
-        //    { "body_writing_back_jp_13_1", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_back_jp_13_1, 50, 160)},
-
-        //    { "body_writing_back_jp_14_1", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_back_jp_14_1, 70, 160)},
-        //    { "body_writing_back_jp_15_3", new BodyWritingTextureInfo(ModResources.ImageResources.body_writing_back_jp_15_3, 70, 160)},
-        //    //{ "body_writing_back_jp_14_1", new BodyWritingTextureInfo(System.Drawing.Color.Red, 70, 160)},
-
-        //};
-
+        public const int FullBodyTextAreaCount = 30;
         private const string TextureFileName_KanjiFormat = "tally_counter_kanji_[X]_[Y]";
         private const string TextureFileName_WesternFormat = "tally_counter_western_[X]_[Y]";
         private const int PatternCount = 3;
-        //private const int TallyCountSizeWidth = 50;
-        //private const int TallyCountSizeHeight = 50;
+        private static Config _config = new Config();
+
+        private class Config
+        {
+            public bool IsEnableBodyWritings;
+            public TextureType TallyCountType;
+            public TextureType BodyTextType;
+            public bool IsApplyFullBodyText;
+        }
 
         internal enum BodySide
         {
@@ -100,19 +33,24 @@ namespace COM3D2.WildParty.Plugin.Helper
             Back,
         }
 
-        //private enum BodyPart
-        //{
-        //    LeftThighFront,
-        //    LeftThighBack,
-        //    RightThighFront,
-        //    RightThighBack,
-        //}
-
         internal enum TextureType
         {
             Kanji,
             Western,
-            None
+            //None
+        }
+
+        internal enum Scope
+        {
+            Default,
+            AllNtrScenario,
+            None,
+        }
+
+        internal enum Level
+        {
+            TallyCountOnly,
+            FullBodyText
         }
 
         private class Position
@@ -129,31 +67,6 @@ namespace COM3D2.WildParty.Plugin.Helper
             }
         }
 
-        //internal class BodyWritingTextureInfo
-        //{
-        //    internal Bitmap TextureFile;
-        //    //internal int Width;
-        //    //internal int Height;
-
-        //    internal BodyWritingTextureInfo(Bitmap file, int w, int h) { 
-        //        TextureFile = file;
-        //        //Width = w;
-        //        //Height = h;
-        //    }
-
-        //    //For testing use
-        //    internal BodyWritingTextureInfo(System.Drawing.Color color, int width, int height)
-        //    {
-        //        TextureFile = new Bitmap(width, height);
-        //        using (System.Drawing.Graphics g = System.Drawing.Graphics.FromImage(TextureFile))
-        //        {
-        //            g.Clear(color);
-        //        }
-        //        //Width = width;
-        //        //Height = height;
-        //    }
-        //}
-
         private class BodyWritingInfo : Position
         {
             internal float r;
@@ -169,75 +82,10 @@ namespace COM3D2.WildParty.Plugin.Helper
             internal List<string> BodyTextAvailableSlot = new List<string>();
         }
 
-        //private static Dictionary<BodyWritingSetupInfo.BodyPart, List<Position>> BaseTallyCountTexturePosition;
-
-        //private static readonly Dictionary<BodyWritingSetupInfo.BodyPart, List<Position>> BaseTexturePosition = new Dictionary<BodyWritingSetupInfo.BodyPart, List<Position>>() 
-        //{
-        //    { BodyWritingSetupInfo.BodyPart.LeftThighFront, 
-        //        new List<Position>{ 
-        //            new Position(800, 70),
-        //            new Position(800, 85),
-        //            new Position(800, 100),
-        //            new Position(800, 115),
-        //            new Position(800, 130),
-        //            new Position(820, 70),
-        //            new Position(820, 85),
-        //            new Position(820, 100),
-        //            new Position(820, 115),
-        //            new Position(820, 130)
-        //        }
-        //    },
-
-        //    { BodyWritingSetupInfo.BodyPart.LeftThighBack,
-        //        new List<Position>{
-        //            new Position(980, 70),
-        //            new Position(980, 85),
-        //            new Position(980, 100),
-        //            new Position(980, 115),
-        //            new Position(980, 130),
-        //            new Position(1000, 70),
-        //            new Position(1000, 85),
-        //            new Position(1000, 100),
-        //            new Position(1000, 115),
-        //            new Position(1000, 130)
-        //        }
-        //    },
-
-        //    { BodyWritingSetupInfo.BodyPart.RightThighFront,
-        //        new List<Position>{
-        //            new Position(190, 70),
-        //            new Position(190, 85),
-        //            new Position(190, 100),
-        //            new Position(190, 115),
-        //            new Position(190, 130),
-        //            new Position(210, 70),
-        //            new Position(210, 85),
-        //            new Position(210, 100),
-        //            new Position(210, 115),
-        //            new Position(210, 130)
-        //        }
-        //    },
-
-        //    { BodyWritingSetupInfo.BodyPart.RightThighBack,
-        //        new List<Position>{
-        //            new Position(260, 70),
-        //            new Position(260, 85),
-        //            new Position(260, 100),
-        //            new Position(260, 115),
-        //            new Position(260, 130),
-        //            new Position(280, 70),
-        //            new Position(280, 85),
-        //            new Position(280, 100),
-        //            new Position(280, 115),
-        //            new Position(280, 130)
-        //        }
-        //    },
-        //};
         private const int TallyCounterPartCount = 5;
 
         private const string SlotName = "body";
         private const int MatNo = 0;
-        //private const int Layer = Constant.TextureLayer.BodyWritingTallyCount;
         private const GameUty.SystemMaterial BlendMode = GameUty.SystemMaterial.Alpha;
         private static readonly string[] PropNameList = { "_MainTex", "_ShadowTex" };
         private const float TallyCountScale = 0.33f;
@@ -274,35 +122,36 @@ namespace COM3D2.WildParty.Plugin.Helper
             return false;
         }
 
-        public static void AddTallyCounterMark(Maid maid, TextureType textureType, BodySide bodySide)
+        //public static void AddTallyCounterMark(Maid maid, TextureType textureType, BodySide bodySide)
+        public static void AddTallyCounterMark(Maid maid, BodySide bodySide)
         {
-            if (textureType == TextureType.None)
+            if (!_config.IsEnableBodyWritings)
                 return;
 
             bool isLeft = RNG.Random.Next(2) == 0;
             if (bodySide == BodySide.Front)
             {
                 if (isLeft)
-                    AddTallyCounterMark(maid, textureType, BodyWritingSetupInfo.BodyPart.LeftThighFront, BodyWritingSetupInfo.BodyPart.RightThighFront);
+                    AddTallyCounterMark(maid, BodyWritingSetupInfo.BodyPart.LeftThighFront, BodyWritingSetupInfo.BodyPart.RightThighFront);
                 else
-                    AddTallyCounterMark(maid, textureType, BodyWritingSetupInfo.BodyPart.RightThighFront, BodyWritingSetupInfo.BodyPart.LeftThighFront);
+                    AddTallyCounterMark(maid, BodyWritingSetupInfo.BodyPart.RightThighFront, BodyWritingSetupInfo.BodyPart.LeftThighFront);
             }
             else
             {
                 if (isLeft)
-                    AddTallyCounterMark(maid, textureType, BodyWritingSetupInfo.BodyPart.LeftThighBack, BodyWritingSetupInfo.BodyPart.RightThighBack);
+                    AddTallyCounterMark(maid, BodyWritingSetupInfo.BodyPart.LeftThighBack, BodyWritingSetupInfo.BodyPart.RightThighBack);
                 else
-                    AddTallyCounterMark(maid, textureType, BodyWritingSetupInfo.BodyPart.RightThighBack, BodyWritingSetupInfo.BodyPart.LeftThighBack);
+                    AddTallyCounterMark(maid, BodyWritingSetupInfo.BodyPart.RightThighBack, BodyWritingSetupInfo.BodyPart.LeftThighBack);
             }
         }
 
         //Return false if there is no room to add
-        private static bool AddTallyCounterMark(Maid maid, TextureType textureType, BodyWritingSetupInfo.BodyPart firstBodyPart, BodyWritingSetupInfo.BodyPart secondaryBodyPart)
+        private static bool AddTallyCounterMark(Maid maid, BodyWritingSetupInfo.BodyPart firstBodyPart, BodyWritingSetupInfo.BodyPart secondaryBodyPart)
         {
             BodyWritingSetupInfo.BodyPart bodyPart = firstBodyPart;
             
             if (!MarkProgressList.ContainsKey(maid)) {
-                InitMarkProgressForMaid(maid, textureType);
+                InitMarkProgressForMaid(maid);
             }
 
             var markProgress = MarkProgressList[maid];
@@ -329,7 +178,7 @@ namespace COM3D2.WildParty.Plugin.Helper
 
             BodyWritingInfo markInfo = markProgress.MarkInfo[bodyPart][markNumber];
 
-            string fileName = GetTextureFileName(textureType, markInfo.pattern, markSubNumber);
+            string fileName = GetTextureFileName(_config.TallyCountType, markInfo.pattern, markSubNumber);
 
             //add texture
             for (int i = 0; i < PropNameList.Length; i++)
@@ -338,12 +187,15 @@ namespace COM3D2.WildParty.Plugin.Helper
                     markInfo.x, markInfo.y, markInfo.r, TallyCountScale, NoTransform, null, Alpha, TargetBodyTexSize);
             }
 
-            //TODO: if the subnumber = 4 (a tally count word is completed), Add 2 body text randomly
-            if (markSubNumber == 4)
+            //if the subnumber = 4 (a tally count word is completed), Add 2 body text randomly
+            if (_config.IsApplyFullBodyText)
             {
-                //Randomly draw 2 slot
-                for(int i=0; i<2; i++)
-                    AddRandomBodyTextureForSlot(maid, textureType);
+                if (markSubNumber == 4)
+                {
+                    //Randomly draw 2 slot
+                    for (int i = 0; i < 2; i++)
+                        AddRandomBodyTexture(maid, _config.BodyTextType);
+                }
             }
 
             maid.body0.MulTexProc("body");
@@ -351,7 +203,7 @@ namespace COM3D2.WildParty.Plugin.Helper
             return true;
         }
 
-        public static void AddRandomBodyTextureForSlot(Maid maid, TextureType textureType)
+        public static void AddRandomBodyTexture(Maid maid, TextureType textureType)
         {
             if (!MarkProgressList.ContainsKey(maid))
                 return;
@@ -398,7 +250,10 @@ namespace COM3D2.WildParty.Plugin.Helper
                 MarkProgressList.Remove(maid);
         }
 
-        private static void InitMarkProgressForMaid(Maid maid, TextureType textureType) {
+        internal static void InitMarkProgressForMaid(Maid maid) {
+            if (MarkProgressList.ContainsKey(maid))
+                return;
+
             TallyCounterMarkProgress tallyCounterMarkProgress = new TallyCounterMarkProgress();
             tallyCounterMarkProgress.BodyPartMarkProgress = new Dictionary<BodyWritingSetupInfo.BodyPart, int>();
             tallyCounterMarkProgress.MarkInfo = new Dictionary<BodyWritingSetupInfo.BodyPart, List<BodyWritingInfo>>();
@@ -419,7 +274,7 @@ namespace COM3D2.WildParty.Plugin.Helper
             }
 
             //Add all available slots to the slot List
-            BodyWritingTextureInfo info = ModUseData.BodyWritingTextureList[Constant.TextureType.BodyWritingWholeBodyText].Where(x => x.Type == textureType.ToString()).First();
+            BodyWritingTextureInfo info = ModUseData.BodyWritingTextureList[Constant.TextureType.BodyWritingWholeBodyText].Where(x => x.Type == _config.BodyTextType.ToString()).First();
             foreach (var textureSlot in info.TextureData)
                 tallyCounterMarkProgress.BodyTextAvailableSlot.Add(textureSlot.Slot);
 
@@ -484,6 +339,42 @@ namespace COM3D2.WildParty.Plugin.Helper
                 result += bodyPartMark.Value + 1;
 
             return result;
+        }
+
+        public static int GetBodyTextCount(Maid maid)
+        {
+            if (maid == null)
+                return 0;
+            if (!MarkProgressList.ContainsKey(maid))
+                return 0;
+
+            return FullBodyTextAreaCount - MarkProgressList[maid].BodyTextAvailableSlot.Count;
+        }
+
+        public static int GetBodyTextAvailableSlotCount(Maid maid)
+        {
+            if (maid == null)
+                return 0;
+            if (!MarkProgressList.ContainsKey(maid))
+                return 0;
+
+            return MarkProgressList[maid].BodyTextAvailableSlot.Count;
+        }
+
+        public static void SetUpBodyWritingSystem(bool isEnable, TextureType tallyCountType, TextureType bodyTextType, bool isApplyFullBodyText)
+        {
+            _config.IsEnableBodyWritings = isEnable;
+            _config.TallyCountType = tallyCountType;
+            _config.BodyTextType = bodyTextType;
+            _config.IsApplyFullBodyText = isApplyFullBodyText;
+        }
+
+        public static bool IsEnableBodyWritings
+        {
+            get
+            {
+                return _config.IsEnableBodyWritings;
+            }
         }
     }
 }
