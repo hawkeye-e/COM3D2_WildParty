@@ -11,6 +11,27 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 {
     internal class Patches
     {
+        internal static Maid GetSpoofMaidOrMan(MotionKagManager motionKagManager, int no, bool isMan)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                PartyGroup targetGroup = null;
+                if (motionKagManager.main_maid != null)
+                    targetGroup = Util.GetPartyGroupByCharacter(motionKagManager.main_maid);
+                if (targetGroup == null && motionKagManager.main_man != null)
+                    targetGroup = Util.GetPartyGroupByCharacter(motionKagManager.main_man);
+
+                if (targetGroup != null)
+                {
+                    if (isMan)
+                        return targetGroup.GetManAtIndex(no);
+                    else
+                        return targetGroup.GetMaidAtIndex(no);
+                }
+            }
+            return null;
+        }
+
         internal static Maid[] SpoofUndressingMaidArray(UndressingManager instance)
         {
             Maid[] backup = null;

@@ -13,6 +13,27 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
     {
         internal static string GUID = WildParty.GUID + ".YotogiScreen";
 
+        //There are cases that the GetMaidAndMan is not within a LoadMotionScript call. Alter the result here as a safenet.
+        //TODO: The current logic is overkilling in this part. May need to review removing the use of processingMaidGUID / processingManGUID
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(MotionKagManager), nameof(MotionKagManager.GetMan))]
+        private static void GetMan(MotionKagManager __instance, int man_no, ref Maid __result)
+        {
+            Maid spoofMan = Patches.GetSpoofMaidOrMan(__instance, man_no, true);
+            if (spoofMan != null)
+                __result = spoofMan;
+        }
+
+        //There are cases that the GetMaidAndMan is not within a LoadMotionScript call. Alter the result here as a safenet.
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(MotionKagManager), nameof(MotionKagManager.GetMaid))]
+        private static void GetMaid(MotionKagManager __instance, int no, ref Maid __result)
+        {
+            Maid spoofMaid = Patches.GetSpoofMaidOrMan(__instance, no, false);
+            if (spoofMaid != null)
+                __result = spoofMaid;
+        }
+
         //Replace the internal array with our full list so that the undressing button applies to all maids
         [HarmonyPrefix]
         [HarmonyPatch(typeof(UndressingManager), nameof(UndressingManager.OnClickButton))]
