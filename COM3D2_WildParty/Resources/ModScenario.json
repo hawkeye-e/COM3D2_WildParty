@@ -80,7 +80,7 @@
   {
     "ScenarioID": 9900002,
     "CategoryID": 99000,
-    "DisplayOrder": 3,
+    "DisplayOrder": 4,
     "ADVEntryStep": "hgbc0001",
     "YotogiTypeEnumString": "NewSex",
     "CondSalonGrade": 0,
@@ -201,7 +201,7 @@
   {
     "ScenarioID": 9900003,
     "CategoryID": 99000,
-    "DisplayOrder": 4,
+    "DisplayOrder": 5,
     "ADVEntryStep": "agbd0001",
     "YotogiTypeEnumString": "NewSex",
     "CondSalonGrade": 0,
@@ -316,7 +316,7 @@
   {
     "ScenarioID": 9900004,
     "CategoryID": 99000,
-    "DisplayOrder": 5,
+    "DisplayOrder": 6,
     "ADVEntryStep": "imvi0001",
     "YotogiTypeEnumString": "NewSex",
     "CondSalonGrade": 0,
@@ -517,7 +517,7 @@
   {
     "ScenarioID": 9900010,
     "CategoryID": 99000,
-    "DisplayOrder": 6,
+    "DisplayOrder": 7,
     "ADVEntryStep": "trbo0001",
     "YotogiTypeEnumString": "NewSex",
     "CondSalonGrade": 0,
@@ -609,6 +609,7 @@
     "ContractEnumString": [ "Exclusive", "Free" ],
     "SexExperienceEnumString": [ "Yes_Yes" ],
     "RelationEnumString": [ "Lover" ],
+    "SpecialRelationEnumString": [ "Married" ],
     "ConditionInfoText": [
       "嫁である",
       "育成中のメイドではない",
@@ -685,6 +686,103 @@
     "SetScenarioFlag": [
       {
         "ID": "Mod_エンパイアクラブ体験交流会_Executed",
+        "Value": 1
+      }
+    ]
+  },
+
+  {
+    "ScenarioID": 9900012,
+    "CategoryID": 99000,
+    "DisplayOrder": 3,
+    "ADVEntryStep": "pam0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "快楽中毒のメイドたち",
+    "Information": "「肉便器体験会」は定期開催となった。こちらは、常連になったあるお客様の視点です。",
+    "Icon": "mod_icon_exp_exchange_event",
+    "IsNetorare": true,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "SpecialRelationEnumString": [ "Married" ],
+    "ConditionInfoText": [
+      "嫁である",
+      "育成中のメイドではない",
+      "両穴経験済みである",
+      "「エンパイアクラブ体験会」を実行したことがある"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230 ],
+    "MasterRequireFlag": [ "Mod_エンパイアクラブ体験交流会_Executed" ],
+
+    "IsGroupEvent": true,
+    "MaidCount": {
+      "Max": 5,
+      "Min": 5
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "Theater",
+          "NightMapID": "Theater",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Theatre_ButtockWall_Single", "Theatre_ButtockWall_Multiple" ],
+          "DefaultFormation": "Theatre_ButtockWall_Single"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeMaidExpExchangeEvent",
+          "ChangeFormationExpExchangeEvent",
+          "MoveQueueForward",
+          "Kousoku_To_Anal",
+          "Kousoku_To_Vagina",
+          "FetishMeatToilet",
+          "FetishBodyWritings"
+        ],
+        "IsMainManOwner": false,
+
+        "SexStateRule": "FixedPosition"
+      },
+
+      {
+        "Phase": 2,
+        "DefaultMap": {
+          "DayMapID": "Theater",
+          "NightMapID": "Theater",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Theatre_Restraint_Single", "Theatre_Restraint_Multiple" ],
+          "DefaultFormation": "Theatre_Restraint_Single"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeMaidExpExchangeEvent",
+          "ChangePositionAll",
+          "ChangeEyeMask",
+          "ChangeFormationExpExchangeEvent",
+          "MoveQueueForward",
+          "FetishMeatToilet",
+          "FetishBodyWritings"
+        ],
+        "IsMainManOwner": false,
+
+        "SexStateRule": "FixedPosition"
+      }
+    ],
+
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_快楽中毒のメイドたち_Executed",
         "Value": 1
       }
     ]

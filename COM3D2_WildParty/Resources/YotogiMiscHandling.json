@@ -387,6 +387,257 @@
     }
   ],
 
+  "9900012": [
+    {
+      "SexPosIDs": [ 1, 2 ],
+      "IsSmoothQueueMovement": false
+    },
+
+    {
+      "SexPosIDs": [ 3, 4 ],
+      "Offset": {
+        "PosString": "0.00, 0.00, 0.00",
+        "RotString": "0, 180, 0"
+      },
+      "ExtraObjects": [
+        {
+          "Src": "Odogu_KousokudaiHgata",
+          "Name": "拘束台座H型",
+          "Dest": "",
+          "Offset": {
+            "PosString": "0, 0, 0",
+            "RotString": "-90, 180, 0"
+          }
+        }
+      ],
+      "ExtraObjectsOnCharacter": [
+        {
+          "CharacterType": "Maid",
+          "ArrayPosition": "0",
+          "ItemInfo": {
+            "ItemFile": "KousokuU_TekaseTwoDown_I_.menu",
+            "Target": "kousoku_upper"
+          }
+        },
+        {
+          "CharacterType": "Maid",
+          "ArrayPosition": "0",
+          "ItemInfo": {
+            "ItemFile": "KousokuL_AshikaseDown_I_.menu",
+            "Target": "kousoku_lower"
+          }
+        }
+      ],
+      "GroupManMovementSetupID": "Inverted",
+      "QueueMovementSetupID": "Inverted",
+      "IsSmoothGroupManMovement": false,
+      "IsSmoothQueueMovement": false
+    },
+
+    {
+      "SexPosIDs": [ 5, 6 ],
+      "Offset": {
+        "PosString": "0.00, 0.00, 0.00",
+        "RotString": "0, 180, 0"
+      },
+      "ExtraObjectsOnCharacter": [
+        {
+          "CharacterType": "Maid",
+          "ArrayPosition": "0",
+          "ItemInfo": {
+            "ItemFile": "KousokuU_TekaseOne_I_.menu",
+            "Target": "kousoku_upper"
+          }
+        }
+      ],
+      "GroupManMovementSetupID": "Inverted",
+      "QueueMovementSetupID": "Inverted"
+    },
+
+    {
+      "SexPosIDs": [ 7, 8 ],
+      "ExtraObjectsOnCharacter": [
+        {
+          "CharacterType": "Maid",
+          "ArrayPosition": "0",
+          "ItemInfo": {
+            "ItemFile": "KousokuU_Ushirode_I_.menu",
+            "Target": "kousoku_upper"
+          }
+        }
+      ]
+    },
+
+    {
+      "SexPosIDs": [ 9, 10 ],
+      "Offset": {
+        "PosString": "0.00, 0.00, 0.00",
+        "RotString": "0, 180, 0"
+      },
+      "ExtraObjectsOnCharacter": [
+        {
+          "CharacterType": "Maid",
+          "ArrayPosition": "0",
+          "ItemInfo": {
+            "ItemFile": "KousokuU_TekaseOne_I_.menu",
+            "Target": "kousoku_upper"
+          }
+        },
+        {
+          "CharacterType": "Maid",
+          "ArrayPosition": "0",
+          "ItemInfo": {
+            "ItemFile": "KousokuL_MomokaseUp_I_.menu",
+            "Target": "kousoku_lower"
+          }
+        }
+      ],
+      "GroupManMovementSetupID": "Inverted",
+      "QueueMovementSetupID": "Inverted"
+    },
+
+    {
+      "SexPosIDs": [ 11, 12 ],
+      "Offset": {
+        "PosString": "0.00, 0.00, 0.00",
+        "RotString": "0, 180, 0"
+      },
+      "ExtraObjectsOnCharacter": [
+        {
+          "CharacterType": "Maid",
+          "ArrayPosition": "0",
+          "ItemInfo": {
+            "ItemFile": "KousokuU_Tekase_I_.menu",
+            "Target": "kousoku_upper"
+          }
+        }
+      ],
+      "GroupManMovementSetupID": "Inverted",
+      "QueueMovementSetupID": "Inverted"
+    },
+
+    {
+      "SexPosIDs": [ 13, 14 ],
+      "ExtraObjectsOnCharacter": [
+        {
+          "CharacterType": "Maid",
+          "ArrayPosition": "0",
+          "ItemInfo": {
+            "ItemFile": "KousokuU_UshirodeUp_I_.menu",
+            "Target": "kousoku_upper"
+          }
+        },
+        {
+          "CharacterType": "Maid",
+          "ArrayPosition": "0",
+          "ItemInfo": {
+            "ItemFile": "KousokuL_Bar_I_.menu",
+            "Target": "kousoku_lower"
+          }
+        }
+      ],
+      "IsSmoothGroupManMovement": false,
+      "IsSmoothQueueMovement": false
+    },
+
+    {
+      "SexPosIDs": [ 15, 16 ],
+      "Offset": {
+        "PosString": "0.00, 0.00, 0.00",
+        "RotString": "0, 180, 0"
+      },
+      "GroupManMovementSetupID": "Inverted",
+      "QueueMovementSetupID": "Inverted"
+    },
+
+    {
+      "SexPosIDs": [ 17, 18 ],
+      "Offset": {
+        "PosString": "0.00, 0.00, -1.00",
+        "RotString": "0, 0, 0"
+      },
+      "ExtraObjectsOnCharacter": [
+        {
+          "CharacterType": "Maid",
+          "ArrayPosition": "0",
+          "ItemInfo": {
+            "ItemFile": "KousokuU_TekaseOne_I_.menu",
+            "Target": "kousoku_upper"
+          }
+        },
+        {
+          "CharacterType": "Maid",
+          "ArrayPosition": "0",
+          "ItemInfo": {
+            "ItemFile": "KousokuL_AshikaseUp_I_.menu",
+            "Target": "kousoku_lower"
+          }
+        }
+      ],
+      "IsSmoothGroupManMovement": false,
+      "IsSmoothQueueMovement": false
+    },
+
+    {
+      "SexPosIDs": [ 19, 20 ],
+      "ExtraObjects": [
+        {
+          "Src": "Odogu_SimpleTable",
+          "Name": "台",
+          "Dest": "",
+          "Offset": {
+            "PosString": "-0.1, 0, 0.83",
+            "RotString": "-90, 0, 0"
+          }
+        }
+      ],
+      "IsSmoothGroupManMovement": false,
+      "IsSmoothQueueMovement": false
+    },
+
+    {
+      "SexPosIDs": [ 21, 22 ],
+      "Offset": {
+        "PosString": "0.00, 0.00, -0.50",
+        "RotString": "0, 180, 0"
+      },
+      "ExtraObjects": [
+        {
+          "Src": "Odogu_LoveSofa",
+          "Name": "ラブソファ",
+          "Dest": "",
+          "Offset": {
+            "PosString": "0.00, 0, -0.55",
+            "RotString": "-90, 180, 0"
+          }
+        }
+      ],
+      "GroupManMovementSetupID": "Inverted",
+      "QueueMovementSetupID": "Inverted"
+    },
+
+    {
+      "SexPosIDs": [ 23, 24 ],
+      "Offset": {
+        "PosString": "0.00, 0.00, -0.55",
+        "RotString": "0, 180, 0"
+      },
+      "ExtraObjects": [
+        {
+          "Src": "Odogu_LoveSofa",
+          "Name": "ラブソファ",
+          "Dest": "",
+          "Offset": {
+            "PosString": "0.00, 0, -0.58",
+            "RotString": "-90, 180, 0"
+          }
+        }
+      ],
+      "GroupManMovementSetupID": "Inverted",
+      "QueueMovementSetupID": "Inverted"
+    }
+  ],
+
   "9901003": [
     {
       "SexPosIDs": [ 4 ],

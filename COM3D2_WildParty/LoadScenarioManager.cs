@@ -333,6 +333,35 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioExpExchangeEvent.ExpChangeEventADV_Dame,
         };
 
+        private static readonly string[] ScenarioPleasureAddictedMaidsResList = {
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADVIntro,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADVPostYotogi,
+
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Muku,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Majime,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Rindere,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Pure,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Pride,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Cool,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Yandere,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Anesan,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Genki,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Sadist,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Silent,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Devilish,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Ladylike,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Secretary,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Sister,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Curtness,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Missy,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Childhood,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Friendly,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Dame,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Masochist,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Cunning,
+            ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Gyaru
+        };
+
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)
         {
             Dictionary<int, Dictionary<string, ADVStep>> result = new Dictionary<int, Dictionary<string, ADVStep>>();
@@ -362,6 +391,8 @@ namespace COM3D2.WildParty.Plugin
                 result.Add(ScenarioIDList.ManInLiliesScenarioID, LoadScenarioFromResources(ScenarioManInLiliesResList));
             else if (scenarioID == ScenarioIDList.ExpExchangeEventID)
                 result.Add(ScenarioIDList.ExpExchangeEventID, LoadScenarioFromResources(ScenarioExpExchangeEventResList));
+            else if (scenarioID == ScenarioIDList.PleasureAddictedMaidsEventID)
+                result.Add(ScenarioIDList.PleasureAddictedMaidsEventID, LoadScenarioFromResources(ScenarioPleasureAddictedMaidsResList));
 
             return result;
         }

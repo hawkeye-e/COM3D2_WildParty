@@ -130,6 +130,9 @@ namespace COM3D2.WildParty.Plugin
         internal static ManTypeOption ExpExchangeEventManType { get { return _expExchangeEventManType.Value; } }
         private static ConfigEntry<ManTypeOption> _expExchangeEventManType;
 
+        internal static ManTypeOption PleaseureAddictedMaidsManType { get { return _pleaseureAddictedMaidsManType.Value; } }
+        private static ConfigEntry<ManTypeOption> _pleaseureAddictedMaidsManType;
+
         internal static Helper.BodyWritingsMarker.Scope BodyWritingScope { get { return _bodyWritingScope.Value; } }
         private static ConfigEntry<Helper.BodyWritingsMarker.Scope> _bodyWritingScope;
 
@@ -263,6 +266,10 @@ namespace COM3D2.WildParty.Plugin
             _expExchangeEventManType = plugin.Config.Bind(SCENARIOSETTING, "Empire Club Experience Exchange Event - Man Types",
                 ManTypeOption.YoungMan | ManTypeOption.MiddleAged,
                 "The type of man that will be used in the scenaio [Empire Club Experience Exchange Event]. If all items are unchecked, the system will use the default man types.");
+
+            _pleaseureAddictedMaidsManType = plugin.Config.Bind(SCENARIOSETTING, "Empire Club Experience Exchange Event - Man Types",
+                ManTypeOption.YoungMan | ManTypeOption.MiddleAged,
+                "The type of man that will be used in the scenaio [Pleasure Addicted Maids]. If all items are unchecked, the system will use the default man types.");
         }
 
         private static void AddDeveloperRelatedConfigs(BaseUnityPlugin plugin)

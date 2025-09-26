@@ -146,6 +146,8 @@ namespace COM3D2.WildParty.Plugin
                 InitDataForManInLilies();
             else if (scenarioID == ScenarioIDList.ExpExchangeEventID)
                 InitDataForExpExchangeEvent();
+            else if (scenarioID == ScenarioIDList.PleasureAddictedMaidsEventID)
+                InitDataForPleasureAddictedMaids();
         }
 
         public static void ReloadCoordinateData(int scenarioID)
@@ -169,8 +171,9 @@ namespace COM3D2.WildParty.Plugin
                 MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_TripleBooking);
             else if (scenarioID == ScenarioIDList.ManInLiliesScenarioID)
                 MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ManInLilies);
-            else if (scenarioID == ScenarioIDList.ExpExchangeEventID)
+            else if (scenarioID == ScenarioIDList.ExpExchangeEventID || scenarioID == ScenarioIDList.PleasureAddictedMaidsEventID)
                 MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ExpExchangeEvent);
+            
         }
 
         private static void ResetModUseData()
@@ -322,6 +325,21 @@ namespace COM3D2.WildParty.Plugin
         private static void InitDataForExpExchangeEvent()
         {
             ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.ExpExchangeEventID);
+
+            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_ExpExchangeEvent, ModResources.SexPosValidLabelsResources.SexPosValidLabels_ExpExchangeEvent, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_ExpExchangeEvent);
+            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_ExpExchangeEvent);
+
+            InitAllVoiceDataFromCSV();
+            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ExpExchangeEvent);
+
+            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_ExpExchangeEvent);
+
+            ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_ExpExchangeEvent);
+        }
+
+        private static void InitDataForPleasureAddictedMaids()
+        {
+            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.PleasureAddictedMaidsEventID);
 
             InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_ExpExchangeEvent, ModResources.SexPosValidLabelsResources.SexPosValidLabels_ExpExchangeEvent, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_ExpExchangeEvent);
             ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_ExpExchangeEvent);
