@@ -18,8 +18,11 @@ For details or screenshots please refer to the [blog](https://hawkeye0.blogspot.
   - [Triple Booking (NTR)](https://hawkeye0.blogspot.com/2025/08/scenario-info-triple-booking.html)
   - [The man between lily blossom (Harem)](https://hawkeye0.blogspot.com/2025/08/scenario-info-man-between-lily-blossom.html)
   - [Empire Club Trial session (NTR)](https://hawkeye0.blogspot.com/2025/09/scenario-info-empire-club-trial-session.html)
+  - [Pleasure Addicted Maids (NTR)](https://hawkeye0.blogspot.com/2025/09/scenario-info-pleasure-addicted-maids.html)
  
-
+## Misc Info
+- [FAQ](https://hawkeye0.blogspot.com/2025/02/wild-party-mod-faq.html)
+- [Body Writing System](https://hawkeye0.blogspot.com/2025/09/wildparty-body-writing-system.html)
 
 ## Installation
 1. Download the plugin from [Releases](https://github.com/hawkeye-e/COM3D2_WildParty/releases)
