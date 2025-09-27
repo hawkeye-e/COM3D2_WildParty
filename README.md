@@ -17,6 +17,7 @@ For details or screenshots please refer to the [blog](https://hawkeye0.blogspot.
   - [Lustful Maid (Pure Love)](https://hawkeye0.blogspot.com/2025/07/scenario-info-lustful-maid.html)
   - [Triple Booking (NTR)](https://hawkeye0.blogspot.com/2025/08/scenario-info-triple-booking.html)
   - [The man between lily blossom (Harem)](https://hawkeye0.blogspot.com/2025/08/scenario-info-man-between-lily-blossom.html)
+  - [Empire Club Trial session (NTR)](https://hawkeye0.blogspot.com/2025/09/scenario-info-empire-club-trial-session.html)
  
 
 
