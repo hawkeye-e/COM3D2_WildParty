@@ -727,6 +727,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string TripleBooking = "TripleBooking";
             internal const string ManInLilies = "ManInLilies";
             internal const string ExpExchangeEvent = "ExpExchangeEvent";
+            internal const string LoveLoveTravel = "LoveLoveTravel";
         }
 
         internal static class TexturePattern

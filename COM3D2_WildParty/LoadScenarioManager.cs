@@ -362,6 +362,11 @@ namespace COM3D2.WildParty.Plugin
             ScenarioResources.ScenarioPleasureAddictedMaidsResource.PleasureAddictedMaidsADV_Gyaru
         };
 
+        private static readonly string[] ScenarioLoveLoveTravelResList = {
+            ScenarioResources.ScenarioLoveLoveTravel.LoveLoveTravelADVIntro,
+            
+        };
+
         public static Dictionary<int, Dictionary<string, ADVStep>> LoadScenario(int scenarioID)
         {
             Dictionary<int, Dictionary<string, ADVStep>> result = new Dictionary<int, Dictionary<string, ADVStep>>();
@@ -393,6 +398,8 @@ namespace COM3D2.WildParty.Plugin
                 result.Add(ScenarioIDList.ExpExchangeEventID, LoadScenarioFromResources(ScenarioExpExchangeEventResList));
             else if (scenarioID == ScenarioIDList.PleasureAddictedMaidsEventID)
                 result.Add(ScenarioIDList.PleasureAddictedMaidsEventID, LoadScenarioFromResources(ScenarioPleasureAddictedMaidsResList));
+            else if (scenarioID == ScenarioIDList.LoveLoveTravelScenarioID)
+                result.Add(ScenarioIDList.LoveLoveTravelScenarioID, LoadScenarioFromResources(ScenarioLoveLoveTravelResList));
 
             return result;
         }

@@ -62,9 +62,26 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  
-        ///}
-        ///.
+        ///  &quot;MoveQueueForward&quot;: {
+        ///    &quot;CommandCode&quot;: &quot;MoveQueueForward&quot;,
+        ///    &quot;Name&quot;: &quot;行列が前進する&quot;,
+        ///    &quot;Type&quot;: &quot;Common&quot;,
+        ///    &quot;Constraint&quot;: [
+        ///      {
+        ///        &quot;EventID&quot;: 9900011,
+        ///        &quot;FormationIDs&quot;: [ &quot;Theatre_ButtockWall_Single&quot;, &quot;Theatre_Restraint_Single&quot; ]
+        ///      },
+        ///      {
+        ///        &quot;EventID&quot;: 9900012,
+        ///        &quot;FormationIDs&quot;: [ &quot;Theatre_ButtockWall_Single&quot;, &quot;Theatre_Restraint_Single&quot; ]
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;FetishMeatToilet&quot;: {
+        ///    &quot;CommandCode&quot;: &quot;AddFetish&quot;,
+        ///    &quot;Name&quot;: &quot;性癖「肉便器志望」&quot;,
+        ///    &quot;Type&quot; [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ExtraYotogiComands_ExpExchangeEvent {
             get {
@@ -202,6 +219,37 @@ namespace ModResources {
         internal static string ExtraYotogiComands_LilyBloomingParadise {
             get {
                 return ResourceManager.GetString("ExtraYotogiComands_LilyBloomingParadise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;ChangePosition&quot;: {
+        ///    &quot;CommandCode&quot;: &quot;ChangePosition&quot;,
+        ///    &quot;Name&quot;: &quot;体位変更&quot;,
+        ///    &quot;Type&quot;: &quot;Common&quot;
+        ///  },
+        ///
+        ///  &quot;FetishVirginEater&quot;: {
+        ///    &quot;CommandCode&quot;: &quot;AddFetish&quot;,
+        ///    &quot;Name&quot;: &quot;性癖「童貞喰い」&quot;,
+        ///    &quot;Type&quot;: &quot;Fetish&quot;,
+        ///    &quot;FetishID&quot;: 99004,
+        ///    &quot;ConditionCheckTexts&quot;: [
+        ///      {
+        ///        &quot;Field&quot;: &quot;SexPosRequired&quot;,
+        ///        &quot;DisplayText&quot;: &quot;男の子たちに全ての乱交体位を教える（[=CurrentSexPosCount]／[=SexPosRequired]）&quot;
+        ///      }
+        ///    ]
+        ///  },
+        ///
+        ///  &quot;ChangeMan_Amayakasi_Tekoki&quot;: {
+        ///    &quot;CommandCode&quot;: &quot;ChainedAction&quot;,
+        ///    &quot;Name&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string ExtraYotogiComands_LoveLoveTravel {
+            get {
+                return ResourceManager.GetString("ExtraYotogiComands_LoveLoveTravel", resourceCulture);
             }
         }
         

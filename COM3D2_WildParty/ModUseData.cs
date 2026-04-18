@@ -148,6 +148,10 @@ namespace COM3D2.WildParty.Plugin
                 InitDataForExpExchangeEvent();
             else if (scenarioID == ScenarioIDList.PleasureAddictedMaidsEventID)
                 InitDataForPleasureAddictedMaids();
+            else if (scenarioID == ScenarioIDList.LoveLoveTravelScenarioID)
+                InitDataForScenarioWithRes(ScenarioIDList.LoveLoveTravelScenarioID, 
+                    ModResources.SexPosListResources.SexPosList_LoveLoveTravel, ModResources.SexPosValidLabelsResources.SexPosValidLabels_LoveLoveTravel, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_LoveLoveTravel,
+                    ModResources.YotogiMapCoordinatesResources.MapCoordinates_LoveLoveTravel, ModResources.PartyGroupSetupResources.PartyGroupSetup_LoveLoveTravel, ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_LoveLoveTravel);
         }
 
         public static void ReloadCoordinateData(int scenarioID)
@@ -173,7 +177,9 @@ namespace COM3D2.WildParty.Plugin
                 MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ManInLilies);
             else if (scenarioID == ScenarioIDList.ExpExchangeEventID || scenarioID == ScenarioIDList.PleasureAddictedMaidsEventID)
                 MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ExpExchangeEvent);
-            
+            else if (scenarioID == ScenarioIDList.LoveLoveTravelScenarioID)
+                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_LoveLoveTravel);
+
         }
 
         private static void ResetModUseData()
@@ -184,6 +190,21 @@ namespace COM3D2.WildParty.Plugin
             PersonalityVoiceList = new Dictionary<int, PersonalityVoice>();
             MapCoordinateList = new Dictionary<string, MapCoorindates>();
             ExtraYotogiCommandDataList = new Dictionary<string, ExtraYotogiCommandData>();
+        }
+
+        private static void InitDataForScenarioWithRes(int scenarioID, string sexPosList, string sexPosValieLabels, string sexPosSpecialLabels, string mapCoordinates, string partyGroupSetup, string extraYotogiCommands)
+        {
+            ADVStepData = LoadScenarioManager.LoadScenario(scenarioID);
+
+            InitBackgroundMotionDictionary(sexPosList, sexPosValieLabels, sexPosSpecialLabels);
+            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(sexPosList);
+
+            InitAllVoiceDataFromCSV();
+            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(mapCoordinates);
+
+            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(partyGroupSetup);
+
+            ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(extraYotogiCommands);
         }
 
         private static void InitDataForOrgyParty()

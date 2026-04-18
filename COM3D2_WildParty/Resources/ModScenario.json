@@ -1119,5 +1119,69 @@
         "Value": 1
       }
     ]
+  },
+
+  {
+    "ScenarioID": 9901005,
+    "CategoryID": 99010,
+    "DisplayOrder": 5,
+    "ADVEntryStep": "luvtrv0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "ラブラブハーレム旅行",
+    "Information": "[place holder]…",
+    "Icon": "mod_icon_harem_king",
+    "IsNetorare": false,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "SpecialRelationEnumString": [ "Married" ],
+    "ConditionInfoText": [
+      "嫁である",
+      "育成中のメイドではない",
+      "両穴経験済みである"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 210, 220 ],
+
+    "IsGroupEvent": true,
+    "MaidCount": {
+      "Max": 6,
+      "Min": 6
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "yashiki_day",
+          "NightMapID": "yashiki_day",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Default" ],
+          "DefaultFormation": "Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition"
+        ],
+        "IsMainManOwner": true,
+
+        "SexStateRule": "Common"
+      }
+    ],
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": false,
+    "IgnoreEjaculationSE": false,
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_ラブラブハーレム旅行_Executed",
+        "Value": 1
+      }
+    ]
   }
 ]

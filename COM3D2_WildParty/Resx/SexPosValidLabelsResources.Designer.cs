@@ -201,6 +201,33 @@ namespace ModResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SexPosID,ExcitementLevel,LabelName,VoiceType,VoiceType2,LabelGroupID
+        ///1,0,*抱き付き激しさ１,Piston,,1
+        ///1,1,*抱き付き激しさ１,Piston,,1
+        ///1,2,*抱き付き激しさ２,Piston,,1
+        ///1,3,*抱き付き激しさ３,Piston,,1
+        ///1,0,*抱き付き激しさ１キス,Kiss,,2
+        ///1,1,*抱き付き激しさ１キス,Kiss,,2
+        ///1,2,*抱き付き激しさ２キス,Kiss,,2
+        ///1,3,*抱き付き激しさ３キス,Kiss,,2
+        ///1,0,*激しさ１胸揉み,Piston,,3
+        ///1,1,*激しさ１胸揉み,Piston,,3
+        ///1,2,*激しさ２胸揉み,Piston,,3
+        ///1,3,*激しさ３胸揉み,Piston,,3
+        ///2,0,*激しさ１抱き付き,Piston,,4
+        ///2,1,*激しさ１抱き付き,Piston,,4
+        ///2,2,*激しさ２抱き付き,Piston,,4
+        ///2,3,*激しさ３抱き付き,Piston,,4
+        ///2,0,*激しさ１胸揉み,Piston,,5
+        ///2,1,*激しさ１胸揉み,Piston,,5 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SexPosValidLabels_LoveLoveTravel {
+            get {
+                return ResourceManager.GetString("SexPosValidLabels_LoveLoveTravel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SexPosID,ExcitementLevel,LabelName,VoiceType,VoiceType2,LabelGroupID,SpecialScriptFile,Dummy
         ///1,0,*逆さ洗い,Houshi,,1,sex_mp2.ks,
         ///1,1,*逆さ洗い,Houshi,,1,sex_mp2.ks,

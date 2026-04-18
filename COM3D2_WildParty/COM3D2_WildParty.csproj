@@ -217,6 +217,11 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>ScenarioLilyBloomingParadise.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resx\ScenarioLoveLoveTravel.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>ScenarioLoveLoveTravel.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resx\ScenarioLustfulMaid.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -333,6 +338,11 @@
 	  <EmbeddedResource Update="Resx\ScenarioLilyBloomingParadise.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>ScenarioLilyBloomingParadise.Designer.cs</LastGenOutput>
+	    <CustomToolNamespace>ScenarioResources</CustomToolNamespace>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resx\ScenarioLoveLoveTravel.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>ScenarioLoveLoveTravel.Designer.cs</LastGenOutput>
 	    <CustomToolNamespace>ScenarioResources</CustomToolNamespace>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resx\ScenarioLustfulMaid.resx">

@@ -61,16 +61,14 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
-        ///1,*挿入,Insert,,,,,,,InsertMouth,,,,,
-        ///1,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///1,*射精外,Orgasm,Ass,,,Maid1,,,Piston,,OrgasmWait,,,
-        ///1,*射精中,Orgasm,Vagina,,,Maid1,,,Piston,,OrgasmWait,,,
-        ///2,*挿入,Insert,,,,,,,Insert,,,,,
-        ///2,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///2,*射精外,Orgasm,Ass,,,Maid1,,,Piston,,OrgasmWait,,,
-        ///2,*射精中,Orgasm,Vagina,,,Maid1,,,Piston,,OrgasmWait,,,
-        /// [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,TallyCountMaid1,TallyCountMaid2,dummy
+        ///1,*挿入,Insert,,,,,,,InsertMouth,,,,,,,
+        ///1,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///1,*射精外,Orgasm,Ass,,,Maid1,,,Piston,,OrgasmWait,,,Back,,
+        ///1,*射精中,Orgasm,Vagina,,,Maid1,,,Piston,,OrgasmWait,,,Back,,
+        ///2,*挿入,Insert,,,,,,,Insert,,,,,,,
+        ///2,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///2,*射精外,Orgasm,Ass,,,Maid1,,,Piston,,OrgasmWait,,,Back [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosSpecialLabels_ExpExchangeEvent {
             get {
@@ -79,12 +77,11 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
-        ///1,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///1,*顔射,Orgasm,Face,Face,Breast,Maid1,Maid1,Maid1,3PFellatioFace,,OrgasmWaitExcite,,Face,
-        ///1,*口内射精,Orgasm,Mouth,Face,Breast,Maid1,Maid1,Maid1,3PFellatio,,OrgasmWaitExcite,,Mouth,
-        ///1,*ぶっかけ２,Orgasm,Mouth,Face,Breast,Maid1,Maid1,Maid1,3PFellatioFace,,OrgasmWaitExcite,,Bukkake,
-        ///1,*ぶっかけ,Orgasm,Mouth,Face,Breast,Maid1, [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,TallyCountMaid1,TallyCountMaid2,dummy
+        ///1,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///1,*顔射,Orgasm,Face,Face,Breast,Maid1,Maid1,Maid1,3PFellatioFace,,OrgasmWaitExcite,,Face,,,
+        ///1,*口内射精,Orgasm,Mouth,Face,Breast,Maid1,Maid1,Maid1,3PFellatio,,OrgasmWaitExcite,,Mouth,,,
+        ///1,*ぶっかけ２,Orgasm,Mouth,Face,Breast,Maid1,Maid1,Maid1,3PFellatioFace,,OrgasmWaitExcite,,Bukkake,,,        /// [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosSpecialLabels_HappyGBClub {
             get {
@@ -93,17 +90,16 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
-        ///1,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///2,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///3,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///4,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///5,*待機,Waiting,,,,,,,Waiting,Waiting,,,,
-        ///6,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///100,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///101,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///102,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///103,*待機,Waiting,,,,,,,Waitin [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,TallyCountMaid1,TallyCountMaid2,dummy
+        ///1,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///2,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///3,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///4,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///5,*待機,Waiting,,,,,,,Waiting,Waiting,,,,,,
+        ///6,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///100,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///101,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///102,*待機,Waiting, [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosSpecialLabels_HaremKing {
             get {
@@ -112,15 +108,14 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
-        ///1,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///1,*射精外,Orgasm,Face,,,Maid1,,,Houshi,,OrgasmWaitHoushi,,,
-        ///2,*挿入,Insert,,,,,,,Insert,,,,,
-        ///2,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///2,*射精外,Orgasm,Belly,,,Maid1,,,Piston,,OrgasmWait,,,
-        ///2,*射精中,Orgasm,Vagina,,,Maid1,,,Piston,,OrgasmWait,,,
-        ///2,*初々しい射精外,Orgasm,Belly,,,Maid1,,,Piston,,OrgasmWait,,,
-        ///2,*初々しい射精中,Orgasm,Vagina, [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,TallyCountMaid1,TallyCountMaid2,dummy
+        ///1,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///1,*射精外,Orgasm,Face,,,Maid1,,,Houshi,,OrgasmWaitHoushi,,,,,
+        ///2,*挿入,Insert,,,,,,,Insert,,,,,,,
+        ///2,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///2,*射精外,Orgasm,Belly,,,Maid1,,,Piston,,OrgasmWait,,,Front,,
+        ///2,*射精中,Orgasm,Vagina,,,Maid1,,,Piston,,OrgasmWait,,,Front,,
+        ///3,*挿入,Insert,,,,,,,Insert,,, [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosSpecialLabels_ImmoralVillage {
             get {
@@ -129,15 +124,14 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
-        ///1,*挿入,Insert,,,,,,,Insert,,,,,
-        ///1,*待機,Waiting,,,,,,,Waiting,Waiting,,,,
-        ///1,*絶頂,Orgasm,,,,,,,Piston,,OrgasmWaitYuriBottom,OrgasmWaitYuriTop,,
-        ///2,*挿入,Insert,,,,,,,Insert,,,,,
-        ///2,*待機,Waiting,,,,,,,Waiting,Waiting,,,,
-        ///2,*絶頂,Orgasm,,,,,,,Piston,,OrgasmWaitYuriBottom,OrgasmWaitYuriTop,,
-        ///3,*挿入,Insert,,,,,,,Insert,,,,,
-        ///3,*待機,Waiting,,,,,,,Waiting,Wai [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,TallyCountMaid1,TallyCountMaid2,dummy
+        ///1,*挿入,Insert,,,,,,,Insert,,,,,,,
+        ///1,*待機,Waiting,,,,,,,Waiting,Waiting,,,,,,
+        ///1,*絶頂,Orgasm,,,,,,,Piston,,OrgasmWaitYuriBottom,OrgasmWaitYuriTop,,,,
+        ///2,*挿入,Insert,,,,,,,Insert,,,,,,,
+        ///2,*待機,Waiting,,,,,,,Waiting,Waiting,,,,,,
+        ///2,*絶頂,Orgasm,,,,,,,Piston,,OrgasmWaitYuriBottom,OrgasmWaitYuriTop,,,,
+        ///3,*挿入,Insert,,,,,,, [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosSpecialLabels_LilyBloomingParadise {
             get {
@@ -146,18 +140,32 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
-        ///1,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///2,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///3,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///4,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///5,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///6,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///7,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///8,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///9,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///10,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///11,*待機 [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,TallyCountMaid1,TallyCountMaid2,dummy
+        ///1,*挿入,Insert,,,,,,,Insert,,,,,,,
+        ///1,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///1,*初々しい射精外,Orgasm,Belly,,,Maid1,,,Piston,,OrgasmWait,,,Front,,
+        ///1,*抱き付き射精中,Orgasm,Vagina,,,Maid1,,,Piston,,OrgasmWait,,,Front,,
+        ///1,*射精外,Orgasm,Belly,,,Maid1,,,Piston,,OrgasmWait,,,Front,,
+        ///2,*挿入,Insert,,,,,,,Insert,,,,,,,
+        ///2,*待機,Waiting,,,,,,,Wa [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SexPosSpecialLabels_LoveLoveTravel {
+            get {
+                return ResourceManager.GetString("SexPosSpecialLabels_LoveLoveTravel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,TallyCountMaid1,TallyCountMaid2,dummy
+        ///1,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///2,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///3,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///4,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///5,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///6,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///7,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///8,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///9,*待機,Waiting,,,,,,,Waiting [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosSpecialLabels_LustfulMaid {
             get {
@@ -166,15 +174,14 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
-        ///1,*挿入,Insert,,,,,,,InsertMouth,,,,,
-        ///1,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///1,*初々しい射精外,Orgasm,Face,,,Maid1,,,3PFellatioFace,,OrgasmWaitExcite,,,
-        ///1,*初々しい射精中,Orgasm,Mouth,,,Maid1,,,3PFellatio,,OrgasmWaitExcite,,,
-        ///2,*挿入,Insert,,,,,,,Insert,,,,,
-        ///2,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///2,*初々しい射精外,Orgasm,Face,,,Maid1,,,3PFellatioFace,,OrgasmWaitExcite,,,
-        ///2,* [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,TallyCountMaid1,TallyCountMaid2,dummy
+        ///1,*挿入,Insert,,,,,,,InsertMouth,,,,,,,
+        ///1,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///1,*初々しい射精外,Orgasm,Face,,,Maid1,,,3PFellatioFace,,OrgasmWaitExcite,,,,,
+        ///1,*初々しい射精中,Orgasm,Mouth,,,Maid1,,,3PFellatio,,OrgasmWaitExcite,,,,,
+        ///2,*挿入,Insert,,,,,,,Insert,,,,,,,
+        ///2,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///2,*初々しい射精外,Orgasm,Face,,,Maid [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosSpecialLabels_ManInLilies {
             get {
@@ -183,16 +190,14 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
-        ///1,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///1,*初々しい秘部弄り絶頂,Orgasm,None,,,,,,Aibu,,OrgasmWait,,,
-        ///2,*挿入,Insert,,,,,,,Insert,,,,,
-        ///2,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///2,*初々しい射精外,Orgasm,Belly,,,Maid1,,,Piston,,OrgasmWait,,,
-        ///2,*初々しい射精中,Orgasm,Vagina,,,Maid1,,,Piston,,OrgasmWait,,,
-        ///3,*挿入,Insert,,,,,,,Insert,,,,,
-        ///3,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///3,*初々しい射精外,Org [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,TallyCountMaid1,TallyCountMaid2,dummy
+        ///1,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///1,*初々しい秘部弄り絶頂,Orgasm,None,,,,,,Aibu,,OrgasmWait,,,,,
+        ///2,*挿入,Insert,,,,,,,Insert,,,,,,,
+        ///2,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///2,*初々しい射精外,Orgasm,Belly,,,Maid1,,,Piston,,OrgasmWait,,,Front,,
+        ///2,*初々しい射精中,Orgasm,Vagina,,,Maid1,,,Piston,,OrgasmWait,,,Front,,
+        ///3,*挿入,Insert,,,,,,,Insert, [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosSpecialLabels_OrgyParty {
             get {
@@ -201,14 +206,13 @@ namespace ModResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,dummy
-        ///1,*挿入,Insert,,,,,,,InsertMouth,,,,,
-        ///1,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///1,*初々しい射精外,Orgasm,Belly,Face,,Maid1,Maid1,,3PFellatioFace,,OrgasmWaitExcite,,,
-        ///1,*初々しい射精中,Orgasm,Vagina,Mouth,,Maid1,Maid1,,3PFellatio,,OrgasmWaitExcite,,,
-        ///2,*挿入,Insert,,,,,,,Insert,,,,,
-        ///2,*待機,Waiting,,,,,,,Waiting,,,,,
-        ///2,*初々しい射精外,Orgasm,Belly,Belly,,Maid1,Maid1,,DoublePe [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to SexPosID,Label,Type,SemenPattern1,SemenPattern2,SemenPattern3,SemenTarget1,SemenTarget2,SemenTarget3,VoiceLabel1,VoiceLabel2,WaitLabel1,WaitLabel2,OrgasmType,TallyCountMaid1,TallyCountMaid2,dummy
+        ///1,*挿入,Insert,,,,,,,InsertMouth,,,,,,,
+        ///1,*待機,Waiting,,,,,,,Waiting,,,,,,,
+        ///1,*初々しい射精外,Orgasm,Belly,Face,,Maid1,Maid1,,3PFellatioFace,,OrgasmWaitExcite,,,Front,,
+        ///1,*初々しい射精中,Orgasm,Vagina,Mouth,,Maid1,Maid1,,3PFellatio,,OrgasmWaitExcite,,,Front,,
+        ///2,*挿入,Insert,,,,,,,Insert,,,,,,,
+        ///2,*待機,Waiting,,,,,,,Waiting,,,,,,, [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SexPosSpecialLabels_TripleBooking {
             get {

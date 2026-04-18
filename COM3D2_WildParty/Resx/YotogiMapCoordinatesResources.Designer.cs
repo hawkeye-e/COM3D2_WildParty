@@ -87,26 +87,25 @@ namespace ModResources {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;Theatre_Scattered&quot;: {
-        ///    &quot;MapID&quot;: 10,
-        ///    &quot;DisplayName&quot;: &quot;バラバラ&quot;,
-        ///    &quot;IsRandom&quot;: true,
+        ///  &quot;Theatre_ButtockWall_Single&quot;: {
+        ///    &quot;DisplayName&quot;: &quot;単一&quot;,
         ///    &quot;CoordinateList&quot;: [
         ///      {
-        ///        &quot;MaxGroup&quot;: 20,
+        ///        &quot;MaxGroup&quot;: 5,
         ///        &quot;GroupCoordinates&quot;: [
         ///          {
         ///            &quot;ArrayPosition&quot;: 0,
-        ///            &quot;PosString&quot;: &quot;0.0, 0.0, -1.4&quot;,
-        ///            &quot;RotString&quot;: &quot;0.0, -0.4, 0.0, 0.9&quot;
+        ///            &quot;QueueOrder&quot;: 0,
+        ///            &quot;PosString&quot;: &quot;-2.0, 0.0, 0&quot;,
+        ///            &quot;RotString&quot;: &quot;0.0, 1, 0.0, 0.0&quot;
         ///          },
         ///          {
         ///            &quot;ArrayPosition&quot;: 1,
-        ///            &quot;PosString&quot;: &quot;-1.5, 0.0, -3.5&quot;,
-        ///            &quot;RotString&quot;: &quot;0.0, 0.2, 0.0, 1.0&quot;
+        ///            &quot;QueueOrder&quot;: 1,
+        ///            &quot;PosString&quot;: &quot;-1.0, 0.0, 0&quot;,
+        ///            &quot;RotString&quot;: &quot;0.0, 1, 0.0, 0.0&quot;
         ///          },
-        ///          {
-        ///        [rest of string was truncated]&quot;;.
+        ///      [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string MapCoordinates_ExpExchangeEvent {
             get {
@@ -217,6 +216,32 @@ namespace ModResources {
         internal static string MapCoordinates_LilyBloomingParadise {
             get {
                 return ResourceManager.GetString("MapCoordinates_LilyBloomingParadise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {
+        ///  &quot;Default&quot;: {
+        ///    &quot;DisplayName&quot;: &quot;&quot;,
+        ///    &quot;IsRandom&quot;: false,
+        ///    &quot;CoordinateList&quot;: [
+        ///      {
+        ///        &quot;MaxGroup&quot;: 1,
+        ///        &quot;GroupCoordinates&quot;: [
+        ///          {
+        ///            &quot;ArrayPosition&quot;: 0,
+        ///            &quot;PosString&quot;: &quot;0, 0.5, 1.6&quot;,
+        ///            &quot;RotString&quot;: &quot;0, 0.707, 0, -0.707&quot;,
+        ///            &quot;CameraSetup&quot;: {
+        ///              &quot;PosString&quot;: &quot;1.67, 1.07, -0.10&quot;,
+        ///              &quot;TargetPosString&quot;: &quot;0.20, 0.89, 1.53&quot;,
+        ///              &quot;AroundAngleString&quot;: &quot;318.04, 4.71&quot;,
+        ///              &quot;Distance&quot;: 2.2
+        ///     [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MapCoordinates_LoveLoveTravel {
+            get {
+                return ResourceManager.GetString("MapCoordinates_LoveLoveTravel", resourceCulture);
             }
         }
         

@@ -15,5 +15,6 @@ namespace COM3D2.WildParty.Plugin
         internal const int LilyBloomingParadiseScenarioID = 9901002;
         internal const int LustfulMaidScenarioID = 9901003;
         internal const int ManInLiliesScenarioID = 9901004;
+        internal const int LoveLoveTravelScenarioID = 9901005;
     }
 }
