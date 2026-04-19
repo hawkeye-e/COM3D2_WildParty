@@ -17,7 +17,7 @@ namespace COM3D2.WildParty.Plugin
         private static Stream GetResourceStream(string name)
         {
             var assembly = typeof(ResourceLoader).Assembly;
-            var fullName = $"COM3D2.WildParty.Plugin.Resources.TextResources.{name}.json.gz";
+            var fullName = $"COM3D2.WildParty.Plugin.Resources.TextResources.{name}.gz";
             return assembly.GetManifestResourceStream(fullName)
                    ?? throw new Exception($"Resource not found: {fullName}");
         }

@@ -187,11 +187,6 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>CustomAnimResources.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resx\ExtraYotogiCommandResources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>ExtraYotogiCommandResources.resx</DependentUpon>
-	  </Compile>
 	  <Compile Update="Resx\ImageResources.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -202,45 +197,15 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>PrefabResources.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resx\YotogiMapCoordinatesResources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>YotogiMapCoordinatesResources.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resx\PartyGroupSetupResources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>PartyGroupSetupResources.resx</DependentUpon>
-	  </Compile>
 	  <Compile Update="Resx\PresetResources.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>PresetResources.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resx\SexPosListResources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>SexPosListResources.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resx\SexPosSpecialLabelsResources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>SexPosSpecialLabelsResources.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resx\SexPosValidLabelsResources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>SexPosValidLabelsResources.resx</DependentUpon>
-	  </Compile>
 	  <Compile Update="Resx\TextResource.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>TextResource.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resx\Voice.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Voice.resx</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -248,11 +213,6 @@
 	  <EmbeddedResource Update="Resx\CustomAnimResources.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>CustomAnimResources.Designer.cs</LastGenOutput>
-	    <CustomToolNamespace>ModResources</CustomToolNamespace>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resx\ExtraYotogiCommandResources.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>ExtraYotogiCommandResources.Designer.cs</LastGenOutput>
 	    <CustomToolNamespace>ModResources</CustomToolNamespace>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resx\ImageResources.resx">
@@ -265,45 +225,15 @@
 	    <LastGenOutput>PrefabResources.Designer.cs</LastGenOutput>
 	    <CustomToolNamespace>ModResources</CustomToolNamespace>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resx\YotogiMapCoordinatesResources.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>YotogiMapCoordinatesResources.Designer.cs</LastGenOutput>
-	    <CustomToolNamespace>ModResources</CustomToolNamespace>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resx\PartyGroupSetupResources.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>PartyGroupSetupResources.Designer.cs</LastGenOutput>
-	    <CustomToolNamespace>ModResources</CustomToolNamespace>
-	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resx\PresetResources.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>PresetResources.Designer.cs</LastGenOutput>
-	    <CustomToolNamespace>ModResources</CustomToolNamespace>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resx\SexPosListResources.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>SexPosListResources.Designer.cs</LastGenOutput>
-	    <CustomToolNamespace>ModResources</CustomToolNamespace>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resx\SexPosSpecialLabelsResources.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>SexPosSpecialLabelsResources.Designer.cs</LastGenOutput>
-	    <CustomToolNamespace>ModResources</CustomToolNamespace>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resx\SexPosValidLabelsResources.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>SexPosValidLabelsResources.Designer.cs</LastGenOutput>
 	    <CustomToolNamespace>ModResources</CustomToolNamespace>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resx\TextResource.resx">
 	    <CustomToolNamespace>ModResources</CustomToolNamespace>
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>TextResource.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resx\Voice.resx">
-	    <CustomToolNamespace>ModResources</CustomToolNamespace>
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>Voice.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	</ItemGroup>
 	
@@ -326,8 +256,7 @@
 	    <EmbeddedResource Include="@(JsonFiles->'%(FullPath).gz')" />
 	    <EmbeddedResource Include="@(CsvFiles->'%(FullPath).gz')" />
 	  </ItemGroup>
-	</Target>
-	
+	</Target>	
 
   <ItemGroup>
     <None Update="Resources\TextResources\**\*.json.gz">

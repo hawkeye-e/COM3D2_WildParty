@@ -23,14 +23,58 @@ namespace COM3D2.WildParty.Plugin
 
         internal const string MainEventScriptFile = "AllMain.ks";
 
-        internal const string ScenarioManifestFile = "ScenarioManifest";
-        internal const string CommonManifestFile = "CommonManifest";
+        internal const string ScenarioManifestFile = "ScenarioManifest.json";
+        internal const string CommonManifestFile = "CommonManifest.json";
+        internal const string SexStateManifestFile = "SexStateManifest.json";
+        internal const string VoiceManifestFile = "VoiceManifest.json";
 
         //The type listed in ScenarioManifest.json should reference here
         internal static class ResourcesFileType
         {
             internal const string Scenario = "Scenario";
-        }
+            internal const string ScenarioExtraYotogiComands = "ScenarioExtraYotogiComands";
+            internal const string ScenarioMapCoordinates = "ScenarioMapCoordinates";
+            internal const string ScenarioPartyGroupSetup = "ScenarioPartyGroupSetup";
+            internal const string ScenarioSexPosList = "ScenarioSexPosList";
+            internal const string ScenarioSexPosSpecialLabels = "ScenarioSexPosSpecialLabels";
+            internal const string ScenarioSexPosValidLabels = "ScenarioSexPosValidLabels";
+
+            internal const string BodyWritingBodyTextSetup = "BodyWritingBodyTextSetup";
+            internal const string BodyWritingTallyCountSetup = "BodyWritingTallyCountSetup";
+            internal const string BodyWritingTextureFileList = "BodyWritingTextureFileList";
+
+            internal const string CharacterEffect = "CharacterEffect";
+            internal const string ClothesSet = "ClothesSet";
+
+            internal const string CommandChainedAction = "CommandChainedAction";
+
+            internal const string IKRectify = "IKRectify";
+            internal const string HardCodeMotionSetup = "HardCodeMotionSetup";
+
+            internal const string MasturbationMotion = "MasturbationMotion";
+            internal const string ManBodyOptions = "ManBodyOptions";
+
+            internal const string ModFetish = "ModFetish";
+            internal const string ModNPCFemale = "ModNPCFemale";
+            internal const string ModNPCMale = "ModNPCMale";
+            internal const string ModPropensity = "ModPropensity";
+            internal const string ModScenario = "ModScenario";
+            internal const string ModScenarioCategory = "ModScenarioCategory";
+            internal const string RandomizeManSetting = "RandomizeManSetting";
+            internal const string SemenPattern = "SemenPattern";
+
+            internal const string SexPosSE = "SexPosSE";
+            internal const string SexPosFace = "SexPosFace";
+
+            internal const string YotogiCommandDataOverride = "YotogiCommandDataOverride";
+            internal const string YotogiMiscHandling = "YotogiMiscHandling";
+
+            internal const string VoiceAllInsert = "VoiceAllInsert";
+            internal const string VoiceAllOrgasmScream = "VoiceAllOrgasmScream";
+            internal const string VoiceAllOrgasmWait = "VoiceAllOrgasmWait";
+
+            internal const string VoiceCharacter = "Voice{0}";
+        }  
 
         internal static readonly string[] ModIconNames = {
             ModResources.ImageResources.OrgyPartyIconFileName,

@@ -74,120 +74,109 @@ namespace COM3D2.WildParty.Plugin
         public static Dictionary<string, List<BodyWritingTextureInfo>> BodyWritingTextureList;
 
         public static List<ScenarioManifest> ScenarioManifestList;
+        //Key: Manifest type(Constant.ResourcesFileType), Value: file path
+        public static Dictionary<string, string> CommonManifestList;
+        //Key: Manifest type(Constant.SexStateRuleDefinition), Value: file path
+        public static Dictionary<string, string> SexStateManifestList;
+        //Key: Manifest type(Constant.ResourcesFileType), Value: file path
+        public static Dictionary<string, string> VoiceManifestList;
 
         public ModUseData()
         {
         }
 
         //Read the necessary data from the declared manifest file
-        public static void InitFromManifest()
+        public static void InitManifest()
         {
             ScenarioManifestList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ScenarioManifest>>(ResourceLoader.LoadCompressedFile(Constant.ScenarioManifestFile));
+            CommonManifestList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(ResourceLoader.LoadCompressedFile(Constant.CommonManifestFile));
+            SexStateManifestList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(ResourceLoader.LoadCompressedFile(Constant.SexStateManifestFile));
+            VoiceManifestList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(ResourceLoader.LoadCompressedFile(Constant.VoiceManifestFile));
         }
 
         //Read all the necessary data from resources files
         public static void Init()
         {
-            ManBodyInfoList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ManBodyInfo>>(ModResources.TextResource.RandomizeManSetting);
+            ManBodyInfoList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ManBodyInfo>>(LoadCompressedCommonResources(Constant.ResourcesFileType.RandomizeManSetting));
 
-            ScenarioCategoryList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ScenarioCategory>>(ModResources.TextResource.ModScenarioCategory);
-            
-            ScenarioList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Scenario>>(ModResources.TextResource.ModScenario);
+            ScenarioCategoryList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ScenarioCategory>>(LoadCompressedCommonResources(Constant.ResourcesFileType.ModScenarioCategory));
+
+            ScenarioList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Scenario>>(LoadCompressedCommonResources(Constant.ResourcesFileType.ModScenario));
             foreach (var item in ScenarioList)
                 item.PostLoadProcess();
-            
-            MasturbationMotionList = MasturbationMotion.ReadCSVFile(ModResources.TextResource.MasturbationMotion);
 
-            VoiceFaceList = VoiceFace.ReadCSVFile(ModResources.TextResource.SexPosFace);
+            MasturbationMotionList = MasturbationMotion.ReadCSVFile(LoadCompressedCommonResources(Constant.ResourcesFileType.MasturbationMotion));
 
-            SemenPatternList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SemenPattern>>(ModResources.TextResource.SemenPattern);
+            VoiceFaceList = VoiceFace.ReadCSVFile(LoadCompressedCommonResources(Constant.ResourcesFileType.SexPosFace));
+
+            SemenPatternList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SemenPattern>>(LoadCompressedCommonResources(Constant.ResourcesFileType.SemenPattern));
             foreach (var kvp in SemenPatternList)
             {
                 kvp.Value.PostInitDataProcess();
             }
 
-            FetishList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Fetish>>(ModResources.TextResource.ModFetish);
-                        
-            ModNPCFemaleList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ModNPCFemale>>(ModResources.TextResource.ModNPCFemale);
-            ModNPCMaleList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ModNPCMale>>(ModResources.TextResource.ModNPCMale);
+            FetishList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Fetish>>(LoadCompressedCommonResources(Constant.ResourcesFileType.ModFetish));
 
-            YotogiMiscSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<int, List<YotogiMiscSetup>>>(ModResources.TextResource.YotogiMiscHandling);
+            ModNPCFemaleList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ModNPCFemale>>(LoadCompressedCommonResources(Constant.ResourcesFileType.ModNPCFemale));
+            ModNPCMaleList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ModNPCMale>>(LoadCompressedCommonResources(Constant.ResourcesFileType.ModNPCMale));
 
-            ClothesSetList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ClothesSet>>(ModResources.TextResource.ClothesSet);
+            YotogiMiscSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<int, List<YotogiMiscSetup>>>(LoadCompressedCommonResources(Constant.ResourcesFileType.YotogiMiscHandling));
 
-            CharacterEffectList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, CharacterEffect>>(ModResources.TextResource.CharacterEffect);
+            ClothesSetList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ClothesSet>>(LoadCompressedCommonResources(Constant.ResourcesFileType.ClothesSet));
 
-            IKRectifyList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<IKRectify>>(ModResources.TextResource.IKRectify);
-            
-            YotogiCommandDataOverrideList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<YotogiCommandDataOverride>>(ModResources.TextResource.YotogiCommandDataOverride);
-            
-            CommandChainedActionList = Newtonsoft.Json.JsonConvert.DeserializeObject< Dictionary<string, CommandChainedAction>> (ModResources.TextResource.CommandChainedAction);
+            CharacterEffectList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, CharacterEffect>>(LoadCompressedCommonResources(Constant.ResourcesFileType.CharacterEffect));
 
-            HardCodeMotionSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, HardCodeMotionSetup>>(ModResources.TextResource.HardCodeMotionSetup);
+            IKRectifyList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<IKRectify>>(LoadCompressedCommonResources(Constant.ResourcesFileType.IKRectify));
 
-            BodyWritingBodyTextSetupList = BodyWritingSetupInfo.ReadCSVFile(ModResources.TextResource.BodyWritingBodyTextSetup);
-            BodyWritingTallyCountSetupList = BodyWritingSetupInfo.ReadCSVFile(ModResources.TextResource.BodyWritingTallyCountSetup);
+            YotogiCommandDataOverrideList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<YotogiCommandDataOverride>>(LoadCompressedCommonResources(Constant.ResourcesFileType.YotogiCommandDataOverride));
 
-            BodyWritingTextureList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, List<BodyWritingTextureInfo>>>(ModResources.TextResource.BodyWritingTextureFileList);
+            CommandChainedActionList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, CommandChainedAction>>(LoadCompressedCommonResources(Constant.ResourcesFileType.CommandChainedAction));
+
+            HardCodeMotionSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, HardCodeMotionSetup>>(LoadCompressedCommonResources(Constant.ResourcesFileType.HardCodeMotionSetup));
+
+            BodyWritingBodyTextSetupList = BodyWritingSetupInfo.ReadCSVFile(LoadCompressedCommonResources(Constant.ResourcesFileType.BodyWritingBodyTextSetup));
+
+            BodyWritingTallyCountSetupList = BodyWritingSetupInfo.ReadCSVFile(LoadCompressedCommonResources(Constant.ResourcesFileType.BodyWritingTallyCountSetup));
+
+            BodyWritingTextureList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, List<BodyWritingTextureInfo>>>(LoadCompressedCommonResources(Constant.ResourcesFileType.BodyWritingTextureFileList));
+        }
+
+        private static string LoadCompressedCommonResources(string ResourceFileTypeKey)
+        {
+            return ResourceLoader.LoadCompressedFile(CommonManifestList[ResourceFileTypeKey]);
         }
 
         public static void InitDataForScenario(int scenarioID)
         {
             ResetModUseData();
-            if (scenarioID == ScenarioIDList.OrgyPartyScenarioID)
-                InitDataForOrgyParty();
-            else if (scenarioID == ScenarioIDList.HaremKingScenarioID)
-                InitDataForHaremKing();
-            else if (scenarioID == ScenarioIDList.HappyGBClubScenarioID)
-                InitDataForHappyGBClub();
-            else if (scenarioID == ScenarioIDList.AnotherGBDesireScenarioID)
-                InitDataForAnotherGBDesire();
-            else if (scenarioID == ScenarioIDList.LilyBloomingParadiseScenarioID)
-                InitDataForLilyBloomingParadise();
-            else if (scenarioID == ScenarioIDList.ImmoralVillageScenarioID)
-                InitDataForImmoralVillage();
-            else if (scenarioID == ScenarioIDList.LustfulMaidScenarioID)
-                InitDataForLustfulMaid();
-            else if (scenarioID == ScenarioIDList.TripleBookingScenarioID)
-                InitDataForTripleBooking();
-            else if (scenarioID == ScenarioIDList.ManInLiliesScenarioID)
-                InitDataForManInLilies();
-            else if (scenarioID == ScenarioIDList.ExpExchangeEventID)
-                InitDataForExpExchangeEvent();
-            else if (scenarioID == ScenarioIDList.PleasureAddictedMaidsEventID)
-                InitDataForPleasureAddictedMaids();
-            else if (scenarioID == ScenarioIDList.LoveLoveTravelScenarioID)
-                InitDataForScenarioWithRes(ScenarioIDList.LoveLoveTravelScenarioID, 
-                    ModResources.SexPosListResources.SexPosList_LoveLoveTravel, ModResources.SexPosValidLabelsResources.SexPosValidLabels_LoveLoveTravel, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_LoveLoveTravel,
-                    ModResources.YotogiMapCoordinatesResources.MapCoordinates_LoveLoveTravel, ModResources.PartyGroupSetupResources.PartyGroupSetup_LoveLoveTravel, ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_LoveLoveTravel);
+
+            ScenarioManifest scenarioManifestInfo = GetScenarioManifest(scenarioID);
+            
+            if (scenarioManifestInfo != null)
+            {
+                InitDataForScenarioWithRes(
+                    scenarioID,
+                    ResourceLoader.LoadCompressedFile(scenarioManifestInfo.Files[Constant.ResourcesFileType.ScenarioSexPosList].FirstOrDefault()),
+                    ResourceLoader.LoadCompressedFile(scenarioManifestInfo.Files[Constant.ResourcesFileType.ScenarioSexPosValidLabels].FirstOrDefault()),
+                    ResourceLoader.LoadCompressedFile(scenarioManifestInfo.Files[Constant.ResourcesFileType.ScenarioSexPosSpecialLabels].FirstOrDefault()),
+                    ResourceLoader.LoadCompressedFile(scenarioManifestInfo.Files[Constant.ResourcesFileType.ScenarioMapCoordinates].FirstOrDefault()),
+                    ResourceLoader.LoadCompressedFile(scenarioManifestInfo.Files[Constant.ResourcesFileType.ScenarioPartyGroupSetup].FirstOrDefault()),
+                    ResourceLoader.LoadCompressedFile(scenarioManifestInfo.Files[Constant.ResourcesFileType.ScenarioExtraYotogiComands].FirstOrDefault())
+                    );
+            }
+
         }
 
         public static void ReloadCoordinateData(int scenarioID)
         {
-            MapCoordinateList = new Dictionary<string, MapCoorindates>();
-            if (scenarioID == ScenarioIDList.OrgyPartyScenarioID)
-                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_Orgy);
-            else if (scenarioID == ScenarioIDList.HaremKingScenarioID)
-                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_HaremKing);
-            else if (scenarioID == ScenarioIDList.HappyGBClubScenarioID)
-                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_HappyGBClub);
-            else if (scenarioID == ScenarioIDList.AnotherGBDesireScenarioID) 
-                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_AnotherGBDesire);
-            else if (scenarioID == ScenarioIDList.LilyBloomingParadiseScenarioID)
-                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_LilyBloomingParadise);
-            else if (scenarioID == ScenarioIDList.ImmoralVillageScenarioID)
-                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ImmoralVillage);
-            else if (scenarioID == ScenarioIDList.LustfulMaidScenarioID)
-                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_LustfulMaid);
-            else if (scenarioID == ScenarioIDList.TripleBookingScenarioID)
-                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_TripleBooking);
-            else if (scenarioID == ScenarioIDList.ManInLiliesScenarioID)
-                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ManInLilies);
-            else if (scenarioID == ScenarioIDList.ExpExchangeEventID || scenarioID == ScenarioIDList.PleasureAddictedMaidsEventID)
-                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ExpExchangeEvent);
-            else if (scenarioID == ScenarioIDList.LoveLoveTravelScenarioID)
-                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_LoveLoveTravel);
+            ScenarioManifest scenarioManifestInfo = GetScenarioManifest(scenarioID);
 
+            if (scenarioManifestInfo != null)
+            {   
+                MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(
+                    ResourceLoader.LoadCompressedFile(scenarioManifestInfo.Files[Constant.ResourcesFileType.ScenarioMapCoordinates].FirstOrDefault())
+                    );
+            }
         }
 
         private static void ResetModUseData()
@@ -206,215 +195,68 @@ namespace COM3D2.WildParty.Plugin
 
             InitBackgroundMotionDictionary(sexPosList, sexPosValieLabels, sexPosSpecialLabels);
             ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(sexPosList);
-
+            
             InitAllVoiceDataFromCSV();
             MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(mapCoordinates);
-
+            
             PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(partyGroupSetup);
-
+            
             ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(extraYotogiCommands);
         }
 
-        private static void InitDataForOrgyParty()
+        public static ScenarioManifest GetScenarioManifest(int scenarioID)
         {
-            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.OrgyPartyScenarioID);
+            ScenarioManifest scenarioManifestInfo;
+            if (scenarioID == ScenarioIDList.LilyBloomingParadiseScenarioID)
+            {
+                string strapOnKeyword = Config.LilyBloomingParadiseNoStrapOn ? "NoStrapOn" : "StrapOn";
+                scenarioManifestInfo = ModUseData.ScenarioManifestList.Where(x => x.ID == scenarioID && x.SpecialFlag == strapOnKeyword).FirstOrDefault();
+            }
+            else
+            {
+                scenarioManifestInfo = ModUseData.ScenarioManifestList.Where(x => x.ID == scenarioID).FirstOrDefault();
+            }
 
-            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_OrgyParty, ModResources.SexPosValidLabelsResources.SexPosValidLabels_OrgyParty, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_OrgyParty);
-            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_OrgyParty);
-
-            InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_Orgy);
-
-            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_OrgyParty);
-
-            ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_OrgyParty);
+            return scenarioManifestInfo;
         }
-
-        private static void InitDataForHaremKing()
-        {
-            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.HaremKingScenarioID);
-
-            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_HaremKing, ModResources.SexPosValidLabelsResources.SexPosValidLabels_HaremKing, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_HaremKing);
-            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_HaremKing);
-
-            InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_HaremKing);
-
-            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_HaremKing);
-
-            ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_HaremKing);
-        }
-
-        private static void InitDataForHappyGBClub()
-        {
-            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.HappyGBClubScenarioID);
-
-            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_HappyGBClub, ModResources.SexPosValidLabelsResources.SexPosValidLabels_HappyGBClub, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_HappyGBClub);
-            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_HappyGBClub);
-
-            InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_HappyGBClub);
-
-            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_HappyGBClub);
-
-            ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_HappyGBClub);
-        }
-
-        //This is a scenario that reuse some of the resources of Happy GB Club.
-        private static void InitDataForAnotherGBDesire()
-        {
-            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.AnotherGBDesireScenarioID);
-            
-            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_HappyGBClub, ModResources.SexPosValidLabelsResources.SexPosValidLabels_HappyGBClub, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_HappyGBClub);
-            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_HappyGBClub);
-            
-            InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_AnotherGBDesire);
-            
-            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_AnotherGBDesire);
-            
-            ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_HappyGBClub);
-        }
-
-        private static void InitDataForLilyBloomingParadise()
-        {
-            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.LilyBloomingParadiseScenarioID);
-
-            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_LilyBloomingParadise, ModResources.SexPosValidLabelsResources.SexPosValidLabels_LilyBloomingParadise, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_LilyBloomingParadise);
-            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_LilyBloomingParadise);
-
-            InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_LilyBloomingParadise);
-
-            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_LilyBloomingParadise);
-
-            ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_LilyBloomingParadise);
-        }
-
-        private static void InitDataForImmoralVillage()
-        {
-            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.ImmoralVillageScenarioID);
-
-            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_ImmoralVillage, ModResources.SexPosValidLabelsResources.SexPosValidLabels_ImmoralVillage, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_ImmoralVillage);
-            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_ImmoralVillage);
-
-            InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ImmoralVillage);
-
-            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_ImmoralVillage);
-
-            ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_ImmoralVillage);
-        }
-
-        private static void InitDataForLustfulMaid()
-        {
-            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.LustfulMaidScenarioID);
-
-            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_LustfulMaid, ModResources.SexPosValidLabelsResources.SexPosValidLabels_LustfulMaid, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_LustfulMaid);
-            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_LustfulMaid);
-
-            InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_LustfulMaid);
-
-            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_LustfulMaid);
-
-            ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_LustfulMaid);
-        }
-
-        private static void InitDataForTripleBooking()
-        {
-            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.TripleBookingScenarioID);
-
-            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_TripleBooking, ModResources.SexPosValidLabelsResources.SexPosValidLabels_TripleBooking, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_TripleBooking);
-            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_TripleBooking);
-
-            InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_TripleBooking);
-
-            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_TripleBooking);
-
-            ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_TripleBooking);
-        }
-
-        private static void InitDataForManInLilies()
-        {
-            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.ManInLiliesScenarioID);
-
-            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_ManInLilies, ModResources.SexPosValidLabelsResources.SexPosValidLabels_ManInLilies, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_ManInLilies);
-            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_ManInLilies);
-
-            InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ManInLilies);
-
-            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_ManInLilies);
-
-            ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_ManInLilies);
-        }
-
-        private static void InitDataForExpExchangeEvent()
-        {
-            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.ExpExchangeEventID);
-
-            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_ExpExchangeEvent, ModResources.SexPosValidLabelsResources.SexPosValidLabels_ExpExchangeEvent, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_ExpExchangeEvent);
-            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_ExpExchangeEvent);
-
-            InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ExpExchangeEvent);
-
-            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_ExpExchangeEvent);
-
-            ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_ExpExchangeEvent);
-        }
-
-        private static void InitDataForPleasureAddictedMaids()
-        {
-            ADVStepData = LoadScenarioManager.LoadScenario(ScenarioIDList.PleasureAddictedMaidsEventID);
-
-            InitBackgroundMotionDictionary(ModResources.SexPosListResources.SexPosList_ExpExchangeEvent, ModResources.SexPosValidLabelsResources.SexPosValidLabels_ExpExchangeEvent, ModResources.SexPosSpecialLabelsResources.SexPosSpecialLabels_ExpExchangeEvent);
-            ValidSkillList = PlayableSkill.ReadSexPosListCSVFile(ModResources.SexPosListResources.SexPosList_ExpExchangeEvent);
-
-            InitAllVoiceDataFromCSV();
-            MapCoordinateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, MapCoorindates>>(ModResources.YotogiMapCoordinatesResources.MapCoordinates_ExpExchangeEvent);
-
-            PartyGroupSetupList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, PartyGroupSetup>>(ModResources.PartyGroupSetupResources.PartyGroupSetup_ExpExchangeEvent);
-
-            ExtraYotogiCommandDataList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, ExtraYotogiCommandData>>(ModResources.ExtraYotogiCommandResources.ExtraYotogiComands_ExpExchangeEvent);
-        }
-
-
-
 
         private static void InitAllVoiceDataFromCSV()
         {
             PersonalityVoiceList = new Dictionary<int, PersonalityVoice>();
-            var dictOrgasmScream = PersonalityVoice.ReadOrgasmScreamCSVFile(ModResources.Voice.Voice_All_OrgasmScream);
-            var dictOrgasmWait = PersonalityVoice.ReadVoiceEntryCSVFile(ModResources.Voice.Voice_All_OrgasmWait);
-            var dictInsert = PersonalityVoice.ReadVoiceEntryCSVFile(ModResources.Voice.Voice_All_Insert);
+            var dictOrgasmScream = PersonalityVoice.ReadOrgasmScreamCSVFile(ResourceLoader.LoadCompressedFile(VoiceManifestList[Constant.ResourcesFileType.VoiceAllOrgasmScream]));
+            var dictOrgasmWait = PersonalityVoice.ReadVoiceEntryCSVFile(ResourceLoader.LoadCompressedFile(VoiceManifestList[Constant.ResourcesFileType.VoiceAllOrgasmWait]));
+            var dictInsert = PersonalityVoice.ReadVoiceEntryCSVFile(ResourceLoader.LoadCompressedFile(VoiceManifestList[Constant.ResourcesFileType.VoiceAllInsert]));
 
-            InitVoiceDataForPersonality(Constant.PersonalityType.Muku, ModResources.Voice.Voice_Muku, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Majime, ModResources.Voice.Voice_Majime, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Rindere, ModResources.Voice.Voice_Rindere, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Pure, ModResources.Voice.Voice_Pure, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Pride, ModResources.Voice.Voice_Pride, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Cool, ModResources.Voice.Voice_Cool, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Yandere, ModResources.Voice.Voice_Yandere, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Anesan, ModResources.Voice.Voice_Anesan, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Genki, ModResources.Voice.Voice_Genki, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Sadist, ModResources.Voice.Voice_Sadist, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Silent, ModResources.Voice.Voice_Silent, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Devilish, ModResources.Voice.Voice_Devilish, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Ladylike, ModResources.Voice.Voice_Ladylike, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Secretary, ModResources.Voice.Voice_Secretary, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Sister, ModResources.Voice.Voice_Sister, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Curtness, ModResources.Voice.Voice_Curtness, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Missy, ModResources.Voice.Voice_Missy, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Childhood, ModResources.Voice.Voice_Childhood, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Masochist, ModResources.Voice.Voice_Masochist, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Cunning, ModResources.Voice.Voice_Cunning, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Friendly, ModResources.Voice.Voice_Friendly, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Dame, ModResources.Voice.Voice_Dame, dictOrgasmScream, dictOrgasmWait, dictInsert);
-            InitVoiceDataForPersonality(Constant.PersonalityType.Gyaru, ModResources.Voice.Voice_Gyaru, dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Muku, GetVoiceManifestPerCharacter(Constant.PersonalityType.Muku), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Majime, GetVoiceManifestPerCharacter(Constant.PersonalityType.Majime), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Rindere, GetVoiceManifestPerCharacter(Constant.PersonalityType.Rindere), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Pure, GetVoiceManifestPerCharacter(Constant.PersonalityType.Pure), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Pride, GetVoiceManifestPerCharacter(Constant.PersonalityType.Pride), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Cool, GetVoiceManifestPerCharacter(Constant.PersonalityType.Cool), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Yandere, GetVoiceManifestPerCharacter(Constant.PersonalityType.Yandere), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Anesan, GetVoiceManifestPerCharacter(Constant.PersonalityType.Anesan), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Genki, GetVoiceManifestPerCharacter(Constant.PersonalityType.Genki), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Sadist, GetVoiceManifestPerCharacter(Constant.PersonalityType.Sadist), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Silent, GetVoiceManifestPerCharacter(Constant.PersonalityType.Silent), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Devilish, GetVoiceManifestPerCharacter(Constant.PersonalityType.Devilish), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Ladylike, GetVoiceManifestPerCharacter(Constant.PersonalityType.Ladylike), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Secretary, GetVoiceManifestPerCharacter(Constant.PersonalityType.Secretary), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Sister, GetVoiceManifestPerCharacter(Constant.PersonalityType.Sister), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Curtness, GetVoiceManifestPerCharacter(Constant.PersonalityType.Curtness), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Missy, GetVoiceManifestPerCharacter(Constant.PersonalityType.Missy), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Childhood, GetVoiceManifestPerCharacter(Constant.PersonalityType.Childhood), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Masochist, GetVoiceManifestPerCharacter(Constant.PersonalityType.Masochist), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Cunning, GetVoiceManifestPerCharacter(Constant.PersonalityType.Cunning), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Friendly, GetVoiceManifestPerCharacter(Constant.PersonalityType.Friendly), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Dame, GetVoiceManifestPerCharacter(Constant.PersonalityType.Dame), dictOrgasmScream, dictOrgasmWait, dictInsert);
+            InitVoiceDataForPersonality(Constant.PersonalityType.Gyaru, GetVoiceManifestPerCharacter(Constant.PersonalityType.Gyaru), dictOrgasmScream, dictOrgasmWait, dictInsert);
 
+        }
+
+        private static string GetVoiceManifestPerCharacter(int personalityType)
+        {
+            string pName = Util.GetPersonalityNameByValue(personalityType);
+            return ResourceLoader.LoadCompressedFile(VoiceManifestList[string.Format(Constant.ResourcesFileType.VoiceCharacter, pName)]);
         }
 
         private static void InitVoiceDataForPersonality(int personalityID, string normalPlayResString, List<PersonalityVoice.OrgasmScreamEntry> screamFullList, 
@@ -456,19 +298,7 @@ namespace COM3D2.WildParty.Plugin
 
         public static void LoadSexStateRule(string ruleName)
         {
-            SexStateList = new Dictionary<string, SexState>();
-            if(ruleName == Constant.SexStateRuleDefinition.GangBangNormal)
-                SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_GBType);
-            else if (ruleName == Constant.SexStateRuleDefinition.GangBangQueued)
-                SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_GBQueuedType);
-            else if (ruleName == Constant.SexStateRuleDefinition.GangBangQueuedWithBackground)
-                SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_GBQueuedWithBackgroundType);
-            else if (ruleName == Constant.SexStateRuleDefinition.Lesbian)
-                SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_LesbianType);
-            else if (ruleName == Constant.SexStateRuleDefinition.FixedPosition)
-                SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription_FixedPosition);
-            else
-                SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ModResources.TextResource.SexStateDescription);
+            SexStateList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, SexState>>(ResourceLoader.LoadCompressedFile(SexStateManifestList[ruleName]));
         }
     }
 }

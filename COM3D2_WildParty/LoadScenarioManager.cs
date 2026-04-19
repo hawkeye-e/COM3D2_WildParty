@@ -13,17 +13,8 @@ namespace COM3D2.WildParty.Plugin
         {
             Dictionary<int, Dictionary<string, ADVStep>> result = new Dictionary<int, Dictionary<string, ADVStep>>();
 
-            ScenarioManifest scenarioManifestInfo;
+            ScenarioManifest scenarioManifestInfo = ModUseData.GetScenarioManifest(scenarioID);
 
-            if (scenarioID == ScenarioIDList.LilyBloomingParadiseScenarioID)
-            {
-                string strapOnKeyword = Config.LilyBloomingParadiseNoStrapOn ? "NoStrapOn" : "StrapOn";
-                scenarioManifestInfo = ModUseData.ScenarioManifestList.Where(x => x.ID == scenarioID && x.SpecialFlag == strapOnKeyword).FirstOrDefault();
-            }
-            else
-            {
-                scenarioManifestInfo = ModUseData.ScenarioManifestList.Where(x => x.ID == scenarioID).FirstOrDefault();
-            }
             
             if (scenarioManifestInfo != null) {
                 result.Add(scenarioID, LoadScenarioFromCompressedResources(scenarioManifestInfo.Files[Constant.ResourcesFileType.Scenario]));
@@ -41,29 +32,6 @@ namespace COM3D2.WildParty.Plugin
                 string resJson = ResourceLoader.LoadCompressedFile(res);
                 LoadResourcesFile(stepData, resJson);
             }
-
-            return stepData;
-        }
-
-        public static Dictionary<string, ADVStep> LoadScenarioFromCompressedResources(string[] resArray)
-        {
-            Dictionary<string, ADVStep> stepData = new Dictionary<string, ADVStep>();
-
-            for (int i = 0; i < resArray.Length; i++)
-            {
-                string resJson = ResourceLoader.LoadCompressedFile(resArray[i]);
-                LoadResourcesFile(stepData, resJson);
-            }
-
-            return stepData;
-        }
-
-        public static Dictionary<string, ADVStep> LoadScenarioFromResources(string[] resArray)
-        {
-            Dictionary<string, ADVStep> stepData = new Dictionary<string, ADVStep>();
-
-            for (int i = 0; i < resArray.Length; i++)
-                LoadResourcesFile(stepData, resArray[i]);
 
             return stepData;
         }

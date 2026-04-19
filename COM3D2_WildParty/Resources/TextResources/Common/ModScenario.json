@@ -1,0 +1,1187 @@
+﻿[
+  {
+    "ScenarioID": 9900001,
+    "CategoryID": 99000,
+    "DisplayOrder": 1,
+    "ADVEntryStep": "org0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "エンパイアクラブ大姦射祭",
+    "Information": "恋人の本当の姿が知りたい、もっと愛する人の淫乱な顔が見たい。そんな複雑な気持ちを抱えた中で、ご主人様はとあるイベントを開催する…",
+    "Icon": "mod_icon_orgy_party",
+    "IsNetorare": true,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "ConditionInfoText": [
+      "恋人である",
+      "育成中のメイドではない",
+      "両穴経験済みである",
+      "交換または乱交カテゴリーのスキルを実行したことがある"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230 ],
+    "MaidRequireFlag": [ "MOD_Require_Category_Swapping_Or_Orgy" ],
+
+    "IsGroupEvent": true,
+    "MaidCount": {
+      "Max": 40,
+      "Min": 5
+    },
+
+    "YotogiSetup": [
+      {
+        "AllowMap": [
+          {
+            "MapID": 10,
+            "FormationOption": [ "Theatre_Scattered", "Theatre_2RowsA", "Theatre_2RowsB", "Theatre_CircleA", "Theatre_CircleB" ],
+            "DefaultFormation": "Theatre_Scattered"
+          },
+          {
+            "MapID": 70,
+            "FormationOption": [ "GuestBedroom_Scattered", "GuestBedroom_2RowsA", "GuestBedroom_2RowsB" ],
+            "DefaultFormation": "GuestBedroom_Scattered"
+          },
+          {
+            "MapID": 20,
+            "FormationOption": [ "Soap_Scattered" ],
+            "DefaultFormation": "Soap_Scattered"
+          }
+        ],
+
+        "ExtraYotogiCommands": [
+          "ChangePosition",
+          "ChangePositionAll",
+          "ChangeFormation",
+          "ChangePartner",
+          "FetishOrgy"
+        ],
+        "IsMainManOwner": false,
+
+        "SexStateRule": "Common"
+      }
+    ],
+
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_エンパイアクラブ大姦射祭_Executed",
+        "Value": 1
+      }
+    ]
+  },
+
+  {
+    "ScenarioID": 9900002,
+    "CategoryID": 99000,
+    "DisplayOrder": 4,
+    "ADVEntryStep": "hgbc0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "快楽輪姦倶楽部",
+    "Information": "大感謝祭の後、エンパイアクラブは乱交パーティーを開催すると評判になった。そこで、ある重要顧客はご主人様とメイドにさらに過激なパーティーに招待した…",
+    "Icon": "mod_icon_happy_gb_club",
+    "IsNetorare": true,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "SpecialRelationEnumString": [ "Married" ],
+    "ConditionInfoText": [
+      "嫁である",
+      "育成中のメイドではない",
+      "両穴経験済みである",
+      "「エンパイアクラブ大姦射祭」を実行したことがある"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 210, 220 ],
+    "MasterRequireFlag": [ "Mod_エンパイアクラブ大姦射祭_Executed" ],
+
+    "IsGroupEvent": false,
+    "MaidCount": {
+      "Max": 1,
+      "Min": 1
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "poledancestage",
+          "NightMapID": "poledancestage",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Phase1_Default" ],
+          "DefaultFormation": "Phase1_Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition",
+          "OrgasmInternal",
+          "OrgasmExternal",
+          "OrgasmMouth",
+          "OrgasmFace",
+          "OrgasmBukkake",
+          "OrgasmBukkake2",
+          "FetishGangBang",
+          "FetishBodyWritings"
+        ],
+        "FlexibleManCountInYotogi": true,
+        "ForceChangeManWhenOrgasm": true,
+        "IsMainManOwner": false,
+
+        "SexStateRule": "GangBangNormal"
+      },
+      {
+        "Phase": 2,
+        "DefaultMap": {
+          "DayMapID": "poledancestage",
+          "NightMapID": "poledancestage",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Phase2_Default" ],
+          "DefaultFormation": "Phase2_Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition",
+          "FetishGangBang",
+          "FetishBodyWritings"
+        ],
+        "FlexibleManCountInYotogi": true,
+        "ForceChangeManWhenOrgasm": true,
+        "IsMainManOwner": true,
+
+        "SexStateRule": "GangBangNormal"
+      },
+
+      {
+        "Phase": 3,
+        "DefaultMap": {
+          "DayMapID": "poledancestage",
+          "NightMapID": "poledancestage",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Phase3_Missionary", "Phase3_Missionary_Anus", "Phase3_Doggy", "Phase3_Doggy_Anus" ],
+          "DefaultFormation": "Phase3_Missionary"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeFormationHappyGBClub",
+          "FetishGangBang",
+          "FetishBodyWritings"
+        ],
+        "FlexibleManCountInYotogi": true,
+        "ForceChangeManWhenOrgasm": true,
+        "IsMainManOwner": false,
+
+        "SexStateRule": "GangBangQueued"
+      }
+    ],
+
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_快楽輪姦倶楽部_Executed",
+        "Value": 1
+      }
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9900003,
+    "CategoryID": 99000,
+    "DisplayOrder": 5,
+    "ADVEntryStep": "agbd0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "再び輪姦願望",
+    "Information": "輪姦倶楽部でイベントに参加した後、メイドは倶楽部がもたらす快楽についての言葉を広めた。そこで、他のメイド達がご主人様にその輪姦されたい願望を伝える…",
+    "Icon": "mod_icon_happy_gb_club",
+    "IsNetorare": true,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "SpecialRelationEnumString": [ "Married" ],
+    "ConditionInfoText": [
+      "嫁である",
+      "育成中のメイドではない",
+      "両穴経験済みである",
+      "「快楽輪姦倶楽部」を実行したことがある"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230 ],
+    "MasterRequireFlag": [ "Mod_快楽輪姦倶楽部_Executed" ],
+
+    "IsGroupEvent": true,
+    "MaidCount": {
+      "Max": 3,
+      "Min": 3
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "poledancestage",
+          "NightMapID": "poledancestage",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Phase1_Default" ],
+          "DefaultFormation": "Phase1_Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeMaidAnotherGBDesire",
+          "ChangePosition",
+          "OrgasmInternal",
+          "OrgasmExternal",
+          "OrgasmMouth",
+          "OrgasmFace",
+          "OrgasmBukkake",
+          "OrgasmBukkake2",
+          "FetishGangBang",
+          "FetishBodyWritings"
+        ],
+        "FlexibleManCountInYotogi": true,
+        "ForceChangeManWhenOrgasm": true,
+        "IsMainManOwner": false,
+
+        "SexStateRule": "GangBangNormal"
+      },
+      {
+        "Phase": 2,
+        "DefaultMap": {
+          "DayMapID": "poledancestage",
+          "NightMapID": "poledancestage",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Phase2_Default" ],
+          "DefaultFormation": "Phase2_Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeMaidAnotherGBDesire",
+          "ChangePosition",
+          "FetishGangBang",
+          "FetishBodyWritings"
+        ],
+        "FlexibleManCountInYotogi": true,
+        "ForceChangeManWhenOrgasm": true,
+        "IsMainManOwner": true,
+
+        "SexStateRule": "GangBangNormal"
+      },
+
+      {
+        "Phase": 3,
+        "DefaultMap": {
+          "DayMapID": "poledancestage",
+          "NightMapID": "poledancestage",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Phase3_Missionary", "Phase3_Missionary_Anus", "Phase3_Doggy", "Phase3_Doggy_Anus" ],
+          "DefaultFormation": "Phase3_Missionary"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeMaidAnotherGBDesire",
+          "ChangeFormationHappyGBClub",
+          "FetishGangBang",
+          "FetishBodyWritings"
+        ],
+        "FlexibleManCountInYotogi": true,
+        "ForceChangeManWhenOrgasm": true,
+        "IsMainManOwner": false,
+
+        "SexStateRule": "GangBangQueued"
+      }
+    ],
+
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true
+  },
+
+  {
+    "ScenarioID": 9900004,
+    "CategoryID": 99000,
+    "DisplayOrder": 6,
+    "ADVEntryStep": "imvi0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "淫習村の夏祭り",
+    "Information": "ご主人様とメイドは、仕事終わりの短い休暇にある村を訪れた。そこで、とんでもない祭りが始まった…",
+    "Icon": "mod_icon_immoral_village",
+    "IsNetorare": true,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "SpecialRelationEnumString": [ "Married" ],
+    "ConditionInfoText": [
+      "嫁である",
+      "育成中のメイドではない",
+      "両穴経験済みである",
+      "「エンパイアクラブ大姦射祭」を実行したことがある"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 210, 220 ],
+    "MasterRequireFlag": [ "Mod_エンパイアクラブ大姦射祭_Executed" ],
+
+    "IsGroupEvent": false,
+    "MaidCount": {
+      "Max": 1,
+      "Min": 1
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "yashiki",
+          "NightMapID": "yashiki",
+          "BGM": "BGM011.ogg",
+          "FormationOption": [ "Phase1_Default" ],
+          "DefaultFormation": "Phase1_Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition",
+          "ChangeMan_Amayakasi_Tekoki",
+          "ChangeMan_Amayakasi_Taimen",
+          "ChangeMan_Hasamikomi_Kijyoui",
+          "ChangeMan_Isutaimenzai"
+        ],
+        "IsMainManOwner": false,
+
+        "SexStateRule": "Common"
+      },
+
+      {
+        "Phase": 2,
+        "DefaultMap": {
+          "DayMapID": "yashiki",
+          "NightMapID": "yashiki",
+          "BGM": "BGM011.ogg",
+          "FormationOption": [ "Phase2_Default" ],
+          "DefaultFormation": "Phase2_Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeMan_South",
+          "ChangeMan_South_Inserved_Motion",
+          "ChangeMan_North",
+          "ChangeMan_North_Inserved_Motion",
+          "ChangeMan_East",
+
+
+          "Seijyoui_To_DaisukiHold",
+          "DaisukiHold_To_Seijyoui",
+          "Seijyoui_To_Taimenzai",
+          "Taimenzai_To_Seijyoui",
+          "Taimenzai_To_DaisukiHold",
+          "Seijyoui_To_Sokui",
+          "Sokui_To_Seijyoui",
+          "Seijyoui_To_3PSexSeijyoui",
+          "3PSexSeijyoui_To_Seijyoui",
+          "3PSexSeijyoui_To_DaisukiHold",
+          "Sokui_To_UtubuseKouhaii",
+          "UtubuseKouhaii_To_Sokui",
+          "UtubuseKouhaii_To_Kouhaii",
+          "Kouhaii_To_UtubuseKouhaii",
+          "Taimenzai_To_Taimenkijyoui",
+          "Taimenkijyoui_To_Taimenzai",
+          "Taimenkijyoui_To_GrindTaimenkijyoui",
+          "GrindTaimenkijyoui_To_Taimenkijyoui",
+          "Taimenzai_To_GrindTaimenkijyoui",
+          "GrindTaimenkijyoui_To_Taimenzai",
+          "Taimenkijyoui_To_3PSex2Ana",
+          "3PSex2Ana_To_Taimenkijyoui",
+          "3PSex2Ana_To_GrindTaimenkijyoui",
+          "3p2Ana_To_3PUdemoti2Ana",
+          "3PUdemoti2Ana_To_3p2Ana",
+          "Kouhaii_To_UdemotiKouhaii",
+          "UdemotiKouhaii_To_Kouhaii",
+          "Kouhaii_To_3PUdemotiKouhaii",
+          "3PUdemotiKouhaii_To_Kouhaii",
+          "3PUdemotiKouhaii_To_UdemotiKouhaii",
+          "UdemotiKouhaii_To_YotunbaiFera",
+          "YotunbaiFera_To_UdemotiKouhaii",
+          "YotunbaiFera_To_YorisoiSokui",
+          "YorisoiSokui_To_YotunbaiFera",
+          "YorisoiSokui_To_Kakaekomizai",
+          "Kakaekomizai_To_YorisoiSokui",
+          "Kakaekomizai_To_BGSeijyoui",
+          "BGSeijyoui_To_Kakaekomizai",
+          "3PSexSeijyoui_To_Fellatio",
+          "Fellatio_To_3PSexSeijyoui",
+          "3PSexSeijyoui_To_SelfIrrumatio",
+          "Fellatio_To_SelfIrrumatio",
+          "SelfIrrumatio_To_Fellatio",
+          "Fellatio_To_Tekoki",
+          "Tekoki_To_Fellatio",
+          "SelfIrrumatio_To_Tekoki",
+          "Tekoki_To_SelfIrrumatio",
+          "Tekoki_To_TekokiOnani",
+          "TekokiOnani_To_Tekoki",
+          "Tekoki_To_Paizuri",
+          "Paizuri_To_Tekoki",
+          "Tekoki_To_PaizuriFella",
+          "PaizuriFella_To_Tekoki",
+          "Paizuri_To_PaizuriFella",
+          "PaizuriFella_To_PaizuriFella",
+          "PaizuriFella_To_TekokiOnani",
+          "TekokiOnani_To_PaizuriFella",
+          "Paizuri_To_TekokiOnani",
+          "TekokiOnani_To_Paizuri",
+          "3PUdemoti2Ana_To_HizadatiKouhaii",
+          "HizadatiKouhaii_To_3PUdemoti2Ana",
+          "HizadatiKouhaii_To_HaimenKijyoui",
+          "HaimenKijyoui_To_HizadatiKouhaii",
+          "HaimenKijyoui_To_Fellatio",
+          "Fellatio_To_HaimenKijyoui",
+          "HaimenKijyoui_To_3P2AnaKakae",
+          "3P2AnaKakae_To_HaimenKijyoui",
+          "BgSeijyoui_To_3P2AnaKakae",
+          "3P2AnaKakae_To_BgSeijyoui",
+          "Tekoki_To_3PHoushi",
+          "3PHoushi_To_Tekoki",
+          "3PHoushi_To_TekokiOnani",
+          "3PHoushi_To_3PAibu",
+          "3PAibu_To_3PHoushi",
+          "3PAibu_To_3PEkiben",
+          "3PEkiben_To_3PAibu",
+          "3PAibu_To_TatiAibu",
+          "TatiAibu_To_3PAibu",
+          "TatiAibu_To_Aibu",
+          "Aibu_To_TatiAibu",
+          "Aibu_To_KousokuHaimenKijyoui",
+          "KousokuHaimenKijyoui_To_Aibu",
+          "KousokuHaimenKijyoui_To_3P2AnaKakae",
+          "3P2AnaKakae_To_KousokuHaimenKijyoui",
+          "3PEkiben_To_Ekiben",
+          "Ekiben_To_3PPEkiben",
+          "3PEkiben_To_Ritui",
+          "Ritui_To_3PEkiben",
+          "Ekiben_To_Ritui",
+          "Ritui_To_Ekiben",
+          "Ekiben_To_Haimenritui",
+          "Haimenritui_To_Ekiben",
+          "Haimenritui_To_TatiKunni",
+          "TatiKunni_To_Haimenritui",
+
+          "TatiKunni_To_YotunbaiFera",
+          "YotunbaiFera_To_TatiKunni",
+
+          "FetishVirginEater"
+        ],
+        "IsMainManOwner": false,
+
+        "SexStateRule": "Common"
+      }
+    ],
+
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_淫習村の夏祭り_Executed",
+        "Value": 1
+      }
+    ],
+    "SetMaidFlag": [
+      {
+        "ID": "Mod_淫習村の夏祭り_Individual_Executed",
+        "Value": 1
+      }
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9900010,
+    "CategoryID": 99000,
+    "DisplayOrder": 7,
+    "ADVEntryStep": "trbo0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "トリプルブッキング",
+    "Information": "ミスにより、エンパイアクラブでトリプルブッキングが発生した。そこで、メイドが同時にすべてのお客様の要望に応えるために尽力する…",
+    "Icon": "mod_icon_triple_booking",
+    "IsNetorare": true,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "ConditionInfoText": [
+      "恋人である",
+      "育成中のメイドではない",
+      "両穴経験済みである",
+      "「エンパイアクラブ大姦射祭」を実行したことがある"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 210, 220 ],
+    "MasterRequireFlag": [ "Mod_エンパイアクラブ大姦射祭_Executed" ],
+
+    "IsGroupEvent": false,
+    "MaidCount": {
+      "Max": 1,
+      "Min": 1
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "Shukuhakubeya_BedRoom_Night",
+          "NightMapID": "Shukuhakubeya_BedRoom_Night",
+          "BGM": "BGM011.ogg",
+          "FormationOption": [ "Default" ],
+          "DefaultFormation": "Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition",
+          "SeijyouiKuti_ChangeMan1",
+          "SeijyouiKuti_ChangeMan2",
+          "2AnaKakae_ChangeMan2",
+          "2Ana_ChangeMan2",
+          "Ude2Ana_ChangeMan2",
+          "Udemoti_Kouhaii_ChangeMan1",
+          "Udemoti_Kouhaii_ChangeMan2",
+          "Kijyoui_Kuti_ChangeMan1",
+          "Kijyoui_Aibu_ChangeMan1",
+          "Kaikyaku_ChangeMan1",
+          "MuriSeijyoui_ChangeMan1",
+          "MuriSeijyoui_ChangeMan2"
+        ],
+        "IsMainManOwner": false,
+
+        "SexStateRule": "Common"
+      }
+    ],
+
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_トリプルブッキング_Executed",
+        "Value": 1
+      }
+    ]
+  },
+
+  {
+    "ScenarioID": 9900011,
+    "CategoryID": 99000,
+    "DisplayOrder": 2,
+    "ADVEntryStep": "eee0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "エンパイアクラブ体験会",
+    "Information": "最近、メイドは夜伽が少し退屈に感じていた。脱マンネリのために、ご主人様はさらに過激なイベントを構想しました……",
+    "Icon": "mod_icon_exp_exchange_event",
+    "IsNetorare": true,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "SpecialRelationEnumString": [ "Married" ],
+    "ConditionInfoText": [
+      "嫁である",
+      "育成中のメイドではない",
+      "両穴経験済みである",
+      "性癖「ドＭの素質」を取得している",
+      "「エンパイアクラブ大姦射祭」を実行したことがある"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 210, 220 ],
+    "MasterRequireFlag": [ "Mod_エンパイアクラブ大姦射祭_Executed" ],
+    "PropensityRequired": [ 110 ],
+
+    "IsGroupEvent": true,
+    "MaidCount": {
+      "Max": 5,
+      "Min": 5
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "Theater",
+          "NightMapID": "Theater",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Theatre_ButtockWall_Single", "Theatre_ButtockWall_Multiple" ],
+          "DefaultFormation": "Theatre_ButtockWall_Single"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeMaidExpExchangeEvent",
+          "ChangeFormationExpExchangeEvent",
+          "MoveQueueForward",
+          "Kousoku_To_Anal",
+          "Kousoku_To_Vagina",
+          "FetishMeatToilet",
+          "FetishBodyWritings"
+        ],
+        "IsMainManOwner": false,
+
+        "SexStateRule": "FixedPosition"
+      },
+
+      {
+        "Phase": 2,
+        "DefaultMap": {
+          "DayMapID": "Theater",
+          "NightMapID": "Theater",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Theatre_Restraint_Single", "Theatre_Restraint_Multiple" ],
+          "DefaultFormation": "Theatre_Restraint_Single"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeMaidExpExchangeEvent",
+          "ChangePositionAll",
+          "ChangeEyeMask",
+          "ChangeFormationExpExchangeEvent",
+          "MoveQueueForward",
+          "FetishMeatToilet",
+          "FetishBodyWritings"
+        ],
+        "IsMainManOwner": false,
+
+        "SexStateRule": "FixedPosition"
+      }
+    ],
+
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_エンパイアクラブ体験交流会_Executed",
+        "Value": 1
+      }
+    ]
+  },
+
+  {
+    "ScenarioID": 9900012,
+    "CategoryID": 99000,
+    "DisplayOrder": 3,
+    "ADVEntryStep": "pam0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "快楽中毒のメイドたち",
+    "Information": "「肉便器体験会」は定期開催となった。こちらは、常連になったあるお客様の視点です。",
+    "Icon": "mod_icon_exp_exchange_event",
+    "IsNetorare": true,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "SpecialRelationEnumString": [ "Married" ],
+    "ConditionInfoText": [
+      "嫁である",
+      "育成中のメイドではない",
+      "両穴経験済みである",
+      "「エンパイアクラブ体験会」を実行したことがある"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230 ],
+    "MasterRequireFlag": [ "Mod_エンパイアクラブ体験交流会_Executed" ],
+
+    "IsGroupEvent": true,
+    "MaidCount": {
+      "Max": 5,
+      "Min": 5
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "Theater",
+          "NightMapID": "Theater",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Theatre_ButtockWall_Single", "Theatre_ButtockWall_Multiple" ],
+          "DefaultFormation": "Theatre_ButtockWall_Single"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeMaidExpExchangeEvent",
+          "ChangeFormationExpExchangeEvent",
+          "MoveQueueForward",
+          "Kousoku_To_Anal",
+          "Kousoku_To_Vagina",
+          "FetishMeatToilet",
+          "FetishBodyWritings"
+        ],
+        "IsMainManOwner": false,
+
+        "SexStateRule": "FixedPosition"
+      },
+
+      {
+        "Phase": 2,
+        "DefaultMap": {
+          "DayMapID": "Theater",
+          "NightMapID": "Theater",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Theatre_Restraint_Single", "Theatre_Restraint_Multiple" ],
+          "DefaultFormation": "Theatre_Restraint_Single"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeMaidExpExchangeEvent",
+          "ChangePositionAll",
+          "ChangeEyeMask",
+          "ChangeFormationExpExchangeEvent",
+          "MoveQueueForward",
+          "FetishMeatToilet",
+          "FetishBodyWritings"
+        ],
+        "IsMainManOwner": false,
+
+        "SexStateRule": "FixedPosition"
+      }
+    ],
+
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_快楽中毒のメイドたち_Executed",
+        "Value": 1
+      }
+    ]
+  },
+
+
+  {
+    "ScenarioID": 9901001,
+    "CategoryID": 99010,
+    "DisplayOrder": 1,
+    "ADVEntryStep": "haremking0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "ハーレムキング",
+    "Information": "最近、ご主人様はとても忙しい。大好きなご主人様のために、メイドたちはご主人様へのサプライズを企画していた…",
+    "Icon": "mod_icon_harem_king",
+    "IsNetorare": false,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "ConditionInfoText": [
+      "恋人である",
+      "育成中のメイドではない",
+      "両穴経験済みである"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230 ],
+
+
+    "IsGroupEvent": true,
+    "MaidCount": {
+      "Max": 10,
+      "Min": 5
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "privateroom2",
+          "NightMapID": "privateroom2_night",
+          "BGM": "BGM021.ogg",
+          "FormationOption": [ "Houshi", "Houshi_Standing", "Missionary_All", "Missionary_Anus_All", "Doggy_All", "Doggy_Anus_All" ],
+          "DefaultFormation": "Houshi_Standing"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangeFormationHaremKing",
+          "ChangeMaidHaremKing",
+          "MoveLeftHaremKing",
+          "MoveRightHaremKing"
+        ],
+        "IsMainManOwner": true,
+
+        "SexStateRule": "Common"
+      }
+    ],
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_ハーレムキング_Executed",
+        "Value": 1
+      }
+    ]
+  },
+
+  {
+    "ScenarioID": 9901002,
+    "CategoryID": 99010,
+    "DisplayOrder": 2,
+    "ADVEntryStep": "lbp0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "咲き乱れる百合の楽園",
+    "Information": "最近、メイドの様子がおかしい。この状況を心配するご主人様は、何が起こったのか調べにした…",
+    "Icon": "mod_icon_lily_blooming_paradise",
+    "IsNetorare": false,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "ConditionInfoText": [
+      "恋人である",
+      "育成中のメイドではない",
+      "両穴経験済みである"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 210, 220 ],
+
+
+    "IsGroupEvent": true,
+    "MaidCount": {
+      "Max": 20,
+      "Min": 6,
+      "IsEven": true
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "Shukuhakubeya_BedRoom_Night",
+          "NightMapID": "Shukuhakubeya_BedRoom_Night",
+          "BGM": "BGM021.ogg",
+          "FormationOption": [ "Phase1_Default" ],
+          "DefaultFormation": "Phase1_Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition",
+          "ChangePositionAll",
+          "SwapMaidWithinGroup",
+          "ChangePartner",
+          "FetishLesbianPlay"
+        ],
+        "IsMainManOwner": true,
+
+        "SexStateRule": "Lesbian"
+      },
+
+      {
+        "Phase": 2,
+        "DefaultMap": {
+          "DayMapID": "Shukuhakubeya_BedRoom_Night",
+          "NightMapID": "Shukuhakubeya_BedRoom_Night",
+          "BGM": "BGM021.ogg",
+          "FormationOption": [ "Phase2_Default" ],
+          "DefaultFormation": "Phase2_Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition",
+          "ChangePositionAll",
+          "ChangePartner",
+          "ChangeControllingMaid",
+          "ShuffleMaidYuri",
+          "FetishLesbianPlay"
+        ],
+        "IsMainManOwner": true,
+
+        "SexStateRule": "Common"
+      }
+    ],
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+    "IgnoreEjaculationSE": true,
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_咲き乱れる百合の楽園_Executed",
+        "Value": 1
+      }
+    ]
+  },
+
+  {
+    "ScenarioID": 9901003,
+    "CategoryID": 99010,
+    "DisplayOrder": 4,
+    "ADVEntryStep": "lum0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "性欲つよつよメイド",
+    "Information": "様々な夜伽を経て、メイドの性欲はますます強くなった。ある朝、彼女はもう耐えられなくなり、ついにご主人様に手を差し伸べた…",
+    "Icon": "mod_icon_lustful_maid",
+    "IsNetorare": false,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "ConditionInfoText": [
+      "恋人である",
+      "育成中のメイドではない",
+      "両穴経験済みである"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 210, 220 ],
+
+
+    "IsGroupEvent": false,
+    "MaidCount": {
+      "Max": 1,
+      "Min": 1
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "MyRoom",
+          "NightMapID": "MyRoom",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Default" ],
+          "DefaultFormation": "Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "MPArai_To_69",
+          "69_To_MPArai",
+          "MPArai_To_YotunbaiFera",
+          "YotunbaiFera_To_MPArai",
+          "MPArai_To_Onahole",
+          "Onahole_To_MPArai",
+          "MPArai_To_Taimenkijyoui",
+          "69_To_HaimenKijyoui",
+          "Onahole_To_Asikoki",
+          "Asikoki_To_Onahole",
+          "Asikoki_To_HasamikomiKijyoui",
+          "Asikoki_To_Matuba",
+          "Matuba_To_HasamikomiKijyoui",
+          "HasamikomiKijyoui_To_Matuba",
+          "YotunbaiFera_To_FuroTaimenzai",
+          "HasamikomiKijyoui_To_FuroTaimenzai",
+          "FuroTaimenzai_To_HasamikomiKijyoui",
+          "Matuba_To_HaimenKijyoui",
+          "HaimenKijyoui_To_Matuba",
+          "HaimenKijyoui_To_GrindTaimenkijyoui",
+          "GrindTaimenkijyoui_To_HaimenKijyoui",
+          "FuroTaimenzai_To_Taimenzai",
+          "Taimenzai_To_FuroTaimenzai",
+          "FuroTaimenzai_To_AmayakasiTaimen",
+          "AmayakasiTaimen_To_FuroTaimenzai",
+          "Taimenzai_To_AmayakasiTaimen",
+          "AmayakasiTaimen_To_Taimenzai",
+          "Taimenkijyoui_To_GrindTaimenkijyoui",
+          "GrindTaimenkijyoui_To_Taimenkijyoui",
+          "Taimenkijyoui_To_MittyakuKijyoui",
+          "MittyakuKijyoui_To_Taimenkijyoui",
+          "GrindTaimenkijyoui_To_MittyakuKijyoui",
+          "MittyakuKijyoui_To_GrindTaimenkijyoui",
+          "Taimenkijyoui_To_TetunagiKijyoui",
+          "TetunagiKijyoui_To_Taimenkijyoui",
+          "GrindTaimenkijyoui_To_TetunagiKijyoui",
+          "TetunagiKijyoui_To_GrindTaimenkijyoui",
+          "TetunagiKijyoui_To_Taimenzai",
+          "Taimenzai_To_TetunagiKijyoui",
+          "TetunagiKijyoui_To_MittyakuKijyoui",
+          "MittyakuKijyoui_To_TetunagiKijyoui",
+
+          "NonInverted_To_Rest",
+          "Inverted_To_Rest",
+          "Rest_To_MPArai"
+        ],
+        "IsMainManOwner": true,
+
+        "SexStateRule": "Common"
+      }
+    ],
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+    "IgnoreVibratorSE": true,
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_性欲つよつよメイド_Executed",
+        "Value": 1
+      }
+    ]
+  },
+
+  {
+    "ScenarioID": 9901004,
+    "CategoryID": 99010,
+    "DisplayOrder": 3,
+    "ADVEntryStep": "mil0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "百合の間に挟まる男",
+    "Information": "メイドたちのレズ行為を発見して以来、ご主人様は定期的に観賞している。ある日、ご主人様はいつものようにレズプレーを要求したが、メイドたちは反撃することを決意した…",
+    "Icon": "mod_icon_man_in_lilies",
+    "IsNetorare": false,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "ConditionInfoText": [
+      "恋人である",
+      "育成中のメイドではない",
+      "両穴経験済みである",
+      "「咲き乱れる百合の楽園」を実行したことがある"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230 ],
+    "MasterRequireFlag": [ "Mod_咲き乱れる百合の楽園_Executed" ],
+
+    "IsGroupEvent": true,
+    "MaidCount": {
+      "Max": 2,
+      "Min": 2
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "Shukuhakubeya_BedRoom",
+          "NightMapID": "Shukuhakubeya_BedRoom_Night",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Default" ],
+          "DefaultFormation": "Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition",
+          "ExchangeStrapOn"
+        ],
+        "IsMainManOwner": true,
+
+        "SexStateRule": "Common"
+      }
+    ],
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": true,
+    "IgnoreEjaculationSE": false,
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_百合の間に挟まる男_Executed",
+        "Value": 1
+      }
+    ]
+  },
+
+  {
+    "ScenarioID": 9901005,
+    "CategoryID": 99010,
+    "DisplayOrder": 5,
+    "ADVEntryStep": "luvtrv0001",
+    "YotogiTypeEnumString": "NewSex",
+    "CondSalonGrade": 0,
+    "DisplayName": "ラブラブハーレム旅行",
+    "Information": "[place holder]…",
+    "Icon": "mod_icon_harem_king",
+    "IsNetorare": false,
+    "IsCommu": false,
+    "ModeEnumString": "COM3D",
+    "TypeEnumString": "Yotogi",
+    "ContractEnumString": [ "Exclusive", "Free" ],
+    "SexExperienceEnumString": [ "Yes_Yes" ],
+    "RelationEnumString": [ "Lover" ],
+    "SpecialRelationEnumString": [ "Married" ],
+    "ConditionInfoText": [
+      "嫁である",
+      "育成中のメイドではない",
+      "両穴経験済みである"
+    ],
+    "Personality": [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 210, 220 ],
+
+    "IsGroupEvent": true,
+    "MaidCount": {
+      "Max": 6,
+      "Min": 6
+    },
+
+    "YotogiSetup": [
+      {
+        "Phase": 1,
+        "DefaultMap": {
+          "DayMapID": "yashiki_day",
+          "NightMapID": "yashiki_day",
+          "BGM": "BGM022.ogg",
+          "FormationOption": [ "Default" ],
+          "DefaultFormation": "Default"
+        },
+
+        "ExtraYotogiCommands": [
+          "ChangePosition"
+        ],
+        "IsMainManOwner": true,
+
+        "SexStateRule": "Common"
+      }
+    ],
+
+    "CanGainSkillExp": false,
+    "LockParameters": true,
+    "UnlimitedMind": false,
+    "IgnoreEjaculationSE": false,
+
+    "SetScenarioFlag": [
+      {
+        "ID": "Mod_ラブラブハーレム旅行_Executed",
+        "Value": 1
+      }
+    ]
+  }
+]
