@@ -1,0 +1,2588 @@
+﻿{
+  "imvi_intro_0020_T_Genki": {
+    "ID": "imvi_intro_0020_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お日様の光が気持ちいいなぁ。いい天気だね！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02A_105563.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_0030_T_Genki": {
+    "ID": "imvi_intro_0030_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "こんなに素敵ですごい場所にいて、それもあなたとふたりきりなんだよ？　贅沢すぎて目が回っちゃうよ。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_X1P_53124.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+  "imvi_intro_0040_T_Genki": {
+    "ID": "imvi_intro_0040_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "じゃあ、そのへん散歩でもしよっか。汗も流したし、もーっとベタベタしちゃおっかな？　えへへ。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_X1P_52947.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_0050_T_Genki": {
+    "ID": "imvi_intro_0050_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うん、そうしよっか。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_X1P_53218.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "imvi_intro_0070_M_Genki": {
+    "ID": "imvi_intro_0070_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0070_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頷く"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_0070_T_Genki": {
+    "ID": "imvi_intro_0070_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "楽しみだなあ。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02A_105411.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6
+        }
+      }
+    }
+  },
+
+
+
+  "imvi_intro_0090_M_Genki": {
+    "ID": "imvi_intro_0090_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0090_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちどやる"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_0090_T_Genki": {
+    "ID": "imvi_intro_0090_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふん♪",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_X1P_53272.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.8
+        }
+      }
+    }
+  },
+
+  "imvi_intro_0100_T_Genki": {
+    "ID": "imvi_intro_0100_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……ねえ！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_X1P_53214.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.6
+        }
+      }
+    }
+  },
+
+  "imvi_intro_0110_T_Genki": {
+    "ID": "imvi_intro_0110_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0111",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あーあ。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_order_50107.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5,
+          "EndTime": 3.25
+        }
+      }
+    }
+  },
+
+
+  "imvi_intro_night_0060_T_Genki": {
+    "ID": "imvi_intro_night_0060_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はじめまして。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105615.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.5
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0070_T_Genki": {
+    "ID": "imvi_intro_night_0070_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あう……は、はい。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105948.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0010_M_Genki": {
+    "ID": "imvi_phase1_0010_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0010_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "苦笑い",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちがっかり"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0010_T_Genki": {
+    "ID": "imvi_phase1_0010_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えっと……あはは、なんだか緊張しちゃうな……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_order_51429.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "imvi_phase1_0020_M_Genki": {
+    "ID": "imvi_phase1_0020_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0020_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち考える"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0020_T_Genki": {
+    "ID": "imvi_phase1_0020_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そ、それだー！　その手があったぁー！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_order_50123.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0030_M_Genki": {
+    "ID": "imvi_phase1_0030_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0030_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0030_T_Genki": {
+    "ID": "imvi_phase1_0030_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ありがとうね、あなた。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_X1P_54054.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.3
+        }
+      }
+    }
+  },
+
+
+  "imvi_phase1_0050_M_Genki": {
+    "ID": "imvi_phase1_0050_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0050_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0050_T_Genki": {
+    "ID": "imvi_phase1_0050_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "それじゃ、よろしくね。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105511.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.3
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0060_M_Genki": {
+    "ID": "imvi_phase1_0060_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0060_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頬掻き"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0060_T_Genki": {
+    "ID": "imvi_phase1_0060_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "それで、もう始める？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105509.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0070_T_Genki": {
+    "ID": "imvi_phase1_0070_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "どう、かな……？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02A_105413.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.2,
+          "EndTime": 5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0080_T_Genki": {
+    "ID": "imvi_phase1_0080_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "やっぱりそこ見るんだ。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_order_50650.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0090_T_Genki": {
+    "ID": "imvi_phase1_0090_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もう……仕方ないなぁ……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_order_52102.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "imvi_phase1_0100_M_Genki": {
+    "ID": "imvi_phase1_0100_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0100_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "苦笑い"
+      }
+    ]
+  },
+
+  "imvi_phase1_0100_T_Genki": {
+    "ID": "imvi_phase1_0100_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えっと、ボクの体はどうかな？　もしかしたら、思ったのと違うかもしれないけど……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105525.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0110_M_Genki": {
+    "ID": "imvi_phase1_0110_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0110_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "笑顔"
+      }
+    ]
+  },
+
+  "imvi_phase1_0110_T_Genki": {
+    "ID": "imvi_phase1_0110_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0111",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もう、口が上手いなあ。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_order_50282.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0120_T_Genki": {
+    "ID": "imvi_phase1_0120_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105501.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0130_T_Genki": {
+    "ID": "imvi_phase1_0130_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0131_T_Genki",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、大丈夫だよ？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02A_105545.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.7
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0131_T_Genki": {
+    "ID": "imvi_phase1_0131_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0132",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふふ……まだ元気いっぱいだね。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_tsou2_61279.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0140_M_Genki": {
+    "ID": "imvi_phase1_0140_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0140_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0140_T_Genki": {
+    "ID": "imvi_phase1_0140_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0141",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "じゃあ、こっち……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_order_51207.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0150_T_Genki": {
+    "ID": "imvi_phase1_0150_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ、ボクの手で気持ち良くなってくれてるのかな？　先っぽから……んっ、お汁が出てきてる……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105518.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0160_M_Genki": {
+    "ID": "imvi_phase1_0160_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0160_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠"
+      }
+    ]
+  },
+
+  "imvi_phase1_0160_T_Genki": {
+    "ID": "imvi_phase1_0160_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0161",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "痛かった？　……んっ、ゆっくりしてあげるから……はぁ……はぁ……んっ……んっ……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105517.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0170_M_Genki": {
+    "ID": "imvi_phase1_0170_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0170_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0170_T_Genki": {
+    "ID": "imvi_phase1_0170_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ、はぁっ……いいよっ……ボクの手で、いっぱい出して……はぁっ……んっ……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105521.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0180_M_Genki": {
+    "ID": "imvi_phase1_0180_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0180_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0180_T_Genki": {
+    "ID": "imvi_phase1_0180_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うはぁ……んん、んっ……っはぁ、はぁ、はぁ……気持ちよく、なってくれたんだね……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105732.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.3
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0190_M_Genki": {
+    "ID": "imvi_phase1_0190_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0190_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_phase1_0190_T_Genki": {
+    "ID": "imvi_phase1_0190_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0191",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うん……いいよ……？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02A_105575.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0200_M_Genki": {
+    "ID": "imvi_phase1_0200_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0200_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ好感１"
+      }
+    ]
+  },
+
+  "imvi_phase1_0200_T_Genki": {
+    "ID": "imvi_phase1_0200_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0201",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ほらほらっ♪　遠慮しなくていいからさっ♪　もっとボクをっ……んんっ、はぁ……ボクのおっぱいっ、いっぱいっぱい感じてよっ♪",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02C_106125.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0210_T_Genki": {
+    "ID": "imvi_phase1_0210_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0211",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "出ちゃう？　精液のニオイ、すっごい濃くなってるよ？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02C_106120.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0220_M_Genki": {
+    "ID": "imvi_phase1_0220_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0220_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "絶頂射精後２"
+      }
+    ]
+  },
+
+  "imvi_phase1_0220_T_Genki": {
+    "ID": "imvi_phase1_0220_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0221",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "出てるっ、すごいよっ……熱いのこんなにっ♪　はぁはぁ……ボクのおっぱい、そんなに気持ちよかったんだ……♪",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02C_106127.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.7
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0230_M_Genki": {
+    "ID": "imvi_phase1_0230_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0230_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "発情"
+      }
+    ]
+  },
+
+  "imvi_phase1_0230_T_Genki": {
+    "ID": "imvi_phase1_0230_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0231",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あはっ♪　やっぱりっ、あなたって可愛いねっ！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106676.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3.4
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0240_M_Genki": {
+    "ID": "imvi_phase1_0240_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0240_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_phase1_0240_T_Genki": {
+    "ID": "imvi_phase1_0240_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0241_M_Genki",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そんなに緊張しなくていいのに。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106640.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.9
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0241_M_Genki": {
+    "ID": "imvi_phase1_0241_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0241_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase1_0241_T_Genki": {
+    "ID": "imvi_phase1_0241_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0242",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ここがね……ボクの……お、おまんこ……だよ？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02C_106103.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0250_M_Genki": {
+    "ID": "imvi_phase1_0250_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0250_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0250_T_Genki": {
+    "ID": "imvi_phase1_0250_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0251",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ……ちょっと、上すぎるかな……そっちは、おしっこをする穴だから……えっとね、こっちにある下の…",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105527.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0260_M_Genki": {
+    "ID": "imvi_phase1_0260_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0260_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase1_0260_T_Genki": {
+    "ID": "imvi_phase1_0260_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0261",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ここが……その、ボクのおまんこだよ。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105528.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0270_T_Genki": {
+    "ID": "imvi_phase1_0270_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0271",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ボクが初めて、なんだ……♪",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02C_106107.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 9.4
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0280_M_Genki": {
+    "ID": "imvi_phase1_0280_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0280_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ好感２"
+      }
+    ]
+  },
+
+  "imvi_phase1_0280_T_Genki": {
+    "ID": "imvi_phase1_0280_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0281",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ぁ、んんっ……はぁ、もっとボクのマンコ触って？　はぁ、んうぅっ♪　ボクもすっごく、気持ちいいからっ、はぁ、んんぁ……！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02C_106207.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0290_M_Genki": {
+    "ID": "imvi_phase1_0290_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0290_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0290_T_Genki": {
+    "ID": "imvi_phase1_0290_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0291",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いいよっ！　遠慮なくボクの膣内に出していいからっ……だから、そのままっ……あっ、んんっ、いっぱいボクにっ、熱いの出してっ！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02C_106108.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0300_M_Genki": {
+    "ID": "imvi_phase1_0300_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0300_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠"
+      }
+    ]
+  },
+
+  "imvi_phase1_0300_T_Genki": {
+    "ID": "imvi_phase1_0300_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0301",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ……はぁ、はぁ……んふ……はぁ、はぁ……すごい、たくさん出したね……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105536.ogg",
+          "IsChoppingAudio": true,
+          "StartTIme": 4
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0310_M_Genki": {
+    "ID": "imvi_phase1_0310_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0310_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_phase1_0310_T_Genki": {
+    "ID": "imvi_phase1_0310_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0311",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "気にしなくていいよ。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105524.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.8
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0320_M_Genki": {
+    "ID": "imvi_phase1_0320_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0320_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0320_T_Genki": {
+    "ID": "imvi_phase1_0320_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_yotogiplay_phase1_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もう、しょうがないなぁ♪　でも、ボクにして欲しいって気持ちは嬉しいから、ちゃんと平等にしてあげるねっ♪",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02C_106118.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0010_T_Genki": {
+    "ID": "imvi_phase2_0010_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0011_M_Genki",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "さってと、次はどんなことをしようかな……♪",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106713.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 7.3
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0011_M_Genki": {
+    "ID": "imvi_phase2_0011_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0011_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "MotionInfo": {
+          "MotionFile": "pose_02_f.anm",
+          "MotionTag": "pose_02_f.anm"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase2_0011_T_Genki": {
+    "ID": "imvi_phase2_0011_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0012",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ねえどうしたの？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02A_105527.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 0.5,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0020_M_Genki": {
+    "ID": "imvi_phase2_0020_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0020_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "悲しみ２"
+      }
+    ]
+  },
+
+  "imvi_phase2_0020_T_Genki": {
+    "ID": "imvi_phase2_0020_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ボクとするの好きじゃない？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106732.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0030_M_Genki": {
+    "ID": "imvi_phase2_0030_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0030_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "imvi_phase2_0030_T_Genki": {
+    "ID": "imvi_phase2_0030_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "わあ、よかった……♪　嫌だって言われたらどうしようかと思っちゃったよ～。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106733.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0040_T_Genki": {
+    "ID": "imvi_phase2_0040_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そうは見えないけどなぁ。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106739.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0050_M_Genki": {
+    "ID": "imvi_phase2_0050_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0050_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase2_0050_T_Genki": {
+    "ID": "imvi_phase2_0050_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いくら隠してもバレバレだよ♪　ねえねえ、これでもエッチしたくないの？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106740.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0060_M_Genki": {
+    "ID": "imvi_phase2_0060_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0060_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "引きつり笑顔"
+      }
+    ]
+  },
+
+  "imvi_phase2_0060_T_Genki": {
+    "ID": "imvi_phase2_0060_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "わわっ、いきなりどうしたの？　もしかしてどこか痛くなっちゃった？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106667.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0070_M_Genki": {
+    "ID": "imvi_phase2_0070_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0070_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase2_0070_T_Genki": {
+    "ID": "imvi_phase2_0070_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あははっ、隠さなくてもいいのに。だけど、そういうところも可愛いよね……♪",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106665.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0080_M_Genki": {
+    "ID": "imvi_phase2_0080_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0080_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ドヤ顔"
+      }
+    ]
+  },
+
+  "imvi_phase2_0080_T_Genki": {
+    "ID": "imvi_phase2_0080_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そっか……そんなに認めたくないんだったら、もっと身体に聞いてあげるね！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106706.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0090_M_Genki": {
+    "ID": "imvi_phase2_0090_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0090_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ好感２"
+      }
+    ]
+  },
+
+  "imvi_phase2_0090_T_Genki": {
+    "ID": "imvi_phase2_0090_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふぁ……どう？　ボクのおっぱい、気持ちいいかな……？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_order_51196.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0100_M_Genki": {
+    "ID": "imvi_phase2_0100_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0100_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮２"
+      }
+    ]
+  },
+
+  "imvi_phase2_0100_T_Genki": {
+    "ID": "imvi_phase2_0100_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はひっ、んうっ、壊れるぐらいが気持ちいいんだよね！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106694.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.3
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0110_M_Genki": {
+    "ID": "imvi_phase2_0110_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0110_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "むー"
+      }
+    ]
+  },
+
+  "imvi_phase2_0110_T_Genki": {
+    "ID": "imvi_phase2_0110_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0111",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んううっ……、我慢しちゃダメっ！　こういう時は素直に受け止めるものだよっ！　だからっ、もっとしてあげるっ！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106693.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0120_M_Genki": {
+    "ID": "imvi_phase2_0120_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0120_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロフェラ愛情"
+      }
+    ]
+  },
+
+  "imvi_phase2_0120_T_Genki": {
+    "ID": "imvi_phase2_0120_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あはっ、だったらおかしくなっちゃっていいよっ！　気持ちいいとこっ、ずぼずぼってしてあげるからっ！　んうっ、はああんっ！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106691.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0130_M_Genki": {
+    "ID": "imvi_phase2_0130_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0130_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase2_0130_T_Genki": {
+    "ID": "imvi_phase2_0130_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0131",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いいよ、いつでも出して……んんっ……ボクのおっぱいに、思い切り出して……！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_order_51202.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0140_M_Genki": {
+    "ID": "imvi_phase2_0140_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0140_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "興奮射精後２"
+      }
+    ]
+  },
+
+  "imvi_phase2_0140_T_Genki": {
+    "ID": "imvi_phase2_0140_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0141",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁっ……あはっ、いっぱい出たね……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_order_51203.ogg",
+          "IsChoppingAudio": true,
+          "StartTIme": 3.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0150_M_Genki": {
+    "ID": "imvi_phase2_0150_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0150_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase2_0150_T_Genki": {
+    "ID": "imvi_phase2_0150_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……やっと認められたんだ。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105686.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0160_M_Genki": {
+    "ID": "imvi_phase2_0160_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0160_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_phase2_0160_T_Genki": {
+    "ID": "imvi_phase2_0160_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0161",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ちゃんと認めてくれたから、沢山ご褒美をあげるね。お腹がいっぱいになるまでっ！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106709.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0170_M_Genki": {
+    "ID": "imvi_phase2_0170_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0170_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_phase2_0170_T_Genki": {
+    "ID": "imvi_phase2_0170_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "好きなタイミングで挿れてくれていいよ。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105526.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0180_M_Genki": {
+    "ID": "imvi_phase2_0180_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0180_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase2_0180_T_Genki": {
+    "ID": "imvi_phase2_0180_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んふっ！　んん……んっ……あっ……んっ……んっ……！　はぁ、はぁ……どう、かな？　ボクの体、気持ち……いい？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105529.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0190_M_Genki": {
+    "ID": "imvi_phase2_0190_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0190_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase2_0190_T_Genki": {
+    "ID": "imvi_phase2_0190_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0191",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ボクを気にしなくて……いいからねっ……たくさん、おまんこついて……いっぱい、気持ちよくなってね……！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_106010.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.4
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0200_M_Genki": {
+    "ID": "imvi_phase2_0200_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0200_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮２"
+      }
+    ]
+  },
+
+  "imvi_phase2_0200_T_Genki": {
+    "ID": "imvi_phase2_0200_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0201",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ！　あっ……あっ……んんっ……はぁ……はぁ……はぁ……んっ……んっ……あっ……もっと、強く、揉んでっ……！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105531.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0210_M_Genki": {
+    "ID": "imvi_phase2_0210_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0210_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮３"
+      }
+    ]
+  },
+
+  "imvi_phase2_0210_T_Genki": {
+    "ID": "imvi_phase2_0210_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0211",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "くぁあっ、あっ！　はぁっ、あっ、す、すごいっ！　ぼ、ボク、気持ちよくなってきてるっ！　くぁあっ、あっ！　はぁっ、あっ、",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105534.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0220_M_Genki": {
+    "ID": "imvi_phase2_0220_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0220_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮３"
+      }
+    ]
+  },
+
+  "imvi_phase2_0220_T_Genki": {
+    "ID": "imvi_phase2_0220_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0221",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ、あああっ！　もっ、もうっ、イキそうっ！？　ねえっ、イッちゃいそうなのっ！？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106678.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0230_M_Genki": {
+    "ID": "imvi_phase2_0230_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0230_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "発情"
+      }
+    ]
+  },
+
+  "imvi_phase2_0230_T_Genki": {
+    "ID": "imvi_phase2_0230_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0231",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いいよっ♪　ボクに出してっ♪",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02C_106126.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.4
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0240_M_Genki": {
+    "ID": "imvi_phase2_0240_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0240_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "興奮射精後２"
+      }
+    ]
+  },
+
+  "imvi_phase2_0240_T_Genki": {
+    "ID": "imvi_phase2_0240_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0241",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ……いいよ、ボクも凄い気持ちよかったから。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_105537.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5.6
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0250_M_Genki": {
+    "ID": "imvi_phase2_0250_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0250_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_phase2_0250_T_Genki": {
+    "ID": "imvi_phase2_0250_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0251",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いっぱい出したね？　えへへ、じゃあ、ご褒美にちゅーしてあげるね。",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP01_106027.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0260_T_Genki": {
+    "ID": "imvi_phase2_0260_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0261",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "れりゅ、ちゅう、んぅうう……あなたの舌が、美味しいの……ちゅぷ、んっ……もっと、いっぱい、唾液ちょうだい……んちゅ、れる……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP5_106003.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0270_M_Genki": {
+    "ID": "imvi_phase2_0270_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0270_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase2_0270_T_Genki": {
+    "ID": "imvi_phase2_0270_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0271",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あははっ♪　もう、こんなにガチガチになって……ちゃんと、おちんちんは元気になってくれたね♪",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02C_106137.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0280_M_Genki": {
+    "ID": "imvi_phase2_0280_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0280_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase2_0280_T_Genki": {
+    "ID": "imvi_phase2_0280_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0281",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あの、さ……もう一回してもいいよね？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_GP02C_106135.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.6
+        }
+      }
+    }
+  },
+
+
+  "imvi_postyotogi_0010_M_Genki": {
+    "ID": "imvi_postyotogi_0010_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0010_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "発情"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0010_T_Genki": {
+    "ID": "imvi_postyotogi_0010_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んああああっ！　はあっ、あくっ！　んっ、うううっ！　そこ、好きぃっ！　気持ちいいとこっ、もっとグリグリしてよぉっ！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106857.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0020_M_Genki": {
+    "ID": "imvi_postyotogi_0020_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0020_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ羞恥３"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0020_T_Genki": {
+    "ID": "imvi_postyotogi_0020_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "も、もう……なにも分かんないよぉ……はあっ、ひああんっ！　あんっ、ああんっ！　気持ちいいのっ、溢れてくるよぉっ！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106855.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0030_M_Genki": {
+    "ID": "imvi_postyotogi_0030_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0030_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "まぶたギュ"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0030_T_Genki": {
+    "ID": "imvi_postyotogi_0030_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ひうっ！　イクっ！　ボクっ、イっクぅぅっーーーっ！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_Y_106859.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0040_M_Genki": {
+    "ID": "imvi_postyotogi_0040_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0040_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "絶頂射精後２"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0040_T_Genki": {
+    "ID": "imvi_postyotogi_0040_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "焦っちゃダメだよ……ちゃんと相手するから……あんっ……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_X1Kai_54457.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0050_M_Genki": {
+    "ID": "imvi_postyotogi_0050_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0050_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "興奮射精後２"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0050_T_Genki": {
+    "ID": "imvi_postyotogi_0050_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もっとぉ……ボクにぃ……触ってぇ……♪",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_X1Kai_54458.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0080_M_Genki": {
+    "ID": "imvi_postyotogi_0080_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0080_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0080_T_Genki": {
+    "ID": "imvi_postyotogi_0080_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あはは。どうかな？",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_order_50322.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0090_M_Genki": {
+    "ID": "imvi_postyotogi_0090_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0090_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0090_T_Genki": {
+    "ID": "imvi_postyotogi_0090_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んふっ……うん……でも、もうちょっとこのまま……気持ちいい幸せな気分……浸ってたいなぁ……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_X1P_53259.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0100_M_Genki": {
+    "ID": "imvi_postyotogi_0100_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0100_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0100_T_Genki": {
+    "ID": "imvi_postyotogi_0100_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "期待してるからね！",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_X1P_52993.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.4
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0110_M_Genki": {
+    "ID": "imvi_postyotogi_0110_M_Genki",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0110_T_Genki",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "むー",
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0110_T_Genki": {
+    "ID": "imvi_postyotogi_0110_T_Genki",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0111",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もう……しょうがないなぁ……",
+      "VoiceData": {
+        "Genki": {
+          "VoiceFile": "S5_X1P_53217.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

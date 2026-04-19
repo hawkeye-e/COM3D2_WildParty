@@ -1,0 +1,774 @@
+﻿{
+  "eee_intro_chain_0001": {
+    "ID": "eee_intro_chain_0001",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_chain_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "屈辱プレイには鎖なしではありえん。ＳＭクラブにある拘束具も使えるので、準備はそんなに難しくないはず。"
+    }
+  },
+
+  "eee_intro_chain_0002": {
+    "ID": "eee_intro_chain_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_chain_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "よし、道具を整理して劇場へ運ぼう。"
+    }
+  },
+
+  "eee_intro_chain_0003": {
+    "ID": "eee_intro_chain_0003",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "eee_intro_chain_0004",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "eee_intro_chain_0004": {
+    "ID": "eee_intro_chain_0004",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_chain_0005",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "eee_intro_chain_0005": {
+    "ID": "eee_intro_chain_0005",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_chain_0006",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（数日後、すべての準備が整った。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "eee_intro_chain_0006": {
+    "ID": "eee_intro_chain_0006",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_chain_0007",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]に、新しいプレイを試してみたいと思っているメイドを探してほしいと頼んだ。ふふっ、これを見たら、あの子たちはきっと驚くだろうなぁ。）"
+    }
+  },
+
+
+  "eee_intro_chain_0007": {
+    "ID": "eee_intro_chain_0007",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "eee_intro_chain_0008",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "eee_intro_chain_0008": {
+    "ID": "eee_intro_chain_0008",
+    "Type": "BGM",
+    "Tag": "BGM013.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_chain_0009"
+  },
+
+  "eee_intro_chain_0009": {
+    "ID": "eee_intro_chain_0009",
+    "Type": "BG",
+    "Tag": "Theater",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_chain_0010"
+  },
+
+  "eee_intro_chain_0010": {
+    "ID": "eee_intro_chain_0010",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_chain_0011",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "目口閉じ",
+        "FaceBlend": "頬１涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-5.61, 0.00, 3.70",
+          "RotString": "0.000, 0.963, 0.000, 0.269"
+        },
+        "ClothesSetID": "RESET",
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "目口閉じ",
+        "FaceBlend": "頬１涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-5.94, 0.00, 3.34",
+          "RotString": "0.000, 0.850, 0.000, 0.527"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "目口閉じ",
+        "FaceBlend": "頬１涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-5.14, 0.00, 3.82",
+          "RotString": "0.000, 0.965, 0.000, 0.264"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "目口閉じ",
+        "FaceBlend": "頬１涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-6.17, 0.00, 2.94",
+          "RotString": "0.000, 0.733, 0.000, 0.680"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "目口閉じ",
+        "FaceBlend": "頬１涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "-4.70, 0.00, 3.98",
+          "RotString": "0.000, 0.999, 0.000, -0.040"
+        }
+      },
+
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "-3.19, 0.00, 3.54",
+          "RotString": "0.000, -0.978, 0.000, -0.210"
+        }
+      }
+    ]
+  },
+
+  "eee_intro_chain_0011": {
+    "ID": "eee_intro_chain_0011",
+    "Type": "AddObject",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_chain_0012",
+    "WorldObjectData": [
+      {
+        "Src": "Odogu_KousokudaiHgata",
+        "ObjectID": "mod_intro_table1",
+        "PosRot": {
+          "PosString": "-2.0, 0.0, 0",
+          "RotString": "-0.707, 0.000, 0.000, 0.707"
+        }
+      },
+      {
+        "Src": "Odogu_KousokudaiHgata",
+        "ObjectID": "mod_intro_table2",
+        "PosRot": {
+          "PosString": "-1, 0, 0",
+          "RotString": "-0.707, 0.000, 0.000, 0.707"
+        }
+      },
+      {
+        "Src": "Odogu_KousokudaiHgata",
+        "ObjectID": "mod_intro_table3",
+        "PosRot": {
+          "PosString": "0, 0, 0",
+          "RotString": "-0.707, 0.000, 0.000, 0.707"
+        }
+      },
+      {
+        "Src": "Odogu_KousokudaiHgata",
+        "ObjectID": "mod_intro_table4",
+        "PosRot": {
+          "PosString": "1, 0, 0",
+          "RotString": "-0.707, 0.000, 0.000, 0.707"
+        }
+      },
+      {
+        "Src": "Odogu_KousokudaiHgata",
+        "ObjectID": "mod_intro_table5",
+        "PosRot": {
+          "PosString": "2, 0, 0",
+          "RotString": "-0.707, 0.000, 0.000, 0.707"
+        }
+      }
+    ]
+  },
+
+  "eee_intro_chain_0012": {
+    "ID": "eee_intro_chain_0012",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_chain_0013",
+    "CameraData": {
+      "LockCamera": { "IsLock": true },
+      "FixedPointData": {
+        "PosString": "-4.11, 1.43, 2.07",
+        "TargetPosString": "-5.46, 1.31, 3.54",
+        "AroundAngleString": "317.43, 3.46",
+        "Distance": 2
+      }
+    }
+  },
+
+  "eee_intro_chain_0013": {
+    "ID": "eee_intro_chain_0013",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_chain_0014_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "よし、みんな、もう目を開けていいぞ。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "eee_intro_chain_0014_camerapan": {
+    "ID": "eee_intro_chain_0014_camerapan",
+    "Type": "Camera",
+    "WaitingType": "CameraPan",
+    "NextStepID": "eee_intro_chain_0015",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "FixedPointData": {
+        "PosString": "-7.31, 2.59, 5.13",
+        "TargetPosString": "-5.27, 1.95, 3.47",
+        "AroundAngleString": "129.10, 13.71",
+        "Distance": 2.7
+      }
+    }
+  },
+
+  "eee_intro_chain_0015": {
+    "ID": "eee_intro_chain_0015",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_chain_0016_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（メイドたちの前には、いくつかの拘束台と鎖がいた。彼女たちは少し驚き、しばらく言葉が出ない。）"
+    }
+  },
+
+  "eee_intro_chain_0016_Branch": {
+    "ID": "eee_intro_chain_0016_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 1
+      }
+    ],
+    "NextStepID": "eee_intro_chain_0020_T_[=PType]"
+  },
+
+
+  "eee_intro_chain_0021": {
+    "ID": "eee_intro_chain_0021",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_chain_0022",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ここで拘束台と鎖を使って楽しもう！ これは通常のＳＭプレイじゃないだから、期待していいよ！"
+    }
+  },
+
+
+  "eee_intro_chain_0022": {
+    "ID": "eee_intro_chain_0022",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_chain_0023",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "さあ、みんな準備して。"
+    }
+  },
+
+  "eee_intro_chain_0023": {
+    "ID": "eee_intro_chain_0023",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "eee_intro_chain_0024",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "eee_intro_chain_0024": {
+    "ID": "eee_intro_chain_0024",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_chain_0025",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮２",
+        "FaceBlend": "頬１涙０",
+        "MotionInfo": {
+          "MotionFile": "kousokudai_sex_taiki_f.anm",
+          "MotionTag": "kousokudai_sex_taiki_f.anm"
+        },
+        "PosRot": {
+          "PosString": "-2.0, 0.71, -0.10",
+          "RotString": "0.0, 0.0, 0.0, 1"
+        },
+        "ClothesSetID": "FullNude",
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "KousokuU_TekaseTwoDown_I_.menu",
+              "Target": "kousoku_upper"
+            },
+            {
+              "ItemFile": "KousokuL_AshikaseDown_I_.menu",
+              "Target": "kousoku_lower"
+            },
+            {
+              "ItemFile": "accHead001_I_.menu",
+              "Target": "acchead"
+            }
+          ]
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ好感３",
+        "FaceBlend": "頬１涙０",
+        "MotionInfo": {
+          "MotionFile": "kousokudai_sex_taiki_f.anm",
+          "MotionTag": "kousokudai_sex_taiki_f.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.0, 0.71, -0.10",
+          "RotString": "0.0, 0.0, 0.0, 1"
+        },
+        "ClothesSetID": "FullNude",
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "KousokuU_TekaseTwoDown_I_.menu",
+              "Target": "kousoku_upper"
+            },
+            {
+              "ItemFile": "KousokuL_AshikaseDown_I_.menu",
+              "Target": "kousoku_lower"
+            },
+            {
+              "ItemFile": "accHead001_I_.menu",
+              "Target": "acchead"
+            }
+          ]
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "苦笑い",
+        "FaceBlend": "頬１涙０",
+        "MotionInfo": {
+          "MotionFile": "kousokudai_sex_taiki_f.anm",
+          "MotionTag": "kousokudai_sex_taiki_f.anm"
+        },
+        "PosRot": {
+          "PosString": "0.0, 0.71, -0.10",
+          "RotString": "0.0, 0.0, 0.0, 1"
+        },
+        "ClothesSetID": "FullNude",
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "KousokuU_TekaseTwoDown_I_.menu",
+              "Target": "kousoku_upper"
+            },
+            {
+              "ItemFile": "KousokuL_AshikaseDown_I_.menu",
+              "Target": "kousoku_lower"
+            },
+            {
+              "ItemFile": "accHead001_I_.menu",
+              "Target": "acchead"
+            }
+          ]
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "照れ",
+        "FaceBlend": "頬１涙０",
+        "MotionInfo": {
+          "MotionFile": "kousokudai_sex_taiki_f.anm",
+          "MotionTag": "kousokudai_sex_taiki_f.anm"
+        },
+        "PosRot": {
+          "PosString": "1.0, 0.71, -0.10",
+          "RotString": "0.0, 0.0, 0.0, 1"
+        },
+        "ClothesSetID": "FullNude",
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "KousokuU_TekaseTwoDown_I_.menu",
+              "Target": "kousoku_upper"
+            },
+            {
+              "ItemFile": "KousokuL_AshikaseDown_I_.menu",
+              "Target": "kousoku_lower"
+            },
+            {
+              "ItemFile": "accHead001_I_.menu",
+              "Target": "acchead"
+            }
+          ]
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "困った",
+        "FaceBlend": "頬１涙０",
+        "MotionInfo": {
+          "MotionFile": "kousokudai_sex_taiki_f.anm",
+          "MotionTag": "kousokudai_sex_taiki_f.anm"
+        },
+        "PosRot": {
+          "PosString": "2.0, 0.71, -0.10",
+          "RotString": "0.0, 0.0, 0.0, 1"
+        },
+        "ClothesSetID": "FullNude",
+        "ExtraObjectsInfo": {
+          "AddObjects": [
+            {
+              "ItemFile": "KousokuU_TekaseTwoDown_I_.menu",
+              "Target": "kousoku_upper"
+            },
+            {
+              "ItemFile": "KousokuL_AshikaseDown_I_.menu",
+              "Target": "kousoku_lower"
+            },
+            {
+              "ItemFile": "accHead001_I_.menu",
+              "Target": "acchead"
+            }
+          ]
+        }
+      },
+
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男立ち＿正眼"
+        },
+        "PosRot": {
+          "PosString": "0.56, 0.00, 3.54",
+          "RotString": "0.000, 1.000, 0.000, 0.000"
+        }
+      }
+    ]
+  },
+
+  "eee_intro_chain_0025": {
+    "ID": "eee_intro_chain_0025",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_intro_chain_0026",
+    "CameraData": {
+      "LockCamera": { "IsLock": false },
+      "FixedPointData": {
+        "PosString": "2.79, 1.97, 5.54",
+        "TargetPosString": "1.35, 1.70, 2.81",
+        "AroundAngleString": "207.84, 5.01",
+        "Distance": 3.1
+      }
+    }
+  },
+
+  "eee_intro_chain_0026": {
+    "ID": "eee_intro_chain_0026",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_chain_0027",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（メイドたちは服を脱ぎ、次々と拘束台に横になる。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "eee_intro_chain_0027": {
+    "ID": "eee_intro_chain_0027",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_chain_0028",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は彼女たちを鎖で縛り上げ、目隠しをする。　ふふっ……感じ取れるよ、みんな何も見えず、次に何が起こるかもわからずに興奮しているんだ。）"
+    }
+  },
+
+  "eee_intro_chain_0028": {
+    "ID": "eee_intro_chain_0028",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_theater_0001",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ああっ……いけないいけない。これはお客様のためだ、性欲を抑えないと。）"
+    }
+  },
+
+
+
+  "eee_intro_theater_chain_0001": {
+    "ID": "eee_intro_theater_chain_0001",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_intro_theater_0210",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_kousokudai_sex.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮２",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-2.0, 0.0, 0",
+          "RotString": "0.0, 0, 0.0, 1.0"
+        }
+      },
+      {
+        "ArrayPosition": 1,
+        "ScriptFile": "sex_kousokudai_sex.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "まぶたギュ",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-1.0, 0.0, 0",
+          "RotString": "0.0, 0, 0.0, 1.0"
+        }
+      },
+      {
+        "ArrayPosition": 2,
+        "ScriptFile": "sex_kousokudai_sex.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "0.0, 0.0, 0",
+          "RotString": "0.0, 0, 0.0, 1.0"
+        }
+      },
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_kousokudai_sex.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ我慢２",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "1.0, 0.0, 0",
+          "RotString": "0.0, 0, 0.0, 1.0"
+        }
+      },
+      {
+        "ArrayPosition": 4,
+        "ScriptFile": "sex_kousokudai_sex.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 3,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ羞恥２",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "2.0, 0.0, 0",
+          "RotString": "0.0, 0, 0.0, 1.0"
+        }
+      }
+    ]
+  },
+
+  "eee_start_yotogiplay_phase2": {
+    "ID": "eee_start_yotogiplay_phase2",
+    "Type": "RemoveObject",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_start_yotogiplay_phase2_start",
+    "WorldObjectData": [
+      {
+        "ObjectID": "mod_intro_table1"
+      },
+      {
+        "ObjectID": "mod_intro_table2"
+      },
+      {
+        "ObjectID": "mod_intro_table3"
+      },
+      {
+        "ObjectID": "mod_intro_table4"
+      },
+      {
+        "ObjectID": "mod_intro_table5"
+      }
+    ]
+  },
+
+  "eee_start_yotogiplay_phase2_start": {
+    "ID": "eee_start_yotogiplay_phase2_start",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "ExpExchangeEvent",
+      "Phase": 2,
+      "IsKeepCharacterVisibleAfterYotogi": true,
+      "IsFinalYotogi": true,
+      "IsClubOwnerMainCharacter": false,
+      "IsApplyTallyCounterTexture": true
+    },
+    "NextStepID": "eee_post_yotogi_chain"
+  }
+}

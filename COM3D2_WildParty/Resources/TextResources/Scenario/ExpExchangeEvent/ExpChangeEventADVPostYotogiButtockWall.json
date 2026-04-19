@@ -1,0 +1,1468 @@
+﻿{
+  "eee_post_yotogi_wall": {
+    "ID": "eee_post_yotogi_wall",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "SystemFadeOut",
+    "NextStepID": "eee_post_yotogi_wall_init_a"
+  },
+
+  "eee_post_yotogi_wall_init_a": {
+    "ID": "eee_post_yotogi_wall_init_a",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_wall_init_b"
+  },
+
+  "eee_post_yotogi_wall_init_b": {
+    "ID": "eee_post_yotogi_wall_init_b",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
+    "NextStepID": "eee_post_yotogi_wall_init_c"
+  },
+
+  "eee_post_yotogi_wall_init_c": {
+    "ID": "eee_post_yotogi_wall_init_c",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_init_d",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": false
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_init_d": {
+    "ID": "eee_post_yotogi_wall_init_d",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_wall_init_e",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 6
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      },
+      {
+        "GroupIndex": 1,
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 7
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 1
+        }
+      },
+      {
+        "GroupIndex": 2,
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 8
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 2
+        }
+      },
+      {
+        "GroupIndex": 3,
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 9
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 3
+        }
+      },
+      {
+        "GroupIndex": 4,
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 10
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 4
+        }
+      }
+    ]
+  },
+
+
+
+  "eee_post_yotogi_wall_init_e": {
+    "ID": "eee_post_yotogi_wall_init_e",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_init_f",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_kousoku_sex.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ興奮２",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-2.0, 0.0, 0",
+          "RotString": "0.0, 1, 0.0, 0.0"
+        }
+      },
+      {
+        "ArrayPosition": 1,
+        "ScriptFile": "sex_kousoku_sex.ks",
+        "ScriptLabel": "*激しさ１",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "まぶたギュ",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "-1.0, 0.0, 0",
+          "RotString": "0.0, 1, 0.0, 0.0"
+        }
+      },
+      {
+        "ArrayPosition": 2,
+        "ScriptFile": "sex_kousoku_sex.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "発情",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "0.0, 0.0, 0",
+          "RotString": "0.0, 1, 0.0, 0.0"
+        }
+      },
+      {
+        "ArrayPosition": 3,
+        "ScriptFile": "sex_kousoku_sex.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ我慢２",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "1.0, 0.0, 0",
+          "RotString": "0.0, 1, 0.0, 0.0"
+        }
+      },
+      {
+        "ArrayPosition": 4,
+        "ScriptFile": "sex_kousoku_sex.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "エロ羞恥２",
+          "FaceBlend": "頬２涙０"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "2.0, 0.0, 0",
+          "RotString": "0.0, 1, 0.0, 0.0"
+        }
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_init_f": {
+    "ID": "eee_post_yotogi_wall_init_f",
+    "Type": "AddObject",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_wall_init_g",
+    "WorldObjectData": [
+      {
+        "IsCustom": true,
+        "Src": "WallAssWall",
+        "ObjectID": "mod_wall_ass_wall",
+        "PosRot": {
+          "PosString": "0.020,-0.320,-0.270",
+          "RotString": "0, 0, 0, -1"
+        },
+        "Scale": -1
+      }
+    ]
+  },
+
+
+
+  "eee_post_yotogi_wall_init_g": {
+    "ID": "eee_post_yotogi_wall_init_g",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_wall_init_h",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-5.85, 3.32, 3.36",
+        "TargetPosString": "-1.35, 1.08, 0.46",
+        "AroundAngleString": "122.81, 22.71",
+        "Distance": 5.8
+      }
+    }
+  },
+
+  "eee_post_yotogi_wall_init_h": {
+    "ID": "eee_post_yotogi_wall_init_h",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_init_i",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 19,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-3.88, 0.00, 0.984",
+          "RotString": "0, 0.574, 0, -0.819"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 11,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-4.82, 0.00, 1.326",
+          "RotString": "0, 0.574, 0, -0.819"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 12,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-5.76, 0.00, 1.668",
+          "RotString": "0, 0.574, 0, -0.819"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 13,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-6.7, 0.00, 2.01",
+          "RotString": "0, 0.574, 0, -0.819"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 14,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-7.64, 0.00, 2.352",
+          "RotString": "0, 0.574, 0, -0.819"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 15,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-8.58, 0.00, 2.694",
+          "RotString": "0, 0.574, 0, -0.819"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 16,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-9.52, 0.00, 3.036",
+          "RotString": "0, 0.574, 0, -0.819"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 17,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-10.46, 0.00, 3.378",
+          "RotString": "0, 0.574, 0, -0.819"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+
+      {
+        "Type": "M",
+        "ArrayPosition": 18,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-11.4, 0.00, 3.72",
+          "RotString": "0, 0.574, 0, -0.819"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStandingErect" }
+      },
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "-2.10, 0.00, -2.19",
+          "RotString": "0.000, 0.000, 0.000, 1.000"
+        }
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_init_i": {
+    "ID": "eee_post_yotogi_wall_init_i",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_0001",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "2.80, 0.00, 4.10",
+          "RotString": "0.000, -0.905, 0.000, -0.425"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "4.14, 0.00, 3.41",
+          "RotString": "0.000, -0.881, 0.000, 0.474"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-2.24, 0.00, 3.32",
+          "RotString": "0.000, 0.931, 0.000, 0.364"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-2.84, 0.00, 2.90",
+          "RotString": "0.000, 0.882, 0.000, 0.471"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-6.84, 0.00, 4.06",
+          "RotString": "0.000, 0.913, 0.000, 0.407"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-6.07, 0.00, 4.15",
+          "RotString": "0.000, 0.978, 0.000, 0.209"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 20,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-6.71, -1.34, 8.49",
+          "RotString": "0.000, -0.934, 0.000, -0.357"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 21,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-8.22, -1.34, 7.33",
+          "RotString": "0.000, 0.333, 0.000, -0.943"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 22,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-9.25, -1.34, 7.55",
+          "RotString": "0.000, 0.423, 0.000, 0.906"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 23,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-7.91, -1.34, 8.57",
+          "RotString": "0.000, 0.938, 0.000, -0.347"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 24,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-6.18, -1.34, 6.61",
+          "RotString": "0.000, 0.972, 0.000, 0.233"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 25,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-6.71, -1.34, 6.02",
+          "RotString": "0.000, 0.843, 0.000, 0.537"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 26,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-2.08, -1.34, 8.81",
+          "RotString": "0.000, -0.999, 0.000, -0.052"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 27,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-0.75, -1.34, 9.55",
+          "RotString": "0.000, 0.999, 0.000, -0.036"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 28,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "0.22, -1.34, 9.54",
+          "RotString": "0.000, 0.997, 0.000, 0.079"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      },
+      {
+        "Type": "M",
+        "ArrayPosition": 29,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "-2.08, -1.34, 6.51",
+          "RotString": "0.000, 0.833, 0.000, 0.553"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0001": {
+    "ID": "eee_post_yotogi_wall_0001",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（イベントはすでに数時間続いており、とても順調に進んでいた。まるで一般的な社交の集まりのように、お客様達は普段通りに食事をし、飲み、交流する。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "eee_post_yotogi_wall_0002": {
+    "ID": "eee_post_yotogi_wall_0002",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0003",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（ステージの上では、お客様達は[=Name,Maid,0,CallName]たちを犯し続けている。）"
+    }
+  },
+
+  "eee_post_yotogi_wall_0003": {
+    "ID": "eee_post_yotogi_wall_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（たとえ肉便器として扱われていても、嫌がる様子は見せず、むしろ快楽に満ちた表情を浮かべながら淫らに喘ぎ声を上げる。）"
+    }
+  },
+
+  "eee_post_yotogi_wall_0004": {
+    "ID": "eee_post_yotogi_wall_0004",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_wall_0005",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-2.43, 2.00, 1.57",
+        "TargetPosString": "-1.48, 1.24, -0.26",
+        "AroundAngleString": "152.45, 20.23",
+        "Distance": 2.2
+      }
+    }
+  },
+
+  "eee_post_yotogi_wall_0005": {
+    "ID": "eee_post_yotogi_wall_0005",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0006",
+    "TalkData": {
+      "SpeakerName": "お客様８",
+      "Text": "あ、昨日は試合見ましたか？"
+    }
+  },
+
+  "eee_post_yotogi_wall_0006": {
+    "ID": "eee_post_yotogi_wall_0006",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0007",
+    "TalkData": {
+      "SpeakerName": "お客様９",
+      "Text": "ああ、見だ見だ。その負け方は残念すぎるねー"
+    }
+  },
+
+  "eee_post_yotogi_wall_0007": {
+    "ID": "eee_post_yotogi_wall_0007",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0008_camerapan",
+    "TalkData": {
+      "SpeakerName": "お客様８",
+      "Text": "本当だ。最後のシュートはめっちゃ惜しい！"
+    }
+  },
+
+  "eee_post_yotogi_wall_0008_camerapan": {
+    "ID": "eee_post_yotogi_wall_0008_camerapan",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_wall_0009",
+    "CameraData": {
+      "MoveType": "Smooth",
+      "AnimationTime": 1,
+      "FixedPointData": {
+        "PosString": "0.60, 1.71, 1.82",
+        "TargetPosString": "0.98, 1.49, 0.92",
+        "AroundAngleString": "156.94, 12.77",
+        "Distance": 1
+      }
+    }
+  },
+
+  "eee_post_yotogi_wall_0009": {
+    "ID": "eee_post_yotogi_wall_0009",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0010",
+    "TalkData": {
+      "SpeakerName": "お客様１０",
+      "Text": "あ、先週その映画見た？"
+    }
+  },
+
+  "eee_post_yotogi_wall_0010": {
+    "ID": "eee_post_yotogi_wall_0010",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0011",
+    "TalkData": {
+      "SpeakerName": "お客様１１",
+      "Text": "ああ、絶対に見るべきだよ。妻と一緒に見て、あのエンディングが本当に大好きだ。"
+    }
+  },
+
+  "eee_post_yotogi_wall_0011": {
+    "ID": "eee_post_yotogi_wall_0011",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0012",
+    "TalkData": {
+      "SpeakerName": "お客様１０",
+      "Text": "えー、面白そうー　よし、今週末に見てみようか。"
+    }
+  },
+
+  "eee_post_yotogi_wall_0012": {
+    "ID": "eee_post_yotogi_wall_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0013",
+    "TalkData": {
+      "SpeakerName": "お客様１１",
+      "Text": "超おすすめよ！"
+    }
+  },
+
+  "eee_post_yotogi_wall_0013": {
+    "ID": "eee_post_yotogi_wall_0013",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_wall_0014",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-4.64, 1.75, 0.94",
+        "TargetPosString": "-2.04, 1.24, -0.23",
+        "AroundAngleString": "114.13, 9.97",
+        "Distance": 2.9
+      }
+    }
+  },
+
+  "eee_post_yotogi_wall_0014": {
+    "ID": "eee_post_yotogi_wall_0014",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0015",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（お客様達は腰を振り続けながら、まるでトイレで世間話をしているかのように様々な話題で話し続ける。）"
+    }
+  },
+
+  "eee_post_yotogi_wall_0015": {
+    "ID": "eee_post_yotogi_wall_0015",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0016",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（[=Name,Maid,0,CallName]たちは今やまさに便器のように、ただ男根に突き刺されるだけだった。この屈辱感が彼女たちをさらに興奮させ、敏感にさせた。）"
+    }
+  },
+
+  "eee_post_yotogi_wall_0016": {
+    "ID": "eee_post_yotogi_wall_0016",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_wall_0017_Branch",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-4.49, 1.68, -3.68",
+        "TargetPosString": "-2.75, 1.16, -1.96",
+        "AroundAngleString": "45.56, 12.15",
+        "Distance": 2.5
+      }
+    }
+  },
+
+  "eee_post_yotogi_wall_0017_Branch": {
+    "ID": "eee_post_yotogi_wall_0017_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_wall_0020_M_[=PType]"
+  },
+
+  "eee_post_yotogi_wall_0022": {
+    "ID": "eee_post_yotogi_wall_0022",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0023_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "へぇー、嬉しそうー　こういうプレイがすごく気に入ってるんだね。"
+    }
+  },
+
+  "eee_post_yotogi_wall_0023_Branch": {
+    "ID": "eee_post_yotogi_wall_0023_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_wall_0030_T_[=PType]"
+  },
+
+  "eee_post_yotogi_wall_0031": {
+    "ID": "eee_post_yotogi_wall_0031",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0032",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あんな恥ずかしい体勢で犯されるのに、こんなに嬉しいなんて、[=Name,Maid,0,CallName]は本当に変態だね。"
+    }
+  },
+
+  "eee_post_yotogi_wall_0032": {
+    "ID": "eee_post_yotogi_wall_0032",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_0033_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_kousoku_sex.ks",
+        "ScriptLabel": "*激しさ３",
+        "SexPosID": 1,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0033_Branch": {
+    "ID": "eee_post_yotogi_wall_0033_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_wall_0040_T_[=PType]"
+  },
+
+  "eee_post_yotogi_wall_0041": {
+    "ID": "eee_post_yotogi_wall_0041",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_wall_0042",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-4.64, 1.75, 0.94",
+        "TargetPosString": "-2.04, 1.24, -0.23",
+        "AroundAngleString": "114.13, 9.97",
+        "Distance": 2
+      }
+    }
+  },
+
+  "eee_post_yotogi_wall_0042": {
+    "ID": "eee_post_yotogi_wall_0042",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_0043",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_kousoku_sex.ks",
+        "ScriptLabel": "*射精中",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0043": {
+    "ID": "eee_post_yotogi_wall_0043",
+    "Type": "AddTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_wall_0044_Branch",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F",
+        "IndexPosition": 0,
+        "BodyTarget": [ "Vagina" ]
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0044_Branch": {
+    "ID": "eee_post_yotogi_wall_0044_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_wall_0050_T_[=PType]"
+  },
+
+  "eee_post_yotogi_wall_0051": {
+    "ID": "eee_post_yotogi_wall_0051",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0052_Branch",
+    "TalkData": {
+      "SpeakerName": "お客様８",
+      "Text": "ふーう、スッキリした。うん、良い便器だったな。"
+    }
+  },
+
+  "eee_post_yotogi_wall_0052_Branch": {
+    "ID": "eee_post_yotogi_wall_0052_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_wall_0060_M_[=PType]"
+  },
+
+  "eee_post_yotogi_wall_0061": {
+    "ID": "eee_post_yotogi_wall_0061",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0062",
+    "TalkData": {
+      "SpeakerName": "お客様８",
+      "Text": "何言ってるんだよお前？休憩なんていらないだろ。ちゃんと肉便器しろよ。"
+    }
+  },
+
+  "eee_post_yotogi_wall_0062": {
+    "ID": "eee_post_yotogi_wall_0062",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "eee_post_yotogi_wall_0063",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "eee_post_yotogi_wall_0063": {
+    "ID": "eee_post_yotogi_wall_0063",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "0",
+    "NextStepID": "eee_post_yotogi_wall_0064"
+  },
+
+  "eee_post_yotogi_wall_0064": {
+    "ID": "eee_post_yotogi_wall_0064",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_wall_0065",
+    "GroupFormat": [
+      {
+        "GroupIndex": 4,
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 19
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0065": {
+    "ID": "eee_post_yotogi_wall_0065",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_0066",
+    "GroupData": [
+      {
+        "ArrayPosition": 4,
+        "ScriptFile": "sex_kousoku_sex.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "-2.0, 0.0, 0",
+          "RotString": "0.0, 1, 0.0, 0.0"
+        }
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0066": {
+    "ID": "eee_post_yotogi_wall_0066",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_0067",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 6,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "6.97, -1.34, 8.53",
+          "RotString": "0.000, -0.992, 0.000, 0.123"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0067": {
+    "ID": "eee_post_yotogi_wall_0067",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0068",
+    "TalkData": {
+      "SpeakerName": "お客様１２",
+      "Text": "ふっ…この尻、犯される為に存在だな…オラッ！"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "eee_post_yotogi_wall_0068": {
+    "ID": "eee_post_yotogi_wall_0068",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_0069_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 4,
+        "ScriptFile": "sex_kousoku_sex.ks",
+        "ScriptLabel": "*挿入",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0069_Branch": {
+    "ID": "eee_post_yotogi_wall_0069_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_wall_0070_M_[=PType]"
+  },
+
+  "eee_post_yotogi_wall_0071": {
+    "ID": "eee_post_yotogi_wall_0071",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_0072",
+    "GroupData": [
+      {
+        "ArrayPosition": 4,
+        "ScriptFile": "sex_kousoku_sex.ks",
+        "ScriptLabel": "*激しさ２尻叩き",
+        "SexPosID": 1,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0072": {
+    "ID": "eee_post_yotogi_wall_0072",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0073_Branch",
+    "TalkData": {
+      "SpeakerName": "お客様１２",
+      "Text": "おいおいおい、肉便器のくせに、断る権利があると思うのか！"
+    }
+  },
+
+  "eee_post_yotogi_wall_0073_Branch": {
+    "ID": "eee_post_yotogi_wall_0073_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_wall_0080_T_[=PType]"
+  },
+
+  "eee_post_yotogi_wall_0081": {
+    "ID": "eee_post_yotogi_wall_0081",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0082_Branch",
+    "TalkData": {
+      "SpeakerName": "お客様１２",
+      "Text": "なーんだ？愉しんでるじゃねぇか。マンコは今めっちゃ喜んでいるよ！"
+    }
+  },
+
+  "eee_post_yotogi_wall_0082_Branch": {
+    "ID": "eee_post_yotogi_wall_0082_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_wall_0090_M_[=PType]"
+  },
+
+  "eee_post_yotogi_wall_0091": {
+    "ID": "eee_post_yotogi_wall_0091",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_0092",
+    "GroupData": [
+      {
+        "ArrayPosition": 4,
+        "ScriptFile": "sex_kousoku_sex.ks",
+        "ScriptLabel": "*激しさ３尻叩き",
+        "SexPosID": 1,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0092": {
+    "ID": "eee_post_yotogi_wall_0092",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0093_Branch",
+    "TalkData": {
+      "SpeakerName": "お客様１２",
+      "Text": "しょうがないなぁこの便器女、こんなにきゅうきゅう絞めつけてくる！"
+    }
+  },
+
+  "eee_post_yotogi_wall_0093_Branch": {
+    "ID": "eee_post_yotogi_wall_0093_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_wall_0100_T_[=PType]"
+  },
+
+  "eee_post_yotogi_wall_0101": {
+    "ID": "eee_post_yotogi_wall_0101",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0102",
+    "TalkData": {
+      "SpeakerName": "お客様１２",
+      "Text": "オラッ！孕めッ！オラッ！"
+    }
+  },
+
+  "eee_post_yotogi_wall_0102": {
+    "ID": "eee_post_yotogi_wall_0102",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_0103",
+    "GroupData": [
+      {
+        "ArrayPosition": 4,
+        "ScriptFile": "sex_kousoku_sex.ks",
+        "ScriptLabel": "*射精中",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0103": {
+    "ID": "eee_post_yotogi_wall_0103",
+    "Type": "AddTexture",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_wall_0104_Branch",
+    "TextureData": [
+      {
+        "Type": "Semen",
+        "TargetType": "F",
+        "IndexPosition": 0,
+        "BodyTarget": [ "Vagina" ]
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0104_Branch": {
+    "ID": "eee_post_yotogi_wall_0104_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_wall_0110_M_[=PType]"
+  },
+
+  "eee_post_yotogi_wall_0111": {
+    "ID": "eee_post_yotogi_wall_0111",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0112",
+    "TalkData": {
+      "SpeakerName": "お客様１２",
+      "Text": "ふうー　無責任中出し最高ッ！　よし、飲み物を取りに行くか。"
+    }
+  },
+
+  "eee_post_yotogi_wall_0112": {
+    "ID": "eee_post_yotogi_wall_0112",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "eee_post_yotogi_wall_0113",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "eee_post_yotogi_wall_0113": {
+    "ID": "eee_post_yotogi_wall_0113",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "4",
+    "NextStepID": "eee_post_yotogi_wall_0114"
+  },
+
+  "eee_post_yotogi_wall_0114": {
+    "ID": "eee_post_yotogi_wall_0114",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_wall_0115",
+    "GroupFormat": [
+      {
+        "GroupIndex": 4,
+        "Man1": {
+          "Type": "Man",
+          "ArrayPosition": 11
+        },
+        "Maid1": {
+          "Type": "Maid",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0115": {
+    "ID": "eee_post_yotogi_wall_0115",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_0116",
+    "GroupData": [
+      {
+        "ArrayPosition": 4,
+        "ScriptFile": "sex_kousoku_sex.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "PosRot": {
+          "PosString": "-2.0, 0.0, 0",
+          "RotString": "0.0, 1, 0.0, 0.0"
+        }
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0116": {
+    "ID": "eee_post_yotogi_wall_0116",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_0117",
+    "CharaData": [
+      {
+        "Type": "M",
+        "ArrayPosition": 19,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": true,
+        "PosRot": {
+          "PosString": "8.05, -1.34, 7.92",
+          "RotString": "0.000, 0.873, 0.000, -0.488"
+        },
+        "MotionInfo": { "RandomMotion": "RandomStanding" }
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0117": {
+    "ID": "eee_post_yotogi_wall_0117",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0118",
+    "TalkData": {
+      "SpeakerName": "お客様１３",
+      "Text": "この便器はまだ使ったことないんだ！　よっこらしょっと！"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "eee_post_yotogi_wall_0118": {
+    "ID": "eee_post_yotogi_wall_0118",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_0119_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 4,
+        "ScriptFile": "sex_kousoku_sex.ks",
+        "ScriptLabel": "*挿入",
+        "SexPosID": 1,
+        "WaitLoad": true,
+        "BlockInputUntilMotionChange": true
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0119_Branch": {
+    "ID": "eee_post_yotogi_wall_0119_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "eee_post_yotogi_wall_0120_T_[=PType]"
+  },
+
+  "eee_post_yotogi_wall_0121": {
+    "ID": "eee_post_yotogi_wall_0121",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "eee_post_yotogi_wall_0121a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-2.43, 2.00, 1.57",
+        "TargetPosString": "-1.48, 1.24, -0.26",
+        "AroundAngleString": "152.45, 20.23",
+        "Distance": 2.2
+      }
+    }
+  },
+
+  "eee_post_yotogi_wall_0121a": {
+    "ID": "eee_post_yotogi_wall_0121a",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "eee_post_yotogi_wall_0122",
+    "GroupData": [
+      {
+        "ArrayPosition": 4,
+        "ScriptFile": "sex_kousoku_sex.ks",
+        "ScriptLabel": "*激しさ２",
+        "SexPosID": 1,
+        "WaitLoad": true
+      }
+    ]
+  },
+
+  "eee_post_yotogi_wall_0122": {
+    "ID": "eee_post_yotogi_wall_0122",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0123",
+    "TalkData": {
+      "SpeakerName": "お客様１３",
+      "Text": "お！マン圧すげぇー　あ、そっちのマンコはどう？"
+    }
+  },
+
+  "eee_post_yotogi_wall_0123": {
+    "ID": "eee_post_yotogi_wall_0123",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0124",
+    "TalkData": {
+      "SpeakerName": "お客様１４",
+      "Text": "もう満タンになったなこの便器、でもヌルヌルで入れやすい！　ちなみに何発出した？"
+    }
+  },
+
+  "eee_post_yotogi_wall_0124": {
+    "ID": "eee_post_yotogi_wall_0124",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0125",
+    "TalkData": {
+      "SpeakerName": "お客様１３",
+      "Text": "数えてないよ。　はははあ、君はそれ数えてるのかい？"
+    }
+  },
+
+  "eee_post_yotogi_wall_0125": {
+    "ID": "eee_post_yotogi_wall_0125",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0126",
+    "TalkData": {
+      "SpeakerName": "お客様１４",
+      "Text": "ああ、今８発かな？　家帰るまで金玉の中身全部出す決めた。　あ、待って、もし妻が今日欲しいならどうする…"
+    }
+  },
+
+  "eee_post_yotogi_wall_0126": {
+    "ID": "eee_post_yotogi_wall_0126",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0001",
+    "TalkData": {
+      "SpeakerName": "お客様１３",
+      "Text": "ははは、死ぬよそれー"
+    }
+  }
+}

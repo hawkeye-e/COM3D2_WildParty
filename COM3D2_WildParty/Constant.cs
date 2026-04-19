@@ -23,6 +23,15 @@ namespace COM3D2.WildParty.Plugin
 
         internal const string MainEventScriptFile = "AllMain.ks";
 
+        internal const string ScenarioManifestFile = "ScenarioManifest";
+        internal const string CommonManifestFile = "CommonManifest";
+
+        //The type listed in ScenarioManifest.json should reference here
+        internal static class ResourcesFileType
+        {
+            internal const string Scenario = "Scenario";
+        }
+
         internal static readonly string[] ModIconNames = {
             ModResources.ImageResources.OrgyPartyIconFileName,
             ModResources.ImageResources.HaremKingIconFileName,

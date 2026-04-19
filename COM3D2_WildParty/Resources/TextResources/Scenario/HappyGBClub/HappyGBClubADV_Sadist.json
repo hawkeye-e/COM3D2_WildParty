@@ -1,0 +1,1476 @@
+﻿{
+  "hgbc_intro_0034_M_Sadist": {
+    "ID": "hgbc_intro_0034_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_0034_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "FaceBlend": "頬３涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頬掻き"
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_0034_T_Sadist": {
+    "ID": "hgbc_intro_0034_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0040",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……私だって、興味が無いと言えば嘘になるわ……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_Y_107901.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4
+        }
+      }
+    }
+  },
+
+
+  "hgbc_intro_0044_M_Sadist": {
+    "ID": "hgbc_intro_0044_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_0044_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_0044_T_Sadist": {
+    "ID": "hgbc_intro_0044_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0050",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ええ！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP02C_107435.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_lakeside_0006_T_Sadist": {
+    "ID": "hgbc_intro_lakeside_0006_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0010",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "おはよう。",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1P_52685.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.5,
+          "EndTime": 4.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0020_T_Sadist": {
+    "ID": "hgbc_intro_cafe_0020_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えっ……？",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1P_52788.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0030_M_Sadist": {
+    "ID": "hgbc_intro_cafe_0030_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0030_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "むー",
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0030_T_Sadist": {
+    "ID": "hgbc_intro_cafe_0030_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "…………ねぇ、ご主人様？",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105713.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0050_M_Sadist": {
+    "ID": "hgbc_intro_cafe_0050_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0050_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "恥ずかしい",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0050_T_Sadist": {
+    "ID": "hgbc_intro_cafe_0050_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お待たせしたわ。",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105482.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.5
+        }
+      }
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "hgbc_intro_cafe_0052_M_Sadist": {
+    "ID": "hgbc_intro_cafe_0052_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0052_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "恥ずかしい",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0052_T_Sadist": {
+    "ID": "hgbc_intro_cafe_0052_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0053",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "…あり、がと……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105502.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0060_T_Sadist": {
+    "ID": "hgbc_intro_cafe_0060_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……わかったわ。",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105091.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.5
+        }
+      }
+    }
+  },
+
+
+  "hgbc_intro_poledancestage_0031_T_Sadist": {
+    "ID": "hgbc_intro_poledancestage_0031_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0032",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……んぅ……ご主人様……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105169.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.8
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0034_T_Sadist": {
+    "ID": "hgbc_intro_poledancestage_0034_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0035",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はうっ……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105097.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0042_T_Sadist": {
+    "ID": "hgbc_intro_poledancestage_0042_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0043_T_Sadist",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "…ご主人様、ごめんなさい……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105099.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.8,
+          "EndTime": 5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0043_T_Sadist": {
+    "ID": "hgbc_intro_poledancestage_0043_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0044_T_Sadist",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……私の身体が疼いているの……んっ、ふぅ……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_PMD_108550.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0044_T_Sadist": {
+    "ID": "hgbc_intro_poledancestage_0044_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0045",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "いやいや、謝らないで。むしろえっちな[=Name,Maid,0,CallName]は大好きだ。"
+    }
+  },
+
+  "hgbc_intro_poledancestage_0048_T_Sadist": {
+    "ID": "hgbc_intro_poledancestage_0048_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0049",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……ありがとう、行ってくるわっ！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP02C_107435.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0057_T_Sadist": {
+    "ID": "hgbc_intro_poledancestage_0057_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0058_T_Sadist",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "…私、知らない人のおちんちんに……囲まれてしまっているわ……あぁ……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55597.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0058_T_Sadist": {
+    "ID": "hgbc_intro_poledancestage_0058_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0059",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふぅぅ……汗臭くて、それに……凄く熱くて、硬いわ……私……初めて会った人のおちんちん……綺麗にするわね……ちゅ……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55598.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0071_T_Sadist": {
+    "ID": "hgbc_intro_poledancestage_0071_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0072",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ん……そんなこと、言わないでちょうだい……でも、しゃぶって欲しいのよね……仕方ないわね……あむ……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55602.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "hgbc_phase2_0017_T_Sadist": {
+    "ID": "hgbc_phase2_0017_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0018",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ、んっ……あんっ、ああっ……ダメっ、あぅっ……き、気持ちいいのっ……あっあっ……感じるっ、感じちゃう……！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55612.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0020_T_Sadist": {
+    "ID": "hgbc_phase2_0020_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いいわっ、ああっ……！　このおちんちん凄いのぉ……！　大きくて、硬くて……あああっ……！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55613.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0023_T_Sadist": {
+    "ID": "hgbc_phase2_0023_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0024",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "欲しいのっ……！　んんぅっ！　あっあっあっ……！　中に、中にちょうだいっ……あなたの精液、中に出してぇ……！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55614.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0027_T_Sadist": {
+    "ID": "hgbc_phase2_0027_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0028",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ひぃ……！　あ……あああああああああぁ～～～～～～っ！！！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55588.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0035_T_Sadist": {
+    "ID": "hgbc_phase2_0035_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0036",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んんっ……はあ、ああっ……ご主人様……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105668.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.5
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0038_T_Sadist": {
+    "ID": "hgbc_phase2_0038_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0039",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あら……そう、なのね……んん……喜んでくれると、私も……嬉しいわ……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55620.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0050_T_Sadist": {
+    "ID": "hgbc_phase2_0050_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0051_T_Sadist",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "くふっ……！　はぁ、はぁ……ああっ……上手、よ……っ……あぁんっ……！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55621.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0051_T_Sadist": {
+    "ID": "hgbc_phase2_0051_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0053",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、んんっ！　ご主人様、もっとしてっ！　私に、ご主人様とするのが一番だって……！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105660.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 7.5
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0060_T_Sadist": {
+    "ID": "hgbc_phase2_0060_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……ねえ、ご主人様。このまま、キスをしていい？",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105563.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5.5
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0070_T_Sadist": {
+    "ID": "hgbc_phase2_0070_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0071_T_Sadist",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ちゅっ……じゅるっ……はぁ、はうっ……んっ……ご主人様、ご主人様……んぅんっ……ちゅっ……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105606.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0071_T_Sadist": {
+    "ID": "hgbc_phase2_0071_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0072",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んちゅっ……じゅるっ……はぁ、はうっ……んぅんっ……んちゅっ……じゅるっ……ご主人様、ねえ。もっと……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105615.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0080_T_Sadist": {
+    "ID": "hgbc_phase2_0080_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んんっ、ああ、ダメ、外に出さないで、んんっ！　はぁ、はぁ、私の、おまんこの中に全部出してっ！　んんっ！　んくぅんっ……ご主人様、ご主人様！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105661.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0090_T_Sadist": {
+    "ID": "hgbc_phase2_0090_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0091_T_Sadist",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ、あああああああああああああああっ！！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105662.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0091_T_Sadist": {
+    "ID": "hgbc_phase2_0091_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0092",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……ふふ、私がお願いしたとおりに、いっぱいおまんこにご主人様の精液、出してくれたのね……ありがと。",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105664.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0100_T_Sadist": {
+    "ID": "hgbc_phase2_0100_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "きゃっ！？",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105001.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.7
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0120_T_Sadist": {
+    "ID": "hgbc_phase2_0120_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……はぁはぁ……どうぞ……私の事、好きにしたいんでしょ……？",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1P_52714.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0130_T_Sadist": {
+    "ID": "hgbc_phase2_0130_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0131",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んんっ……ふあぁぁ……おちんちん入ってきたっ……！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55606.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0140_T_Sadist": {
+    "ID": "hgbc_phase2_0140_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0141",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "フッ、そうね……私は出来た妻だから……んぢゅっ、夫をもっと喜ばせてあげるのっ！　ほらっ、ぢゅぷちゅ、舌だってこんなに絡めてっ……！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_PMD_108208.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0150_T_Sadist": {
+    "ID": "hgbc_phase2_0150_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ……はぁ……だってぇ……んん……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55607.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0160_T_Sadist": {
+    "ID": "hgbc_phase2_0160_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0161",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んぐぅぅん！　うそっ、そんなところまで届くのっ？　んぁあっ、深いっ！　奥にズンズンって、響いてぇぇっ！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_PMD_108303.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0170_T_Sadist": {
+    "ID": "hgbc_phase2_0170_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ、貴方ぁっ……！　ひあぁっ！　ああっ！　ああっ！　は、激しいっ！　後ろから、おちんちんがっ……ずんずんって……！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55542.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0180_T_Sadist": {
+    "ID": "hgbc_phase2_0180_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0180a_T_Sadist",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、ああ、んぅ、分かったわ！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP02C_107168.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0180a_T_Sadist": {
+    "ID": "hgbc_phase2_0180a_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "感じられるように、ちゃんと締めつけるわ！　はぁ、んっ、くぅうう、あっ、ああ！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP02C_107168.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5.3
+        }
+      }
+    }
+  },
+
+
+  "hgbc_phase2_0190_T_Sadist": {
+    "ID": "hgbc_phase2_0190_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0191",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ええっ、んっ、私も、イクからっ！　貴方も、私の、膣内にっ、出して、いいのよっ！　あっ、ぁああっ！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105264.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0200_T_Sadist": {
+    "ID": "hgbc_phase2_0200_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0201",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んんんっ……！　ふああああぁぁ～～～～～～っ！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55624.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "hgbc_phase3_0010_T_Sadist": {
+    "ID": "hgbc_phase3_0010_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ほら、ここまで私の体を火照らせておいて……んむっ、まさか一回出しただけで終わり？　そんなの、ありえないわよね？",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_PMD_108426.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0020_T_Sadist": {
+    "ID": "hgbc_phase3_0020_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んひゅううっ！　はあっ、そうよっ、んんっ、私のこと、あぁっ、壊れるくらい愛してっ！　んぁあっ、もう私も、イクからぁっ……！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_PMD_108427.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0030_T_Sadist": {
+    "ID": "hgbc_phase3_0030_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0032_M_Sadist",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ、あぁんっ！　んっ、イ、いひぃぃっ、あぁ、そ、そこされたら、イっちゃうっ！　ひゃぐっ、あぁっ！　あぁ、ダメ、イクっ、あぁ、イクイクぅぅぅぅっ……！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1P_52636.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0032_M_Sadist": {
+    "ID": "hgbc_phase3_0032_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase3_0033_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "発情"
+      }
+    ]
+  },
+
+  "hgbc_phase3_0033_T_Sadist": {
+    "ID": "hgbc_phase3_0033_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0034",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ぁぁ……本当にいっぱいくれたわね……んんっ、だめ……嬉し過ぎて……もう力が入らないわ……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_PMD_108429.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0080_T_Sadist": {
+    "ID": "hgbc_phase3_0080_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ……貴方のおちんちん……欲しいって言ってるの……さっさとしなさい……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1P_52645.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0083_T_Sadist": {
+    "ID": "hgbc_phase3_0083_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0084",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あぁ、もうっ！　貴方のおちんちんを私のおまんこにいれなさいっ！　粗末なおちんちんでイってあげるから、早くしてっ！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1P_52646.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0085_T_Sadist": {
+    "ID": "hgbc_phase3_0085_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0086",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んんっ……ふあっ……やっぱり、大きいわ……くふぅ……！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55578.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0087_T_Sadist": {
+    "ID": "hgbc_phase3_0087_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0088",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁ……うぅ……ええ……んっ……気持ちいいわっ……あんっ……あっ……あっ……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55582.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0090_T_Sadist": {
+    "ID": "hgbc_phase3_0090_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はひぃっ！　んくぅっ、ひぐ、ひぃいいんっ！　ら、犯されて、イク、変態に、なっちゃうっ！　んぁああっ！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105130.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0093_T_Sadist": {
+    "ID": "hgbc_phase3_0093_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0094",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ああああぁ～～！　ダメ、ダメっ！　ひぃっ！　いいのっ！　おちんちんいいのぉっ！　ああっ！　おまんこ蕩けるぅっ！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1Kai_55586.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0010_T_Sadist": {
+    "ID": "hgbc_postyotogi_0010_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ、ああ、はぁ、ご主人様、見ていてっ、んっ、くぅう！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP02C_107169.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0020_T_Sadist": {
+    "ID": "hgbc_postyotogi_0020_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ！　あっ！　イクッ！　はぁぁぁんんっ！　あんっ、あん……うぁ……はぁ、はぁ……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105466.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 7.88
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0030_T_Sadist": {
+    "ID": "hgbc_postyotogi_0030_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ええ……はぁ、私は、淫乱なメイドだから……んぅ、ふぅ、精液を出してもらえて、そのまま、おまんこまで全部気持ちよくなったわ……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP02C_107171.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0050_T_Sadist": {
+    "ID": "hgbc_postyotogi_0050_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "偉そうに……貴方、何様のつもりなの……はぁ……まぁいいわ……相手、してあげる……♪",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1P_52606.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0060_T_Sadist": {
+    "ID": "hgbc_postyotogi_0060_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0060a_T_Sadist",
+    "TalkData": {
+      "SpeakerName": "男１８",
+      "Text": "ほら、太いチンポにマンコボコボコにされて気持ちいいんだね！"
+    }
+  },
+
+  "hgbc_postyotogi_0060a_T_Sadist": {
+    "ID": "hgbc_postyotogi_0060a_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "くぅうう、んっ、ひぐっ！　はぁ、ああ、勃起チンポが、私の中をエグって、んっ、くぅう！　まだ、マンコの中に、ザーメン、残ってるのにっ！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP02C_107303.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0070_T_Sadist": {
+    "ID": "hgbc_postyotogi_0070_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0071_T_Sadist",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ぁふっ、んっ、ぁあ！　くぅうう、私、こんなやり方で、気持ちよくなってきて、はぅっ、んぅぅ！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP02A_106356.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0071_T_Sadist": {
+    "ID": "hgbc_postyotogi_0071_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0071a",
+    "TalkData": {
+      "SpeakerName": "男１８",
+      "Text": "オラッ！イくぞ！全部マンコで飲み干せ！"
+    }
+  },
+
+  "hgbc_postyotogi_0080_T_Sadist": {
+    "ID": "hgbc_postyotogi_0080_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んぐぅううう、おおっ、あっ、あうううっ！　や、ああ、もう、これ以上は、ダメなのっ！　本当に、はらんじゃう、妊娠、するからっ！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP02C_107304.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0120_T_Sadist": {
+    "ID": "hgbc_postyotogi_0120_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……私、乱暴にされておまんこ感じて気持ちよかったから…",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105351.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2,
+          "EndTime": 8
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0140_T_Sadist": {
+    "ID": "hgbc_postyotogi_0140_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0141",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "こうして褒められてるのは複雑だけど……ご主人様のことだから、嬉しいわ。",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP01_105752.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3
+        }
+      }
+    }
+  },
+
+
+
+  "hgbc_postyotogi_0170_M_Sadist": {
+    "ID": "hgbc_postyotogi_0170_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0170_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0170_T_Sadist": {
+    "ID": "hgbc_postyotogi_0170_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そうね。ここに来てから素敵なことがたくさんあった気がするわ。",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1P_52437.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 6
+        }
+      }
+    }
+  },
+
+
+  "hgbc_postyotogi_0180_M_Sadist": {
+    "ID": "hgbc_postyotogi_0180_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0180_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "居眠り安眠",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち腕を組む"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0180_T_Sadist": {
+    "ID": "hgbc_postyotogi_0180_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ええ、まるで夢のような時間だったわ。",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1P_54003.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "hgbc_postyotogi_0190_M_Sadist": {
+    "ID": "hgbc_postyotogi_0190_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0190_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "苦笑い",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち考える"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0190_T_Sadist": {
+    "ID": "hgbc_postyotogi_0190_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0191",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "楽しい時間ってすぐに過ぎてしまうわよね……",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1P_52767.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.5
+        }
+      }
+    }
+  },
+
+
+  "hgbc_postyotogi_0200_M_Sadist": {
+    "ID": "hgbc_postyotogi_0200_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0200_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "ドヤ顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち胸を叩く"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0200_T_Sadist": {
+    "ID": "hgbc_postyotogi_0200_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0201",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ええ……任せなさい！",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_GP02C_107456.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2
+        }
+      }
+    }
+  },
+
+
+  "hgbc_postyotogi_0210_M_Sadist": {
+    "ID": "hgbc_postyotogi_0210_M_Sadist",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0210_T_Sadist",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0210_T_Sadist": {
+    "ID": "hgbc_postyotogi_0210_T_Sadist",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0211",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ええ。それじゃ帰りましょうか。",
+      "VoiceData": {
+        "Sadist": {
+          "VoiceFile": "S6_X1P_52775.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  }
+}

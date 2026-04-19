@@ -1,0 +1,150 @@
+﻿{
+  "luvtrv0001": {
+    "ID": "luvtrv0001",
+    "Type": "BG",
+    "Tag": "",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv0001_init_chara"
+  },
+
+  "luvtrv0001_init_chara": {
+    "ID": "luvtrv0001_init_chara",
+    "Type": "CharaInit",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv0001_init_shuffle",
+    "CharaInitData": {
+      "IsClubOwnerADVMainCharacter": true,
+      "ManRequired": 0,
+      "ValidManType": [
+        {
+          "Type": [ "YoungMan" ],
+          "Count": 0
+        }
+      ]
+    }
+  },
+
+  "luvtrv0001_init_shuffle": {
+    "ID": "luvtrv0001_init_shuffle",
+    "Type": "Shuffle",
+    "ShuffleData": {
+      "TargetList": "F_ALL",
+      "KeepPosition": [ 0 ]
+    },
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv0001_init_hide_men"
+  },
+
+  "luvtrv0001_init_hide_men": {
+    "ID": "luvtrv0001_init_hide_men",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "luvtrv_intro_0001",
+    "CharaData": [
+      {
+        "Type": "M_ALL",
+        "Visible": false
+      }
+    ]
+  },
+
+  "luvtrv_intro_0001": {
+    "ID": "luvtrv_intro_0001",
+    "Type": "BGM",
+    "Tag": "BGM015.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_intro_0002"
+  },
+
+  "luvtrv_intro_0002": {
+    "ID": "luvtrv_intro_0002",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "luvtrv_intro_0003",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組"
+        },
+        "PosRot": {
+          "PosString": "0.0, 0.5, -3.4",
+          "RotString": "0.0, 0.0, 0.0, 1.0"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": false,
+        "PosRot": {
+          "PosString": "0, 0, 0",
+          "RotString": "0, 0, 0, 1"
+        }
+      }
+
+    ]
+  },
+
+  "luvtrv_intro_0003": {
+    "ID": "luvtrv_intro_0003",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_intro_0004",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "0,1.6,0.9",
+        "TargetPosString": "-0.1,1.5,-0.1",
+        "AroundAngleString": "-179.6,5.3",
+        "Distance": 1
+      }
+    }
+  },
+
+  "luvtrv_intro_0004": {
+    "ID": "luvtrv_intro_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_yotogiplay_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（メイドたちの努力のおかげで、[=ClubName]はどんどん有名になっています。今では、様々なお客様から色んなイベントの開催を依頼されることが多くなりました。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+
+  "luvtrv_intro_yotogiplay_closepanel": {
+    "ID": "luvtrv_intro_yotogiplay_closepanel",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_start_yotogiplay"
+  },
+
+  "luvtrv_start_yotogiplay": {
+    "ID": "luvtrv_start_yotogiplay",
+    "Type": "LoadYotogi",
+    "Tag": "SceneYotogi",
+    "WaitingType": "LoadScene",
+    "YotogiSetup": {
+      "YotogiCode": "LoveLoveTravel",
+      "Phase": 1,
+      "IsKeepCharacterVisibleAfterYotogi": false
+    },
+    "NextStepID": "luvtrv_postyotogi_init"
+  }
+
+
+
+}

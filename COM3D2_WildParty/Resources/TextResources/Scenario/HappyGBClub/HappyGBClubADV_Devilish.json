@@ -1,0 +1,1459 @@
+﻿{
+  "hgbc_intro_0034_M_Devilish": {
+    "ID": "hgbc_intro_0034_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_0034_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "発情",
+        "FaceBlend": "頬３涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頬掻き"
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_0034_T_Devilish": {
+    "ID": "hgbc_intro_0034_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0040",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……あの、ええと……私も少しだけ興味があるかなー、なんて……あはは……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_Y_13290.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.5
+        }
+      }
+    }
+  },
+
+
+  "hgbc_intro_0044_M_Devilish": {
+    "ID": "hgbc_intro_0044_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_0044_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_0044_T_Devilish": {
+    "ID": "hgbc_intro_0044_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_0050",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はい！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_07764.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_lakeside_0006_T_Devilish": {
+    "ID": "hgbc_intro_lakeside_0006_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0010",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "おはようございます。",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X01_55423.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0020_T_Devilish": {
+    "ID": "hgbc_intro_cafe_0020_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えっ……？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X01_54795.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0030_M_Devilish": {
+    "ID": "hgbc_intro_cafe_0030_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0030_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "むー",
+        "EyeSight": {
+          "Type": "ToCamera",
+          "EyeToCameraSetting": {
+            "MoveType": "LookAt"
+          }
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0030_T_Devilish": {
+    "ID": "hgbc_intro_cafe_0030_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……むぅ！　ご主人様……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09803.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0050_M_Devilish": {
+    "ID": "hgbc_intro_cafe_0050_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0050_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "恥ずかしい",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0050_T_Devilish": {
+    "ID": "hgbc_intro_cafe_0050_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お待たせしました。",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_PMD_14059.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1,
+          "EndTime": 2.5
+        }
+      }
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "hgbc_intro_cafe_0052_M_Devilish": {
+    "ID": "hgbc_intro_cafe_0052_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_intro_cafe_0052_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "恥ずかしい",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頬掻き"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "NPCMale",
+            "ArrayPosition": 0
+          }
+        }
+      }
+    ]
+  },
+
+  "hgbc_intro_cafe_0052_T_Devilish": {
+    "ID": "hgbc_intro_cafe_0052_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0053",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ありがとうございます……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09459.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 10,
+          "EndTime": 12.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_cafe_0060_T_Devilish": {
+    "ID": "hgbc_intro_cafe_0060_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はい。",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09586.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        }
+      }
+    }
+  },
+
+
+  "hgbc_intro_poledancestage_0031_T_Devilish": {
+    "ID": "hgbc_intro_poledancestage_0031_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0032",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁっ……はーっ……ああ、ご主人様っ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_BUA_11827.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 6
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0034_T_Devilish": {
+    "ID": "hgbc_intro_poledancestage_0034_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0035",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ……はぁ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57621.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0042_T_Devilish": {
+    "ID": "hgbc_intro_poledancestage_0042_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0043_T_Devilish",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ご主人様……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09733.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 7,
+          "EndTime": 9.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0043_T_Devilish": {
+    "ID": "hgbc_intro_poledancestage_0043_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0044_T_Devilish",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……もう私……我慢できなくなっちゃいました……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_PMD_14289.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0044_T_Devilish": {
+    "ID": "hgbc_intro_poledancestage_0044_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0045",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "我慢しなくていいよ。えっちな[=Name,Maid,0,CallName]は大好きだ。"
+    }
+  },
+
+  "hgbc_intro_poledancestage_0048_T_Devilish": {
+    "ID": "hgbc_intro_poledancestage_0048_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0049",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はい……ありがとうございます！　それじゃあ、行ってきますね！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP02C_12801.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0057_T_Devilish": {
+    "ID": "hgbc_intro_poledancestage_0057_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0058_T_Devilish",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "…あたし、知らない人のおちんちんに……囲まれてしまっています……あぁ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57792.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.5
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0058_T_Devilish": {
+    "ID": "hgbc_intro_poledancestage_0058_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0059",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あぅぅ……汗臭くて、それに……凄く熱くて、硬い……あたし……初めて会った人のおちんちん……綺麗にしますね……ちゅ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57793.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_intro_poledancestage_0071_T_Devilish": {
+    "ID": "hgbc_intro_poledancestage_0071_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_poledancestage_0072",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ん……そんなこと、言わないで下さいよぉ……でも、しゃぶって欲しいんですよね……仕方ないです……あむ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57797.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "hgbc_phase2_0017_T_Devilish": {
+    "ID": "hgbc_phase2_0017_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0018",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ、んっ……あんっ、ああっ……ダメっ、あぅっ……き、気持ちいいっ……あっあっ……感じるっ、感じちゃうっ……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57807.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0020_T_Devilish": {
+    "ID": "hgbc_phase2_0020_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いいですっ、ああっ……！　このおちんちん凄いですぅっ……！　おっきくて、硬くて……あああっ……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57808.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0023_T_Devilish": {
+    "ID": "hgbc_phase2_0023_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0024",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "欲しいですっ……！　んんぅっ！　あっあっあっ……！　中に、中にくださいっ……あなたの精液、中に出してぇ……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57809.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0027_T_Devilish": {
+    "ID": "hgbc_phase2_0027_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0028",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ひぃ……！　あ……あああああああああぁ～～～～～～っ！！！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57783.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0035_T_Devilish": {
+    "ID": "hgbc_phase2_0035_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0036",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ご主人様……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09733.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 7,
+          "EndTime": 9.5
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0038_T_Devilish": {
+    "ID": "hgbc_phase2_0038_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0039",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あふ……そう、なんだぁ……んん……喜んでもらえたらぁ、あたしも……嬉しいです……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57815.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0050_T_Devilish": {
+    "ID": "hgbc_phase2_0050_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0051_T_Devilish",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "くふっ……！　はぁ、はぁ……ああっ……上手、です……っ……あぁんっ……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57816.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0051_T_Devilish": {
+    "ID": "hgbc_phase2_0051_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0053",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ぁ、はぁっ……んぅ……ご主人様、気持ちいいですかっ、んぁ、はぁっ……私はすごく気持ちいいですよっ……んく、ひぁ……はぁ……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP02B_12265.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0060_T_Devilish": {
+    "ID": "hgbc_phase2_0060_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ねえ、ご主人様。キスして貰えますか？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09596.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5.5
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0070_T_Devilish": {
+    "ID": "hgbc_phase2_0070_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0071_T_Devilish",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ちゅっ……じゅるっ……はぁ、はうっ……んっ……ご主人様ぁ、ご主人様ぁぁ……んぅんっ……ちゅっ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09638.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0071_T_Devilish": {
+    "ID": "hgbc_phase2_0071_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0072",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んちゅっ……じゅるっ……はぁ、はうっ……んぅんっ……んちゅっ……じゅるっ……ご主人様、ご主人様ぁ……んぅ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09647.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0080_T_Devilish": {
+    "ID": "hgbc_phase2_0080_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んんっ！　ご主人様っ、私の、中に出してっ！　おまんこの中に、ご主人様のを沢山注いでっ！　んっ、はぁ、はひっ、ご主人様、ご主人様ぁっ！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09692.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0090_T_Devilish": {
+    "ID": "hgbc_phase2_0090_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0091_T_Devilish",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ、あああああああああああああああっ！！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09693.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0091_T_Devilish": {
+    "ID": "hgbc_phase2_0091_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0092",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁっ……んんっ……ご主人様の精液、私だけのものにしちゃいました……♪",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09810.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0100_T_Devilish": {
+    "ID": "hgbc_phase2_0100_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "きゃっ……！？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP02B_12374.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.6
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0120_T_Devilish": {
+    "ID": "hgbc_phase2_0120_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ……私のこと、好きにしていいですよ……？　ほら……楽しませてくださいね……？",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X01_55452.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0130_T_Devilish": {
+    "ID": "hgbc_phase2_0130_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0131",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んんっ……ふあぁぁ……おちんちん入ってくるぅっ……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57801.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0140_T_Devilish": {
+    "ID": "hgbc_phase2_0140_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0141",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あはっ、ですよね……私って、出来た妻なんですよっ！　ぢゅっ、ほら、夫をもっと喜ばせてあげたいんで……キス、もっとしてくださいっ……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_PMD_13947.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0150_T_Devilish": {
+    "ID": "hgbc_phase2_0150_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ……はぁ……だってぇ……んん……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57802.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0160_T_Devilish": {
+    "ID": "hgbc_phase2_0160_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0161",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ひぁああん！　大きいのが、あぁっ、深いとこまでぇっ！　はぐっ、んぅっ、奥っ、そんな何度も突かれたらぁっ……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_PMD_14042.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0170_T_Devilish": {
+    "ID": "hgbc_phase2_0170_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ、あなたぁっ……！　ひあぁっ！　ああっ！　ああっ！　は、激しいっ！　後ろから、おちんちんがっ……ずんずんってぇ……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57737.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0180_T_Devilish": {
+    "ID": "hgbc_phase2_0180_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はう、んんぁっ、はぁっ、わかり、ましたっ、んんく、おちんちん、きちんとご奉仕しますっ、ひゃう、んんぁ、はぁっ、んんぅう！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP02C_12532.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "hgbc_phase2_0190_T_Devilish": {
+    "ID": "hgbc_phase2_0190_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0191",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "せいし、ぁ、はぁっ！　膣内にいっぱいっ、ちょうだいぃっ、あぁあああっ！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_A_09002.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.2
+        }
+      }
+    }
+  },
+
+  "hgbc_phase2_0200_T_Devilish": {
+    "ID": "hgbc_phase2_0200_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0201",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んんんっ……！　ふああああぁぁ～～～～～～っ！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57819.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "hgbc_phase3_0010_T_Devilish": {
+    "ID": "hgbc_phase3_0010_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……んんっ、また精液、欲しくなっちゃってるみたいなんですけどぉ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_PMD_14165.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6.4
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0020_T_Devilish": {
+    "ID": "hgbc_phase3_0020_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふぁっ、ひぃんっ！　あぁああっ、そうですっ、これぇっ！　おっきいのでパンパンされると、ふぁあっ、またすぐイっちゃううっ！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_PMD_14166.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0030_T_Devilish": {
+    "ID": "hgbc_phase3_0030_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0032_M_Devilish",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んぁああっ、ほんとですかっ！　ならイキますっ！　んんぅっ、いっぱいイって、いっぱい出してもらうんですううううっ！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_PMD_14167.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0032_M_Devilish": {
+    "ID": "hgbc_phase3_0032_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "hgbc_phase3_0033_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "発情"
+      }
+    ]
+  },
+
+  "hgbc_phase3_0033_T_Devilish": {
+    "ID": "hgbc_phase3_0033_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0034",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んぅぅ……くひっ……あぃがろぉ……ございますぅ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_PMD_14168.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 7.6
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0080_T_Devilish": {
+    "ID": "hgbc_phase3_0080_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "おちんちん……おちんちん欲しいですぅ……はあ、はああっ……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X01_55383.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0083_T_Devilish": {
+    "ID": "hgbc_phase3_0083_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0084",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "貴方のおちんちんをっ……私のおまんこにぃ……♪　おちんちんでイキたい……おちんちんでイキたいですぅっ……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X01_55384.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0085_T_Devilish": {
+    "ID": "hgbc_phase3_0085_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0086",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んんっ……ふあっ……やっぱり、大きいです……くふぅ……！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57773.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0087_T_Devilish": {
+    "ID": "hgbc_phase3_0087_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0088",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁ……うぅ……はい……んっ……気持ちいいですっ……あんっ……あっ……あっ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57777.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0090_T_Devilish": {
+    "ID": "hgbc_phase3_0090_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はひぃっ！　んくぅっ、ひぐ、ひぃううっ！　はぁ、はぁ、本物のっ、ヘンタイに、なっちゃいます、んぁああっ！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09488.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_phase3_0093_T_Devilish": {
+    "ID": "hgbc_phase3_0093_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0094",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あああぁ～～！　ダメダメぇ！　ひぃっ！　いいですっ！　おちんちんいいのぉ！　ああっ！　おまんこ蕩けるぅっ！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X1Kai_57781.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0010_T_Devilish": {
+    "ID": "hgbc_postyotogi_0010_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁっ……んんぁ、はぁっ、イきますっ、ご主人様っ……はぁ、んんく……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP02C_12533.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5.7
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0020_T_Devilish": {
+    "ID": "hgbc_postyotogi_0020_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いっ、く、ぅ、んんぅううううっ！！　はっ、はぁ……ぁあ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09204.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 7.3
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0030_T_Devilish": {
+    "ID": "hgbc_postyotogi_0030_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ん、はぁ……私、淫乱メイド、なんですかぁ……？　はぁ……んん、精液いっぱい出されて、おまんこ気持ちよくて……よく分かりません……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP02C_12535.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0050_T_Devilish": {
+    "ID": "hgbc_postyotogi_0050_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んんっ……いいですよ……？　今日だけは……オナホール扱いでも……嬉しいかも……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X01_55344.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0060_T_Devilish": {
+    "ID": "hgbc_postyotogi_0060_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0060a_T_Devilish",
+    "TalkData": {
+      "SpeakerName": "男１８",
+      "Text": "今度はケツだ！ほら、太いチンポにケツマンコボコボコにされて気持ちいいんだね！"
+    }
+  },
+
+  "hgbc_postyotogi_0060a_T_Devilish": {
+    "ID": "hgbc_postyotogi_0060a_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "っふひぅぅぅ！？　待って、はぐっ、んはぁあ！　もう、イきましたからっ！　けつまんこにザーメン注がれて、イきましたからぁっ！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP02C_12670.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0070_T_Devilish": {
+    "ID": "hgbc_postyotogi_0070_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0071_T_Devilish",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ぁふっ、んっ、ぁあ！　奥まで、深くに……はぅっ、んぅぅ！　ぁっ、そんなとこ、ダメですってばぁっ、んひゃぁっ！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_BUA_11744.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0071_T_Devilish": {
+    "ID": "hgbc_postyotogi_0071_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0071a",
+    "TalkData": {
+      "SpeakerName": "男１８",
+      "Text": "オラッ！イくぞ！全部ケツで飲み干せ！"
+    }
+  },
+
+  "hgbc_postyotogi_0080_T_Devilish": {
+    "ID": "hgbc_postyotogi_0080_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "太すぎてっ、はぐっ、んぁあ！　けつまんこっ、ザーメン溢れて、止まんなくっ、んふぅうぅ！",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP02C_12671.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0120_T_Devilish": {
+    "ID": "hgbc_postyotogi_0120_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……気持ちよかったです……♪　はぁっ……乱暴にされてるのに、どこか優しくて……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_A_09089.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.1,
+          "EndTime": 8.5
+        }
+      }
+    }
+  },
+
+  "hgbc_postyotogi_0140_T_Devilish": {
+    "ID": "hgbc_postyotogi_0140_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0141",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁっ……えへへ、ご主人様はすごいでしょう……？　幸せにしてくれるんですよ……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_GP01_09796.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+
+  "hgbc_postyotogi_0170_M_Devilish": {
+    "ID": "hgbc_postyotogi_0170_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0170_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0170_T_Devilish": {
+    "ID": "hgbc_postyotogi_0170_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はい……また素敵な思い出が増えちゃいました。",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X01_55192.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.5
+        }
+      }
+    }
+  },
+
+
+  "hgbc_postyotogi_0180_M_Devilish": {
+    "ID": "hgbc_postyotogi_0180_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0180_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "居眠り安眠",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち腕を組む"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0180_T_Devilish": {
+    "ID": "hgbc_postyotogi_0180_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ……なんだか未だに信じられません。",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X01_55024.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "hgbc_postyotogi_0190_M_Devilish": {
+    "ID": "hgbc_postyotogi_0190_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0190_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "苦笑い",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち考える"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0190_T_Devilish": {
+    "ID": "hgbc_postyotogi_0190_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0191",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "どうして楽しい時間ってすぐに過ぎちゃうんでしょうね……",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X01_54774.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6.5
+        }
+      }
+    }
+  },
+
+
+  "hgbc_postyotogi_0200_M_Devilish": {
+    "ID": "hgbc_postyotogi_0200_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0200_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "ドヤ顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち胸を叩く"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0200_T_Devilish": {
+    "ID": "hgbc_postyotogi_0200_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0201",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、じゃあ任せてください。",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X01_55111.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.5
+        }
+      }
+    }
+  },
+
+
+  "hgbc_postyotogi_0210_M_Devilish": {
+    "ID": "hgbc_postyotogi_0210_M_Devilish",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "hgbc_postyotogi_0210_T_Devilish",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        }
+      }
+    ]
+  },
+
+  "hgbc_postyotogi_0210_T_Devilish": {
+    "ID": "hgbc_postyotogi_0210_T_Devilish",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0211",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はい。じゃあ帰りましょっか。",
+      "VoiceData": {
+        "Devilish": {
+          "VoiceFile": "H4_X01_54782.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  }
+}

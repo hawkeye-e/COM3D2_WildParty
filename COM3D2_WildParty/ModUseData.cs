@@ -73,8 +73,16 @@ namespace COM3D2.WildParty.Plugin
         //Key: texture type
         public static Dictionary<string, List<BodyWritingTextureInfo>> BodyWritingTextureList;
 
+        public static List<ScenarioManifest> ScenarioManifestList;
+
         public ModUseData()
         {
+        }
+
+        //Read the necessary data from the declared manifest file
+        public static void InitFromManifest()
+        {
+            ScenarioManifestList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ScenarioManifest>>(ResourceLoader.LoadCompressedFile(Constant.ScenarioManifestFile));
         }
 
         //Read all the necessary data from resources files

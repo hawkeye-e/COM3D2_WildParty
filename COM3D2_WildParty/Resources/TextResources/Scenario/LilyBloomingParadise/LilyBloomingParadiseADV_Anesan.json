@@ -1,0 +1,1258 @@
+﻿{
+  "lbp_intro_0030_T_Anesan": {
+    "ID": "lbp_intro_0030_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……んふぅ、んんっ……あなたの手でなら、お姉ちゃんどこを触られても嬉しいよ　……いっぱい、触ってね……？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP02C_106821.ogg",
+          "IsChoppingAudio": false,
+          "Volume": 0.3
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0020_T_Anesan": {
+    "ID": "lbp_hotel_0020_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はい、お姉ちゃん特製デザートだよ。食べて食べてっ！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP02C_106967.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0030_M_Anesan": {
+    "ID": "lbp_hotel_0030_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0030_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "びっくり"
+      }
+    ]
+  },
+
+  "lbp_hotel_0030_T_Anesan": {
+    "ID": "lbp_hotel_0030_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0031_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "おいしいよね～",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP02_105912.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.4,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+
+  "lbp_hotel_0040_M_Anesan": {
+    "ID": "lbp_hotel_0040_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0040_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで手を合わせるL"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0040_T_Anesan": {
+    "ID": "lbp_hotel_0040_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0041_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "本当？　練習しといてよかった～！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_order_52030.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0050_M_Anesan": {
+    "ID": "lbp_hotel_0050_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0050_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで照れる"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0050_T_Anesan": {
+    "ID": "lbp_hotel_0050_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0051_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "スキンケア用品がいっぱいだねぇ……いいなぁ、お姉ちゃんが欲しいのがたくさんあるよ～",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP02_106081.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 8
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0060_M_Anesan": {
+    "ID": "lbp_hotel_0060_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0060_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで手を合わせるL"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0060_T_Anesan": {
+    "ID": "lbp_hotel_0060_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0061_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "じゃあ、まずはどれから使ってみる？　あなたの好きなの選んじゃって良いよ。",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_X1P_53670.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0070_M_Anesan": {
+    "ID": "lbp_hotel_0070_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0070_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "lbp_hotel_0070_T_Anesan": {
+    "ID": "lbp_hotel_0070_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "じ～っと見てたら可愛く見えないかな？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_ANECH_57100.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0080_M_Anesan": {
+    "ID": "lbp_hotel_0080_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0080_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで手を合わせるL"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0080_T_Anesan": {
+    "ID": "lbp_hotel_0080_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ、お姉ちゃんも一番それ気になってたの。",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_X1P_53671.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3.5
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0090_M_Anesan": {
+    "ID": "lbp_hotel_0090_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0090_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        },
+        "SmoothMovement": { "Time": 2 },
+        "PosRot": {
+          "PosString": "2.78, 0.00, -5.51",
+          "RotString": "0, 1, 0 ,0"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0090_T_Anesan": {
+    "ID": "lbp_hotel_0090_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0091_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お姉ちゃん達も……その……しちゃう……？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP02C_106703.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0100_M_Anesan": {
+    "ID": "lbp_hotel_0100_M_Anesan",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0100_T_Anesan",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaC_001.ks",
+          "ScriptLabel": "*会話座り喜ぶ"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0100_T_Anesan": {
+    "ID": "lbp_hotel_0100_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うん。じゃあ行こっか。",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_X1P_54159.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0010_T_Anesan": {
+    "ID": "lbp_bedroom_0010_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ちゅぅ……ちゅむ、んんっ……ちろ、ちる……んちゅっ……ちゅむっ……はぅ……んちゅ、ちゅくっ……ぴちゅ……ちゅむ、ぺろ……",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_X1P_53569.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0020_T_Anesan": {
+    "ID": "lbp_bedroom_0020_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふぁっ、あっ……んっ、んんっ……！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_order_52041.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0030_T_Anesan": {
+    "ID": "lbp_bedroom_0030_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0031_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お姉ちゃんは……あなたともっとエッチしたいな。あなたのことが大好きだから、いっぱいしたい。",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_Y_107269.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 10.5
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0040_T_Anesan": {
+    "ID": "lbp_bedroom_0040_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0041_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そ、そんなにお姉ちゃんと……したいの……？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_X1P_54024.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0050_T_Anesan": {
+    "ID": "lbp_bedroom_0050_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お姉ちゃんは、もっとあなたと仲良くなりたいの……それに……あなたと一緒に気持ち良くなりたいからね♪",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_Y_107356.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0060_T_Anesan": {
+    "ID": "lbp_bedroom_0060_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "なんか、頭がフワフワしてきちゃったよぉ……女の子同士だと、こういうのも全部違うのかなぁ……どう思う……？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_Y_107343.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0070_T_Anesan": {
+    "ID": "lbp_bedroom_0070_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んぅ……ふああ……お姉ちゃんのこんなに幸せそうな顔……もしもご主人様が聞いちゃったら……どんな気持ちになるのかなぁ……♪",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_PMD_107566.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0080_T_Anesan": {
+    "ID": "lbp_bedroom_0080_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0081_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "とっても可愛かったよ～女の子同士って言うのも、中々悪くないでしょ？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_Y_107275.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.5
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0090_T_Anesan": {
+    "ID": "lbp_bedroom_0090_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ご主人様よりも……優しくて……んっ、暖かくて……",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_PMD_107576.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5.2
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0100_T_Anesan": {
+    "ID": "lbp_bedroom_0100_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0101_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えへへっ、そういうって事は、これからもお姉ちゃんといっぱいエッチしてくれるって事で良いんだよね？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_Y_107276.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0110_T_Anesan": {
+    "ID": "lbp_bedroom_0110_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0111_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ……触られたところから……熱くなってる気がするの……",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_PMD_107575.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.5
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0120_T_Anesan": {
+    "ID": "lbp_bedroom_0120_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0121_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えへへ……そういうことだったらさぁ、次は指じゃなくて、違うところでしてあげよっか？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_Y_107260.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "lbp_phase2_0010_T_Anesan": {
+    "ID": "lbp_phase2_0010_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "このまま、お姉ちゃんと、もっといっぱい、触りっこしよ……？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP5_106597.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0020_T_Anesan": {
+    "ID": "lbp_phase2_0020_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……そ、そりゃ、欲しいよ？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_X1P_53722.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0030_T_Anesan": {
+    "ID": "lbp_phase2_0030_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ちょっと待っててね？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP02_106164.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.5
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0040_T_Anesan": {
+    "ID": "lbp_phase2_0040_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "わぁっ……すごいよ……すごぉい……♪",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_X1P_53564.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0050_T_Anesan": {
+    "ID": "lbp_phase2_0050_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁはぁ、ご主人様と形が違う大きなちんぽを……くぅふんっ……もっと挿れてほしいのぉぉっー！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP01_A_104406.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.5
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0060_T_Anesan": {
+    "ID": "lbp_phase2_0060_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お姉ちゃんにオモチャで弄られちゃうのは、どうだった？　どんな感じだったとか教えてくれると嬉しいなぁ。",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_Y_107359.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0070_T_Anesan": {
+    "ID": "lbp_phase2_0070_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "きゃっ、んっ、んくうっ！　そこ……ひぅ、お姉ちゃん、感じ過ぎちゃうの……はぁ、あぁっ……んくううっ……",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_PMD_107325.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0080_T_Anesan": {
+    "ID": "lbp_phase2_0080_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "それじゃ……このまま続きしちゃってもいいよね？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_Y_107295.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0090_T_Anesan": {
+    "ID": "lbp_phase2_0090_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0091_T_Anesan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁっ……んぁっ……んんっ……あうっ！　そんなっ、強く、ぅ、ぅううっ！　どうして、こんなっ、気持ちい……ぅあうっ！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP01_A_104553.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0091_T_Anesan": {
+    "ID": "lbp_phase2_0091_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0092_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ、くあああああっ！　ああっ、あああっ！　す、すごいよっ！　ご主人様じゃ届かない、お姉ちゃんの深いところに届いちゃってるのっ！　んぶっ、んんんんっ！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_PMD_107432.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0100_T_Anesan": {
+    "ID": "lbp_phase2_0100_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "それなら……いいよね？　お姉ちゃん、あなたのことをもっといっぱい気持ち良くしてあげるね……！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_Y_107270.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0110_T_Anesan": {
+    "ID": "lbp_phase2_0110_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0111_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はひっ、んっ、くあああっ！　こ、こんなの無理だよぉっ！　お姉ちゃんのまんこあな、悦んじゃうのっ！　ひあっ、あぁぁぁぁっ！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_PMD_107439.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0120_T_Anesan": {
+    "ID": "lbp_phase2_0120_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0121_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もう我慢出来ないんでしょ？　それだったらさ、二人で一緒に気持ち良くなろうよ。あ、そうだ、なんかして欲しい事とかあったりする？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_Y_107375.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0130_T_Anesan": {
+    "ID": "lbp_phase2_0130_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0131",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もっと、激しいのっ、んっ！　ああっ、いい、からぁ、はぁ、あふっ、んんんんんっ！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP01_A_104766.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0140_T_Anesan": {
+    "ID": "lbp_phase2_0140_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0141_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そんなにお姉ちゃんにエッチなことをして欲しいんだね。あなたってば、すごくいやらしいんだね～♪",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_Y_107371.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0150_T_Anesan": {
+    "ID": "lbp_phase2_0150_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ひゃっ、あぁんっ！　もう無理っ、お姉ちゃん、イっちゃうっ！　ひゃっ、あぁぁんっ！　だめっ、もうイクっ！　イっちゃうぅぅっ！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_X1P_53956.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0160_T_Anesan": {
+    "ID": "lbp_phase2_0160_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0161_T_Anesan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んくうっ！　んああっ！　お姉ちゃん、イっちゃうっ！　んんっ、うううううっ！　はぁ、あぁっ、あぁぁぁぁぁーーーっ！！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_PMD_107241.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0161_T_Anesan": {
+    "ID": "lbp_phase2_0161_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0162",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "は、ぁあっ……ご主人様のと、全然違う形で……はぁ、ああ、ご主人様のよりも、大きいし、太くて……あっ、んぅ……！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP02_105869.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0170_T_Anesan": {
+    "ID": "lbp_phase2_0170_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0170a_T_Anesan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ひっ……え、あ、あの……抜け、ちゃったよぉ……？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP01_A_104455.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5.7
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0170a_T_Anesan": {
+    "ID": "lbp_phase2_0170a_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0171_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "抜いたままなんてイジワル、しないでぇ……くぅぅ……",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP01_A_104455.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 7
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0180_T_Anesan": {
+    "ID": "lbp_phase2_0180_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ごめんね、でも、次はもっとすごくて、気持ちいいこといっぱいしてあげるからね……えへへ……♪",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_Y_107370.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0020_T_Anesan": {
+    "ID": "lbp_postyotogi_0020_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ぢゅるるっ、すごいトロトロだよ、んぢゅぅぅっ、女の子の舌でいっぱい舐められて、気持ち良くなれるんだったら、もう、男の人なんていらないんじゃないかな！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_Y_107382.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0030_T_Anesan": {
+    "ID": "lbp_postyotogi_0030_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0031_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あぅ、んんっ……！　お姉ちゃん、あなたのこと好きなの、ああっ、んはぁ……！　好きで、好きで、しょうがないのっ……！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP5_106681.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0040_T_Anesan": {
+    "ID": "lbp_postyotogi_0040_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0041_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うふふ、気持ちいでしょ？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP01_A_104743.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0050_T_Anesan": {
+    "ID": "lbp_postyotogi_0050_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0051_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お姉ちゃん、こんなの初めてだよ……すごく幸せだなって感じちゃったぁ……あぅぅ……",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_PMD_107449.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0060_T_Anesan": {
+    "ID": "lbp_postyotogi_0060_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えへへ、あのさ……お姉ちゃん思うんだけど……お姉ちゃんとあなたって、お似合いのカップルになれると思わない？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_Y_107373.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0070_T_Anesan": {
+    "ID": "lbp_postyotogi_0070_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぅ……あなたがいない生活なんか、もう考えられないよ……えへへ……♪",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_PMD_107460.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0080_T_Anesan": {
+    "ID": "lbp_postyotogi_0080_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お姉ちゃんが気がついてないとでも思った？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_X1P_53704.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3.5
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0090_T_Anesan": {
+    "ID": "lbp_postyotogi_0090_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0091_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "のぞき見したらダメなんだからっ！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_PMD_107177.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.8
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0100_T_Anesan": {
+    "ID": "lbp_postyotogi_0100_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "酷いよぉ……！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_PMD_107280.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.5
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0110_T_Anesan": {
+    "ID": "lbp_postyotogi_0110_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0111_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……ねえ、笑ってもごまかされないからね……",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP02C_106689.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0120_T_Anesan": {
+    "ID": "lbp_postyotogi_0120_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "流石に看過できないっ！　ちょっとこっちに来てっ！　早くっ！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_X1P_53703.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0130_T_Anesan": {
+    "ID": "lbp_postyotogi_0130_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0131_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お姉ちゃんは怒ってるんだからねっ？　それなのに、勝手にこんなに大きくさせて……ホントに反省してるのかな？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_X1P_53712.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0140_T_Anesan": {
+    "ID": "lbp_postyotogi_0140_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0141_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "これはもっとお仕置きしないとダメみたいだね……",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_X1P_53714.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.5
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0150_T_Anesan": {
+    "ID": "lbp_postyotogi_0150_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ねえ、ご主人様……ちょっと、そこに横になってね？",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP02C_106651.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0160_T_Anesan": {
+    "ID": "lbp_postyotogi_0160_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0161",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "嘘つき！　痛いなら小さくなるでしょ！　もうガチガチにしながら大きくなってるじゃない！　何でかお姉ちゃんにちゃんと説明をしてみてっ！",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP02C_106662.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0170_T_Anesan": {
+    "ID": "lbp_postyotogi_0170_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もうダメだからね！　２人で、ご主人様が反省するまで、お仕置きをしちゃうんだから……",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP02C_106692.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 6.5
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0180_T_Anesan": {
+    "ID": "lbp_postyotogi_0180_T_Anesan",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "声が小さくて、聞こえなーい。",
+      "VoiceData": {
+        "Anesan": {
+          "VoiceFile": "S4_GP01_A_104687.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

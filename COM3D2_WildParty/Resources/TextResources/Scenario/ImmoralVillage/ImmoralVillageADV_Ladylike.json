@@ -1,0 +1,2585 @@
+﻿{
+  "imvi_intro_0020_T_Ladylike": {
+    "ID": "imvi_intro_0020_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "凄く綺麗な景色……時間を忘れてずっと眺めていられそう。",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_X01_54562.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2
+        }
+      }
+    }
+  },
+
+  "imvi_intro_0030_T_Ladylike": {
+    "ID": "imvi_intro_0030_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "こんなに素敵な場所にいて、しかもあなたと二人きり……やっぱり贅沢だと思っちゃって。",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_X01_54422.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+  "imvi_intro_0040_T_Ladylike": {
+    "ID": "imvi_intro_0040_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "じゃあ、そのへん散歩でもしよっか。汗も流したし、もっとベタベタしちゃおっかな？　うふふ。",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_X01_54084.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_intro_0050_T_Ladylike": {
+    "ID": "imvi_intro_0050_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そうしようか。",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_X01_54516.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "imvi_intro_0070_M_Ladylike": {
+    "ID": "imvi_intro_0070_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0070_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_0070_T_Ladylike": {
+    "ID": "imvi_intro_0070_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、楽しみ！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_07080.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+
+
+  "imvi_intro_0090_M_Ladylike": {
+    "ID": "imvi_intro_0090_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_intro_0090_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頬掻き"
+        }
+      }
+    ]
+  },
+
+  "imvi_intro_0090_T_Ladylike": {
+    "ID": "imvi_intro_0090_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふー♪",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02A_11850.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.7
+        }
+      }
+    }
+  },
+
+  "imvi_intro_0100_T_Ladylike": {
+    "ID": "imvi_intro_0100_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……あなた？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_X01_54512.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+  "imvi_intro_0110_T_Ladylike": {
+    "ID": "imvi_intro_0110_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0111",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あらら……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_07993.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.1
+        }
+      }
+    }
+  },
+
+
+  "imvi_intro_night_0060_T_Ladylike": {
+    "ID": "imvi_intro_night_0060_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "どうも、初めまして。",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61161.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.2
+        }
+      }
+    }
+  },
+
+  "imvi_intro_night_0070_T_Ladylike": {
+    "ID": "imvi_intro_night_0070_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ……はい……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61165.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1,
+          "EndTime": 3.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0010_M_Ladylike": {
+    "ID": "imvi_phase1_0010_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0010_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "苦笑い",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ちがっかり"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0010_T_Ladylike": {
+    "ID": "imvi_phase1_0010_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えっと……ちょっと緊張しちゃうね……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_order_51429.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "imvi_phase1_0020_M_Ladylike": {
+    "ID": "imvi_phase1_0020_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0020_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち考える"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0020_T_Ladylike": {
+    "ID": "imvi_phase1_0020_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そ、それっ。その手があったね！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_order_50123.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0030_M_Ladylike": {
+    "ID": "imvi_phase1_0030_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0030_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0030_T_Ladylike": {
+    "ID": "imvi_phase1_0030_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ありがとう、あなた♪",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02A_11821.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.5
+        }
+      }
+    }
+  },
+
+
+  "imvi_phase1_0050_M_Ladylike": {
+    "ID": "imvi_phase1_0050_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0050_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0050_T_Ladylike": {
+    "ID": "imvi_phase1_0050_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "よろしくお願いします♪",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61055.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 10
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0060_M_Ladylike": {
+    "ID": "imvi_phase1_0060_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0060_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち頬掻き"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase1_0060_T_Ladylike": {
+    "ID": "imvi_phase1_0060_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "じゃあ、早速始めますよ？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61121.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0070_T_Ladylike": {
+    "ID": "imvi_phase1_0070_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "それじゃあ……こういうのなら、どうっ？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02A_11855.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0080_T_Ladylike": {
+    "ID": "imvi_phase1_0080_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふぅ……やっぱり、見るよね……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_order_50650.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0090_T_Ladylike": {
+    "ID": "imvi_phase1_0090_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ……しょうがないなぁ。",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_X01_54633.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+
+  "imvi_phase1_0100_M_Ladylike": {
+    "ID": "imvi_phase1_0100_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0100_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "苦笑い"
+      }
+    ]
+  },
+
+  "imvi_phase1_0100_T_Ladylike": {
+    "ID": "imvi_phase1_0100_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "どうしてかな？　形とか大きさとか……想像と違ってがっかりしてない？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61069.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0110_M_Ladylike": {
+    "ID": "imvi_phase1_0110_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0110_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0110_T_Ladylike": {
+    "ID": "imvi_phase1_0110_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0111",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もう、口が上手なんだから……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61335.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0120_T_Ladylike": {
+    "ID": "imvi_phase1_0120_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61046.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.9
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0130_T_Ladylike": {
+    "ID": "imvi_phase1_0130_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0131_T_Ladylike",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ううん、気にしないで。",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02A_11762.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0131_T_Ladylike": {
+    "ID": "imvi_phase1_0131_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0132",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "落ち着いてゆっくりでいいから……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_08391.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0140_M_Ladylike": {
+    "ID": "imvi_phase1_0140_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0140_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0140_T_Ladylike": {
+    "ID": "imvi_phase1_0140_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0141",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、こっち……ほら……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_order_51149.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0150_T_Ladylike": {
+    "ID": "imvi_phase1_0150_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あぁっ、お汁、早速いっぱい出てきた……ふふ、恥ずかしいことじゃないよ……元気な男の子の証拠だよ♪　んっ、おちんちんで素直に感じられて、偉いね……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61062.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0160_M_Ladylike": {
+    "ID": "imvi_phase1_0160_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0160_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠"
+      }
+    ]
+  },
+
+  "imvi_phase1_0160_T_Ladylike": {
+    "ID": "imvi_phase1_0160_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0161",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ、頑張って……はぁっ、なるべく優しくするからね……んぅっ、少しだけ我慢だよ……そのほうが、たくさん気持ちよくなれるから……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61061.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0170_M_Ladylike": {
+    "ID": "imvi_phase1_0170_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0170_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0170_T_Ladylike": {
+    "ID": "imvi_phase1_0170_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふっ、んっ、はぁっ、いいよ……我慢し過ぎると、射精できなくなっちゃたりするから……んんっ、あっ、出せる時には出しておこうね……！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61065.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0180_M_Ladylike": {
+    "ID": "imvi_phase1_0180_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0180_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0180_T_Ladylike": {
+    "ID": "imvi_phase1_0180_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁぁ……いっぱい出せたね……ふふ、勢いも凄いよ……はぁ、びっくりしちゃった……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61066.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0190_M_Ladylike": {
+    "ID": "imvi_phase1_0190_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0190_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_phase1_0190_T_Ladylike": {
+    "ID": "imvi_phase1_0190_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0191",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、いいよ……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_X01_54458.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5,
+          "EndTime": 4.4
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0200_M_Ladylike": {
+    "ID": "imvi_phase1_0200_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0200_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ好感１"
+      }
+    ]
+  },
+
+  "imvi_phase1_0200_T_Ladylike": {
+    "ID": "imvi_phase1_0200_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0201",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "我慢しなくていいですよっ？　好きなだけ、私のおっぱいで気持ちよくなってくださいねっ……！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02C_12418.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0210_T_Ladylike": {
+    "ID": "imvi_phase1_0210_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0211",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "このまま、出してください……！　ちゅぶっ、んぢゅっ、我慢、させませんからっ、ぢゅる、ぢゅるるぅ……！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02C_12413.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.7
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0220_M_Ladylike": {
+    "ID": "imvi_phase1_0220_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0220_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "絶頂射精後２"
+      }
+    ]
+  },
+
+  "imvi_phase1_0220_T_Ladylike": {
+    "ID": "imvi_phase1_0220_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0221",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んはぁぁ……私のおっぱいで、こんなに気持ちよくなってもらえて……嬉しいですよ……♪",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02C_12420.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0230_M_Ladylike": {
+    "ID": "imvi_phase1_0230_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0230_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "発情"
+      }
+    ]
+  },
+
+  "imvi_phase1_0230_T_Ladylike": {
+    "ID": "imvi_phase1_0230_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0231",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "今、すっごい、可愛いよ……！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_08248.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.5,
+          "EndTime": 8.8
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0240_M_Ladylike": {
+    "ID": "imvi_phase1_0240_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0240_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_phase1_0240_T_Ladylike": {
+    "ID": "imvi_phase1_0240_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0241_M_Ladylike",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "なんだか変な感じね……もしかして……緊張しているのかな……？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_12987.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0241_M_Ladylike": {
+    "ID": "imvi_phase1_0241_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0241_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase1_0241_T_Ladylike": {
+    "ID": "imvi_phase1_0241_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0242",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "遠慮しなくていいんですよ……？　私のおまんこ、触ってください……？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02C_12396.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0250_M_Ladylike": {
+    "ID": "imvi_phase1_0250_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0250_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0250_T_Ladylike": {
+    "ID": "imvi_phase1_0250_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0251",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ、待って……そっちはね、お、おしっこが出る穴だから……おちんちんを入れる穴は……もう少し下だよ……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61071.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0260_M_Ladylike": {
+    "ID": "imvi_phase1_0260_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0260_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase1_0260_T_Ladylike": {
+    "ID": "imvi_phase1_0260_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0261",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ、分かる？　おしっこの穴より、大きくて奥まで入りそうな穴があるでしょう？　最初はゆっくりでいいから……挿れてみようか？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61072.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0270_T_Ladylike": {
+    "ID": "imvi_phase1_0270_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0271",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もらっちゃいましたねっ、んぅっ、んぁぁあ！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02C_12400.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0280_M_Ladylike": {
+    "ID": "imvi_phase1_0280_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0280_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ好感２"
+      }
+    ]
+  },
+
+  "imvi_phase1_0280_T_Ladylike": {
+    "ID": "imvi_phase1_0280_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0281",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ん、っあぁ……！　そんな、夢中で弄っちゃって、はぁっ、あぁっ……！　私のマンコ、そんなに気に入っちゃったっ……？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02C_12500.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0290_M_Ladylike": {
+    "ID": "imvi_phase1_0290_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0290_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0290_T_Ladylike": {
+    "ID": "imvi_phase1_0290_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0291",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "我慢なんて、しなくていいんですよっ？　そのまま、おまんこに出してください！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02C_12401.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0300_M_Ladylike": {
+    "ID": "imvi_phase1_0300_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0300_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠"
+      }
+    ]
+  },
+
+  "imvi_phase1_0300_T_Ladylike": {
+    "ID": "imvi_phase1_0300_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0301",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、んぅ……すごいいっぱい出てるね……ふふ、さっき出したばっかりなのに、まだこんなにいっぱい……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61080.ogg",
+          "IsChoppingAudio": true,
+          "StartTIme": 7
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0310_M_Ladylike": {
+    "ID": "imvi_phase1_0310_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0310_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_phase1_0310_T_Ladylike": {
+    "ID": "imvi_phase1_0310_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase1_0311",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、そういうのは気にしないでいいんだよ……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61068.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4
+        }
+      }
+    }
+  },
+
+  "imvi_phase1_0320_M_Ladylike": {
+    "ID": "imvi_phase1_0320_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase1_0320_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase1_0320_T_Ladylike": {
+    "ID": "imvi_phase1_0320_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_yotogiplay_phase1_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "可愛いですね……♪　そんな風に言われると、すぐにしてあげたくなっちゃいます……♪",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02C_12411.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.1
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0010_T_Ladylike": {
+    "ID": "imvi_phase2_0010_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0011_M_Ladylike",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "まだまだ、いっぱいやりたいことが……ええっと、これは……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_13064.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 7
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0011_M_Ladylike": {
+    "ID": "imvi_phase2_0011_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0011_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ",
+        "MotionInfo": {
+          "MotionFile": "pose_02_f.anm",
+          "MotionTag": "pose_02_f.anm"
+        }
+      }
+    ]
+  },
+
+  "imvi_phase2_0011_T_Ladylike": {
+    "ID": "imvi_phase2_0011_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0012",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んぅ？　どうしたの？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61012.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0020_M_Ladylike": {
+    "ID": "imvi_phase2_0020_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0020_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "悲しみ２"
+      }
+    ]
+  },
+
+  "imvi_phase2_0020_T_Ladylike": {
+    "ID": "imvi_phase2_0020_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もしかして……私とするのは、好きじゃなかった？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_13083.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0030_M_Ladylike": {
+    "ID": "imvi_phase2_0030_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0030_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "微笑み"
+      }
+    ]
+  },
+
+  "imvi_phase2_0030_T_Ladylike": {
+    "ID": "imvi_phase2_0030_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そこは、好きって言って欲しかったな……でも、嫌じゃないなら……それでもいいかも……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_13084.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0040_T_Ladylike": {
+    "ID": "imvi_phase2_0040_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そうなのかな？　私が見ても、エッチなお汁にみるよ？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_13090.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0050_M_Ladylike": {
+    "ID": "imvi_phase2_0050_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0050_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase2_0050_T_Ladylike": {
+    "ID": "imvi_phase2_0050_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふふ、必死に隠して、可愛い……♪　こんなに興奮してるのに、したくないっていうの？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_13091.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0060_M_Ladylike": {
+    "ID": "imvi_phase2_0060_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0060_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "引きつり笑顔"
+      }
+    ]
+  },
+
+  "imvi_phase2_0060_T_Ladylike": {
+    "ID": "imvi_phase2_0060_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ん？　あれ？　どうしたの？　そんなに可愛い声を出して……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_13018.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0070_M_Ladylike": {
+    "ID": "imvi_phase2_0070_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0070_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase2_0070_T_Ladylike": {
+    "ID": "imvi_phase2_0070_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そういいながらも……ふふ、身体の方は素直になってるみたいね……？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_13016.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0080_M_Ladylike": {
+    "ID": "imvi_phase2_0080_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0080_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "ドヤ顔"
+      }
+    ]
+  },
+
+  "imvi_phase2_0080_T_Ladylike": {
+    "ID": "imvi_phase2_0080_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "素直になれないのは、まだ足りないのかな！　なら、もっとしてあげるね！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_13057.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0090_M_Ladylike": {
+    "ID": "imvi_phase2_0090_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0090_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ好感２"
+      }
+    ]
+  },
+
+  "imvi_phase2_0090_T_Ladylike": {
+    "ID": "imvi_phase2_0090_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふぁ……どう？　わたしのおっぱい、気持ちいい……？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_order_51196.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0100_M_Ladylike": {
+    "ID": "imvi_phase2_0100_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0100_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮２"
+      }
+    ]
+  },
+
+  "imvi_phase2_0100_T_Ladylike": {
+    "ID": "imvi_phase2_0100_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "これが、いいんだねっ！　気持ちよさそうな顔をして、ふふ、もっとして欲しそうな顔をしちゃってるよっ！　んっ、ううう！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_13045.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0110_M_Ladylike": {
+    "ID": "imvi_phase2_0110_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0110_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "むー"
+      }
+    ]
+  },
+
+  "imvi_phase2_0110_T_Ladylike": {
+    "ID": "imvi_phase2_0110_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0111",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、まだ我慢しちゃってるのかな？　なら、こうやって……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_13044.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0120_M_Ladylike": {
+    "ID": "imvi_phase2_0120_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0120_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロフェラ愛情"
+      }
+    ]
+  },
+
+  "imvi_phase2_0120_T_Ladylike": {
+    "ID": "imvi_phase2_0120_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んんっ、いいから！　いっぱいおかしくなって！　私が可愛がって、もっと気持ちよくしてあげるからっ！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_13042.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0130_M_Ladylike": {
+    "ID": "imvi_phase2_0130_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0130_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase2_0130_T_Ladylike": {
+    "ID": "imvi_phase2_0130_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0131",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "いいよ、いつでも出して……んんっ……わたしのおっぱいに、思い切り出しちゃって……！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_order_51202.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0140_M_Ladylike": {
+    "ID": "imvi_phase2_0140_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0140_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "興奮射精後２"
+      }
+    ]
+  },
+
+  "imvi_phase2_0140_T_Ladylike": {
+    "ID": "imvi_phase2_0140_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0141",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁっ、はぁっ……あは、いっぱい出たね……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_order_51203.ogg",
+          "IsChoppingAudio": true,
+          "StartTIme": 5
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0150_M_Ladylike": {
+    "ID": "imvi_phase2_0150_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0150_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase2_0150_T_Ladylike": {
+    "ID": "imvi_phase2_0150_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そう……やっと言えたね。ふふ……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61232.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0160_M_Ladylike": {
+    "ID": "imvi_phase2_0160_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0160_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_phase2_0160_T_Ladylike": {
+    "ID": "imvi_phase2_0160_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0161",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、素直になってくれたね……ちゃんと素直になった子は、可愛がってあげるからね……♪",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_13060.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0170_M_Ladylike": {
+    "ID": "imvi_phase2_0170_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0170_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_phase2_0170_T_Ladylike": {
+    "ID": "imvi_phase2_0170_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ほら、下も見て？　もういつでもできるよ……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61070.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 8,
+          "EndTime": 13
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0180_M_Ladylike": {
+    "ID": "imvi_phase2_0180_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0180_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase2_0180_T_Ladylike": {
+    "ID": "imvi_phase2_0180_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぅっ、んっ、そうっ、ちゃんと奥まで入ってるよ……あぁっ、んくっ……童貞卒業おめでとう……んんぅ、どうかな？　初めてエッチした気分は……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61073.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0190_M_Ladylike": {
+    "ID": "imvi_phase2_0190_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0190_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase2_0190_T_Ladylike": {
+    "ID": "imvi_phase2_0190_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0191",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んんぅっ、ほら、頑張って奥まで来てください？　はぁっ、怖くないですよ……んっ……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61021.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 11.4
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0200_M_Ladylike": {
+    "ID": "imvi_phase2_0200_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0200_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮２"
+      }
+    ]
+  },
+
+  "imvi_phase2_0200_T_Ladylike": {
+    "ID": "imvi_phase2_0200_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0201",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふぅっ、んぁっ……！　んんっ……はぁっ……んぅうっ、おちんちんのほうも頑張れたら……おっぱいも強くしていいよ……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61075.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0210_M_Ladylike": {
+    "ID": "imvi_phase2_0210_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0210_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮３"
+      }
+    ]
+  },
+
+  "imvi_phase2_0210_T_Ladylike": {
+    "ID": "imvi_phase2_0210_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0211",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んはぁうっ！　んんぅっ、おちんちんがわたしの中で暴れてるよっ、ふぁっ、さっきまで緊張してたのが、あぁっ、嘘みたいっ……！　んんぅ……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61078.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0220_M_Ladylike": {
+    "ID": "imvi_phase2_0220_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0220_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ興奮３"
+      }
+    ]
+  },
+
+  "imvi_phase2_0220_T_Ladylike": {
+    "ID": "imvi_phase2_0220_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0221",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もうイッちゃう？　イッちゃいそうっ？　ね、教えてっ……？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_08249.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6.5
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0230_M_Ladylike": {
+    "ID": "imvi_phase2_0230_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0230_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "発情"
+      }
+    ]
+  },
+
+  "imvi_phase2_0230_T_Ladylike": {
+    "ID": "imvi_phase2_0230_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0231",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "好きな時に、出していいですよっ……！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02C_12419.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3.9
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0240_M_Ladylike": {
+    "ID": "imvi_phase2_0240_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0240_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "興奮射精後２"
+      }
+    ]
+  },
+
+  "imvi_phase2_0240_T_Ladylike": {
+    "ID": "imvi_phase2_0240_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0241",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ううん……気にしないで。わたしもきちんと気持ちよかったから……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61081.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 7
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0250_M_Ladylike": {
+    "ID": "imvi_phase2_0250_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0250_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_phase2_0250_T_Ladylike": {
+    "ID": "imvi_phase2_0250_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0251",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "大丈夫ですか？　今から頑張ったご褒美をあげますから……そのままじっとしていて……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP01ADD_61027.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0260_T_Ladylike": {
+    "ID": "imvi_phase2_0260_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0261",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ん、りゅ……ちゅぅ……はぁっ、あなたの舌美味しい……ちゅる、んぁ……ちゅぅ……もっと唾液ほしいな……んる、ちゅぅ……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP5_12297.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0270_M_Ladylike": {
+    "ID": "imvi_phase2_0270_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0270_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_phase2_0270_T_Ladylike": {
+    "ID": "imvi_phase2_0270_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0271",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "っぁはあ……こんなに、元気になってくれたんですね……？　ふふ、嬉しいです……♪",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02C_12430.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_phase2_0280_M_Ladylike": {
+    "ID": "imvi_phase2_0280_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_phase2_0280_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "誘惑"
+      }
+    ]
+  },
+
+  "imvi_phase2_0280_T_Ladylike": {
+    "ID": "imvi_phase2_0280_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_phase2_0281",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "早く、しましょう？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02C_12431.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3,
+          "EndTime": 5.5
+        }
+      }
+    }
+  },
+
+
+  "imvi_postyotogi_0010_M_Ladylike": {
+    "ID": "imvi_postyotogi_0010_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0010_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "発情"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0010_T_Ladylike": {
+    "ID": "imvi_postyotogi_0010_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ひううっ、んっ、あああ、だめ、気持ちいいのが、全身に来て、私、もう、クラクラしちゃうのっ……！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_13213.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0020_M_Ladylike": {
+    "ID": "imvi_postyotogi_0020_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0020_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "エロ羞恥３"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0020_T_Ladylike": {
+    "ID": "imvi_postyotogi_0020_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はひっ、んうっ、ひううっ……！　あ……ああっ、だんだん、なんにも考えられなくなってきて……私、変に、なってるの……！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_13211.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0030_M_Ladylike": {
+    "ID": "imvi_postyotogi_0030_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0030_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "まぶたギュ"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0030_T_Ladylike": {
+    "ID": "imvi_postyotogi_0030_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ひっ、うううううっ！　んあああああーーーっ！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_Y_13215.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0040_M_Ladylike": {
+    "ID": "imvi_postyotogi_0040_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0040_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "絶頂射精後２"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0040_T_Ladylike": {
+    "ID": "imvi_postyotogi_0040_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "焦っちゃダメだよ……ちゃんとお相手するから……あんっ……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_X1Kai_56110.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0050_M_Ladylike": {
+    "ID": "imvi_postyotogi_0050_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0050_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "興奮射精後２"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0050_T_Ladylike": {
+    "ID": "imvi_postyotogi_0050_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もっとぉ……わたしにぃ……触ってねぇ……♪",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_X1Kai_56111.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0080_M_Ladylike": {
+    "ID": "imvi_postyotogi_0080_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0080_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0080_T_Ladylike": {
+    "ID": "imvi_postyotogi_0080_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁっ、はぁ……どうだったかな？",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_GP02A_11822.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0090_M_Ladylike": {
+    "ID": "imvi_postyotogi_0090_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0090_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "居眠り安眠"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0090_T_Ladylike": {
+    "ID": "imvi_postyotogi_0090_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、うん……あぁっ、でも今は少し……はぁっ、この余韻に浸っていたいって思っていたり……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_X01_54557.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0100_M_Ladylike": {
+    "ID": "imvi_postyotogi_0100_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0100_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "優しさ"
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0100_T_Ladylike": {
+    "ID": "imvi_postyotogi_0100_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "期待してるね！",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_X01_54130.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.4
+        }
+      }
+    }
+  },
+
+  "imvi_postyotogi_0110_M_Ladylike": {
+    "ID": "imvi_postyotogi_0110_M_Ladylike",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "imvi_postyotogi_0110_T_Ladylike",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "むー",
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      }
+    ]
+  },
+
+  "imvi_postyotogi_0110_T_Ladylike": {
+    "ID": "imvi_postyotogi_0110_T_Ladylike",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_postyotogi_0111",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "全くもう……",
+      "VoiceData": {
+        "Ladylike": {
+          "VoiceFile": "H5_X01_54515.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

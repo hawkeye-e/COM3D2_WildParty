@@ -1,0 +1,1242 @@
+﻿{
+  "lbp_intro_0030_T_Missy": {
+    "ID": "lbp_intro_0030_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……あうっ、あぁぅっ……もう、エッチ……エッチですわ……あぁ、でも好きですっ……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62404.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2,
+          "EndTime": 13,
+          "Volume": 0.3
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0020_T_Missy": {
+    "ID": "lbp_hotel_0020_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "どうぞ、デザートですわ。まだ食べられます？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62341.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0030_M_Missy": {
+    "ID": "lbp_hotel_0030_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0030_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "びっくり"
+      }
+    ]
+  },
+
+  "lbp_hotel_0030_T_Missy": {
+    "ID": "lbp_hotel_0030_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0031_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "とても美味しい……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_06806.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5
+        }
+      }
+    }
+  },
+
+
+  "lbp_hotel_0040_M_Missy": {
+    "ID": "lbp_hotel_0040_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0040_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで手を合わせるL"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0040_T_Missy": {
+    "ID": "lbp_hotel_0040_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0041_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そう言っていただけて、良かったですわ！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_order_52030.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0050_M_Missy": {
+    "ID": "lbp_hotel_0050_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0050_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで照れる"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0050_T_Missy": {
+    "ID": "lbp_hotel_0050_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0051_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あら……あのお客様用のスキンケアクリーム、とっても評判がいいらしいですわね。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62231.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 7
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0060_M_Missy": {
+    "ID": "lbp_hotel_0060_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0060_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで手を合わせるL"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0060_T_Missy": {
+    "ID": "lbp_hotel_0060_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0061_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "早速どちらからお試しになります？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_X1P_54719.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 7
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0070_M_Missy": {
+    "ID": "lbp_hotel_0070_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0070_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "lbp_hotel_0070_T_Missy": {
+    "ID": "lbp_hotel_0070_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "それ、いいですわね！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_X1P_54592.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0080_M_Missy": {
+    "ID": "lbp_hotel_0080_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0080_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで手を合わせるL"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0080_T_Missy": {
+    "ID": "lbp_hotel_0080_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ、やっぱりそれですわよね！　わたくしも同じものが気になっていましたのよ。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_X1P_54720.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 6.5
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0090_M_Missy": {
+    "ID": "lbp_hotel_0090_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0090_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        },
+        "SmoothMovement": { "Time": 2 },
+        "PosRot": {
+          "PosString": "2.78, 0.00, -5.51",
+          "RotString": "0, 1, 0 ,0"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0090_T_Missy": {
+    "ID": "lbp_hotel_0090_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0091_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そろそろ、わたくしたちも……いたしませんか？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62770.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0100_M_Missy": {
+    "ID": "lbp_hotel_0100_M_Missy",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0100_T_Missy",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaC_001.ks",
+          "ScriptLabel": "*会話座り喜ぶ"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0100_T_Missy": {
+    "ID": "lbp_hotel_0100_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ええ。それでは行きましょうか。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_X1P_54520.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0010_T_Missy": {
+    "ID": "lbp_bedroom_0010_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んちゅっ……くぷっ……ちゅっ……じゅるるっ、んっ……ちゅっ、れる、じゅるるっ……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_04216.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0020_T_Missy": {
+    "ID": "lbp_bedroom_0020_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "くふっ、んんっ……はぁ、はぁ……あんっ……！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_order_52041.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0030_T_Missy": {
+    "ID": "lbp_bedroom_0030_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0031_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "わたくしはもっと貴方とエッチしたいって思っていますわ。貴方が大好きなのですから。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63548.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 7.5
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0040_T_Missy": {
+    "ID": "lbp_bedroom_0040_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0041_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そんなにわたくしと……したいんですの？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_X1P_55073.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0050_T_Missy": {
+    "ID": "lbp_bedroom_0050_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "わたくし、もっと貴方と仲良くなりたいですし……気持ちよくなりたいのですもの♪",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63636.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0060_T_Missy": {
+    "ID": "lbp_bedroom_0060_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "なんだか頭がぼうっとしてしまいますわね……？　やはり女同士だと、そういうのも違うのでしょうか……ふふっ……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63623.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0070_T_Missy": {
+    "ID": "lbp_bedroom_0070_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ……ふぁあ……こんなに幸せそうな声、もしご主人様が聞いたらどんな気持ちになるのでしょう……？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_64202.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0080_T_Missy": {
+    "ID": "lbp_bedroom_0080_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0081_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はふぅ……ふふっ、とっても可愛かったですわ。女の子同士というのも結構良かったでしょう？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63554.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0090_T_Missy": {
+    "ID": "lbp_bedroom_0090_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "すごく嬉しいですわ……ご主人様の手より、優しいかも……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_64201.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5.5
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0100_T_Missy": {
+    "ID": "lbp_bedroom_0100_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0101_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うふふっ、それはこれからもエッチしてくれるってことでよろしいんですの？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63555.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0110_T_Missy": {
+    "ID": "lbp_bedroom_0110_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0111_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "触られたところから熱くなってしまいますわ……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_64211.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0120_T_Missy": {
+    "ID": "lbp_bedroom_0120_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0121_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ、そういうことでしたら、今度は指ではなく別のところでしてもいいでしょうか？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63539.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "lbp_phase2_0010_T_Missy": {
+    "ID": "lbp_phase2_0010_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ほら、もっとわたくしとすごいこと、したいですわよね……？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_60831.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5,
+          "EndTime": 6
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0020_T_Missy": {
+    "ID": "lbp_phase2_0020_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……え、ええ。欲しいですわ！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_X1P_54771.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0030_T_Missy": {
+    "ID": "lbp_phase2_0030_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "待っていてくださいね！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62171.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.3
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0040_T_Missy": {
+    "ID": "lbp_phase2_0040_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "すごいです……こんなのいやらし過ぎます……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62736.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0050_T_Missy": {
+    "ID": "lbp_phase2_0050_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁはぁ、ご主人様と形が違うゴリゴリチンポをっ……くぅううんっ……入れてください～っ……！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_60969.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0060_T_Missy": {
+    "ID": "lbp_phase2_0060_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ、どうかしら？　女性にオモチャで弄られるのはどのような気持ちだったか、教えてくれると嬉しいのですけれど。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63639.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0070_T_Missy": {
+    "ID": "lbp_phase2_0070_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ひぁっ、んっ、んううっ！　そ、そこ……ひうっ、感じ過ぎてしまいますから……はあっ、あ……んうう……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_64035.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0080_T_Missy": {
+    "ID": "lbp_phase2_0080_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "だったら、続き、してもいいですわよね？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63626.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0090_T_Missy": {
+    "ID": "lbp_phase2_0090_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0091_T_Missy",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ……んぁぁぁ……ああんっ！　あんっ！　あんっ！　お、大きい……んふぅ……あっ……はぁ……あっ！　あっ！　んはっ……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_61095.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0091_T_Missy": {
+    "ID": "lbp_phase2_0091_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0092_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ、くあああああっ！　あっ、ああっ！　すっ、すごいですっ！　ご主人様じゃ届かないところに届いてしまってますわっ！　んぶっ！　んんんんっ！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_64141.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0100_T_Missy": {
+    "ID": "lbp_phase2_0100_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "だったら……いいですわよね？　さっきよりもっともっと気持ちよくしてさしあげますわ！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63549.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0110_T_Missy": {
+    "ID": "lbp_phase2_0110_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0111_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はひっ、んっ、くあああっ！　こんなのっ、無理ですわっ！　まんこあなっ、悦んでしまいますからっ！　ひあっ、あああああ！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_64148.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0120_T_Missy": {
+    "ID": "lbp_phase2_0120_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0121_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もう我慢できないということですわね♪　さあ、二人で気持ちよくなりましょう？　ああ……なにか希望がありますの？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63655.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0130_T_Missy": {
+    "ID": "lbp_phase2_0130_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0131",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁっ、はぁっ、んんっ、ああっ！　もっと、もっと強く、抱きしめて……！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_order_51717.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0140_T_Missy": {
+    "ID": "lbp_phase2_0140_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0141_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ、そんなにいやらしいことして欲しいんですの？　貴方ってそんなにいやらしい子だったんですのね？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63651.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0150_T_Missy": {
+    "ID": "lbp_phase2_0150_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んひっ、ああっ、ダメですわっ！　わたくし、イっ、あっ、イクっ、イってしまいますわっ……！　くぅんっ、もう無理なんですのっ、あぁっ、はぁあっ……！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_X1P_55005.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0160_T_Missy": {
+    "ID": "lbp_phase2_0160_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0161_T_Missy",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "くううっ！　んあっ！　イクぅっ！　んっ、ううううううっ！　はあっ、あっ、あああああーーーーっ！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63951.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0161_T_Missy": {
+    "ID": "lbp_phase2_0161_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0162",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "は、ぁあっ……あうっ……んぅん……はぁ、ご主人様のと、全然、違うっ……はぁ、はぁ、ご主人様のよりも……、あうっ、太くてっ……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63196.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0170_T_Missy": {
+    "ID": "lbp_phase2_0170_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0171_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ひっ……え、あ、あの……抜けてしまいましたわよ……？　だ、ダメですわ……！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_61026.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 7.6
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0180_T_Missy": {
+    "ID": "lbp_phase2_0180_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "安心してください。今度はもっとスゴいことをしてさしあげますから……ふふっ、うふふふっ！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63650.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0020_T_Missy": {
+    "ID": "lbp_postyotogi_0020_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ぢゅるるっ、そうですわねっ、こんなにドロドロになってしまってっ！　女の子の舌でこんなになるなら、もう男の人なんていりませんわよねっ！？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63662.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0030_T_Missy": {
+    "ID": "lbp_postyotogi_0030_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0031_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ぁふっ、んんっ……！　好きって気持ち、止まらないんですっ、んぁっ、はあぁ……！　貴方、好きっ、気持ちいいっ……！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_64372.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0040_T_Missy": {
+    "ID": "lbp_postyotogi_0040_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0041_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "気持ちいいですか？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_61289.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0050_T_Missy": {
+    "ID": "lbp_postyotogi_0050_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0051_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "わたくし、こんなのはじめてで……すごくしあわせをかんじてしまいましたぁ……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_64158.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0060_T_Missy": {
+    "ID": "lbp_postyotogi_0060_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ、わたくしたち、案外お似合いなのかもしれませんわね。貴方もそう思いませんか……？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63653.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0070_T_Missy": {
+    "ID": "lbp_postyotogi_0070_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ……もうあなたがいない生活なんて考えられませんわ……",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_64169.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0080_T_Missy": {
+    "ID": "lbp_postyotogi_0080_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "わたくしが気付いていないとでも思っていまして？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_X1P_54753.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0090_T_Missy": {
+    "ID": "lbp_postyotogi_0090_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0091_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "きゃっ！　なっ、なに見てるんですの！　プライバシーの侵害ですわっ！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_63877.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0100_T_Missy": {
+    "ID": "lbp_postyotogi_0100_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……最低ですわよ？　ご主人様。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_60528.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0110_T_Missy": {
+    "ID": "lbp_postyotogi_0110_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0111_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ご主人様？　笑ってごまかそうとしてもわたくしはごまかせませんわよ？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62750.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 6
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0120_T_Missy": {
+    "ID": "lbp_postyotogi_0120_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もう流石に耐えられませんわ。ちょっとこっちへ……ほら、来てくださいませ！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_X1P_54752.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0130_T_Missy": {
+    "ID": "lbp_postyotogi_0130_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0131_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "わたくしは怒っているんですのよ？　なのに貴方は……全然反省していませんわね？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_X1P_54761.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0140_T_Missy": {
+    "ID": "lbp_postyotogi_0140_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0141_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もっときついお仕置きが必要ですわね！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_X1P_54763.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0150_T_Missy": {
+    "ID": "lbp_postyotogi_0150_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ご主人様、ちょっとそこ、横になってくださいます？",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62712.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0160_T_Missy": {
+    "ID": "lbp_postyotogi_0160_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0161",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "嘘ばっかりっ！　何されても感じるじゃありませんの、このおちんちん！　痛いのにどうしてちっちゃくならないんですのっ！？　ねえ、どうしてですのっ！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62723.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0170_T_Missy": {
+    "ID": "lbp_postyotogi_0170_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ほらほらっ……反省してください……！",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_60848.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5,
+          "EndTime": 5
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0180_T_Missy": {
+    "ID": "lbp_postyotogi_0180_T_Missy",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はい？　声が小さくて聞こえないですわね。",
+      "VoiceData": {
+        "Missy": {
+          "VoiceFile": "H9_GP01ADD_61233.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

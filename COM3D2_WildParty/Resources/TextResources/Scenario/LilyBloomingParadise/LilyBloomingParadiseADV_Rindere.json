@@ -1,0 +1,1246 @@
+﻿{
+  "lbp_intro_0030_T_Rindere": {
+    "ID": "lbp_intro_0030_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……そこを触られると……くうっ、身体が熱くなってしまうから……くうう……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_PMD_28370.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 7
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0020_T_Rindere": {
+    "ID": "lbp_hotel_0020_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "デザートを作ってみたんだ。一緒に食べてくれないか？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP02C_26581.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0030_M_Rindere": {
+    "ID": "lbp_hotel_0030_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0030_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "びっくり"
+      }
+    ]
+  },
+
+  "lbp_hotel_0030_T_Rindere": {
+    "ID": "lbp_hotel_0030_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0031_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ……美味しいな。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_09589.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+
+  "lbp_hotel_0040_M_Rindere": {
+    "ID": "lbp_hotel_0040_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0040_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで手を合わせるL"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0040_T_Rindere": {
+    "ID": "lbp_hotel_0040_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0041_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そう言って貰えて、本当に良かった……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_order_52041.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0050_M_Rindere": {
+    "ID": "lbp_hotel_0050_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0050_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaR_001.ks",
+          "ScriptLabel": "*ソファーで照れる"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0050_T_Rindere": {
+    "ID": "lbp_hotel_0050_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0051_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ぁ……あのお客様が使っている保湿液、最近発売された新作だな。かなり評判らしいが……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP02_24843.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0060_M_Rindere": {
+    "ID": "lbp_hotel_0060_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0060_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "誘惑",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで手を合わせるL"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0060_T_Rindere": {
+    "ID": "lbp_hotel_0060_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0061_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "どれから試してみようか……貴方の好きなものはあるか？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_X01_61701.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0070_M_Rindere": {
+    "ID": "lbp_hotel_0070_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0070_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "lbp_hotel_0070_T_Rindere": {
+    "ID": "lbp_hotel_0070_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "一目見て可愛いと思ってな。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_VV4_69265.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 9
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0080_M_Rindere": {
+    "ID": "lbp_hotel_0080_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0080_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaL_001.ks",
+          "ScriptLabel": "*ソファーで手を合わせるL"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0080_T_Rindere": {
+    "ID": "lbp_hotel_0080_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私も気になっていたんだ。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_X01_61702.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4,
+          "EndTime": 6.5
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0090_M_Rindere": {
+    "ID": "lbp_hotel_0090_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0090_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "にっこり",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        },
+        "SmoothMovement": { "Time": 2 },
+        "PosRot": {
+          "PosString": "2.78, 0.00, -5.51",
+          "RotString": "0, 1, 0 ,0"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0090_T_Rindere": {
+    "ID": "lbp_hotel_0090_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0091_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そろそろ……その、私たちも……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP02C_26339.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5.5
+        }
+      }
+    }
+  },
+
+  "lbp_hotel_0100_M_Rindere": {
+    "ID": "lbp_hotel_0100_M_Rindere",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "lbp_hotel_0100_T_Rindere",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "笑顔",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwaC_001.ks",
+          "ScriptLabel": "*会話座り喜ぶ"
+        }
+      }
+    ]
+  },
+
+  "lbp_hotel_0100_T_Rindere": {
+    "ID": "lbp_hotel_0100_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ああ。それじゃあ行こうか。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_X01_61502.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0010_T_Rindere": {
+    "ID": "lbp_bedroom_0010_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ……ちゅっ、ちゅぅ……んっ……んちゅっ……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_X01_61333.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0020_T_Rindere": {
+    "ID": "lbp_bedroom_0020_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "くぅ、んっ……はぁ、あぁ……ぁあんっ……！",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_order_52052.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0030_T_Rindere": {
+    "ID": "lbp_bedroom_0030_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0031_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私は、あなたともっとエッチがしたい。あなたのことが、好きだから……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_Y_28066.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 9.5
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0040_T_Rindere": {
+    "ID": "lbp_bedroom_0040_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0041_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そんなに私としたいのか……？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_X01_62055.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0050_T_Rindere": {
+    "ID": "lbp_bedroom_0050_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あなたともっと仲良くして、もっと気持ちよくなりたいって思っているんだ……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_Y_28153.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.5
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0060_T_Rindere": {
+    "ID": "lbp_bedroom_0060_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ……なんだかボーッとしてきてしまうな……女の子同士だと、やっぱり普段と違うような気がする……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_Y_28140.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0070_T_Rindere": {
+    "ID": "lbp_bedroom_0070_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ん……うう、ふあ……ふふ、こんなに幸せな声を上げてしまうなんて……ご主人様が耳にしたらどう思うだろうな……ああ……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_PMD_28365.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0080_T_Rindere": {
+    "ID": "lbp_bedroom_0080_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0081_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふぅ……ふふ、とっても可愛かったぞ。女性同士というのも、悪くはなかっただろう？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_Y_28072.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0090_T_Rindere": {
+    "ID": "lbp_bedroom_0090_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はあ……あっ、そのまま続けて……くれ、私も……触られるのは好きなんだ……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_PMD_28392.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 6.5
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0100_T_Rindere": {
+    "ID": "lbp_bedroom_0100_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0101_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、それはこれからもエッチをしてくれるということで構わないんだな？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_Y_28073.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0110_T_Rindere": {
+    "ID": "lbp_bedroom_0110_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0111_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はあ、んはぁ……こんなに身体が熱くなってしまうなんて……我ながら情けないな……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_PMD_28378.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_bedroom_0120_T_Rindere": {
+    "ID": "lbp_bedroom_0120_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_bedroom_0121_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、そういうことだったら、今度は指でなく別のところでしてもいいか？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_Y_28057.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "lbp_phase2_0010_T_Rindere": {
+    "ID": "lbp_phase2_0010_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0011_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もっといやらしいことをしたいだろう？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP01_20293.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2,
+          "EndTime": 5
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0020_T_Rindere": {
+    "ID": "lbp_phase2_0020_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もちろん、欲しいに決まっている。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_X01_61753.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0030_T_Rindere": {
+    "ID": "lbp_phase2_0030_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ちょっと待ってくれ。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP02C_26592.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 7.5,
+          "EndTime": 9
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0040_T_Rindere": {
+    "ID": "lbp_phase2_0040_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "おお……これは、思った以上だな。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_X01_61595.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0050_T_Rindere": {
+    "ID": "lbp_phase2_0050_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "まんこに……ご主人様よりも大きなちんぽを……入れて、くれ……！",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP01_19530.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.9
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0060_T_Rindere": {
+    "ID": "lbp_phase2_0060_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふっ、どうだろうか？　女性からオモチャでこんなになるまで弄られるだなんて、どんな気分になった？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_Y_28156.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0070_T_Rindere": {
+    "ID": "lbp_phase2_0070_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0071_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んぁっ、くぅんっ！　はぁあっ、凄いっ、これっ……あぁあっ、大き過ぎて、んんぅっ、気持ちいいところが、全部擦れるっ……！",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_PMD_28124.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0080_T_Rindere": {
+    "ID": "lbp_phase2_0080_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "それなら……続きをしてもいいだろうか？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_Y_28143.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0090_T_Rindere": {
+    "ID": "lbp_phase2_0090_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0091_T_Rindere",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "くっ……ぁ、ぁああ……！　あっ、ぁああっ！　はげ、しいっ、ぅっ、あっ、はぁあっ！　あっ、ぅううっ！",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP_18759.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0091_T_Rindere": {
+    "ID": "lbp_phase2_0091_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0092_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁっ、これだっ、この極太おちんちんっ！　んんぅっ、ご主人様じゃ届かないところにまで、はぁっ、届いてぇっ……！",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_PMD_28231.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0100_T_Rindere": {
+    "ID": "lbp_phase2_0100_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "だったら……いいだろう？　さっきよりももっと気持ちよくしてあげるから……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_Y_28067.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0110_T_Rindere": {
+    "ID": "lbp_phase2_0110_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0111_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あっ、ぎっ、ぐぅんっ！　そんなのっ、無理だっ！　ふぁあっ、私のマンコ穴っ、んぅぐっ、悦び過ぎてっ！　はうっ、それどころじゃ……！",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_PMD_28238.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0120_T_Rindere": {
+    "ID": "lbp_phase2_0120_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0121_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "よっぽど我慢出来ないんだな……そうだ、何かして欲しいことはあるだろうか？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_Y_28172.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0130_T_Rindere": {
+    "ID": "lbp_phase2_0130_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0131",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "もっと、激しいの、んっ！　ああっ、いい、からぁ、はぁ、あふっ、んっ！",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP_19173.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4,
+          "EndTime": 9.57
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0140_T_Rindere": {
+    "ID": "lbp_phase2_0140_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0141_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、そんなにいやらしいことを続けて欲しいのか？　あなたって案外エッチな子だったんだな？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_Y_28168.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0150_T_Rindere": {
+    "ID": "lbp_phase2_0150_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "イクやつ、なのにっ……！？　ひぐ、あああっ、いやっ……いやぁっ……！　だめだめだめっ、イく、ああ、あああああっ！",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_X01_61987.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0160_T_Rindere": {
+    "ID": "lbp_phase2_0160_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0161_T_Rindere",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "イクっ、イクぅ！　ああぁぁぁ～～～～っ！！",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_order_52061.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0161_T_Rindere": {
+    "ID": "lbp_phase2_0161_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0162",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁっ、はぁっ……！　ご主人様以外の、んっ……ぁうっ、おちんちんで……こんなにっ、感じてしまうなんて……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP02_24641.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 10.15
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0170_T_Rindere": {
+    "ID": "lbp_phase2_0170_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0171_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んぇっ……何故抜いてしまうんだ？　んっ、今度はきちんと締めるから、早くチンポ戻してくれ……んんっ、ほら、どうした？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP01_19746.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_phase2_0180_T_Rindere": {
+    "ID": "lbp_phase2_0180_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_phase2_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ここからが本番だからな……ふふ、いっぱい気持ちよく……してあげる……からっ……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_Y_28295.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2,
+          "EndTime": 9.5
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0020_T_Rindere": {
+    "ID": "lbp_postyotogi_0020_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0021_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んぢゅるっ……ふふ、確かにここ、すごいドロドロになってる……私の舌でこんなに興奮するなら、他の人なんてもう考えられないだろう……？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_Y_28179.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0030_T_Rindere": {
+    "ID": "lbp_postyotogi_0030_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0031_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、んんっ……今の気持ちが止まらないんだ……ぁん、ひぁんっ……！　あぁ、あなた……好き、好きだ……！　ぁあんっ！",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP5_30162.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0040_T_Rindere": {
+    "ID": "lbp_postyotogi_0040_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0041_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、気持ちいいだろう？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP_19149.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0050_T_Rindere": {
+    "ID": "lbp_postyotogi_0050_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0051_camerapan",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "初めてだぁ……んぅ……もうイキっぱなしで……ふぁぁ、幸せになってしまうぅぅ……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_PMD_28248.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 4.4
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0060_T_Rindere": {
+    "ID": "lbp_postyotogi_0060_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0061_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ、お互いにそんなにまでなるなんて、まるでカップルのようだね？　そうは思わないか？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_Y_28170.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0070_T_Rindere": {
+    "ID": "lbp_postyotogi_0070_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ふふ……不思議なものだ。あなたにここまで心を奪われてしまうとはな……",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_PMD_28259.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0080_T_Rindere": {
+    "ID": "lbp_postyotogi_0080_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "私が気付いていないとでも思っていたのか？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_X01_61735.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3.5
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0090_T_Rindere": {
+    "ID": "lbp_postyotogi_0090_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0091_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "こらっ、悪趣味にも程があるぞっ！　プライバシーの侵害で訴えてやろうか？",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_PMD_27976.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0100_T_Rindere": {
+    "ID": "lbp_postyotogi_0100_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ぐっ……最低だな！",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_PMD_27956.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.6
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0110_T_Rindere": {
+    "ID": "lbp_postyotogi_0110_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0111_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "嘘をつくな！私は嘘は嫌いなんだ。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_09767.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0120_T_Rindere": {
+    "ID": "lbp_postyotogi_0120_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ここまできたら、流石に見過ごすわけにいかないな。まったく……こっちへ来い！",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_X01_61734.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0130_T_Rindere": {
+    "ID": "lbp_postyotogi_0130_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0131_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "こんなに私が怒っているのに、ここを硬くさせるなんて……！　やはり反省していないようだなっ！",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_X01_61743.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0140_T_Rindere": {
+    "ID": "lbp_postyotogi_0140_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0141_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "これはなおのこと、お仕置きが必要だな。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_X01_61745.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1,
+          "EndTime": 5.5
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0150_T_Rindere": {
+    "ID": "lbp_postyotogi_0150_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0151",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そこに横になってくれるだけでいいんだ。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP02C_26287.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 5.5
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0160_T_Rindere": {
+    "ID": "lbp_postyotogi_0160_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0161",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そんなことを言いながら、踏まれているだけで感じているじゃないか。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP02C_26298.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 4.5
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0170_T_Rindere": {
+    "ID": "lbp_postyotogi_0170_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "これはご主人様へのお仕置きだっ！",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP01_20316.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 3.5
+        }
+      }
+    }
+  },
+
+  "lbp_postyotogi_0180_T_Rindere": {
+    "ID": "lbp_postyotogi_0180_T_Rindere",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_postyotogi_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "声が小さくて聞こえないな。",
+      "VoiceData": {
+        "Rindere": {
+          "VoiceFile": "H2_GP01_19644.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  }
+}

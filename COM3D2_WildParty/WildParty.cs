@@ -51,6 +51,7 @@ namespace COM3D2.WildParty.Plugin
                     Harmony.CreateAndPatchAll(typeof(HooksAndPatches.YotogiScreen.Hooks), HooksAndPatches.YotogiScreen.Hooks.GUID);
 
                     ModUseData.Init();
+                    ModUseData.InitFromManifest();
 
                     if (Plugin.Config.DeveloperMode)
                     {
