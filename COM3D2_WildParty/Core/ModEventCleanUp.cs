@@ -163,6 +163,8 @@ namespace COM3D2.WildParty.Plugin.Core
             Util.ClearGenericCollection(PartyGroup.SharedExtraManSetupInfo);
             Util.ClearGenericCollection(PartyGroup.BackgroundManList);
             Util.ClearGenericCollection(PartyGroup.BackgroundManSetupInfo);
+            Util.ClearGenericCollection(PartyGroup.IdleMaids);
+            Util.ClearGenericCollection(PartyGroup.IdleMaidRotationOffsetList);
 
             Util.ClearGenericCollection(StateManager.Instance.TimeEndTriggerList);
             Util.ClearGenericCollection(StateManager.Instance.ADVTimeEndTriggerList);
@@ -177,6 +179,8 @@ namespace COM3D2.WildParty.Plugin.Core
 
             Util.ClearGenericCollection(StateManager.Instance.CustomVariable);
 
+            Util.ClearGenericCollection(StateManager.Instance.MaidMindList);
+
             StateManager.Instance.RequireCheckModdedSceneFlag = false;
             StateManager.Instance.WaitForCharactersFullLoadFlag = false;
             StateManager.Instance.RequireInjectCommandButtons = false;
@@ -190,6 +194,8 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.RequiresYotogiButtonPostPorcess = false;
             StateManager.Instance.ForceAnimationNoFade = false;
             StateManager.Instance.IsEyeMaskEnabled = true;
+
+            StateManager.Instance.ExtraCommandChangeSkillFlag = false;
 
             StateManager.Instance.YotogiManager = null;
             StateManager.Instance.YotogiCommandFactory = null;

@@ -27,6 +27,7 @@ namespace COM3D2.WildParty.Plugin
         public int BackgroundManSlotCount = -1;
         public List<MovingQueueSetupData> MovingQueueSetup;       //For gangbang queue type use
         public List<MovingQueueSetupData> GroupManMovementSetup;    //For "train of asses"
+        public int IdleMaidPositionCount = 0;
 
         internal class GroupSetupData
         {

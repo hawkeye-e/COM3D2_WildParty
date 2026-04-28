@@ -728,6 +728,11 @@ namespace COM3D2.WildParty.Plugin.Core
                 int rnd = RNG.Random.Next(RandomList.FaceAnime.AngryList.Length);
                 maid.FaceAnime(RandomList.FaceAnime.AngryList[rnd]);
             }
+            else if (faceAnime == RandomList.FaceAnime.FaceAnimeCode.RandomTired)
+            {
+                int rnd = RNG.Random.Next(RandomList.FaceAnime.TiredList.Length);
+                maid.FaceAnime(RandomList.FaceAnime.TiredList[rnd]);
+            }
             else
             {
                 maid.FaceAnime(faceAnime);

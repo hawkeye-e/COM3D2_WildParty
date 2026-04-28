@@ -257,6 +257,15 @@
 	    <EmbeddedResource Include="@(CsvFiles->'%(FullPath).gz')" />
 	  </ItemGroup>
 	</Target>	
+	
+	<Target Name="CleanCompressedResources" BeforeTargets="Clean">
+	  <ItemGroup>
+		<CompressedFiles Include="Resources\TextResources\**\*.json.gz" />
+		<CompressedFiles Include="Resources\TextResources\**\*.csv.gz" />
+	  </ItemGroup>
+	  <Message Text="Cleaning compressed resources..." Importance="high" />
+	  <Delete Files="@(CompressedFiles)" />
+	</Target>
 
   <ItemGroup>
     <None Update="Resources\TextResources\**\*.json.gz">

@@ -1492,5 +1492,40 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
             return true;
         }
+
+        internal static void CacheAllMaidsMindValue()
+        {
+            foreach (var maid in StateManager.Instance.YotogiWorkingMaidList)
+            {
+                if (StateManager.Instance.MaidMindList.ContainsKey(maid))
+                    StateManager.Instance.MaidMindList[maid] = maid.status.currentMind;
+            }
+        }
+
+        internal static void RestoreMaidMindValue(YotogiPlayManager yotogiPlayManager)
+        {
+            if (StateManager.Instance.ExtraCommandChangeSkillFlag)
+            {
+                if (StateManager.Instance.UndergoingModEventID > 0)
+                    if (!Util.GetUndergoingScenario().UnlimitedMind)
+                    {
+                        Maid maid = Traverse.Create(yotogiPlayManager).Field("maid_").GetValue<Maid>();
+                        if (StateManager.Instance.MaidMindList.ContainsKey(maid))
+                        {
+                            maid.status.currentMind = StateManager.Instance.MaidMindList[maid];
+                            YotogiParamBasicBar param_basic_bar_ = Traverse.Create(yotogiPlayManager).Field("param_basic_bar_").GetValue<YotogiParamBasicBar>();
+                            YotogiParameterViewer paramenter_viewer_ = Traverse.Create(yotogiPlayManager).Field("paramenter_viewer_").GetValue<YotogiParameterViewer>();
+                            param_basic_bar_.SetCurrentMind(maid.status.currentMind, is_anime: false);
+
+                            if (paramenter_viewer_ != null && paramenter_viewer_.gameObject.activeSelf)
+                            {
+                                paramenter_viewer_.UpdateTextParam();
+                            }
+                            yotogiPlayManager.UpdateCommand();
+                        }
+                    }
+                StateManager.Instance.ExtraCommandChangeSkillFlag = false;
+            }
+        }
     }
 }

@@ -365,16 +365,26 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
         {
             //Check Review
             Core.BackgroundGroupMotionManager.CheckReviewForEachGroup(__instance, StateManager.Instance.PartyGroupList);
+            Core.IdleMaidsMotionManager.CheckReviewForIdleMaids(__instance, PartyGroup.IdleMaids);
             Core.YotogiHandling.CheckTimeEndTrigger();
         }
 
-        
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(YotogiPlayManager), nameof(YotogiPlayManager.NextSkill))]
+        private static void NextSkillPre(YotogiPlayManager __instance)
+        {
+            //Record the value of mind
+            Patches.CacheAllMaidsMindValue();
+        }
+
         [HarmonyPostfix]
         [HarmonyPatch(typeof(YotogiPlayManager), nameof(YotogiPlayManager.NextSkill))]
         private static void NextSkillPost(YotogiPlayManager __instance)
         {
             //In the NextSkill method, the maid in index 1 could be set to not visible if the main group changes from FFM to MF etc. Need to set it back
             Patches.ResetMaidVisibility();
+            //Restore the mind value if necessary
+            Patches.RestoreMaidMindValue(__instance);
         }
 
         //Prevent the Yotogi scene change its background if the spoof flag is on

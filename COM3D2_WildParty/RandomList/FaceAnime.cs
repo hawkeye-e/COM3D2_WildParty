@@ -26,6 +26,10 @@ namespace COM3D2.WildParty.Plugin.RandomList
         {
             Constant.FaceAnimeType.Scornful, Constant.FaceAnimeType.Angry_Mu, Constant.FaceAnimeType.Angry, Constant.FaceAnimeType.LittleAngry,
         };
+        internal static readonly string[] TiredList =
+{
+            Constant.FaceAnimeType.AfterOrgasm1, Constant.FaceAnimeType.AfterOrgasm2, Constant.FaceAnimeType.AfterOrgasmExcite1, Constant.FaceAnimeType.AfterOrgasmExcite2, Constant.FaceAnimeType.EroticOrgasm,
+        };
 
 
         internal static class FaceAnimeCode
@@ -36,6 +40,7 @@ namespace COM3D2.WildParty.Plugin.RandomList
             internal const string RandomRest = "RandomRest";
             internal const string RandomMaidAsManHorny = "RandomMaidAsManHorny";
             internal const string RandomAngry = "RandomAngry";
+            internal const string RandomTired = "RandomTired";
         }
 
         public static string GetFaceBlendString(int exciteValue)

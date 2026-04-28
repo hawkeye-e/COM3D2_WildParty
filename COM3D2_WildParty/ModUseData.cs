@@ -73,6 +73,8 @@ namespace COM3D2.WildParty.Plugin
         //Key: texture type
         public static Dictionary<string, List<BodyWritingTextureInfo>> BodyWritingTextureList;
 
+        public static Dictionary<int, YotogiIdleMaidsHandling> IdleMaidsHandlingInfoList;
+
         public static List<ScenarioManifest> ScenarioManifestList;
         //Key: Manifest type(Constant.ResourcesFileType), Value: file path
         public static Dictionary<string, string> CommonManifestList;
@@ -139,6 +141,8 @@ namespace COM3D2.WildParty.Plugin
             BodyWritingTallyCountSetupList = BodyWritingSetupInfo.ReadCSVFile(LoadCompressedCommonResources(Constant.ResourcesFileType.BodyWritingTallyCountSetup));
 
             BodyWritingTextureList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, List<BodyWritingTextureInfo>>>(LoadCompressedCommonResources(Constant.ResourcesFileType.BodyWritingTextureFileList));
+
+            IdleMaidsHandlingInfoList = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<int, YotogiIdleMaidsHandling>>(LoadCompressedCommonResources(Constant.ResourcesFileType.YotogiIdleMaidsHandling));
         }
 
         private static string LoadCompressedCommonResources(string ResourceFileTypeKey)

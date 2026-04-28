@@ -10,6 +10,8 @@ namespace COM3D2.WildParty.Plugin.Core
     {
         internal static void ChangeMainGroupSkill_Callback(int sexPosID, string skillID)
         {
+            StateManager.Instance.ExtraCommandChangeSkillFlag = true;
+
             var commandChainedItem = ModUseData.ExtraYotogiCommandDataList.Where(x => x.Value.CommandCode == Constant.ModYotogiCommandButtonCode.ChangePosition
                 && x.Value.IsGenericListCommand
                 && x.Value.GenericCommandSetting.SourceSexPosIDs.Contains(StateManager.Instance.PartyGroupList[0].SexPosID)
@@ -80,6 +82,8 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             GameMain.Instance.MainCamera.FadeOut(ConfigurableValue.CameraFadeTime, f_dg: delegate
             {
+                StateManager.Instance.ExtraCommandChangeSkillFlag = true;
+
                 foreach (PartyGroup group in StateManager.Instance.PartyGroupList)
                     YotogiHandling.ResetYotogiMiscSetup(group);
 
@@ -107,6 +111,15 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 StateManager.Instance.SpoofActivateMaidObjectFlag = false;
 
+                //Stop the review time of the idle maids, if any
+                if (ModUseData.PartyGroupSetupList[PartyGroup.CurrentFormation].IdleMaidPositionCount > 0)
+                {
+                    if (PartyGroup.IdleMaids != null)
+                        foreach (var kvp in PartyGroup.IdleMaids)
+                            if (kvp.Value != null)
+                                kvp.Value.StopNextReviewTime();
+                }
+
                 CharacterHandling.StopCurrentAnimation();
 
                 if (string.IsNullOrEmpty(formationID))
@@ -118,7 +131,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
                 else
                     CharacterHandling.AssignPartyGroupingBySetupInfo(formationID, true);
-
+                
                 YotogiHandling.SetupYotogiSceneInitialSkill(Util.GetCurrentDefaultSexPosID());
                 CharacterHandling.SetGroupZeroActive();
 

@@ -65,6 +65,10 @@ namespace COM3D2.WildParty.Plugin.Core
                     return new EventDelegate(ShowFormationOption_SexStateDescChange);
                 case Constant.ModYotogiCommandButtonCode.ChangeEyeMask:
                     return new EventDelegate(ChangeEyeMask);
+
+                case Constant.ModYotogiCommandButtonCode.MindRecoverAll:
+                    return new EventDelegate(MindRecoverAll);
+
                 default:
                     return null;
             }
@@ -959,6 +963,20 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
+        private static void MindRecoverAll()
+        {
+            foreach (Maid maid in StateManager.Instance.YotogiWorkingMaidList)
+                maid.status.currentMind = maid.status.maxMind;
+
+            //Review all idle maid's motion immediately
+            foreach (var kvp in PartyGroup.IdleMaids)
+                if (kvp.Value != null)
+                    kvp.Value.GenerateNextReviewTime(0);
+
+            //Reload to Update the UI
+            YotogiHandling.ChangeMainGroupSkill(Util.GetGroupCurrentSkill(StateManager.Instance.PartyGroupList[0]).YotogiSkillID);
+        }
+
 
         internal static void ProcessChainedAction(string buttonID)
         {
@@ -1009,7 +1027,10 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.YotogiManager.play_mgr.UpdateCommand();
         }
 
-
+        internal static void RepopulateYotogiCommandList()
+        {
+            StateManager.Instance.YotogiManager.play_mgr.UpdateCommand();
+        }
 
         private static bool IsMainGroupChangeMemberIndexValid(int indexOffset)
         {

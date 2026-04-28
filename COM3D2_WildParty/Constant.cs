@@ -10,6 +10,7 @@ namespace COM3D2.WildParty.Plugin
         internal static readonly int[] EXPackPersonality = { PersonalityType.Masochist, PersonalityType.Cunning, PersonalityType.Gyaru };
         internal const int ExcitementRateMaxCap = 300;
         internal const int SensualRateMaxCap = 300;
+        internal const int SensualRateMinCap = 0;
         internal const int YotogiExcitementLevelStep = 100;
         internal const string ClothesSetResetCode = "RESET";
         internal const string ClothesSetStrapOnDildo = "StrapOnDildo";
@@ -68,6 +69,7 @@ namespace COM3D2.WildParty.Plugin
 
             internal const string YotogiCommandDataOverride = "YotogiCommandDataOverride";
             internal const string YotogiMiscHandling = "YotogiMiscHandling";
+            internal const string YotogiIdleMaidsHandling = "YotogiIdleMaidsHandling";
 
             internal const string VoiceAllInsert = "VoiceAllInsert";
             internal const string VoiceAllOrgasmScream = "VoiceAllOrgasmScream";
@@ -313,6 +315,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string EroticLikeable1 = "エロ好感１";
             internal const string EroticLikeable2 = "エロ好感２";
             internal const string EroticLikeable3 = "エロ好感３";
+            internal const string EroticOrgasm = "エロ絶頂";
             internal const string Estrus = "発情";
             internal const string Aftertaste = "余韻弱";
 
@@ -624,6 +627,7 @@ namespace COM3D2.WildParty.Plugin
         {
             internal const string Owner = "Owner";
             internal const string UnassignedMaid = "UnassignedMaid";
+            internal const string IdleMaids = "IdleMaids";
         }
 
         internal static class IndividualCoordinateType
@@ -689,6 +693,8 @@ namespace COM3D2.WildParty.Plugin
             internal const string ChangeEyeMask = "ChangeEyeMask";
 
             internal const string ChainedAction = "ChainedAction";
+
+            internal const string MindRecoverAll = "MindRecoverAll";
         }
 
         internal static class CameraEaseType

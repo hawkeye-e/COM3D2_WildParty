@@ -144,80 +144,8 @@ namespace COM3D2.WildParty.Plugin.Core
 
             }
 
-            //Set individual position
-            if (coords.IndividualCoordinates != null)
-            {
-                foreach (var item in coords.IndividualCoordinates)
-                {
-                    Maid targetMaid = null;
-                    if (item.Type == Constant.IndividualCoordinateType.Maid)
-                    {
-                        if (StateManager.Instance.YotogiWorkingMaidList.Count > item.ArrayPosition)
-                            targetMaid = StateManager.Instance.YotogiWorkingMaidList[item.ArrayPosition];
-                    }
-                    else if (item.Type == Constant.IndividualCoordinateType.Man)
-                    {
-                        if (StateManager.Instance.YotogiWorkingMaidList.Count > item.ArrayPosition)
-                            targetMaid = StateManager.Instance.YotogiWorkingManList[item.ArrayPosition];
-                    }
-                    else if (item.Type == Constant.IndividualCoordinateType.ADVMaid)
-                    {
-                        if (StateManager.Instance.SelectedMaidsList.Count > item.ArrayPosition)
-                            targetMaid = StateManager.Instance.SelectedMaidsList[item.ArrayPosition];
-                    }
-                    else if (item.Type == Constant.IndividualCoordinateType.ADVMan)
-                    {
-                        if (StateManager.Instance.MenList.Count > item.ArrayPosition)
-                            targetMaid = StateManager.Instance.MenList[item.ArrayPosition];
-                    }
-                    else if (item.Type == Constant.IndividualCoordinateType.NPCMale)
-                    {
-                        if (StateManager.Instance.NPCManList.Count > item.ArrayPosition)
-                            targetMaid = StateManager.Instance.NPCManList[item.ArrayPosition];
-                    }
-                    else if (item.Type == Constant.IndividualCoordinateType.NPCFemale)
-                    {
-                        if (StateManager.Instance.NPCManList.Count > item.ArrayPosition)
-                            targetMaid = StateManager.Instance.NPCList[item.ArrayPosition];
-                    }
-                    else if (item.Type == Constant.IndividualCoordinateType.Owner)
-                        targetMaid = StateManager.Instance.ClubOwner;
-
-
-                    if (targetMaid != null)
-                    {
-                        targetMaid.transform.localPosition = Vector3.zero;
-                        targetMaid.transform.position = item.Pos;
-                        targetMaid.transform.rotation = item.Rot;
-                        targetMaid.body0.SetBoneHitHeightY(item.Pos.y);
-                    }
-                }
-            }
-
-            //Set special position
-            if (coordsGroup.SpecialCoordinates != null)
-            {
-                foreach (var item in coordsGroup.SpecialCoordinates)
-                {
-                    if (item.Type == Constant.SpecialCoordinateType.Owner)
-                    {
-                        StateManager.Instance.ClubOwner.transform.localPosition = Vector3.zero;
-                        StateManager.Instance.ClubOwner.transform.position = item.Pos;
-                        StateManager.Instance.ClubOwner.transform.rotation = item.Rot;
-                        StateManager.Instance.ClubOwner.body0.SetBoneHitHeightY(item.Pos.y);
-                    }
-                    else if (item.Type == Constant.SpecialCoordinateType.UnassignedMaid)
-                    {
-                        if (PartyGroup.UnassignedMaid != null)
-                        {
-                            PartyGroup.UnassignedMaid.transform.localPosition = Vector3.zero;
-                            PartyGroup.UnassignedMaid.transform.position = item.Pos;
-                            PartyGroup.UnassignedMaid.transform.rotation = item.Rot;
-                            PartyGroup.UnassignedMaid.body0.SetBoneHitHeightY(item.Pos.y);
-                        }
-                    }
-                }
-            }
+            Util.ResetAllGroupPosition();
+            
 
 
             //For extra man assigned to the group
@@ -443,6 +371,9 @@ namespace COM3D2.WildParty.Plugin.Core
                     SetMasturbMotionToCharacter(PartyGroup.UnassignedMaid, MasturbationMotion.Type.MaidOnFloor);
             }
 
+            //Handle Idle maids
+            SetIdleMaidsMotion();
+
             //for some unknown reason the setpos above may not work, try to set it here once more
             Util.ResetAllGroupPosition();
 
@@ -454,6 +385,107 @@ namespace COM3D2.WildParty.Plugin.Core
             else
                 CameraHandling.SetCameraLookAt(StateManager.Instance.PartyGroupList[0].Maid1);
         }
+
+        //This function should be run after the position of the maid is set
+        internal static void SetIdleMaidsMotion()
+        {
+            if (PartyGroup.IdleMaids != null)
+            {                
+                foreach (var kvp in PartyGroup.IdleMaids)
+                {
+                    if (kvp.Value != null)
+                    {
+                        Maid maid = kvp.Value.Maid;
+                        SetIdleMaidMotion(maid);
+                    }
+                }
+            }
+        }
+
+        internal static void SetIdleMaidMotion(Maid maid)
+        {
+            if (maid != null)
+            {
+                var idleMaidsHandlingInfo = ModUseData.IdleMaidsHandlingInfoList[StateManager.Instance.UndergoingModEventID];
+
+                YotogiIdleMaidsHandling.IdleMotionInfo motionInfoToApply;
+                if (idleMaidsHandlingInfo.TiredThreshold > maid.status.currentMind)
+                {
+                    //Tired motion
+                    motionInfoToApply = idleMaidsHandlingInfo.TiredMotions[RNG.Random.Next(idleMaidsHandlingInfo.TiredMotions.Count)];
+                }
+                else
+                {
+                    //Standard motion
+                    var sensualMotionList = idleMaidsHandlingInfo.StandardMotions.Where(x => x.MaxSensual >= maid.status.currentSensual && x.MinSensual <= maid.status.currentSensual).First().MotionList;
+                    motionInfoToApply = sensualMotionList[RNG.Random.Next(sensualMotionList.Count)];
+                }
+
+                if (motionInfoToApply != null)
+                {
+                    //set also the rotation offset
+                    if (PartyGroup.IdleMaidRotationOffsetList.ContainsKey(maid))
+                        PartyGroup.IdleMaidRotationOffsetList[maid] = motionInfoToApply.Offset.Rot;
+                    else
+                        PartyGroup.IdleMaidRotationOffsetList.Add(maid, motionInfoToApply.Offset.Rot);
+
+                    //apply the motion
+                    CharacterHandling.ApplyMotionInfoToCharacter(maid, motionInfoToApply.MotionInfo);
+
+                    //only animation file currently
+                    ApplyIKRectifyOnAnimation(maid, motionInfoToApply.MotionInfo.MotionFile);
+
+                    //Apply Voice
+                    int exciteLevel = motionInfoToApply.ExciteLevel >= 0 ? motionInfoToApply.ExciteLevel : Util.GetMaidExcitementLevel(maid);
+                    CharacterHandling.SetCharacterVoiceEntry(maid, PersonalityVoice.VoiceEntryType.NormalPlay, exciteLevel, motionInfoToApply.VoiceType, false, false);
+
+                    //Apply facial expression
+                    if (!string.IsNullOrEmpty(motionInfoToApply.FaceType))
+                        CustomADVProcessManager.SetFaceAnimeToMaid(maid, motionInfoToApply.FaceType);
+                    maid.FaceBlend(RandomList.FaceAnime.GetFaceBlendString(exciteLevel));
+                }
+
+
+            }
+        }
+
+        internal static void ApplyIKRectifyOnAnimation(Maid maid, string animationFileName)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                //Only apply to idle maids currently
+                if (maid != null)
+                {
+                    //reset IK first
+#if COM3D2_5
+#if UNITY_2022_3
+                    maid.body0.fullBodyIK.AllIKDetach();
+#endif
+#endif
+#if COM3D2
+                    maid.AllIKDetach();
+#endif
+
+                    List<IKRectify> rectifyList = ModUseData.IKRectifyList.Where(x => x.ScenarioID == StateManager.Instance.UndergoingModEventID.ToString() && x.AnimationFileName == animationFileName).ToList();
+                    foreach (var rectifyItem in rectifyList)
+                    {
+                        ScriptManagerFast.KagTagSupportFast tag = rectifyItem.GetTagDataInKagTagSupportFormat();
+
+                        if (rectifyItem.IKType == IKRectify.IKRectifyType.IKAttachBone)
+                        {
+                            Core.CharacterHandling.IKAttachBone(tag, maid, maid);
+                        }
+                        else if (rectifyItem.IKType == IKRectify.IKRectifyType.IKAttachPoint)
+                        {
+                            Core.CharacterHandling.IKAttachPoint(tag, maid, maid);
+                        }
+                    }
+                }
+            }
+        }
+
+
+
 
         internal static void SetMasturbMotionToCharacter(Maid maid, string type, bool isMan = false)
         {
@@ -1277,15 +1309,15 @@ namespace COM3D2.WildParty.Plugin.Core
 
             //need to add the offset value of regarding to the motion so that the man doesnt not walk over the maid visually
             float angle = firstManInQueue.transform.rotation.eulerAngles.y;
-            
+
             Vector3 maidMotionOffsetRespectToRotation = Quaternion.AngleAxis(angle, Vector3.up) * (queueSetup.MaidMotionOffset);
-            
+
             float firstManDistance = Vector3.Distance(currentGroup.ExtraManSetupInfo[0].Pos, currentGroup.Maid1.transform.position + maidMotionOffsetRespectToRotation);
             HardCodeMotion.ManWalkController.MoveForward(firstManInQueue, firstManDistance, standingMotionType,
                 new EventDelegate(() => ChangeManMembersQueueType_FirstManMoveFinish(currentGroup, firstManInQueue, OnChangeManMemberFinish))
                 );
             currentGroup.MovingGroupMemberList.Add(firstManInQueue);
-            
+
             //move the queue forward in this group
             List<int> currentGroupKeyList = currentGroup.ExtraManList.Keys.OrderBy(x => x).ToList();
             for (int i = 0; i < currentGroupKeyList.Count; i++)
@@ -1399,8 +1431,8 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             if (maid == null)
                 return;
-            
-            BodyWritingsMarker.AddTallyCounterMark(maid, bodySide); 
+
+            BodyWritingsMarker.AddTallyCounterMark(maid, bodySide);
         }
 
         internal static void AddManToBackgroundList(Maid man)

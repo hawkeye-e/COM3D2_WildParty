@@ -50,6 +50,7 @@ namespace COM3D2.WildParty.Plugin
 
         public static string CurrentFormation = "";
         public static Maid UnassignedMaid = null;   //For handling the special situation of main group being a CharacterEX personality and no man left in other group
+        public static Dictionary<int, IdleMaidInfo> IdleMaids = new Dictionary<int, IdleMaidInfo>();   //For harem situation that the maids do not involve in the current scene and is staying in the background
 
         public ForceSexPosInfo ForceSexPos = null;
         public List<EyeSightSetting> ForceEyeSight = new List<EyeSightSetting>();
@@ -57,6 +58,8 @@ namespace COM3D2.WildParty.Plugin
 
         public Dictionary<int, Vector3> MaidOffsetList = new Dictionary<int, Vector3>();
         public Dictionary<int, Vector3> ManOffsetList = new Dictionary<int, Vector3>();
+
+        public static Dictionary<Maid, Vector3> IdleMaidRotationOffsetList = new Dictionary<Maid, Vector3>();
 
         public Dictionary<string, GameObject> ExtraObjects = new Dictionary<string, GameObject>();
         public Dictionary<Maid, List<string>> ExtraCharacterObjects = new Dictionary<Maid, List<string>>();
@@ -148,14 +151,7 @@ namespace COM3D2.WildParty.Plugin
         {
             get
             {
-                if (ExcitementRate < 0)
-                    return 0;
-                else if (ExcitementRate < 100)
-                    return 1;
-                else if (ExcitementRate < 200)
-                    return 2;
-                else
-                    return 3;
+                return Util.GetMaidExcitementLevel(Maid1);
             }
         }
 
@@ -210,6 +206,31 @@ namespace COM3D2.WildParty.Plugin
                 man.transform.position = setupInfo.Pos;
                 man.transform.rotation = setupInfo.Rot;
                 man.body0.SetBoneHitHeightY(setupInfo.Pos.y);
+
+            }
+        }
+
+        public static void SetIdleMaidsPosition()
+        {
+            MapCoorindates coordsGroup = ModUseData.MapCoordinateList[CurrentFormation];
+
+            foreach (var kvp in IdleMaids)
+            {
+                if (kvp.Value != null)
+                {
+                    Maid maid = kvp.Value.Maid;
+
+                    var item = coordsGroup.SpecialCoordinates.Where(x => x.Type == Constant.SpecialCoordinateType.IdleMaids && x.ArrayPosition == kvp.Key).First();
+
+                    Vector3 rotationOffset = Vector3.zero;
+                    if (PartyGroup.IdleMaidRotationOffsetList.ContainsKey(maid))
+                        rotationOffset = PartyGroup.IdleMaidRotationOffsetList[maid];
+
+                    maid.transform.localPosition = Vector3.zero;
+                    maid.transform.position = item.Pos;
+                    maid.transform.rotation = item.Rot * Quaternion.Euler(Vector3.up * rotationOffset.y);
+                    maid.body0.SetBoneHitHeightY(item.Pos.y);
+                }
 
             }
         }

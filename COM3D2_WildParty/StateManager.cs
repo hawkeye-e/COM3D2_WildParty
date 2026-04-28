@@ -126,5 +126,8 @@ namespace COM3D2.WildParty.Plugin
 
         internal bool ForceAnimationNoFade = false;
         internal bool IsEyeMaskEnabled = true;                  //Can be altered by user during yotogi game play
+
+        internal bool ExtraCommandChangeSkillFlag = false;      //For identifying the function call is caused by mod injected commands
+        internal Dictionary<Maid ,int> MaidMindList = new Dictionary<Maid, int>();
     }
 }

@@ -12,7 +12,8 @@ namespace COM3D2.WildParty.Plugin
         public string ScenarioID;
         public List<string> ScriptName;
         public string LabelName;
-        
+        public string AnimationFileName;
+
 
         public string Type;
         public string IKType;

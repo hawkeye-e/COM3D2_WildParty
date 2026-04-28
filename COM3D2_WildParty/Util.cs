@@ -254,9 +254,45 @@ namespace COM3D2.WildParty.Plugin
                                 PartyGroup.UnassignedMaid.body0.SetBoneHitHeightY(item.Pos.y);
                             }
                         }
+                        else if (item.Type == Constant.SpecialCoordinateType.IdleMaids)
+                        {
+                            if (PartyGroup.IdleMaids != null && PartyGroup.IdleMaids.Count > item.ArrayPosition)
+                            {
+                                if (PartyGroup.IdleMaids[item.ArrayPosition] != null)
+                                {
+                                    Maid maid = PartyGroup.IdleMaids[item.ArrayPosition].Maid;
+
+                                    Vector3 rotationOffset = Vector3.zero;
+                                    if (PartyGroup.IdleMaidRotationOffsetList.ContainsKey(maid))
+                                        rotationOffset = PartyGroup.IdleMaidRotationOffsetList[maid];
+
+                                    maid.transform.localPosition = Vector3.zero;
+                                    maid.transform.position = item.Pos;
+                                    maid.transform.rotation = item.Rot * Quaternion.Euler(Vector3.up * rotationOffset.y);
+                                    maid.body0.SetBoneHitHeightY(item.Pos.y);
+
+                                    //also set the maid to look at the main group
+                                    string targetBone = Constant.DefinedGameObjectNames.ManHeadBoneName;
+                                    maid.EyeToTarget(StateManager.Instance.PartyGroupList[0].Man1, 0.5f, targetBone);
+                                }
+                            }
+                        }
                     }
                 }
             }
+        }
+
+        public static int GetMaidExcitementLevel(Maid maid)
+        {
+            int excite = maid.status.currentExcite;
+            if (excite < 0)
+                return 0;
+            else if (excite < 100)
+                return 1;
+            else if (excite < 200)
+                return 2;
+            else
+                return 3;
         }
 
         public static void SetAllMaidVisiblility(bool isVisible)
@@ -661,6 +697,16 @@ namespace COM3D2.WildParty.Plugin
                 StateManager.Instance.CustomVariable.Remove(name);
 
             StateManager.Instance.CustomVariable.Add(name, value);
+        }
+
+        internal static int GetRandomEmptySlotFromDictionary<T>(Dictionary<int, T> dict)
+        {
+            //Get the index with T = null, and form a list
+            var emptyKeyList = dict.Where(x => x.Value == null)
+                .Select(x => x.Key)
+                .ToList();
+
+            return emptyKeyList[RNG.Random.Next(emptyKeyList.Count)];
         }
 
 
