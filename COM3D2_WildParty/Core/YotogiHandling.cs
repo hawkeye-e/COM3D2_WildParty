@@ -145,7 +145,7 @@ namespace COM3D2.WildParty.Plugin.Core
             }
 
             Util.ResetAllGroupPosition();
-            
+
 
 
             //For extra man assigned to the group
@@ -390,7 +390,7 @@ namespace COM3D2.WildParty.Plugin.Core
         internal static void SetIdleMaidsMotion()
         {
             if (PartyGroup.IdleMaids != null)
-            {                
+            {
                 foreach (var kvp in PartyGroup.IdleMaids)
                 {
                     if (kvp.Value != null)
@@ -566,7 +566,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
             //reset the player state
             Traverse.Create(StateManager.Instance.YotogiManager.play_mgr).Field(Constant.DefinedClassFieldNames.YotogiPlayManagerPlayerState).SetValue(YotogiPlay.PlayerState.Normal);
-
+            
             //refresh the command
             StateManager.Instance.YotogiManager.play_mgr.NextSkill();
 
@@ -607,8 +607,6 @@ namespace COM3D2.WildParty.Plugin.Core
 
         internal static void SetGroupWaitingMotion(PartyGroup group, BackgroundGroupMotion.MotionItem motionItem, bool loadMotionScript = true)
         {
-
-
             MotionSpecialLabel waitingLabel = motionItem.SpecialLabels.Where(x => x.Type == MotionSpecialLabel.LabelType.Waiting).First();
 
             string maidGUID = "";
@@ -942,7 +940,7 @@ namespace COM3D2.WildParty.Plugin.Core
             int manStartCounter = 0;
             if (isKeepFirstMan)
                 manStartCounter = 1;
-
+            
             for (int i = manStartCounter; i < group.ManCount; i++)
             {
                 Maid toBeExtra = group.GetManAtIndex(i);
@@ -960,8 +958,27 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 if (groupIndex == 0)
                 {
+                    //check if the man selected in the active man list
+                    bool isActiveListSwapFlag = false;
+                    int activeListIndex = -1;
+                    for(int j=0; j < GameMain.Instance.CharacterMgr.GetManCount(); j++)
+                    {
+                        var manInActiveList = GameMain.Instance.CharacterMgr.GetMan(j);
+                        if (manInActiveList != null)
+                        {
+                            if (manInActiveList == toBeMain)
+                            {
+                                isActiveListSwapFlag = true;
+                                activeListIndex = j;
+                            }
+                        }
+                    }
+                    
+
                     StateManager.Instance.SpoofActivateMaidObjectFlag = true;
                     GameMain.Instance.CharacterMgr.SetActiveMan(toBeMain, motionItem.ManIndex[i]);
+                    if (isActiveListSwapFlag)
+                        GameMain.Instance.CharacterMgr.SetActiveMan(toBeExtra, activeListIndex);
                     StateManager.Instance.SpoofActivateMaidObjectFlag = false;
                 }
 
@@ -1471,6 +1488,40 @@ namespace COM3D2.WildParty.Plugin.Core
             man.transform.position = targetSetupInfo[extraManLastPos].Pos;
             man.transform.rotation = targetSetupInfo[extraManLastPos].Rot;
             CharacterHandling.ApplyMotionInfoToCharacter(man, targetSetupInfo[extraManLastPos].Motion);
+        }
+
+        internal static void ForceChangeMainGroupMan(bool isMainManOwner)
+        {
+            BlockAllYotogiCommands();
+
+            EventDelegate toBeExec;
+            if (StateManager.Instance.PartyGroupList[0].ExtraManList.Count > 0 && PartyGroup.BackgroundManList.Count > 0)
+                toBeExec = new EventDelegate(ForceChangeManQueueTypeWithBackgroundTriggerExecution);
+            else if (StateManager.Instance.PartyGroupList[0].ExtraManList.Count > 0)
+                toBeExec = new EventDelegate(ForceChangeManQueueTypeTriggerExecution);
+            else
+                toBeExec = new EventDelegate(() => ForceChangeManShareListTypeTriggerExecution(isMainManOwner));
+
+            VoiceLoopTrigger trigger = new VoiceLoopTrigger();
+            trigger.TargetMaid = StateManager.Instance.PartyGroupList[0].Maid1;
+            trigger.ToBeExecuted = toBeExec;
+            StateManager.Instance.VoiceLoopTrigger = trigger;
+        }
+
+        private static void ForceChangeManShareListTypeTriggerExecution(bool isMainManOwner)
+        {
+            Core.YotogiHandling.ChangeManMembersShareListType(StateManager.Instance.PartyGroupList[0], isMainManOwner);
+            StateManager.Instance.YotogiManager.play_mgr.UpdateCommand();
+        }
+
+        private static void ForceChangeManQueueTypeTriggerExecution()
+        {
+            Core.YotogiHandling.ChangeManMembersQueueType(StateManager.Instance.PartyGroupList[0]);
+        }
+
+        private static void ForceChangeManQueueTypeWithBackgroundTriggerExecution()
+        {
+            Core.YotogiHandling.ChangeManMembersQueueTypeWithBackground(StateManager.Instance.PartyGroupList[0]);
         }
     }
 }

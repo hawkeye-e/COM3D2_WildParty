@@ -68,6 +68,8 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 case Constant.ModYotogiCommandButtonCode.MindRecoverAll:
                     return new EventDelegate(MindRecoverAll);
+                case Constant.ModYotogiCommandButtonCode.ForceAllOrgasm:
+                    return new EventDelegate(() => ForceAllOrgasm(buttonID));
 
                 default:
                     return null;
@@ -385,8 +387,10 @@ namespace COM3D2.WildParty.Plugin.Core
             SetupPreSwapMotionEndTrigger(1, true);
         }
 
-        public static void OrgasmCommandOnClick(string buttonID)
+        public static void OrgasmCommandOnClick(string buttonID, bool isKeepFirstMan = false)
         {
+            StateManager.Instance.ExtraCommandWindow.SetVisible(false);
+
             PartyGroup mainGroup = StateManager.Instance.PartyGroupList[0];
 
             //Find the orgasm type from resources by using button ID
@@ -415,7 +419,17 @@ namespace COM3D2.WildParty.Plugin.Core
 
             //Use the orgasm type to locate the special label
             BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemOfGroup(mainGroup);
-            MotionSpecialLabel spLabel = motionItem.SpecialLabels.Where(x => x.SexPosID == mainGroup.SexPosID && x.OrgasmType == orgasmType).FirstOrDefault();
+            MotionSpecialLabel spLabel;
+            if (orgasmType == "")
+            {
+                var orgasmLabelList = motionItem.SpecialLabels.Where(x => x.SexPosID == mainGroup.SexPosID && x.Type == MotionSpecialLabel.LabelType.Orgasm).ToList();
+                spLabel = orgasmLabelList[RNG.Random.Next(orgasmLabelList.Count)];
+            }
+            else
+            {
+                spLabel = motionItem.SpecialLabels.Where(x => x.SexPosID == mainGroup.SexPosID && x.OrgasmType == orgasmType).FirstOrDefault();
+            }
+                
 
             if (spLabel != null)
             {
@@ -423,7 +437,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
                 CharacterHandling.LoadMotionScript(0, false, motionItem.FileName, spLabel.Label);
 
-                Trigger.AnimationEndTrigger trigger = new Trigger.AnimationEndTrigger(mainGroup.Maid1, new EventDelegate(() => OrgasmCommandFinishFollowUp()), ConfigurableValue.OrgasmFinishFollowUpBaseExtraWaitingTimeInSecond + RNG.Random.Next(ConfigurableValue.OrgasmFinishFollowUpVariableExtraWaitingTimeInSecond));
+                Trigger.AnimationEndTrigger trigger = new Trigger.AnimationEndTrigger(mainGroup.Maid1, new EventDelegate(() => OrgasmCommandFinishFollowUp(isKeepFirstMan)), ConfigurableValue.OrgasmFinishFollowUpBaseExtraWaitingTimeInSecond + RNG.Random.Next(ConfigurableValue.OrgasmFinishFollowUpVariableExtraWaitingTimeInSecond));
                 StateManager.Instance.AnimationChangeTrigger = trigger;
 
                 var clip = mainGroup.Maid1.body0.m_Animation.GetClip(mainGroup.CurrentMaid1AnimationClipName);
@@ -439,7 +453,7 @@ namespace COM3D2.WildParty.Plugin.Core
             StateManager.Instance.PartyGroupList[0].BlockMotionScriptChange = true;
         }
 
-        private static void OrgasmCommandFinishFollowUp()
+        private static void OrgasmCommandFinishFollowUp(bool isKeepFirstMan = false)
         {
             StateManager.Instance.PartyGroupList[0].BlockMotionScriptChange = false;
 
@@ -460,7 +474,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 //Gangbang rule
                 //randomly pick up the man from extra man list and swap with the main group
 
-                YotogiHandling.ChangeManMembersShareListType(mainGroup);
+                YotogiHandling.ChangeManMembersShareListType(mainGroup, isKeepFirstMan);
 
             }
 
@@ -977,6 +991,37 @@ namespace COM3D2.WildParty.Plugin.Core
             YotogiHandling.ChangeMainGroupSkill(Util.GetGroupCurrentSkill(StateManager.Instance.PartyGroupList[0]).YotogiSkillID);
         }
 
+        private static void ForceAllOrgasm(string buttonID)
+        {
+            StateManager.Instance.ExtraCommandWindow.SetVisible(false);
+
+            //Try to grab all the orgasm button and pick one to execute randomly
+            List<UIButton> cmdList = new List<UIButton>();
+            if(StateManager.Instance.YotogiCommandButtonList != null)
+            {
+                //Command button by the system
+                foreach (var item in StateManager.Instance.YotogiCommandButtonList)
+                {
+                    cmdList.Add(item);
+                }
+
+                //Command button injected by this mod
+                foreach(var item in StateManager.Instance.InjectedButtons)
+                {
+                    if(item.Data.Type == ExtraYotogiCommandData.CommandType.Orgasm)
+                        cmdList.Add(item.Button.GetComponent<UIButton>());
+                }
+
+                var rnd = RNG.Random.Next(cmdList.Count);
+                EventDelegate.Execute(cmdList[rnd].onClick);
+            }
+
+            Scenario.YotogiSetupInfo yotogiSetup = Util.GetUndergoingScenario().YotogiSetup.Where(x => x.Phase == StateManager.Instance.YotogiPhase).First();
+            
+            //Force all background groups enter orgasm state
+            BackgroundGroupMotionManager.ForceAllGroupsToState(StateManager.Instance.PartyGroupList, SexState.StateType.Orgasm);
+        }
+
 
         internal static void ProcessChainedAction(string buttonID)
         {
@@ -1098,7 +1143,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
                     UpdateCommandButtonState(button, isAllFulfilled);
                 }
-                else if (commandBtn.Data.Type == ExtraYotogiCommandData.CommandType.Orgasm)
+                else if (commandBtn.Data.Type == ExtraYotogiCommandData.CommandType.Orgasm || commandBtn.Data.Type == ExtraYotogiCommandData.CommandType.OrgasmAll)
                 {
                     bool isEnable = maid.status.currentExcite >= commandBtn.Data.OrgasmSetting.MinExcite && playerState == YotogiPlay.PlayerState.Insert;
                     UpdateCommandButtonState(commandBtn.Button.GetComponent<UIButton>(), isEnable);

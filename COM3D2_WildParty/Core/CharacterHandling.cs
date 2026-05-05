@@ -506,23 +506,14 @@ namespace COM3D2.WildParty.Plugin.Core
                 }
             }
 
-            Maid maid2 = workingMaidList.Where(x => x.status.fullNameJpStyle.Contains("奏絵")).First();
-            workingMaidList.Remove(maid2 );
-            workingMaidList.Insert(0, maid2);
-
-
             if (setupInfo.IsShuffleManList)
                 StateManager.Instance.YotogiWorkingManList = ShuffleMaidOrManList(StateManager.Instance.YotogiWorkingManList);
-
-            foreach(var maid in workingMaidList)
-                WildParty.Log.LogInfo(maid.status.fullNameJpStyle);
 
             StateManager.Instance.YotogiWorkingMaidList = workingMaidList;
 
             int maidRunningNumber = 0;
             int manRunningNumber = 0;
             int NPCFemaleRunningNumber = 0;
-
             foreach (var groupSetupInfo in setupInfo.GroupSetup.OrderBy(x => x.ArrayPosition))
             {
                 if (!groupSetupInfo.MaidFromNPC)
@@ -559,32 +550,35 @@ namespace COM3D2.WildParty.Plugin.Core
             }
 
             //If there is any maid remaining after the group assignment, put them in the IdleMaids list
-            if (PartyGroup.IdleMaids.Count != setupInfo.IdleMaidPositionCount)
+            if (PartyGroup.IdleMaids.Count != setupInfo.IdleMaidPositionCount && setupInfo.IdleMaidPositionCount > 0)
             {
                 for (int i = 0; i < setupInfo.IdleMaidPositionCount; i++)
                     PartyGroup.IdleMaids.Add(i, null);
             }
 
-            foreach (Maid maid in workingMaidList)
+            if (setupInfo.IdleMaidPositionCount > 0)
             {
-                if (Util.GetPartyGroupByCharacter(maid) == null)
+                foreach (Maid maid in workingMaidList)
                 {
-                    //the maid is idle maid, add her to the idle maid list if she is not there
-                    if (!PartyGroup.IdleMaids.Any(x => x.Value != null && x.Value.Maid == maid))
+                    if (Util.GetPartyGroupByCharacter(maid) == null)
                     {
-                        IdleMaidInfo idleMaid = new IdleMaidInfo();
-                        idleMaid.Maid = maid;
-                        idleMaid.GenerateNextReviewTime();
-                        PartyGroup.IdleMaids[Util.GetRandomEmptySlotFromDictionary(PartyGroup.IdleMaids)] = idleMaid;
+                        //the maid is idle maid, add her to the idle maid list if she is not there
+                        if (!PartyGroup.IdleMaids.Any(x => x.Value != null && x.Value.Maid == maid))
+                        {
+                            IdleMaidInfo idleMaid = new IdleMaidInfo();
+                            idleMaid.Maid = maid;
+                            idleMaid.GenerateNextReviewTime();
+                            PartyGroup.IdleMaids[Util.GetRandomEmptySlotFromDictionary(PartyGroup.IdleMaids)] = idleMaid;
+                        }
                     }
-                }
-                else
-                {
-                    //the maid is not an idle maid, remove her from the idle maid list if she is there
-                    if (PartyGroup.IdleMaids.Any(x => x.Value != null && x.Value.Maid == maid))
+                    else
                     {
-                        var key = PartyGroup.IdleMaids.Where(x => x.Value != null && x.Value.Maid == maid).Select(x => x.Key).First();
-                        PartyGroup.IdleMaids[key] = null;
+                        //the maid is not an idle maid, remove her from the idle maid list if she is there
+                        if (PartyGroup.IdleMaids.Any(x => x.Value != null && x.Value.Maid == maid))
+                        {
+                            var key = PartyGroup.IdleMaids.Where(x => x.Value != null && x.Value.Maid == maid).Select(x => x.Key).First();
+                            PartyGroup.IdleMaids[key] = null;
+                        }
                     }
                 }
             }

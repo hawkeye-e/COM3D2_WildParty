@@ -695,6 +695,7 @@ namespace COM3D2.WildParty.Plugin
             internal const string ChainedAction = "ChainedAction";
 
             internal const string MindRecoverAll = "MindRecoverAll";
+            internal const string ForceAllOrgasm = "ForceAllOrgasm";
         }
 
         internal static class CameraEaseType

@@ -39,7 +39,7 @@ namespace COM3D2.WildParty.Plugin
 
         public class OrgasmSettingInfo
         {
-            public string Type;
+            public string Type = "";     //Empty for any type available
             public int MinExcite;
             public int ExciteDecay;
         }
@@ -48,7 +48,8 @@ namespace COM3D2.WildParty.Plugin
         {
             Common,
             Fetish,
-            Orgasm
+            Orgasm,
+            OrgasmAll
         }
 
         public class CommandParameters

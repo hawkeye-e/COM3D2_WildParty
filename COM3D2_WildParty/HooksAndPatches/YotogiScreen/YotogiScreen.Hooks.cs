@@ -117,6 +117,9 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
             //For easy access the yotogi command factory object, we have to remember the instance here
             StateManager.Instance.YotogiCommandFactory = __instance;
+
+            //Add the command button to memory if they are orgasm type, for force all group orgasm used.
+            Patches.CacheOrgasmCommandButton(command_data);
         }
 
 
@@ -508,5 +511,12 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
             __result = Patches.GetOverrideCommandName(commandDataBasic, __result);
         }
 
+        //Clear the Command Button List before the factory generate a new list each time to avoid duplication
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(YotogiCommandFactory), nameof(YotogiCommandFactory.ClearCommand))]
+        private static void YotogiCommandFactoryClearCommand()
+        {
+            Patches.ClearOrgasmCommandButtonList();
+        }
     }
 }

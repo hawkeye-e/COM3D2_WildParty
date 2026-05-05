@@ -180,6 +180,7 @@ namespace COM3D2.WildParty.Plugin.Core
             Util.ClearGenericCollection(StateManager.Instance.CustomVariable);
 
             Util.ClearGenericCollection(StateManager.Instance.MaidMindList);
+            Util.ClearGenericCollection(StateManager.Instance.YotogiCommandButtonList);
 
             StateManager.Instance.RequireCheckModdedSceneFlag = false;
             StateManager.Instance.WaitForCharactersFullLoadFlag = false;

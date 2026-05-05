@@ -565,14 +565,12 @@ namespace COM3D2.WildParty.Plugin
         {
             if (list != null)
                 list.Clear();
-            list = null;
         }
 
         internal static void ClearGenericCollection<TKey, TValue>(Dictionary<TKey,TValue> list)
         {
             if (list != null)
                 list.Clear();
-            list = null;
         }
 
         /*

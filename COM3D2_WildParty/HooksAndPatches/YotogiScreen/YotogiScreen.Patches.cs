@@ -909,39 +909,10 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                 {
                     if (command_data.basic.command_type == Yotogi.SkillCommandType.絶頂)
                     {
-                        Core.YotogiHandling.BlockAllYotogiCommands();
-
-                        EventDelegate toBeExec;
-                        if (StateManager.Instance.PartyGroupList[0].ExtraManList.Count > 0 && PartyGroup.BackgroundManList.Count > 0)
-                            toBeExec = new EventDelegate(ForceChangeManQueueTypeWithBackgroundTriggerExecution);
-                        else if (StateManager.Instance.PartyGroupList[0].ExtraManList.Count > 0)
-                            toBeExec = new EventDelegate(ForceChangeManQueueTypeTriggerExecution);
-                        else
-                            toBeExec = new EventDelegate(() => ForceChangeManShareListTypeTriggerExecution(yotogiSetup.IsMainManOwner));
-
-                        VoiceLoopTrigger trigger = new VoiceLoopTrigger();
-                        trigger.TargetMaid = StateManager.Instance.PartyGroupList[0].Maid1;
-                        trigger.ToBeExecuted = toBeExec;
-                        StateManager.Instance.VoiceLoopTrigger = trigger;
+                        Core.YotogiHandling.ForceChangeMainGroupMan(yotogiSetup.IsMainManOwner);
                     }
                 }
             }
-        }
-
-        private static void ForceChangeManShareListTypeTriggerExecution(bool isMainManOwner)
-        {
-            Core.YotogiHandling.ChangeManMembersShareListType(StateManager.Instance.PartyGroupList[0], isMainManOwner);
-            StateManager.Instance.YotogiManager.play_mgr.UpdateCommand();
-        }
-
-        private static void ForceChangeManQueueTypeTriggerExecution()
-        {
-            Core.YotogiHandling.ChangeManMembersQueueType(StateManager.Instance.PartyGroupList[0]);
-        }
-
-        private static void ForceChangeManQueueTypeWithBackgroundTriggerExecution()
-        {
-            Core.YotogiHandling.ChangeManMembersQueueTypeWithBackground(StateManager.Instance.PartyGroupList[0]);
         }
 
         internal static void CheckApplyTallyCounterTexture(Yotogis.Skill.Data.Command.Data command_data)
@@ -1525,6 +1496,33 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                         }
                     }
                 StateManager.Instance.ExtraCommandChangeSkillFlag = false;
+            }
+        }
+
+        internal static void CacheOrgasmCommandButton(Yotogis.Skill.Data.Command.Data command_data)
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                if (command_data.basic.command_type == Yotogi.SkillCommandType.絶頂)
+                {
+                    var commandList = StateManager.Instance.YotogiCommandFactory;
+                    Transform childTransform = commandList.transform.GetChild(commandList.transform.childCount - 1);
+                    UIButton childButton = childTransform.GetComponent<UIButton>();
+
+
+                    if (childButton != null)
+                    {
+                        StateManager.Instance.YotogiCommandButtonList.Add(childButton);
+                    }
+                }
+            }
+        }
+
+        internal static void ClearOrgasmCommandButtonList()
+        {
+            if (StateManager.Instance.UndergoingModEventID > 0)
+            {
+                StateManager.Instance.YotogiCommandButtonList.Clear();
             }
         }
     }

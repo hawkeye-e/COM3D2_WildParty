@@ -45,6 +45,26 @@ namespace COM3D2.WildParty.Plugin.Core
             }
         }
 
+        internal static void ForceAllGroupsToState(List<PartyGroup> groupList, string forceState)
+        {
+            if (groupList == null)
+                return;
+            if (StateManager.Instance.ModEventProgress != Constant.EventProgress.YotogiPlay)
+                return;
+
+            //Skip group zero as it is under player control
+            for (int i = 1; i < groupList.Count; i++)
+            {
+                PartyGroup group = groupList[i];
+
+                //Stop the review time
+                group.StopNextReviewTime();
+
+                //force the state to orgasm
+                HandleGroupForStateOrgasm(groupList[i]);
+            }
+        }
+
         //Handle the sensual value of the group and determine if it is estrus or not
         private static void ProcessSensual(PartyGroup group)
         {
@@ -194,7 +214,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
         internal static void ProcessSemenForGroup(PartyGroup group)
         {
-            if(!StateManager.Instance.IsYotogiUseModSemenPattern)
+            if (!StateManager.Instance.IsYotogiUseModSemenPattern)
                 ProcessSemenForGroup(group, group.CurrentOrgasmLabelRecord);
         }
 
@@ -223,7 +243,7 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 //When the orgasm motion ended, Change the voice to orgasm wait
                 BackgroundGroupMotion.MotionItem motionItem = Util.GetMotionItemOfGroup(group);
-                
+
                 int excitementLevel = group.ExcitementLevel;
 
                 CharacterHandling.SetCharacterVoiceEntry(group.Maid1, PersonalityVoice.VoiceEntryType.OrgasmWait, excitementLevel, group.CurrentOrgasmLabelRecord.WaitLabel1, group.IsEstrus, group.IsVoicelessGroup);
@@ -257,20 +277,20 @@ namespace COM3D2.WildParty.Plugin.Core
                 {
                     lstMotion.AddRange(ModUseData.BackgroundMotionList[groupType].Where(x => x.Phase == StateManager.Instance.YotogiPhase && x.IsBGGroupUse).ToList());
                 }
-                
+
                 int rndMotion = RNG.Random.Next(lstMotion.Count);
 
                 string targetGroupType = "";
                 foreach (var groupType in possibleGroupTypes)
                 {
-                    if(ModUseData.BackgroundMotionList[groupType].Any(x => x.ID == lstMotion[rndMotion].ID))
+                    if (ModUseData.BackgroundMotionList[groupType].Any(x => x.ID == lstMotion[rndMotion].ID))
                     {
                         targetGroupType = groupType;
                         break;
                     }
                 }
 
-                if(group.GroupType != targetGroupType)
+                if (group.GroupType != targetGroupType)
                     YotogiHandling.ConvertToGroupType(group, targetGroupType, lstMotion[rndMotion].ID);
 
                 group.SexPosID = lstMotion[rndMotion].ID;
@@ -348,7 +368,7 @@ namespace COM3D2.WildParty.Plugin.Core
         {
             if (DateTime.Now > group.NextActionReviewTime)
             {
-                YotogiHandling.ChangeManMembersQueueType(group, new EventDelegate(() => OnChangeManMembersQueueTypeFinish(group)) );
+                YotogiHandling.ChangeManMembersQueueType(group, new EventDelegate(() => OnChangeManMembersQueueTypeFinish(group)));
 
                 //The next review time will be resumed after all change man member process finished
                 group.StopNextReviewTime();
