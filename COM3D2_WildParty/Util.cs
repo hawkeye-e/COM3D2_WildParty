@@ -131,6 +131,14 @@ namespace COM3D2.WildParty.Plugin
                     return nameof(Constant.PersonalityType.Dame);
                 case Constant.PersonalityType.Gyaru:
                     return nameof(Constant.PersonalityType.Gyaru);
+                case Constant.PersonalityType.Strong:
+                    return nameof(Constant.PersonalityType.Strong);
+                case Constant.PersonalityType.Elegant:
+                    return nameof(Constant.PersonalityType.Elegant);
+                case Constant.PersonalityType.Familiarity:
+                    return nameof(Constant.PersonalityType.Familiarity);
+                case Constant.PersonalityType.Pretty:
+                    return nameof(Constant.PersonalityType.Pretty);
                 default:
                     return "Unknown";
             }

@@ -133,29 +133,33 @@ namespace COM3D2.WildParty.Plugin
         //Name follows the dlc code
         internal static class PersonalityType
         {
-            internal const int Muku = 80;       //無垢
-            internal const int Majime = 90;     //真面目
-            internal const int Rindere = 100;   //凛デレ
-            internal const int Pure = 10;       //純真
-            internal const int Pride = 30;      //ツンデレ
-            internal const int Cool = 20;       //クーデレ
-            internal const int Yandere = 40;    //ヤンデレ
-            internal const int Anesan = 50;     //お姉ちゃん
-            internal const int Genki = 60;      //ボクっ娘
-            internal const int Sadist = 70;     //ドＳ
-            internal const int Silent = 110;    //文学少女
-            internal const int Devilish = 120;  //小悪魔
-            internal const int Ladylike = 130;  //おしとやか
-            internal const int Secretary = 140; //メイド秘書
-            internal const int Sister = 150;    //ふわふわ妹
-            internal const int Curtness = 160;  //無愛想
-            internal const int Missy = 170;     //お嬢様
-            internal const int Childhood = 180; //幼馴染
-            internal const int Masochist = 190; //ド変態ドＭ
-            internal const int Cunning = 200;   //腹黒
-            internal const int Friendly = 210;  //気さく
-            internal const int Dame = 220;      //淑女
-            internal const int Gyaru = 230;     //ギャル
+            internal const int Muku = 80;           //無垢
+            internal const int Majime = 90;         //真面目
+            internal const int Rindere = 100;       //凛デレ
+            internal const int Pure = 10;           //純真
+            internal const int Pride = 30;          //ツンデレ
+            internal const int Cool = 20;           //クーデレ
+            internal const int Yandere = 40;        //ヤンデレ
+            internal const int Anesan = 50;         //お姉ちゃん
+            internal const int Genki = 60;          //ボクっ娘
+            internal const int Sadist = 70;         //ドＳ
+            internal const int Silent = 110;        //文学少女
+            internal const int Devilish = 120;      //小悪魔
+            internal const int Ladylike = 130;      //おしとやか
+            internal const int Secretary = 140;     //メイド秘書
+            internal const int Sister = 150;        //ふわふわ妹
+            internal const int Curtness = 160;      //無愛想
+            internal const int Missy = 170;         //お嬢様
+            internal const int Childhood = 180;     //幼馴染
+            internal const int Masochist = 190;     //ド変態ドＭ
+            internal const int Cunning = 200;       //腹黒
+            internal const int Friendly = 210;      //気さく
+            internal const int Dame = 220;          //淑女
+            internal const int Gyaru = 230;         //ギャル
+            internal const int Strong = 240;        //強か
+            internal const int Elegant = 250;       //雅やか
+            internal const int Familiarity = 260;   //親しみ
+            internal const int Pretty = 270;        //可憐
         }
 
         internal static class MapType
