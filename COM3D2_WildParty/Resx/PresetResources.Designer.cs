@@ -83,6 +83,16 @@ namespace ModResources {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Nakai {
+            get {
+                object obj = ResourceManager.GetObject("Nakai", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] Preset_ImmoralVillage_Kaede {
             get {
                 object obj = ResourceManager.GetObject("Preset_ImmoralVillage_Kaede", resourceCulture);

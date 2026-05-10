@@ -24,6 +24,9 @@ namespace COM3D2.WildParty.Plugin
 
             { "ImmoralVillage_Minori", ModResources.PresetResources.Preset_ImmoralVillage_Minori },
             { "ImmoralVillage_Minori_v2", ModResources.PresetResources.Preset_ImmoralVillage_Minori_v2 },
+
+            { "Nakai", ModResources.PresetResources.Nakai },
+            { "Nakai_v2", ModResources.PresetResources.Nakai },
         };
 
         internal static byte[] GetPresetResources(string presetFile)

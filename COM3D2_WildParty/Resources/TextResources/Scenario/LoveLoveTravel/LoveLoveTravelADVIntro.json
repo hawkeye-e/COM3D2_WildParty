@@ -2,7 +2,7 @@
   "luvtrv0001": {
     "ID": "luvtrv0001",
     "Type": "BG",
-    "Tag": "ShinShitsumu",
+    "Tag": "",
     "WaitingType": "Auto",
     "NextStepID": "luvtrv0001_init_chara"
   },
@@ -15,10 +15,11 @@
     "CharaInitData": {
       "IsClubOwnerADVMainCharacter": true,
       "ManRequired": 0,
-      "ValidManType": [
+      "ModNPC": [
         {
-          "Type": [ "YoungMan" ],
-          "Count": 0
+          "Index": 0,
+          "NPCID": "LoveLoveTravel_Nakai",
+          "IsFemale": true
         }
       ]
     }
@@ -52,18 +53,193 @@
   "luvtrv_intro_0001": {
     "ID": "luvtrv_intro_0001",
     "Type": "BGM",
-    "Tag": "BGM015.ogg",
+    "Tag": "BGM018.ogg",
     "WaitingType": "Auto",
     "NextStepID": "luvtrv_intro_0002"
   },
 
   "luvtrv_intro_0002": {
     "ID": "luvtrv_intro_0002",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_intro_0003",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "luvtrv_intro_0003": {
+    "ID": "luvtrv_intro_0003",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（最近[=ClubName]はとても忙しい。休む暇もあまりないんだ。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "luvtrv_intro_0004": {
+    "ID": "luvtrv_intro_0004",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0005",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（それに、メイドたちもかなり疲れているみたいなんだ。笑顔は作っているけど、かなり無理しているのが分かる。あの子たちにも、きっと休養が必要だ。）"
+    }
+  },
+
+  "luvtrv_intro_0005": {
+    "ID": "luvtrv_intro_0005",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0006",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（だから皆のためにも、メイドたちと俺自身に数日の休暇を与えることにしたんだ。）"
+    }
+  },
+
+  "luvtrv_intro_0006": {
+    "ID": "luvtrv_intro_0006",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0007",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（静かな村へ短い旅行に行って、少し休もうと思っているんだ。メイドたちと一緒に出かけるのも久しぶりだからな。あの子たちも連れて行けば、きっといい気分転換になると思う。）"
+    }
+  },
+
+  "luvtrv_intro_0007": {
+    "ID": "luvtrv_intro_0007",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "luvtrv_intro_0008",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "luvtrv_intro_0008": {
+    "ID": "luvtrv_intro_0008",
+    "Type": "BG",
+    "Tag": "yashiki_day_futon",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_intro_0009"
+  },
+
+  "luvtrv_intro_0009": {
+    "ID": "luvtrv_intro_0009",
     "Type": "Chara",
     "WaitingType": "Auto",
     "WaitFullLoad": true,
-    "NextStepID": "luvtrv_intro_0003",
+    "NextStepID": "luvtrv_intro_0010",
     "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        },
+        "PosRot": {
+          "PosString": "2.37, 0.00, -2.78",
+          "RotString": "0.000, -0.279, 0.000, 0.960"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち謝る"
+        },
+        "PosRot": {
+          "PosString": "2.72, 0.00, -1.82",
+          "RotString": "0.000, 0.788, 0.000, -0.616"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "MotionFile": "soji_zoukin.anm",
+          "MotionTag": "soji_zoukin.anm"
+        },
+        "PosRot": {
+          "PosString": "0.72, 0.07, -0.57",
+          "RotString": "0.000, -0.812, 0.000, 0.584"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "MotionFile": "work_hansei.anm",
+          "MotionTag": "work_hansei.anm"
+        },
+        "PosRot": {
+          "PosString": "-1.49, 0.00, -1.81",
+          "RotString": "0.000, -0.340, 0.000, 0.940"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "MotionFile": "syagami_pose_f.anm",
+          "MotionTag": "syagami_pose_f.anm"
+        },
+        "PosRot": {
+          "PosString": "-2.71, 0.00, -1.03",
+          "RotString": "0.000, 0.649, 0.000, 0.761"
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "MotionFile": "sit_bed1.anm",
+          "MotionTag": "sit_bed1.anm"
+        },
+        "PosRot": {
+          "PosString": "-2.17, 0.00, -2.18",
+          "RotString": "0.000, 0.000, 0.000, 1.000"
+        }
+      },
+
       {
         "Type": "M",
         "IsMaster": true,
@@ -73,49 +249,45 @@
         "IsManNude": false,
         "MotionInfo": {
           "ScriptFile": "h_man_001.ks",
-          "ScriptLabel": "*男座り＿腕組"
+          "ScriptLabel": "*男立ち＿正眼"
         },
         "PosRot": {
-          "PosString": "0.0, 0.5, -3.4",
-          "RotString": "0.0, 0.0, 0.0, 1.0"
+          "PosString": "2.98, 0.00, -0.69",
+          "RotString": "0.000, 0.695, 0.000, 0.719"
         }
       },
-      {
-        "Type": "F",
-        "ArrayPosition": 0,
-        "Visible": false,
-        "PosRot": {
-          "PosString": "0, 0, 0",
-          "RotString": "0, 0, 0, 1"
-        }
-      }
 
+      {
+        "Type": "NPC_F",
+        "ArrayPosition": 0,
+        "Visible": false
+      }
     ]
   },
 
-  "luvtrv_intro_0003": {
-    "ID": "luvtrv_intro_0003",
+  "luvtrv_intro_0010": {
+    "ID": "luvtrv_intro_0010",
     "Type": "Camera",
     "WaitingType": "Auto",
-    "NextStepID": "luvtrv_intro_0004",
+    "NextStepID": "luvtrv_intro_0011",
     "CameraData": {
       "FixedPointData": {
-        "PosString": "0,1.6,0.9",
-        "TargetPosString": "-0.1,1.5,-0.1",
-        "AroundAngleString": "-179.6,5.3",
-        "Distance": 1
+        "PosString": "-2.71, 1.69, 4.21",
+        "TargetPosString": "0.22, 0.58, -2.38",
+        "AroundAngleString": "156.05, 8.74",
+        "Distance": 7.3
       }
     }
   },
 
-  "luvtrv_intro_0004": {
-    "ID": "luvtrv_intro_0004",
+  "luvtrv_intro_0011": {
+    "ID": "luvtrv_intro_0011",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "luvtrv_intro_yotogiplay_closepanel",
+    "NextStepID": "luvtrv_intro_0012",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（メイドたちの努力のおかげで、[=ClubName]はどんどん有名になっています。今では、様々なお客様から色んなイベントの開催を依頼されることが多くなりました。）"
+      "Text": "（俺たちは旅館に到着し、チェックインを済ませた。仲居は、俺がこんなに大勢のメイドを連れてきたことに少し驚いているようだった。人数が多いからか、彼女はこの旅館で一番広い部屋へ案内してくれた。）"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -123,12 +295,902 @@
     }
   },
 
+  "luvtrv_intro_0012": {
+    "ID": "luvtrv_intro_0012",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0013",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（荷物を置いて一息つく。俺はさっそく、この素晴らしい雰囲気を楽しみ始めた。）"
+    }
+  },
+
+  "luvtrv_intro_0013": {
+    "ID": "luvtrv_intro_0013",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "luvtrv_intro_0014",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "luvtrv_intro_0014": {
+    "ID": "luvtrv_intro_0014",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_intro_0015",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "luvtrv_intro_0015": {
+    "ID": "luvtrv_intro_0015",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "luvtrv_intro_0016",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        },
+        "PosRot": {
+          "PosString": "2.36, 0.00, 2.30",
+          "RotString": "0.000, -0.495, 0.000, 0.869"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "MotionFile": "work_hansei.anm",
+          "MotionTag": "work_hansei.anm"
+        },
+        "PosRot": {
+          "PosString": "4.63, 0.00, 3.24",
+          "RotString": "0.000, 0.717, 0.000, -0.697"
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち待機"
+        },
+        "PosRot": {
+          "PosString": "0.73, 0.07, 2.50",
+          "RotString": "0.000, 0.332, 0.000, 0.943"
+        }
+      },
+
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "PosRot": {
+          "PosString": "1.61, 0.00, 2.62",
+          "RotString": "0.000, 0.030, 0.000, 1.000"
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0016": {
+    "ID": "luvtrv_intro_0016",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_intro_0017",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.54, 1.07, 5.51",
+        "TargetPosString": "3.53, 1.11, 0.84",
+        "AroundAngleString": "132.69, -0.27",
+        "Distance": 6.9
+      }
+    }
+  },
+
+  "luvtrv_intro_0017": {
+    "ID": "luvtrv_intro_0017",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0018",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ふぅ……本当にいい場所だな。景色も最高だし、空気もすごく気持ちいい。鳥のさえずりまで聞こえる。こんなに素晴らしいと、ここに住みたくなってくるな。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "luvtrv_intro_0018": {
+    "ID": "luvtrv_intro_0018",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "luvtrv_intro_0019_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0019_Branch": {
+    "ID": "luvtrv_intro_0019_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "luvtrv_intro_0020_T_[=PType]"
+  },
+
+  "luvtrv_intro_0021": {
+    "ID": "luvtrv_intro_0021",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "luvtrv_intro_0022_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0022_Branch": {
+    "ID": "luvtrv_intro_0022_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "luvtrv_intro_0030_T_[=PType]"
+  },
+
+  "luvtrv_intro_0031": {
+    "ID": "luvtrv_intro_0031",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "luvtrv_intro_0032_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomSmile",
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0032_Branch": {
+    "ID": "luvtrv_intro_0032_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "luvtrv_intro_0040_T_[=PType]"
+  },
+
+  "luvtrv_intro_0041": {
+    "ID": "luvtrv_intro_0041",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0042",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "はは、気に入ってもらえたみたいで何よりだな。"
+    }
+  },
+
+  "luvtrv_intro_0042": {
+    "ID": "luvtrv_intro_0042",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "luvtrv_intro_0043",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "luvtrv_intro_0043": {
+    "ID": "luvtrv_intro_0043",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_intro_0044",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "luvtrv_intro_0044": {
+    "ID": "luvtrv_intro_0044",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0045",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（俺は目を閉じて、風と静けさをゆっくりと味わう。）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "luvtrv_intro_0045": {
+    "ID": "luvtrv_intro_0045",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0046",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（本当に素敵だ……時間が止まっているかのようだ……）"
+    }
+  },
+
+  "luvtrv_intro_0046": {
+    "ID": "luvtrv_intro_0046",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0047",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（……）"
+    }
+  },
+
+  "luvtrv_intro_0047": {
+    "ID": "luvtrv_intro_0047",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0048",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（………）"
+    }
+  },
+
+  "luvtrv_intro_0048": {
+    "ID": "luvtrv_intro_0048",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0049",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（………ん？ 変な感じだな……チンポに……何かが刺激している……？）"
+    }
+  },
+
+  "luvtrv_intro_0049": {
+    "ID": "luvtrv_intro_0049",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "luvtrv_intro_0050",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "luvtrv_intro_0050": {
+    "ID": "luvtrv_intro_0050",
+    "Type": "MakeGroup",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_intro_0051",
+    "GroupFormat": [
+      {
+        "GroupIndex": 0,
+        "Man1": {
+          "Type": "Owner",
+          "ArrayPosition": 0
+        },
+        "Maid1": {
+          "Type": "F",
+          "ArrayPosition": 0
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0051": {
+    "ID": "luvtrv_intro_0051",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "luvtrv_intro_0052",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*激しさ１舐め",
+        "SexPosID": 100,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceBlend": "頬２涙０",
+          "FaceAnime": "エロ舐め愛情"
+        },
+        "Man1": {
+          "Visible": true,
+          "IsManNude": true
+        },
+        "PosRot": {
+          "PosString": "1.61, 0.00, 2.62",
+          "RotString": "0.000, 1.000, 0.000, -0.030"
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0052": {
+    "ID": "luvtrv_intro_0052",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "luvtrv_intro_0053",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 1,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "MotionFile": "sit_bed1.anm",
+          "MotionTag": "sit_bed1.anm"
+        },
+        "PosRot": {
+          "PosString": "2.90, 0.00, 3.24",
+          "RotString": "0.000, 0.773, 0.000, -0.635"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        },
+        "PosRot": {
+          "PosString": "0.73, 0.07, 2.50",
+          "RotString": "0.000, 0.332, 0.000, 0.943"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      },
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        },
+        "PosRot": {
+          "PosString": "2.93, 0.00, 2.48",
+          "RotString": "0.000, -0.636, 0.000, 0.772"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        },
+        "PosRot": {
+          "PosString": "0.72, 0.07, 3.52",
+          "RotString": "0.000, 0.929, 0.000, 0.371"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      },
+
+      {
+        "Type": "F",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち普通１"
+        },
+        "PosRot": {
+          "PosString": "2.62, 0.07, 1.89",
+          "RotString": "0.000, -0.455, 0.000, 0.891"
+        },
+        "EyeSight": {
+          "Type": "ToChara",
+          "EyeToCharaSetting": {
+            "Type": "ClubOwner"
+          }
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0053": {
+    "ID": "luvtrv_intro_0053",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_intro_0053a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.04, 2.57, 3.40",
+        "TargetPosString": "3.54, -0.04, 2.26",
+        "AroundAngleString": "103.95, 28.92",
+        "Distance": 5.4
+      }
+    }
+  },
+
+  "luvtrv_intro_0053a": {
+    "ID": "luvtrv_intro_0053a",
+    "Type": "BGM",
+    "Tag": "BGM011.ogg",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_intro_0054"
+  },
+
+  "luvtrv_intro_0054": {
+    "ID": "luvtrv_intro_0054",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0055",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（目を開けると、[=Name,Maid,0,CallName]が俺のチンポをぺろぺろ舐めていた！）"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "luvtrv_intro_0055": {
+    "ID": "luvtrv_intro_0055",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0056_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "お、おい[=Name,Maid,0,CallName]、何してるんだ？ やめろって。"
+    }
+  },
+
+  "luvtrv_intro_0056_Branch": {
+    "ID": "luvtrv_intro_0056_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "luvtrv_intro_0060_T_[=PType]"
+  },
+
+  "luvtrv_intro_0061": {
+    "ID": "luvtrv_intro_0061",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "luvtrv_intro_0062_Branch",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 100,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny"
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0062_Branch": {
+    "ID": "luvtrv_intro_0062_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "luvtrv_intro_0070_T_[=PType]"
+  },
+
+  "luvtrv_intro_0071": {
+    "ID": "luvtrv_intro_0071",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "luvtrv_intro_0072",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*激しさ１先端",
+        "SexPosID": 100,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceBlend": "頬２涙０",
+          "FaceAnime": "エロフェラ愛情"
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0072": {
+    "ID": "luvtrv_intro_0072",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0073",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "待て待て……俺たちは休みに来たんだぞ……ヤるために来たわけじゃないんだ…"
+    }
+  },
+
+  "luvtrv_intro_0073": {
+    "ID": "luvtrv_intro_0073",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0074",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（うっ……これは……！今の[=Name,Maid,0,CallName]のフェラテクは……めちゃくちゃ上手いじゃないか……！）"
+    }
+  },
+
+  "luvtrv_intro_0074": {
+    "ID": "luvtrv_intro_0074",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0075",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（あっ…！やばい、止まらない……！）"
+    }
+  },
+
+  "luvtrv_intro_0075": {
+    "ID": "luvtrv_intro_0075",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "luvtrv_intro_0076_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 3,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち口元に手を当てる"
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0076_Branch": {
+    "ID": "luvtrv_intro_0076_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "luvtrv_intro_0080_T_[=PType]"
+  },
+
+  "luvtrv_intro_0081": {
+    "ID": "luvtrv_intro_0081",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "luvtrv_intro_0082_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 4,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0082_Branch": {
+    "ID": "luvtrv_intro_0082_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "luvtrv_intro_0090_T_[=PType]"
+  },
+
+  "luvtrv_intro_0091": {
+    "ID": "luvtrv_intro_0091",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0092",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "お、おい、もうやめろって……　ここでセックスばかりしてたら、クラブにいる時と同じじゃん。それじゃ、わざわざ旅行に来た意味がないだろ！"
+    }
+  },
+
+  "luvtrv_intro_0092": {
+    "ID": "luvtrv_intro_0092",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "luvtrv_intro_0093_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 5,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0093_Branch": {
+    "ID": "luvtrv_intro_0093_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "luvtrv_intro_0100_T_[=PType]"
+  },
+
+  "luvtrv_intro_0101": {
+    "ID": "luvtrv_intro_0101",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0102",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（はぁ……この子たち……）"
+    }
+  },
+
+  "luvtrv_intro_0102": {
+    "ID": "luvtrv_intro_0102",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0103",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "まったく……しょうがないな。まあいい、みんな相手してやるよ！"
+    }
+  },
+
+  "luvtrv_intro_0103": {
+    "ID": "luvtrv_intro_0103",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "luvtrv_intro_0104_Branch",
+    "CharaData": [
+      {
+        "Type": "F",
+        "ArrayPosition": 2,
+        "Visible": true,
+        "WaitLoad": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち指を立てる"
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0104_Branch": {
+    "ID": "luvtrv_intro_0104_Branch",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "luvtrv_intro_0110_T_[=PType]"
+  },
+
+  "luvtrv_intro_0111": {
+    "ID": "luvtrv_intro_0111",
+    "Type": "Group",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "luvtrv_intro_0112",
+    "GroupData": [
+      {
+        "ArrayPosition": 0,
+        "ScriptFile": "sex_OM_fera.ks",
+        "ScriptLabel": "*待機",
+        "SexPosID": 100,
+        "WaitLoad": true,
+        "Maid1": {
+          "Visible": true,
+          "FaceAnime": "RandomHorny"
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0112": {
+    "ID": "luvtrv_intro_0112",
+    "Type": "BranchByPersonality",
+    "WaitingType": "Branch",
+    "CharaData": [
+      {
+        "ArrayPosition": 0
+      }
+    ],
+    "NextStepID": "luvtrv_intro_0120_T_[=PType]"
+  },
+
+  "luvtrv_intro_0121": {
+    "ID": "luvtrv_intro_0121",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_yotogiplay_closepanel",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "こっちのセリフだ。泣いてもやめないぞ。"
+    }
+  },
+
+
 
 
   "luvtrv_intro_yotogiplay_closepanel": {
     "ID": "luvtrv_intro_yotogiplay_closepanel",
     "Type": "CloseMsgPanel",
     "WaitingType": "Auto",
+    "NextStepID": "luvtrv_intro_0123"
+  },
+
+  "luvtrv_intro_0123": {
+    "ID": "luvtrv_intro_0123",
+    "Type": "DismissGroup",
+    "WaitingType": "Auto",
+    "Tag": "ALL",
     "NextStepID": "luvtrv_start_yotogiplay"
   },
 
