@@ -335,7 +335,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "luvtrv_postyotogi_0030_T_[=PType]"
@@ -483,7 +483,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "luvtrv_postyotogi_0040_T_[=PType]"
@@ -586,7 +586,7 @@
     "ID": "luvtrv_postyotogi_0047",
     "Type": "Camera",
     "WaitingType": "Auto",
-    "NextStepID": "luvtrv_postyotogi_0048",
+    "NextStepID": "luvtrv_postyotogi_0048_Branch",
     "CameraData": {
       "FixedPointData": {
         "PosString": "-1.09, 1.44, -2.45",
@@ -597,37 +597,16 @@
     }
   },
 
-  "luvtrv_postyotogi_0048": {
-    "ID": "luvtrv_postyotogi_0048",
-    "Type": "Chara",
-    "WaitingType": "Auto",
-    "WaitFullLoad": true,
-    "NextStepID": "luvtrv_postyotogi_0048_Branch",
-    "CharaData": [
-      {
-        "Type": "F",
-        "ArrayPosition": 1,
-        "Visible": true,
-        "WaitLoad": true,
-        "FaceAnime": "ウインク照れ",
-        "MotionInfo": {
-          "ScriptFile": "h_kaiwa_tati_001.ks",
-          "ScriptLabel": "*会話立ち謝る"
-        }
-      }
-    ]
-  },
-
   "luvtrv_postyotogi_0048_Branch": {
     "ID": "luvtrv_postyotogi_0048_Branch",
     "Type": "BranchByPersonality",
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
-    "NextStepID": "luvtrv_postyotogi_0050_T_[=PType]"
+    "NextStepID": "luvtrv_postyotogi_0050_M_[=PType]"
   },
 
   "luvtrv_postyotogi_0051": {
@@ -665,7 +644,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 2
       }
     ],
     "NextStepID": "luvtrv_postyotogi_0060_T_[=PType]"
@@ -752,12 +731,24 @@
     "ID": "luvtrv_postyotogi_0071",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0071a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "（思わぬ出来事が起きているというのに、[=Name,Maid,0,CallName]は俺にピストンを続けるよう促してきた。）"
+    }
+  },
+
+  "luvtrv_postyotogi_0071a": {
+    "ID": "luvtrv_postyotogi_0071a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "luvtrv_postyotogi_0072",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（思わぬ出来事が起きているというのに、[=Name,Maid,0,CallName]は俺にピストンを続けるよう促してきた。あまりに夢中になっていて、見知らぬ人に俺たちのセックスを見られていることなど、まったく気にしていないようだ。）"
+      "Text": "（あまりに夢中になっていて、見知らぬ人に俺たちのセックスを見られていることなど、まったく気にしていないようだ。）"
     }
   },
+
 
   "luvtrv_postyotogi_0072": {
     "ID": "luvtrv_postyotogi_0072",
@@ -816,7 +807,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 3
       }
     ],
     "NextStepID": "luvtrv_postyotogi_0090_T_[=PType]"
@@ -828,7 +819,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 4
       }
     ],
     "NextStepID": "luvtrv_postyotogi_0100_T_[=PType]"
@@ -840,7 +831,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 5
       }
     ],
     "NextStepID": "luvtrv_postyotogi_0110_T_[=PType]"
@@ -971,7 +962,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 3
       }
     ],
     "NextStepID": "luvtrv_postyotogi_0150_T_[=PType]"
@@ -983,7 +974,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 5
       }
     ],
     "NextStepID": "luvtrv_postyotogi_0160_T_[=PType]"
@@ -995,7 +986,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 4
       }
     ],
     "NextStepID": "luvtrv_postyotogi_0170_T_[=PType]"
@@ -1018,7 +1009,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 4
       }
     ],
     "NextStepID": "luvtrv_postyotogi_0180_T_[=PType]"
@@ -1219,7 +1210,7 @@
     "NextStepID": "luvtrv_postyotogi_0188",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（こうして、俺たちはずっと部屋にこもって、何時間もセックスを続けていた）"
+      "Text": "（こうして、俺たちはずっと部屋にこもって、何時間もセックスを続けていた。）"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1256,7 +1247,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 1
       }
     ],
     "NextStepID": "luvtrv_postyotogi_0200_T_[=PType]"
@@ -1268,7 +1259,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 2
       }
     ],
     "NextStepID": "luvtrv_postyotogi_0210_T_[=PType]"
@@ -1299,6 +1290,99 @@
           "VoiceFile": "H0_GP02B_24261.ogg",
           "IsChoppingAudio": true,
           "EndTime": 1.4
+        },
+        "Majime": {
+          "VoiceFile": "H1_08099.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.5
+        },
+        "Rindere": {
+          "VoiceFile": "H2_GP01-P_20990.ogg",
+          "IsChoppingAudio": false
+        },
+        "Pure": {
+          "VoiceFile": "S2_Plus_112961.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        },
+        "Pride": {
+          "VoiceFile": "S0_order_51364.ogg",
+          "IsChoppingAudio": false
+        },
+        "Cool": {
+          "VoiceFile": "S1_GP_105878.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.8
+        },
+        "Yandere": {
+          "VoiceFile": "S3_103177.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.7
+        },
+        "Anesan": {
+          "VoiceFile": "S4_06240.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.5
+        },
+        "Genki": {
+          "VoiceFile": "S5_order_51265.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.5
+        },
+        "Sadist": {
+          "VoiceFile": "S6_X1P_52751.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        },
+        "Silent": {
+          "VoiceFile": "H3_01263.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1,
+          "EndTime": 2
+        },
+        "Devilish": {
+          "VoiceFile": "H4_03841.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2,
+          "EndTime": 3
+        },
+        "Ladylike": {
+          "VoiceFile": "H5_GP02B_12055.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 0.7,
+          "EndTime": 1.7
+        },
+        "Secretary": {
+          "VoiceFile": "H6_order_51538.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2
+        },
+        "Sister": {
+          "VoiceFile": "H7_09012.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.8
+        },
+        "Curtness": {
+          "VoiceFile": "H8_X01_54816.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        },
+        "Missy": {
+          "VoiceFile": "H9_GP02ADD_62966.ogg",
+          "IsChoppingAudio": false
+        },
+        "Childhood": {
+          "VoiceFile": "H10_GP02ADD_63102.ogg",
+          "IsChoppingAudio": false
+        },
+        "Friendly": {
+          "VoiceFile": "V1_GP02ADD_51302.ogg",
+          "IsChoppingAudio": false
+        },
+        "Dame": {
+          "VoiceFile": "V0_GP02ADD_55052.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.2
         }
       }
     }
@@ -1509,7 +1593,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 3
       }
     ],
     "NextStepID": "luvtrv_postyotogi_0220_M_[=PType]"
@@ -1521,7 +1605,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 4
       }
     ],
     "NextStepID": "luvtrv_postyotogi_0230_M_[=PType]"
@@ -1533,7 +1617,7 @@
     "WaitingType": "Branch",
     "CharaData": [
       {
-        "ArrayPosition": 0
+        "ArrayPosition": 5
       }
     ],
     "NextStepID": "luvtrv_postyotogi_0240_M_[=PType]"

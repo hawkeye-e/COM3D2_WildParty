@@ -1,0 +1,825 @@
+﻿{
+  "luvtrv_intro_0020_T_Sister": {
+    "ID": "luvtrv_intro_0020_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "本当に、すごく綺麗な景色だよね……ずーっと眺めていられそう……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_X1P_55005.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_intro_0030_T_Sister": {
+    "ID": "luvtrv_intro_0030_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うん……♪　なんだか、ずーっとここに居たくなっちゃうくらい……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_X1P_55016.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_intro_0040_T_Sister": {
+    "ID": "luvtrv_intro_0040_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そうだね。誘ってくれてありがとう。旅行、思いっきり楽しもうね、お兄ちゃん。",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_X1P_55426.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_intro_0060_T_Sister": {
+    "ID": "luvtrv_intro_0060_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んっ、ちゅ……んむっ、んんっ……お兄ちゃん、わたしっ、んん……！　ここに来てから、どんどんいやらしくなってきてる、気がする……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_X1P_55026.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_intro_0070_T_Sister": {
+    "ID": "luvtrv_intro_0070_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "だから……たまにはわたしから、誘ってみたりとか……したいなって思って……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_X1P_54916.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_intro_0080_M_Sister": {
+    "ID": "luvtrv_intro_0080_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_intro_0080_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち口元に手を当てる"
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0080_T_Sister": {
+    "ID": "luvtrv_intro_0080_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お兄ちゃんの、すごいガチガチ……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_X1P_54949.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3.5
+        }
+      }
+    }
+  },
+
+  "luvtrv_intro_0090_M_Sister": {
+    "ID": "luvtrv_intro_0090_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_intro_0090_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち照れる"
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0090_T_Sister": {
+    "ID": "luvtrv_intro_0090_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0091",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "むぅ……わたしは、お兄ちゃんのおちんちん、もらえないんだ……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_GP02B_09750.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+
+  "luvtrv_intro_0100_M_Sister": {
+    "ID": "luvtrv_intro_0100_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_intro_0100_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち手を合わせる"
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0100_T_Sister": {
+    "ID": "luvtrv_intro_0100_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0101",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "せっかくのハーレムなんだから、ちょっとは楽しもう。",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_third_62773.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5
+        }
+      }
+    }
+  },
+
+  "luvtrv_intro_0110_M_Sister": {
+    "ID": "luvtrv_intro_0110_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_intro_0110_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち指を立てる"
+        }
+      }
+    ]
+  },
+
+  "luvtrv_intro_0110_T_Sister": {
+    "ID": "luvtrv_intro_0110_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0111",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "それじゃあ早速……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_third_62713.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_intro_0120_T_Sister": {
+    "ID": "luvtrv_intro_0120_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_intro_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "そういうことだから……覚悟してね、お兄ちゃん？",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_third_62716.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0010_T_Sister": {
+    "ID": "luvtrv_postyotogi_0010_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ぅくうっ、んぁあ……！　お兄ちゃんの太いの、好きっ……！　奥がどんどん、熱くなって、んんぅ！　ずっと、このままでいたいくらいっ……！",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_order_52208.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0020_T_Sister": {
+    "ID": "luvtrv_postyotogi_0020_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0021",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んぅぅううっ！　お兄ちゃんのおちんちん、どんどん入ってくるの、好きっ……ひうぅっ、んぁああ！　入ってくる時、ぞくぞくする……！",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_03956.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0030_T_Sister": {
+    "ID": "luvtrv_postyotogi_0030_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0031",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ、うん。どうぞ、どうぞ。",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_order_50009.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0040_T_Sister": {
+    "ID": "luvtrv_postyotogi_0040_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0041",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あ……！",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_GP01ADD_60656.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.7
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0050_M_Sister": {
+    "ID": "luvtrv_postyotogi_0050_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_postyotogi_0050_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "ウインク照れ",
+        "MotionInfo": {
+          "ScriptFile": "h_kaiwa_tati_001.ks",
+          "ScriptLabel": "*会話立ち謝る"
+        }
+      }
+    ]
+  },
+
+  "luvtrv_postyotogi_0050_T_Sister": {
+    "ID": "luvtrv_postyotogi_0050_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えへへ……ごめんね？",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_07570.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0060_T_Sister": {
+    "ID": "luvtrv_postyotogi_0060_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0061",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "まったくもう……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_08335.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1.5
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0070_T_Sister": {
+    "ID": "luvtrv_postyotogi_0070_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んぁっ、ほらっ、お兄ちゃんっ……んんっ、もっと強くできるでしょ？　はぁっ、わたしの方に、んぅっ、もっと集中して？",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_04955.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0080_M_Sister": {
+    "ID": "luvtrv_postyotogi_0080_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_postyotogi_0080_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "エロ興奮３",
+        "Effect": {
+          "Add": [ "Breath", "SexualFluid1", "SexualFluid2", "SexualFluid3" ]
+        }
+      }
+    ]
+  },
+
+  "luvtrv_postyotogi_0080_T_Sister": {
+    "ID": "luvtrv_postyotogi_0080_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0081",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "あはぁっ、もう繋がってるとこ、溶けちゃいそうっ……！　ふぁっ、お兄ちゃんのも、わたしのも熱くなって……んぁっ、はぁあっ、すっごくいいよぉっ……！",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_IMD_58658.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0090_T_Sister": {
+    "ID": "luvtrv_postyotogi_0090_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0091_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お姉ちゃん、もう濡れてきちゃってるね……？",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_Y_12466.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 5
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0100_T_Sister": {
+    "ID": "luvtrv_postyotogi_0100_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0101_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "うわあ……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_07286.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 1
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0110_T_Sister": {
+    "ID": "luvtrv_postyotogi_0110_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0111",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "なんだかおもらししてるみたい……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_Y_12488.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 7,
+          "EndTime": 9.5
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0120_M_Sister": {
+    "ID": "luvtrv_postyotogi_0120_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_postyotogi_0120_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "エロ痛み我慢３"
+      }
+    ]
+  },
+
+  "luvtrv_postyotogi_0120_T_Sister": {
+    "ID": "luvtrv_postyotogi_0120_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0121",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "んひゅっ、なんかっ、変な声でちゃいそうっ！　ぉっ、んあっ、ほらっ、気持ちよくなりすぎちゃってっ、んぁあっ、イキたくて身体中っ、エッチになっちゃってるのぉっ……！",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_IMD_58662.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0130_M_Sister": {
+    "ID": "luvtrv_postyotogi_0130_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_postyotogi_0130_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "絶頂射精後２"
+      }
+    ]
+  },
+
+  "luvtrv_postyotogi_0130_T_Sister": {
+    "ID": "luvtrv_postyotogi_0130_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0131",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "ぷあぁっ！　ああああっ！　イクぅぅぅーーーーーーっ！！",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_order_52079.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0140_T_Sister": {
+    "ID": "luvtrv_postyotogi_0140_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0141_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "かはっ……！　はぁっ、はぁっ、はぁっ……！",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_order_52051.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0150_T_Sister": {
+    "ID": "luvtrv_postyotogi_0150_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0151_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お姉ちゃん大丈夫？",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_Y_12725.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 2.5
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0160_T_Sister": {
+    "ID": "luvtrv_postyotogi_0160_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0161_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えっ！？",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_order_50411.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 0.5
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0170_T_Sister": {
+    "ID": "luvtrv_postyotogi_0170_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0171",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "……いいなぁ……気持ちよさそう……あぅ……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_GP01ADD_61519.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 11.5
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0180_T_Sister": {
+    "ID": "luvtrv_postyotogi_0180_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0181",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "よーし、次はわたしの番だね。",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_X1P_55555.ogg",
+          "IsChoppingAudio": true,
+          "EndTime": 3
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0190_T_Sister": {
+    "ID": "luvtrv_postyotogi_0190_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0191_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ……ぁあっ……お兄ちゃん……もう、無理だよ……これ以上は、んっ、んぅうぅっ……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_third_62758.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0200_T_Sister": {
+    "ID": "luvtrv_postyotogi_0200_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0201_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "はぁ、はぁ……んっ……お兄ちゃんのおちんちん、すごく気持ち良かったよ……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_third_62723.ogg",
+          "IsChoppingAudio": false
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0210_T_Sister": {
+    "ID": "luvtrv_postyotogi_0210_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0211",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "えへへ、世界で一番幸せ……♪",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_GP5_09953.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0220_M_Sister": {
+    "ID": "luvtrv_postyotogi_0220_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_postyotogi_0220_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "苦笑い"
+      }
+    ]
+  },
+
+  "luvtrv_postyotogi_0220_T_Sister": {
+    "ID": "luvtrv_postyotogi_0220_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0221_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お兄ちゃん……冗談、だよね？",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_X1P_55054.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.4
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0230_M_Sister": {
+    "ID": "luvtrv_postyotogi_0230_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_postyotogi_0230_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "引きつり笑顔"
+      }
+    ]
+  },
+
+  "luvtrv_postyotogi_0230_T_Sister": {
+    "ID": "luvtrv_postyotogi_0230_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0231_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "その、優しくしてね……？",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_third_62750.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 1.5
+        }
+      }
+    }
+  },
+
+  "luvtrv_postyotogi_0240_M_Sister": {
+    "ID": "luvtrv_postyotogi_0240_M_Sister",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "luvtrv_postyotogi_0240_T_Sister",
+    "CharaData": [
+      {
+        "Type": "F",
+        "UseBranchIndex": true,
+        "Visible": true,
+        "FaceAnime": "にっこり"
+      }
+    ]
+  },
+
+  "luvtrv_postyotogi_0240_T_Sister": {
+    "ID": "luvtrv_postyotogi_0240_T_Sister",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "luvtrv_postyotogi_0241",
+    "TalkData": {
+      "SpecificSpeaker": "Maid",
+      "UseBranchIndex": true,
+      "Text": "お兄ちゃん、すごい……",
+      "VoiceData": {
+        "Sister": {
+          "VoiceFile": "H7_GP01ADD_60125.ogg",
+          "IsChoppingAudio": true,
+          "StartTime": 2.5,
+          "EndTime": 5
+        }
+      }
+    }
+  }
+
+}
