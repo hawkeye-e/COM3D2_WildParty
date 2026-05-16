@@ -52,6 +52,10 @@ namespace COM3D2.WildParty.Plugin
 
             //How long can a group wait (to have a little rest) after orgasm
             internal const int MaxTimeToResumeSexAfterOrgasm = 5;
+
+            internal const int IdleMaidSensualIncreaseRate = 8;
+            internal const int IdleMaidSensualDecayRate = 2;
+            internal const int IdleMaidMindRecoverRate = 6;
         }
         
 

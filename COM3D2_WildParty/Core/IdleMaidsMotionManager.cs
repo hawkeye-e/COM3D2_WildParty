@@ -51,8 +51,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
         private static void AddMindToMaid(Maid maid)
         {
-            //TODO: put that magic number to config
-            maid.status.currentMind = Math.Min(maid.status.maxMind, maid.status.currentMind + RNG.Random.Next(6));
+            maid.status.currentMind = Math.Min(maid.status.maxMind, maid.status.currentMind + RNG.Random.Next(Config.IdleMaidMindRecoverRate));
         }
 
         private static void HandleMaidSensual(Maid maid)
@@ -73,12 +72,12 @@ namespace COM3D2.WildParty.Plugin.Core
         private static void AddSensualToMaid(Maid maid)
         {
             int mainGroupFactor = Math.Max(0, StateManager.Instance.PartyGroupList[0].Maid1.status.currentSensual / 100) + 1;
-            maid.status.currentSensual = Math.Min(Constant.SensualRateMaxCap, maid.status.currentSensual + RNG.Random.Next(8 + mainGroupFactor));
+            maid.status.currentSensual = Math.Min(Constant.SensualRateMaxCap, maid.status.currentSensual + RNG.Random.Next(Config.IdleMaidSensualIncreaseRate + mainGroupFactor));
         }
 
         private static void DeductSensualFromMaid(Maid maid)
         {
-            maid.status.currentSensual = Math.Max(Constant.SensualRateMinCap, maid.status.currentSensual + RNG.Random.Next(3) - 2);
+            maid.status.currentSensual = Math.Max(Constant.SensualRateMinCap, maid.status.currentSensual - RNG.Random.Next(Config.IdleMaidSensualDecayRate));
         }
 
         private static void UpdateIdleMaidMotion(Maid maid)

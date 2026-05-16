@@ -148,6 +148,16 @@ namespace COM3D2.WildParty.Plugin
         internal static bool BodyWritingFetishEffect { get { return _bodyWritingFetishEffect.Value; } }
         private static ConfigEntry<bool> _bodyWritingFetishEffect;
 
+        internal static int IdleMaidSensualIncreaseRate { get { return _idleMaidSensualIncreaseRate.Value; } }
+        private static ConfigEntry<int> _idleMaidSensualIncreaseRate;
+
+        internal static int IdleMaidSensualDecayRate { get { return _idleMaidSensualDecayRate.Value; } }
+        private static ConfigEntry<int> _idleMaidSensualDecayRate;
+
+        internal static int IdleMaidMindRecoverRate { get { return _IdleMaidMindRecoverRate.Value; } }
+        private static ConfigEntry<int> _IdleMaidMindRecoverRate;
+
+
         internal static void Init(BaseUnityPlugin plugin)
         {
             AddGeneralConfigs(plugin);
@@ -230,6 +240,20 @@ namespace COM3D2.WildParty.Plugin
             _maxTimeToResumeSexAfterOrgasm = plugin.Config.Bind(MOTIONSETTING, "Maximum time in second to resume Sex after orgasm", ConfigurableValue.YotogiSimulation.MaxTimeToResumeSexAfterOrgasm,
             new ConfigDescription("Number of second that a group could have to rest after reaching orgasm.", new AcceptableValueRange<int>(0, 60))
             );
+
+            _idleMaidSensualIncreaseRate = plugin.Config.Bind(MOTIONSETTING, "Idle Maid Sensual Increase Rate", ConfigurableValue.YotogiSimulation.IdleMaidSensualIncreaseRate,
+            new ConfigDescription("The upper limit value of the sensual rate increase for idle maids during motion review when the main group is in action.", new AcceptableValueRange<int>(0, 99))
+            );
+
+            _idleMaidSensualDecayRate = plugin.Config.Bind(MOTIONSETTING, "Idle Maid Sensual Decay Rate", ConfigurableValue.YotogiSimulation.IdleMaidSensualDecayRate,
+            new ConfigDescription("The upper limit value of sensual rate decay for idle maids during a motion review when the main group is in action.", new AcceptableValueRange<int>(0, 99))
+            );
+
+            _IdleMaidMindRecoverRate = plugin.Config.Bind(MOTIONSETTING, "Idle Maid Mind Recovery Rate", ConfigurableValue.YotogiSimulation.IdleMaidMindRecoverRate,
+            new ConfigDescription("The upper limit of the mind value increase for idle maids during motion review.", new AcceptableValueRange<int>(0, 99))
+            );
+
+
         }
 
         private static void AddScenarioRelatedConfigs(BaseUnityPlugin plugin)
