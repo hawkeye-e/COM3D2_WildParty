@@ -85,14 +85,25 @@
     "ID": "orgy_wg_0006",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "orgy_wg_0007",
+    "NextStepID": "orgy_wg_0006a",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "イベント当日"
+      "Text": "\n　　　　　　　　　　そして、イベント当日。"
     },
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "orgy_wg_0006a": {
+    "ID": "orgy_wg_0006a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0007",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "クラブへ到着した俺は、期待を胸に店の入口を見上げる。"
     }
   },
 
@@ -104,11 +115,7 @@
     "TalkData": {
       "SpecificSpeaker": "",
       "SpeakerName": "お客様",
-      "Text": "やっと着いた…オーナーは、今日クラブで何かの特別なイベントを開催すると常連客の俺に教えました。"
-    },
-    "FadeData": {
-      "IsFadeIn": true,
-      "IsFadeOut": false
+      "Text": "ふう……やっと着いたぜ。\nオーナーから特別イベントの話が来たから、わざわざ足を伸ばしたんだがな。"
     }
   },
 
@@ -120,7 +127,7 @@
     "TalkData": {
       "SpecificSpeaker": "",
       "SpeakerName": "お客様",
-      "Text": "まあ、好きなメイドに会えたら、なんでもいいげと。よし、入ろか。ふふっ、何があるかな…？"
+      "Text": "まあ、いつものように可愛いメイドさんに会えれば満足だけど……\nふふっ、今日は何があるんだろうな。"
     }
   },
 
@@ -252,7 +259,7 @@
         "FaceAnime": "RandomSmile",
         "PosRot": {
           "PosString": "-1.0, 0.0, 0.0",
-          "RotString": "0.0, 0.0, 0.0, 1.0",
+          "RotString": "0.0, 0.0, 0.0, 1.0"
         }
       },
       {
@@ -841,9 +848,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_wg_0021_M",
     "TalkData": {
-      "SpecificSpeaker": "",
       "SpeakerName": "お客様",
-      "Text": "（クラブに入ると目の前には、俺を歓迎するためにたくさんのメイドたちが立っている。何と素晴らしい光景だ！）"
+      "Text": "店内に入ると、目の前にずらりとメイドたちが並んでいた。\n普段は気軽に抱けないような、上品で綺麗な子たちばかりだ。\nこんなに大勢が一堂に会しているなんて、たまらない光景だ。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1003,9 +1009,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_wg_0023",
     "TalkData": {
-      "SpecificSpeaker": "",
-      "SpeakerName": "お客様",
-      "Text": "（これだけのメイドさんが集まっているのだから、なんか大きいなイベントっぽい！これは期待できますね！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "へえ……これは相当本気度の高いイベントっぽいな。期待できる。"
     }
   },
 
@@ -1015,9 +1020,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_wg_0024",
     "TalkData": {
-      "SpecificSpeaker": "",
       "SpeakerName": "お客様",
-      "Text": "[=Name,Maid,0,CallName]ちゃん！また会えて嬉しいよ。他のメイドさんにもね。"
+      "Text": "[=Name,Maid,0,CallName]ちゃん、また会えて嬉しいよ。\n他のメイドさんたちにも、たっぷりよろしくな。"
     }
   },
 
@@ -1060,7 +1064,7 @@
     "NextStepID": "orgy_wg_0031a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "お待ちしておりました、お客様。実は今日、常連のお客様皆様に感謝の気持ちを込めて、[=ClubName]大感謝祭を開催します。"
+      "Text": "お待ちしておりました、お客様。"
     }
   },
 
@@ -1068,10 +1072,21 @@
     "ID": "orgy_wg_0031a",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0031b",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "本日は常連のお客様方に感謝を込めて、『[=ClubName]大感謝祭』を開催します。"
+    }
+  },
+
+  "orgy_wg_0031b": {
+    "ID": "orgy_wg_0031b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_wg_0032",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "このイベントでは、会場にいるメイド達がみんなの一時的な愛人になります。彼女達といろんな快楽なことができます。どうぞ存分にお楽しみください。"
+      "Text": "会場にいるメイドたちは……\nすべて、お客様方の一時的な愛人となります。\n彼女たちを、どのようにお扱いいただいても結構です。"
     }
   },
 
@@ -1081,9 +1096,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_wg_0032a",
     "TalkData": {
-      "SpecificSpeaker": "",
       "SpeakerName": "お客様",
-      "Text": "え…？みんなって…"
+      "Text": "え……？　みんなって……本気かよ。\n……つまり、俺がこの子たちを好きにしていいってことか？"
     }
   },
 
@@ -1093,9 +1107,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_wg_0032b",
     "TalkData": {
-      "SpecificSpeaker": "",
-      "SpeakerName": "お客様",
-      "Text": "（あっ…そうゆうことか。オーナーの言葉の意味わかった。）"
+      "SpecificSpeaker": "Owner",
+      "Text": "はい。"
     }
   },
 
@@ -1103,11 +1116,128 @@
     "ID": "orgy_wg_0032b",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0032c",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "キスだろうと、激しい愛撫だろうと、\n正常位、バック、騎乗位……\n何度挿入しようが構いません。"
+    }
+  },
+
+  "orgy_wg_0032c": {
+    "ID": "orgy_wg_0032c",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0032d",
+    "CharaData": [
+      {
+        "Type": "F_ALL",
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬２涙０"
+      }
+    ]
+  },
+
+  "orgy_wg_0032d": {
+    "ID": "orgy_wg_0032d",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0032e",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "口内射精、顔射はもちろん、\n中出し、連続中出し、\nさらには二穴同時挿入、串刺し、"
+    }
+  },
+
+  "orgy_wg_0032e": {
+    "ID": "orgy_wg_0032e",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0032f",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "彼女たちの子宮を徹底的に犯すような行為も、すべて自由です。\n彼女たちの身体のどこを、どのように使おうと……一切の制限はありません。"
+    }
+  },
+
+  "orgy_wg_0032f": {
+    "ID": "orgy_wg_0032f",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_wg_0032g",
+    "CharaData": [
+      {
+        "Type": "F_ALL",
+        "Visible": true,
+        "FaceAnime": "RandomHorny",
+        "FaceBlend": "頬３涙０"
+      }
+    ]
+  },
+
+  "orgy_wg_0032g": {
+    "ID": "orgy_wg_0032g",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0032h",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "オーナーの冷たい口調で、次々と卑猥な単語が並べられるたび、並んでいるメイドたちの頰が赤らみ、瞳が妖しく潤んでいくのがわかった。"
+    }
+  },
+
+  "orgy_wg_0032h": {
+    "ID": "orgy_wg_0032h",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0032i",
+    "TalkData": {
+      "SpeakerName": "お客様",
+      "Text": "……ははっ……マジかよ。"
+    }
+  },
+
+  "orgy_wg_0032i": {
+    "ID": "orgy_wg_0032i",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0032j",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "はい。\n当店のメイドたちは、こうした特別なイベントのために徹底的に教育されています。"
+    }
+  },
+
+  "orgy_wg_0032j": {
+    "ID": "orgy_wg_0032j",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0032k",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "お客様に最大限の愉悦をお与えできるよう、心から喜んで身体を捧げるよう仕込まれております。"
+    }
+  },
+
+  "orgy_wg_0032k": {
+    "ID": "orgy_wg_0032k",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_wg_0032l",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "すげえ……このオーナー、完全に本気だ。\n自分の恋人たちを、他の男に好き勝手犯させていいって……\nしかもあんな淡々とした顔で、堂々と中出しまで許可してやがる……"
+    }
+  },
+
+  "orgy_wg_0032l": {
+    "ID": "orgy_wg_0032l",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_wg_0032_Branch",
     "TalkData": {
-      "SpecificSpeaker": "",
-      "SpeakerName": "お客様",
-      "Text": "（乱交パーティーのことか。こいつ、こうゆう趣味あるんだね…ふふっ…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "興奮が止まらねえ……\nオーナーの言葉を聞くだけで、メイドたちの表情が変わっていくのもたまらねえ……"
     }
   },
 
@@ -1137,9 +1267,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_wg_0034a",
     "TalkData": {
-      "SpecificSpeaker": "",
-      "SpeakerName": "お客様",
-      "Text": "（ふふっ…その顔、[=Name,Maid,0,CallName]ちゃんも犯されるのを愉しみにしているみたい…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……おいおい、この顔。\n目がとろけてるじゃねえか。頰も少し赤い。"
     }
   },
 
@@ -1147,23 +1276,10 @@
     "ID": "orgy_wg_0034a",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "orgy_wg_0034b",
-    "TalkData": {
-      "SpecificSpeaker": "",
-      "SpeakerName": "お客様",
-      "Text": "（よし、俺これから[=Name,Maid,0,CallName]ちゃん、いや違う、みんなに大量の精液を注入するつもりだ。）"
-    }
-  },
-
-  "orgy_wg_0034b": {
-    "ID": "orgy_wg_0034b",
-    "Type": "Talk",
-    "WaitingType": "Click",
     "NextStepID": "orgy_wg_0034_Branch",
     "TalkData": {
-      "SpecificSpeaker": "",
-      "SpeakerName": "お客様",
-      "Text": "（あっ…やっべ…ちょっと想像してみて、チンポがもう立ってしまう。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "オーナーの目の前で他の男に抱かれるってのに、\nあんな嬉しそうな表情を浮かべて……\nふふっ、こいつも本気で楽しみにしているのか。意外と淫乱なんだな。"
     }
   },
 

@@ -162,10 +162,10 @@
     "ID": "orgy_postyotogi_0001",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "orgy_postyotogi_0002",
+    "NextStepID": "orgy_postyotogi_0001a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（……そうして、お客様たちは欲望のままにメイド達の身体を貪っていた。部屋が艶めかしい喘ぎ声と汗に混じった淫臭の匂いでいっぱいになった。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……そうして、お客様たちは、獣のような欲望のままにメイドたちの身体を貪っていた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -173,14 +173,36 @@
     }
   },
 
+  "orgy_postyotogi_0001a": {
+    "ID": "orgy_postyotogi_0001a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "部屋は艶めかしい喘ぎ声と、汗と愛液と精液が混じり合った、濃厚で淫らな臭気で満たされていく。"
+    }
+  },
+
   "orgy_postyotogi_0002": {
     "ID": "orgy_postyotogi_0002",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0002a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "——一方、部屋の隅、暗がりに佇む男がいた。\n[=ClubName]のオーナーであり、彼女たちを恋人として独占してきた、俺だ。"
+    }
+  },
+
+  "orgy_postyotogi_0002a": {
+    "ID": "orgy_postyotogi_0002a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0003",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺も部屋の隅でみんなの淫らな姿を目に焼き付けた。まさしく肉欲の宴。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……俺はここから、すべてを見ていた。"
     }
   },
 
@@ -190,8 +212,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0004",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（メイドたちは、俺が彼女たちを見ていることを知っている。しかし、俺の存在など忘れてしまったかのように、ただお客様たちと快楽を貪り続けている。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "彼女たちは、俺がこの部屋にいることを知っている。\nそれなのに、まるで俺など最初から存在しないかのように、\nただひたすらに、獣の肉欲に溺れ、腰を振り続けている。"
     }
   },
 
@@ -201,8 +223,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0005_camera",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（もはやメイドではなく、ただの発情メスにしか見えない。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "もはや彼女たちは、俺の恋人でも、メイドでもない。\nただの発情した雌豚に成り下がっていた。"
     }
   },
 
@@ -228,10 +250,21 @@
     "ID": "orgy_postyotogi_0005",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0005a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=RandomGroup,0,Maid1Name]……数日前まで「お前だけが好き」と、甘く囁いていたくせに。"
+    }
+  },
+
+  "orgy_postyotogi_0005a": {
+    "ID": "orgy_postyotogi_0005a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0006_camera",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=RandomGroup,0,Maid1Name]、数日前まで俺をどんなに愛しているか言ったのに、今はお客様と本当の恋人のように舌を絡ませ合い、唾液を交換している……）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "今は見知らぬ男と深く舌を絡め合わせ、\nだらしなく唾液を溢れさせながら、\n蕩けた表情で夢中になってキスを貪っている。"
     }
   },
 
@@ -257,10 +290,21 @@
     "ID": "orgy_postyotogi_0006",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0006a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=RandomGroup,1,Maid1Name]……俺にだけ「優しく奉仕したい」と言っていたお前が、"
+    }
+  },
+
+  "orgy_postyotogi_0006a": {
+    "ID": "orgy_postyotogi_0006a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0007_camera",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=RandomGroup,1,Maid1Name]、俺にだけ奉仕するのが好きだと言っていたくせに、今は一心不乱にお客様のチンポを咥える、まるでとてもおいしそうのように……）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "今は床に膝をつき、蕩けた目で他人の肉棒を喉奥まで飲み込んでいる。"
     }
   },
 
@@ -286,10 +330,21 @@
     "ID": "orgy_postyotogi_0007",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0007a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=RandomGroup,2,Maid1Name]……「お前さえいれば他に何もいらない」と微笑んでいたお前が、"
+    }
+  },
+
+  "orgy_postyotogi_0007a": {
+    "ID": "orgy_postyotogi_0007a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0008",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=RandomGroup,2,Maid1Name]、俺さえいればいいと言ったのに、今は腰を激しく振り続けている…そんなに自分の恋人の目の前で他の男を喜ばせたいのか…？）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "今は男の上に跨がり、激しく腰を振りながら、\n自ら肉棒を深く飲み込み、貪るように騎乗位で腰を打ちつけている。"
     }
   },
 
@@ -319,10 +374,98 @@
     "ID": "orgy_postyotogi_0009",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0009a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……ああ、なんて淫らで、なんて惨めで、なんて下品なんだ。"
+    }
+  },
+
+  "orgy_postyotogi_0009a": {
+    "ID": "orgy_postyotogi_0009a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0009b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "お前たちは、本当に最低の女だ。\n俺を裏切り、俺の前で平気で他の男のチンポに狂い、\nあんなに嬉しそうな顔をして……"
+    }
+  },
+
+  "orgy_postyotogi_0009b": {
+    "ID": "orgy_postyotogi_0009b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0009c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "なんて汚らわしい、なんて恥知らずな雌どもなんだ。"
+    }
+  },
+
+  "orgy_postyotogi_0009c": {
+    "ID": "orgy_postyotogi_0009c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0009d",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……"
+    }
+  },
+
+  "orgy_postyotogi_0009d": {
+    "ID": "orgy_postyotogi_0009d",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0009e",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……それなのに。"
+    }
+  },
+
+  "orgy_postyotogi_0009e": {
+    "ID": "orgy_postyotogi_0009e",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0009f",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……どうして、\nこんなにも興奮している？"
+    }
+  },
+
+  "orgy_postyotogi_0009f": {
+    "ID": "orgy_postyotogi_0009f",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0009g",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……お前たちは、なんて美しいんだ。"
+    }
+  },
+
+  "orgy_postyotogi_0009g": {
+    "ID": "orgy_postyotogi_0009g",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0009h",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "この光景が、たまらなく愛おしい。"
+    }
+  },
+
+  "orgy_postyotogi_0009h": {
+    "ID": "orgy_postyotogi_0009h",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0010",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（ああ…俺のメイド、恋人たちよ…みんなこんな愉しそうで、幸せそうな顔をしている…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺の大切な恋人たちが、俺の目の前で、\n他の男の肉欲に身を委ね、淫らに乱れ、堕ちていく姿が……\nこんなにも、胸を高鳴らせるなんて。"
     }
   },
 
@@ -330,10 +473,32 @@
     "ID": "orgy_postyotogi_0010",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0010a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "汚いはずのその顔が、神々しくさえ見える。\n卑猥な腰つきが、妖しく魅力的で。\n下品な喘ぎ声が、甘く溶けるような調べに聞こえる。"
+    }
+  },
+
+  "orgy_postyotogi_0010a": {
+    "ID": "orgy_postyotogi_0010a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0010b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……俺は、認めざるを得ない。"
+    }
+  },
+
+  "orgy_postyotogi_0010b": {
+    "ID": "orgy_postyotogi_0010b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0011",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（汚いだが綺麗な顔、卑猥だが魅惑的な腰使い、下品だが甘美な喘ぎ声。どんてもない淫乱女たちだが、それゆえにとても素敵な女たちだ…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "お前たちが他の男に抱かれ、犯され、\n俺の前で本気で感じているこの瞬間を——\n俺は、心の底から、興奮している。"
     }
   },
 
@@ -343,8 +508,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0012",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（いろんな肉棒がピストンを重ねるごとに、まるで宝石を磨くように、彼女らを輝かせている、そしてますます美しくなっていく。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……そうだ。もっとだ……\nお前たちの愛を、もっと解放してやれ……"
     }
   },
 
@@ -352,10 +517,21 @@
     "ID": "orgy_postyotogi_0012",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0012a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=RandomGroup,0,Maid1Name]……もっと熱く、その男にキスしてあげろ。"
+    }
+  },
+
+  "orgy_postyotogi_0012a": {
+    "ID": "orgy_postyotogi_0012a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0013",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（そうだ…これは俺の求めるメイドだ。自由気ままに誰とでもセックスを楽しんでいるメイドは最高だ。これ以上素晴らしいメイドは他にいるのか？）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺にくれていたあの甘い愛を、彼にもたっぷりと注いでやれ。\nお前が俺を愛するように、彼も愛して、舌を深く絡めて……"
     }
   },
 
@@ -363,10 +539,21 @@
     "ID": "orgy_postyotogi_0013",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0013a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=RandomGroup,1,Maid1Name]……もっと激しく咥えて、奉仕してあげろ。"
+    }
+  },
+
+  "orgy_postyotogi_0013a": {
+    "ID": "orgy_postyotogi_0013a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0014",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（最初の不安や嫉妬はもう払拭された。今の俺はこのシーンをめっちゃ楽しんでいる。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺にだけ「優しく奉仕したい」と言っていたその気持ちを、今は彼にも全力で注ぎ込んで、喉の奥まで気持ちよくしてやれ。"
     }
   },
 
@@ -374,10 +561,21 @@
     "ID": "orgy_postyotogi_0014",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0014a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=RandomGroup,2,Maid1Name]……もっと腰を振って、感じてあげろ。"
+    }
+  },
+
+  "orgy_postyotogi_0014a": {
+    "ID": "orgy_postyotogi_0014a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0015",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（メイトたちの体中に色んな男の精子染み込まされた。そんな姿を見たとき、俺のチンポの勃起が止まらない、めっちゃオナニーしていてた。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "「お前さえいれば他に何もいらない」と俺に言っていたその身体で、\n他の男にも同じくらい、貪欲に愛を注いで、激しく尻を打ちつけてやれ。"
     }
   },
 
@@ -385,10 +583,98 @@
     "ID": "orgy_postyotogi_0015",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0015a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……ああ、最高だ……"
+    }
+  },
+
+  "orgy_postyotogi_0015a": {
+    "ID": "orgy_postyotogi_0015a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0015b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "お前たちは本当に、最高の恋人たちだ。\n俺の愛を、他の男たちにもこんなにも優しく、淫らに分け与えてくれるなんて……\nこんな誇らしい女たちを、俺は持っている。"
+    }
+  },
+
+  "orgy_postyotogi_0015b": {
+    "ID": "orgy_postyotogi_0015b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0016",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（どれだけ時間が経ったのかさえもう分からない。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺はただ、恍惚とその光景を眺め続けていた。\n彼女たちの乱れきった姿に、完全に意識を奪われていた。"
+    }
+  },
+
+  "orgy_postyotogi_0015c": {
+    "ID": "orgy_postyotogi_0015c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0015d",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……気づいた時には、\nいつの間にか右手がズボンのファスナーを下ろし、\n熱く脈打つ肉棒を、強く握りしめていた。"
+    }
+  },
+
+  "orgy_postyotogi_0015d": {
+    "ID": "orgy_postyotogi_0015d",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0015e",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……はっ。"
+    }
+  },
+
+  "orgy_postyotogi_0015e": {
+    "ID": "orgy_postyotogi_0015e",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0015f",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺は……いつからこうしていたんだ……？"
+    }
+  },
+
+  "orgy_postyotogi_0015f": {
+    "ID": "orgy_postyotogi_0015f",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0015g",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "しかし、その疑問も一瞬で溶けていく。\nもう、止める気など起きなかった。"
+    }
+  },
+
+  "orgy_postyotogi_0015g": {
+    "ID": "orgy_postyotogi_0015g",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0015h",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "は熱くなった肉棒を、荒々しく扱き始めた。"
+    }
+  },
+
+  "orgy_postyotogi_0015h": {
+    "ID": "orgy_postyotogi_0015h",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0016",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "どれだけ時間が経ったのか、もうわからない。\n何度射精したかも、覚えていない。"
     }
   },
 
@@ -396,10 +682,21 @@
     "ID": "orgy_postyotogi_0016",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0016a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "うぅ……また……出る……！"
+    }
+  },
+
+  "orgy_postyotogi_0016a": {
+    "ID": "orgy_postyotogi_0016a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0016_fadeout",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（…うぅ…また出る…！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……最高だ。\nこれこそが、俺が本当に求めていた姿なのかもしれない。"
     }
   },
 
@@ -459,10 +756,21 @@
     "ID": "orgy_postyotogi_0019",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "orgy_postyotogi_0020",
+    "NextStepID": "orgy_postyotogi_0019a",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
       "Text": "…"
+    }
+  },
+
+  "orgy_postyotogi_0019a": {
+    "ID": "orgy_postyotogi_0019a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0020",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……長い夜の狂宴は、ようやく終わりを迎えようとしていた。\n俺の恋人たちが他の男に犯され続けた、あの淫らな時間の幕が。"
     }
   },
 
@@ -1339,9 +1647,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0030_Branch",
     "TalkData": {
-      "SpecificSpeaker": "",
       "SpeakerName": "お客様",
-      "Text": "ふぅ…多分もう限界だ……何発出したかもうわからない…[=Name,Maid,0,CallName]ちゃん、どう？"
+      "Text": "ふぅ……もう限界だよ……今日は何発中出ししたか、まったく覚えねえよ……お前の中、最高に気持ちよかったね、[=Name,Maid,0,CallName]ちゃん\nどうだった？"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1372,9 +1679,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0051",
     "TalkData": {
-      "SpecificSpeaker": "",
-      "SpeakerName": "お客様",
-      "Text": "（そのあと、俺は[=Name,Maid,0,CallName]ちゃんに連れられ部屋を後にする。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "その後、俺は[=Name,Maid,0,CallName]に連れられ部屋を後にした。"
     }
   },
 
@@ -1601,7 +1907,7 @@
     "TalkData": {
       "SpecificSpeaker": "",
       "SpeakerName": "お客様",
-      "Text": "じゃあ、今日は帰るね？"
+      "Text": "じゃあな、今日は帰るね？"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1629,7 +1935,7 @@
     "TalkData": {
       "SpecificSpeaker": "",
       "SpeakerName": "お客様",
-      "Text": "うん…あの…もう一回キスしていいですか？"
+      "Text": "……つーか、もう一回キスしていいか？　お前の唇、まだ俺のチンポの味が残ってんだろ？"
     }
   },
 
@@ -1765,8 +2071,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0067",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺は玄関の柱の後ろに立ち、メイドたちがお客様が帰る前にいちゃつくのを眺める。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "——その光景を、俺は玄関ホールの太い柱の陰から、静かに見つめていた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1778,10 +2084,21 @@
     "ID": "orgy_postyotogi_0067",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0067a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "メイドたちが最後の客と、甘くいちゃつく姿。\n微笑み合い、キスを交わし、名残惜しそうに言葉を交わす……\nそんな光景を、俺は胸を高鳴らせながら見つめていた。"
+    }
+  },
+
+  "orgy_postyotogi_0067a": {
+    "ID": "orgy_postyotogi_0067a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0068",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（こんなことを言うのは少し変かもしれませんが、俺はメイドたちがお客様によく奉仕していることを誇りに思う。彼女たちをどんどん好きになる。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "彼女たちが他の男をあそこまで夢中にさせる女になったことが、\nこんなにも誇らしいなんて……\n俺は本当に、幸せな男だ。"
     }
   },
 
@@ -1817,8 +2134,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0070_fadeout",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（最後の客が帰ると、俺は表に出て[=Name,Maid,0,CallName]を抱きしめる。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "最後の客が帰った後、俺は柱の陰からゆっくりと姿を現し、[=Name,Maid,0,CallName]を抱き寄せた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -2056,7 +2373,7 @@
     "NextStepID": "orgy_postyotogi_0075_chara",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "こんなことをお願いして本当にごめんね…"
+      "Text": "こんなことをお願いして、本当にごめんね……"
     }
   },
 
@@ -2081,8 +2398,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0076_Branch",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（まるで離れるのを恐れているように、俺は[=Name,Maid,0,CallName]を強く抱きしめた。多分このせいで、[=Name,Maid,0,CallName]はいつものように微笑んで慰めてくれた。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺は[=Name,Maid,0,CallName]を強く、強く抱きしめた。\nまるでこの温もりを、永遠に刻み込みたいかのように。"
     }
   },
 
@@ -2104,33 +2421,10 @@
     "ID": "orgy_postyotogi_0081",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "orgy_postyotogi_0082",
-    "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（ああ、この太陽のような笑顔。やっぱり俺は彼女らが大好きだ。）"
-    }
-  },
-
-
-  "orgy_postyotogi_0082": {
-    "ID": "orgy_postyotogi_0082",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "orgy_postyotogi_0083",
-    "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（その肌はたくさんの男たちに触られ、舐められる、その唇はたくさんの男とキスをして、その口はたくさんのチンポを吸っている、その膣はたくさんの男の精液で満たされている…）"
-    }
-  },
-
-  "orgy_postyotogi_0083": {
-    "ID": "orgy_postyotogi_0083",
-    "Type": "Talk",
-    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0084",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（それでも彼女らは今でも俺の最愛のメイドだ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "ああ、この太陽のような笑顔……\nやっぱり俺は、彼女が大好きだ。\nこの瞬間だけは、すべてが優しくて、穏やかで、愛に満ち溢れている。"
     }
   },
 
@@ -2219,10 +2513,21 @@
     "ID": "orgy_postyotogi_0087",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0087a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺は心を込めて、彼女の唇にキスをした。"
+    }
+  },
+
+  "orgy_postyotogi_0087a": {
+    "ID": "orgy_postyotogi_0087a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0088",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺は[=Name,Maid,0,CallName]を愛していることを示すために、心を込めてキスをする。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……その瞬間。"
     }
   },
 
@@ -2230,10 +2535,87 @@
     "ID": "orgy_postyotogi_0088",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0088a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "鼻腔の奥に、濃厚で生臭い他人の精液の匂いが、広がった。"
+    }
+  },
+
+  "orgy_postyotogi_0088a": {
+    "ID": "orgy_postyotogi_0088a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0088b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……はっ。"
+    }
+  },
+
+  "orgy_postyotogi_0088b": {
+    "ID": "orgy_postyotogi_0088b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0088c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "頭の中が、一瞬で真っ白になる。"
+    }
+  },
+
+  "orgy_postyotogi_0088c": {
+    "ID": "orgy_postyotogi_0088c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0088d",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "その柔らかな肌は今日、何人もの男に貪られ、\nその可憐な唇は他人の唾液でべっとりと濡れ、\nその小さな口は複数の肉棒を喉奥まで咥え込み、"
+    }
+  },
+
+  "orgy_postyotogi_0088d": {
+    "ID": "orgy_postyotogi_0088d",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0088e",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "その窄まりは大量の他人の精液で溢れ、ぐちゃぐちゃに掻き回されている……"
+    }
+  },
+
+  "orgy_postyotogi_0088e": {
+    "ID": "orgy_postyotogi_0088e",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0088f",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……それでも。"
+    }
+  },
+
+  "orgy_postyotogi_0088f": {
+    "ID": "orgy_postyotogi_0088f",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0088g",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "この笑顔は、俺だけに向けられている。\nこの甘い声は、俺だけに囁かれる。\nこの温もりは、俺だけのものだ。"
+    }
+  },
+
+  "orgy_postyotogi_0088g": {
+    "ID": "orgy_postyotogi_0088g",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0089",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（お客様が[=Name,Maid,0,CallName]の髪や肌にかけた精液の匂いがまだする）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "彼女は今も、俺の恋人だ。\n他の男に身体を好き勝手使わせても、\n心の奥底では、俺のものだと知っている。"
     }
   },
 
@@ -2241,10 +2623,117 @@
     "ID": "orgy_postyotogi_0089",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0089a_fadeout",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺の肉棒が、痛いほど硬く、熱く勃起していく。"
+    }
+  },
+
+  "orgy_postyotogi_0089a_fadeout": {
+    "ID": "orgy_postyotogi_0089a_fadeout",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "orgy_postyotogi_0089a_camera",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "orgy_postyotogi_0089a_camera": {
+    "ID": "orgy_postyotogi_0089a_camera",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_postyotogi_0089a",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "orgy_postyotogi_0089a": {
+    "ID": "orgy_postyotogi_0089a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0089b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "その直後——"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "orgy_postyotogi_0089b": {
+    "ID": "orgy_postyotogi_0089b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0089c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]の太陽のような笑顔が、ゆっくりと変わっていく。\n瞳が妖しく細められ、唇の端がわずかに吊り上がり、淫靡な微笑みに変わった。"
+    }
+  },
+
+  "orgy_postyotogi_0089c": {
+    "ID": "orgy_postyotogi_0089c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0089d",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "彼女はそっと手を伸ばし、俺のズボンの上から熱く硬くなった肉棒を、優しく包み込むように撫でた。"
+    }
+  },
+
+  "orgy_postyotogi_0089d": {
+    "ID": "orgy_postyotogi_0089d",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0089d2",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……お前も、わかっているんだな。\n俺が今、こんなに興奮している理由を……"
+    }
+  },
+
+  "orgy_postyotogi_0089d2": {
+    "ID": "orgy_postyotogi_0089d2",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0089e",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "他の男の精液で汚れたお前を抱きしめて、勃起しているこの歪んだ愛を。"
+    }
+  },
+
+  "orgy_postyotogi_0089e": {
+    "ID": "orgy_postyotogi_0089e",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0089f",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "ああ、なんて完璧なのだろう。\n俺とお前は、どこまでも歪んでいて、だからこそ、誰よりも相性がいい。"
+    }
+  },
+
+  "orgy_postyotogi_0089f": {
+    "ID": "orgy_postyotogi_0089f",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_postyotogi_0090",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（ああ…たまらん…そのせいで、さっきの彼女らの淫らな顔を思い出し、ちょっと勃起する。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "この歪んだ愛は、俺たちだけのものだ。"
     }
   },
 
@@ -2252,10 +2741,21 @@
     "ID": "orgy_postyotogi_0090",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_postyotogi_0090a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……そうだな。"
+    }
+  },
+
+  "orgy_postyotogi_0090a": {
+    "ID": "orgy_postyotogi_0090a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "org_end",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（そうだな…いつかまたこんなの乱交パーティーを開催しよう、もう一度俺の歪んだ欲望を満たすのために…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "またやろう。\nこの気持ちを、もう一度味わうために……\n俺の歪んだ欲望を、存分に満たすために。"
     }
   },
 

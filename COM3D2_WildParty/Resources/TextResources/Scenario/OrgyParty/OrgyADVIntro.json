@@ -72,8 +72,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_intro_0005",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=ClubName]の経営状況が順調、俺も数人の恋人ができてる。今が多分俺の一番幸せな時だ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=ClubName]は順調に回っている。\n俺には、数人の可愛い恋人がいる。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -85,22 +85,208 @@
     "ID": "orgy_intro_0005",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "orgy_intro_0006",
+    "NextStepID": "orgy_intro_0005a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（決して今の生活に不満はないけど、心の中に何かが足りないと感じる。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……今が、人生で一番幸せな瞬間なんだろう。\n少なくとも、表面的には。"
     }
+  },
+
+  "orgy_intro_0005a": {
+    "ID": "orgy_intro_0005a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0005b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "今の生活に不満なんてない。\nむしろ、恵まれすぎているはずだ。"
+    }
+  },
+
+  "orgy_intro_0005b": {
+    "ID": "orgy_intro_0005b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0005c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "それなのに——"
+    }
+  },
+
+  "orgy_intro_0005c": {
+    "ID": "orgy_intro_0005c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0005d",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "心のどこかに、ぽっかりと空いた穴が疼いている。"
+    }
+  },
+
+  "orgy_intro_0005d": {
+    "ID": "orgy_intro_0005d",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0005e",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "2.36, 1.59, -1.96",
+        "TargetPosString": "2.27, 1.56, -2.01",
+        "AroundAngleString": "-116.73, 13.06",
+        "Distance": 0.1
+      }
+    }
+  },
+
+  "orgy_intro_0005e": {
+    "ID": "orgy_intro_0005e",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "orgy_intro_0006",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿考える"
+        }
+      }
+
+    ]
   },
 
   "orgy_intro_0006": {
     "ID": "orgy_intro_0006",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "orgy_intro_0007",
+    "NextStepID": "orgy_intro_0006a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（そうだ、俺はその「何か」が知っている…幾つのスワップング夜伽の後、彼女たちはいつもより美しくて魅力的に見えた。あんな表情、俺との夜伽でさせたことない…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……ああ。\n俺はもう、その「足りないもの」に気づいている。"
     }
+  },
+
+  "orgy_intro_0006a": {
+    "ID": "orgy_intro_0006a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0006b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "スワッピング夜伽の後、彼女たちが見せた顔。"
+    }
+  },
+
+  "orgy_intro_0006b": {
+    "ID": "orgy_intro_0006b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0006c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "あの蕩けた表情。\nあの潤んだ瞳。\nあの紅潮した頰。"
+    }
+  },
+
+  "orgy_intro_0006c": {
+    "ID": "orgy_intro_0006c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0006d",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "あの激しく乱れた髪。\nあの淫らに濡れた唇。\nあの熱い吐息。"
+    }
+  },
+
+  "orgy_intro_0006d": {
+    "ID": "orgy_intro_0006d",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0006e",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "あの甘く掠れた声。\nあの卑猥な仕草。\nあの女らしい腰のくねらせ方。"
+    }
+  },
+
+  "orgy_intro_0006e": {
+    "ID": "orgy_intro_0006e",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0006f",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……"
+    }
+  },
+
+  "orgy_intro_0006f": {
+    "ID": "orgy_intro_0006f",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0006g",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "普段、俺を抱く時よりも、ずっと妖しくて、美しかった。"
+    }
+  },
+
+  "orgy_intro_0006g": {
+    "ID": "orgy_intro_0006g",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0006h",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "あんな顔を、俺はまだ一度も見せてもらったことがない。"
+    }
+  },
+
+  "orgy_intro_0006h": {
+    "ID": "orgy_intro_0006h",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0006i",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.22, 2.38, -1.14",
+        "TargetPosString": "-0.83, 1.97, -1.84",
+        "AroundAngleString": "-209.24, 27.35",
+        "Distance": 0.9
+      }
+    }
+  },
+
+  "orgy_intro_0006i": {
+    "ID": "orgy_intro_0006i",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "orgy_intro_0007",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿腕組"
+        }
+      }
+
+    ]
   },
 
   "orgy_intro_0007": {
@@ -109,8 +295,30 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_intro_0008",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（分かってる…俺は分かってる…彼女たちは俺の大切な宝物だ、他人に抱かせてはいけない。だけと…このことを考えずにはいられない。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "分かっている。\n彼女たちは俺の大切な恋人だ。"
+    }
+  },
+
+  "orgy_intro_0007a": {
+    "ID": "orgy_intro_0007a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0007b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "誰にも渡してはいけない。\n触れさせてはいけない存在だ。"
+    }
+  },
+
+  "orgy_intro_0007b": {
+    "ID": "orgy_intro_0007b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0008",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "それなのに——"
     }
   },
 
@@ -118,10 +326,25 @@
     "ID": "orgy_intro_0008",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "orgy_intro_0009",
+    "NextStepID": "orgy_intro_0008a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（やっちゃいけない事なのにやってみたい、見ちゃいけないものなのにもっと見たい。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "どうしても、この妄想が頭から離れない。\nやってはいけないことだと、頭では分かっているのに。\n見ちゃいけないものだと、理解しているのに。"
+    }
+  },
+
+  "orgy_intro_0008a": {
+    "ID": "orgy_intro_0008a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0009",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.22, 2.38, -1.14",
+        "TargetPosString": "-0.83, 1.97, -1.84",
+        "AroundAngleString": "-209.24, 27.35",
+        "Distance": 0.7
+      }
     }
   },
 
@@ -129,11 +352,86 @@
     "ID": "orgy_intro_0009",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "orgy_intro_0010",
+    "NextStepID": "orgy_intro_0009a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（…見たい、もっと見たい。愛する人のふしだらで淫らな痴態がもっと見たい。彼女たちがどれほど欲情しているかもっともっと見たい！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……もっと、見たい。"
     }
+  },
+
+  "orgy_intro_0009a": {
+    "ID": "orgy_intro_0009a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0009b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.22, 2.38, -1.14",
+        "TargetPosString": "-0.83, 1.97, -1.84",
+        "AroundAngleString": "-209.24, 27.35",
+        "Distance": 0.5
+      }
+    }
+  },
+
+  "orgy_intro_0009b": {
+    "ID": "orgy_intro_0009b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0009c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "愛する彼女たちが、他人に犯されて、\n本気で喘いで、\n獣のように乱れる姿を。"
+    }
+  },
+
+  "orgy_intro_0009c": {
+    "ID": "orgy_intro_0009c",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "orgy_intro_0009d",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "-1.22, 2.38, -1.14",
+        "TargetPosString": "-0.83, 1.97, -1.84",
+        "AroundAngleString": "-209.24, 27.35",
+        "Distance": 0.3
+      }
+    }
+  },
+
+  "orgy_intro_0009d": {
+    "ID": "orgy_intro_0009d",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0009e",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "どれほど淫乱で、\nどれほど欲深い本性を持っているのか、\nそのすべてを、この目で確かめたい。"
+    }
+  },
+
+  "orgy_intro_0009e": {
+    "ID": "orgy_intro_0009e",
+    "Type": "Chara",
+    "WaitingType": "Auto",
+    "WaitFullLoad": true,
+    "NextStepID": "orgy_intro_0010",
+    "CharaData": [
+      {
+        "Type": "M",
+        "IsMaster": true,
+        "ArrayPosition": 0,
+        "Visible": true,
+        "WaitLoad": true,
+        "IsManNude": false,
+        "MotionInfo": {
+          "ScriptFile": "h_man_001.ks",
+          "ScriptLabel": "*男座り＿考える"
+        }
+      }
+
+    ]
   },
 
   "orgy_intro_0010": {
@@ -142,8 +440,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_intro_0011",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（…どうすればいいだろうか…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "どうすればいい……？"
     }
   },
 
@@ -153,7 +451,7 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_intro_0012",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
+      "SpecificSpeaker": "Narrative",
       "Text": "…"
     }
   },
@@ -164,7 +462,7 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_intro_0013",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
+      "SpecificSpeaker": "Narrative",
       "Text": "……"
     }
   },
@@ -175,8 +473,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_intro_0014",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "………"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……ああ。"
     }
   },
 
@@ -184,10 +482,21 @@
     "ID": "orgy_intro_0014",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0014a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "そうか。"
+    }
+  },
+
+  "orgy_intro_0014a": {
+    "ID": "orgy_intro_0014a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_intro_0015",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（あ、ひらめいた。……そうしようか…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "その手があったな。"
     }
   },
 
@@ -244,7 +553,7 @@
     "NextStepID": "orgy_intro_0018",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（そして、俺は「[=ClubName]大感謝祭」というキャンペーンが計画された。それからメイドたちを呼んで、自分のやりたいことを伝えて行く。）"
+      "Text": "そして俺は、『[=ClubName]大感謝祭』という新しいキャンペーンイベントを企画した。"
     }
   },
 
@@ -255,7 +564,7 @@
     "NextStepID": "orgy_intro_0018a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（たぶん彼女たちはこんなイベントが嫌い、ダメ言ってそうだな…）"
+      "Text": "表向きは、常連客たちへの感謝祭。\n――だが、本当の目的は、彼女たちを他の男に抱かせることだ。"
     }
   },
 
@@ -368,14 +677,36 @@
     "ID": "orgy_intro_0022",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "orgy_intro_0023",
+    "NextStepID": "orgy_intro_0022a",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "次の日、俺はこの企画についてメイドたちと話し合う。"
+      "Text": "俺は彼女たちを呼び出し、自分の考えを打ち明けることにした。"
     },
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "orgy_intro_0022a": {
+    "ID": "orgy_intro_0022a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0022b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……こんなイベント、馬鹿げている。\n絶対にやってはいけないことだ。\n頭ではちゃんと理解しているのに……"
+    }
+  },
+
+  "orgy_intro_0022b": {
+    "ID": "orgy_intro_0022b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0023",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "どうしても、止められない。"
     }
   },
 
@@ -386,7 +717,7 @@
     "NextStepID": "orgy_intro_0024",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "[=Name,Maid,0,CallName]、[=Name,Maid,1,CallName]、[=Name,Maid,2,CallName]。今、こうゆうイベントを計画中だ…"
+      "Text": "[=Name,Maid,0,CallName]、[=Name,Maid,1,CallName]、[=Name,Maid,2,CallName]。今、こういうイベントを企画してるんだ……"
     }
   },
 
@@ -394,10 +725,21 @@
     "ID": "orgy_intro_0024",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0024a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺はイベントの内容を詳しく説明していく。\n他の男に身体を許す夜伽……乱交の部分まで、包み隠さず話した。"
+    }
+  },
+
+  "orgy_intro_0024a": {
+    "ID": "orgy_intro_0024a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_intro_0025",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺は、このイベントの内容を彼女たちに伝えている）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……最低だ。\n俺は、本当に最低だ。"
     }
   },
 
@@ -408,8 +750,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_intro_0026",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（…みんなに嫌な顔をされそう…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺は彼女たちの顔を、まともに見られなかった。"
     }
   },
 
@@ -450,24 +792,13 @@
     "ID": "orgy_intro_0027",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "orgy_intro_0028",
-    "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（…ん？）"
-    }
-  },
-
-
-  "orgy_intro_0028": {
-    "ID": "orgy_intro_0028",
-    "Type": "Talk",
-    "WaitingType": "Click",
     "NextStepID": "orgy_intro_0029",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺の予想に反して、彼女たちはそれほど嫌がっていないようだ。むしろ、興味津々…？）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "だが、予想に反して彼女たちはそれほど嫌がっていなかった。\nむしろ……どこか興味深げで、期待すら感じさせる目をしている。"
     }
   },
+
 
   "orgy_intro_0029": {
     "ID": "orgy_intro_0029",
@@ -509,7 +840,7 @@
     "NextStepID": "orgy_intro_0031",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "…以上だ。無茶なことを言ったわかっている、だからこれは強制ではない。拒否しても構わない。"
+      "Text": "……以上だ。\n無茶な話だって、自分でも分かってる。これはただの提案だ。嫌ならはっきり断ってくれ。俺は無理強いするつもりはない。"
     }
   },
 
@@ -517,10 +848,43 @@
     "ID": "orgy_intro_0031",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0031a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……くそっ。\nなんでこんなに興奮しているんだ。"
+    }
+  },
+
+  "orgy_intro_0031a": {
+    "ID": "orgy_intro_0031a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0031b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "彼女が他の男に抱かれる姿を想像しただけで、\n胸が締め付けられるような感覚がする。"
+    }
+  },
+
+  "orgy_intro_0031b": {
+    "ID": "orgy_intro_0031b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0031c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "これは間違っている。\n愛しているはずの彼女を、他の男に渡そうとしている。"
+    }
+  },
+
+  "orgy_intro_0031c": {
+    "ID": "orgy_intro_0031c",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_intro_0032_Branch",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（見て、その表情…イベントの内容を聞いてだけだが、もうこんな蕩けそうな顔してる。俺は彼女たちの恋人なのに... ）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "それなのに——\nこの疼きが、止まらない。"
     }
   },
 
@@ -545,10 +909,43 @@
     "ID": "orgy_intro_0034",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0034a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……最悪だ。"
+    }
+  },
+
+  "orgy_intro_0034a": {
+    "ID": "orgy_intro_0034a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0034b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "なんで反対しないんだよ。\n前なら、もっと嫌がっていたはずなのに。"
+    }
+  },
+
+  "orgy_intro_0034b": {
+    "ID": "orgy_intro_0034b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0034c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "そんな嬉しそうな顔をされると……胸がざわつく。\n嫉妬なのか、興奮なのか、自分でも分からない。"
+    }
+  },
+
+  "orgy_intro_0034c": {
+    "ID": "orgy_intro_0034c",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_intro_0035",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（…なんで全然反対しない？昔はそうしていたのに…あんなに嬉しそうに返事すると、なんかモヤモヤする。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "この企画を立てたのは俺自身だというのに……\n今さら引き返せない自分が、情けない。"
     }
   },
 
@@ -556,10 +953,21 @@
     "ID": "orgy_intro_0035",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0035a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "（……いや。\n本当は、引き返したくない。"
+    }
+  },
+
+  "orgy_intro_0035a": {
+    "ID": "orgy_intro_0035a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_intro_0036a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（……でもまぁ…俺が提案したことし、彼女らにも参加してもらいたいだし。今さらヤキモチしても何一つ一切意味ない。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "彼女たちの本当の痴態を、\nこの目で確かめたいという欲望が、\n俺の中で圧倒的に勝っている。"
     }
   },
 
@@ -603,7 +1011,7 @@
     "NextStepID": "orgy_intro_0037",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ありがとう、みんな。じゃあ、企画を進めるね。"
+      "Text": "ありがとう、みんな。"
     }
   },
 
@@ -663,10 +1071,32 @@
     "ID": "orgy_intro_0039",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0039a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "そして俺は、数人の常連客へ連絡を入れ、パーティーへ招待した。"
+    }
+  },
+
+  "orgy_intro_0039a": {
+    "ID": "orgy_intro_0039a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "orgy_intro_0039b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……本当に、やってしまうのか。\n愛する彼女たちを、他の男のものにするなんて。"
+    }
+  },
+
+  "orgy_intro_0039b": {
+    "ID": "orgy_intro_0039b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "orgy_intro_0040",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（そして、俺は数名の常連客と連絡を取り、パーティーに招待するようにしている。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "頭では馬鹿げていると叫んでいるのに、\nこの身体と心は、期待で震えている。"
     }
   },
 
@@ -676,8 +1106,8 @@
     "WaitingType": "Click",
     "NextStepID": "orgy_intro_0041",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（ああ…メイドたちの淫らな姿を見るのが待ち遠しいな…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "ああ……彼女たちの「本当の姿」を、見たい。\nどうしようもなく、見たくて仕方ない。"
     }
   },
 
