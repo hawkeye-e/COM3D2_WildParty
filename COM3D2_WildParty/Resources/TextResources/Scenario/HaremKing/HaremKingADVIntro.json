@@ -122,14 +122,25 @@
     "ID": "haremking_intro_0004",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "haremking_intro_0005",
+    "NextStepID": "haremking_intro_0004a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（メイドたちの努力のおかげで、[=ClubName]はどんどん有名になっています。今では、様々なお客様から色んなイベントの開催を依頼されることが多くなりました。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "メイドたちの努力のおかげで、[=ClubName]はますます有名になっている。"
     },
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "haremking_intro_0004a": {
+    "ID": "haremking_intro_0004a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0005",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "今では様々なお客様からイベント開催の依頼をいただくことも増えた。"
     }
   },
 
@@ -139,8 +150,8 @@
     "WaitingType": "Click",
     "NextStepID": "haremking_intro_0006",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺は今、非常に充実した仕事をしている。より多くの人々に知られることは、俺にとっても誇りだ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺自身も、かなり充実した毎日を送っている。\n多くの人にクラブを知ってもらえるのは、やはり嬉しいものだ。"
     }
   },
 
@@ -148,10 +159,21 @@
     "ID": "haremking_intro_0006",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0006a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……とはいえ、その分忙しくなりすぎているのも事実だ。"
+    }
+  },
+
+  "haremking_intro_0006a": {
+    "ID": "haremking_intro_0006a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "haremking_intro_0007",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（でもそのせいで、最近忙しくなりすぎている。実際、ここ数日、俺はメイドたちとイチャイチャしていない。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "実際、ここ数日はメイドたちとゆっくり過ごす時間も取れていない。"
     }
   },
 
@@ -161,8 +183,8 @@
     "WaitingType": "Click",
     "NextStepID": "haremking_intro_0008",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（手持ちの仕事を終えたら、俺は彼女たちと一日中一緒に過ごさなければならない。彼女たちにとても欲しい！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "この仕事を片付けたら、今度こそ彼女たちと一日中過ごしてやる。\nもう会いたくてたまらない。"
     }
   },
 
@@ -173,7 +195,7 @@
     "NextStepID": "haremking_intro_0009",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "よし！かんばるぞ！さっさと仕事を終えようと、彼女たちとの時間を作ろう！"
+      "Text": "よし！　頑張るぞ！\nさっさと仕事を終わらせて、彼女たちとの時間を作るんだ！"
     }
   },
 
@@ -245,10 +267,32 @@
     "ID": "haremking_intro_0012",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0012a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "クソ……。"
+    }
+  },
+
+  "haremking_intro_0012a": {
+    "ID": "haremking_intro_0012a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0012b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "処理しなきゃいけない仕事は山ほどあるし、\n連絡しなきゃいけない相手も多すぎる……。"
+    }
+  },
+
+  "haremking_intro_0012b": {
+    "ID": "haremking_intro_0012b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "haremking_intro_0013",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "クソ…処理しなければならないことが多すぎるし、連絡しなければならない人も多すぎる！今日中に終わらせることはできなさそうだ…"
+      "SpecificSpeaker": "Narrative",
+      "Text": "これ、今日中に終わるのか……？"
     }
   },
 
@@ -258,8 +302,8 @@
     "WaitingType": "Click",
     "NextStepID": "haremking_intro_0014",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "なんで仕事が次から次へとやってくるんだ？いつになったら、この仕事地獄から解放されるのかなの…？"
+      "SpecificSpeaker": "Narrative",
+      "Text": "なんで仕事って次から次へと増えるんだよ……。\nいつになったら、この仕事地獄から解放されるんだ……？"
     }
   },
 
@@ -269,13 +313,36 @@
     "WaitingType": "Click",
     "NextStepID": "haremking_intro_0014a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "……もうだめだ…今すぐ[=Name,Maid,0,CallName]たちに会いたい…"
+      "SpecificSpeaker": "Narrative",
+      "Text": "忙しい。\n顔も合わせられない。\n一緒に過ごす時間もない。"
     }
   },
 
   "haremking_intro_0014a": {
     "ID": "haremking_intro_0014a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0014b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……寂しいな。\nもう限界だ。"
+    }
+  },
+
+  "haremking_intro_0014b": {
+    "ID": "haremking_intro_0014b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0014c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]……会いたいよ……。"
+    }
+  },
+
+
+  "haremking_intro_0014c": {
+    "ID": "haremking_intro_0014c",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "haremking_intro_0015",
@@ -373,19 +440,30 @@
     }
   },
 
-
   "haremking_intro_0017": {
     "ID": "haremking_intro_0017",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0017a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "重たい瞼をこすりながら顔を上げると、心配そうにこちらを覗き込む[=Name,NPC_F,0,FirstName]の姿があった。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+
+  "haremking_intro_0017a": {
+    "ID": "haremking_intro_0017a",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "haremking_intro_0018a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "…[=Name,NPC_F,0,FirstName]…ここにいたのか…ごめん、気づかなかった。"
-    },
-    "FadeData": {
-      "IsFadeIn": true,
-      "IsFadeOut": false
+      "Text": "…[=Name,NPC_F,0,FirstName]。\nいたのか……悪い、気づかなかった。"
     }
   },
 
@@ -431,10 +509,21 @@
     "ID": "haremking_intro_0019",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0019a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "……ああ、そうだ……！\n助けてほしい！"
+    }
+  },
+
+  "haremking_intro_0019a": {
+    "ID": "haremking_intro_0019a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "haremking_intro_0020a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "…ああ…そうだ…！助けがほしい！ちょっと用事あるので今日は休ませたい。残りの仕事を終わらせるのを手伝ってくれる？"
+      "Text": "ちょっと外したい用事があるんだ。\n残っている仕事を片付けるのを手伝ってくれないか？"
     }
   },
 
@@ -485,7 +574,7 @@
     "NextStepID": "haremking_intro_0022a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "すまんな、[=Name,NPC_F,0,FirstName]、君に借りだ。"
+      "Text": "助かるよ、[=Name,NPC_F,0,FirstName]。\n君には借りができたな。"
     }
   },
 
@@ -513,7 +602,7 @@
     "ID": "haremking_intro_0022",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "haremking_intro_0023",
+    "NextStepID": "haremking_intro_0023a",
     "TalkData": {
       "SpecificSpeaker": "NPC_F",
       "Index": 0,
@@ -527,14 +616,47 @@
     }
   },
 
+  "haremking_intro_0023a": {
+    "ID": "haremking_intro_0023a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0023",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "そう言ってくれる[=Name,NPC_F,0,FirstName]の存在が、今は本当にありがたい。"
+    }
+  },
+
   "haremking_intro_0023": {
     "ID": "haremking_intro_0023",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0023b",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ありがとう……。\nはぁ……やっと休める！"
+    }
+  },
+
+  "haremking_intro_0023b": {
+    "ID": "haremking_intro_0023b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0023c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "スマホはどこだ？　鍵は……あった。\n早くこの部屋を抜け出して、みんなに会いに行きたい。"
+    }
+  },
+
+  "haremking_intro_0023c": {
+    "ID": "haremking_intro_0023c",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "haremking_intro_0024a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ありがとう…はぁ……やっと休みが取れる！今から出かける、あとは頼んだ。"
+      "Text": "じゃあ行ってくる。\nあとは頼んだぞ。"
     }
   },
 
@@ -622,10 +744,21 @@
     "ID": "haremking_intro_0027",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0027a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,NPC_F,0,FirstName]に助けてもらい、ようやく仕事から解放された。"
+    }
+  },
+
+  "haremking_intro_0027a": {
+    "ID": "haremking_intro_0027a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "haremking_intro_0028",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,NPC_F,0,FirstName]に助けてもらって、やっと仕事から解放された！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "やっと自由の時間だ。"
     }
   },
 
@@ -635,8 +768,8 @@
     "WaitingType": "Click",
     "NextStepID": "haremking_intro_0029",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（メイドに会う時間だ。本当に待ちきれない！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "メイドたちに会いに行こう。\n本当に待ちきれない。"
     }
   },
 
@@ -692,7 +825,7 @@
     "NextStepID": "haremking_intro_0031",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "[=Name,Maid,0,CallName]、いるの？"
+      "Text": "[=Name,Maid,0,CallName]、いるか？"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -862,14 +995,25 @@
     "ID": "haremking_intro_0036",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "haremking_intro_0037",
+    "NextStepID": "haremking_intro_0036a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "変だな。どこでも見つからない。どこにいるのだろう？"
+      "Text": "おかしいな……。\nどこにもいない。"
     },
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "haremking_intro_0036a": {
+    "ID": "haremking_intro_0036a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0037",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "みんなどこへ行ったんだ？"
     }
   },
 
@@ -880,7 +1024,7 @@
     "NextStepID": "haremking_intro_0038",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "はぁ……せっかくの休憩時間もらったなのに、誰とも会えないなんてもったいないな……"
+      "Text": "はぁ……。\nせっかく時間ができたのに、誰にも会えないなんてなぁ……。"
     }
   },
 
@@ -898,10 +1042,21 @@
     "ID": "haremking_intro_0038a",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "haremking_intro_0039",
+    "NextStepID": "haremking_intro_0038b",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "お！[=Name,Maid,0,CallName]からのメッセージだ。えーと…\n「仕事終わったら早くプライベートルームに来て♪」"
+      "Text": "おっ、[=Name,Maid,0,CallName]からメッセージだ。"
+    }
+  },
+
+  "haremking_intro_0038b": {
+    "ID": "haremking_intro_0038b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0039",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "\n　　　「仕事終わったら早くプライベートルームに来て♪」"
     }
   },
 
@@ -909,10 +1064,32 @@
     "ID": "haremking_intro_0039",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0039a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "あっ、そこにいたのか！"
+    }
+  },
+
+  "haremking_intro_0039a": {
+    "ID": "haremking_intro_0039a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "haremking_intro_0040",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "あっ、そこにいるか！よしわかった、すぐ行く。とにかく今日は[=Name,Maid,0,CallName]と一緒に過ごす、後で時間があるなら[=Name,Maid,1,CallName]たちを探しましょう。"
+      "Text": "よし、分かった。\n今すぐ行く。"
+    }
+  },
+
+  "haremking_intro_0039b": {
+    "ID": "haremking_intro_0039b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_intro_0040",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "とりあえず今日は[=Name,Maid,0,CallName]と過ごそう。\n時間があったら、後で[=Name,Maid,1,CallName]たちにも会いに行けばいい。"
     }
   },
 

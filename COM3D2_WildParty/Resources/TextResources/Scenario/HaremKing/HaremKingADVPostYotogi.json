@@ -228,8 +228,8 @@
     "WaitingType": "Click",
     "NextStepID": "haremking_postyotogi_0003",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（数時間かけて何回もヤった後、俺はようやくみんなの欲求を満たす。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "数時間にわたり、何度も愛し合った後、俺はようやくみんなの欲求を満たすことができた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -243,8 +243,8 @@
     "WaitingType": "Click",
     "NextStepID": "haremking_postyotogi_0004",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（完全に搾り取られた…もう射精できない…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "完全に搾り尽くされた……もう一滴も出ない……。"
     }
   },
 
@@ -254,8 +254,8 @@
     "WaitingType": "Click",
     "NextStepID": "haremking_postyotogi_0005_Branch",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺たちはみんな疲れて、一緒にベッドに横になった。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺たちはみんな疲れ切って、一緒にベッドに横になった。"
     }
   },
 
@@ -302,7 +302,7 @@
     "NextStepID": "haremking_postyotogi_0032",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "今日は本当にありがとう。めっちゃ気持ちよかった。みんな、愛してるよ。"
+      "Text": "今日は本当にありがとう。すごく嬉しかった。みんな、愛してるよ。"
     }
   },
 
@@ -313,7 +313,7 @@
     "NextStepID": "haremking_postyotogi_0033",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "また時間を絞って、みんなと一緒にプレーすることを約束するよ。"
+      "Text": "また時間を作って、みんなと一緒に過ごそう。約束だ。"
     }
   },
 
@@ -323,8 +323,8 @@
     "WaitingType": "Click",
     "NextStepID": "haremking_postyotogi_0034",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（身体は疲れているが、精神的には元気になった。明日から仕事また頑張れる。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "体はクタクタだ。"
     }
   },
 
@@ -334,8 +334,8 @@
     "WaitingType": "Click",
     "NextStepID": "haremking_postyotogi_0035",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（このサプライズパーティーを行うために、彼女たちがスケジュールを調整し、[=Name,NPC_F,0,FirstName]に俺の仕事を手伝ってくれるように頼んだのを聞いた。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "でも――"
     }
   },
 
@@ -343,10 +343,32 @@
     "ID": "haremking_postyotogi_0035",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0035a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "会えた。\n話せた。\n一緒に過ごせた。"
+    }
+  },
+
+  "haremking_postyotogi_0035a": {
+    "ID": "haremking_postyotogi_0035a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "haremking_postyotogi_0035b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……幸せだな。"
+    }
+  },
+
+  "haremking_postyotogi_0035b": {
+    "ID": "haremking_postyotogi_0035b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "haremking_postyotogi_0036",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（こんな俺を気にかけてくれるなんて、泣きそうになる。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "みんなには、本当に感謝しないと。"
     }
   },
 
@@ -356,8 +378,8 @@
     "WaitingType": "Click",
     "NextStepID": "haremking_postyotogi_0037",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（彼女たちと恋をすることはとでも幸運だった。俺は本当に世界一幸せな男だ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "さて、今日はみんなと一緒にゆっくり休もう。"
     }
   },
 
@@ -367,8 +389,8 @@
     "WaitingType": "Click",
     "NextStepID": "haremking_end",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（さて、今夜はみんなと一緒にぐっすり眠ろう…おやすみ………）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "おやすみ……。"
     }
   },
 
