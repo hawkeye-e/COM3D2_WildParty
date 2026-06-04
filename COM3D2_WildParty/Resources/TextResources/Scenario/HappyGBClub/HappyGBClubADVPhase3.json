@@ -547,8 +547,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0002",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺は男たちと[=Name,Maid,0,CallName]を犯し続ける、今まで味わったことのないような快感を覚えている。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺は男たちと共に[=Name,Maid,0,CallName]を犯し続け、今まで味わったことのないような強烈な快感に包まれていた。"
     },
 
     "FadeData": {
@@ -563,8 +563,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0003",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,Maid,0,CallName]の甘い大きなうめき声を聞いて、彼女も同じくらいな快感を得ると思う。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]の甘く大きな喘ぎ声を聞きながら、俺は必死に腰を振り続けた。"
     }
   },
 
@@ -574,8 +574,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0004_Branch",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（まるで自分が[=Name,Maid,0,CallName]に最も快楽を与えられる男であることを証明するように、俺は必死に腰を振り続けた。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……はぁ……[=Name,Maid,0,CallName]の締まり……ヤバい……。"
     }
   },
 
@@ -800,7 +800,7 @@
     "NextStepID": "hgbc_phase3_0035",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ハァ…ハァ…ちょっと休憩取る…みんな、妻のことをお願いね。"
+      "Text": "ハァ…ハァ…ちょっと休憩取る……みんな、妻のことをお願いね。"
     }
   },
 
@@ -822,7 +822,7 @@
     "NextStepID": "hgbc_phase3_0037",
     "TalkData": {
       "SpeakerName": "男１５",
-      "Text": "よし！みんな、行列に並べてヤる、とう？"
+      "Text": "よし！みんな、行列に並べてヤるぞ！"
     }
   },
 
@@ -1402,8 +1402,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0040",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（ステージに降りると、[=Name,NPC_M,0,LastName]さんと[=Name,NPC_F,2,CallName]さんが待っていた。二人は行為室に戻っていた。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "ステージを降りると、[=Name,NPC_M,0,LastName]さんと[=Name,NPC_F,2,CallName]さんが待っていた。"
     },
 
     "FadeData": {
@@ -1537,10 +1537,21 @@
     "ID": "hgbc_phase3_0047",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_phase3_0048",
+    "NextStepID": "hgbc_phase3_0047a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
       "Text": "じゃあ喜んで！[=Name,NPC_F,2,CallName]さんみたいな女性は好みだ。"
+    }
+  },
+
+  "hgbc_phase3_0047a": {
+    "ID": "hgbc_phase3_0047a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0048",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……やっと……この極上エロボディを、ようやく味わえる……。"
     }
   },
 
@@ -1668,8 +1679,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0051",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（そして、[=Name,NPC_F,2,CallName]さんは膝をつくて俺のチンポを触り始める。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,NPC_F,2,CallName]さんは膝をつき、俺のチンポを優しく触り始めた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1699,10 +1710,21 @@
     "ID": "hgbc_phase3_0052",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_phase3_0053",
+    "NextStepID": "hgbc_phase3_0052a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "あぁ、いいねぇ…さっきまでイったばかりので、チンポはちょっと疲れかもが、[=Name,NPC_F,2,CallName]さんの手のおかげで復活しましたね。"
+      "Text": "あぁ、いいねぇ…さっきまでイったばかりなのに、[=Name,NPC_F,2,CallName]さんの手のおかげで復活してきた。"
+    }
+  },
+
+  "hgbc_phase3_0052a": {
+    "ID": "hgbc_phase3_0052a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0053",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "くっ……この手捌き……上品なのにエロすぎる……。"
     }
   },
 
@@ -1747,8 +1769,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0055",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,NPC_F,2,CallName]さんの手が挑発的リズムで淫らに俺のチンポをこすり続きける。その感触が堪らない！さらに、彼女の上品な外見でそんな卑猥な言葉を言ってなんて……あぁ…チンポビンビンでもう発射寸前！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……あぁ……この挑発的な手淫……[=Name,NPC_F,2,CallName]さんの上品な顔とのギャップがたまらない……！"
     }
   },
 
@@ -1904,8 +1926,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0061",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（イッた後もチンポは鎮めない、まだ勃起したままの状態。俺は落ち着いていられず、[=Name,NPC_F,2,CallName]さんを押し倒し、チンポを彼女の濡れた膣に挿入する準備をした。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "射精した後もチンポは萎えず、完全に勃起したままだった。俺は我慢できなくなり、[=Name,NPC_F,2,CallName]さんを押し倒して彼女の濡れた膣にチンポを押し込もうとした。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1994,8 +2016,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0063",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,NPC_F,2,CallName]さんの裸体を見つめ続け、射精したばかりのチンポがもう徐々に勃起してきている。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "この体……ラウンジで見たときから欲しくて仕方なかった……。"
     }
   },
 
@@ -2060,8 +2082,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0065",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,NPC_F,2,CallName]さんの膣口はマン汁が溢れてる、まるで挿入するように促しているような模様。俺もためらうことなく、彼女の奥深くにチンポを押し込むだ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺は一気に[=Name,NPC_F,2,CallName]さんの奥深くまでチンポを突き刺した。"
     }
   },
 
@@ -2089,7 +2111,7 @@
     "NextStepID": "hgbc_phase3_0066",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "エロ過ぎる！この体は男を誘惑する為に存在するたろ！ラウンジで[=Name,NPC_F,2,CallName]さんの裸体を見てから、ずっとセックスしたかったんだ！もう我慢できん！"
+      "Text": "エロ過ぎる！この体は男を誘惑する為に存在するだろ！ラウンジで[=Name,NPC_F,2,CallName]さんの裸体を見てから、ずっとセックスしたかったんだ！もう我慢できん！"
     }
   },
 
@@ -2135,7 +2157,7 @@
     "NextStepID": "hgbc_phase3_0068",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "このおっぱいの大きさ、形、弾力はすべて完璧だ。どんな触って揉んで掴んでも飽きない！エロすぎる！ああぁ…この極上おっぱい一生遊ばせてくれ、[=Name,NPC_F,2,CallName]さん！"
+      "Text": "このおっぱいの大きさ、形、弾力はすべて完璧だ。どんなに触って揉んで掴んでも飽きない！エロすぎる！ああぁ…この極上おっぱい一生遊ばせてくれ、[=Name,NPC_F,2,CallName]さん！"
     }
   },
 
@@ -2180,8 +2202,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase3_0071",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺が[=Name,NPC_F,2,CallName]さんとヤッているとき、ステージ上の男たちは列を作っている。女たちも横たわり、まるで肉便器のように股を開いている。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "その頃、ステージ上では男たちが列を作っていた。女たちは横たわり、肉便器のように脚を大きく広げている。"
     }
   },
 
@@ -2192,7 +2214,7 @@
     "NextStepID": "hgbc_phase3_0073_Branch",
     "TalkData": {
       "SpeakerName": "男１７",
-      "Text": "[=Name,Maid,0,CallName]ちゃん、今、みんなは[=Name,Maid,0,CallName]ちゃんのために列をなしているよ。うれしだろ？何をしてほしいか言って？"
+      "Text": "[=Name,Maid,0,CallName]ちゃん、今、みんなは[=Name,Maid,0,CallName]ちゃんのために列をなしているよ。嬉しいだろ？何をしてほしいか言ってみろ？"
     }
   },
 
@@ -2217,7 +2239,7 @@
     "NextStepID": "hgbc_phase3_0082_Branch",
     "TalkData": {
       "SpeakerName": "男１７",
-      "Text": "え？なになに？わかんねぇよ、[=Name,Maid,0,CallName]ちゃん。俺のチンポに何をしてほしい？もっと具体的にして。"
+      "Text": "え？なになに？わかんねぇよ、[=Name,Maid,0,CallName]ちゃん。俺のチンポに何をしてほしい？もっとちゃんと欲しがってみろよ、肉便器！"
     }
   },
 
@@ -2258,7 +2280,7 @@
     "NextStepID": "hgbc_phase3_0084_Branch",
     "TalkData": {
       "SpeakerName": "男１７",
-      "Text": "ちゃんと言ったらえらいね～じゃあ、お望みのとおり！おおっ！チンポが触れただけでマンコに吸われる！いいマンコじゃねか！"
+      "Text": "ちゃんと言えたじゃねぇか。えらいえらい～じゃあ、お望みの通りにぶち込んでやるよ！おおっ！チンポが触れただけでマンコが吸いついてくる！最高の淫乱マンコじゃねぇか！"
     }
   },
 
@@ -2299,7 +2321,7 @@
     "NextStepID": "hgbc_phase3_0086_Branch",
     "TalkData": {
       "SpeakerName": "男１７",
-      "Text": "今、マンコどんな感じ？俺のチンポ好きだろう？"
+      "Text": "今、マンコどんな感じだ？俺のチンポ好きなんだろ？正直に言えよ！"
     }
   },
 
@@ -2339,7 +2361,7 @@
     "NextStepID": "hgbc_phase3_0088b",
     "TalkData": {
       "SpeakerName": "男１７",
-      "Text": "おやおや、[=Name,Maid,0,CallName]ちゃん、肉便器として、自分の快感だけを考えてはダメだろ？あ～あ、失望した、肉便器失格だね。[=Name,Maid,0,CallName]ちゃんがちゃんとした肉便器になれるために、やっぱお仕置きは必要だな！"
+      "Text": "おやおや、[=Name,Maid,0,CallName]ちゃん、肉便器として自分の快感だけ考えてんじゃねぇよ？あ～あ、失望したな。肉便器失格だ。ちゃんとした肉便器になるためにお仕置きしてやるよ！"
     }
   },
 
@@ -2396,7 +2418,7 @@
     "NextStepID": "hgbc_phase3_0092_Branch",
     "TalkData": {
       "SpeakerName": "男１７",
-      "Text": "男のチンポを喜ばせるのがメスの仕事だ！もっと本気で穴絞れって！これくらいはできるだろ？肉便器のくせに！"
+      "Text": "男のチンポを喜ばせるのがメスの仕事だろ！もっと本気で締め付けろよ！これくらいできねぇのか、肉便器のくせに！"
     }
   },
 
@@ -2417,10 +2439,21 @@
     "ID": "hgbc_phase3_0094",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "hgbc_phase3_0094a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺と[=Name,NPC_F,2,CallName]さんの背徳の交わりは激しさを増し、ステージ上の淫乱な叫び声と混じり合っていく……"
+    }
+  },
+
+  "hgbc_phase3_0094a": {
+    "ID": "hgbc_phase3_0094a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "hgbc_intro_yotogiplay_phase3_closepanel",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺たちの背徳の淫宴はまだまだ続く…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……まだまだ終われない……この狂った夜は、これからが本番だ……。"
     }
   },
 

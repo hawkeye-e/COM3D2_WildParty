@@ -37,7 +37,7 @@
     "NextStepID": "hgbc_intro_lakeside_0002a",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "数日後"
+      "Text": "\n　　　　　　　　　　　　　　数日後"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -52,7 +52,7 @@
     "NextStepID": "hgbc_intro_lakeside_0002b",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "（今日は『りんかんクラブ』を訪れる日だ。俺と[=Name,Maid,0,CallName]は早起きして出かける準備をする。）"
+      "Text": "今日は『輪姦クラブ』を訪れる日だ。俺と[=Name,Maid,0,CallName]は早起きして出かける準備をする。"
     }
   },
 
@@ -63,7 +63,7 @@
     "NextStepID": "hgbc_intro_lakeside_0002c",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "（頭を冷やした後、『りんかんクラブ』のついで少し不安になったのかもしれない、[=Name,Maid,0,CallName]が今日は見るだけしたいって言っだ。）"
+      "Text": "あの夜はあんなに乗り気だったのに……朝になったら少し不安になったのかもしれない。[=Name,Maid,0,CallName]が「今日は見るだけにしたい」と言っていた。"
     }
   },
 
@@ -71,10 +71,21 @@
     "ID": "hgbc_intro_lakeside_0002c",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_lakeside_0002c2",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "ふっ、仕方ないか。実際に来てみると緊張したんだろう。あれだけ「興味ある」って言ってたのに可愛いな……"
+    }
+  },
+
+  "hgbc_intro_lakeside_0002c2": {
+    "ID": "hgbc_intro_lakeside_0002c2",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "hgbc_intro_lakeside_0002d",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "（最初からそのつもりだったけど……まぁ、状況によっては、[=Name,Maid,0,CallName]に参加を勧めたい。結局俺も[=Name,Maid,0,CallName]の輪姦を見たいな…）"
+      "Text": "最初からいきなり本番とは思ってなかったけど……まぁ、状況を見て[=Name,Maid,0,CallName]に参加を勧められたらいい。結局俺も、[=Name,Maid,0,CallName]が輪姦される姿をちゃんと見たいしな……"
     }
   },
 
@@ -85,7 +96,7 @@
     "NextStepID": "hgbc_intro_lakeside_0002e",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "（俺たちはとあるの山奥の私有地に車を走らせる。ここに着く前には厳重な警備とフェンスがあるので、プライバシーは十分に保護されていると思う。さすが[=Name,NPC_M,0,LastName]グループだ。）"
+      "Text": "俺たちはとある山奥の私有地に車を走らせる。ここへ来る前から厳重な警備と高いフェンスが設けられているので、プライバシーは万全だ。さすが[=Name,NPC_M,0,LastName]グループだ。"
     }
   },
 
@@ -96,7 +107,7 @@
     "NextStepID": "hgbc_intro_lakeside_0003",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "（俺たちは湖畔に車を止める。そこで[=Name,NPC_M,0,LastName]さんが俺たちを待っていた。）"
+      "Text": "湖畔に車を停めると、[=Name,NPC_M,0,LastName]さんが俺たちを待っていた。"
     }
   },
 
@@ -221,7 +232,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "ははは、ようこそ[=ClubOwnerName]くん、[=Name,Maid,0,CallName]ちゃん。君たちはきっと来ると言ったろ。"
+      "Text": "ははは、ようこそ[=ClubOwnerName]くん、[=Name,Maid,0,CallName]ちゃん。来てくれるって言ったろ。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -236,7 +247,7 @@
     "NextStepID": "hgbc_intro_lakeside_0006_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "歓迎してくれてありがとう、[=Name,NPC_M,0,LastName]さん。今日は[=Name,Maid,0,CallName]と一緒に見学してもらうと思います。"
+      "Text": "歓迎してくれてありがとうございます、[=Name,NPC_M,0,LastName]さん。今日は[=Name,Maid,0,CallName]と一緒に見学させてもらいます。"
     }
   },
 
@@ -260,7 +271,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "おはよう！こちらは妻の[=Name,NPC_F,2,FirstName]。"
+      "Text": "おはよう！こちらは妻の[=Name,NPC_F,2,FirstName]だ。"
     }
   },
 
@@ -306,8 +317,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_lakeside_0013",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（おっ！[=Name,NPC_F,2,CallName]さんめっちゃ美人だな、ものすごく上品な女性の感じ…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "おっ！[=Name,NPC_F,2,CallName]さん、めっちゃ美人……すごく上品で気品のある女性だな。"
     }
   },
 
@@ -317,8 +328,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_lakeside_0014",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（……いや待って…[=Name,NPC_M,0,CallName]さんが[=Name,NPC_F,2,CallName]さんをここに連れてきたということは、自分の妻も輪姦させたいということか？）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……待てよ。[=Name,NPC_M,0,CallName]さんが自分の妻をここに連れてきたってことは、[=Name,NPC_F,2,CallName]さんも輪姦させたいってことか？"
     }
   },
 
@@ -328,8 +339,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_lakeside_0020",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（だからこそ「こっち側の人間」か…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "だからこそ俺たちを「こっち側の人間」として呼んだんだな……"
     }
   },
 
@@ -341,7 +352,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "さあ、時間を無駄にしない、行こうか。案内する。"
+      "Text": "さあ、時間を無駄にしないで行こうか。案内するよ。"
     }
   },
 

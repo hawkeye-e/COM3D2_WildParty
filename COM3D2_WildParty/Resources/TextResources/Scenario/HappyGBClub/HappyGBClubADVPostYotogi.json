@@ -519,8 +519,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0002",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺たちは獣のようにセックスを続ける。[=Name,NPC_M,0,LastName]さんは俺に加われ、一緒に[=Name,NPC_F,2,CallName]さんを犯す。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺たちは獣のようにセックスを続けていた。[=Name,NPC_M,0,LastName]さんも加わり、俺と一緒に[=Name,NPC_F,2,CallName]さんを激しく犯す。"
     },
 
     "FadeData": {
@@ -535,8 +535,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0003",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（相手の肉体に欲情している間、ときどき[=Name,Maid,0,CallName]とお互いに見つめ合う。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "時々視線を[=Name,Maid,0,CallName]に向けると、彼女も俺を見つめ返してくる。"
     }
   },
 
@@ -546,8 +546,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0004",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺と[=Name,Maid,0,CallName]は、お互いが他人と狂ったようなセックスをするのを見て、筆舌に尽くしがたい快楽を感じている。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "お互いが他人に狂ったように犯されている姿を見て、言葉にできない興奮が込み上げてくる。"
     }
   },
 
@@ -571,10 +571,26 @@
     "ID": "hgbc_postyotogi_0004b",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_postyotogi_0005",
+    "NextStepID": "hgbc_postyotogi_0004c",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ああぁ……[=Name,NPC_F,2,CallName]さんの生マンコめっちゃ気持ち良いよ！このままマンコが俺のチンポの形になれ！"
+      "Text": "ああぁ……[=Name,NPC_F,2,CallName]さんの生マンコ、めっちゃ気持ち良いよ！このままマンコが俺のチンポの形になるまで犯してやる！"
+    },
+
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "hgbc_postyotogi_0004c": {
+    "ID": "hgbc_postyotogi_0004c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0005",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……[=Name,NPC_F,2,CallName]さんの体、最高にエロい……。\n[=Name,NPC_M,0,LastName]さんと一緒にこの女を犯している……この背徳感がたまらない。"
     },
 
     "FadeData": {
@@ -609,7 +625,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "悪い妻だな、[=Name,NPC_F,2,CallName]！俺とセックスするとき、一度もこんなことを言わなかった！[=ClubOwnerName]くんのチンポに恋してるじゃねか！"
+      "Text": "悪い妻だな、[=Name,NPC_F,2,CallName]！俺とセックスするとき、一度もこんなにエロい声出さなかったぞ！[=ClubOwnerName]くんのチンポに完全に落ちてるじゃねぇか、この淫乱女！"
     }
   },
 
@@ -683,7 +699,7 @@
     "NextStepID": "hgbc_postyotogi_0012",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ああ！見てるよ！いいぞ！このまま男の精液を搾り出せ！[=ClubName]のメイドの良さを知ってもらう！"
+      "Text": "ああ！見てるよ！いいぞ！ほら、このまま男たちのチンポを根元まで飲み込め！お前の中ですべて搾り取ってやれ！[=ClubName]のメイドの価値を思い知らせるんだ！"
     }
   },
 
@@ -766,7 +782,7 @@
     "NextStepID": "hgbc_postyotogi_0023_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "素晴らしいぞ、[=Name,Maid,0,CallName]！本当に淫らな女だ、ますます愛しているよ！"
+      "Text": "素晴らしいぞ、[=Name,Maid,0,CallName]！本当に淫らな女だ……ますます愛しているよ！"
     }
   },
 
@@ -806,7 +822,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "[=ClubOwnerName]くん、[=Name,NPC_F,2,CallName]に集中しよう。負けてられんぞ！俺たちのチンポでマンコもアナルもイキ狂わせましょう！"
+      "Text": "[=ClubOwnerName]くん、[=Name,NPC_F,2,CallName]に集中しようぜ！負けてられん！俺たちのチンポでマンコもアナルもめちゃくちゃにイカせまくろう！"
     }
   },
 
@@ -814,10 +830,21 @@
     "ID": "hgbc_postyotogi_0033",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_postyotogi_0034",
+    "NextStepID": "hgbc_postyotogi_0033a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ああ、もちろんだ！[=Name,NPC_F,2,CallName]さん、しっかりマンコとケツ穴締めろよ！"
+      "Text": "ああ、もちろんだ！[=Name,NPC_F,2,CallName]さん、マンコもケツ穴も全力で締め付けろよ！"
+    }
+  },
+
+  "hgbc_postyotogi_0033a": {
+    "ID": "hgbc_postyotogi_0033a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0034",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……このクラブに入る価値、めちゃくちゃある……。\n[=Name,NPC_M,0,LastName]さんの妻を、夫の目の前で一緒に犯せるなんて……興奮が止まらない。"
     }
   },
 
@@ -868,7 +895,7 @@
     "NextStepID": "hgbc_postyotogi_0036",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "みっちりマン肉が絡んでくる、たまんねぇ！出るぞ、[=Name,NPC_F,2,CallName]さん！たっぷり味わえ！"
+      "Text": "みっちりマン肉が絡みついてくる……たまんねぇ！出るぞ、[=Name,NPC_F,2,CallName]さん！子宮にたっぷり注いでやる！"
     }
   },
 
@@ -1186,7 +1213,7 @@
     "NextStepID": "hgbc_postyotogi_0041",
     "TalkData": {
       "SpeakerName": "男１８",
-      "Text": "また俺の番だ。ちゃんと俺のチンポも接待しろよ！"
+      "Text": "また俺の番だ！ちゃんと俺のチンポも全力で接待しろよ、この淫乱メイド！"
     }
   },
 
@@ -1268,7 +1295,7 @@
     "NextStepID": "hgbc_postyotogi_0062",
     "TalkData": {
       "SpeakerName": "男１８",
-      "Text": "[=Name,Maid,0,CallName]ちゃんはたくさんの男に穴を使われるために存在しているだね！とんなハメまくっても締りはそのままっ！最高のメス穴だ！"
+      "Text": "[=Name,Maid,0,CallName]ちゃんは大勢の男に穴を好き勝手に使われるために生まれてきたんだよ！何回ハメられても締まりが最高の、極上肉便器だな！"
     }
   },
 
@@ -1461,10 +1488,21 @@
     "ID": "hgbc_postyotogi_0085",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0085a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,NPC_F,2,CallName]さんが再び淫らな手で俺のチンポを激しく扱き始めた。"
+    }
+  },
+
+  "hgbc_postyotogi_0085a": {
+    "ID": "hgbc_postyotogi_0085a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0086",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（うっ……！[=Name,NPC_F,2,CallName]さんはその手で俺のチンポをまた擦った。そのえげつない手コキのテクと[=Name,Maid,0,CallName]のエロい声のせいで、俺はまたまた勃起した。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……またすぐに勃起してしまう……このクラブの女たちは本当に性欲が尽きないな。"
     }
   },
 
@@ -1472,7 +1510,7 @@
     "ID": "hgbc_postyotogi_0086",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_postyotogi_0087",
+    "NextStepID": "hgbc_postyotogi_0088",
     "TalkData": {
       "SpecificSpeaker": "NPC_F",
       "Index": 2,
@@ -1487,17 +1525,6 @@
     }
   },
 
-  "hgbc_postyotogi_0087": {
-    "ID": "hgbc_postyotogi_0087",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "hgbc_postyotogi_0088",
-    "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（また俺のチンポをねだり続けかよ、この淫らな女め！……男としてこの誘いに乗るしかねぇ！）"
-    }
-  },
-
   "hgbc_postyotogi_0088": {
     "ID": "hgbc_postyotogi_0088",
     "Type": "Talk",
@@ -1505,7 +1532,7 @@
     "NextStepID": "hgbc_postyotogi_0089",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "[=Name,NPC_F,2,CallName]さんは本当にヤリマンビッチだね…"
+      "Text": "[=Name,NPC_F,2,CallName]さんは本当にヤリマンビッチだね……"
     }
   },
 
@@ -1535,7 +1562,7 @@
     "NextStepID": "hgbc_postyotogi_0091",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ああ！こんなヤリマンビッチに誘惑されたら、もうやめられん！よかろう、玉が空になるまでヤり続けるよ！"
+      "Text": "ああ！こんなヤリマンビッチに誘惑されたら、もうやめられん！玉が空になるまで犯し続けてやるよ！"
     }
   },
 
@@ -1543,7 +1570,7 @@
     "ID": "hgbc_postyotogi_0091",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_postyotogi_0092",
+    "NextStepID": "hgbc_postyotogi_0091a",
     "TalkData": {
       "SpecificSpeaker": "NPC_F",
       "Index": 2,
@@ -1554,6 +1581,17 @@
           "IsChoppingAudio": false
         }
       }
+    }
+  },
+
+  "hgbc_postyotogi_0091a": {
+    "ID": "hgbc_postyotogi_0091a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0092",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……この秘密のクラブ……来って本当によかった。\n高級で、自由で、誰もが本性を晒せる……俺はもう、この世界から離れられそうにない。"
     }
   },
 
@@ -1617,7 +1655,7 @@
     "NextStepID": "hgbc_postyotogi_0096",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "[=Name,NPC_F,2,CallName]さん、俺のバキバキチンポ大好きだね？そんなに気持ちいいものなのか？"
+      "Text": "[=Name,NPC_F,2,CallName]さん、俺のバキバキチンポ大好きだろ？そんなに気持ちいいのか？"
     }
   },
 
@@ -1646,7 +1684,7 @@
     "NextStepID": "hgbc_postyotogi_0098",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "うわぁ、[=Name,NPC_M,0,LastName]さんの前でこんなことを言ったんだ！"
+      "Text": "うわぁ、主人の前で主人を貶すなんて……本当の淫乱メスだな！"
     }
   },
 
@@ -1676,7 +1714,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "あ～あ、[=Name,NPC_F,2,CallName]、よく俺の前で[=ClubOwnerName]くんのチンポを比べられるわね！こんなひどいことするなら……俺はさらに興奮するよ！オラァ！夫のチンポはどうた！"
+      "Text": "あ～あ、[=Name,NPC_F,2,CallName]、よく俺の前で[=ClubOwnerName]くんのチンポを褒めちぎるわね！そんなにひどいことするなら……俺はさらに興奮するぜ！オラァ！夫のチンポはどうだ、この裏切りメス！"
     }
   },
 
@@ -1749,7 +1787,7 @@
     "NextStepID": "hgbc_postyotogi_0104",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "初めて会ったとき、[=Name,NPC_F,2,CallName]さんは上品な女性だと思った！なのに…まさか本当の姿はこんなにチンポのことしか考えられない淫乱メスかよ！こんな淫乱メスはお仕置きが必要だな！"
+      "Text": "初めて会ったとき、[=Name,NPC_F,2,CallName]さんは上品な淑女だと思ってたのに……本当の姿はチンポのことしか考えられないド淫乱メスだったのかよ！こんな淫乱メスには厳しいお仕置きが必要だな！"
     }
   },
 
@@ -1775,11 +1813,33 @@
     "ID": "hgbc_postyotogi_0105",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_postyotogi_0106",
+    "NextStepID": "hgbc_postyotogi_0105a",
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "あ～あ、そうだ、罰が必要だね！罰はもちろん、ここにいる全員に輪姦されるだ！みんな、まだまだ続くよ！チンポ絶やすなっ！"
+      "Text": "そうだな、罰が必要だ！罰はもちろん、ここにいる全員で[=Name,NPC_F,2,CallName]を輪姦してやる！みんな、まだまだ続くぞ！チンポを絶やすんじゃねぇ！この淫乱妻を朝まで壊し尽くせ！"
+    }
+  },
+
+  "hgbc_postyotogi_0105a": {
+    "ID": "hgbc_postyotogi_0105a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0105b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……[=Name,NPC_F,2,CallName]さんの乱れた顔、[=Name,NPC_M,0,LastName]さんの興奮した表情……。\nこの秘密クラブなら、こんな異常な快楽をいつでも味わえる……。"
+    }
+  },
+
+  "hgbc_postyotogi_0105b": {
+    "ID": "hgbc_postyotogi_0105b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0106",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺はもう完全に、この世界に染まった。[=Name,Maid,0,CallName]と共に、このクラブに加入する価値は十分にある……いや、むしろ加入したいと本気で思っている。"
     }
   },
 
@@ -1815,8 +1875,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0109",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（行為室のみんなはほとんど正気を失いそうな、ただセックスを続けている。何時間これを続けているのかもうわからない。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "行為室の熱気はまだ残っていたが、激しい動きは徐々に落ち着き、皆が余韻に浸りながらゆったりと体を重ねていた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1830,8 +1890,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0110",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺は[=Name,Maid,0,CallName]と[=Name,NPC_F,2,CallName]さんの他にも、女性メンバーとも輪姦した。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "女性たちは跪き、優しくチンポをしゃぶりながら、穏やかな会話が続いている。"
     }
   },
 
@@ -1841,8 +1901,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0111",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（もはや何も考えず、ただ肉欲的な快楽を追い求めるだけ……）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……すげぇ。何時間続けたんだろう。体はもう限界なのに、頭がまだぼんやりと気持ちいい。"
     }
   },
 
@@ -2241,7 +2301,7 @@
     "NextStepID": "hgbc_postyotogi_0123",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "とても楽しかった。輪姦ってこんな快楽なものだとは知らなかった。しかもいろんな有名人とヤっては特別な経験だな。"
+      "Text": "とても楽しかった。輪姦ってこんなに快楽なものだとは知らなかったよ。しかもいろんな有名人とヤれるなんて、特別な経験だな。"
     }
   },
 
@@ -2293,7 +2353,7 @@
     "NextStepID": "hgbc_postyotogi_0125",
     "TalkData": {
       "SpeakerName": "男１９",
-      "Text": "[=Name,NPC_F,1,CallName]ちゃん、[=ClubOwnerName]さんのチンポを吸うすぎじゃね？マスコミにバレたら、ファンたちはとても傷つくだよ！"
+      "Text": "[=Name,NPC_F,1,CallName]ちゃん、[=ClubOwnerName]さんのチンポを吸いすぎじゃね？マスコミにバレたら、ファンたちはとても傷つくだよ！"
     }
   },
 
@@ -2346,7 +2406,7 @@
     "NextStepID": "hgbc_postyotogi_0127",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "大丈夫、俺のチンポは逃げないよ。[=Name,NPC_F,1,CallName]ちゃんが満足するまで、好きなだけ咥えさせてあげるよ。ほら、こうやって咥えてみて？"
+      "Text": "大丈夫、俺のチンポは逃げないよ。[=Name,NPC_F,1,CallName]ちゃんが満足するまで、好きなだけ咥えさせてあげる。"
     }
   },
 
@@ -2572,7 +2632,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "じゃあ、どうだい？メンバーになりたいか？きっとここでの人気者になれる。"
+      "Text": "じゃあ、どうだい？メンバーになりたいか？きっとここでの人気者になれるぞ。"
     }
   },
 
@@ -2607,7 +2667,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "でも信頼できるメイドだけ、公にできないクラブだから。まあもちろん、君の判断を信じてるよ。"
+      "Text": "ただ、信頼できるメイドだけな。公にできないクラブだからな。まあ、君の判断を信じてるよ。"
     }
   },
 
@@ -2629,7 +2689,7 @@
     "NextStepID": "hgbc_postyotogi_0148",
     "TalkData": {
       "SpeakerName": "男２１",
-      "Text": "これからもたくさんの愉しいことができるぞ！期待してるね！"
+      "Text": "これからもたくさんの楽しいことができるぞ！期待してるぜ！"
     }
   },
 
@@ -2640,7 +2700,7 @@
     "NextStepID": "hgbc_postyotogi_0149",
     "TalkData": {
       "SpeakerName": "男１９",
-      "Text": "[=ClubOwnerName]さん、今度ここに来るときは、俺の彼女を紹介するよ。あいつはとても淫乱だ、きっと気に入ると思うよ！"
+      "Text": "[=ClubOwnerName]さん、今度ここに来るときは、俺の彼女を紹介するよ。あいつはとても淫乱で、誰かに抱かれるのが大好きなんだ。きっと気に入ると思うぜ。"
     }
   },
 
@@ -2651,7 +2711,7 @@
     "NextStepID": "hgbc_postyotogi_0150",
     "TalkData": {
       "SpeakerName": "男２２",
-      "Text": "俺の妻もだよ。最近、新しい男をヤってみたいと言ったばかり！手を貸してくれないか。"
+      "Text": "俺の妻もだよ。最近「新しい男に抱かれたい」って言い出してさ。[=ClubOwnerName]さん、遠慮なく犯してやってくれ。"
     }
   },
 
@@ -2674,7 +2734,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "ははは、どうやらみんないい友達になったみたいだね。そうだ、[=ClubOwnerName]くん、もし[=Name,NPC_F,2,CallName]とヤりたいなら、電話してくれ。きっとここに行くよ。"
+      "Text": "ははは、どうやらみんないい友達になったみたいだね。そうだ、[=ClubOwnerName]くん、もし[=Name,NPC_F,2,CallName]とまたヤりたいなら、いつでも電話してくれ。喜んで連れてくるよ。"
     }
   },
 
@@ -2758,8 +2818,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0157",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺は獣ような交尾を続ける、ついに射精できないほど疲れてしまいました。ラウンジに戻って休んでいると、すでに日没の時間だった。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "十分に体を休めた後、俺たちはようやく身支度を整えてラウンジに戻った。\n窓の外はすでに日が沈み、夜の帳が降り始めていた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -2773,8 +2833,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_postyotogi_0158",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,Maid,0,CallName]と俺は、明日はまだ[=ClubName]で働かなければならないので、みんなに別れを告げる。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]と俺は、明日は[=ClubName]で仕事があるため、皆に丁寧に別れを告げた。"
     }
   },
 
@@ -2909,14 +2969,25 @@
     "ID": "hgbc_postyotogi_0165",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_postyotogi_0166_Branch",
+    "NextStepID": "hgbc_postyotogi_0165a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "もうこんな時間か……[=Name,Maid,0,CallName]、今日の見学はどう思う？いろんな男達に輪姦されって悪くないだろ？"
+      "SpecificSpeaker": "Narrative",
+      "Text": "夜風が少し冷たく感じる。俺は[=Name,Maid,0,CallName]の手を握りながら、静かに言った。"
     },
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "hgbc_postyotogi_0165a": {
+    "ID": "hgbc_postyotogi_0165a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0166_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "もうこんな時間か……[=Name,Maid,0,CallName]、今日の見学はどう思う？いろんな男達に輪姦されるの、悪くないだろ？"
     }
   },
 
@@ -2939,7 +3010,7 @@
     "NextStepID": "hgbc_postyotogi_0172_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ふーん、新しい扉を開いたみたいたね。……うん、ここに来て良かったな。"
+      "Text": "ふーん、新しい扉を開いたみたいだな。……うん、ここに来て良かった。"
     }
   },
 
@@ -2962,7 +3033,7 @@
     "NextStepID": "hgbc_postyotogi_0182_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "凄く気に入っているみたいたね。"
+      "Text": "凄く気に入ったみたいだね。"
     }
   },
 
@@ -2985,7 +3056,7 @@
     "NextStepID": "hgbc_postyotogi_0192",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "はは、そんなこと言うな。メンバーになったから、いつでも戻ってこられるよ。"
+      "Text": "はは、そんなこと言うな。メンバーになったんだから、いつでも戻ってこられるよ。"
     }
   },
 
@@ -2996,7 +3067,7 @@
     "NextStepID": "hgbc_postyotogi_0193_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "[=ClubName]に戻ったら、他のメイドたちにこのクラブを勧めよう。愉しいことはみんなで分かち合わないとね。"
+      "Text": "[=ClubName]に戻ったら、他のメイドたちにもこのクラブを勧めよう。楽しいことはみんなで分かち合わないとね。"
     }
   },
 
@@ -3050,10 +3121,32 @@
     "ID": "hgbc_postyotogi_0212",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0212a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺たちはこの甘く退廃的な秘密の楽園を後にし、現実の世界へと車を走らせた。"
+    }
+  },
+
+  "hgbc_postyotogi_0212a": {
+    "ID": "hgbc_postyotogi_0212a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_postyotogi_0212b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "これから俺と[=Name,Maid,0,CallName]は、定期的にこのクラブを訪れることになるだろう。\nもう普通の関係だけでは満足できない。"
+    }
+  },
+
+  "hgbc_postyotogi_0212b": {
+    "ID": "hgbc_postyotogi_0212b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "hgbc_end",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺たちはこの放蕩の場所を離れ、現実に戻りました。これから、この非現実的な場所を定期的に訪れるだろう、俺たちはもうこの退廃的な快楽にはまってしまったから…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "この輪姦クラブは、俺たちにとって最高の逃避先であり、愛を深めるための特別な場所になった……。"
     }
   },
 

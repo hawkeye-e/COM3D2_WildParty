@@ -29,7 +29,7 @@
     "NextStepID": "hgbc_intro_cafe_0001c",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "（そして、ある建物に到着する。）"
+      "Text": "そして、ある建物に到着した。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -200,8 +200,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0012",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（ふーん…普通のカフェみたい……）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "ふーん……普通のカフェみたいだな……"
     }
   },
 
@@ -213,7 +213,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "よし、到着！あ、[=Name,NPC_F,2,CallName]、まずはドレスコードに着替えてませんか？俺は始める前に[=ClubOwnerName]くんと[=Name,Maid,0,CallName]ちゃんに少し説明しておく。"
+      "Text": "よし、到着！　あ、[=Name,NPC_F,2,CallName]、まずはドレスコードに着替えてこないか？　俺は始める前に[=ClubOwnerName]くんと[=Name,Maid,0,CallName]ちゃんに少し説明しておくよ。"
     }
   },
 
@@ -270,8 +270,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0016",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,NPC_F,2,CallName]さんが着替えに行くと、[=Name,NPC_M,0,CallName]さんが説明を始める。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,NPC_F,2,CallName]さんが着替えに行くと、[=Name,NPC_M,0,CallName]さんが説明を始めた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -287,7 +287,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "ここはラウンジだ。今はあまり人がいないが、普段はここに人が集まって休んでいる。食事をしてもいいし、休んでもいいし、誰と話してもいい。"
+      "Text": "ここはラウンジだ。今はあまり人がいないが、普段はここで皆くつろいだり、食事をしたり、休憩したり、誰とでも話したりしている。"
     }
   },
 
@@ -299,7 +299,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "もちろん、セックスしてもいい。何をするのも自由だ。"
+      "Text": "もちろん、セックスも完全に自由だ。何をしても構わない。それがこのクラブのルールだ。"
     }
   },
 
@@ -335,8 +335,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0019_Branch",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,NPC_M,0,CallName]さんが説明しているとき、[=Name,NPC_F,2,CallName]さんは着替えを終えだが…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,NPC_M,0,CallName]さんが説明していると、[=Name,NPC_F,2,CallName]さんが着替えを終えて戻ってきた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -437,8 +437,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0024",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,NPC_F,2,CallName]さんは裸のままで戻ってきた！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,NPC_F,2,CallName]さんは完全な裸で戻ってきた！"
     }
   },
 
@@ -448,10 +448,32 @@
     "ID": "hgbc_intro_cafe_0024",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0024a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "すげぇ……肌がめちゃくちゃ綺麗で、腰のくびれがエロい……そしてあのデカくて形のいいおっぱい。揉みしだきたくなるような最高の体だ……。本気でヤりたい……この女、ガチでエロすぎる。"
+    }
+  },
+
+  "hgbc_intro_cafe_0024a": {
+    "ID": "hgbc_intro_cafe_0024a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0024b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……横を見ると、[=Name,Maid,0,CallName]が目を丸くして固まっている。やっぱりまだ少し緊張してるな。"
+    }
+  },
+
+  "hgbc_intro_cafe_0024b": {
+    "ID": "hgbc_intro_cafe_0024b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0025",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（肌はとても綺麗し、くびれもとても美しいし、おっぱいもとてもでかい。めっちゃいい女だ……ヤりたいなぁ…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "でも、視線は[=Name,NPC_F,2,CallName]さんの裸体から離せていない……恥ずかしがりながらも、ちゃんと興味を持ち始めてる感じがする。可愛い。"
     }
   },
 
@@ -531,10 +553,32 @@
     "ID": "hgbc_intro_cafe_0031",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_cafe_0032",
+    "NextStepID": "hgbc_intro_cafe_0031a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "いや違う違う！[=Name,NPC_F,2,CallName]さんの体は魅力的すぎるので、ついに……ハハ……ごめん…反省します…"
+      "Text": "あ、いや、違うぞ[=Name,Maid,0,CallName]。[=Name,NPC_F,2,CallName]さんの体が魅力的すぎてつい見とれてしまっただけだ。……ははっ、ごめん。機嫌を損ねて悪かったな。"
+    }
+  },
+
+  "hgbc_intro_cafe_0031a": {
+    "ID": "hgbc_intro_cafe_0031a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0031b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "ふふっ、[=Name,Maid,0,CallName]のこの嫉妬した顔も可愛いけど……その目には明らかに好奇心が混じってる。"
+    }
+  },
+
+  "hgbc_intro_cafe_0031b": {
+    "ID": "hgbc_intro_cafe_0031b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0032",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,NPC_F,2,CallName]さんが堂々と全裸で歩いているのを見て、彼女の中で何かが少しずつ刺激されてる気がする。まだ恥ずかしがってるけど、完全に拒否してる感じじゃないな……いい兆候だ。"
     }
   },
 
@@ -617,7 +661,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "はははっ、いいの、いいの！こういう場所だからね。りんかんだからドレスコードは自然を尊重する裸だ！はははははっ！"
+      "Text": "はははっ、いいのいいの！　こういう場所なんだから。輪姦クラブのドレスコードは「自然を尊重する裸」だ！　ははははっ！"
     }
   },
 
@@ -625,10 +669,21 @@
     "ID": "hgbc_intro_cafe_0034",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0034a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……マジかよ。本気で全裸が普通なのか……しかも[=Name,NPC_M,0,CallName]本人が笑いながら堂々と言ってる。ここの基準、思ってた以上にぶっ飛んでるな。"
+    }
+  },
+
+  "hgbc_intro_cafe_0034a": {
+    "ID": "hgbc_intro_cafe_0034a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0035",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（えぇ…これジョークか…？困るな…）\nハハッ…"
+      "Text": "ハハッ……"
     }
   },
 
@@ -659,7 +714,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "大丈夫！すぐにこれは素晴らしいと思うようになるよ。"
+      "Text": "大丈夫！　すぐにこの素晴らしさが分かるようになるよ。"
     }
   },
 
@@ -788,8 +843,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0038",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（その時、二人の男が近づいてきて、[=Name,NPC_F,2,CallName]さんに話しかけた。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "その時、二人の男が近づいてきて、[=Name,NPC_F,2,CallName]さんに声をかけた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -828,10 +883,10 @@
     "ID": "hgbc_intro_cafe_0038b",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_cafe_0039",
+    "NextStepID": "hgbc_intro_cafe_0038c",
     "TalkData": {
       "SpeakerName": "男１",
-      "Text": "[=Name,NPC_F,2,CallName]さん、来てくれたか！いやぁ、今日の体もめっちゃエロいなぁ！ほら見て見て、俺のちんぽはもうこんなに勃起している～イク手伝いをしてほしいなぁ～[=Name,NPC_F,2,CallName]さんのフェラが恋しいよ～"
+      "Text": "[=Name,NPC_F,2,CallName]さん、来てくれたか！　いやぁ、今日もそのエロい体が最高だぜ！"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -839,14 +894,36 @@
     }
   },
 
+  "hgbc_intro_cafe_0038c": {
+    "ID": "hgbc_intro_cafe_0038c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0039",
+    "TalkData": {
+      "SpeakerName": "男１",
+      "Text": "ほら見てみろよ、俺のちんぽもうビンビンに勃起してる。[=Name,NPC_F,2,CallName]さんの名フェラでしゃぶり倒して、精液飲ませてくれよなぁ～！"
+    }
+  },
+
   "hgbc_intro_cafe_0039": {
     "ID": "hgbc_intro_cafe_0039",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0039a",
+    "TalkData": {
+      "SpeakerName": "男２",
+      "Text": "[=Name,NPC_F,2,CallName]さん、今日はそのデカパイを存分に使わせてもらうぜ。"
+    }
+  },
+
+  "hgbc_intro_cafe_0039a": {
+    "ID": "hgbc_intro_cafe_0039a",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0040",
     "TalkData": {
       "SpeakerName": "男２",
-      "Text": "[=Name,NPC_F,2,CallName]さん、今日は君のおっぱいでいっぱい遊びたいよ。そのデカパイ握ってめっちゃ中出ししたいなぁ～いいよね？"
+      "Text": "思いっきり揉みまくって、乳圧でちんぽしごいて、その後たっぷり子宮に中出しして孕ませたい気分だわ。いいよな？　今日も俺たちの精液でいっぱいにしてやるよ！"
     }
   },
 
@@ -854,10 +931,32 @@
     "ID": "hgbc_intro_cafe_0040",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0040a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "うわぁ……[=Name,NPC_M,0,CallName]の目の前で堂々と彼の妻にここまで下品に言うなんて……このクラブ、予想以上にハードだな。"
+    }
+  },
+
+  "hgbc_intro_cafe_0040a": {
+    "ID": "hgbc_intro_cafe_0040a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0040b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "でも……なんか興奮する。[=Name,NPC_F,2,CallName]さんがあっさり受け入れてる姿を見てるだけで、俺のチンポも熱くなってきた……"
+    }
+  },
+
+  "hgbc_intro_cafe_0040b": {
+    "ID": "hgbc_intro_cafe_0040b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0041",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（うわぁ、こいつら……あの[=Name,NPC_M,0,FullName]の前で彼の妻の[=Name,NPC_F,2,CallName]さんとあんなに露骨な話をするんだ…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "横目で[=Name,Maid,0,CallName]を見ると、顔を赤らめながらも二人の男の露骨な言葉にじっと耳を傾けている……。恥ずかしがってるけど、完全に引いてはいない。むしろ少しずつこの空気に飲まれ始めているみたいだ。"
     }
   },
 
@@ -909,7 +1008,7 @@
     "NextStepID": "hgbc_intro_cafe_0043",
     "TalkData": {
       "SpeakerName": "男１",
-      "Text": "じゃあ[=Name,NPC_M,0,CallName]さん、奥さんをお借りして遊びますよ。"
+      "Text": "じゃあ[=Name,NPC_M,0,CallName]さん、奥さんをお借りしますね。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -925,7 +1024,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "いいよいいよ、楽しんで！"
+      "Text": "いいよいいよ、楽しんでこい！"
     }
   },
 
@@ -936,7 +1035,7 @@
     "NextStepID": "hgbc_intro_cafe_0045",
     "TalkData": {
       "SpeakerName": "男２",
-      "Text": "行こう、[=Name,NPC_F,2,CallName]さん。歩く間、俺たちのちんぽを握ってくれる？今からとことん輪姦して、君は何度でも絶頂を約束するよ！"
+      "Text": "行こうぜ、[=Name,NPC_F,2,CallName]さん。歩きながら俺たちのちんぽ二本とも握ってくれよ。今から本気で輪姦して、君がイキ狂うまで何度も中出ししてやるからな！"
     }
   },
 
@@ -967,7 +1066,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "[=ClubOwnerName]くん、[=Name,Maid,0,CallName]ちゃん、俺たちもドレスコードに変えようか？更衣室はあそこだ。見逃すことはないだろう。"
+      "Text": "[=ClubOwnerName]くん、[=Name,Maid,0,CallName]ちゃん、俺たちもドレスコードに変えようか？　更衣室はあそこだ。見逃すことはないだろう。"
     }
   },
 
@@ -1003,8 +1102,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0048",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,NPC_F,2,CallName]さんはあの２人とある部屋に入る。俺たちは更衣室で服を脱いで、ラウンジに戻ってきて。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,NPC_F,2,CallName]さんがあの二人と部屋に入っていくと、俺たちは更衣室で服を脱ぎ、全裸になってラウンジに戻ってきた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1137,7 +1236,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "おっ！いいね～やっぱり[=Name,Maid,0,CallName]ちゃんの体はすごく綺麗だ。さすが[=ClubName]のメイドさん。ははははっ！"
+      "Text": "おっ！　いいね～。やっぱり[=Name,Maid,0,CallName]ちゃんの体はすごく綺麗だ。さすが[=ClubName]のメイドさんだな。ははははっ！"
     }
   },
 
@@ -1181,7 +1280,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "さで、このクラブのルールをちょっと説明しよう。"
+      "Text": "さて、残りの大事なルールを説明しておくよ。"
     }
   },
 
@@ -1189,70 +1288,11 @@
     "ID": "hgbc_intro_cafe_0054",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_cafe_0055",
-    "TalkData": {
-      "SpecificSpeaker": "NPC_M",
-      "Index": 0,
-      "Text": "二人ともこのクラブの名前は知っているよね。そう、ここは輪姦のためのクラブだ。でも安心して、暴力とか脅迫とか一切しない。"
-    }
-  },
-
-  "hgbc_intro_cafe_0055": {
-    "ID": "hgbc_intro_cafe_0055",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_cafe_0055a",
-    "TalkData": {
-      "SpecificSpeaker": "NPC_M",
-      "Index": 0,
-      "Text": "むしろ女性メンバーが尊重されだ。まぁ、ここの女性メンバーは多半は男性メンバーの彼女や妻だからだ。"
-    }
-  },
-
-  "hgbc_intro_cafe_0055a": {
-    "ID": "hgbc_intro_cafe_0055a",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_cafe_0056",
-    "TalkData": {
-      "SpecificSpeaker": "NPC_M",
-      "Index": 0,
-      "Text": "あっ、でも言葉責めは大体許すよ、多い女性メンバーはこうゆうの好きだから。"
-    }
-  },
-
-  "hgbc_intro_cafe_0056": {
-    "ID": "hgbc_intro_cafe_0056",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_cafe_0057",
-    "TalkData": {
-      "SpecificSpeaker": "NPC_M",
-      "Index": 0,
-      "Text": "名前は『輪姦クラブ』だが、普通のセックスをやっても構わない。ただし心の浮気は禁止、すべては肉体の快楽のためだけだ。"
-    }
-  },
-
-  "hgbc_intro_cafe_0057": {
-    "ID": "hgbc_intro_cafe_0057",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_cafe_0058",
-    "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（まあ、合理的な）"
-    }
-  },
-
-  "hgbc_intro_cafe_0058": {
-    "ID": "hgbc_intro_cafe_0058",
-    "Type": "Talk",
-    "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0058a",
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "これは重要なことだ。[=Name,Maid,0,CallName]ちゃん、このチョーカーを受け取って、首にかけろ。"
+      "Text": "[=Name,Maid,0,CallName]ちゃん、このチョーカーをつけてくれ。"
     }
   },
 
@@ -1319,7 +1359,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "そうそう、こうだ。女性メンバーがこれをつけると、今休憩中で、セックスしたくないという意味になる。"
+      "Text": "うん。女性メンバーがこのチョーカーを首に着けているときは「今は休憩中、セックスしたくない」という合図になる。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1350,7 +1390,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "さっき、あの二人が[=Name,NPC_F,2,CallName]にセックスを誘ったのを見ただろ？それは、[=Name,NPC_F,2,CallName]がチョーカーをつけていないからだ。"
+      "Text": "さっき[=Name,NPC_F,2,CallName]にあの二人が積極的に声をかけたのは、彼女がチョーカーをしていなかったからだ。もし着けていたら、あんな声のかけ方は完全にルール違反になる。"
     }
   },
 
@@ -1362,7 +1402,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "もし[=Name,NPC_F,2,CallName]がチョーカーをつけていたら、あの二人はそんな風に話しかけることはルール違反だ。"
+      "Text": "ルールを破った者は即刻クラブから永久追放だ。さらに俺が神川原グループの力を使って、相応の罰を与える。"
     }
   },
 
@@ -1374,7 +1414,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "ルールを破った者はクラブから追い出す。さらに、俺は必ず[=Name,NPC_M,0,CallName]グループの力を使って、そんな奴を罰する。"
+      "Text": "今まで違反者が出たことは一度もない。全員がルールをしっかり守って楽しんでいる紳士ばかりだよ。"
     }
   },
 
@@ -1384,8 +1424,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0067",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（…こわっ！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……こわっ！　笑顔で言うのに迫力ありすぎる……。でもこれで安心だ。[=Name,Maid,0,CallName]が嫌がったらすぐに守ってもらえる。"
     }
   },
 
@@ -1393,23 +1433,11 @@
     "ID": "hgbc_intro_cafe_0067",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_cafe_0068",
-    "TalkData": {
-      "SpecificSpeaker": "NPC_M",
-      "Index": 0,
-      "Text": "まぁ、そう言っても、今まで誰も違反していない。皆はルールを守り、このようなプレーを楽しんでいる紳士だ。はははっ！"
-    }
-  },
-
-  "hgbc_intro_cafe_0068": {
-    "ID": "hgbc_intro_cafe_0068",
-    "Type": "Talk",
-    "WaitingType": "Click",
     "NextStepID": "hgbc_intro_cafe_0069",
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "さぁ、退屈なルールはこのくらいにして、メインイベントを始めようか。行為室に行こう、輪姦ショーを楽しみましょう。"
+      "Text": "まぁ、堅苦しい話はこれくらいにしよう。さあ、メインイベントを始めようか。行為室に行こう。今日は特別に、輪姦ショーを楽しんでもらおう。"
     }
   },
 
@@ -1443,14 +1471,25 @@
     "ID": "hgbc_intro_cafe_0070",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_intro_cafe_0071",
+    "NextStepID": "hgbc_intro_cafe_0070a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（よし、いよいよだ。楽しみだな……[=Name,Maid,0,CallName]も参加してくれたら、きっともっと楽しくなる…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "よし、いよいよ本番だ……。[=Name,Maid,0,CallName]はまだ少し緊張した顔をしているけど、あの輪姦ショーを見たらどう思うかな。"
     },
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "hgbc_intro_cafe_0070a": {
+    "ID": "hgbc_intro_cafe_0070a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_intro_cafe_0071",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "もし彼女が「参加したい」と言ってくれたら……俺は間違いなく興奮で頭が真っ白になる。彼女が他の男たちに輪姦される姿、想像しただけでたまらない……"
     }
   },
 

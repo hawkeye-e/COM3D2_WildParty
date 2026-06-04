@@ -449,8 +449,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0002",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（男たちはステージ上の女たちを輪姦し続ける。そして、[=Name,Maid,0,CallName]がとてもうっとりした顔をして気持ち良さそうにみえる。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "ステージ上では男たちが女たちを休むことなく輪姦し続けている。\n[=Name,Maid,0,CallName]はとてもうっとりした顔をして、気持ち良さそうに喘いでいた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -464,8 +464,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0003",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（……美しい…やはりこの姿が一番だ。[=Name,Maid,0,CallName]の蕩けそうな顔を見て、俺も心の底から微笑みました。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……美しい……この蕩けた表情、最高だ……。"
     }
   },
 
@@ -475,8 +475,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0004",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（この場所に連れてきて本当によかった。メンバーになるも悪くないかな。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "この場所に連れてきて本当に良かった……俺たち、どんどん深みにハマってる。"
     }
   },
 
@@ -486,8 +486,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0005",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（そう思っていたとき、[=Name,NPC_M,0,LastName]さんは少し休んで、俺に話しかけに来た。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "少し休んでいた[=Name,NPC_M,0,LastName]さんが、汗を拭きながら俺に近づいてきた。"
     }
   },
 
@@ -524,7 +524,7 @@
     "NextStepID": "hgbc_phase2_0007",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "お疲れ様です！[=Name,Maid,0,CallName]はいかがでしょうか？"
+      "Text": "お疲れ様です！　[=Name,Maid,0,CallName]はいかがでしょうか？"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -552,7 +552,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "最も重要なのは、そのチンポを欲しがる表情だ。こんなの女を見たら、どんな男でも激しく突かずにはいられないたろ。"
+      "Text": "最も重要なのは、そのチンポを欲しがる表情だ。こんな女を見たら、どんな男でも激しく突かずにはいられないたろ。"
     }
   },
 
@@ -563,7 +563,7 @@
     "NextStepID": "hgbc_phase2_0010",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ありがとうごさいます！自慢の妻です。"
+      "Text": "ありがとうございます！　自慢の妻です。"
     }
   },
 
@@ -598,7 +598,7 @@
     "NextStepID": "hgbc_phase2_0013",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "そうですね…今ちょっと興奮してきたので、そうしますか。"
+      "Text": "そうですね……今ちょっと興奮してきたので、そうしますか。"
     }
   },
 
@@ -646,8 +646,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0015",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺はステージ上の男たちに加わる。今、２人の男が[=Name,Maid,0,CallName]を犯している。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺はステージに上がり、男たちの輪に加わった。今、２人の男が[=Name,Maid,0,CallName]を激しく犯している。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -734,10 +734,21 @@
     "ID": "hgbc_phase2_0018",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0018a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]の乱れ方が……エロすぎる……。"
+    }
+  },
+
+  "hgbc_phase2_0018a": {
+    "ID": "hgbc_phase2_0018a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0019_Branch",
     "TalkData": {
       "SpeakerName": "男５",
-      "Text": "お前の体がたまらねぇ！何回射精しでもやりたりねぇよ！おい、俺のチンポはどうだ？気持ちいいだろ？"
+      "Text": "お前の体がたまらねぇよ！何回射精してもまだ足りねぇ！おい、俺のチンポはどうだ？めっちゃ気持ちいいだろ!?"
     }
   },
 
@@ -777,7 +788,7 @@
     "NextStepID": "hgbc_phase2_0022_Branch",
     "TalkData": {
       "SpeakerName": "男６",
-      "Text": "おらっ！出すぞっ！お前が大好きな精液だぞ！欲しいたろ？欲しいならちゃんと言えよ！"
+      "Text": "おらっ！出すぞっ！お前が大好きな精液だぞ！欲しいんだろ？だったらちゃんと欲しがれよ！"
     }
   },
 
@@ -800,7 +811,7 @@
     "NextStepID": "hgbc_phase2_0025",
     "TalkData": {
       "SpeakerName": "男６",
-      "Text": "じゃあ孕ませてあげる！孕めえっ！妊娠しろぉ！"
+      "Text": "じゃあ孕ませてやるよ！孕めえっ！妊娠しろぉ！"
     }
   },
 
@@ -856,7 +867,7 @@
     "NextStepID": "hgbc_phase2_0029",
     "TalkData": {
       "SpeakerName": "男５",
-      "Text": "よし、交代だ！"
+      "Text": "よし、交代だ！次は誰だ！"
     }
   },
 
@@ -878,7 +889,7 @@
     "NextStepID": "hgbc_phase2_0031",
     "TalkData": {
       "SpeakerName": "男７",
-      "Text": "おお！[=ClubName]のオーナーさんですか！奥さんは本当にいい女ですね、羨ましいぞ。さぁ、どうぞどうぞ。"
+      "Text": "おお！[=ClubOwnerName]のオーナーさんか！奥さんは本当に最高の女だな、羨ましいぜ。さぁ、どうぞどうぞ！遠慮なく犯せよ！"
     }
   },
 
@@ -889,7 +900,7 @@
     "NextStepID": "hgbc_phase2_0032",
     "TalkData": {
       "SpeakerName": "男８",
-      "Text": "オーナーさん、多勢の人に犯された妻のアソコをどんどん味わえ！きっと気に入るよ！"
+      "Text": "オーナーさん、他の男にめちゃくちゃにされた妻のアソコを、たっぷり味わってくれ！きっと病みつきになるぞ！"
     }
   },
 
@@ -1018,8 +1029,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0034_Branch",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺は[=Name,Maid,0,CallName]を抱いている。彼女の火照った体は汗ばんでおり、たまらない香りを放っていた。そのせいで、俺のチンポは前例のない勃起した。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺は火照りきった[=Name,Maid,0,CallName]を抱き寄せた。彼女の体は汗と精液でべっとり濡れ、甘く淫らな匂いを放っていた。俺のチンポは痛いほど硬くなっていた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1046,7 +1057,7 @@
     "NextStepID": "hgbc_phase2_0037_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "[=Name,Maid,0,CallName]、よくやってくれた。ほら、[=Name,Maid,0,CallName]とヤッた後はみんながこんな快楽を得た。"
+      "Text": "[=Name,Maid,0,CallName]、よくやってくれたな。ほら、[=Name,Maid,0,CallName]が頑張ったおかげで、みんなあんなに気持ちよさそうな顔してるぞ。"
     }
   },
 
@@ -1066,10 +1077,21 @@
     "ID": "hgbc_phase2_0039",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "hgbc_phase2_0040",
+    "NextStepID": "hgbc_phase2_0039a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "今度は俺の番だ。俺たちがどれだけラブラブか、みんなに見せてあげましょう。じゃあ、入れるよ。"
+      "Text": "今度は俺の番だ。俺たちがどれだけラブラブか、みんなに見せてあげましょう。入れるよ。"
+    }
+  },
+
+  "hgbc_phase2_0039a": {
+    "ID": "hgbc_phase2_0039a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0040",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "このぐちゃぐちゃにされたマンコ……熱くて、ヌルヌルで……興奮が止まらない。"
     }
   },
 
@@ -1096,8 +1118,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0041",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（おっ！やばい！この精液まみれなアソコがすごく濡れている、ぬるぬるで滑るのでピストンしやすい！今まで[=Name,Maid,0,CallName]と愛し合うとき、こんな感触はなかった！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "うおっ……！この感触……精液まみれで滑りまくってる……！"
     }
   },
 
@@ -1209,8 +1231,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0063_Branch",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺は貪欲に[=Name,Maid,0,CallName]にキスをしていた。多くのチンポを奉仕してきたその柔らかい唇、今でもとても魅力的です。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "他の男の味が残ってるのに……この唇、たまらなく可愛い……！"
     }
   },
 
@@ -1252,10 +1274,21 @@
     "ID": "hgbc_phase2_0073",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0073a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "くっ……締まりが強すぎる……もう我慢の限界……！"
+    }
+  },
+
+  "hgbc_phase2_0073a": {
+    "ID": "hgbc_phase2_0073a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0074_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "あぁ…ヤバイ！[=Name,Maid,0,CallName]のマンコが気持ち過ぎる！ああぁ…だめだ…もう我慢できん！うぅ…出るぞ！"
+      "Text": "あぁ…[=Name,Maid,0,CallName]のマンコが気持ち過ぎる！ああぁ…だめだ…もう我慢できん！うぅ…出るぞ！"
     }
   },
 
@@ -1328,7 +1361,7 @@
     "NextStepID": "hgbc_phase2_0093",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ハァ…ハァ…[=Name,Maid,0,CallName]、すごく気持ちよかった……ハァ…ハァ…"
+      "Text": "ハァ…ハァ…[=Name,Maid,0,CallName]、すごく気持ちよかった……"
     }
   },
 
@@ -1339,7 +1372,7 @@
     "NextStepID": "hgbc_phase2_0094",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ハァ…でも俺わかるよ、これだけは物足りんでしょ？"
+      "Text": "でも、まだ物足りないよな？"
     }
   },
 
@@ -1375,8 +1408,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0097_Branch",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺が[=Name,Maid,0,CallName]の足をつかんて持ち上げる。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺は[=Name,Maid,0,CallName]の両足を掴んで高く持ち上げた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1455,7 +1488,7 @@
     "NextStepID": "hgbc_phase2_0103",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "みんな！俺の妻を一緒に犯してくれませんか？今の[=Name,Maid,0,CallName]はもうたった一本のチンポでは満足しないんだ。手伝てくれないか？"
+      "Text": "みんな！俺の妻を一緒に犯してくれませんか？今の[=Name,Maid,0,CallName]はもう一本のチンポでは満足しないんだ。手伝ってくれないか？"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1470,7 +1503,7 @@
     "NextStepID": "hgbc_phase2_0104",
     "TalkData": {
       "SpeakerName": "男９",
-      "Text": "おお！もちろんだ！俺たちがここにいるのは、ここの底なし女たちを満足させるためからな！"
+      "Text": "おお！もちろんやるぜ！俺たちはここにいる限り、底なしの女を徹底的にイかせてやるのが仕事だからな！"
     }
   },
 
@@ -1481,7 +1514,7 @@
     "NextStepID": "hgbc_phase2_0105",
     "TalkData": {
       "SpeakerName": "男１０",
-      "Text": "旦那さんからの依頼を受け入れないわけねぇたろ！いいぜ！俺のチンポはいつでも準備ができるよ！"
+      "Text": "旦那さんからのそんな熱い依頼、断れるわけねぇだろ！いいぜ、俺のチンポはいつでもフル勃起だ！"
     }
   },
 
@@ -1492,7 +1525,7 @@
     "NextStepID": "hgbc_phase2_0106",
     "TalkData": {
       "SpeakerName": "男１１",
-      "Text": "いい旦那をお持ちじゃないか、[=Name,Maid,0,CallName]ちゃん！彼は自分の楽しみだけでなく、君もイかせるためにこんな頑張ってるよ！"
+      "Text": "いい旦那だなおい、[=Name,Maid,0,CallName]ちゃん！自分の楽しみだけじゃなく、ちゃんと奥さんをイかせてやる気満々じゃねぇか！"
     }
   },
 
@@ -1503,7 +1536,7 @@
     "NextStepID": "hgbc_phase2_0107",
     "TalkData": {
       "SpeakerName": "男１２",
-      "Text": "まさに夫婦の鑑！羨ましいな……もちろん手伝うよ！必ず奥さんを満足させてみせる！"
+      "Text": "まさに理想の夫婦だな……羨ましいぜ！もちろん全力で手伝うよ！奥さんをめちゃくちゃに気持ちよくしてやる！"
     }
   },
 
@@ -1514,7 +1547,7 @@
     "NextStepID": "hgbc_phase2_0108",
     "TalkData": {
       "SpeakerName": "男１３",
-      "Text": "へへぇ、オーナーさん、一緒に奥さんがチンポがなければ生きられない体にするぜ！"
+      "Text": "へへぇ、オーナーさん。一緒に奥さんを「チンポなしじゃ生きられない体」にしてやろうぜ！"
     }
   },
 
@@ -1620,7 +1653,7 @@
     "NextStepID": "hgbc_phase2_0112_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ああ、頼むだ！"
+      "Text": "ああ、頼む！"
     }
   },
 
@@ -1643,12 +1676,23 @@
     "NextStepID": "hgbc_phase2_0122",
     "TalkData": {
       "SpeakerName": "男１１",
-      "Text": "言ったな！じゃ、遠慮なく！"
+      "Text": "言ったな！じゃあ、遠慮なく！"
     }
   },
 
   "hgbc_phase2_0122": {
     "ID": "hgbc_phase2_0122",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "hgbc_phase2_0122a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……ははっ、なんて積極的なんだよ……興奮が止まらない。"
+    }
+  },
+
+  "hgbc_phase2_0122a": {
+    "ID": "hgbc_phase2_0122a",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0123",
@@ -1722,7 +1766,7 @@
     "NextStepID": "hgbc_phase2_0132",
     "TalkData": {
       "SpeakerName": "男１１",
-      "Text": "[=Name,Maid,0,CallName]ちゃん、キスしないか？大好きな旦那さんの目の前に俺とキスしよ！そうしたら間違いなく旦那さんのチンポはもっと硬くなるよ！"
+      "Text": "[=Name,Maid,0,CallName]ちゃん、旦那さんの目の前で俺とキスしないか？エロいキスを見せつけたら、旦那さんのチンポがさらに硬くなるぜ！"
     }
   },
 
@@ -1766,8 +1810,8 @@
     "WaitingType": "Click",
     "NextStepID": "hgbc_phase2_0142",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "いいねぇ…いいねぇ！この背徳感！すごくいい！"
+      "SpecificSpeaker": "Narrative",
+      "Text": "この背徳感……たまらない……！"
     }
   },
 
@@ -1778,7 +1822,7 @@
     "NextStepID": "hgbc_phase2_0143",
     "TalkData": {
       "SpeakerName": "男１１",
-      "Text": "本当に俺の言った通りにした、[=Name,Maid,0,CallName]ちゃん！すげぇエッチな子だね！気持ち良くなるならなんでもやるじゃないか！"
+      "Text": "すげぇエッチな子だな、[=Name,Maid,0,CallName]ちゃん！気持ち良くなるためなら何でもやるタイプかよ！"
     }
   },
 
@@ -1834,7 +1878,7 @@
     "NextStepID": "hgbc_phase2_0153_Branch",
     "TalkData": {
       "SpeakerName": "男１１",
-      "Text": "おおっ！じゃあ、[=Name,Maid,0,CallName]ちゃん、俺のチンポでどう感じたか、旦那さんに報告してみてぇ！"
+      "Text": "おおっ！じゃあ、[=Name,Maid,0,CallName]ちゃん、俺のチンポでどう感じてるか、旦那さんにちゃんと報告してやれよ！"
     }
   },
 
@@ -1880,7 +1924,7 @@
     "NextStepID": "hgbc_phase2_0172_Branch",
     "TalkData": {
       "SpeakerName": "男１１",
-      "Text": "おい！マンコ緩めるな！俺が射精するまでギュウギュウに締めろ！次の人を待たせるな！"
+      "Text": "おい！マンコ緩めるんじゃねぇ！俺が射精するまでギュウギュウに締め付けろ！次の奴を待たせるなよ！"
     }
   },
 
@@ -1925,7 +1969,7 @@
     "NextStepID": "hgbc_phase2_0183_Branch",
     "TalkData": {
       "SpeakerName": "男１１",
-      "Text": "うおっ！めっちゃくちゃきつい！いいぜ、ご褒美だ！ほら出すぞ！お前の大好きな精液だぞ！"
+      "Text": "うおっ！めっちゃ締まる！最高だ！ほら出すぞ！お前が大好きな精液をたっぷり注いでやる！"
     }
   },
 
