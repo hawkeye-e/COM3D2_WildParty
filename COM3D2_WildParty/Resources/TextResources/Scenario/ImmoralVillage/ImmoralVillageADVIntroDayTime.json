@@ -107,8 +107,8 @@
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_0003",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（他のクラブと連携イベントの商談のために、俺と[=Name,Maid,0,CallName]は遠方のクラブを訪問し、いくつかの取引について話し合う。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "他のクラブとの連携イベントについて商談するため、俺と[=Name,Maid,0,CallName]は遠方のクラブを訪れていた。"
     },
 
     "FadeData": {
@@ -123,8 +123,8 @@
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_0004",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（少し時間はかかるが、商談は順調だ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "いくつかの案件について話し合ったが、交渉は思いのほか順調に進む。"
     }
   },
 
@@ -134,8 +134,8 @@
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_0005",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（長い間休みを取っていなかったので、俺と[=Name,Maid,0,CallName]はこの機会に現地をちょっとした旅行をして休息を取ろうと計画した。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "長い間まとまった休みを取れていなかったこともあり、俺たちはこの機会に少し滞在を延ばし、現地で休息を取ることにした。"
     }
   },
 
@@ -143,10 +143,32 @@
     "ID": "imvi_intro_0005",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0005a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "訪問先のクラブのオーナーは、近くにある小さな村を勧めてくれた。"
+    }
+  },
+
+  "imvi_intro_0005a": {
+    "ID": "imvi_intro_0005a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0005b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "食事も景色も素晴らしい場所らしい。"
+    }
+  },
+
+  "imvi_intro_0005b": {
+    "ID": "imvi_intro_0005b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "imvi_intro_0006",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（そこのクラブのオーナーさんが、近くのある村に行くよう勧めてくれた。食事も景色もとてもいいと言っていた。そのゆえに俺たちはその村に、数日間滞在することにした。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "せっかくの機会だし、俺たちはその村で数日過ごすことにした。"
     }
   },
 
@@ -399,10 +421,43 @@
     "ID": "imvi_intro_0013",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0013a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "初日は特に予定も決めず、気の向くままに村を歩き回った。"
+    }
+  },
+
+  "imvi_intro_0013a": {
+    "ID": "imvi_intro_0013a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0013b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "賑やかな街とは違い、ここにはゆったりとした時間が流れている。"
+    }
+  },
+
+  "imvi_intro_0013b": {
+    "ID": "imvi_intro_0013b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0013c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "こんなふうに何も考えずのんびり過ごすのは、本当に久しぶりだ。"
+    }
+  },
+
+  "imvi_intro_0013c": {
+    "ID": "imvi_intro_0013c",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "imvi_intro_0014",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（初日はぶらぶらと歩き回った。こうしてのんびりするのは久しぶりだな。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "仕事のことを忘れて歩いているだけなのに、不思議と心が軽くなる。"
     }
   },
 
@@ -440,7 +495,7 @@
     "NextStepID": "imvi_intro_0016",
     "TalkData": {
       "SpecificSpeaker": "",
-      "Text": "次の朝"
+      "Text": "\n　　　　　　　　　　　　　　次の朝"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -526,14 +581,47 @@
     "ID": "imvi_intro_0017c",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "imvi_intro_0018_Branch",
+    "NextStepID": "imvi_intro_0017d",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "ふぅー"
+      "SpecificSpeaker": "Narrative",
+      "Text": "窓から差し込む朝日で目が覚めた。"
     },
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_0017d": {
+    "ID": "imvi_intro_0017d",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0017e",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "昨日はたくさん歩いたはずなのに、身体は驚くほど軽い。"
+    }
+  },
+
+  "imvi_intro_0017e": {
+    "ID": "imvi_intro_0017e",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0017f",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "久しぶりにしっかり休めた気がする。"
+    }
+  },
+
+  "imvi_intro_0017f": {
+    "ID": "imvi_intro_0017f",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0018_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ふぅー"
     }
   },
 
@@ -556,7 +644,7 @@
     "NextStepID": "imvi_intro_0022",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ああ、そうだな。ここは本当に良い場所だ。食事は美味しく、空気は新鮮だ。"
+      "Text": "ああ、そうだな。ここは本当に良い場所だ。食事は美味しいし、空気も新鮮だ。"
     }
   },
 
@@ -567,7 +655,7 @@
     "NextStepID": "imvi_intro_0023",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ここでゆっくり過ごすのはとてもリラックスだ。たまにはこういうのも良いよね……"
+      "Text": "こうしてのんびり過ごすのは本当に気持ちがいい。たまにはこういう時間も必要だな……"
     }
   },
 
@@ -628,10 +716,21 @@
     "ID": "imvi_intro_0032",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0032a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]も嬉しそうだな。連れて来てよかった。"
+    }
+  },
+
+  "imvi_intro_0032a": {
+    "ID": "imvi_intro_0032a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "imvi_intro_0033",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "さて、今日はなにをするん？あ、昨日見たあの小高い丘はどう？きっと良い眺めだと思う。"
+      "Text": "さて、今日はなにをするん？　あ、昨日見たあの小高い丘はどう？　きっと良い眺めだと思う。"
     }
   },
 
@@ -675,10 +774,21 @@
     "ID": "imvi_intro_0041",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0041a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "休暇中くらい、こういう甘い時間を満喫するのも悪くない。"
+    }
+  },
+
+  "imvi_intro_0041a": {
+    "ID": "imvi_intro_0041a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "imvi_intro_0042",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "いいねー　じゃあ、お弁当を作ってそこでピクニックに行こうか？"
+      "Text": "いいねー。じゃあ、お弁当を作ってそこでピクニックに行こうか？"
     }
   },
 
@@ -744,8 +854,8 @@
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_0053",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（準備を終えて出発すると、村長さんがやってきて、俺たちと話をしたいと言った。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "準備を終えて出発しようとすると、[=Name,NPC_M,0,LastName]がのんびりと近づいてきた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -863,7 +973,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "おはよう、オーナーさん。今日は素晴らしい日ですねー"
+      "Text": "おはよう、オーナーさん。今日は素晴らしい日ですねー！"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -878,7 +988,7 @@
     "NextStepID": "imvi_intro_0055",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "そうだな、天気もいいし、妻とあの小高い丘を散歩しようと思っているんだ。"
+      "Text": "そうだな。天気もいいし、妻とあの小高い丘を散歩しようと思ってるんだ。"
     }
   },
 
@@ -890,7 +1000,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "お！それはいい考えだな。そこの風景は村の誇りだ、きっと気に入ると思うよ。"
+      "Text": "お！それはいい考えだな。そこの景色は村の誇りだぞ。きっと気に入ると思うよ。"
     }
   },
 
@@ -901,7 +1011,7 @@
     "NextStepID": "imvi_intro_0057",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "これは期待できるね、[=Name,NPC_M,0,LastName]さんがそう言うのなら。"
+      "Text": "へえ、期待できるね。[=Name,NPC_M,0,LastName]がそう言うなら。"
     }
   },
 
@@ -971,7 +1081,7 @@
     "NextStepID": "imvi_intro_0062_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "お、そうですか！この日を選んでここに泊まれるなんてラッキーだ。"
+      "Text": "お、そうですか！この日に泊まっててラッキーだったな。"
     }
   },
 
@@ -1017,7 +1127,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "それを期待してるなら存分に楽しんでよ、奥さん。今年は女性の参加者が不足しているので、参加してもらえると助かったよ。"
+      "Text": "それを期待してるなら存分に楽しんでくれ、奥さん。今年は女性の参加者が少し不足していてね。参加してもらえると本当に助かるよ。"
     }
   },
 
@@ -1028,7 +1138,7 @@
     "NextStepID": "imvi_intro_0074",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "へぇー　祭りの中で、女性には何をしてもらいたいか？"
+      "Text": "へえー……祭りの中で、女性には具体的に何をしてもらうんだ？"
     }
   },
 
@@ -1040,7 +1150,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "え？君たち、知らないかい？この祭りを。"
+      "Text": "え？　君たち、この祭りのことを知らないのかい？"
     }
   },
 
@@ -1068,7 +1178,7 @@
     "NextStepID": "imvi_intro_0077",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "全然。俺たちは事前に何も調べずに偶然ここに来ました。"
+      "Text": "全然。俺たちは何も調べずに、ただ偶然この村に来たんだ。"
     }
   },
 
@@ -1080,7 +1190,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "あっ、お二人はこの祭りを知っていて、この時間にここに来たんじゃなかったっけ？祭りの後の夜、若者たちの集団筆おろしイベントがありますよ。"
+      "Text": "あっ、そうだったのか……。てっきり祭りを知った上でこのタイミングで来たのかと思ったよ。　実はこの祭りの夜のメインイベントは、若者たちの集団筆おろしなんだ。"
     }
   },
 
@@ -1112,7 +1222,7 @@
     "NextStepID": "imvi_intro_0080",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "待て待て、筆おろし？"
+      "Text": "待て待て、筆おろし！？"
     }
   },
 
@@ -1242,10 +1352,21 @@
     "ID": "imvi_intro_0084",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "imvi_intro_0084a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "おい、なんでそんな嬉しそうな顔してんだよ……最近マジでこういうのにノリノリすぎだろ、お前。"
+    }
+  },
+
+  "imvi_intro_0084a": {
+    "ID": "imvi_intro_0084a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "imvi_intro_0085_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "[=Name,Maid,0,CallName]、嬉しそうだねー　なんか最近、こういうことがめっちゃ好きみたいだねー"
+      "Text": "[=Name,Maid,0,CallName]、嬉しそうだねー……なんか最近、こういうのめっちゃ好きみたいだねー。"
     }
   },
 
@@ -1336,7 +1457,7 @@
     "NextStepID": "imvi_intro_0094",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "はぁ…まあいい。それがやりたいなら、ダメとは言わない。"
+      "Text": "はぁ……まあいい。それがやりたいなら、ダメとは言わないよ。"
     }
   },
 
@@ -1347,7 +1468,7 @@
     "NextStepID": "imvi_intro_0095",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "[=Name,NPC_M,0,LastName]さん、俺たちはそれで構わないだから、妻を参加させよう。"
+      "Text": " [=Name,NPC_M,0,LastName]さん、俺たちはそれで構わない。妻を参加させてもらおう。"
     }
   },
 
@@ -1359,7 +1480,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "おー、ありがとう、助かるよ。"
+      "Text": "おー！　ありがとう、助かるよ！"
     }
   },
 
@@ -1370,7 +1491,7 @@
     "NextStepID": "imvi_intro_0097",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ところで、[=Name,NPC_M,0,LastName]さん…"
+      "Text": "ところで、[=Name,NPC_M,0,LastName]さん……"
     }
   },
 
@@ -1393,7 +1514,7 @@
     "NextStepID": "imvi_intro_0099",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "若い女の処女喪失は？彼女たちも…？"
+      "Text": "若い女の子の処女喪失は？　彼女たちも……？"
     }
   },
 
@@ -1466,7 +1587,7 @@
     "NextStepID": "imvi_intro_0102",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "いやいや、浮気のことを考えじゃないよ。……そ、そう！ただの文化的に興味があるだけ…"
+      "Text": "いやいや、浮気のことを考えてるんじゃないぞ！\n……そ、そう！　ただ純粋に文化的な興味があるだけで……！"
     }
   },
 
@@ -1478,7 +1599,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "ああ、それはあるが、今夜ではない。"
+      "Text": "ああ、それはあるが、今夜は違うイベントだ。今夜は若者たちの筆おろしがメインだからな。"
     }
   },
 
@@ -1523,7 +1644,7 @@
     "NextStepID": "imvi_intro_0112",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "くっ…"
+      "Text": "くっ……"
     }
   },
 
