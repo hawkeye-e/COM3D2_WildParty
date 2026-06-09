@@ -18,10 +18,25 @@
     "ID": "imvi_intro_night_0001a",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0001b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "そして俺たちは、予定通り村での一日を存分に楽しんだ。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_night_0001b": {
+    "ID": "imvi_intro_night_0001b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "imvi_intro_night_0002",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（そして俺たちは、予定通り一日を楽しむのだ。日没が近づくと、俺たちは神社に行って祭りに参加する。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "日没が近づくと、俺と[=Name,Maid,0,CallName]は神社に向かい、祭りに参加することにした。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -295,8 +310,8 @@
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_night_0008",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（夜も更けてくると、俺と[=Name,Maid,0,CallName]は[=Name,NPC_M,0,LastName]さんに続いて筆おろしの会場に入る。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "夜が更けてきた頃、俺と[=Name,Maid,0,CallName]は[=Name,NPC_M,0,LastName]に案内され、筆おろしの会場へと足を踏み入れた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -455,14 +470,25 @@
     "ID": "imvi_intro_night_0011",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "imvi_intro_night_0012",
+    "NextStepID": "imvi_intro_night_0011a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,Maid,0,CallName]はイベント用の服に着替えた。あのすごい格好は、肌の露出が多すぎて、[=Name,Maid,0,CallName]さえも恥ずかしく感じる。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]はイベント用の特別な衣装に着替えていた。薄い布地がほとんど肌を覆わず、胸の谷間や太ももの付け根が惜しげもなく露わになっている。"
     },
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_night_0011a": {
+    "ID": "imvi_intro_night_0011a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0012",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "あの過激な格好に、[=Name,Maid,0,CallName]自身も頰をわずかに染めていた。"
     }
   },
 
@@ -513,7 +539,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "着いたぞ。ここでこの伝統的な活動を行った。毎年この日、人妻たちがここに集まり、男の子の筆おろしをする、将来セックスをする自信をつけさせる。"
+      "Text": "着いたぞ。ここでこの伝統的な活動を行うんだ。毎年この日、人妻たちが集まり、村の男の子の筆おろしをしてやる。将来セックスをする自信をつけさせるための大事な儀式だ。"
     }
   },
 
@@ -525,7 +551,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "旦那さんも観戦歓迎で、男の子にアドバイスすることもできる。"
+      "Text": "旦那さんも観戦大歓迎で、男の子にアドバイスをすることもできるぞ。"
     }
   },
 
@@ -533,22 +559,11 @@
     "ID": "imvi_intro_night_0015",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "imvi_intro_night_0016",
+    "NextStepID": "imvi_intro_night_0017",
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
       "Text": "あっ、すでに始めているグループもあるね。"
-    }
-  },
-
-  "imvi_intro_night_0016": {
-    "ID": "imvi_intro_night_0016",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "imvi_intro_night_0017",
-    "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,NPC_M,0,LastName]さんの言う通り、会場は熱気と甘いうめき声に包まれる。凄くエロいな雰囲気を感じる。）"
     }
   },
 
@@ -594,6 +609,69 @@
 
   "imvi_intro_night_0019": {
     "ID": "imvi_intro_night_0019",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "imvi_intro_night_0019a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "imvi_intro_night_0019a": {
+    "ID": "imvi_intro_night_0019a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "imvi_intro_night_0019b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "imvi_intro_night_0019b": {
+    "ID": "imvi_intro_night_0019b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0019c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "会場に一歩入った瞬間、熱く湿った空気が俺の肌を包み込んだ。甘い女の喘ぎ声、肉がぶつかり合う湿った音、若い男たちの荒い息遣い……。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "imvi_intro_night_0019c": {
+    "ID": "imvi_intro_night_0019c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0019d",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "会場全体が濃厚な性臭と興奮の匂いで満ちていて、頭がくらくらするほど淫靡だ。"
+    }
+  },
+
+  "imvi_intro_night_0019d": {
+    "ID": "imvi_intro_night_0019d",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0019e",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……すごいな、ここ。本当に祭りってレベルじゃない。空気そのものがエロすぎて、立っているだけで体が熱くなってくる……"
+    }
+  },
+
+  "imvi_intro_night_0019e": {
+    "ID": "imvi_intro_night_0019e",
     "Type": "CloseMsgPanel",
     "WaitingType": "FadeOut",
     "NextStepID": "imvi_intro_night_0020",
@@ -835,7 +913,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "これが[=Name,NPC_F,0,FirstName]だ。新婚の妻。あそこに立っているのが彼女の夫　[=Name,NPC_M,1,FirstName]。"
+      "Text": "これが[=Name,NPC_F,0,FirstName]だ。新婚の妻だな。あそこに立っているのが彼女の夫、[=Name,NPC_M,1,FirstName]。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -851,7 +929,7 @@
     "NextStepID": "imvi_intro_night_0023",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "す…すごい！[=Name,NPC_F,0,FirstName]ねーちゃん……！…ヌルヌルに…包まれて……すごい！"
+      "Text": "す、すごっ……！[=Name,NPC_F,0,FirstName]ねーちゃんの口……！\nはぁっ、はぁっ……動いたらすぐ出ちゃいそう……！"
     }
   },
 
@@ -899,7 +977,7 @@
     "NextStepID": "imvi_intro_night_0026",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "ご…ごめん！"
+      "Text": "ご、ごめんなさい！　すぐ……イっちゃいそうで……！"
     }
   },
 
@@ -938,7 +1016,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "こんな感じ。さあ、行こうか。"
+      "Text": "こんな感じだ。さあ、行こうか。"
     }
   },
 
@@ -1239,7 +1317,7 @@
     "NextStepID": "imvi_intro_night_0035",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "こ…この穴ですか？"
+      "Text": "こ、この穴……ですか？　先生の……ここに、入れるんですか……？"
     }
   },
 
@@ -1327,7 +1405,7 @@
     "NextStepID": "imvi_intro_night_0038",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "あァーー　すごく気持ちいいィィー　先生の膣はとても温かく、ヌルヌルで締まっているぅー"
+      "Text": "うわぁぁっ……！　先生の膣内、すごく熱くて……ぬるぬるで、締め付けてくる……！\nあっ、あっ、気持ちよすぎて……頭おかしくなりそう……！"
     }
   },
 
@@ -1396,7 +1474,7 @@
     "NextStepID": "imvi_intro_night_0042",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "こ…こうか？"
+      "Text": "こ、こう……ですか？　先生……！"
     }
   },
 
@@ -1501,7 +1579,7 @@
     "NextStepID": "imvi_intro_night_0045",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "こうゆう動きは正しいか？先生。"
+      "Text": "先生、すごい……！　奥の方が……ビクビクしてる……！\nこれで……合ってますか……？"
     }
   },
 
@@ -1530,7 +1608,7 @@
     "NextStepID": "imvi_intro_night_0047",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "ありがとうこざいます！先生。ぼく、頑張ります！"
+      "Text": "ほ、ほんとに！？　ありがとうございます、先生！　ぼく、もっと頑張ります！！"
     }
   },
 
@@ -1559,7 +1637,7 @@
     "NextStepID": "imvi_intro_night_0049",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "先生、これめっちゃ気持ちいい！ぼくこれ大好き。ずっとやってたい！"
+      "Text": "先生のなか、めっちゃ気持ちいいです……！\nぼく……これ大好き……ずっとこうしてたい……！"
     }
   },
 
@@ -1589,7 +1667,7 @@
     "ID": "imvi_intro_night_0050",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "imvi_intro_night_0051",
+    "NextStepID": "imvi_intro_night_0050a",
     "TalkData": {
       "SpecificSpeaker": "NPC_F",
       "Index": 1,
@@ -1601,6 +1679,28 @@
           "EndTime": 10
         }
       }
+    }
+  },
+
+  "imvi_intro_night_0050a": {
+    "ID": "imvi_intro_night_0050a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0050b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,NPC_F,0,FirstName]も[=Name,NPC_F,1,FirstName]も……本当に気持ちよさそうに腰を動かしている。\n若い男たちの硬くなったものを優しく包み込んで、丁寧に教えながらイカせていく……。"
+    }
+  },
+
+  "imvi_intro_night_0050b": {
+    "ID": "imvi_intro_night_0050b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0051",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "この光景を見ているだけで、俺の下半身も熱くなってきている。\n[=Name,Maid,0,CallName]があそこで同じことをする姿……想像しただけで興奮が止まらないな……"
     }
   },
 
@@ -1636,8 +1736,8 @@
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_night_0051c",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺たちが見ている時、一人の女性が近くに来て、俺たちと話をした。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺たちが見ている最中、一人の女性が近くにやってきて、俺たちに声をかけてきた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1912,7 +2012,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "あ、来たか、[=Name,NPC_F,2,FirstName]。これが妻の[=Name,NPC_F,2,FirstName]だ。[=Name,NPC_F,2,FirstName]、彼らは[=ClubName]のオーナーさんの[=ClubOwnerName]くんと奥さんの[=Name,Maid,0,CallName]だ。"
+      "Text": "あ、来たか、[=Name,NPC_F,2,FirstName]。これが俺の妻の[=Name,NPC_F,2,FirstName]だ。[=Name,NPC_F,2,FirstName]、彼らはエンパイアクラブのオーナーさん夫妻、[=ClubOwnerName]くんと[=Name,Maid,0,CallName]ちゃんだよ。"
     }
   },
 
@@ -1977,8 +2077,8 @@
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_night_0063",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,NPC_F,2,FirstName]さんもその服を着ている。彼女も参加するつもりか。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,NPC_F,2,FirstName]さんも祭り用の過激な衣装を着ていた。彼女も当然、今日の祭りに参加するつもりらしい。"
     }
   },
 
@@ -2102,7 +2202,7 @@
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "[=Name,NPC_F,2,FirstName]、そこの部屋はどう？そこの男の子たちはもう待ちきれないみたい。"
+      "Text": "[=Name,NPC_F,2,FirstName]、そこの部屋はどうだ？　男の子たちがもう我慢しきれなくて、俺の前でチンポをビンビンにさせているぞ。ははっ。"
     }
   },
 
@@ -2400,8 +2500,8 @@
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_night_0079_camerapan",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,NPC_F,2,FirstName]さんは部屋に入り、そこにいる男の子たちとセックスを始めた。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,NPC_F,2,FirstName]さんが部屋に入ると、そこにいた男の子たちとすぐにセックスを始めた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -2432,7 +2532,7 @@
     "NextStepID": "imvi_intro_night_0081",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "み…[=Name,NPC_F,2,FirstName]お姉ちゃん、僕はこの日をずっとずっと前から待っていた！ぼ…僕、[=Name,NPC_F,2,FirstName]お姉ちゃんのこと大好き！なんとしてもヤってたい！"
+      "Text": "み、[=Name,NPC_F,2,FirstName]お姉ちゃん……！　僕、この日をずっと……子供の頃からずっと待ってたんだ！　[=Name,NPC_F,2,FirstName]お姉ちゃんのこと、ずっと大好きで……毎日妄想してオナニーしてたよ……！"
     }
   },
 
@@ -2478,7 +2578,7 @@
     "NextStepID": "imvi_intro_night_0083",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "[=Name,NPC_F,2,FirstName]お姉ちゃんを満足させるために、僕、頑張ります！"
+      "Text": "[=Name,NPC_F,2,FirstName]お姉ちゃんを満足させるために、僕、死ぬ気で頑張ります……！"
     }
   },
 
@@ -2524,8 +2624,8 @@
     "WaitingType": "Click",
     "NextStepID": "imvi_intro_night_0085",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,NPC_F,2,FirstName]さんはゆっくりと男の子の上に座る。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,NPC_F,2,FirstName]さんはゆっくりと男の子の腰の上に跨がり、自身を沈めていく。"
     }
   },
 
@@ -2577,7 +2677,7 @@
     "NextStepID": "imvi_intro_night_0088",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "[=Name,NPC_F,2,FirstName]お姉ちゃん……！僕がやっと[=Name,NPC_F,2,FirstName]お姉ちゃんと一つになるんだ……！"
+      "Text": "うわぁ……[=Name,NPC_F,2,FirstName]お姉ちゃんの中、熱くて……ぬるぬるで、僕のおちんちんをぎゅうって締め付けてくる……！　夢みたい……本当に[=Name,NPC_F,2,FirstName]お姉ちゃんと一つになれてる……！"
     }
   },
 
@@ -2606,7 +2706,7 @@
     "NextStepID": "imvi_intro_night_0090",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "は、はい！…ああ……スゲェ…[=Name,NPC_F,2,FirstName]お姉さんの膣は僕のおちんちんを優しく包み込むだ！"
+      "Text": "き、気持ちよすぎて……！　頭が真っ白になる……[=Name,NPC_F,2,FirstName]お姉ちゃんの膣内、僕のおちんちんを優しく包み込んで……ずっと憧れてたこの感触……最高だよ……！"
     }
   },
 
@@ -2657,7 +2757,7 @@
     "NextStepID": "imvi_intro_night_0093",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "[=Name,NPC_F,2,FirstName]お姉ちゃん、キスしてもいい？[=Name,NPC_F,2,FirstName]お姉ちゃんと恋人のようにセックスのことが毎晩毎晩妄想し、オナニーした！"
+      "Text": "[=Name,NPC_F,2,FirstName]お姉ちゃん、キスしてもいい……？　僕、毎晩毎晩、[=Name,NPC_F,2,FirstName]お姉ちゃんと恋人みたいにセックスする妄想して、必死にオナニーしてたんだ……！"
     }
   },
 
@@ -2767,7 +2867,7 @@
     "NextStepID": "imvi_intro_night_0096",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "[=Name,NPC_F,2,FirstName]お姉ちゃん！[=Name,NPC_F,2,FirstName]お姉ちゃん…！僕…もう…！"
+      "Text": "[=Name,NPC_F,2,FirstName]お姉ちゃん！　[=Name,NPC_F,2,FirstName]お姉ちゃん……！　僕……もう……我慢できない……！"
     }
   },
 
@@ -2893,7 +2993,7 @@
     "NextStepID": "imvi_intro_night_0100",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "はァ……はァ……ど…どう？僕のおちんちん……[=Name,NPC_F,2,FirstName]お姉ちゃん？"
+      "Text": "はァ……はァ……ど、どう？　僕のおちんちん……[=Name,NPC_F,2,FirstName]お姉ちゃんの中で……？"
     }
   },
 
@@ -2940,7 +3040,7 @@
     "NextStepID": "imvi_intro_night_0102",
     "TalkData": {
       "SpeakerName": "男の子",
-      "Text": "そうか…じゃあもう一度一緒に練習してくれる？"
+      "Text": "そ、そうだよね……！　じゃあもう一度……一緒に練習してくれる……？"
     }
   },
 
@@ -2985,11 +3085,23 @@
     "ID": "imvi_intro_night_0103",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "imvi_intro_night_0103a",
+    "TalkData": {
+      "SpecificSpeaker": "NPC_M",
+      "Index": 0,
+      "Text": "ふふっ、[=Name,NPC_F,2,FirstName]もたっぷり味わってやったみたいだな。いい顔してイッてたな、あのガキ。ははっ、俺も興奮してきたぞ。"
+    }
+  },
+
+  "imvi_intro_night_0103a": {
+    "ID": "imvi_intro_night_0103a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "imvi_intro_night_0104",
     "TalkData": {
       "SpecificSpeaker": "NPC_M",
       "Index": 0,
-      "Text": "[=Name,NPC_F,2,FirstName]も頑張ったみたいね。さあ、行こうか。[=Name,Maid,0,CallName]さんが担当する部屋へ。"
+      "Text": "さあ、行こうか。次は[=Name,Maid,0,CallName]さんが担当する部屋だ。"
     }
   },
 

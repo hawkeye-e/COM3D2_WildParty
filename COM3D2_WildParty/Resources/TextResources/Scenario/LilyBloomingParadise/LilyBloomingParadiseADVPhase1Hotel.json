@@ -28,8 +28,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0002",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（夕暮れ時、俺はあの予約した部屋に行く。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "夕暮れ時、俺はあの予約された部屋へ向かった。"
     },
 
     "FadeData": {
@@ -44,8 +44,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0003",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（まだ誰もいないみたいので、中に入って少し調べてみて。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "まだ誰も来ていないようだ。中に入って少し調べてみるか。"
     }
   },
 
@@ -250,7 +250,7 @@
     "NextStepID": "lbp_hotel_0006",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "うーん…これはパーティーの準備か？何のパーティーかな？"
+      "Text": "うーん…これはパーティーの準備か？何のパーティーかな？\n何のパーティーだろう？"
     },
 
     "FadeData": {
@@ -266,7 +266,7 @@
     "NextStepID": "lbp_hotel_0007",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "誕生日パーティー？…うーん…誰か最近誕生日の人いる？"
+      "Text": "誕生日パーティー？\n……いや、最近誕生日の人なんていたか？"
     }
   },
 
@@ -277,7 +277,7 @@
     "NextStepID": "lbp_hotel_0008",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "……まさか、知らない男とのパーティーか？本当に浮気したか？……うそだろ…[=Name,Maid,0,CallName]…"
+      "Text": "……まさか、知らない男とのパーティーか？\n本当に浮気しているのか？……うそだろ……[=Name,Maid,0,CallName]……"
     }
   },
 
@@ -308,7 +308,7 @@
     "NextStepID": "lbp_hotel_0009",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "……待って！足音が聞こえる。早く隠れしないと！"
+      "Text": "……待て！\n足音が聞こえる！\n早く隠れないと！"
     }
   },
 
@@ -906,15 +906,26 @@
     "ID": "lbp_hotel_0010",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "lbp_hotel_0011",
+    "NextStepID": "lbp_hotel_0010a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺は寝室に入り、息を潜める。すると数人の女が部屋に入った。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺は寝室に入り、息を潜めた。"
     },
 
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "lbp_hotel_0010a": {
+    "ID": "lbp_hotel_0010a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "すると、数人の女が部屋に入ってきた。"
     }
   },
 
@@ -937,10 +948,21 @@
     "ID": "lbp_hotel_0011a",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0011b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "あ、俺のメイドたちか。\nじゃあ浮気じゃないのか……"
+    }
+  },
+
+  "lbp_hotel_0011b": {
+    "ID": "lbp_hotel_0011b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0012",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（あ、俺のメイドたちか。じゃあ浮気じゃないか……ふぅ、ちょっと安心した。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "ふぅ……少し安心した。"
     }
   },
 
@@ -948,10 +970,21 @@
     "ID": "lbp_hotel_0012",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0012a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]、[=Name,Maid,1,CallName]、[=Name,Maid,2,CallName]、[=Name,Maid,3,CallName]……"
+    }
+  },
+
+  "lbp_hotel_0012a": {
+    "ID": "lbp_hotel_0012a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0013",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,Maid,0,CallName]、[=Name,Maid,1,CallName]、[=Name,Maid,2,CallName]、[=Name,Maid,3,CallName]……こんなにたくさんいるか。このパーティーはいったい何なんだ？）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "こんなに集まって何をするつもりなんだ？\nこのパーティーはいったい何なんだ？"
     }
   },
 
@@ -988,7 +1021,7 @@
     "NextStepID": "lbp_hotel_0015",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "１時間後…"
+      "Text": "\n　　　　　　　　　　　　１時間後…"
     },
 
     "FadeData": {
@@ -1317,10 +1350,21 @@
     "ID": "lbp_hotel_0081",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0081a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "うーん……\nただの女子会なのか？"
+    }
+  },
+
+  "lbp_hotel_0081a": {
+    "ID": "lbp_hotel_0081a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0082",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（うーん…ただの女子会かな？どうせ出られないのだから、もうちょっと見ようか。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "どうせ今は出られないんだし、もう少し様子を見るか。"
     }
   },
 
@@ -1490,7 +1534,7 @@
     "NextStepID": "lbp_hotel_0084_Branch",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "さらに３０分後…"
+      "Text": "\n　　　　　　　　　　　さらに３０分後…"
     },
 
     "FadeData": {
@@ -1527,10 +1571,43 @@
     "ID": "lbp_hotel_0101",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0101a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……ヤバい！"
+    }
+  },
+
+  "lbp_hotel_0101a": {
+    "ID": "lbp_hotel_0101a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0101b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "こっちに向かってきてる！"
+    }
+  },
+
+  "lbp_hotel_0101b": {
+    "ID": "lbp_hotel_0101b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0101c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……どうする？"
+    }
+  },
+
+  "lbp_hotel_0101c": {
+    "ID": "lbp_hotel_0101c",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0102",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（…ヤバイ！こっちに向かってる！……どうしよう？あっ、クローゼット！そこに入ろう！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "あっ、クローゼットだ！\nあそこに隠れよう！"
     }
   },
 
@@ -1566,8 +1643,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0104",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（メイドたちが寝室に入る前に、俺は素早く隠れた。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "メイドたちが寝室に入る前に、俺は素早くクローゼットへ身を隠した。"
     },
 
     "FadeData": {
@@ -1580,10 +1657,21 @@
     "ID": "lbp_hotel_0104",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "lbp_hotel_0104a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "ふぅ……\n危なかった……"
+    }
+  },
+
+  "lbp_hotel_0104a": {
+    "ID": "lbp_hotel_0104a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "lbp_hotel_0105",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（ふぅ…危なかった…バレたらまずいだろ…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "バレたらまずいからな……"
     }
   },
 

@@ -116,8 +116,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0003",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（……おかしい…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……おかしい……"
     },
 
     "FadeData": {
@@ -132,8 +132,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0004",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（……最近[=Name,Maid,0,CallName]の様子がおかしい…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……最近[=Name,Maid,0,CallName]の様子がおかしい……"
     }
   },
 
@@ -143,8 +143,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0005",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（……俺に何か隠してるみたいだ…この違和感は気のせいじゃない……）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……俺に何か隠しているみたいだ……この違和感は気のせいじゃない……"
     }
   },
 
@@ -181,7 +181,7 @@
     "NextStepID": "lbp_intro_0006",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "\n証拠１"
+      "Text": "\n　　　　　　　　　　　　　証拠１"
     },
 
     "FadeData": {
@@ -309,8 +309,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0007",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（先週、新規客に会うためにショッピングモールに行った。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "先週、新規客に会うためにショッピングモールへ行った。"
     },
 
     "FadeData": {
@@ -325,10 +325,21 @@
     "ID": "lbp_intro_0007",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0007a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "そこで、アダルトグッズショップから[=Name,Maid,0,CallName]が出てくるのを見た。彼女が持っていた袋は、間違いなくあの店のものだった。"
+    }
+  },
+
+  "lbp_intro_0007a": {
+    "ID": "lbp_intro_0007a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "lbp_intro_0008",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（そこのセックストイショップから[=Name,Maid,0,CallName]が出てくるのを見た。彼女はバッグをいくつか持っていたので、たくさんのオモチャを買ったのだろう。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "彼女はバッグをいくつも持っていたので、大量のオモチャを買ったのだろう。"
     }
   },
 
@@ -338,8 +349,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0009",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（でも、あの日以来、俺とセックスのときに[=Name,Maid,0,CallName]がオモチャを使っているのを見たことがない。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "だが、あの日以来、俺とのセックスで[=Name,Maid,0,CallName]がオモチャを使っているのを見たことがない。"
     }
   },
 
@@ -349,8 +360,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0010",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（じゃあ、一体何を買った？誰のために？）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "じゃあ、一体何を買ったんだ？ 誰のために？"
     }
   },
 
@@ -402,7 +413,7 @@
     "NextStepID": "lbp_intro_0012",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "\n証拠２"
+      "Text": "\n　　　　　　　　　　　　　証拠２"
     },
 
     "FadeData": {
@@ -497,8 +508,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0014",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（今週の月曜日、[=Name,Maid,0,CallName]がエントランスで誰かと話しているのを見た。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "今週の月曜日、[=Name,Maid,0,CallName]がエントランスで誰かと話しているのを見た。"
     },
 
     "FadeData": {
@@ -553,8 +564,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0015",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（…そして、誰かとキスをしているように見えた。その時は急いでいたので確認しなかったけど…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……そして、その相手とキスをしているようにも見えた。その時は急いでいたので確認しなかったが……"
     }
   },
 
@@ -564,8 +575,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0016",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（…まぁ、この角度からはっきりと見ていなかったことは認めるが、本当にそう見えるんだ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……まぁ、この角度からはっきり見えたわけじゃないことは認める。でも、本当にそう見えたんだ。"
     }
   },
 
@@ -602,7 +613,7 @@
     "NextStepID": "lbp_intro_0018",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "\n証拠３"
+      "Text": "\n　　　　　　　　　　　　　証拠３"
     },
 
     "FadeData": {
@@ -694,8 +705,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0020",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（昨日、マッサージを受けにリフレに行った。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "昨日、マッサージを受けにリフレへ行った。"
     },
 
     "FadeData": {
@@ -710,8 +721,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0021",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（リフレの当番は[=Name,Maid,0,CallName]だ。彼女の腕前はとても素晴らしく、とても心地よい。そのせいで俺は眠ってしまった。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "担当は[=Name,Maid,0,CallName]だった。彼女の腕前は素晴らしく、とても心地よい。そのせいで俺は眠ってしまった。"
     }
   },
 
@@ -786,8 +797,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0023_camerapan",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（その時……）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "その時……"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -818,8 +829,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0025_Branch",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（……[=Name,Maid,0,CallName]が誰かといちゃつき、俺の隣のベッドでスキンシップをしているのを見たようだ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……[=Name,Maid,0,CallName]が誰かといちゃつき、俺の隣のベッドでスキンシップをしているのを見た気がする。"
     }
   },
 
@@ -841,8 +852,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0032",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（…まぁ、寝ぼけてるかもしれないが、本当に何かを見た気がする……）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……まぁ、寝ぼけていただけかもしれないが、本当に何かを見たような気がする……。"
     }
   },
 
@@ -879,7 +890,7 @@
     "NextStepID": "lbp_intro_0034",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "\n証拠４"
+      "Text": "\n　　　　　　　　　　　　　証拠４"
     },
 
     "FadeData": {
@@ -987,8 +998,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0036",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（今朝、[=Name,NPC_F,0,FirstName]が日々の仕事を報告したとき、俺は[=Name,Maid,0,CallName]のことを聞いてみた。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "今朝、[=Name,NPC_F,0,FirstName]が業務報告をした時、俺は[=Name,Maid,0,CallName]について聞いてみた。"
     },
 
     "FadeData": {
@@ -1099,7 +1110,7 @@
     "NextStepID": "lbp_intro_0040",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "………あ、ところで…"
+      "Text": "………あ、ところで……"
     }
   },
 
@@ -1178,7 +1189,7 @@
     "NextStepID": "lbp_intro_0043",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "なんか最近彼女の言動が少しおかしいと思わない？"
+      "Text": "なんか最近、彼女の言動が少しおかしいと思わないか？"
     }
   },
 
@@ -1396,8 +1407,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0049",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（うーん…一体どうなってるかな…？）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "うーん……一体どうなっているんだ……？"
     },
 
     "FadeData": {
@@ -1434,8 +1445,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0050",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（浮気か？……いや違うな。浮気しているなら[=Name,NPC_F,0,FirstName]が俺に直接言うはずだ。でも「彼女のプライベート」で…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "浮気か？ ……いや、違うな。もし浮気なら、[=Name,NPC_F,0,FirstName]が俺に直接言うはずだ。でも「彼女のプライベート」って……"
     }
   },
 
@@ -1472,8 +1483,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0051",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "あーわかんねぇ！本人から聞くか？……頭がおかしくなりそう！"
+      "SpecificSpeaker": "Narrative",
+      "Text": "あー、わかんねぇ！ 本人に聞くか？ ……頭がおかしくなりそうだ！"
     }
   },
 
@@ -1561,15 +1572,26 @@
     "ID": "lbp_intro_0054",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "lbp_intro_0055",
+    "NextStepID": "lbp_intro_0054a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（あっ、これは……今、[=Name,Maid,0,CallName]が今夜のホテルを予約した！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "あっ、これは……"
     },
 
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "lbp_intro_0054a": {
+    "ID": "lbp_intro_0054a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0055",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "今、[=Name,Maid,0,CallName]が今夜ホテルを予約した！"
     }
   },
 
@@ -1579,8 +1601,8 @@
     "WaitingType": "Click",
     "NextStepID": "lbp_intro_0056",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（どういうことだ？今夜は彼女の夜伽じゃない、ホテルは必要ないだろ？）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "どういうことだ？ 今夜は彼女の夜伽の日じゃない。ホテルなんて必要ないはずだろ？"
     }
   },
 
@@ -1591,7 +1613,7 @@
     "NextStepID": "lbp_intro_0057",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "いったい何を隠しているんだ？……あー！イライラする！"
+      "Text": "一体何を隠しているんだ？ ……あーっ！ イライラする！"
     }
   },
 
@@ -1599,10 +1621,21 @@
     "ID": "lbp_intro_0057",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "lbp_intro_0057a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "うーん……仕方ない。少し調査が必要だな。"
+    }
+  },
+
+  "lbp_intro_0057a": {
+    "ID": "lbp_intro_0057a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "lbp_intro_0058",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（うーん…仕方ない、ちょっと調査が必要だ。よし、今夜ホテルに忍び込んで、[=Name,Maid,0,CallName]がそこで何をしているか確かめろ！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "よし、今夜ホテルに忍び込んで、[=Name,Maid,0,CallName]がそこで何をしているのか確かめてやる！"
     }
   },
 
