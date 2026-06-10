@@ -117,7 +117,7 @@
     "NextStepID": "lum_intro_0005",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "ある朝・ご主人様の部屋"
+      "Text": "\n　　　　　　　　　　ある朝・ご主人様の部屋"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -193,10 +193,21 @@
     "ID": "lum_intro_0010",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "lum_intro_0011",
+    "NextStepID": "lum_intro_0010a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "なんか気持ちが良いな…"
+      "Text": "なんか……すごく気持ちが良いな……この夢、リアルすぎる……"
+    }
+  },
+
+  "lum_intro_0010a": {
+    "ID": "lum_intro_0010a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0011",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……ん？ なんか温かくて、湿った感触が……下の方から……？"
     }
   },
 
@@ -273,10 +284,32 @@
     "ID": "lum_intro_0021",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "lum_intro_0022_Branch",
+    "NextStepID": "lum_intro_0021a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
       "Text": "何してんの！？"
+    }
+  },
+
+  "lum_intro_0021a": {
+    "ID": "lum_intro_0021a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0021b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "うわっ……マジかよ！？ 朝からいきなりこれ！？ しかも顔が完全に発情してる……目がとろとろで、頰も真っ赤だ……ヤバいレベルで興奮してるぞ……"
+    }
+  },
+
+  "lum_intro_0021b": {
+    "ID": "lum_intro_0021b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0022_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "待って、[=Name,Maid,0,CallName]！ ちょっとやめ——"
     }
   },
 
@@ -296,10 +329,21 @@
     "ID": "lum_intro_0031",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "lum_intro_0031a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "いやいや、だからこんな朝早くから何をやってんの？こんなことしてるなんて……"
+    }
+  },
+
+  "lum_intro_0031a": {
+    "ID": "lum_intro_0031a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "lum_intro_0032",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "いやいや、だからこんな朝早くから何をやってんの？こんなことしてるなんで…"
+      "Text": "ほら、ちょっと離れてくれって！"
     }
   },
 
@@ -404,10 +448,21 @@
     "ID": "lum_intro_0041",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "lum_intro_0042",
+    "NextStepID": "lum_intro_0041a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
       "Text": "あ、はい……"
+    }
+  },
+
+  "lum_intro_0041a": {
+    "ID": "lum_intro_0041a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0042",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……完全にスイッチ入ってるな、これは。抵抗しても無駄そうだ……"
     }
   },
 
@@ -507,10 +562,32 @@
     "ID": "lum_intro_0052",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "lum_intro_0052a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "うわっ、本格的に跨がってきた……この勢い、今日はもう止まらないな……"
+    }
+  },
+
+  "lum_intro_0052a": {
+    "ID": "lum_intro_0052a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_intro_0052b",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "はぁ……しょうがないなぁ～　完全にスイッチ入っちゃってるし……"
+    }
+  },
+
+  "lum_intro_0052b": {
+    "ID": "lum_intro_0052b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "lum_intro_0053",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（あーあ、完全にスイッチが入った……すぐには終わらなさそうだな……）"
+      "Text": "あーあ、すぐには終わらなさそうだな……"
     }
   },
 
@@ -520,8 +597,8 @@
     "WaitingType": "Click",
     "NextStepID": "lum_intro_yotogiplay_closepanel",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "はぁ……しょうがないなぁ～　俺も本気で行くか。"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……ま、被害者ヅラしても仕方ないか。今日は大人しく付き合ってやるか……"
     }
   },
 

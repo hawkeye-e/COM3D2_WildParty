@@ -100,8 +100,8 @@
     "WaitingType": "Click",
     "NextStepID": "lum_postyotogi_0002",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（この30分くらいの間で、[=Name,Maid,0,CallName]が俺を搾精しまくる。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "この30分くらいの間で、[=Name,Maid,0,CallName]が俺を搾精しまくってる……"
     },
 
     "FadeData": {
@@ -116,8 +116,8 @@
     "WaitingType": "Click",
     "NextStepID": "lum_postyotogi_0003_Branch",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（何回やっても、彼女はまだ満足していないようだ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "何回出しても、彼女はまだ全然満足してないみたいだ……"
     }
   },
 
@@ -137,10 +137,32 @@
     "ID": "lum_postyotogi_0011",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0011a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ……すごく気持ち良い……"
+    }
+  },
+
+  "lum_postyotogi_0011a": {
+    "ID": "lum_postyotogi_0011a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0011b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "はぁ……もう何回目だよ……この子、今日は本気で俺を絞り尽くす気満々だな……"
+    }
+  },
+
+  "lum_postyotogi_0011b": {
+    "ID": "lum_postyotogi_0011b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "lum_postyotogi_0012",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ああ……すごく気持ち良い……このまま入れるね…"
+      "Text": "このまま入れるね…"
     }
   },
 
@@ -182,10 +204,21 @@
     "ID": "lum_postyotogi_0021",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "lum_postyotogi_0022",
+    "NextStepID": "lum_postyotogi_0021a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
       "Text": "え？"
+    }
+  },
+
+  "lum_postyotogi_0021a": {
+    "ID": "lum_postyotogi_0021a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0022",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "うわっ、急にどうした！？"
     }
   },
 
@@ -284,8 +317,8 @@
     "WaitingType": "Click",
     "NextStepID": "lum_postyotogi_0027",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,Maid,0,CallName]はすぐに身なりを整えた。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]はすぐに身なりを整えた。"
     },
 
     "FadeData": {
@@ -331,10 +364,21 @@
     "ID": "lum_postyotogi_0031",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "lum_postyotogi_0032",
+    "NextStepID": "lum_postyotogi_0031a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
       "Text": "お、おい！待って！"
+    }
+  },
+
+  "lum_postyotogi_0031a": {
+    "ID": "lum_postyotogi_0031a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0032",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "ちょ、待て待て待て！？ まだ全然終わってないのに！？ 俺のチンポがこんなに勃起してるのに、そのまま帰るのかよ！"
     }
   },
 
@@ -380,26 +424,15 @@
     "ID": "lum_postyotogi_0035",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "lum_postyotogi_0036",
+    "NextStepID": "lum_postyotogi_0037",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,Maid,0,CallName]は急いで出て行った。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "最悪だ……この疼き、半端ない……一日中こんな状態で過ごすなんて絶対無理……"
     },
 
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
-    }
-  },
-
-  "lum_postyotogi_0036": {
-    "ID": "lum_postyotogi_0036",
-    "Type": "Talk",
-    "WaitingType": "Click",
-    "NextStepID": "lum_postyotogi_0037",
-    "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "俺のチンポがこんなに勃起してるのに、そのまま帰るのかよ！"
     }
   },
 
@@ -499,10 +532,21 @@
     "ID": "lum_postyotogi_0043",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "lum_postyotogi_0044",
+    "NextStepID": "lum_postyotogi_0043a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
       "Text": "え？待って！"
+    }
+  },
+
+  "lum_postyotogi_0043a": {
+    "ID": "lum_postyotogi_0043a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0044",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "やばい！ 今入ってくるな！！"
     }
   },
 
@@ -699,10 +743,21 @@
     "ID": "lum_postyotogi_0049",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "lum_postyotogi_0050",
+    "NextStepID": "lum_postyotogi_0049a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
       "Text": "うっ…！"
+    }
+  },
+
+  "lum_postyotogi_0049a": {
+    "ID": "lum_postyotogi_0049a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "lum_postyotogi_0050",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "だめだ、出る……止まらない！！"
     }
   },
 
@@ -780,8 +835,8 @@
     "WaitingType": "Click",
     "NextStepID": "lum_postyotogi_0055",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（ヤバイ！[=Name,NPC_F,0,FirstName]の顔にかけてしまった！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "ヤバイ！[=Name,NPC_F,0,FirstName]の顔に直撃してしまった！！"
     }
   },
 
@@ -908,8 +963,8 @@
     "WaitingType": "Click",
     "NextStepID": "lum_postyotogi_0063",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（……顔は笑っているけど目が笑っていない……！こわっ……！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……顔は笑っているけど目が笑っていない……！こわっ……！"
     }
   },
 
@@ -983,8 +1038,8 @@
     "WaitingType": "Click",
     "NextStepID": "lum_postyotogi_0069",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "結局、[=Name,NPC_F,0,FirstName]は一日中怒っていました。"
+      "SpecificSpeaker": "Narrative",
+      "Text": "結局、[=Name,NPC_F,0,FirstName]は一日中怒っていました……"
     },
 
     "FadeData": {
