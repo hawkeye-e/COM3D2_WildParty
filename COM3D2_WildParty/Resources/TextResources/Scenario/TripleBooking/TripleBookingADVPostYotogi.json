@@ -139,14 +139,25 @@
     "ID": "trbo_postyotogi_0001",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "trbo_postyotogi_0002",
+    "NextStepID": "trbo_postyotogi_0001a",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "３時間の乱交の後、男たちは疲れ果ててベッドに横たが、[=Name,Maid,0,CallName]はまだ元気そうだった。"
+      "Text": "３時間の激しい乱交の後、男たちは完全に力尽きてベッドにぐったりと横たわっていた。"
     },
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "trbo_postyotogi_0001a": {
+    "ID": "trbo_postyotogi_0001a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0002",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "一方、[=Name,Maid,0,CallName]は顔を上気させながらも、まるで何事もなかったかのようにまだ元気いっぱいだった。"
     }
   },
 
@@ -157,7 +168,7 @@
     "NextStepID": "trbo_postyotogi_0003",
     "TalkData": {
       "SpeakerName": "中年男",
-      "Text": "あっ……降参だ…うっ……腰が……"
+      "Text": "あっ……降参だ……うっ、腰が……もう限界だぞ……"
     }
   },
 
@@ -168,7 +179,7 @@
     "NextStepID": "trbo_postyotogi_0004",
     "TalkData": {
       "SpeakerName": "チャラ男",
-      "Text": "やべぇ……死ぬかと思った……"
+      "Text": "やべぇ……マジで死ぬかと思ったわ……はぁ、はぁ……"
     }
   },
 
@@ -179,7 +190,7 @@
     "NextStepID": "trbo_postyotogi_0005",
     "TalkData": {
       "SpeakerName": "オタクくん",
-      "Text": "[=Name,Maid,0,CallName]ちゃん、も…もう満足したよね…？"
+      "Text": "[=Name,Maid,0,CallName]ちゃん、も、もう満足したよね……？ 僕、もう動けないよ……"
     }
   },
 
@@ -220,8 +231,8 @@
     "WaitingType": "Click",
     "NextStepID": "trbo_postyotogi_0012_se",
     "TalkData": {
-      "SpeakerName": "全員",
-      "Text": "え？！マジ？"
+      "SpeakerName": "男全員",
+      "Text": "え？！ マジ！？"
     }
   },
 
@@ -375,7 +386,7 @@
     "NextStepID": "trbo_postyotogi_0015_Branch",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "セッションはもうすぐ終わるので、時計が鳴った。"
+      "Text": "終了時間を告げる時計の音が、部屋に虚しく響いた。"
     }
   },
 
@@ -395,10 +406,21 @@
     "ID": "trbo_postyotogi_0021",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0021a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "オタクくんは放心した表情で天井を見つめていた。"
+    }
+  },
+
+  "trbo_postyotogi_0021a": {
+    "ID": "trbo_postyotogi_0021a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "trbo_postyotogi_0022",
     "TalkData": {
       "SpeakerName": "オタクくん",
-      "Text": "（あんなに激しい乱交セックスをしたのに、ただのゲームだと…？）"
+      "Text": "（あんなに激しい乱交をしたのに……全部、ただの「ゲーム」だったのか……？）"
     }
   },
 
@@ -406,10 +428,21 @@
     "ID": "trbo_postyotogi_0022",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0022a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "チャラ男はベッドの上で大の字になり、呆然とした顔でつぶやいた。"
+    }
+  },
+
+  "trbo_postyotogi_0022a": {
+    "ID": "trbo_postyotogi_0022a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "trbo_postyotogi_0023",
     "TalkData": {
       "SpeakerName": "チャラ男",
-      "Text": "（この底無し女、めっちゃやべぇな…）"
+      "Text": "（この底無し女、めっちゃヤバかったな……俺の体力、全部持ってかれそう……）"
     }
   },
 
@@ -417,10 +450,21 @@
     "ID": "trbo_postyotogi_0023",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0023a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "中年男は額に汗を浮かべ、大きく息を吐きながら、どこか誇らしげに鼻を鳴らした。"
+    }
+  },
+
+  "trbo_postyotogi_0023a": {
+    "ID": "trbo_postyotogi_0023a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "trbo_postyotogi_0024",
     "TalkData": {
       "SpeakerName": "中年男",
-      "Text": "（や…やっと終わった……助かった……）"
+      "Text": "（や……やっと終わった……助かった……ふん、若い者どもにはまだまだ及ばんな……）"
     }
   },
 
@@ -632,14 +676,25 @@
     "ID": "trbo_postyotogi_0032",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "trbo_postyotogi_0033a",
+    "NextStepID": "trbo_postyotogi_0032a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,Maid,0,CallName]のセッションはそろそろ終わりだな。少し心配になりながら、俺はエントランスに向かった。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]のセッションもそろそろ終わりだ。少し心配になりながら、俺はエントランスに向かった。"
     },
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "trbo_postyotogi_0032a": {
+    "ID": "trbo_postyotogi_0032a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0033a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "そこでは、意外な光景が広がっていた。"
     }
   },
 
@@ -665,7 +720,7 @@
     "NextStepID": "trbo_postyotogi_0034",
     "TalkData": {
       "SpeakerName": "チャラ男",
-      "Text": "いやぁー楽しかったぜ。"
+      "Text": "いやぁー、楽しかったぜ！ マジで最高だったな。"
     }
   },
 
@@ -676,7 +731,7 @@
     "NextStepID": "trbo_postyotogi_0035",
     "TalkData": {
       "SpeakerName": "中年男",
-      "Text": "ああ、そうたな。"
+      "Text": "ああ、なかなか良い時間だったな。"
     }
   },
 
@@ -687,7 +742,7 @@
     "NextStepID": "trbo_postyotogi_0036",
     "TalkData": {
       "SpeakerName": "オタクくん",
-      "Text": "二人ともありがとう……今日は多くのことを学んだ……"
+      "Text": "二人とも……今日は本当にありがとうございました……僕、たくさん……勉強になりました……"
     }
   },
 
@@ -698,7 +753,7 @@
     "NextStepID": "trbo_postyotogi_0037",
     "TalkData": {
       "SpeakerName": "チャラ男",
-      "Text": "へへぇ！言わなくていいぜ！"
+      "Text": "へへっ！ そんな堅苦しいこと言わなくていいって！"
     }
   },
 
@@ -709,7 +764,7 @@
     "NextStepID": "trbo_postyotogi_0038a",
     "TalkData": {
       "SpeakerName": "中年男",
-      "Text": "もっと自信を持っていいさ。"
+      "Text": "もっと胸を張れ。若いんだから自信を持て。"
     }
   },
 
@@ -717,7 +772,7 @@
     "ID": "trbo_postyotogi_0038a",
     "Type": "Camera",
     "WaitingType": "Auto",
-    "NextStepID": "trbo_postyotogi_0038",
+    "NextStepID": "trbo_postyotogi_0038b",
     "CameraData": {
       "FixedPointData": {
         "PosString": "-2.51, 1.85, 4.79",
@@ -728,14 +783,25 @@
     }
   },
 
+  "trbo_postyotogi_0038b": {
+    "ID": "trbo_postyotogi_0038b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0038",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……なんだ、これは？ さっきまであんなに揉めていた三人が……急に妙な連帯感みたいなものを生んでいる……？"
+    }
+  },
+
   "trbo_postyotogi_0038": {
     "ID": "trbo_postyotogi_0038",
     "Type": "Talk",
     "WaitingType": "Click",
     "NextStepID": "trbo_postyotogi_0039",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（この光景を見ていた俺は、[=Name,Maid,0,CallName]にささやいた。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺は思わず[=Name,Maid,0,CallName]に小声で囁いた。"
     }
   },
 
@@ -746,7 +812,7 @@
     "NextStepID": "trbo_postyotogi_0040_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "なにこれ…変な友情が生まれた？"
+      "Text": "なにこれ……変な友情でも芽生えた？"
     }
   },
 
@@ -805,7 +871,7 @@
     "NextStepID": "trbo_postyotogi_0054",
     "TalkData": {
       "SpeakerName": "オタクくん",
-      "Text": "乱交がこんな楽しいなんて、初めて知った。"
+      "Text": "乱交がこんなに楽しいなんて、初めて知りました……"
     }
   },
 
@@ -827,7 +893,7 @@
     "NextStepID": "trbo_postyotogi_0056",
     "TalkData": {
       "SpeakerName": "チャラ男",
-      "Text": "おいおいおい、[=Name,Maid,0,CallName]ちゃん。お前、オタクくんの性癖を歪んだぞ。"
+      "Text": "おいおいおい、[=Name,Maid,0,CallName]ちゃん。お前、オタクくんの性癖をだいぶ歪ませちまったぞ。"
     }
   },
 
@@ -835,10 +901,32 @@
     "ID": "trbo_postyotogi_0056",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "trbo_postyotogi_0057_Branch",
+    "NextStepID": "trbo_postyotogi_0056a",
     "TalkData": {
       "SpeakerName": "中年男",
-      "Text": "罪深い女だな。"
+      "Text": "罪深い女だな、お前は。"
+    }
+  },
+
+  "trbo_postyotogi_0056a": {
+    "ID": "trbo_postyotogi_0056a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0056b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "……三人が妙に打ち解けている。さっきまで互いに牽制し合っていたのが嘘のようだ。乱交を通じて出来上がった、奇妙な男同士の絆……か。"
+    }
+  },
+
+  "trbo_postyotogi_0056b": {
+    "ID": "trbo_postyotogi_0056b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0057_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]はオタクくんに優しく話しかける。"
     }
   },
 
@@ -861,7 +949,7 @@
     "NextStepID": "trbo_postyotogi_0062_Branch",
     "TalkData": {
       "SpeakerName": "チャラ男",
-      "Text": "も、もちろん僕は[=Name,Maid,0,CallName]ちゃんを嫌いになれませんよ！！む、むしろ新しい扉を開いてくれてありがとう！"
+      "Text": "も、もちろん僕は[=Name,Maid,0,CallName]ちゃんを嫌いになんかなれませんよ！！ む、むしろ新しい扉を開いてくれてありがとうございます！"
     }
   },
 
@@ -905,7 +993,7 @@
     "NextStepID": "trbo_postyotogi_0072",
     "TalkData": {
       "SpeakerName": "オタクくん",
-      "Text": "あの…もしかしたら…今度またやる？"
+      "Text": "あの……もしかしたら……今度また、やってもいいですか……？"
     }
   },
 
@@ -916,7 +1004,7 @@
     "NextStepID": "trbo_postyotogi_0073",
     "TalkData": {
       "SpeakerName": "チャラ男",
-      "Text": "あははは、ハマっちゃったじゃねえか、オタクくん！いいぜ！やろやろ！"
+      "Text": "あははは！ ハマっちゃったじゃねえか、オタクくん！ いいぜ、いいぜ！ またやろうぜ！"
     }
   },
 
@@ -927,7 +1015,7 @@
     "NextStepID": "trbo_postyotogi_0074_Branch",
     "TalkData": {
       "SpeakerName": "中年男",
-      "Text": "まあ、たまにはこういうのもいい。[=Name,Maid,0,CallName]ちゃん、それでいいんか？"
+      "Text": "まあ、たまにはこういうのも悪くない。[=Name,Maid,0,CallName]ちゃん、それで構わんか？"
     }
   },
 
@@ -1025,7 +1113,7 @@
     "NextStepID": "trbo_postyotogi_0084",
     "TalkData": {
       "SpeakerName": "オタクくん",
-      "Text": "あの…僕たち…連絡先を交換しよ？"
+      "Text": "あの……僕たち……連絡先、交換しませんか？"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1040,7 +1128,7 @@
     "NextStepID": "trbo_postyotogi_0085",
     "TalkData": {
       "SpeakerName": "チャラ男",
-      "Text": "はいはい……おい、次の店に飲みに行こうぜ？"
+      "Text": "はいはい。……おい、次の店に飲みに行こうぜ？"
     }
   },
 
@@ -1051,7 +1139,7 @@
     "NextStepID": "trbo_postyotogi_0086",
     "TalkData": {
       "SpeakerName": "中年男",
-      "Text": "おっ！いいよ、今日妻が家にいないんだ。"
+      "Text": "おっ！ いいな。今日は妻が家にいないんだ。"
     }
   },
 
@@ -1062,7 +1150,7 @@
     "NextStepID": "trbo_postyotogi_0087",
     "TalkData": {
       "SpeakerName": "チャラ男",
-      "Text": "オタクくんはどう？"
+      "Text": "オタクくんはどうだ？"
     }
   },
 
@@ -1073,7 +1161,7 @@
     "NextStepID": "trbo_postyotogi_0088",
     "TalkData": {
       "SpeakerName": "オタクくん",
-      "Text": "行こう、行こう！二人からもっと学びたい！"
+      "Text": "行きます、行きます！ 二人からもっと……いろいろ学びたいです！"
     }
   },
 
@@ -1084,7 +1172,7 @@
     "NextStepID": "trbo_postyotogi_0089",
     "TalkData": {
       "SpeakerName": "チャラ男",
-      "Text": "おいおい、そんなに真面目になるなよ！そうだ、後でオレの彼女を紹介しよぜ。彼女はギャル友達がたくさんいるんだ、中には君に合いそうな女もいるかもな！"
+      "Text": "おいおい、そんなに真面目になるなよ！ そうだ、後で俺の彼女紹介してやるよ。ギャル友達がたくさんいるから、中にはお前に合いそうな子がいるかもな！"
     }
   },
 
@@ -1109,8 +1197,8 @@
     "WaitingType": "Click",
     "NextStepID": "trbo_postyotogi_0091",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（３人のお客様が話して立ち去り、[=Name,Maid,0,CallName]と俺はエントランスに残された…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "三人のお客様は和やかに笑い合いながら連絡先を交換し、エントランスを後にした。"
     }
   },
 
@@ -1120,13 +1208,65 @@
     "WaitingType": "Click",
     "NextStepID": "trbo_postyotogi_0092",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（あの３人が仲良くなれると思わなかったので、俺たちはちょっと言葉を失った。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺と[=Name,Maid,0,CallName]は取り残された形でその場に立ち尽くしていた。"
     }
   },
 
   "trbo_postyotogi_0092": {
     "ID": "trbo_postyotogi_0092",
+    "Type": "CloseMsgPanel",
+    "WaitingType": "FadeOut",
+    "NextStepID": "trbo_postyotogi_0092a",
+    "FadeData": {
+      "IsFadeIn": false,
+      "IsFadeOut": true
+    }
+  },
+
+  "trbo_postyotogi_0092a": {
+    "ID": "trbo_postyotogi_0092a",
+    "Type": "Camera",
+    "WaitingType": "Auto",
+    "NextStepID": "trbo_postyotogi_0092b",
+    "CameraData": {
+      "FixedPointData": {
+        "PosString": "999,999,999",
+        "TargetPosString": "1000,1000,1000",
+        "AroundAngleString": "0,0",
+        "Distance": 0
+      }
+    }
+  },
+
+  "trbo_postyotogi_0092b": {
+    "ID": "trbo_postyotogi_0092b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0092c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "執務室に戻りながら、俺は隣を歩く[=Name,Maid,0,CallName]の横顔をちらりと見た。"
+    },
+    "FadeData": {
+      "IsFadeIn": true,
+      "IsFadeOut": false
+    }
+  },
+
+  "trbo_postyotogi_0092c": {
+    "ID": "trbo_postyotogi_0092c",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0092d",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "今日は本当に色々あったな……トリプルブッキングから始まって、予想外の乱交騒動、そしてあの三人の妙な友情……。とりあえず事件のまとめをしなければ。"
+    }
+  },
+
+  "trbo_postyotogi_0092d": {
+    "ID": "trbo_postyotogi_0092d",
     "Type": "CloseMsgPanel",
     "WaitingType": "FadeOut",
     "NextStepID": "trbo_postyotogi_0093",
@@ -1224,14 +1364,25 @@
     "ID": "trbo_postyotogi_0096",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "trbo_postyotogi_0097_Branch",
+    "NextStepID": "trbo_postyotogi_0096a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "お疲れ、あの状況に対処してくれてありがとう。"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺たちは執務室に入り、ドアを閉めた。"
     },
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "trbo_postyotogi_0096a": {
+    "ID": "trbo_postyotogi_0096a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0097_Branch",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "お疲れ。あの状況を上手くまとめてくれてありがとう。"
     }
   },
 
@@ -1288,7 +1439,7 @@
     "NextStepID": "trbo_postyotogi_0114",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ところで、記録によると、[=Name,Maid,0,CallName]はあのお客様たちの予約を担当した人だ。"
+      "Text": "ところで、記録を見ると、[=Name,Maid,0,CallName]があのお客様たちの予約を担当してたな。"
     }
   },
 
@@ -1299,7 +1450,7 @@
     "NextStepID": "trbo_postyotogi_0115_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "……今回の事件は、わざとやったのか？"
+      "Text": "……今回のトリプルブッキング、わざとやったんだろう？"
     }
   },
 
@@ -1321,8 +1472,8 @@
     "WaitingType": "Click",
     "NextStepID": "trbo_postyotogi_0122a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（あーあ、この反応、間違いなくわざとだな…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……この反応。間違いなくわざとだな……"
     }
   },
 
@@ -1354,7 +1505,7 @@
     "NextStepID": "trbo_postyotogi_0123",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "まあいい、たが次はないぞ。今回はエスカレートしなかったのは幸運だった。"
+      "Text": "まあいい。だが次は絶対にないぞ。今回はエスカレートせずに済んでよかった。"
     }
   },
 
@@ -1365,7 +1516,7 @@
     "NextStepID": "trbo_postyotogi_0124_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "…クラブでのグループサービスを追加するつもりだから、そんな顔しないて。"
+      "Text": "……これからはクラブのグループサービスも正式に追加するつもりだ。そんな顔するなよ。"
     }
   },
 
@@ -1388,7 +1539,7 @@
     "NextStepID": "trbo_postyotogi_0132",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "やれやれ…"
+      "Text": "やれやれ……"
     }
   },
 
@@ -1398,8 +1549,8 @@
     "WaitingType": "Click",
     "NextStepID": "trbo_postyotogi_0133",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（ふぅ…一件落着だ。でも、俺はまだ「仕事」が残ってる。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "ふぅ……一件落着だ。\nでも、俺にはまだもう一つ大事な「仕事」が残ってる。"
     }
   },
 
@@ -1410,7 +1561,7 @@
     "NextStepID": "trbo_postyotogi_0134_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "さあ、服を脱いて。"
+      "Text": "さあ、服を脱いで。"
     }
   },
 
@@ -1433,7 +1584,7 @@
     "NextStepID": "trbo_postyotogi_0142_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "まだ満足しないだろう？ご主人様として、これくらいわかるよ。"
+      "Text": "まだ満足してないだろう？ ご主人様として、そのくらいはわかるよ。"
     }
   },
 
@@ -1524,8 +1675,8 @@
     "WaitingType": "Click",
     "NextStepID": "trbo_postyotogi_0155",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（それで[=Name,Maid,0,CallName]ともう１時間くらいセックスを続けた。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "その後、俺は[=Name,Maid,0,CallName]ともう一時間近く激しくセックスを続けた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1539,8 +1690,8 @@
     "WaitingType": "Click",
     "NextStepID": "trbo_postyotogi_0156",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（こんな淫らなメイドを持つことは簡単な仕事ではないな。だか、彼女を満足させるのも俺の仕事だ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……他の男三人とあれだけ乱交したのに、まだこんなに欲しがるなんて……本当に底なしだな。"
     }
   },
 
@@ -1548,10 +1699,21 @@
     "ID": "trbo_postyotogi_0156",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "trbo_postyotogi_0156a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "他の誰にも満たせないこの身体を、ちゃんと満足させられるのは俺だけらしい。"
+    }
+  },
+
+  "trbo_postyotogi_0156a": {
+    "ID": "trbo_postyotogi_0156a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "trbo_postyotogi_0157",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（まあ、俺はご主人様だからな。当然のことだ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "まあ、俺はご主人様だからな。当然のことだ。"
     }
   },
 
@@ -1613,7 +1775,7 @@
     "NextStepID": "trbo_postyotogi_0172_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ん？なんだ？"
+      "Text": "ん？ なんだ？"
     }
   },
 
@@ -1646,8 +1808,8 @@
     "WaitingType": "Click",
     "NextStepID": "trbo_end",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（やれやれ…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "やれやれ……"
     }
   },
 
