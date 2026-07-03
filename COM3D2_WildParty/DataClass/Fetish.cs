@@ -13,6 +13,8 @@ namespace COM3D2.WildParty.Plugin
         public int ID;
         public string DrawName;
         public string UniqueName;
+        public Dictionary<string, string> DrawNameLocalise;
+        public Dictionary<string, string> UniqueNameLocalise;
         public MaidStatus.Propensity.Data.ColorType ColorType;
 
         public ConditionInfo Conditions;
