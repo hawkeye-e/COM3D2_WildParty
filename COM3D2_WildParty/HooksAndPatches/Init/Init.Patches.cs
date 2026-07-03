@@ -36,13 +36,15 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.Init
                 {
                     //All 3 lists need to be altered in order to make the game recognise the fetish record
                     commonIdManager.enabledIdList.Add(dataToInject.ID);
-                    commonIdManager.idMap.Add(dataToInject.ID, new KeyValuePair<string, string>(dataToInject.DrawName, dataToInject.DrawName));
+                    string drawName = Util.GetLocalisedText(dataToInject.DrawNameLocalise, dataToInject.DrawName);
+                    string uniqueName = Util.GetLocalisedText(dataToInject.UniqueNameLocalise, dataToInject.UniqueName);
+                    commonIdManager.idMap.Add(dataToInject.ID, new KeyValuePair<string, string>(drawName, drawName));
 
                     MaidStatus.Propensity.Data newItem = new MaidStatus.Propensity.Data(dataToInject.ID, null, null);
                     Traverse newItemReflection = Traverse.Create(newItem);
                     newItemReflection.Field("id").SetValue(dataToInject.ID);
-                    newItemReflection.Field("drawName").SetValue(dataToInject.DrawName);
-                    newItemReflection.Field("uniqueName").SetValue(dataToInject.UniqueName);
+                    newItemReflection.Field("drawName").SetValue(drawName);
+                    newItemReflection.Field("uniqueName").SetValue(uniqueName);
                     newItemReflection.Field("colorType").SetValue(dataToInject.ColorType);
 
                     propensityList.Add(dataToInject.ID, newItem);
