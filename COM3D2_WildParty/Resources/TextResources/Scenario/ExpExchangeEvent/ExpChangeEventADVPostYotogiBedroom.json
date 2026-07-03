@@ -58,8 +58,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_common_bedroom_0001c",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（こうしてイベントは終わり、お客様たちは帰りました。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "こうして第１回の「肉便器体験会」は幕を閉じ、お客様たちは満足した様子で帰っていった。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -71,10 +71,21 @@
     "ID": "eee_post_yotogi_common_bedroom_0001c",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_bedroom_0001c2",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺は見習いメイドたちに会場の片付けを任せ、[=Name,Maid,0,CallName]たちと共にクラブ内の空いているホテルの部屋へ移動した。"
+    }
+  },
+
+  "eee_post_yotogi_common_bedroom_0001c2": {
+    "ID": "eee_post_yotogi_common_bedroom_0001c2",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_common_bedroom_0001d",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺は見習いメイドたちに会場の片付けを頼み、[=Name,Maid,0,CallName]たちと共に空いているホテルの部屋へ移動し、檢討を行った。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "ここでゆっくりと、今日の出来事を振り返ることにした。"
     }
   },
 
@@ -265,7 +276,7 @@
     "NextStepID": "eee_post_yotogi_common_bedroom_0008_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "みんな、お疲れ。で、どうだった？満足したか？"
+      "Text": "みんな、お疲れ様。……どうだった？　本当のところ、満足できたか？"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -349,8 +360,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_common_bedroom_0042_Branch",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,Maid,0,CallName]たちが興奮しながら、それぞれの感想を語り合っていった。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]たちが興奮気味に、それぞれの感想を語り合っていく。"
     }
   },
 
@@ -373,7 +384,7 @@
     "NextStepID": "eee_post_yotogi_common_bedroom_0053_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "[=Name,Maid,4,CallName]、少し静かだね。どう？"
+      "Text": "[=Name,Maid,4,CallName]、少し静かだね。どうした？"
     }
   },
 
@@ -396,7 +407,7 @@
     "NextStepID": "eee_post_yotogi_common_bedroom_0062_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "なんで？イベントをすごく楽しんでいるように見えるけど。あまり好きじゃなかった？"
+      "Text": "なんで？　イベントをすごく楽しんでいるように見えたけど。あまり好きじゃなかった？"
     }
   },
 
@@ -527,7 +538,7 @@
     "NextStepID": "eee_post_yotogi_common_bedroom_0077",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "なんだ、それだけか。大丈夫だよ。俺はいやらしいメイドが大好きだよ。心配する必要はない、心ゆくまで楽しんで。"
+      "Text": "なんだ、それだけか。心配ないよ。\n俺はいやらしいメイドが大好きだ。心ゆくまで楽しんでいいんだぞ。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -542,7 +553,7 @@
     "NextStepID": "eee_post_yotogi_common_bedroom_0078_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "さて、俺はみんなが楽しんでいるのを見るばかり、今すごくムラムラしてきた。　今は肉便器妻を使う時だ。　今夜は寝せないぞー"
+      "Text": "……さて。俺はみんなが楽しんでいる姿を見るだけで、すっかりムラムラしてきた。　今は俺の番だ。肉便器妻たちを、ちゃんと愛してやるよ。今夜は寝かせないからな。"
     }
   },
 
@@ -562,10 +573,21 @@
     "ID": "eee_post_yotogi_common_bedroom_0081",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_bedroom_0081a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "もちろん構わない。みんなのままがいいよ。\n俺はみんなを愛してる。何があっても、それは絶対に変わらない。"
+    }
+  },
+
+  "eee_post_yotogi_common_bedroom_0081a": {
+    "ID": "eee_post_yotogi_common_bedroom_0081a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_common_bedroom_0082",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "もちろん構わないよ！みんな愛しるよ。何があってもそれは決して変わらない。たとえ他の男の精液だらけでも、みんなの身体への欲望は変わらないよ。"
+      "Text": "たとえ他の男の精液でいっぱいになっていても、俺の愛情も欲望も、みんなに向けられている。"
     }
   },
 
@@ -576,7 +598,7 @@
     "NextStepID": "eee_post_yotogi_common_bedroom_0083_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "しかもほら、俺のチンポのカリ、これで先に入ってるお客様達が出した精液を全部掻き出せるんよ！だから安心して、みんなの子宮に入るのは俺の精液だけだ！"
+      "Text": "ほら……俺のチンポで、たっぷり掻き出してやるから。\n他の男の精液を全部掻き出して、最後には俺の精液だけで子宮を満たしてやるよ。"
     }
   },
 
@@ -596,10 +618,21 @@
     "ID": "eee_post_yotogi_common_bedroom_0091",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_bedroom_0091a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ああ、俺は変態夫だ。変態肉便器妻たちとの、最高の組み合わせだろ。"
+    }
+  },
+
+  "eee_post_yotogi_common_bedroom_0091a": {
+    "ID": "eee_post_yotogi_common_bedroom_0091a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_common_bedroom_0092_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ああ、俺は変態夫だな。変態肉便器妻との完璧な組み合わせだ。今夜はみんなを愛し尽くしてやる、そうすれば他の男のチンポを忘れられるから、覚悟してね。"
+      "Text": "今夜はみんなを、たっぷり愛し尽くしてやる。他の男のチンポを忘れさせるくらい、俺の形を刻み込んでやるから……覚悟しろよ。"
     }
   },
 
@@ -757,14 +790,25 @@
     "ID": "eee_post_yotogi_common_bedroom_0106",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "eee_post_yotogi_common_bedroom_0107",
+    "NextStepID": "eee_post_yotogi_common_bedroom_0106a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（俺たちの夜はまだまだ続く…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺は精液まみれの妻たちを優しく、しかし貪欲に抱いていった。\n他の男に何度も犯された身体を、丁寧に愛撫し、キスを浴びせ、深く繋がる。"
     },
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "eee_post_yotogi_common_bedroom_0106a": {
+    "ID": "eee_post_yotogi_common_bedroom_0106a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_bedroom_0107",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺たちの夜は、まだまだ長く続いた……"
     }
   },
 
@@ -774,8 +818,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_common_bedroom_0108",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（他人の目には、俺たちの関係は変に見えるかもしれないが、これが俺たちの夫婦の付き合い方だ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "他人の目には、俺たちの関係は歪んで見えるかもしれない。\nだが、これが俺たち夫婦の愛の形だ。"
     }
   },
 
@@ -785,8 +829,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_common_bedroom_0109",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（他の男とセックスを愉しんでいても、俺は彼女たちの心にいつもしている。何であっても、彼女たちは必ず戻ってきて、俺のチンポを求めるだろう。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "他の男とセックスを楽しんでいても、彼女たちの心はいつも俺のものだ。　どんなに乱れても、彼女たちは必ず俺の元へ戻ってくる。"
     }
   },
 
@@ -794,10 +838,32 @@
     "ID": "eee_post_yotogi_common_bedroom_0109",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_bedroom_0109a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "そして俺は、そんな彼女たちを心の底から愛している。"
+    }
+  },
+
+  "eee_post_yotogi_common_bedroom_0109a": {
+    "ID": "eee_post_yotogi_common_bedroom_0109a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_bedroom_0109b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "他の男に犯される妻。\n精液まみれの妻。\n肉便器として悦ぶ妻。"
+    }
+  },
+
+  "eee_post_yotogi_common_bedroom_0109b": {
+    "ID": "eee_post_yotogi_common_bedroom_0109b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_common_bedroom_0110",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（そして俺は、他の男に奉仕する妻が好き。他の男に犯される妻が好き。浮気する妻が大好き！どんな姿でも愛してる。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "そんな彼女たちのすべてが、俺は大好きだ。"
     }
   },
 
@@ -807,8 +873,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_common_bedroom_0111",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（これが俺たちの「愛」の形だ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "これが俺と彼女たちの、特別な「愛」の形なのだ。"
     }
   },
   "eee_post_yotogi_common_bedroom_0111": {
