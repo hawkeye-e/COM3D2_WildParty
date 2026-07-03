@@ -873,8 +873,8 @@
     "WaitingType": "Click",
     "NextStepID": "pam_post_yotogi_0002",
     "TalkData": {
-      "SpeakerName": "お客様",
-      "Text": "（イベントはもう数時間は続いていて、俺はメイドたちを休みなく犯している。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "イベントはもう数時間続いていて、俺は休むことなくメイドたちを犯し続けていた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -888,8 +888,8 @@
     "WaitingType": "Click",
     "NextStepID": "pam_post_yotogi_0003",
     "TalkData": {
-      "SpeakerName": "お客様",
-      "Text": "（他の男と交流とか一切しない、マジで時間の無駄だから。　ただメイドたちに集中しているだけだ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "他の男どもとの交流など一切しない。時間の無駄だ。ただひたすらメイドたちの肉体に集中している。"
     }
   },
 
@@ -897,10 +897,21 @@
     "ID": "pam_post_yotogi_0003",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "pam_post_yotogi_0003a",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "全員を一通り犯した後、俺は気づいた。　この[=Name,Maid,0,CallName]のマンコは俺のチンポと相性が抜群にいい。締まりも感度も異常で、まるで俺専用に作られた肉便器のようだ。"
+    }
+  },
+
+  "pam_post_yotogi_0003a": {
+    "ID": "pam_post_yotogi_0003a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "pam_post_yotogi_0004_Branch",
     "TalkData": {
-      "SpeakerName": "お客様",
-      "Text": "（全部ヤってみた後、俺のチンポと[=Name,Maid,0,CallName]のマンコの相性がめっちゃいいと気づいた。気持ち良すぎて、彼女の膣内にたくさん精子あげだ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "気持ち良すぎて、つい彼女の膣内に何度も大量に注ぎ込んでしまった。"
     }
   },
 
@@ -922,8 +933,8 @@
     "WaitingType": "Click",
     "NextStepID": "pam_post_yotogi_0012_Branch",
     "TalkData": {
-      "SpeakerName": "お客様",
-      "Text": "（おっ！　このまんこ、俺のちんぽにめっちゃ反応した！　ヤバイ！　超気持ちいいー！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "おっ！　このまんこ、俺のちんぽにめっちゃ反応してるな！　ヤバイ……超気持ちいいぞー！"
     }
   },
 
@@ -945,8 +956,8 @@
     "WaitingType": "Click",
     "NextStepID": "pam_post_yotogi_0022_Branch",
     "TalkData": {
-      "SpeakerName": "お客様",
-      "Text": "（すごい量の愛液が溢れてくる！　俺のちんぽを求めている！　この征服感……たまらん！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "すごい量の愛液が溢れ出して、俺のチンポを貪欲に求めている。この征服感……たまらない！"
     }
   },
 
@@ -968,8 +979,8 @@
     "WaitingType": "Click",
     "NextStepID": "pam_post_yotogi_0032_Branch",
     "TalkData": {
-      "SpeakerName": "お客様",
-      "Text": "（亀頭締めてくる！　ヤバイヤバイ！　もう…我慢できねぇ！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "くっ……亀頭をこんなに締め付けてくる……！　ヤバイ……もう我慢できねぇ！"
     }
   },
 
@@ -992,7 +1003,7 @@
     "NextStepID": "pam_post_yotogi_0042_Branch",
     "TalkData": {
       "SpeakerName": "お客様",
-      "Text": "ああ！お望み通り……孕めぇぇ！"
+      "Text": "ああっ！　お望み通りだ……孕めぇぇ！"
     }
   },
 
@@ -1132,8 +1143,8 @@
     "WaitingType": "Click",
     "NextStepID": "pam_post_yotogi_0067",
     "TalkData": {
-      "SpeakerName": "お客様",
-      "Text": "（俺は最後の1滴まで出した。きっと[=Name,Maid,0,CallName]が俺の子種を受精したはず……フフ…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺は最後の１滴まで搾り出して、深く奥に叩き込んだ。\nきっとこの[=Name,Maid,0,CallName]は俺の子種で受精したはずだ……フフッ。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1351,8 +1362,8 @@
     "WaitingType": "Click",
     "NextStepID": "pam_post_yotogi_0071",
     "TalkData": {
-      "SpeakerName": "お客様",
-      "Text": "（そしてイベントは終わり、他の男たちは皆帰り始めた。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "イベントがようやく終わり、他の男たちは満足した顔で帰り始めた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1366,8 +1377,8 @@
     "WaitingType": "Click",
     "NextStepID": "pam_post_yotogi_0072",
     "TalkData": {
-      "SpeakerName": "お客様",
-      "Text": "（メイドたちは出口の前に立って、みんなを見送っていた。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "メイドたちは出口の前に並んで、全員を見送っていた。"
     }
   },
 
@@ -1401,14 +1412,25 @@
     "ID": "pam_post_yotogi_0074",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "pam_post_yotogi_0075_Branch",
+    "NextStepID": "pam_post_yotogi_0074a",
     "TalkData": {
       "SpeakerName": "お客様",
-      "Text": "いやー、楽しかったな今日は。"
+      "Text": "いやー、今日は最高に楽しかったぜ。　[=Name,Maid,0,CallName]、俺は今日お前の奥深くに何度も大量のザーメンぶち込んでやったけど……どうだった？"
     },
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "pam_post_yotogi_0074a": {
+    "ID": "pam_post_yotogi_0074a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "pam_post_yotogi_0075_Branch",
+    "TalkData": {
+      "SpeakerName": "お客様",
+      "Text": "すげぇ気持ちよかっただろ？　俺のチンポで子宮の奥まで犯されて、頭真っ白になったんじゃねぇか……フフ。"
     }
   },
 
@@ -1428,10 +1450,21 @@
     "ID": "pam_post_yotogi_0081",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "pam_post_yotogi_0081a",
+    "TalkData": {
+      "SpeakerName": "お客様",
+      "Text": "次回のイベントでまた会おうぜ。　今日俺のチンポを味わっちまったお前は、もう他の男のチンカスじゃ満足できねぇだろ？　"
+    }
+  },
+
+  "pam_post_yotogi_0081a": {
+    "ID": "pam_post_yotogi_0081a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "pam_post_yotogi_0082_Branch",
     "TalkData": {
       "SpeakerName": "お客様",
-      "Text": "それじゃ、次のイベントまでね。"
+      "Text": "安心しろよ、俺がちゃんとまた来て、お前のマンコを俺専用に調教してやるからな。"
     }
   },
 
@@ -1503,8 +1536,8 @@
     "WaitingType": "Click",
     "NextStepID": "pam_post_yotogi_0096",
     "TalkData": {
-      "SpeakerName": "お客様",
-      "Text": "こうして俺はこの天国を後にし、いつもの日常へと戻る。"
+      "SpecificSpeaker": "Narrative",
+      "Text": "こうして俺はこの淫乱な天国を後にし、いつもの日常へと戻る。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1519,7 +1552,7 @@
     "NextStepID": "pam_post_yotogi_0097",
     "TalkData": {
       "SpeakerName": "お客様",
-      "Text": "あー…また頑張ってお金を貯めなきゃ…"
+      "Text": "あー……また金貯めなきゃならねぇのか。"
     }
   },
 
@@ -1530,7 +1563,7 @@
     "NextStepID": "pam_end",
     "TalkData": {
       "SpeakerName": "お客様",
-      "Text": "次のイベントはどんなメイドがいるのか？　楽しみだな……"
+      "Text": "次のイベントはどんなメイドが出てくるんだろうな……楽しみだぜ。"
     }
   },
 
