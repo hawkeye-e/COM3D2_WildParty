@@ -13,9 +13,11 @@ namespace COM3D2.WildParty.Plugin
         public int CategoryID;
         public int DisplayOrder;                            //ascending order
         public string DisplayName;
+        public Dictionary<string, string> DisplayNameLocalise;
         public Schedule.ScheduleCSVData.YotogiType YotogiType;
         public int CondSalonGrade;
         public string Information;
+        public Dictionary<string, string> InformationLocalise;
         public string Icon;
         public bool IsNetorare;
         public bool IsCommu;
@@ -26,6 +28,7 @@ namespace COM3D2.WildParty.Plugin
         public List<MaidStatus.Relation> Relation;
         public List<MaidStatus.SpecialRelation> SpecialRelation;
         public List<string> ConditionInfoText;
+        public Dictionary<string, List<string>> ConditionInfoTextLocalise;
         public List<int> Personality;
         public List<string> MaidRequireFlag;
         public List<string> MaidExcludeFlag;
@@ -102,6 +105,21 @@ namespace COM3D2.WildParty.Plugin
         {
             public string ID;
             public int value;
+        }
+
+        internal string GetLocalisedDisplayName()
+        {
+            return Util.GetLocalisedText(DisplayNameLocalise, DisplayName);
+        }
+
+        internal string GetLocalisedInformation()
+        {
+            return Util.GetLocalisedText(InformationLocalise, Information);
+        }
+
+        internal List<string> GetLocalisedConditionInfoText()
+        {
+            return Util.GetLocalisedText(ConditionInfoTextLocalise, ConditionInfoText);
         }
 
         public void PostLoadProcess()

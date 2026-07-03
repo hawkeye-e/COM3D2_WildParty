@@ -162,7 +162,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 {
                     var coord = ModUseData.MapCoordinateList[fid];
 
-                    var cmd = CloneCommandButton(coord.DisplayName, new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeFormation_Callback(fid)));
+                    var cmd = CloneCommandButton(Util.GetLocalisedText(coord.DisplayNameLocalise, coord.DisplayName), new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeFormation_Callback(fid)));
                     var btn = cmd.GetComponent<UIButton>();
                     if (fid == PartyGroup.CurrentFormation)
                     {
@@ -260,7 +260,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
                     if (IsShowButtonPerFormation(fid, StateManager.Instance.PartyGroupList[0].Maid1))
                     {
-                        var cmd = CloneCommandButton(coord.DisplayName, new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeFormationWithNewGroup_Callback(fid)));
+                        var cmd = CloneCommandButton(Util.GetLocalisedText(coord.DisplayNameLocalise, coord.DisplayName), new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeFormationWithNewGroup_Callback(fid)));
                         var btn = cmd.GetComponent<UIButton>();
                         if (fid == PartyGroup.CurrentFormation)
                         {
@@ -301,7 +301,7 @@ namespace COM3D2.WildParty.Plugin.Core
 
                     if (IsShowButtonPerFormation(fid, StateManager.Instance.PartyGroupList[0].Maid1))
                     {
-                        var cmd = CloneCommandButton(coord.DisplayName, new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeFormationWithSexStateDescriptionChange(fid)));
+                        var cmd = CloneCommandButton(Util.GetLocalisedText(coord.DisplayNameLocalise, coord.DisplayName), new EventDelegate(() => YotogiExtraCommandCallbacks.ChangeFormationWithSexStateDescriptionChange(fid)));
                         var btn = cmd.GetComponent<UIButton>();
                         if (fid == PartyGroup.CurrentFormation)
                         {

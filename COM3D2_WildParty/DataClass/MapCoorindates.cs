@@ -11,6 +11,7 @@ namespace COM3D2.WildParty.Plugin
     {
         public string MapID;
         public string DisplayName;
+        public Dictionary<string, string> DisplayNameLocalise;
         public bool IsRandom;           //True: The group or character is randomly assigned to any coordinates in the list. False: it is fixed and should follow the position order
         public List<CoordinateListInfo> CoordinateList;
         public List<CoordinatesInfo> SpecialCoordinates;

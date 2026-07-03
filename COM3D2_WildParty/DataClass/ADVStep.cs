@@ -67,6 +67,8 @@ namespace COM3D2.WildParty.Plugin
             public string SpecificSpeaker;
             public string SpeakerName;
             public string Text;                 //////For the case of narrative, man or all maids
+            public Dictionary<string, string> SpeakerNameLocalise;
+            public Dictionary<string, string> TextLocalise;
             public int Index;
             public bool UseBranchIndex = false;
 
@@ -81,6 +83,15 @@ namespace COM3D2.WildParty.Plugin
                 public float Volume = 1f;
             }
 
+            internal string GetSpeakerNameLocalise()
+            {
+                return Util.GetLocalisedText(SpeakerNameLocalise, SpeakerName);
+            }
+
+            internal string GetTextLocalise()
+            {
+                return Util.GetLocalisedText(TextLocalise, Text);
+            }
         }
         
         internal class Camera
@@ -148,11 +159,17 @@ namespace COM3D2.WildParty.Plugin
         {
             public string Variable;
             public List<ChoiceOption> Options;
+            public Dictionary<string, List<ChoiceOption>> OptionsLocalise;
 
             public class ChoiceOption
             {
                 public string Key;
                 public string Value;
+            }
+
+            internal List<ChoiceOption> GetOptionsLocalise()
+            {
+                return Util.GetLocalisedText(OptionsLocalise, Options);
             }
         }
 

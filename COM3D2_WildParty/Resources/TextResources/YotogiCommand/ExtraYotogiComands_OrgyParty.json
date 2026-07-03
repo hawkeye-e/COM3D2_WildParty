@@ -2,21 +2,45 @@
   "ChangePosition": {
     "CommandCode": "ChangePosition",
     "Name": "体位変更",
+    "NameLocalise": {
+      "jp": "体位変更",
+      "en": "Change Position",
+      "cht": "改變體位",
+      "chs": "改变体位"
+    },
     "Type": "Common"
   },
   "ChangePositionAll": {
     "CommandCode": "ChangePositionAll",
     "Name": "一緒に体位変更",
+    "NameLocalise": {
+      "jp": "一緒に体位変更",
+      "en": "Change Position For All",
+      "cht": "全體改變體位",
+      "chs": "全体改变体位"
+    },
     "Type": "Common"
   },
   "ChangeFormation": {
     "CommandCode": "ChangeFormation",
     "Name": "一緒に位置変更",
+    "NameLocalise": {
+      "jp": "一緒に位置変更",
+      "en": "Change Placement For All",
+      "cht": "全體改變位置",
+      "chs": "全体改变位置"
+    },
     "Type": "Common"
   },
   "ChangePartner": {
     "CommandCode": "ChangePartner",
     "Name": "パートナー交換",
+    "NameLocalise": {
+      "jp": "パートナー交換",
+      "en": "Exchange Partners",
+      "cht": "交換對手",
+      "chs": "交换对手"
+    },
     "Type": "Common"
   },
   "FetishOrgy": {
@@ -27,13 +51,31 @@
     "ConditionCheckTexts": [
       {
         "Field": "ManCount",
-        "DisplayText": "[=ManCount]人以上とセックスする（[=CurrentManCount]／[=ManCount]）"
+        "DisplayText": "[=ManCount]人以上とセックスする（[=CurrentManCount]／[=ManCount]）",
+        "DisplayTextLocalise": {
+          "jp": "[=ManCount]人以上とセックスする（[=CurrentManCount]／[=ManCount]）",
+          "en": "To have sex with [=ManCount] men ([=CurrentManCount] / [=ManCount])",
+          "cht": "與[=ManCount]人以上性交（[=CurrentManCount]／[=ManCount]）",
+          "chs": "与[=ManCount]人以上性交（[=CurrentManCount]／[=ManCount]）"
+        }
       },
       {
         "Field": "OrgasmCount",
-        "DisplayText": "[=OrgasmCount]回以上で絶頂する（[=CurrentOrgasmCount]／[=OrgasmCount]）"
+        "DisplayText": "[=OrgasmCount]回以上で絶頂する（[=CurrentOrgasmCount]／[=OrgasmCount]）",
+        "DisplayTextLocalise": {
+          "jp": "[=OrgasmCount]回以上で絶頂する（[=CurrentOrgasmCount]／[=OrgasmCount]）",
+          "en": "Come [=OrgasmCount] times ([=CurrentOrgasmCount] / [=OrgasmCount])",
+          "cht": "達到[=OrgasmCount]次高潮（[=CurrentOrgasmCount]／[=OrgasmCount]）",
+          "chs": "達到[=OrgasmCount]次高潮（[=CurrentOrgasmCount]／[=OrgasmCount]）"
+        }
       }
-    ]
+    ],
+    "NameLocalise": {
+      "jp": "性癖「乱交大好き」",
+      "en": "Fetish \"Love Orgy\"",
+      "cht": "性癖「最喜欢群交」",
+      "chs": "性癖「最喜欢群交」"
+    }
   },
   "ForceAllOrgasm": {
     "CommandCode": "ForceAllOrgasm",
@@ -42,6 +84,12 @@
     "OrgasmSetting": {
       "MinExcite": 80,
       "ExciteDecay": 68
+    },
+    "NameLocalise": {
+      "jp": "全員絶頂する",
+      "en": "Force everyone to come",
+      "cht": "全體同時高潮",
+      "chs": "全体同时高潮"
     }
   }
 }
