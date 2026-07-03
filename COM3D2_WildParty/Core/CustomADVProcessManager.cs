@@ -817,7 +817,7 @@ namespace COM3D2.WildParty.Plugin.Core
             {
                 case Constant.ADVTalkSpearkerType.All:
                     lstMaidToSpeak = StateManager.Instance.SelectedMaidsList;
-                    speakerName = step.TalkData.SpeakerName;
+                    speakerName = step.TalkData.GetSpeakerNameLocalise();
                     break;
                 case Constant.ADVTalkSpearkerType.Narrative:
                     speakerName = "";
@@ -850,14 +850,14 @@ namespace COM3D2.WildParty.Plugin.Core
                         speakerName = StateManager.Instance.NPCManList[step.TalkData.Index].status.fullNameEnStyle;
                     break;
                 default:
-                    speakerName = step.TalkData.SpeakerName;
+                    speakerName = step.TalkData.GetSpeakerNameLocalise();
                     break;
             }
 
             if (lstMaidToSpeak == null)
             {
                 //there is no audio to be played in this step, narrative or a man speaking
-                DisplayAdvText(instance, speakerName, step.TalkData.Text, "", voicePitch, AudioSourceMgr.Type.Voice);
+                DisplayAdvText(instance, speakerName, step.TalkData.GetTextLocalise(), "", voicePitch, AudioSourceMgr.Type.Voice);
             }
             else
             {
@@ -906,12 +906,12 @@ namespace COM3D2.WildParty.Plugin.Core
                     //single maid speak and no chopping
                     voicePitch = lstMaidToSpeak[0].VoicePitch;
                     speakerName = lstMaidToSpeak[0].status.callName;
-                    DisplayAdvText(instance, speakerName, step.TalkData.Text, voiceFile, voicePitch, AudioSourceMgr.Type.VoiceHeroine);
+                    DisplayAdvText(instance, speakerName, step.TalkData.GetTextLocalise(), voiceFile, voicePitch, AudioSourceMgr.Type.VoiceHeroine);
                 }
                 else
                 {
                     //the case of hard to set the replay, skip it
-                    DisplayAdvText(instance, speakerName, step.TalkData.Text, "", voicePitch, AudioSourceMgr.Type.VoiceHeroine);
+                    DisplayAdvText(instance, speakerName, step.TalkData.GetTextLocalise(), "", voicePitch, AudioSourceMgr.Type.VoiceHeroine);
                 }
 
             }
@@ -1294,7 +1294,7 @@ namespace COM3D2.WildParty.Plugin.Core
                 //Key: Display Text;    Value.Key: Value;    Value.Value: IsEnabled
                 List<KeyValuePair<string, KeyValuePair<string, bool>>> lstChoice = new List<KeyValuePair<string, KeyValuePair<string, bool>>>();
 
-                foreach (var choice in step.ChoiceData.Options)
+                foreach (var choice in step.ChoiceData.GetOptionsLocalise())
                 {
                     lstChoice.Add(new KeyValuePair<string, KeyValuePair<string, bool>>(choice.Value, new KeyValuePair<string, bool>(choice.Key, true)));
                 }

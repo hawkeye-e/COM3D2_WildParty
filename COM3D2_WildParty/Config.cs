@@ -19,6 +19,9 @@ namespace COM3D2.WildParty.Plugin
         internal static bool Enabled { get { return _enabled.Value; } }
         private static ConfigEntry<bool> _enabled;
 
+        internal static LangaugeOption Language { get { return _langauge.Value; } }
+        private static ConfigEntry<LangaugeOption> _langauge;
+
         internal static bool DeveloperMode { get { return _developerMode.Value; } }
         private static ConfigEntry<bool> _developerMode;
 
@@ -171,6 +174,9 @@ namespace COM3D2.WildParty.Plugin
         private static void AddGeneralConfigs(BaseUnityPlugin plugin)
         {
             _enabled = plugin.Config.Bind(GENERAL, "Enable this plugin", true, "If false, this plugin will do nothing (requires game restart)");
+
+            _langauge = plugin.Config.Bind(GENERAL, "Language", LangaugeOption.Japanese,
+                "The language used in this mod. If the localised data is not done, it will fall back to Japanese and probably get translated by other translator plugin. (requires game restart)");
         }
 
         private static void AddMotionSettingConfigs(BaseUnityPlugin plugin)
@@ -361,6 +367,14 @@ namespace COM3D2.WildParty.Plugin
             Otaku       = 1 << 3,
             Shota       = 1 << 4,
             Playboy     = 1 << 5,
+        }
+
+        internal enum LangaugeOption
+        {
+            Japanese = 0,
+            English = 1,
+            TraditionalChinese = 2,
+            SimplifiedChinese = 3,
         }
     }
 }

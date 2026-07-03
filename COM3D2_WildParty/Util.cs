@@ -10,7 +10,7 @@ using UnityEngine;
 namespace COM3D2.WildParty.Plugin
 {
     class Util
-    {
+    {        
         internal static GameObject InstantiateFromBundle(AssetBundle bundle, string assetName)
         {
             var asset = bundle.LoadAsset(assetName, typeof(GameObject));
@@ -790,6 +790,31 @@ namespace COM3D2.WildParty.Plugin
         {
             var split = quaternionInString.Split(',');
             return new Quaternion(float.Parse(split[0].Trim(), CultureInfo.InvariantCulture), float.Parse(split[1].Trim(), CultureInfo.InvariantCulture), float.Parse(split[2].Trim(), CultureInfo.InvariantCulture), float.Parse(split[3].Trim(), CultureInfo.InvariantCulture));
+        }
+
+        internal static T GetLocalisedText<T>(Dictionary<string, T> localised, T fallback)
+        {
+            if (localised == null)
+                return fallback;
+            else
+            {
+                string key;
+                switch (Config.Language)
+                {
+                    case Config.LangaugeOption.English:
+                        key = Constant.LanguageCode.English; break;
+                    case Config.LangaugeOption.TraditionalChinese:
+                        key = Constant.LanguageCode.TraditionalChinese; break;
+                    case Config.LangaugeOption.SimplifiedChinese:
+                        key = Constant.LanguageCode.SimplifiedChinese; break;
+                    default:
+                        key = Constant.LanguageCode.Japanese; break;
+                }
+
+                if (!localised.ContainsKey(key))
+                    key = Constant.LanguageCode.Japanese;
+                return localised[key];
+            }
         }
     }
 }

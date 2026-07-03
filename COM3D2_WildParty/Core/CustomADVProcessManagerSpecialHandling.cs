@@ -103,7 +103,7 @@ namespace COM3D2.WildParty.Plugin.Core
             List<KeyValuePair<string, KeyValuePair<string, bool>>> lstNumofMan = new List<KeyValuePair<string, KeyValuePair<string, bool>>>();
             for (int i = minGuestMan; i <= maxGuestMan; i++)
             {
-                lstNumofMan.Add(new KeyValuePair<string, KeyValuePair<string, bool>>(step.ChoiceData.Options[i - 1].Value, new KeyValuePair<string, bool>(step.ChoiceData.Options[i - 1].Key, true)));
+                lstNumofMan.Add(new KeyValuePair<string, KeyValuePair<string, bool>>(step.ChoiceData.GetOptionsLocalise()[i - 1].Value, new KeyValuePair<string, bool>(step.ChoiceData.GetOptionsLocalise()[i - 1].Key, true)));
             }
 
             Action<string, string> onClickCallBack = delegate (string displayText, string value)

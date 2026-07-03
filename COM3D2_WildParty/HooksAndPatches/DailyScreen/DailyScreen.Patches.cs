@@ -39,8 +39,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                 newScenario.categoryID = scenario.CategoryID;
                 newScenario.yotogiType = scenario.YotogiType;
                 newScenario.condSalonGrade = scenario.CondSalonGrade;
-                newScenario.name = scenario.DisplayName;
-                newScenario.information = scenario.Information;
+                newScenario.name = scenario.GetLocalisedDisplayName();
+                newScenario.information = scenario.GetLocalisedInformation();
                 newScenario.icon = scenario.Icon;
                 newScenario.netorareFlag = scenario.IsNetorare;
                 newScenario.isCommu = scenario.IsCommu;
@@ -67,7 +67,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.DailyScreen
                 newScenario.condManFlag0 = scenario.MasterExcludeFlag;
                 newScenario.condManFlag1 = scenario.MasterRequireFlag;
                 newScenario.condPersonal = scenario.Personality;
-                newScenario.condInfo = scenario.ConditionInfoText;
+                newScenario.condInfo = scenario.GetLocalisedConditionInfoText();
                 newScenario.condRelationOld = new List<MaidStatus.Old.Relation>();
                 newScenario.pairCondPersonal = new List<int>(); 
                 newScenario.condFacilityID = new List<List<int>>();

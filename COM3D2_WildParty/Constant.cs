@@ -29,6 +29,14 @@ namespace COM3D2.WildParty.Plugin
         internal const string SexStateManifestFile = "SexStateManifest.json";
         internal const string VoiceManifestFile = "VoiceManifest.json";
 
+        internal static class LanguageCode
+        {
+            internal const string Japanese = "jp";
+            internal const string English = "en";
+            internal const string TraditionalChinese = "cht";
+            internal const string SimplifiedChinese = "chs";
+        }
+
         //The type listed in ScenarioManifest.json should reference here
         internal static class ResourcesFileType
         {
