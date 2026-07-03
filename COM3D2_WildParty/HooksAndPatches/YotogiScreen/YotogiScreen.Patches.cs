@@ -160,8 +160,8 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
                                 foreach (ExtraYotogiCommandData.ConditionCheck condition in btn.Data.ConditionCheckTexts)
                                 {
                                     string[] displayText = new string[1];
-                                    displayText[0] = Core.YotogiExtraCommandHandling.ReplaceFetishConditionText(condition.DisplayText, fetishInfo);
-
+                                    displayText[0] = Core.YotogiExtraCommandHandling.ReplaceFetishConditionText(Util.GetLocalisedText(condition.DisplayTextLocalise, condition.DisplayText), fetishInfo);
+                                    
                                     Color displayColor;
                                     if (Core.YotogiExtraCommandHandling.IsThisConditionFulfilled(condition.Field, fetishInfo))
                                         displayColor = Color.white;
@@ -246,7 +246,7 @@ namespace COM3D2.WildParty.Plugin.HooksAndPatches.YotogiScreen
 
                         }
 
-                        btn = Core.YotogiExtraCommandHandling.InjectCommandButton(commandInfo.Name, Core.YotogiExtraCommandHandling.GetButtonCallbackFromString(commandType), StateManager.Instance.YotogiCommandFactory.transform);
+                        btn = Core.YotogiExtraCommandHandling.InjectCommandButton(Util.GetLocalisedText(commandInfo.NameLocalise, commandInfo.Name), Core.YotogiExtraCommandHandling.GetButtonCallbackFromString(commandType), StateManager.Instance.YotogiCommandFactory.transform);
 
                         CustomGameObject.InjectYotogiCommand newCommand = new CustomGameObject.InjectYotogiCommand();
                         newCommand.Button = btn;

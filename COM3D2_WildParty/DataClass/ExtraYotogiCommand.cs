@@ -11,6 +11,7 @@ namespace COM3D2.WildParty.Plugin
     internal class ExtraYotogiCommandData
     {
         public string Name;
+        public Dictionary<string, string> NameLocalise;
         public string CommandCode;                          //For identify the function to be called
         public CommandType Type;
         public int FetishID;
@@ -28,6 +29,7 @@ namespace COM3D2.WildParty.Plugin
         {
             public string Field;
             public string DisplayText;
+            public Dictionary<string, string> DisplayTextLocalise;
         }
 
         public class ConstraintSetting
