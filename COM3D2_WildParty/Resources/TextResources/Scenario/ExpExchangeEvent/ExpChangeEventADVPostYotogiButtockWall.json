@@ -594,8 +594,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_wall_0002",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（イベントはすでに数時間続いており、とても順調に進んでいた。まるで一般的な社交の集まりのように、お客様達は普段通りに食事をし、飲み、交流する。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "イベントはすでに数時間にわたって続いており、予想を遥かに超える大盛況となっていた。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -609,8 +609,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_wall_0003",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（ステージの上では、お客様達は[=Name,Maid,0,CallName]たちを犯し続けている。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "会場は表向きは上品な社交の場のように見えるが、ステージの可動式壁の向こう側では、完全に狂った肉便器使用の狂宴が繰り広げられている。"
     }
   },
 
@@ -618,12 +618,24 @@
     "ID": "eee_post_yotogi_wall_0003",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "eee_post_yotogi_wall_0004",
+    "NextStepID": "eee_post_yotogi_wall_0003a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（たとえ肉便器として扱われていても、嫌がる様子は見せず、むしろ快楽に満ちた表情を浮かべながら淫らに喘ぎ声を上げる。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "お客様たちは俺の妻たちを本物の壁便器のように扱いながら、腰を振り続け、まるで公衆トイレで立ち話をするかのように気軽に世間話を続けていた。"
     }
   },
+
+  "eee_post_yotogi_wall_0003a": {
+    "ID": "eee_post_yotogi_wall_0003a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0004",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "肉便器としてただ突かれるだけの存在に堕とされているはずなのに、メイドたちは恍惚とした表情で激しく喘ぎ、屈辱的な状況にますます興奮し、愛液を垂れ流している。"
+    }
+  },
+
 
   "eee_post_yotogi_wall_0004": {
     "ID": "eee_post_yotogi_wall_0004",
@@ -647,7 +659,7 @@
     "NextStepID": "eee_post_yotogi_wall_0006",
     "TalkData": {
       "SpeakerName": "お客様８",
-      "Text": "あ、昨日は試合見ましたか？"
+      "Text": "あー、昨日は試合見たか？"
     }
   },
 
@@ -658,7 +670,7 @@
     "NextStepID": "eee_post_yotogi_wall_0007",
     "TalkData": {
       "SpeakerName": "お客様９",
-      "Text": "ああ、見だ見だ。その負け方は残念すぎるねー"
+      "Text": "見た見た。あの最後のミス、痛すぎだろ。"
     }
   },
 
@@ -669,7 +681,7 @@
     "NextStepID": "eee_post_yotogi_wall_0008_camerapan",
     "TalkData": {
       "SpeakerName": "お客様８",
-      "Text": "本当だ。最後のシュートはめっちゃ惜しい！"
+      "Text": "マジで。あそこ決まってたら勝ってたのに……"
     }
   },
 
@@ -697,7 +709,7 @@
     "NextStepID": "eee_post_yotogi_wall_0010",
     "TalkData": {
       "SpeakerName": "お客様１０",
-      "Text": "あ、先週その映画見た？"
+      "Text": "そういや先週見た映画、見た？"
     }
   },
 
@@ -708,7 +720,7 @@
     "NextStepID": "eee_post_yotogi_wall_0011",
     "TalkData": {
       "SpeakerName": "お客様１１",
-      "Text": "ああ、絶対に見るべきだよ。妻と一緒に見て、あのエンディングが本当に大好きだ。"
+      "Text": "ああ、見た見た。妻と一緒に行ったんだけど、エンディングが最高だったわ。"
     }
   },
 
@@ -719,7 +731,7 @@
     "NextStepID": "eee_post_yotogi_wall_0012",
     "TalkData": {
       "SpeakerName": "お客様１０",
-      "Text": "えー、面白そうー　よし、今週末に見てみようか。"
+      "Text": "へえ、面白かったか。じゃあ今週末家族で見てみるか。"
     }
   },
 
@@ -727,10 +739,32 @@
     "ID": "eee_post_yotogi_wall_0012",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0012a",
+    "TalkData": {
+      "SpeakerName": "お客様８",
+      "Text": "お前ら今週のプロジェクトどうなってる？"
+    }
+  },
+
+  "eee_post_yotogi_wall_0012a": {
+    "ID": "eee_post_yotogi_wall_0012a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_wall_0012b",
+    "TalkData": {
+      "SpeakerName": "お客様９",
+      "Text": "地獄だよ。残業続きで死にそう。"
+    }
+  },
+
+  "eee_post_yotogi_wall_0012b": {
+    "ID": "eee_post_yotogi_wall_0012b",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_wall_0013",
     "TalkData": {
       "SpeakerName": "お客様１１",
-      "Text": "超おすすめよ！"
+      "Text": "わかるわー。俺も火曜日まで徹夜だったぜ。"
     }
   },
 
@@ -755,8 +789,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_wall_0015",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（お客様達は腰を振り続けながら、まるでトイレで世間話をしているかのように様々な話題で話し続ける。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "お客様達は会話を続けながらも、容赦なく腰を振り続けている。"
     }
   },
 
@@ -766,8 +800,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_wall_0016",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,Maid,0,CallName]たちは今やまさに便器のように、ただ男根に突き刺されるだけだった。この屈辱感が彼女たちをさらに興奮させ、敏感にさせた。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "壁の裏側で、俺は[=Name,Maid,0,CallName]に声をかける。"
     }
   },
 
@@ -805,7 +839,7 @@
     "NextStepID": "eee_post_yotogi_wall_0023_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "へぇー、嬉しそうー　こういうプレイがすごく気に入ってるんだね。"
+      "Text": "へぇー、嬉しそうじゃないか。こういうプレイがすごく気に入ってるんだな。"
     }
   },
 
@@ -828,7 +862,7 @@
     "NextStepID": "eee_post_yotogi_wall_0032",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "あんな恥ずかしい体勢で犯されるのに、こんなに嬉しいなんて、[=Name,Maid,0,CallName]は本当に変態だね。"
+      "Text": "あんな恥ずかしい体勢で、知らない男たちにマンコとアナルを好き勝手に使われてるのに、こんなに嬉しがるなんて……[=Name,Maid,0,CallName]は本当に救いようのない変態妻だな。"
     }
   },
 
@@ -928,7 +962,7 @@
     "NextStepID": "eee_post_yotogi_wall_0052_Branch",
     "TalkData": {
       "SpeakerName": "お客様８",
-      "Text": "ふーう、スッキリした。うん、良い便器だったな。"
+      "Text": "ふーう、スッキリした。良い便器だったな。"
     }
   },
 
@@ -951,7 +985,7 @@
     "NextStepID": "eee_post_yotogi_wall_0062",
     "TalkData": {
       "SpeakerName": "お客様８",
-      "Text": "何言ってるんだよお前？休憩なんていらないだろ。ちゃんと肉便器しろよ。"
+      "Text": "何言ってんだよこの肉便器。休憩なんかいらねえだろ。ちゃんと使わせろよ、このゴミマット。"
     }
   },
 
@@ -1044,7 +1078,7 @@
     "NextStepID": "eee_post_yotogi_wall_0068",
     "TalkData": {
       "SpeakerName": "お客様１２",
-      "Text": "ふっ…この尻、犯される為に存在だな…オラッ！"
+      "Text": "よし、次……この尻、犯されるために生まれてきたな。オラッ！"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1106,7 +1140,7 @@
     "NextStepID": "eee_post_yotogi_wall_0073_Branch",
     "TalkData": {
       "SpeakerName": "お客様１２",
-      "Text": "おいおいおい、肉便器のくせに、断る権利があると思うのか！"
+      "Text": "おいおい、肉便器のくせに断る権利があると思ってんのかよ、この雌豚！"
     }
   },
 
@@ -1129,7 +1163,7 @@
     "NextStepID": "eee_post_yotogi_wall_0082_Branch",
     "TalkData": {
       "SpeakerName": "お客様１２",
-      "Text": "なーんだ？愉しんでるじゃねぇか。マンコは今めっちゃ喜んでいるよ！"
+      "Text": "なーんだ？　愉しんでるじゃねえか。マンコが今めっちゃ喜んで締め付けてくるぞ、このド変態便器！"
     }
   },
 
@@ -1169,7 +1203,7 @@
     "NextStepID": "eee_post_yotogi_wall_0093_Branch",
     "TalkData": {
       "SpeakerName": "お客様１２",
-      "Text": "しょうがないなぁこの便器女、こんなにきゅうきゅう絞めつけてくる！"
+      "Text": "しょうがないなぁこの精液便所、こんなにきゅうきゅう絞めつけてきやがる！"
     }
   },
 
@@ -1192,7 +1226,7 @@
     "NextStepID": "eee_post_yotogi_wall_0102",
     "TalkData": {
       "SpeakerName": "お客様１２",
-      "Text": "オラッ！孕めッ！オラッ！"
+      "Text": "オラッ！孕めッ！この壁マゾ便器！　オラッ！"
     }
   },
 
@@ -1248,7 +1282,7 @@
     "NextStepID": "eee_post_yotogi_wall_0112",
     "TalkData": {
       "SpeakerName": "お客様１２",
-      "Text": "ふうー　無責任中出し最高ッ！　よし、飲み物を取りに行くか。"
+      "Text": "ふうー　無責任中出し最高ッ！　よし、ビールでも取りに行くか。"
     }
   },
 
@@ -1341,7 +1375,7 @@
     "NextStepID": "eee_post_yotogi_wall_0118",
     "TalkData": {
       "SpeakerName": "お客様１３",
-      "Text": "この便器はまだ使ったことないんだ！　よっこらしょっと！"
+      "Text": "この便器まだ使ってなかったな。よっこらしょっと！"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1418,7 +1452,7 @@
     "NextStepID": "eee_post_yotogi_wall_0123",
     "TalkData": {
       "SpeakerName": "お客様１３",
-      "Text": "お！マン圧すげぇー　あ、そっちのマンコはどう？"
+      "Text": "お！ すげえ締まり……あ、隣のマンコはどうだ？"
     }
   },
 
@@ -1429,7 +1463,7 @@
     "NextStepID": "eee_post_yotogi_wall_0124",
     "TalkData": {
       "SpeakerName": "お客様１４",
-      "Text": "もう満タンになったなこの便器、でもヌルヌルで入れやすい！　ちなみに何発出した？"
+      "Text": "もう精液で満タンだぜこの便器。でもヌルヌルで入れやすいわ。\n"
     }
   },
 
@@ -1440,7 +1474,7 @@
     "NextStepID": "eee_post_yotogi_wall_0125",
     "TalkData": {
       "SpeakerName": "お客様１３",
-      "Text": "数えてないよ。　はははあ、君はそれ数えてるのかい？"
+      "Text": "数えてねえよ。ははっ。\nお前は？"
     }
   },
 
@@ -1451,7 +1485,7 @@
     "NextStepID": "eee_post_yotogi_wall_0126",
     "TalkData": {
       "SpeakerName": "お客様１４",
-      "Text": "ああ、今８発かな？　家帰るまで金玉の中身全部出す決めた。　あ、待って、もし妻が今日欲しいならどうする…"
+      "Text": "今８発かな。家帰るまでに金玉空っぽにするつもりだわ。……あ、でも嫁が今夜欲しがったらヤバいな。"
     }
   },
 
@@ -1462,7 +1496,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0001",
     "TalkData": {
       "SpeakerName": "お客様１３",
-      "Text": "ははは、死ぬよそれー"
+      "Text": "ははは、死ぬぞそれ。無理だろ。"
     }
   }
 }

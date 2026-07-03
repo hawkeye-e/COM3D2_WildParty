@@ -5,8 +5,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_common_theater_0002",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（こんなに酷い扱いを受けても、[=Name,Maid,0,CallName]たちは愉しんでいる。ふふふっ、調教は成功だな…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "こんなに酷い扱いを受けても、[=Name,Maid,0,CallName]たちは恍惚とした表情で愉しみ続けている。\nふふふっ……調教は大成功だな。"
     }
   },
 
@@ -16,8 +16,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_common_theater_0003",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（肉便器妻…ちょっと考えただけで、すごく興奮するんだ…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "肉便器妻……考えるだけで、俺のチンポが疼いて仕方ない……"
     }
   },
 
@@ -25,10 +25,21 @@
     "ID": "eee_post_yotogi_common_theater_0003",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0003a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "皆様、あと1時間ほどで本日のイベントは終了となります。"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0003a": {
+    "ID": "eee_post_yotogi_common_theater_0003a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_common_theater_0004",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "皆様、あと１時間ほどイベントが終了いたします。もしまだ肉便器をご利用になりたいのでしたら、ぜひ最後のチャンスを活用してください！"
+      "Text": "まだ肉便器をご利用になりたいお客様は、どうぞこの最後のチャンスをお見逃しなく。存分にお楽しみください。"
     }
   },
 
@@ -65,7 +76,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0007",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "さらに一時間後"
+      "Text": "\n　　　　　　　　　　　　さらに一時間後"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -79,13 +90,35 @@
     "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_common_theater_0007a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（それから俺は[=Name,Maid,0,CallName]たちに、少し身だしなみを整えるよう頼む。そして、俺は短い閉会の挨拶をします。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "激しい宴が終わり、会場に少し落ち着いた空気が流れる。"
     }
   },
 
   "eee_post_yotogi_common_theater_0007a": {
     "ID": "eee_post_yotogi_common_theater_0007a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0007b",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "しかしステージ上には精液と愛液にまみれた俺の妻たちが、まだ余韻に浸ったまま立っている。狂気じみた熱気は、まだ完全に冷めていなかった。"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0007b": {
+    "ID": "eee_post_yotogi_common_theater_0007b",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0007c",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺は[=Name,Maid,0,CallName]たちに軽く身だしなみを整えるよう指示し、閉会の挨拶を行うことにした。"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0007c": {
+    "ID": "eee_post_yotogi_common_theater_0007c",
     "Type": "CloseMsgPanel",
     "WaitingType": "FadeOut",
     "NextStepID": "eee_post_yotogi_common_theater_0008",
@@ -408,14 +441,25 @@
     "ID": "eee_post_yotogi_common_theater_0014",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "eee_post_yotogi_common_theater_0015",
+    "NextStepID": "eee_post_yotogi_common_theater_0014a",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "集計が終わりました。これより結果を発表します。"
+      "Text": "皆様、本日はお忙しい中ご参加いただき、誠にありがとうございます。"
     },
     "FadeData": {
       "IsFadeIn": true,
       "IsFadeOut": false
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0014a": {
+    "ID": "eee_post_yotogi_common_theater_0014a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0015",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "集計が完了いたしましたので、結果を発表させていただきます。"
     }
   },
 
@@ -426,7 +470,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0016",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "皆様から最も多くの落書きを受け取りまして、堂々の１位のは……"
+      "Text": "最も多くの落書きと中出しを賜りました、堂々の第１位は……"
     }
   },
 
@@ -476,7 +520,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0019",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "[=Name,Maid,0,CallName]！"
+      "Text": "[=Name,Maid,0,CallName]でございます！"
     }
   },
 
@@ -487,7 +531,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0019",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "[=Name,Maid,1,CallName]！"
+      "Text": "[=Name,Maid,1,CallName]でございます！"
     }
   },
 
@@ -498,7 +542,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0019",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "[=Name,Maid,2,CallName]！"
+      "Text": "[=Name,Maid,2,CallName]でございます！"
     }
   },
 
@@ -509,7 +553,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0019",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "[=Name,Maid,3,CallName]！"
+      "Text": "[=Name,Maid,3,CallName]でございます！"
     }
   },
 
@@ -520,7 +564,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0019",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "[=Name,Maid,4,CallName]！"
+      "Text": "[=Name,Maid,4,CallName]でございます！"
     }
   },
 
@@ -608,10 +652,21 @@
     "ID": "eee_post_yotogi_common_theater_0031",
     "Type": "Talk",
     "WaitingType": "Click",
+    "NextStepID": "eee_post_yotogi_common_theater_0031a",
+    "TalkData": {
+      "SpecificSpeaker": "Owner",
+      "Text": "ここに、「エンパイアクラブ　至高の肉便器」の栄誉ある称号を授与いたします。　本日のイベントが第１回目となりますので、[=Name,Maid,0,CallName]は初代「至高の肉便器」の称号を持つことになります。"
+    }
+  },
+
+  "eee_post_yotogi_common_theater_0031a": {
+    "ID": "eee_post_yotogi_common_theater_0031a",
+    "Type": "Talk",
+    "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_common_theater_0032_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ここに、「エンパイアクラブ一番肉便器」の名誉称号を授与します。"
+      "Text": "今後もこのイベントを定期的に開催する予定ですので、ぜひ次回も皆様のご参加をお待ちしております。"
     }
   },
 
@@ -634,7 +689,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0042_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "君は皆様のお気に入り、一番中出しされるです！それは本当に光栄なことですね！"
+      "Text": "[=Name,Maid,0,CallName]は本日、お客様方から最も愛されました。一番多く中出しされたメイドという、大変光栄な記録でございます。"
     }
   },
 
@@ -657,7 +712,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0052_Branch",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "おお！凄い発言ですね！とても嬉しそうに見えるよ！"
+      "Text": "おお、実に素晴らしい発言です！　大変嬉しそうですね。"
     }
   },
 
@@ -680,7 +735,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0062",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "では皆様、もしこちらのメイドを自分の子種を種付けしてほしいなら、是非再度ご来店いただき当店のメイドをご予約ください。"
+      "Text": "皆様、もしこちらのメイドに貴方のご子種を種付けしてご覧になりたい場合は、ぜひ再度ご来店いただき、当店メイドをご指名ください。"
     }
   },
 
@@ -691,7 +746,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0063",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "これからメイドたちはますますファンが増えていくので、是非お見逃なく！"
+      "Text": "これから彼女たちはさらに多くのファンを獲得していくことでしょう。どうか今後ともよろしくお願いいたします。"
     }
   },
 
@@ -782,7 +837,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0072",
     "TalkData": {
       "SpeakerName": "お客様１６",
-      "Text": "ははぁ、このオーナーさんは本当に売り方がうまいなぁ！"
+      "Text": "ははぁ、このオーナーさんは本当に商売が上手いなぁ！"
     }
   },
 
@@ -793,7 +848,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0073",
     "TalkData": {
       "SpeakerName": "お客様１７",
-      "Text": "おおっ！そうだな、もちろんそうする！一番左の子が一番のお気に入りで、絶対にあの子に俺の子を産ませる！"
+      "Text": "おおっ！そうだな、もちろんまた来る！一番左の子が最高のお気に入りだ。絶対にあの子に俺の子を産ませてやる。"
     }
   },
 
@@ -804,7 +859,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0074",
     "TalkData": {
       "SpeakerName": "お客様１８",
-      "Text": "へぇー、自分は右から二番目の子に目をつけてるんだ。本当に自分のタイプなんだ。"
+      "Text": "へぇー、自分は右から二番目の子に目をつけてる。本当に自分のタイプなんだよな。"
     }
   },
 
@@ -815,7 +870,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0075",
     "TalkData": {
       "SpeakerName": "お客様１９",
-      "Text": "君もか！じゃあ一緒に３Ｐはどう？このプレイを可能だって聞いたよ。"
+      "Text": "君もか！じゃあ一緒に３Ｐはどうだ？このクラブなら可能だって聞いたぞ。"
     }
   },
 
@@ -826,7 +881,7 @@
     "NextStepID": "eee_post_yotogi_common_theater_0076",
     "TalkData": {
       "SpeakerName": "お客様１８",
-      "Text": "お？いいですか？やるやる！連絡先を交換しよ。楽しみ！"
+      "Text": "お？いいのか？やるやる！連絡先交換しよ。楽しみだな！"
     }
   },
 
@@ -836,8 +891,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_post_yotogi_common_bedroom_0001",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（ふふっ、これで間違いなく常連客が増えるぞ…）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "ふふっ……これで間違いなく常連客が大幅に増える。"
     }
   }
 

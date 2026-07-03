@@ -72,7 +72,7 @@
     "NextStepID": "pam_intro_0003",
     "TalkData": {
       "SpecificSpeaker": "Narrative",
-      "Text": "拘束のタイプを選択してください。"
+      "Text": "プレイのタイプを選択してください。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -173,7 +173,7 @@
     "NextStepID": "pam_intro_0010",
     "TalkData": {
       "SpeakerName": "お客様",
-      "Text": "ふぅ…またここに来た…"
+      "Text": "ふぅ…またここに来ちまったか…。"
     },
 
     "FadeData": {
@@ -189,7 +189,7 @@
     "NextStepID": "pam_intro_0011",
     "TalkData": {
       "SpeakerName": "お客様",
-      "Text": "ここ最近とても面白いイベントを開催していて、俺はすっかり夢中になっている。　このせいで、財布をほぼ空にしてしまうんだけど……"
+      "Text": "ここ最近、ここのイベントにすっかりハマっちまってよ。金なんかほとんど飛んでくけど……まあ、いいんだ。どうせ今日もぶっ壊れるまでやるつもりだ。"
     }
   },
 
@@ -200,7 +200,7 @@
     "NextStepID": "pam_intro_0012",
     "TalkData": {
       "SpeakerName": "お客様",
-      "Text": "……まぁ、どうでもいい。　今日の俺は準備万端だ。　薬を飲んだから、ずっとヤり続けるつもりだ！"
+      "Text": "なにしろ、例の薬をガッツリ飲んできたからな。今日は朝までイケるぜ……！"
     }
   },
 
@@ -211,7 +211,7 @@
     "NextStepID": "pam_intro_0013",
     "TalkData": {
       "SpeakerName": "お客様",
-      "Text": "よし、行くぞ！"
+      "Text": "よし、行くか。"
     }
   },
 
@@ -847,8 +847,8 @@
     "WaitingType": "Click",
     "NextStepID": "pam_intro_0024",
     "TalkData": {
-      "SpeakerName": "お客様",
-      "Text": "（メイドの案内に従い、会場に入った。めっちゃワクワクするんだ！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "メイドの案内に従って会場に入ると、熱気と男たちの野太い声が一気に俺を包んだ。\nめちゃくちゃ興奮する……！"
     },
 
     "FadeData": {
@@ -863,8 +863,8 @@
     "WaitingType": "Click",
     "NextStepID": "pam_intro_0025",
     "TalkData": {
-      "SpeakerName": "お客様",
-      "Text": "（会場内、すでに多くの男たちがいた。ステージの上で、５人のメイドたちはもう拘束され、準備を整った。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "会場内はすでに大勢の男たちで埋まっていた。ステージ上では、５人のメイドたちが両手両足を拘束され、完全に準備完了の状態で晒されている。"
     }
   },
 
@@ -900,8 +900,8 @@
     "WaitingType": "Click",
     "NextStepID": "pam_intro_0028",
     "TalkData": {
-      "SpeakerName": "お客様",
-      "Text": "（俺は時間を無駄にしないため、すぐにステージに上がった。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "俺は時間を無駄にしたくなくて、すぐにステージ脇の列に並んだ。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1375,7 +1375,7 @@
     "NextStepID": "pam_intro_0042",
     "TalkData": {
       "SpeakerName": "お客様",
-      "Text": "はぁー、長い列だ。"
+      "Text": "はぁー……相変わらず長い列だな。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -1390,7 +1390,7 @@
     "NextStepID": "pam_intro_0043",
     "TalkData": {
       "SpeakerName": "男１",
-      "Text": "ああ、でもどんどん進んでるよ。それにここの女の質を考えれば、待つ価値がある。"
+      "Text": "チッ、でも意外と進んでるぜ。　それにここのメイド共はマジで最高だ。肉便器として調教されてるだけあって、締まりも反応も抜群だからな。待つ価値は十分あるよ。"
     }
   },
 
@@ -1398,10 +1398,21 @@
     "ID": "pam_intro_0043",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "pam_intro_0044",
+    "NextStepID": "pam_intro_0043a",
     "TalkData": {
       "SpeakerName": "お客様",
       "Text": "ははっ、確かに。"
+    }
+  },
+
+  "pam_intro_0043a": {
+    "ID": "pam_intro_0043a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "pam_intro_0044",
+    "TalkData": {
+      "SpeakerName": "男２",
+      "Text": "おいおい、早くしろよ……俺のチンポ、もう痛いくらいビンビンなんだよ。今日こそあの可愛いメイドの奥までぶちまけてやる。"
     }
   },
 
@@ -1411,8 +1422,8 @@
     "WaitingType": "Click",
     "NextStepID": "pam_intro_0045",
     "TalkData": {
-      "SpeakerName": "お客様",
-      "Text": "（もうすぐ俺の番だ。絶対に全員に種付けしてやる！）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "もうすぐ俺の番だ……\nこの５人全員に、たっぷり種付けしてやる。今日こそ限界まで犯して、俺の精液でめちゃくちゃにしてやるぜ……！"
     }
   },
 

@@ -6,7 +6,7 @@
     "NextStepID": "eee_intro_wall_0002",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "ふむ、屈辱プレイと言えば、間違いなく壁尻だ。"
+      "Text": "ふむ、屈辱プレイと言えば間違いなく壁尻だな。"
     }
   },
 
@@ -54,7 +54,7 @@
     "NextStepID": "eee_intro_wall_0006",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "（数日後、壁が設置された。）"
+      "Text": "\n　　　　　　　　　すべての準備が整った当日。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -68,8 +68,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_intro_wall_0007",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（[=Name,Maid,0,CallName]に、新しいプレイを試してみたいと思っているメイドを探してほしいと頼んだ。ふふっ、これを見たら、あの子たちはきっと驚くだろうなぁ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "[=Name,Maid,0,CallName]に、新しいプレイに参加してみたいと思っているメイドを探してほしいと頼んだ。ふふっ……この光景を見たら、あの子たちは絶対に驚くはずだ。"
     }
   },
 
@@ -259,7 +259,7 @@
     "NextStepID": "eee_intro_wall_0014_camerapan",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "よし、みんな、もう目を開けていいぞ。"
+      "Text": "よし、みんな。もう目を開けていいぞ。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -289,8 +289,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_intro_wall_0016_Branch",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（メイドたちの前には、見たことのない大きな壁がいた。彼女たちは少し驚き、しばらく言葉が出ない。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "メイドたちの前に現れた巨大な壁に、彼女たちは息を飲んだ。壁にはいくつもの穴が開けられ、客が自由に使えるよう設計されている。"
     }
   },
 
@@ -313,7 +313,7 @@
     "NextStepID": "eee_intro_wall_0022",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "あ、これね、ご覧の通り、壁尻だ！"
+      "Text": "あ、これね。ご覧の通り、壁尻だ！\n今日はお前たち全員がこの壁に尻を突き出して、お客様専用の肉便器になる。期待していいぞ。"
     }
   },
 
@@ -325,7 +325,7 @@
     "NextStepID": "eee_intro_wall_0023",
     "TalkData": {
       "SpecificSpeaker": "Owner",
-      "Text": "さあ、みんな入って試してみて。"
+      "Text": "さあ、準備しろ。服を全部脱いで、壁の中に入って尻を穴から出せ。"
     }
   },
 
@@ -477,8 +477,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_intro_wall_0027",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（メイドたちは服を脱ぎ、次々と壁に入っていく。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "メイドたちは少しの躊躇いもなく、指示に従って次々と服を脱ぎ捨て、壁の穴に体を滑り込ませていった。壁の向こう側には、俺の妻たち——全員が他の男のチンポを欲しがる淫乱女たちの美味しそうな尻が、ずらりと並んで晒されている。"
     },
     "FadeData": {
       "IsFadeIn": true,
@@ -492,8 +492,8 @@
     "WaitingType": "Click",
     "NextStepID": "eee_intro_wall_0028",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（ああ…これが誰もが一度は夢見る壁尻だ……　見よ、美味しそうな尻が並んでいる…なんと素晴らしい眺めなんだ。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "……くっそ、たまらねえ……。この壁尻の光景が俺の性癖を直撃して、チンポが痛いくらいに勃起しちまう。"
     }
   },
 
@@ -501,12 +501,24 @@
     "ID": "eee_intro_wall_0028",
     "Type": "Talk",
     "WaitingType": "Click",
-    "NextStepID": "eee_intro_theater_0001",
+    "NextStepID": "eee_intro_wall_0028a",
     "TalkData": {
-      "SpecificSpeaker": "Owner",
-      "Text": "（ああっ……いけないいけない。これはお客様のためだ、性欲を抑えないと。）"
+      "SpecificSpeaker": "Narrative",
+      "Text": "いけない、いけない……これはお客様のためのイベントだ。俺がここで楽しんじゃダメだ。今日はあくまで客どもに最高の「ユーザー体験」を提供するためのもの……俺の性欲は抑えろ。"
     }
   },
+
+  "eee_intro_wall_0028a": {
+    "ID": "eee_intro_wall_0028a",
+    "Type": "Talk",
+    "WaitingType": "Click",
+    "NextStepID": "eee_intro_theater_0001",
+    "TalkData": {
+      "SpecificSpeaker": "Narrative",
+      "Text": "ふふっ……でも最高の眺めだ。誰もが一度は夢見る壁尻に、俺の妻たちのエロい尻が並んでいるなんて……\n……まだ本番は始まったばかりだ。我慢だ、我慢。"
+    }
+  },
+
 
   "eee_intro_theater_wall_0001": {
     "ID": "eee_intro_theater_wall_0001",
